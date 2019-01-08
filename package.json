@@ -1,9 +1,6 @@
 {
-  "name": "sotilrac.github.io",
+  "name": "sotilrac.gitlab.io",
   "homepage": "https://asmat.ca",
-  "authors": [
-    "Carlos <carlos.asmat@gmail.com>"
-  ],
   "description": "Personal Site",
   "main": "index.html",
   "keywords": [
@@ -19,12 +16,12 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "fancybox": "^3.2.5"
+    "fancybox": "^3.0.1",
+    "jquery": "1.9.1 - 3",
+    "popper.js": "^1.14.6"
   }
 }

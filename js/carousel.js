@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/carousel.js
+../node_modules/bootstrap/js/src/carousel.js

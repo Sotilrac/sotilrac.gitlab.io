@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/index.js
+../node_modules/bootstrap/js/src/index.js

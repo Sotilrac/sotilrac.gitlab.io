@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/scrollspy.js
+../node_modules/bootstrap/js/src/scrollspy.js

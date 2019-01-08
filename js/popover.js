@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/popover.js
+../node_modules/bootstrap/js/src/popover.js

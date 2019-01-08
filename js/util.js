@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/util.js
+../node_modules/bootstrap/js/src/util.js

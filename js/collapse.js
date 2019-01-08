@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/collapse.js
+../node_modules/bootstrap/js/src/collapse.js

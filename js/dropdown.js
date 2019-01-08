@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/dropdown.js
+../node_modules/bootstrap/js/src/dropdown.js

@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/alert.js
+../node_modules/bootstrap/js/src/alert.js

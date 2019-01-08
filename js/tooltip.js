@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/tooltip.js
+../node_modules/bootstrap/js/src/tooltip.js

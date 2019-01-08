@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/modal.js
+../node_modules/bootstrap/js/src/modal.js

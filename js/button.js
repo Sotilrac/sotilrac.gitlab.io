@@ -1,1 +1,1 @@
-../bower_components/bootstrap/js/dist/button.js
+../node_modules/bootstrap/js/src/button.js
