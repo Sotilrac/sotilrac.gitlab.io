@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: FPGA Board
-author: carlos
+author: Carlos
+id: 28
 date: '2007-04-02 21:46:00 -0400'
 date_gmt: '2007-04-03 04:46:00 -0400'
 categories:
@@ -17,13 +18,13 @@ Thanks to a very (extremely) kind professor, I got a Spartan [D2E](http://digile
 
 Have a look at some pictures of the board.
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RhHlgFHDd3I/AAAAAAAAARE/dWrRaW5iAbg/s320/Spartan+001.jpg)](http://3.bp.blogspot.com/_940DBYqYeYo/RhHlgFHDd3I/AAAAAAAAARE/dWrRaW5iAbg/s1600-h/Spartan+001.jpg)
+{% include fig.html img="Spartan+001.jpg" caption="" id=page.id %}
 
 ## The D2E board
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RhHlglHDd5I/AAAAAAAAARU/yiJ3yajmRHc/s320/Spartan+010.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/RhHlglHDd5I/AAAAAAAAARU/yiJ3yajmRHc/s1600-h/Spartan+010.jpg)
+{% include fig.html img="Spartan+010.jpg" caption="" id=page.id %}
 
 ## The DIO1 board
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RhHlgVHDd4I/AAAAAAAAARM/Tqi5Hs0AzZ0/s320/Spartan+009.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/RhHlgVHDd4I/AAAAAAAAARM/Tqi5Hs0AzZ0/s1600-h/Spartan+009.jpg)
+{% include fig.html img="Spartan+009.jpg" caption="" id=page.id %}
 
 I shall be back soon with something implemented on it.

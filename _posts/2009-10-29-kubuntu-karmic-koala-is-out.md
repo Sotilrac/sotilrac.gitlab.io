@@ -1,13 +1,11 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Kubuntu Karmic Koala is out!
-author: carlos
-carloswordpress_id: 397
-wordpress_url: http://carlitoscontraptions.com/?p=397
+author: Carlos
+id: 87
 date: '2009-10-29 15:20:52 -0400'
-date_gmt: '2009-10-29 19:20:52 -0400'
 categories:
 - Software
 tags:
@@ -15,7 +13,7 @@ tags:
 - Open Source
 - Linux
 ---
-\[caption id="attachment_399" align="aligncenter" width="300" caption="Kubuntu Karmic Koala"\][![Kubuntu Karmic Koala](http://carlitoscontraptions.com/wp-content/uploads/2009/10/kubuntu_Karmic-300x294.jpg "Kubuntu Karmic Koala")](http://carlitoscontraptions.com/wp-content/uploads/2009/10/kubuntu_Karmic.jpg)\[/caption\]
+{% include fig.html img="kubuntu_Karmic.jpg" caption="Kubuntu Karmic Koala" id=page.id %}
 
 [Kubuntu Karmic Koala](http://www.kubuntu.org/news/9.10-release "Kubuntu 9.10") is finally out! I use it since the [Release Candidate](http://www.kubuntu.org/news/9.10-rc "Kubuntu 9.10 RC") came Oct. 22 nd, and it is absolutely awesomely mind-blowingly fabulous. All of the kinks in Jaunty have been fixed and a lot of new features have been added.
 
@@ -29,7 +27,7 @@ Also, KDE is much more than a desktop environment and provides a full suite of p
 
 ## Quick Review
 
-\[caption id="attachment_402" align="aligncenter" width="300" caption="My Desktops (Grid View)"\][![My Desktops (Grid View)](http://carlitoscontraptions.com/wp-content/uploads/2009/10/kde_desktop_grid-300x187.png "kde_desktop_grid")](http://carlitoscontraptions.com/wp-content/uploads/2009/10/kde_desktop_grid.png)\[/caption\]
+{% include fig.html img="kde_desktop_grid.png" caption="My Desktops (Grid View)" id=page.id %}
 
 I am currently using the 64-bit version of Kubuntu and it is performing incredibly well. The system ([my laptop](http://carlitoscontraptions.com/2009/09/new-laptop/ "Dell Vostro 1320")) boots in around 40 seconds and turns off in less than 15 seconds. The graphical performance is flawless and I can benefit from smooth performance even when doing very processor intensive tasks (such as [stitching photos together](http://carlitoscontraptions.com/2009/10/automatic-panoramas-in-montreal/ "Making Panoramas")).
 

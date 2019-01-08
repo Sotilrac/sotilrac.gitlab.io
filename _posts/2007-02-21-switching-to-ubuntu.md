@@ -1,13 +1,14 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Switching to Ubuntu
-author: carlos
+author: Carlos
+id: 22
 date: '2007-02-21 22:09:00 -0500'
 date_gmt: '2007-02-22 05:09:00 -0500'
 categories:
-- Software
-tags: []
+- Tools
+tags: software
 ---
 I was tired of having a slow computer, I did not want to deal any longer with bugs and annoyances (and these where paid annoyances and bugs). This is why I decided to use Linux, instead of a well known mainstream OS.
 
@@ -15,7 +16,7 @@ At first I thought I'll give it a try since I was not sure it suited my needs. I
 
 Guess what, I was wrong. Linux is a beautiful piece of software that enables your computer to perform at its maximum capacity. It is stable, slick and fast.
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/ReOsu5m2FSI/AAAAAAAAAJs/4TC7f1i1QHg/s320/tux+swatter+2.png)](http://3.bp.blogspot.com/_940DBYqYeYo/ReOsu5m2FSI/AAAAAAAAAJs/4TC7f1i1QHg/s1600-h/tux+swatter+2.png)Installation
+{% include fig.html img="tux+swatter+2.png" caption="" id=page.id %}Installation
 
 Installing Linux, [Ubuntu](http://www.ubuntu.com/) more specifically (a [Linux distribution](http://en.wikipedia.org/wiki/Linux_distribution)) is very fast. It takes about 45 minutes and when you're done you have a full desktop environment with a beautiful user interface, lots of software, including [OpenOffice.Org](http://www.openoffice.org/) (an office suite), [The Gimp](http://www.gimp.org/) (a Photoshop like application), [Gaim](http://gaim.sourceforge.net/) (instant messaging), Rithmbox (music player/organizer), [Evolution](http://www.gnome.org/projects/evolution/) (email client), [Firefox](http://www.mozilla.com/en-US/firefox/) (no introduction needed), and lots of other nice software out of the box. The best is that it all takes about 1GB.
 

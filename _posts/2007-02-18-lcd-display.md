@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: LCD Screen
-author: carlos
+author: Carlos
+id: 21
 date: '2007-02-18 11:25:00 -0500'
 date_gmt: '2007-02-18 18:25:00 -0500'
 categories:
@@ -11,7 +12,7 @@ tags: []
 ---
 I got a brand new LCD screen for free from the guys at [uC Hobby](http://www.uchobby.com/) (their website has many nice projects).
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RdiZifr3xGI/AAAAAAAAAEo/mQ4sojdIUBg/s320/LCD3.jpg)](http://3.bp.blogspot.com/_940DBYqYeYo/RdiZifr3xGI/AAAAAAAAAEo/mQ4sojdIUBg/s1600-h/LCD3.jpg)
+{% include fig.html img="LCD3.jpg" caption="" id=page.id %}
 
 It is a Samsung 0202A ([see more details here](http://www.uchobby.com/index.php/2006/12/12/free-graphic-lcd/)). It is a very nice piece of equipment and I hoe I'll be able to put it to good use
 

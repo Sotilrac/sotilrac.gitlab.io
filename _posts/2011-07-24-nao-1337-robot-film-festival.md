@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Nao 1337 at the Robot Film Festival
-author: carlos
-carloswordpress_id: 985
+author: Carlos
+id: 985
 wordpress_url: http://carlitoscontraptions.com/?p=985
 date: '2011-07-24 12:50:52 -0400'
 date_gmt: '2011-07-24 16:50:52 -0400'
@@ -17,7 +17,7 @@ tags:
 ---
 On July 17th and 18th, we went to the [Robot Film Festival](http://robotfilmfestival.com/). I created a short video with Nao 1337 so we went walk the red carpet and watch the screening as all the other Hollywood stars would do. This was the first robot film festival and we have to thank [Heather Knight](http://www.marilynmonrobot.com/) for the initiative. It was held at the very cool [3 Legged Dog Art + Technology Center](http://www.3leggeddog.org/) at New York City.
 
-\[caption id="attachment_987" align="aligncenter" width="300" caption="Nao 1337 getting ready for the red carpet"\][![Nao 1337 getting ready for the red carpet](http://carlitoscontraptions.com/wp-content/uploads/2011/07/IMG_0578-300x225.jpg "Nao 1337 getting ready for the red carpet")](http://carlitoscontraptions.com/wp-content/uploads/2011/07/IMG_0578.jpg)\[/caption\]
+{% include fig.html img="IMG_0578.jpg" caption="Nao 1337 getting ready for the red carpet" id=page.id %}
 
 See the video below explaining the festival's raison d'être:
 
@@ -25,7 +25,7 @@ See the video below explaining the festival's raison d'être:
 
 Below you can see our submission to the festival: [Nao 1337 Audition](http://vimeo.com/24947744). 1337 impersonates several popular Hollywood robots in the hope of getting a role in a movie. How many can you recognize? Leave a comment below with your answers.  
 
-[youtube XjWEmJsyMe4]
+{% include youtube.html id="XjWEmJsyMe4" %}
 
 ## Screening
 
@@ -34,7 +34,7 @@ The festival started with a screening of [all the selected robot films](http://v
 
 See Nao 1337 watch the screening of its own movie below.
 
-[youtube OYxlK63Hx1Q]
+{% include youtube.html id="OYxlK63Hx1Q" %}
 
 ## Red Carpet
 
@@ -43,7 +43,7 @@ After a fancy dinner at [Bobby Van's Steakhouse](http://www.bobbyvans.com/Bobby_
 
 I had programmed 1337 to hold hands and walk alongside me on the red carpet. I also included the ability to take breaks and show-off while standing on the carpet.
 
-\[caption id="attachment_989" align="aligncenter" width="300" caption="Nao 1337 and Carlitos about to walk the red carpet"\][![Nao 1337 and me, about to walk the red carpet](http://carlitoscontraptions.com/wp-content/uploads/2011/07/IMG_0553-300x225.jpg "Nao 1337 and me, about to walk the red carpet")](http://carlitoscontraptions.com/wp-content/uploads/2011/07/IMG_0553.jpg)\[/caption\]
+{% include fig.html img="IMG_0553.jpg" caption="Nao 1337 and Carlitos about to walk the red carpet" id=page.id %}
 
 Extra points for those who can recognize the [FOTC](http://en.wikipedia.org/wiki/Flight_of_the_Conchords) member in the background of the picture above.
 

@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Quick and Cheap Laptop Lamp
-author: carlos
+author: Carlos
+id: 17
 date: '2006-12-05 23:30:00 -0500'
 date_gmt: '2006-12-06 06:30:00 -0500'
 categories:
@@ -23,14 +24,14 @@ Once the body was clean and shiny (it was completely black before) , I removed t
 
 The lamp is basically done.
 
-[![](http://photos1.blogger.com/x/blogger/4122/3639/320/344598/laptop%20lamp.jpg)](http://photos1.blogger.com/x/blogger/4122/3639/1600/758406/laptop%20lamp.jpg)
+{% include fig.html img="laptop lamp.jpg" caption="" id=page.id %}
 
 Since I did not have the appropriate light bulb for the lamp I had to adapt a bulb by adding a solder blob on its side. Now it fits perfectly.
 
-[![](http://photos1.blogger.com/x/blogger/4122/3639/320/750014/light.jpg)](http://photos1.blogger.com/x/blogger/4122/3639/1600/788665/light.jpg)
+{% include fig.html img="light.jpg" caption="" id=page.id %}
 
-[![](http://photos1.blogger.com/x/blogger/4122/3639/320/602935/laptop%20lamp%20closeup.jpg)](http://photos1.blogger.com/x/blogger/4122/3639/1600/243419/laptop%20lamp%20closeup.jpg)
+{% include fig.html img="laptop lamp closeup.jpg" caption="" id=page.id %}
 
 This lamp won't be as power efficient as the [LED ones](http://img.alibaba.com/photo/50490807/Laptop_USB_LED_Reading_Light.jpg) but it is cheap, quick and very simple to build. Enjoy.
 
-[![](http://photos1.blogger.com/x/blogger/4122/3639/320/614466/laptop%20lamp%20in%20action.jpg)](http://photos1.blogger.com/x/blogger/4122/3639/1600/835650/laptop%20lamp%20in%20action.jpg)
+{% include fig.html img="laptop lamp in action.jpg" caption="" id=page.id %}

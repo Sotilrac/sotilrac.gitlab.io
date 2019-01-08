@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: 'The Wind Turbine Part 1: General Idea'
-author: carlos
-carloswordpress_id: 501
+author: Carlos
+id: 85
 wordpress_url: http://carlitoscontraptions.com/?p=501
 date: '2010-02-16 00:14:50 -0500'
 date_gmt: '2010-02-16 04:14:50 -0500'
@@ -21,6 +21,6 @@ We wanted to make a wind turbine from easy-to-find materials and using simple to
 
 In the end, and almost by accident, we decided to use mainly PVC and steel pipes and fittings for the entire construction. Keep reading the upcoming posts to discover our design.
 
-\[caption id="attachment_526" align="aligncenter" width="300" caption="Turbine Design Sketch"\][![Turbine Design Sketch](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_4222-300x225.jpg "Turbine Design Sketch")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_4222.jpg)\[/caption\]
+{% include fig.html img="IMG_4222.jpg" caption="Turbine Design Sketch" id=page.id %}
 
 **Coming up:** [_Part 2: Design and Materials_](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-2-desing-and-materials/ "The Wind Turbine Part 2: Design and Materials")

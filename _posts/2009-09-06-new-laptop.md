@@ -1,11 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: New Laptop
-author: carlos
-carloswordpress_id: 308
-wordpress_url: http://carlitoscontraptions.com/?p=308
+author: Carlos
+id: 81
 date: '2009-09-06 15:56:15 -0400'
 date_gmt: '2009-09-06 19:56:15 -0400'
 categories:
@@ -17,7 +16,7 @@ Following some serious problems with my [Eee PC](http://carlitoscontraptions.com
 
 I opted for a Dell Vostro 1320 and must say it is a beautiful machine. It is small, powerful, light, and most importantly shiny.
 
-\[caption id="attachment_309" align="aligncenter" width="300" caption="Vostro 1320"\][![Vostro 1320](http://carlitoscontraptions.com/wp-content/uploads/2009/09/IMG_1651-300x225.jpg "Vostro 1320")](http://carlitoscontraptions.com/wp-content/uploads/2009/09/IMG_1651.JPG)\[/caption\]
+{% include fig.html img="IMG_1651.JPG" caption="Vostro 1320" id=page.id %}
 
 ## Some Specs:
 

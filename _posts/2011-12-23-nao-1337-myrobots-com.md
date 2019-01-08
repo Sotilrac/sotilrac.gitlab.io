@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Nao 1337 Online at MyRobots.com
-author: carlos
-carloswordpress_id: 1116
+author: Carlos
+id: 1116
 wordpress_url: http://carlitoscontraptions.com/?p=1116
 date: '2011-12-23 04:03:46 -0500'
 date_gmt: '2011-12-23 08:03:46 -0500'
@@ -34,4 +34,4 @@ Nao 1337 is already connected so you can visit him at [MyRobots.com](http://www.
 
 If you are still wondering what is a social network for robots, see the video by Ericson that illustrates our vision pretty well (except for the end maybe).
 
-[youtube i5AuzQXBsG4]
+{% include youtube.html id="i5AuzQXBsG4" %}

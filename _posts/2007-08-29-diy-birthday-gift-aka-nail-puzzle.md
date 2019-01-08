@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: DIY Birthday Gift (a.k.a. Nail Puzzle)
-author: carlos
+author: Carlos
+id: 37
 date: '2007-08-29 19:01:00 -0400'
 date_gmt: '2007-08-30 02:01:00 -0400'
 categories:
@@ -21,7 +22,7 @@ c. You go into exile.
 
 I chose "b". Below, instruction on how to make a quick and nice puzzle.
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RtYxrwGzkQI/AAAAAAAAAXY/sXEyMcLRwTM/s320/nail+puzzle2.JPG)](http://3.bp.blogspot.com/_940DBYqYeYo/RtYxrwGzkQI/AAAAAAAAAXY/sXEyMcLRwTM/s1600-h/nail+puzzle2.JPG)
+{% include fig.html img="nail+puzzle2.JPG" caption="" id=page.id %}
 
 ## Materials
 
@@ -47,7 +48,7 @@ In order to build a nice puzzle that will...well puzzle your friend for a while,
 6.  If you have some printable labels you can print the game instruction and stick them on an empty spot on the wood board. Make sure you sand everything well before applying the labels.
 7.  It should look like the picture below.
 
-[![](http://2.bp.blogspot.com/_940DBYqYeYo/RtYxrgGzkPI/AAAAAAAAAXQ/Lj72MA44pW8/s320/nail+puzzle.JPG)](http://2.bp.blogspot.com/_940DBYqYeYo/RtYxrgGzkPI/AAAAAAAAAXQ/Lj72MA44pW8/s1600-h/nail+puzzle.JPG)
+{% include fig.html img="nail+puzzle.JPG" caption="" id=page.id %}
 
 Game Instructions: Put all 18 nails on the central nail. The resulting structure should be stable.  
 

@@ -1,13 +1,11 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Automatic Panoramas in Montreal
-author: carlos
-carloswordpress_id: 354
-wordpress_url: http://carlitoscontraptions.com/?p=354
+author: Carlos
+id: 85
 date: '2009-10-05 01:01:44 -0400'
-date_gmt: '2009-10-05 05:01:44 -0400'
 categories:
 - My Projects
 tags:

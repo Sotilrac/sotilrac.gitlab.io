@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Making Panoramas
-author: carlos
-carloswordpress_id: 169
+author: Carlos
+id: 77
 wordpress_url: http://carlitoscontraptions.com/?p=169
 date: '2009-05-09 20:34:06 -0400'
 date_gmt: '2009-05-10 00:34:06 -0400'
@@ -18,7 +18,7 @@ tags:
 ---
 In my trip to San Francisco, I had the chance to see many beautiful things. And I wanted to be able to remember them and show them to my friends and family.
 
-\[caption id="attachment_194" align="aligncenter" width="300" caption="San Francisco Seen Form Twin Peaks Park"\][![San Francisco Seen Form Twin Peaks Park](http://carlitoscontraptions.com/wp-content/uploads/2009/05/sf_from_twin_peak1-300x70.jpg "San Francisco Seen Form Twin Peaks Park")](http://carlitoscontraptions.com/wp-content/uploads/2009/05/sf_from_twin_peak1.jpg)\[/caption\]
+{% include fig.html img="sf_from_twin_peak1.jpg" caption="San Francisco Seen Form Twin Peaks Park" id=page.id %}
 
 Besides taking simple photos, sometimes you need a wider view- angle to really capture the scenery. The obvious solution to this is making a panorama. This means you take many pictures of different sections of your subject and then align them and stitch them together so to form a bigger picture.
 

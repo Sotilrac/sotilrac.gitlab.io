@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Tensegrity and more
-author: carlos
+author: Carlos
+id: 41
 date: '2007-12-31 02:14:00 -0500'
 date_gmt: '2007-12-31 09:14:00 -0500'
 categories:
@@ -14,13 +15,13 @@ Based on the [DIY Ornaments Weekend Projects Podcast](http://blog.makezine.com/a
 
 I'm particularly proud of the Popsicle sticks tensegrity structure since it is much stronger and cool looking than the straws one.
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/R3i3P0-zQ6I/AAAAAAAAAhs/l0EwBTDpeN0/s320/ss850220.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/R3i3P0-zQ6I/AAAAAAAAAhs/l0EwBTDpeN0/s1600-h/ss850220.jpg)
+{% include fig.html img="ss850220.jpg" caption="" id=page.id %}
 
 (note the upgraded upcoming POV display on the background)
 
 Also, I got a new camera for Christmas, a nice Samsung s850, so now I can make some great pictures and video without needing to borrow a camera or whatnot (I'm really happy about it).  
 Here is a random picture from this great camera:
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/R3i6P0-zQ-I/AAAAAAAAAiM/kSFYIu3Yh5M/s320/ss850306.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/R3i6P0-zQ-I/AAAAAAAAAiM/kSFYIu3Yh5M/s1600-h/ss850306.jpg)
+{% include fig.html img="ss850306.jpg" caption="" id=page.id %}
 
 BTW, the Samsung s850 works very well under Linux!

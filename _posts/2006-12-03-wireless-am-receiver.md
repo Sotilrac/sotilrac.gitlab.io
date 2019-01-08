@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Wireless AM receiver
-author: carlos
+author: Carlos
+id: 15
 date: '2006-12-03 00:37:00 -0500'
 date_gmt: '2006-12-03 07:37:00 -0500'
 categories:
@@ -13,9 +14,9 @@ tags: []
 
 This is the schematics for a wireless AM receiver composed of a tuned amplifier, a AM demodulator, and an audio amplifier.
 
-[![](http://photos1.blogger.com/x/blogger/4122/3639/320/618691/wireless%20AM%20receiver.jpg)](http://photos1.blogger.com/x/blogger/4122/3639/1600/968891/wireless%20AM%20receiver.jpg)  
+{% include fig.html img="wireless AM receiver.jpg" caption="" id=page.id %}  
 
-[![](http://photos1.blogger.com/x/blogger/4122/3639/320/849919/IMG_0028.jpg)](http://photos1.blogger.com/x/blogger/4122/3639/1600/840362/IMG_0028.jpg)
+{% include fig.html img="IMG_0028.jpg" caption="" id=page.id %}
 
 This is the radio receiver implemented on a breadboard.
 

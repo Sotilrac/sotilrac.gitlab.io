@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Lunar Excavator
-author: carlos
+author: Carlos
+id: 54
 date: '2008-08-20 19:46:00 -0400'
 date_gmt: '2008-08-21 02:46:00 -0400'
 categories:
@@ -18,13 +19,13 @@ I was lucky enough to help my friend Stephen and his team to build a [lunar exca
 
 We put lots of efforts and many hours to get the robot done in time and we managed to get it running before it had to be shipped to California (from McGill University in Montreal).
 
-[![](http://2.bp.blogspot.com/_940DBYqYeYo/SKzgWu-B-bI/AAAAAAAAAzc/ee4dII691GI/s320-R/ss852231.jpg)](http://2.bp.blogspot.com/_940DBYqYeYo/SKzgWu-B-bI/AAAAAAAAAzc/dNgiJ4sGLdo/s1600-h/ss852231.jpg)
+{% include fig.html img="ss852231.jpg" caption="" id=page.id %}
 
 Unfortunately, despite the awesomeness of the lunar excavator and the fact that it was going to completely own the challenge, the UPS shipment went wrong and the robot could net get to the competition on time. Now the fight with UPS has begun to get a full reimbursement (~2000$) and the robot back.
 
 UPS incompetence aside, I worked in putting all the electronics system together in the _electrical box_. This meant, I had to build two boards: one for the power management (transforming the provided 24V into a 12 and 5V in order to power the many devices and turning the latter ON and OFF), and one for the logic (interfacing the main computer with the various motor controllers and sensors).
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/SKzgJCzlPII/AAAAAAAAAzU/UHehVHkCE6A/s320-R/ss852227.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/SKzgJCzlPII/AAAAAAAAAzU/pEdwX45x6OQ/s1600-h/ss852227.jpg)
+{% include fig.html img="ss852227.jpg" caption="" id=page.id %}
 
 This task was done using perfboards and lots of solder since we did not have enough time to consider designing and fabricating proper PCBs with nice places for all the components.
 

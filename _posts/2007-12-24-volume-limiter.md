@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Volume Limiter
-author: carlos
+author: Carlos
+id: 39
 date: '2007-12-24 00:39:00 -0500'
 date_gmt: '2007-12-24 07:39:00 -0500'
 categories:
@@ -28,7 +29,7 @@ Since I am a bit short on time (it must be done for Christmas) and since I think
 
 ## Materials
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/R29wRE-zQvI/AAAAAAAAAf4/T6ETQpfZGHk/s320/materials.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/R29wRE-zQvI/AAAAAAAAAf4/T6ETQpfZGHk/s1600-h/materials.jpg)  
+{% include fig.html img="materials.jpg" caption="" id=page.id %}  
 This little project requires very few materials:
 
 *   A couple of resistors. Their value depends on the headphone's impedance.
@@ -39,11 +40,17 @@ This little project requires very few materials:
 
 ## Construction
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/R29wX0-zQzI/AAAAAAAAAgY/o3RuQvXyq_A/s320/ss850185.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/R29wX0-zQzI/AAAAAAAAAgY/o3RuQvXyq_A/s1600-h/ss850185.jpg)Simply solder the jack socket to the perf board (which should be cut to fit inside the gutted lipstick ) and put a resistor in series for each channel (left and right). Then connect the jack plug to the resistors and to ground by using the wire.
+{% include fig.html img="ss850185.jpg" caption="" id=page.id %}
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/R29wWk-zQyI/AAAAAAAAAgQ/d0Kfiib9oLk/s320/ss850182.jpg)](http://3.bp.blogspot.com/_940DBYqYeYo/R29wWk-zQyI/AAAAAAAAAgQ/d0Kfiib9oLk/s1600-h/ss850182.jpg)I drilled a hole on one end of the lipstick so the jack socket would fit tightly and stick out from it. The wire with the jack plug goes out of a hole on the other end of the lipstick.
+Simply solder the jack socket to the perf board (which should be cut to fit inside the gutted lipstick ) and put a resistor in series for each channel (left and right). Then connect the jack plug to the resistors and to ground by using the wire.
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/R29wV0-zQxI/AAAAAAAAAgI/zOpfayZVCFo/s320/ss850181.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/R29wV0-zQxI/AAAAAAAAAgI/zOpfayZVCFo/s1600-h/ss850181.jpg)At first, I chose to use a 10 Ohms resistor for each channel since I figured that the headphone impedance would be around 16 Ohms at DC. Later, I found out that 10 Ohms wasn't enough , so I added another 10 Ohms resistor in series on each channel, making the total resistance per channel 20 Ohms.
+{% include fig.html img="ss850182.jpg" caption="" id=page.id %}
+
+I drilled a hole on one end of the lipstick so the jack socket would fit tightly and stick out from it. The wire with the jack plug goes out of a hole on the other end of the lipstick.
+
+{% include fig.html img="ss850181.jpg" caption="" id=page.id %}
+
+At first, I chose to use a 10 Ohms resistor for each channel since I figured that the headphone impedance would be around 16 Ohms at DC. Later, I found out that 10 Ohms wasn't enough , so I added another 10 Ohms resistor in series on each channel, making the total resistance per channel 20 Ohms.
 
 This means that with 16 Ohms headphones, the resulting volume would be 16/(16+20) = 44% of the original volume.
 
@@ -51,4 +58,4 @@ I know this volume reduction technique is very wasteful in terms of power and no
 
 Finally, I used some isolating tape to make the construction a bit more resilient to children.
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/R29wdk-zQ0I/AAAAAAAAAgg/RxYD6NQ50no/s320/ss850189.jpg)](http://3.bp.blogspot.com/_940DBYqYeYo/R29wdk-zQ0I/AAAAAAAAAgg/RxYD6NQ50no/s1600-h/ss850189.jpg)
+{% include fig.html img="ss850189.jpg" caption="" id=page.id %}

@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Compact Keychain 2.0
-author: carlos
-carloswordpress_id: 72
+author: Carlos
+id: 72
 wordpress_url: http://carlitoscontraptions.com/?p=72
 date: '2009-03-22 20:34:00 -0400'
 date_gmt: '2009-03-23 03:34:00 -0400'
@@ -14,7 +14,7 @@ tags:
 - Metal
 - Craft
 ---
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/SccBA1ivv4I/AAAAAAAABeU/Osu3OdExQLE/s320/IMG_1715.JPG)](http://4.bp.blogspot.com/_940DBYqYeYo/SccBA1ivv4I/AAAAAAAABeU/Osu3OdExQLE/s1600-h/IMG_1715.JPG)
+{% include fig.html img="IMG_1715.JPG" caption="" id=page.id %}
 
 The first compact [keychain](http://carlitoscontraptions.com/2007/03/compact-keychain/ "Compact Keychain") was a great success among my readers and became very [popular](http://carlitoscontraptions.com/2008/08/im-popular-science/ "Popular Science") very rapidly.
 
@@ -26,6 +26,6 @@ So, I decided to get some ¼" screws since they fit pretty nicely three keys. Si
 
 I was planning on using some thread lock in order to prevent the screw from loosen itself but it was not necessary. Also, for some keys, it may be required to enlarge their hole so the screw can fit in nicely.
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/SccBDGVbjlI/AAAAAAAABec/wYowuzvAFjI/s320/IMG_1716.JPG)](http://1.bp.blogspot.com/_940DBYqYeYo/SccBDGVbjlI/AAAAAAAABec/wYowuzvAFjI/s1600-h/IMG_1716.JPG)
+{% include fig.html img="IMG_1716.JPG" caption="" id=page.id %}
 
 Finally, while going trough a few jars filled with old keys I got form freecycle, I found an ancestor to my compact keychain. This old version features a custom Chicago screw and a leather jacket that covers the keys.

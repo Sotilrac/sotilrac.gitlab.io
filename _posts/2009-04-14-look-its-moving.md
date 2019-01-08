@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Look! It's moving!
-author: carlos
-carloswordpress_id: 74
+author: Carlos
+id: 74
 wordpress_url: http://carlitoscontraptions.com/?p=74
 date: '2009-04-14 10:25:03 -0400'
 date_gmt: '2009-04-14 17:25:03 -0400'

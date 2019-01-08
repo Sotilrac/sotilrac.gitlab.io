@@ -1,13 +1,11 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Tiny Firefox
-author: carlos
-carloswordpress_id: 427
-wordpress_url: http://carlitoscontraptions.com/?p=427
+author: Carlos
+id: 89
 date: '2009-11-19 14:58:33 -0500'
-date_gmt: '2009-11-19 18:58:33 -0500'
 categories:
 - Software
 tags:
@@ -26,6 +24,6 @@ But I wanted to go further (especially since I saw that Chrome uses less screen 
 
 By using these extensions and moving things around in the toolbars, you can achieve a very tiny navigation interface that is perfectly usable.
 
-\[caption id="attachment_429" align="aligncenter" width="300" caption="Tiny Firefox"\][![Tiny Firefox](http://carlitoscontraptions.com/wp-content/uploads/2009/11/tiny_firefox-300x229.png "Tiny Firefox")](http://carlitoscontraptions.com/wp-content/uploads/2009/11/tiny_firefox.png)\[/caption\]
+{% include fig.html img="tiny_firefox.png" caption="Tiny Firefox" id=page.id %}
 
 Note the [Tux](http://carlitoscontraptions.com/2009/09/tux-laptop-sleeve/ "Tux") theme (I a'm using Personas)

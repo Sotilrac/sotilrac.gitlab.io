@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Comic Con in Montreal
-author: carlos
-carloswordpress_id: 761
+author: Carlos
+id: 761
 wordpress_url: http://carlitoscontraptions.com/?p=761
 date: '2010-12-14 01:15:09 -0500'
 date_gmt: '2010-12-14 05:15:09 -0500'

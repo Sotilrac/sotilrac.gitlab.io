@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Arduino POV Prototype - Part 2
-author: carlos
+author: Carlos
+id: 36
 date: '2007-08-18 21:15:00 -0400'
 date_gmt: '2007-08-19 04:15:00 -0400'
 categories:
@@ -21,7 +22,7 @@ The parameters in the code can be changed in order to display other images besid
 
 The displayed image is stored in the data string. Each drawing is divided in frames (i.e. one frame for each letter of a word) and each frame is divided in columns. The image to be displayed must be encoded into 1s (ON) and 0s (OFF) and each value must be stored in the data string in the order illustrated below.  
   
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RsfbNAGzkOI/AAAAAAAAAXI/ILObPelhFUo/s320/format.png)](http://1.bp.blogspot.com/_940DBYqYeYo/RsfbNAGzkOI/AAAAAAAAAXI/ILObPelhFUo/s1600-h/format.png)
+{% include fig.html img="format.png" caption="" id=page.id %}
 
 The duration of each column (i.e. how much time they stay ON), the spacing between frames and the spacing between images are set respectively by the integers timer1, timer2 and timer3. Keep in mind that their values depend on the rotation speed.
 
@@ -36,7 +37,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 4
 *   frame_num: 1
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RsfXegGzkKI/AAAAAAAAAWo/2ReHyCoFKhE/s320/arrow.JPG)](http://3.bp.blogspot.com/_940DBYqYeYo/RsfXegGzkKI/AAAAAAAAAWo/2ReHyCoFKhE/s1600-h/arrow.JPG)
+{% include fig.html img="arrow.JPG" caption="" id=page.id %}
 
 ## "Alan":
 
@@ -47,7 +48,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 4
 *   frame_num: 4
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RsfXewGzkLI/AAAAAAAAAWw/kVpsgagELwA/s320/alan.JPG)](http://4.bp.blogspot.com/_940DBYqYeYo/RsfXewGzkLI/AAAAAAAAAWw/kVpsgagELwA/s1600-h/alan.JPG)
+{% include fig.html img="alan.JPG" caption="" id=page.id %}
 
 ## Sinewave (or flower):
 
@@ -58,7 +59,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 12
 *   frame_num: 1
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RsfXfAGzkMI/AAAAAAAAAW4/S8FwL_TlwIk/s320/sine.JPG)](http://1.bp.blogspot.com/_940DBYqYeYo/RsfXfAGzkMI/AAAAAAAAAW4/S8FwL_TlwIk/s1600-h/sine.JPG)
+{% include fig.html img="sine.JPG" caption="" id=page.id %}
 
 ## E = MC²:
 
@@ -69,4 +70,4 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 5
 *   frame_num: 5
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RsfXfgGzkNI/AAAAAAAAAXA/irwYC4rg1pY/s320/e_mc2.JPG)](http://3.bp.blogspot.com/_940DBYqYeYo/RsfXfgGzkNI/AAAAAAAAAXA/irwYC4rg1pY/s1600-h/e_mc2.JPG)
+{% include fig.html img="e_mc2.JPG" caption="" id=page.id %}

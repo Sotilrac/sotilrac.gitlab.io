@@ -31,3 +31,6 @@ exclude_from_watch:
   - "bower_components/bootstrap/scss/mixins"
   - "bower_components/bootstrap/scss/utilities"
   - "bower.json"
+
+include:
+  - "img"

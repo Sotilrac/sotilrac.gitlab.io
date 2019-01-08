@@ -1,8 +1,9 @@
 ---
 layout: post
-status: published
+status: darft
 title: Introduction
-author: carlos
+author: Carlos
+id: 1
 date: '2006-08-22 22:25:00 -0400'
 date_gmt: '2006-08-23 05:25:00 -0400'
 categories:
@@ -10,8 +11,7 @@ categories:
 tags: []
 ---
 
-![Carlos](http://carlitoscontraptions.com/wp-content/uploads/blogger/blogger/4122/3639/320/carlos.0.jpg)
-*Carlos*
+{% include fig.html img="carlos.jpg" caption="Carlos" id=page.id %}
 
 I am Carlos Asmat, an electrical engineering undergraduate at McGill University. I have been living in [Montreal](http://en.wikipedia.org/wiki/Montreal "Montreal") (Quebec, Canada) for the past eight years but I was born in [Rosario](http://en.wikipedia.org/wiki/Rosario "Rosario") (Santa Fe, Argentina).
 

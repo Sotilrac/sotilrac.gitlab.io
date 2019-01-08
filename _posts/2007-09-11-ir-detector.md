@@ -1,22 +1,23 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: IR Detector
-author: carlos
+author: Carlos
+id: 38
 date: '2007-09-11 15:18:00 -0400'
 date_gmt: '2007-09-11 22:18:00 -0400'
 categories:
 - My Projects
 tags: []
 ---
-Besides [my POV display](http://carlitoscontraptions.blogspot.com/2007/08/pov-prototype-part-2.html), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, [infertility](http://cialis24online.net/) I built a very simple IR detector based on [this article](http://www.thekeeser.com/Projects/simple_ir_detector.htm).
+Besides [my POV display](http://carlitoscontraptions.blogspot.com/2007/08/pov-prototype-part-2.html), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, I built a very simple IR detector based on [this article](http://www.thekeeser.com/Projects/simple_ir_detector.htm).
 
 ## General Idea
 
 An IR signal is "seen" by a reverse biased IR diode which produces an electrical signal according to the light intensity. This signal is then amplified trough a transistor which powers an ordinary LED. This means that the LED will light up when the IR diodes receives some IR light (from a TV remote for instance).
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RuloSbsPf0I/AAAAAAAAAag/pgRrG1gyMoA/s320/dcp_0019.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/RuloSbsPf0I/AAAAAAAAAag/pgRrG1gyMoA/s1600-h/dcp_0019.jpg)
+{% include fig.html img="dcp_0019.jpg" caption="" id=page.id %}
 
 ## Materials
 
@@ -28,11 +29,11 @@ An IR signal is "seen" by a reverse biased IR diode which produces an electrical
 *   An old 9V battery (for the casing)
 *   A new 9V battery (for power)
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RuloRrsPfxI/AAAAAAAAAaI/OzzYmlfYPgY/s320/dcp_0002.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/RuloRrsPfxI/AAAAAAAAAaI/OzzYmlfYPgY/s1600-h/dcp_0002.jpg)
+{% include fig.html img="dcp_0002.jpg" caption="" id=page.id %}
 
 ## The Circuit
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RuoRY7sPf2I/AAAAAAAAAaw/j5YrhE8ALsQ/s320/IRD_circuit.png)](http://3.bp.blogspot.com/_940DBYqYeYo/RuoRY7sPf2I/AAAAAAAAAaw/j5YrhE8ALsQ/s1600-h/IRD_circuit.png)
+{% include fig.html img="IRD_circuit.png" caption="" id=page.id %}
 
 ## Construction Notes
 

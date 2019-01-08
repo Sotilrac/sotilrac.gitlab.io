@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Protecting Nao
-author: carlos
-carloswordpress_id: 867
+author: Carlos
+id: 867
 wordpress_url: http://carlitoscontraptions.com/?p=867
 date: '2011-03-08 00:30:36 -0500'
 date_gmt: '2011-03-08 04:30:36 -0500'

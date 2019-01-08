@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Some Ideas
-author: carlos
+author: Carlos
+id: 11
 date: '2006-11-05 23:36:00 -0500'
 date_gmt: '2006-11-06 06:36:00 -0500'
 categories:

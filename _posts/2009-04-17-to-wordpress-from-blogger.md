@@ -1,9 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: To WordPress from Blogger
-author: carlos
-carloswordpress_id: 109
+author: Carlos
+id: 75
 date: '2009-04-17 02:56:49 -0400'
 date_gmt: '2009-04-17 06:56:49 -0400'
 categories:
@@ -14,11 +14,11 @@ tags:
 ---
 I recently moved my blog from Blogger to an independently hosted WordPress installation and I needed to dynamically redirect the visitors going into the old pages so that the could see the new ones.
 
-There are many tutorials on how to do this on the net but they usually involve fairly complex procedures and require modifying the Blogger HTML code and installing some plug-ins in WordPress. But, [rx](http://canadian-pharmacy-viagra.org/) what I really wanted was a simple way of redirecting each blog post into its new version.
+There are many tutorials on how to do this on the net but they usually involve fairly complex procedures and require modifying the Blogger HTML code and installing some plug-ins in WordPress. But, what I really wanted was a simple way of redirecting each blog post into its new version.
 
 ## My solution:
 
-I decided to write a little java script code that will do the job since it is a fairly simple task. All that is required to translate one of my permalinks is to strip the ".blogspot" part, [artificial](http://viagra-order-online.com/) and the ".html" part (see the example below).
+I decided to write a little java script code that will do the job since it is a fairly simple task. All that is required to translate one of my permalinks is to strip the ".blogspot" part, and the ".html" part (see the example below).
 
 ## Example:
 

@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: What am I building?
-author: carlos
+author: Carlos
+id: 47
 date: '2008-05-20 23:12:00 -0400'
 date_gmt: '2008-05-21 06:12:00 -0400'
 categories:

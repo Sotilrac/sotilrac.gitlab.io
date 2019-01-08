@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Fully Featured Media Center on a Budget
-author: carlos
+author: Carlos
+id: 32
 date: '2007-07-15 00:14:00 -0400'
 date_gmt: '2007-07-15 07:14:00 -0400'
 categories:
@@ -34,7 +35,7 @@ First, get all the materials. My girlfriend and I got a second hand Xbox complet
 
 In order to get the Xbox to run homebrew software (i.e. software that is not signed by Microsoft such as XBMC) its security system must be disabled. This can be done by installing a softmod (witch doesn't require any hardware modification of the gaming system).
 
-I choose to use the [Krayzie Ndure SOFTMOD Pack](http://www.torrentbox.com/download/24832/XBOX%20Krayzie%20Ndure%20SOFTMOD%20Pack.torrent) that can be downloaded from the torrents. The idea is to get one of the game saves from this package (depending on which game you want to use) into the memory card and then into the Xbox. In order to get the MechAssault save to the memory card I used my own ([hard](http://www.xbox100.com/tutorials/beginnermodfaq.htm))modded Xbox: I copied the game save folder to the E:UDATA folder trough FTP and then I copied the game save (named Linux Installer) to the memory card by using the original Xbox dash. If you don't have access to a modded Xbox, there are other ways of getting the save to the Xbox such as [Action Replay](http://us.codejunkies.com/shop/product.asp?c=US&cr=USD&cs=$&r=0&amp;amp;amp;amp;amp;amp;amp;amp;amp;l=1&ProdID=119) or building a [USB adapter](http://www.xbox-linux.org/wiki/Xbox_Linux_USB_HOWTO).
+I choose to use the [Krayzie Ndure SOFTMOD Pack](http://www.torrentbox.com/download/24832/XBOX Krayzie Ndure SOFTMOD Pack.torrent) that can be downloaded from the torrents. The idea is to get one of the game saves from this package (depending on which game you want to use) into the memory card and then into the Xbox. In order to get the MechAssault save to the memory card I used my own ([hard](http://www.xbox100.com/tutorials/beginnermodfaq.htm))modded Xbox: I copied the game save folder to the E:UDATA folder trough FTP and then I copied the game save (named Linux Installer) to the memory card by using the original Xbox dash. If you don't have access to a modded Xbox, there are other ways of getting the save to the Xbox such as [Action Replay](http://us.codejunkies.com/shop/product.asp?c=US&cr=USD&cs=$&r=0&amp;amp;amp;amp;amp;amp;amp;amp;amp;l=1&ProdID=119) or building a [USB adapter](http://www.xbox-linux.org/wiki/Xbox_Linux_USB_HOWTO).
 
 Now, the easy part. Once you have the game save in the memory card, connect the Xbox to the router (as you would connect any other computer to it), plug the card into the controller, and turn the console on. Then, in the Xbox dash, go to the memory menu and copy the game save to the Xbox hard drive (hdd). Afterwards, insert the MechAssault disk, select the campaign menu entry, and then select "Linux Installer". This will take you to a dashboard that will guide you through the installation of the softmod. Simply follow the steps (back up the eeprom and install the softmod) and in less than 2 minutes you will have a modded Xbox with your dashboard of choice (you can chose between EvolutionX or UnleashedX).
 
@@ -56,33 +57,33 @@ Now that you have XBMC up , running and connected to the internet you can:
 
 ## Some Screenshots
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxN8E6eeWI/AAAAAAAAAT4/Ed97S4ftmaQ/s320/media.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxN8E6eeWI/AAAAAAAAAT4/Ed97S4ftmaQ/s1600-h/media.bmp)
+{% include fig.html img="media.bmp" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxRZE6eedI/AAAAAAAAAUw/_4Jkyl-J5tU/s320/video.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxRZE6eedI/AAAAAAAAAUw/_4Jkyl-J5tU/s1600-h/video.bmp)
+{% include fig.html img="video.bmp" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxN8E6eeXI/AAAAAAAAAUA/Wo-ZzWx2ypU/s320/movies_menu_2.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxN8E6eeXI/AAAAAAAAAUA/Wo-ZzWx2ypU/s1600-h/movies_menu_2.bmp)
+{% include fig.html img="movies_menu_2.bmp" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxN8E6eeYI/AAAAAAAAAUI/Dbd4m9mtd14/s320/movies_menu_1.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxN8E6eeYI/AAAAAAAAAUI/Dbd4m9mtd14/s1600-h/movies_menu_1.bmp)
+{% include fig.html img="movies_menu_1.bmp" caption="" id=page.id %}
 
-[![](http://2.bp.blogspot.com/_940DBYqYeYo/RpxN8U6eeZI/AAAAAAAAAUQ/EiRv3daDVkQ/s320/music.bmp)](http://2.bp.blogspot.com/_940DBYqYeYo/RpxN8U6eeZI/AAAAAAAAAUQ/EiRv3daDVkQ/s1600-h/music.bmp)
+{% include fig.html img="music.bmp" caption="" id=page.id %}
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxRY06eebI/AAAAAAAAAUg/a2s1K1cgGo4/s320/shoutcast.bmp)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxRY06eebI/AAAAAAAAAUg/a2s1K1cgGo4/s1600-h/shoutcast.bmp)
+{% include fig.html img="shoutcast.bmp" caption="" id=page.id %}
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeRI/AAAAAAAAATQ/XuQO5k7-SsA/s320/audio_playback.bmp)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeRI/AAAAAAAAATQ/XuQO5k7-SsA/s1600-h/audio_playback.bmp)
+{% include fig.html img="audio_playback.bmp" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxNAE6eeSI/AAAAAAAAATY/TBBZjxQ6AWU/s320/games.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxNAE6eeSI/AAAAAAAAATY/TBBZjxQ6AWU/s1600-h/games.bmp)
+{% include fig.html img="games.bmp" caption="" id=page.id %}
 
-[![](http://2.bp.blogspot.com/_940DBYqYeYo/RpxNAU6eeUI/AAAAAAAAATo/qY5Xj7nnPtY/s320/live.bmp)](http://2.bp.blogspot.com/_940DBYqYeYo/RpxNAU6eeUI/AAAAAAAAATo/qY5Xj7nnPtY/s1600-h/live.bmp)
+{% include fig.html img="live.bmp" caption="" id=page.id %}
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxN706eeVI/AAAAAAAAATw/NoNnM1gfOns/s320/live_places.bmp)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxN706eeVI/AAAAAAAAATw/NoNnM1gfOns/s1600-h/live_places.bmp)
+{% include fig.html img="live_places.bmp" caption="" id=page.id %}
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxRY06eecI/AAAAAAAAAUo/lZWySrV6inI/s320/trailers.bmp)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxRY06eecI/AAAAAAAAAUo/lZWySrV6inI/s1600-h/trailers.bmp)
+{% include fig.html img="trailers.bmp" caption="" id=page.id %}
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RpxRYk6eeaI/AAAAAAAAAUY/Anqxb5qu5eg/s320/playback.bmp)](http://3.bp.blogspot.com/_940DBYqYeYo/RpxRYk6eeaI/AAAAAAAAAUY/Anqxb5qu5eg/s1600-h/playback.bmp)
+{% include fig.html img="playback.bmp" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxRZE6eeeI/AAAAAAAAAU4/f1bQZqswWtw/s320/weather.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxRZE6eeeI/AAAAAAAAAU4/f1bQZqswWtw/s1600-h/weather.bmp)
+{% include fig.html img="weather.bmp" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RpxNAE6eeTI/AAAAAAAAATg/_GIj-JwbwGM/s320/joox.bmp)](http://1.bp.blogspot.com/_940DBYqYeYo/RpxNAE6eeTI/AAAAAAAAATg/_GIj-JwbwGM/s1600-h/joox.bmp)
+{% include fig.html img="joox.bmp" caption="" id=page.id %}
 
 (note that the top and bottom black borders are not shown in the TV screen)
 

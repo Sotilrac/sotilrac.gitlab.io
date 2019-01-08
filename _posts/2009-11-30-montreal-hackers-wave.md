@@ -1,11 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Montreal Hackers Wave
-author: carlos
-carloswordpress_id: 438
-wordpress_url: http://carlitoscontraptions.com/?p=438
+author: Carlos
+id: 90
 date: '2009-11-30 13:17:04 -0500'
 date_gmt: '2009-11-30 17:17:04 -0500'
 categories:
@@ -15,7 +14,7 @@ tags:
 - Software
 - Montreal
 ---
-\[caption id="attachment_439" align="alignleft" width="300" caption="Google Wave"\][![Google Wave](http://carlitoscontraptions.com/wp-content/uploads/2009/11/google_wave_logo-300x225.jpg "Google Wave Logo")](https://wave.google.com/wave/#restored:wave:googlewave.com!w%252BPUXPJxujA)\[/caption\]
+{% include fig.html img="wave.goo" caption="Google Wave" id=page.id %}
 
 I finally got a [Google Wave](http://www.wave.google.com/ "Google Wave") account and I decided to do something for the community. More precisely, the hacker/tinkerer/DIY community.
 

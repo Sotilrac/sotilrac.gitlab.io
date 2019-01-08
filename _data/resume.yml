@@ -19,12 +19,8 @@ phone: '{"iv":"FUMKr3Zf9hyXW/PzvtIUnQ==","v":1,"iter":1000,"ks":128,"ts":64,"mod
 email: '{"iv":"DHetcUJrzvVjl6Q+ZivTnQ==","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"P5UYmgeVuFM=","ct":"+uHimOolCZ3aTvOpOtV7boL56JdI5Ht3DDivioEp"}'
 picture: http://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60
 summary:
-- As a determined Electrical Engineer specialized in Control & Automation, and 
-  Power, I possess circuit design and software development skills, a 
-  substantive work experience, teamwork and communication skills, and a true
-  passion for robotics and creative work.
-- I particularly enjoy open-source hardware design, FPGAs, electronic layout
-  and prototyping, and developing interactive applications for personal robots.
+- I enjoy open-source hardware and software, electronic prototyping, and developing interactive personal robots that work in real life.
+- As a determined Electrical and Software Engineer specialized in Personal Robots, Control Systems, and Human-Robot Interaction, I have circuit design and software development skills, a substantive work experience, teamwork and communication skills, and a true passion for robotics and creative work.
 experience:
 - title: Lead Robot Software Engineer
   start_date: 02 /2017
@@ -154,9 +150,9 @@ skills:
   - KiCAD · Altium
   programming:
   - C/C++ · Python
-  - Assembler · VHDL
   - ROS
   - Arduino
+  - Assembly · VHDL
   - HTML · CSS · JavaScript
   - Mathematica · Matlab · Octave
 education:

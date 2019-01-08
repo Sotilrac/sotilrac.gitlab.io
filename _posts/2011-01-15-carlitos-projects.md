@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Carlitos' Projects
-author: carlos
-carloswordpress_id: 790
+author: Carlos
+id: 790
 wordpress_url: http://carlitoscontraptions.com/?p=790
 date: '2011-01-15 17:55:18 -0500'
 date_gmt: '2011-01-15 21:55:18 -0500'

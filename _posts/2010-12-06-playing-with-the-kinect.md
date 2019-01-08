@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Playing With the Kinect
-author: carlos
-carloswordpress_id: 770
+author: Carlos
+id: 770
 wordpress_url: http://carlitoscontraptions.com/?p=770
 date: '2010-12-06 01:34:29 -0500'
 date_gmt: '2010-12-06 05:34:29 -0500'
@@ -20,6 +20,6 @@ So far my contributions to the OpenKinect project are not too great and are limi
 
 In the meantime, I created a tripod mount for my Kinect using a 1/4"-20 machine nut and some [polymorph](http://carlitoscontraptions.com/2010/06/we-have-polymorph/). This was very easy to achieve and snaps around the Kinect to hold it very firmly. The main goal of this mount was to provide a very firm grip without permanently damaging or modifying the Kinect. See the video below for more details.
 
-\[youtube e9ue9D1Ee_8\]
+{% include youtube.html id="e9ue9D1Ee_8" %}
 
 As a hint of what to expect in the future, know that my main interest for the Kinect is SLAM and 3D scanning.

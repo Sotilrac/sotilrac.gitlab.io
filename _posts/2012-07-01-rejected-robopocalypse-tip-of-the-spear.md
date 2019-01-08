@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: 'REJECTED: Robopocalypse - The Tip Of The Spear'
-author: carlos
-carloswordpress_id: 1179
+author: Carlos
+id: 1179
 wordpress_url: http://carlitoscontraptions.com/?p=1179
 date: '2012-07-01 17:01:41 -0400'
 date_gmt: '2012-07-01 21:01:41 -0400'
@@ -51,6 +51,6 @@ Needless to say, this made 1337 a bit disappointed. It seems appropriate in this
 
 So without further ado, behold the Tip Of The Spear.
 
-[youtube viZLRbzp_EA]
+{% include youtube.html id="viZLRbzp_EA" %}
 
 For those interested, see more pictures from the set and making-of.

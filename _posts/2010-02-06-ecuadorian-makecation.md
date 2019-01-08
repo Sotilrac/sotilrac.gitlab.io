@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Ecuadorian Makecation
-author: carlos
-carloswordpress_id: 487
+author: Carlos
+id: 84
 wordpress_url: http://carlitoscontraptions.com/?p=487
 date: '2010-02-06 01:20:15 -0500'
 date_gmt: '2010-02-06 05:20:15 -0500'
@@ -23,7 +23,7 @@ I travelled with this year's International Baccalaureate group. Needless to say,
 
 As expected, the construction of both projects did not go without troubles. There where many unexpected obstacles and a lot of hard work was required in order to complete them. Luckily, I was with the best group of young people I have ever encountered. The Andre Laurendeau IB group of 2010 that travelled with me is remarkable and exceptional. Composed of Nicolas, Roxane, Tiberiu, Angelo, Genevieve and Adam, this is a hard-working, tenacious and dutiful team.
 
-\[caption id="attachment_491" align="aligncenter" width="300" caption="IB 2010 group in Quito, Ecuador"\][![IB 2010 group in Quito, Ecuador](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2858-300x225.jpg "IB 2010 group in Quito, Ecuador")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2858.jpg)\[/caption\]
+{% include fig.html img="IMG_2858.jpg" caption="IB 2010 group in Quito, Ecuador" id=page.id %}
 
 As you imagine, I loved this experience. So much so to be already toying with ideas on what to do next year for the next trip. Although I might not be able to go, I might still be able to imagine some cool projects.
 
@@ -33,7 +33,7 @@ I would like to thank the IB in entirety for all the hard work they put in this 
 
 Also, I would like to thank Stephanie who donated many of the awesome tools I brought to Ecuador and that were crucial in making the projects. The single most important tool she gave me being the Leatherman Wave (for Christmas) which is responsible for achieving almost everything during the trip.
 
-\[caption id="attachment_492" align="aligncenter" width="225" caption="Leatherman Wave in Action"\][![Leatherman Wave in Action](http://carlitoscontraptions.com/wp-content/uploads/2010/02/PA260295-225x300.jpg "Leatherman Wave in Action")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/PA260295.jpg)\[/caption\]
+{% include fig.html img="PA260295.jpg" caption="Leatherman Wave in Action" id=page.id %}
 
 ## Forced Acknowledgement
 

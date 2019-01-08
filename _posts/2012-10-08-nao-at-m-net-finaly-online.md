@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Nao 1337 at M. Net Finally Online!
-author: carlos
-carloswordpress_id: 1523
+author: Carlos
+id: 1523
 wordpress_url: http://carlitoscontraptions.com/?p=1523
 date: '2012-10-08 23:11:04 -0400'
 date_gmt: '2012-10-09 03:11:04 -0400'

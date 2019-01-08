@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Arduino Launcher for the KDE menu
-author: carlos
+author: Carlos
+id: 35
 date: '2007-08-17 13:17:00 -0400'
 date_gmt: '2007-08-17 20:17:00 -0400'
 categories:
@@ -19,6 +20,6 @@ In order to add a KDE menu launcher for the Arduino software, open the KDE Menu 
 
 in the Command field. Also, make sure that Run in terminal is checked and replace /opt/arduino-0007/ by your own installation path.
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RsYEUQGzkJI/AAAAAAAAAWg/vBmSUBshKW8/s320/Arduino+Launcher.png)](http://1.bp.blogspot.com/_940DBYqYeYo/RsYEUQGzkJI/AAAAAAAAAWg/vBmSUBshKW8/s1600-h/Arduino+Launcher.png)
+{% include fig.html img="Arduino+Launcher.png" caption="" id=page.id %}
 
 I'm sure there are thousands of other ways of doing this (including many than only require a few commands in the terminal) but at least this ways is pretty simple and and can be done without knowing that much about Linux.

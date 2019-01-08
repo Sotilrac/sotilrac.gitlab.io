@@ -49,3 +49,26 @@ Build on changes automatially
 ```
 jekyll build --watch
 ```
+
+# Useful tools
+* https://domchristie.github.io/turndown/
+
+# Post Structure
+
+```
+layout: post
+status: darft | public
+title: Sample Title
+author: Author Name
+id: 90001
+date: '2006-08-22 22:25:00 -0400'
+categories:
+- General
+- Projects
+- Tools
+tags: 
+- Linux
+- OSHW
+- Software
+- Robotics
+```

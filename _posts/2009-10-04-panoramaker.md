@@ -1,11 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Panoramaker
-author: carlos
-carloswordpress_id: 348
-wordpress_url: http://carlitoscontraptions.com/?p=348
+author: Carlos
+id: 84
 date: '2009-10-04 21:55:03 -0400'
 date_gmt: '2009-10-05 01:55:03 -0400'
 categories:

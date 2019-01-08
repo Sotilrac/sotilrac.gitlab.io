@@ -1,13 +1,11 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: I am the luckiest Engineer ever
-author: carlos
-carloswordpress_id: 408
-wordpress_url: http://carlitoscontraptions.com/?p=408
+author: Carlos
+id: 88
 date: '2009-11-18 13:14:22 -0500'
-date_gmt: '2009-11-18 17:14:22 -0500'
 categories:
 - General
 - FPGA
@@ -16,7 +14,7 @@ tags:
 ---
 A few weeks ago, I received a very pleasant message: [Altium](http://altium.com/ "Altium"), an FPGA development board manufacturer and IDE developer, contacted me asking If I wanted to try the (excessively cool) brand new development board (the [NanoBoard 3000](http://nb3000.altium.com/intro.html "NanoBoard 3000")) for free. Of course, I immediately (and quite emphatically) said _YES_.
 
-\[caption id="attachment_411" align="aligncenter" width="300" caption="The Altium NanoBoard 3000"\][![The Altium NanoBoard 3000](http://carlitoscontraptions.com/wp-content/uploads/2009/11/IMG_2254-300x225.jpg "Altium NanoBoard 3000")](http://carlitoscontraptions.com/wp-content/uploads/2009/11/IMG_2254.JPG)\[/caption\]
+{% include fig.html img="IMG_2254.JPG" caption="The Altium NanoBoard 3000" id=page.id %}
 
 Now that I got it, I'm dying to have some spear time in order to try out their awesome board with their quite intriguing IDE.
 
@@ -24,7 +22,7 @@ Now that I got it, I'm dying to have some spear time in order to try out their a
 
 The NanoBoard 3000 is a beautiful piece of equipment. It boasts lots of cool peripherals and is built and packed as a luxury electronics product. It is a very good looking piece of equipment while remaining perfectly functional, it beats by far all the other development boards I am familiar with (i.e. the Altera DE2 board and the Lattice Mico32 development board) while remaining much cheaper (around 50% of their price).
 
-\[caption id="attachment_416" align="aligncenter" width="300" caption="NanoBoard 3000 Unboxing"\][![NanoBoard 3000 Unboxing](http://carlitoscontraptions.com/wp-content/uploads/2009/11/NanoBoard-300x240.jpg "NanoBoard 3000 Unboxing")](http://carlitoscontraptions.com/wp-content/uploads/2009/11/NanoBoard.jpg)\[/caption\]
+{% include fig.html img="NanoBoard.jpg" caption="NanoBoard 3000 Unboxing" id=page.id %}
 
 ## Features
 
@@ -32,7 +30,7 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
 
 *   A Xilinx Spartan-3AN device (XC3S1400AN-4FGG676C)
     
-    \[caption id="attachment_421" align="alignright" width="300" caption="Nanoboard 3000 Front"\][![Nanoboard 3000 Front](http://carlitoscontraptions.com/wp-content/uploads/2009/11/IMG_2251-300x225.jpg "Nanoboard 3000 Front")](http://carlitoscontraptions.com/wp-content/uploads/2009/11/IMG_2251.JPG)\[/caption\]
+    {% include fig.html img="IMG_2251.JPG" caption="Nanoboard 3000 Front" id=page.id %}
     
 *   4 Serial SPI Flash memory devices
 *   Programmable clock 6 to 200 MHz, accessible by Altium Designer or by an FPGA design
@@ -55,7 +53,7 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
     *   One for use by the User FPGA
 *   SVGA interface (24-bit, 80MHz)
     
-    \[caption id="attachment_422" align="alignright" width="300" caption="NanoBoard 3000 Back"\][![NanoBoard 3000 Back](http://carlitoscontraptions.com/wp-content/uploads/2009/11/IMG_2252-300x225.jpg "NanoBoard 3000 Back")](http://carlitoscontraptions.com/wp-content/uploads/2009/11/IMG_2252.JPG)\[/caption\]
+    {% include fig.html img="IMG_2252.JPG" caption="NanoBoard 3000 Back" id=page.id %}
     
 *   10/100 Fast Ethernet interface
 *   USB 2.0 High-Speed interface

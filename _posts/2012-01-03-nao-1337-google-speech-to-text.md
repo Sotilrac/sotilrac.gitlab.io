@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Nao 1337 uses Google Speech-to-Text Service
-author: carlos
-carloswordpress_id: 1125
+author: Carlos
+id: 1125
 wordpress_url: http://carlitoscontraptions.com/?p=1125
 date: '2012-01-03 01:01:13 -0500'
 date_gmt: '2012-01-03 05:01:13 -0500'
@@ -22,7 +22,7 @@ I created a behaviour for Nao that used the same speech-to-text services found i
 
 See a quick demo of the speech recognition:  
 
-[youtube lb2usV4vGWU]
+{% include youtube.html id="lb2usV4vGWU" %}
 
 Nao developers can find the code [here](http://developer.aldebaran-robotics.com/projects/google-speech-to-text/).
 

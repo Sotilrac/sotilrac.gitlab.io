@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Speech Recognition Using on FPGA
-author: carlos
+author: Carlos
+id: 31
 date: '2007-06-23 15:28:00 -0400'
 date_gmt: '2007-06-23 22:28:00 -0400'
 categories:
@@ -14,7 +15,7 @@ My friends David and Kanwen, and I implemented a speech recognition system on an
 
 ## MATLAB Prototype
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/Rn2fZAO16II/AAAAAAAAAS4/VPEe0O68dJY/s320/blackboard.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/Rn2fZAO16II/AAAAAAAAAS4/VPEe0O68dJY/s1600-h/blackboard.jpg)
+{% include fig.html img="blackboard.jpg" caption="" id=page.id %}
 
 Inspired by the algorithm described in [a site from the University of Toronto](http://www.eecg.toronto.edu/%7Eaamodt/ece341/speech-recognition/), we wrote two MATLAB scripts: [train.m](http://carlos.asmat.googlepages.com/train.m) and [recogniz.m](http://carlos.asmat.googlepages.com/recogniz.m).
 
@@ -30,7 +31,7 @@ Also you might encounter problems if the sound file is too short (it should last
 
 ## Hardware Implementation
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/Rn2fZAO16JI/AAAAAAAAATA/XpG9KYlUIa8/s320/system.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/Rn2fZAO16JI/AAAAAAAAATA/XpG9KYlUIa8/s1600-h/system.jpg)
+{% include fig.html img="system.jpg" caption="" id=page.id %}
 
 Once we had played enough with the MATLAB prototype parameters, we mapped the algorithm into combinational logic and finite state machines (FSM) by breaking it down into independent modules.
 
@@ -38,6 +39,6 @@ For more details about the hardware implementation and the project in general yo
 
 Unfortunately, I cannot post the project files (i.e. VHDL code).
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/Rn2fYwO16HI/AAAAAAAAASw/z7rsB-flDPY/s320/DE2+board.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/Rn2fYwO16HI/AAAAAAAAASw/z7rsB-flDPY/s1600-h/DE2+board.jpg)
+{% include fig.html img="DE2+board.jpg" caption="" id=page.id %}
 
 Note that all the documentation for this project was done using the very excellent [OpenOffice.org](http://openoffice.org/).

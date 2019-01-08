@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Floppy Note Pad
-author: carlos
+author: Carlos
+id: 49
 date: '2008-05-28 21:25:00 -0400'
 date_gmt: '2008-05-29 04:25:00 -0400'
 categories:
@@ -14,7 +15,7 @@ Inspired by [this commercial product](http://www.fractalspin.com/x/product.php?p
 
 The main goal of this activity was to have the children make something useful by themselves by using everyday household materials and (what normally would be considered as) garbage.
 
-[![](http://2.bp.blogspot.com/_940DBYqYeYo/SD5D9zjaljI/AAAAAAAAAuY/8iJyMYDafts/s320/floppyNotePads.jpg)](http://2.bp.blogspot.com/_940DBYqYeYo/SD5D9zjaljI/AAAAAAAAAuY/8iJyMYDafts/s1600-h/floppyNotePads.jpg)
+{% include fig.html img="floppyNotePads.jpg" caption="" id=page.id %}
 
 ## Materials (per child)
 

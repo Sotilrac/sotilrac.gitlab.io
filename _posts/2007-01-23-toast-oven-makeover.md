@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Toast Oven Makeover
-author: carlos
+author: Carlos
+id: 20
 date: '2007-01-23 15:46:00 -0500'
 date_gmt: '2007-01-23 22:46:00 -0500'
 categories:
@@ -26,11 +27,11 @@ IMHO, the easiest way to clean it is to take it apart, clean each piece, and put
 Enjoy some before and after shots:
 
 ## Before...
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RbaScY8lCNI/AAAAAAAAADA/2-oRUoYrvPs/s320/Before1.jpg)](http://3.bp.blogspot.com/_940DBYqYeYo/RbaScY8lCNI/AAAAAAAAADA/2-oRUoYrvPs/s1600-h/Before1.jpg)
+{% include fig.html img="Before1.jpg" caption="" id=page.id %}
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/RbaSc48lCOI/AAAAAAAAADI/YJ2ZAK3tYfM/s320/Before2.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/RbaSc48lCOI/AAAAAAAAADI/YJ2ZAK3tYfM/s1600-h/Before2.jpg)
+{% include fig.html img="Before2.jpg" caption="" id=page.id %}
 
 ## After...
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/RbaSbY8lCLI/AAAAAAAAACw/GwXef0A_fKo/s320/After1.jpg)](http://3.bp.blogspot.com/_940DBYqYeYo/RbaSbY8lCLI/AAAAAAAAACw/GwXef0A_fKo/s1600-h/After1.jpg)
+{% include fig.html img="After1.jpg" caption="" id=page.id %}
 
-[![](http://2.bp.blogspot.com/_940DBYqYeYo/RbaScI8lCMI/AAAAAAAAAC4/LL65RYP49n0/s320/After2.jpg)](http://2.bp.blogspot.com/_940DBYqYeYo/RbaScI8lCMI/AAAAAAAAAC4/LL65RYP49n0/s1600-h/After2.jpg)
+{% include fig.html img="After2.jpg" caption="" id=page.id %}

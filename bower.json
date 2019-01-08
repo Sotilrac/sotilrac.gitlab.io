@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "fancybox": "^3.2.5"
   }
 }

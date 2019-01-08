@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: OMG! It's Coming Nao!
-author: carlos
-carloswordpress_id: 817
+author: Carlos
+id: 817
 wordpress_url: http://carlitoscontraptions.com/?p=817
 date: '2011-01-18 01:45:09 -0500'
 date_gmt: '2011-01-18 05:45:09 -0500'
@@ -15,7 +15,7 @@ tags:
 - Nao
 - Developer Program
 ---
-\[caption id="attachment_818" align="aligncenter" width="300" caption="Nao's Packing Picture"\][![Nao's Packing Picture](http://carlitoscontraptions.com/wp-content/uploads/2011/01/Naos-packing-Picture-300x225.jpg "Nao's Packing Picture")](http://carlitoscontraptions.com/wp-content/uploads/2011/01/Naos-packing-Picture.jpg)\[/caption\]
+{% include fig.html img="carlitoscontraptions.com" caption="Nao's Packing Picture" id=page.id %}
 
 I joined [Aldebaran's developer program](http://www.robotshop.com/blog/aldebaran-developer-program-the-future-is-nao-1137) and now my Nao is coming (much faster than I expected). They even sent me a picture of the box prior to shipping it.
 
@@ -23,4 +23,4 @@ This is an amazing experience and you can be sure I'll be sharing all of it in h
 
 Stay tuned for more Nao news!
 
-\[youtube RpmKsjhw2sA\]
+{% include youtube.html id="RpmKsjhw2sA" %}

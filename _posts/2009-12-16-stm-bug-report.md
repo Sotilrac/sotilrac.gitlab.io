@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: STM Bug Report
-author: carlos
-carloswordpress_id: 471
+author: Carlos
+id: 93
 wordpress_url: http://carlitoscontraptions.com/?p=471
 date: '2009-12-16 16:03:52 -0500'
 date_gmt: '2009-12-16 20:03:52 -0500'
@@ -16,7 +16,7 @@ tags:
 ---
 Ever since the implementation of the new [Opus Card system](http://carlitoscontraptions.com/2009/03/opus-smart-card/ "Opus Card") by the Montreal's Public Transportation ([STM](http://stm.info/ "STM")), there have been lots of malfunctions and bugs.
 
-\[caption id="attachment_472" align="aligncenter" width="300" caption="Crashed STM Ticket Vending Machine"\][![Crashed STM Ticket Vending Machine](http://carlitoscontraptions.com/wp-content/uploads/2009/12/ss851347-300x225.jpg "Crashed STM Ticket Vending Machine")](http://carlitoscontraptions.com/wp-content/uploads/2009/12/ss851347.jpg)\[/caption\]
+{% include fig.html img="ss851347.jpg" caption="Crashed STM Ticket Vending Machine" id=page.id %}
 
 The malfunctions were mainly caused by the poor build quality of the smartcards, the poor wireless reader range, the easy demagnetization of the paper tickets, etc. Slowly (very slowly) these malfunctions are being addressed and (sometimes) solved. The unsolved bugs become a part of the daily routine and we Montrealers learn to accept them.
 

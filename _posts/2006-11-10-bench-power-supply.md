@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Bench Power Supply
-author: carlos
+author: Carlos
+id: 12
 date: '2006-11-10 18:00:00 -0500'
 date_gmt: '2006-11-11 01:00:00 -0500'
 categories:
@@ -30,28 +31,30 @@ Enough chitchat, let's get started.
 ## Putting it together
 
 Of course, my computer PS is not standard (GPC 145-4001), so I couldn't find its specifications anywhere. So, I did a bit of reverse engineering (poking around) and figured out the pinout shown in this table:  
-[![](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply%20pinout.0.gif)](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply%20pinout.0.gif)
+{% include fig.html img="Power Supply pinout.0.gif" caption="" id=page.id %}
 
 Note: for P7 (P1, P2,... are the actual name written on the plugs) the yellow wire outputs 5V when the power supply is plugged in regardless of it being on or off. Also, when the violet wire is grounded, the power supply turns on. It goes off as soon as the violet wire is not grounded. Finally, the maximum power output is 150W, pretty respectable.
 
 In order to control the power supply and show when it is on/off and plugged-in, I attached the following circuit to P7:
 
-[![](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply%20circuit.gif)](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply%20circuit.gif)  
+{% include fig.html img="Power Supply circuit.gif" caption="" id=page.id %}  
 This works very simply: the yellow LED turns on when the PS is plugged to the mains and the green LED turns on when the switch is closed and the PS turns on.
 
-[![](http://photos1.blogger.com/blogger/4122/3639/320/Power%20Supply1.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply1.jpg)I desoldered all the wires (P1, P2 ad P6) from the PS, leaving just one for each output (5V, -5V, 12V, -12V, and GND). Desoldering them is better than cutting for obvious reasons (less clutter, more reliable, etc). The output wires will be attached to banana connectors mounted on the PS case in order to make them more accesible (make sure the connectors are isolated from the case).
+{% include fig.html img="Power Supply1.jpg" caption="" id=page.id %}
+
+I desoldered all the wires (P1, P2 ad P6) from the PS, leaving just one for each output (5V, -5V, 12V, -12V, and GND). Desoldering them is better than cutting for obvious reasons (less clutter, more reliable, etc). The output wires will be attached to banana connectors mounted on the PS case in order to make them more accesible (make sure the connectors are isolated from the case).
 
 In order to pack everything inside the PS case, I drilled 5 holes for the banana connectors, 2 smaller holes for the 2 LEDs, and drilled and filed a rectangular hole for the switch (I know, it would have been much simpler to use a round switch). Since everything fits very tightly in the case, the holes placement must be carefully planned so the added parts won't interfere with the PS (i.e. stop the fan, make undesired connections between the components).
 
 The last step is to put everything together and close the case.
 
-[![](http://photos1.blogger.com/blogger/4122/3639/320/Power%20Supply3.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply3.jpg)
+{% include fig.html img="Power Supply3.jpg" caption="" id=page.id %}
 
 The newly born power supply will turn off nicely when you short its outputs or when the load exceeds its maximum power output capacity (i.e. when you plug a big motor or a power tool to it). By combining the outputs (DC) you can get 5V (GND to 5V), 7V (5V to 12V), 10V (-5V to 5V), 12V (GND to 12V), 17V (-5V to 12V), and 24V (-12V to 12V).
 
 As a finishing touch I added rubber pads on the bottom so it doesn't scratch my desk and I labeled the outputs using a labeling machine (pretty fancy).
 
-[![](http://photos1.blogger.com/blogger/4122/3639/320/Power%20Supply4.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply4.jpg)
+{% include fig.html img="Power Supply4.jpg" caption="" id=page.id %}
 
 ## Future improvements  
 I will add a variable voltage divider in order to easily get other useful voltages out of it, such as 3.3V and 9V.

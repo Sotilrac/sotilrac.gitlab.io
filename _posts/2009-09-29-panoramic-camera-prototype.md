@@ -1,14 +1,11 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Panoramic Camera - Prototype
-author: carlos
-carlosexcerpt: This time, I built a panoramic camera. My main objective was to have a platform that can be used with pretty much any camera and that can produce panoramas with a minimum of work. If there is enough interest from the public and if this prototype is well received by the DIY community, I'm planning to produce (and hopefully sell) kits that would include all the parts to build this device.
-wordpress_id: 333
-wordpress_url: http://carlitoscontraptions.com/?p=333
+author: Carlos
+id: 83
 date: '2009-09-29 01:46:45 -0400'
-date_gmt: '2009-09-29 05:46:45 -0400'
 categories:
 - My Projects
 - Robotics
@@ -22,7 +19,7 @@ Read the follow up posts: [Panoramaker](http://carlitoscontraptions.com/2009/10/
 
 I have finally completed my second project sponsored by [RobotShop](http://www.robotshop.com/ "RobotShop"). I apologize for the immense delay, I really missed my promise of rolling out a new project every two weeks. Let's just say that I had a lot going on lately and I could barely keep up with my obligations, let alone blogging or building new projects.
 
-\[caption id="attachment_338" align="aligncenter" width="300" caption="Place Ville-Marie Panorama"\][![Place Ville Marie Panorama](http://carlitoscontraptions.com/wp-content/uploads/2009/09/ville_marie_2_fused.tif-300x83.jpg "Place Ville-Marie")](http://carlitoscontraptions.com/wp-content/uploads/2009/09/ville_marie_2_fused.tif.jpg)\[/caption\]
+{% include fig.html img="ville_marie_2_fused.tif" caption="Place Ville-Marie Panorama" id=page.id %}
 
 This time, I built a panoramic camera. My main objective was to have a platform that can be used with pretty much any camera and that can produce panoramas with a minimum of work. If there is enough interest from the public and if this prototype is well received by the DIY community, I'm planning to produce (and hopefully sell) kits that would include all the parts to build this device.
 
@@ -47,7 +44,7 @@ This time, I built a panoramic camera. My main objective was to have a platform 
 
 ## Putting It Together
 
-\[caption id="attachment_341" align="aligncenter" width="300" caption="Panoramic Camera Mount"\][![Panoramic Camera Mount](http://carlitoscontraptions.com/wp-content/uploads/2009/09/Canon31-300x240.jpg "Panoramic Camera Mount")](http://carlitoscontraptions.com/wp-content/uploads/2009/09/Canon31.jpg)\[/caption\]
+{% include fig.html img="Canon31.jpg" caption="Panoramic Camera Mount" id=page.id %}
 
 The first step was to put together the ServoCity Pan and Tilt system. This took away much of the building work since it is really simple to put together in no time at all. Nevertheless, I applied some modifications to it: I discarded the bottom plate that should be attached to the panning servo (since I am using a larger winch servo that would not fit otherwise), and I drilled a hole on the top plate in order to be able to fasten the camera to the rig. Note that I also included a little piece of neoprene that was lying around in order to prevent the bottom of my camera from getting scratched.
 
@@ -61,7 +58,7 @@ I used almost exclusively cable ties to tie everything on the aluminum plate exc
 
 ## Operating it
 
-\[caption id="attachment_343" align="aligncenter" width="300" caption="Panoramic camera in action"\][![Panoramic camera in action](http://carlitoscontraptions.com/wp-content/uploads/2009/09/Panorama-300x240.jpg "Panoramic camera in action")](http://carlitoscontraptions.com/wp-content/uploads/2009/09/Panorama.jpg)\[/caption\]
+{% include fig.html img="Panorama.jpg" caption="Panoramic camera in action" id=page.id %}
 
 This first prototype requires a laptop to be operated, which can be a little annoying.  I plan to use my EeePC in the immediate future and an embedded computer for an eventual commercial kit. It basically works as follows:
 
@@ -76,7 +73,7 @@ For now, taking a full 360 panorama takes about 15 minutes. This is a very long 
 
 ## Acknowledgements
 
-\[caption id="attachment_345" align="aligncenter" width="300" caption="RobotShop.com"\][![RobotShop.com](http://carlitoscontraptions.com/wp-content/uploads/2009/09/robotshop_logoSIDE_001-300x128.jpg "RobotShop")](http://www.robotshop.com/)\[/caption\]
+{% include fig.html img="www.rob" caption="RobotShop.com" id=page.id %}
 
 I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller"), the  [ServoCity SPT200 Direct Drive Pan & Tilt System](http://www.robotshop.ca/servocity-spt200-pan-tilt.html "ServoCity SPT200 Direct Drive Pan & Tilt System"), and the [Hitec HS-785HB Winch Servo Motor](http://www.robotshop.ca/hitec-hs785hb-servo-motor.html "Hitec HS-785HB Winch Servo Motor"). This is the second (and hopefully not the last) project they sponsor here at [Carlitos' Contraptions](../ "Carlitos' Contraptions"). Without their help, I would have never been able to afford any of the materials (except for those that come straight from the garbage as usual).
 

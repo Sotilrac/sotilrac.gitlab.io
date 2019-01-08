@@ -1,10 +1,9 @@
 ---
 layout: post
-status: publish
-published: true
+status: draft
 title: Cloud Robotics Hackathon 2013
-author: carlos
-carloswordpress_id: 1588
+author: Carlos
+id: 1588
 wordpress_url: http://carlitoscontraptions.com/?p=1588
 date: '2013-03-24 13:55:45 -0400'
 date_gmt: '2013-03-24 17:55:45 -0400'

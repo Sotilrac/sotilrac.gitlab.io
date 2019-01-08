@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Blue Mouse
-author: carlos
+author: Carlos
+id: 19
 date: '2007-01-10 20:01:00 -0500'
 date_gmt: '2007-01-11 03:01:00 -0500'
 categories:

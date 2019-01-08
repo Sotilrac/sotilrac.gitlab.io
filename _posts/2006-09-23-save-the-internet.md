@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Save the Internet
-author: carlos
+author: Carlos
+id: 6
 date: '2006-09-23 17:12:00 -0400'
 date_gmt: '2006-09-24 00:12:00 -0400'
 categories:
@@ -14,6 +15,6 @@ These are just a few words about  net neutrality, don't worry, I'll be back with
 
 Please, visit [www.savetheinternet.com](http://www.savetheinternet.com/)
 
-[youtube H69eCYcDcuQ]
-[youtube G5RQrxkGgCM]
-[youtube w5ERpQ6nv0Q]
+{% include youtube.html id="H69eCYcDcuQ" %}
+{% include youtube.html id="G5RQrxkGgCM" %}
+{% include youtube.html id="w5ERpQ6nv0Q" %}

@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Nao Robot Dances Tango
-author: carlos
-carloswordpress_id: 843
+author: Carlos
+id: 843
 wordpress_url: http://carlitoscontraptions.com/?p=843
 date: '2011-02-16 22:23:44 -0500'
 date_gmt: '2011-02-17 02:23:44 -0500'
@@ -20,7 +20,7 @@ I put together this quick tango dance. For those who know Tango, you should be a
 
 I'll be publishing my behaviours (the code running in the Nao) for everybody to download once I figure a nice and elegant way to do it.
 
-\[youtube eLfEL3GXMZM\]
+{% include youtube.html id="eLfEL3GXMZM" %}
 
 In the video above, Nao 1337 dances one of my favourites tangos: [Por Una Cabeza by Carlos Gardel](http://www.youtube.com/watch?v=SJ1aTPM-dyE).
 

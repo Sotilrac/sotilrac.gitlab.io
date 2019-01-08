@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: First Time Nao 1337 Goes Outside, Photoshoot
-author: carlos
-carloswordpress_id: 1056
+author: Carlos
+id: 1056
 wordpress_url: http://carlitoscontraptions.com/?p=1056
 date: '2011-07-27 23:04:40 -0400'
 date_gmt: '2011-07-28 03:04:40 -0400'
@@ -16,7 +16,7 @@ tags:
 - Photography
 - Nao
 ---
-\[caption id="attachment_1058" align="aligncenter" width="300" caption="Nao 1337 and Carlitos Downtown"\][![Nao 1337 and Carlitos Downtown](http://carlitoscontraptions.com/wp-content/uploads/2011/07/IMG_0788-300x225.jpg "Nao 1337 and Carlitos Downtown")](http://carlitoscontraptions.com/wp-content/uploads/2011/07/IMG_0788.jpg)\[/caption\]
+{% include fig.html img="IMG_0788.jpg" caption="Nao 1337 and Carlitos Downtown" id=page.id %}
 
 We went downtown Montreal the other day with Nao 1337 and shot some pictures, 
 this was mainly an exercise in vanity. See the resulting photo gallery below.

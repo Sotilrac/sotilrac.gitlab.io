@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Big Buck Bunny Puzzle
-author: carlos
-carloswordpress_id: 68
+author: Carlos
+id: 68
 wordpress_url: http://carlitoscontraptions.com/?p=68
 date: '2009-01-27 17:11:00 -0500'
 date_gmt: '2009-01-28 00:11:00 -0500'
@@ -15,7 +15,9 @@ tags:
 ---
 When I was a young child, I had a double-sided nine pieces wooden puzzle. It featured Pinocchio on one side, and a mermaid on the other. The pieces where all equally-sized rectangles. I really liked this puzzle and had it for a long time since not only it was a puzzle but the wooden blocks could easily become a wall, a pile of bricks, etc.
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/SYAAikkLnRI/AAAAAAAABYg/RgDrG81OCgs/s200/img_1085.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/SYAAikkLnRI/AAAAAAAABYg/RgDrG81OCgs/s1600-h/img_1085.jpg)[![](http://4.bp.blogspot.com/_940DBYqYeYo/SYAcJ1PyvtI/AAAAAAAABY4/KacsKmcG8_s/s200/img_1086.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/SYAcJ1PyvtI/AAAAAAAABY4/KacsKmcG8_s/s1600-h/img_1086.jpg)
+{% include fig.html img="img_1085.jpg" caption="" id=page.id %}
+
+{% include fig.html img="img_1086.jpg" caption="" id=page.id %}
 
 I wanted to reproduce this toy so my girlfriend and I built a new version of this puzzle for her two-years old cousin and gave it to her last Christmas. Since we are no artists, we chose to use [some](http://peach.blender.org/wp-content/uploads/bbb-splash.png) [frames](http://peach.blender.org/wp-content/uploads/rodents.png) from the open animation short [Big Buck Bunny](http://www.bigbuckbunny.org/).
 
@@ -37,12 +39,12 @@ The next step was to thin the wood glue with some water so it was easier to appl
 
 Once all the sections of one image were glued and dry, the exceeding paper margin was cut by laying the wood block flat on a smooth surface on the picture side and slicing it with an utility knife. Obtaining a clean cut was surprisingly difficult and depended heavily on the smoothness of the cutting surface (I recommend using a clean section of cardboard on a cutting board) and the sharpness of the blade (we had to change the blade several times during the process. If the blade was not sharp enough or there were bumps on the surface, the printed part of the paper pealed off very easily. In retrospective, maybe, applying a coat of varnish to the paper before cutting would have made the cutting job easier.
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/SX__srWd_wI/AAAAAAAABYI/V1wrQqjNBew/s320/img_1076.jpg)](http://1.bp.blogspot.com/_940DBYqYeYo/SX__srWd_wI/AAAAAAAABYI/V1wrQqjNBew/s1600-h/img_1076.jpg)
+{% include fig.html img="img_1076.jpg" caption="" id=page.id %}
 
 After one side of the puzzle was complete, the same process was applied to the other side with the other image. Then, we applied several coats of varnish to the blocks in order to make them more durable and easier to clean.
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/SYAAVoev5sI/AAAAAAAABYY/glxtavzhYA0/s320/img_1082.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/SYAAVoev5sI/AAAAAAAABYY/glxtavzhYA0/s1600-h/img_1082.jpg)
+{% include fig.html img="img_1082.jpg" caption="" id=page.id %}
 
 The child was very pleased with the puzzle and I'm confident she will play with for many years to come.
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/SYAAIXn48RI/AAAAAAAABYQ/vyV75aNenFs/s320/img_1081.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/SYAAIXn48RI/AAAAAAAABYQ/vyV75aNenFs/s1600-h/img_1081.jpg)
+{% include fig.html img="img_1081.jpg" caption="" id=page.id %}

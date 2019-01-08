@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: 'The Wind Turbine Part 2: Design and Materials'
-author: carlos
-carloswordpress_id: 573
+author: Carlos
+id: 573
 wordpress_url: http://carlitoscontraptions.com/?p=573
 date: '2010-05-10 01:52:46 -0400'
 date_gmt: '2010-05-10 05:52:46 -0400'
@@ -45,9 +45,9 @@ Now that the [general idea](http://carlitoscontraptions.com/2010/02/the-wind-tur
 *   Cable ties
 *   Lots of bees - No seriously, lots of them
 
-\[caption id="attachment_513" align="aligncenter" width="300" caption="Main IBee Turbine Components"\][![Main Wind Turbine Components](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2836-300x225.jpg "Main Wind Turbine Components")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2836.jpg)\[/caption\]
+{% include fig.html img="IMG_2836.jpg" caption="Main IBee Turbine Components" id=page.id %}
 
-\[caption id="attachment_533" align="aligncenter" width="300" caption="The main components from another angle"\][![The main componets from another angle](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2838-300x225.jpg "The main components 2")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2838.jpg)\[/caption\]
+{% include fig.html img="IMG_2838.jpg" caption="The main components from another angle" id=page.id %}
 
 ## Making the parts
 
@@ -62,7 +62,7 @@ In order to start the construction, we gathered at [PiÃ¨ces d'Auto Jarry](http
 *   They made and tested the electrical connections for the generating motor. This meant spinning the motor shaft very fast by hand and hoping for an LED to turn ON.
 *   What did I do meanwhile? Mainly look cool and be idle since they were working very well.
 
-\[caption id="attachment_516" align="aligncenter" width="300" caption="Construction Day"\][![Construction Day](http://carlitoscontraptions.com/wp-content/uploads/2010/02/Construction-300x187.jpg "Construction Day")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/Construction.jpg)\[/caption\]
+{% include fig.html img="Construction.jpg" caption="Construction Day" id=page.id %}
 
 ### The Finishing Touches
 
@@ -74,7 +74,7 @@ The turbine body is made form a 6" PVC pipe. The idea behind this for the body t
 
 The tube is slightly larger than the motor it carries and thus required three cuts on one end. These cuts and the natural flexibility of the tube allowed the motor to be held in place firmly when tying it with stainless steel pipe clamps.
 
-\[caption id="attachment_530" align="aligncenter" width="300" caption="Closeup of the motor clamped to the body"\][![Closeup of the motor clamped to the body](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2790-300x225.jpg "Closeup of the motor clamped to the body")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2790.jpg)\[/caption\]
+{% include fig.html img="IMG_2790.jpg" caption="Closeup of the motor clamped to the body" id=page.id %}
 
 Also, two cuts were made on the other end. This created a slit where the tale can slide in place. The tale was then held by using cable ties. Another slit was made in order to accommodate the various wires coming out form the motor.
 
@@ -82,7 +82,7 @@ Furthermore, two triangular cuts were made on each side of the body. This result
 
 It is important to note that all cuts in the body end in a circle. This is to prevent the cut from producing a crack because of the resulting weakening of the structure. I am not sure on how necessary (or effective) this is, but at least it gives me peace on mind.
 
-\[caption id="attachment_529" align="aligncenter" width="300" caption="The Finished Turbine Body"\][![The Finished Turbine Body](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2833-300x225.jpg "The Finished Turbine Body")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2833.jpg)\[/caption\]
+{% include fig.html img="IMG_2833.jpg" caption="The Finished Turbine Body" id=page.id %}
 
 ### The Blades
 
@@ -90,21 +90,21 @@ The blades were cut by the students from an 8" schedule 80 PVC pipe by following
 
 > **Quick Tip:** The back of a box cutter is ideal for smoothing PVC (and other plastics I assume). Simply run it trough the surface back and forth until you get the desired result. I found this to be more effective than any other tool.
 
-\[caption id="attachment_553" align="aligncenter" width="300" caption="Making the blades"\][![Making the blades](http://carlitoscontraptions.com/wp-content/uploads/2010/02/Construction2-300x240.jpg "Making the blades")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/Construction2.jpg)\[/caption\]
+{% include fig.html img="Construction2.jpg" caption="Making the blades" id=page.id %}
 
 Also, the mounting holes were drilled taking into account the fact that the blade tips need to be equidistant from one another once mounted on the wheel.
 
-\[caption id="attachment_554" align="aligncenter" width="300" caption="The Blades"\][![The Blades](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2823-300x225.jpg "The Blades")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2823.jpg)\[/caption\]
+{% include fig.html img="IMG_2823.jpg" caption="The Blades" id=page.id %}
 
 ### The Beautiful Flywheel
 
 The [CIMME](http://www.cimme.ca/ "CIMME") machined a beautiful flywheel based on a [Sketchup drawing](http://carlitoscontraptions.com/wp-content/uploads/2010/02/flywheel.skp "flywheel.skp") I provided. To my great surprise the flywheel turned out to be perfect and to fit flawlessly in the design. We had this piece professionally machined since it is crucial for the blades to be held firmly to the motor spindle. Also, its dimensions have to be very precise in order to achieve optimal balance and prevent any vibration or wobbling of the blades.
 
-\[caption id="attachment_545" align="aligncenter" width="300" caption="Flywheel Isometric View"\][![Flywheel Isometric View](http://carlitoscontraptions.com/wp-content/uploads/2010/02/flywheel_iso-300x172.png "Flywheel Isometric View")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/flywheel_iso.png)\[/caption\]
+{% include fig.html img="flywheel_iso.png" caption="Flywheel Isometric View" id=page.id %}
 
 The flywheel was machined in aluminum using a CNC mill and sandblasted afterwards in order to increase its coolness factor.
 
-\[caption id="attachment_548" align="aligncenter" width="300" caption="The Flywheel"\][![The Flywheel](http://carlitoscontraptions.com/wp-content/uploads/2010/02/Construction12-300x300.jpg "The Flywheel")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/Construction12.jpg)\[/caption\]
+{% include fig.html img="Construction12.jpg" caption="The Flywheel" id=page.id %}
 
 ### The Pivot
 
@@ -112,20 +112,20 @@ One of the biggest challenges to me was to imagine a good way of coupling the tu
 
 First, it was necessary to carve out a cylinder from the block of wood in order to be able to properly fasten if to the turbines body. This was done manually using mainly a wood knife.
 
-\[caption id="attachment_558" align="aligncenter" width="300" caption="First wood attachment prototype"\][![First wood coupling pprototype](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2519-300x225.jpg "First wood attachment prototype")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2519.jpg)\[/caption\]
+{% include fig.html img="IMG_2519.jpg" caption="First wood attachment prototype" id=page.id %}
 
 The preliminary version of the wood coupling evolved into a more sophisticated one as shown below. The latter is larger (increasing the assembly robustness), and features a hole and some cuts in order to allow the motor cables to go trough.
 
-\[caption id="attachment_559" align="aligncenter" width="300" caption="The wooden attachment"\][![The wooden attachment](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2829-300x225.jpg "The wooden attachment")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2829.jpg)\[/caption\]
+{% include fig.html img="IMG_2829.jpg" caption="The wooden attachment" id=page.id %}
 
 The actual pivoting part was done by using a 1" galvanized steel pipe union. It was modified in such a way that it could turn (almost) freely. This was achieved by not screwing the union completely and adding a hole and a nail that acts similarly to a clevis pin and prevents the union to get unscrewed. Also, a nylon washer was added in between the the rotating metal parts in order to reduce friction and prevent premature wear. The washer was cut form an old cutting board. Finally, in order to attach this rotating part to the wooden attachment, a pipe flange and a nipple were used.
 
-\[caption id="attachment_560" align="aligncenter" width="300" caption="The pivoting part"\][![The pivoting part](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2825-300x225.jpg "The pivoting part")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2825.jpg)\[/caption\]
+{% include fig.html img="IMG_2825.jpg" caption="The pivoting part" id=page.id %}
 
 ### The Tail
 
 The wind turbine requires a tail so it can follow the direction of the wind. For this purpose we used an old computer side panel that we cut, drilled, and painted. The tail fits into a slit cut in the body as mentioned before and was fastened with four cable ties.
 
-\[caption id="attachment_563" align="aligncenter" width="300" caption="The finished tail"\][![The finished tail](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2831-300x225.jpg "The finished tail")](http://carlitoscontraptions.com/wp-content/uploads/2010/02/IMG_2831.jpg)\[/caption\]
+{% include fig.html img="IMG_2831.jpg" caption="The finished tail" id=page.id %}
 
 **Coming up:** [_Part 3: Building the Generator_](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-3-building-the-generator/)

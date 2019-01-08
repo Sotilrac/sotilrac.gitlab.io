@@ -1,9 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: I'm looking for a job
-author: carlos
+author: Carlos
+id: 52
 date: '2008-07-22 22:21:00 -0400'
 date_gmt: '2008-07-23 05:21:00 -0400'
 categories:

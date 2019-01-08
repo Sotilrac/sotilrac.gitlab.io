@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Opus Smart Card
-author: carlos
-carloswordpress_id: 71
+author: Carlos
+id: 71
 wordpress_url: http://carlitoscontraptions.com/?p=71
 date: '2009-03-11 00:11:00 -0400'
 date_gmt: '2009-03-11 07:11:00 -0400'
@@ -17,11 +17,11 @@ tags:
 > _The Opus card is pretty much like an onion_  
 > ~ [Oscar Wilde](http://uncyclopedia.wikia.com/wiki/Oscar_Wilde)
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/SbdiT5WoCmI/AAAAAAAABds/ktXlx8yj4YM/s200/IMG_1611.JPG)](http://1.bp.blogspot.com/_940DBYqYeYo/SbdiT5WoCmI/AAAAAAAABds/ktXlx8yj4YM/s1600-h/IMG_1611.JPG)
+{% include fig.html img="IMG_1611.JPG" caption="" id=page.id %}
 
 Here in Montreal, the public transportation system ([STM](http://stm.info/)) started to use a new system for paying the fares: a smartcard.
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/SbdiWkScpzI/AAAAAAAABd0/tbml8SZJYDE/s200/IMG_1614.JPG)](http://4.bp.blogspot.com/_940DBYqYeYo/SbdiWkScpzI/AAAAAAAABd0/tbml8SZJYDE/s1600-h/IMG_1614.JPG)
+{% include fig.html img="IMG_1614.JPG" caption="" id=page.id %}
 
 This smartcard is called [Opus](http://www.carteopus.info/en/main_nav/home/) and features contactless communication as well as regular metal pads (like those on telephone cards). This card can be recharged with various tickets, month passes, week passes, etc. More info on it can be found in its very own [wiki page](http://en.wikipedia.org/wiki/Opus_card).
 
@@ -59,15 +59,15 @@ Also, at some point, the card may send its unique ID number to the reader.
 ## Some extra info:
 I also wanted to see how the card is built, and the easiest way of doing so is to disassemble it.
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/SbdijhOB_lI/AAAAAAAABd8/ytuq6Ch8A6Q/s320/IMG_1618.JPG)](http://1.bp.blogspot.com/_940DBYqYeYo/SbdijhOB_lI/AAAAAAAABd8/ytuq6Ch8A6Q/s1600-h/IMG_1618.JPG)
+{% include fig.html img="IMG_1618.JPG" caption="" id=page.id %}
 
 Since it is made out of plastic, I put it to rest in a bath of acetone (nail polish remover) for a bit less than a day while periodically checking how it was doing. I poured the acetone in a old iPod metal casing since it has almost the same size as the card.
 
-[![](http://1.bp.blogspot.com/_940DBYqYeYo/Sbdisf-uqFI/AAAAAAAABeE/hatxxrb7mXc/s320/IMG_1627.JPG)](http://1.bp.blogspot.com/_940DBYqYeYo/Sbdisf-uqFI/AAAAAAAABeE/hatxxrb7mXc/s1600-h/IMG_1627.JPG)
+{% include fig.html img="IMG_1627.JPG" caption="" id=page.id %}
 
 In the end I found out that the card is made up of several layers. This layers are very thin (or so are they after being soaked in acetone for 20 hours) but very sturdy.
 
-[![](http://3.bp.blogspot.com/_940DBYqYeYo/SbdizVacEsI/AAAAAAAABeM/eWKtiOTZ8G8/s320/IMG_1634.JPG)](http://3.bp.blogspot.com/_940DBYqYeYo/SbdizVacEsI/AAAAAAAABeM/eWKtiOTZ8G8/s1600-h/IMG_1634.JPG)
+{% include fig.html img="IMG_1634.JPG" caption="" id=page.id %}
 
 The middle layer contains the antenna and contact pads in order to be connected to the microprocessor. The chip is merely sitting on the pads, this may explain why the cards are so prone to break: when it is bent, the pads do not touch the antenna any more and the the card becomes inactive.
 

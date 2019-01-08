@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: RobotShop + Carlitos' Contraptions
-author: carlos
-carloswordpress_id: 215
+author: Carlos
+id: 78
 wordpress_url: http://carlitoscontraptions.com/?p=215
 date: '2009-06-29 13:24:09 -0400'
 date_gmt: '2009-06-29 17:24:09 -0400'
@@ -12,7 +12,7 @@ categories:
 - General
 tags: []
 ---
-\[caption id="attachment_216" align="aligncenter" width="300" caption="RobotShop.com"\][![RobotShop.com](http://carlitoscontraptions.com/wp-content/uploads/2009/06/robotshop_logoside_001-300x121.jpg "robotshop_logo")](http://www.robotshop.com/)\[/caption\]
+{% include fig.html img="www.rob" caption="RobotShop.com" id=page.id %}
 
 The robotics parts retailer [RobotShop](http://www.robotshop.com/ "RobotShop.com") will be sponsoring robotics projects at [Carlitos' Contraptions](http://carlitoscontraptions.com "CarlitosContraptions.com"). As a result I'll be rolling out robotics projects for the next weeks/months.
 

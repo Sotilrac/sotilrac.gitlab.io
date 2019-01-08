@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: Coming Soon
-author: carlos
+author: Carlos
+id: 9
 date: '2006-10-10 21:28:00 -0400'
 date_gmt: '2006-10-11 04:28:00 -0400'
 categories:

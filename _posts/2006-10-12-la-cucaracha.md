@@ -1,8 +1,9 @@
 ---
 layout: post
-status: publish
+status: darft
 title: La Cucaracha
-author: carlos
+author: Carlos
+id: 10
 date: '2006-10-12 23:43:00 -0400'
 date_gmt: '2006-10-13 06:43:00 -0400'
 categories:
@@ -34,7 +35,7 @@ This is a small and very simple robot that requires no electronics. It is inspir
 *   2 [SPDT Switches](http://www.rapidonline.com/netalogue/zoomed/Large/78240001.jpg) (commonly found in printers)
 
 ## Main Idea  
-[![](http://photos1.blogger.com/blogger/4122/3639/320/cucaracha%20side.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20side.jpg)  
+{% include fig.html img="cucaracha side.jpg" caption="" id=page.id %}  
 
 The idea is to construct a robot that can move around and that will backup and change the direction of the motion when it hits an obstacle.
 
@@ -45,21 +46,21 @@ The idea is to construct a robot that can move around and that will backup and c
 3.  Cut two more holes spaced by about 1.5 cm so the switches fit in tightly (seeing the pictures help visualizing this).
 4.  Drill a hole in the center of both caps with the same diameter as your screw.
 5.  Install the switch and the female audio jack on the top bottle cap.
-[![](http://photos1.blogger.com/blogger/4122/3639/200/cucaracha%20back.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20back.1.jpg)
-[![](http://photos1.blogger.com/blogger/4122/3639/200/cucaracha%20close.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20close.1.jpg)
+{% include fig.html img="cucaracha back.jpg" caption="" id=page.id %}
+{% include fig.html img="cucaracha close.jpg" caption="" id=page.id %}
 6.  Connect everything together as shown in the circuit diagram. I used the audio jack to make the charger connection. The charger is simply a 3V power adapter connected in series with a diode in the + terminal.
-[![](http://photos1.blogger.com/blogger/4122/3639/320/cuca%20circuit.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cuca%20circuit.jpg)
-[![](http://photos1.blogger.com/blogger/4122/3639/200/cucaracha%20charging.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20charging.1.jpg)
-[![](http://photos1.blogger.com/blogger/4122/3639/200/cucaracha%20charger.0.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20charger.1.jpg)
+{% include fig.html img="cuca circuit.jpg" caption="" id=page.id %}
+{% include fig.html img="cucaracha charging.jpg" caption="" id=page.id %}
+{% include fig.html img="cucaracha charger.0.jpg" caption="" id=page.id %}
 7.  Solder the paper clips to the SPDT blades and add a little solder blob on each paper clip end so they look more like antennas.
 8.  Test to see if the circuit works properly. When the robot is switched on,  
     both spindles should spin so it goes forward. If an antenna is pushed, the spindle on the opposite side (left spindle if right antenna) should spin backwards.
 9.  Fasten the motors to the base cap using the cable ties and secure the other cap on top of it using the screw. Also secure the cable holder using the same screw on top of the top cap, this serves as a battery holder.
-[![](http://photos1.blogger.com/blogger/4122/3639/200/plastic%20clip.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/plastic%20clip.0.jpg)
+{% include fig.html img="plastic clip.jpg" caption="" id=page.id %}
 10.  Insert the toy wheels on each motor spindle. You can also add a piece of plastic for stability under the base cap.
 
-[![](http://photos1.blogger.com/blogger/4122/3639/320/cucaracha%20bottom.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20bottom.jpg)
+{% include fig.html img="cucaracha bottom.jpg" caption="" id=page.id %}
 
 It's done! Now you have a small robot that will go around your house bumping on whatever is on its path.
 
-[![](http://photos1.blogger.com/blogger/4122/3639/320/cucaracha%20front.jpg)](http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20front.jpg)
+{% include fig.html img="cucaracha front.jpg" caption="" id=page.id %}

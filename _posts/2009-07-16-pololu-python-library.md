@@ -1,10 +1,10 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Pololu Python Library
-author: carlos
-carloswordpress_id: 222
+author: Carlos
+id: 79
 wordpress_url: http://carlitoscontraptions.com/?p=222
 date: '2009-07-16 00:54:29 -0400'
 date_gmt: '2009-07-16 04:54:29 -0400'

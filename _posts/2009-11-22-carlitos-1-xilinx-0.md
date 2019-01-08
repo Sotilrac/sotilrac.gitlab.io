@@ -1,13 +1,11 @@
 ---
 layout: post
-status: publish
+status: darft
 published: true
 title: Carlitos 1, Xilinx 0
-author: carlos
-carloswordpress_id: 431
-wordpress_url: http://carlitoscontraptions.com/?p=431
+author: Carlos
+id: 89
 date: '2009-11-22 04:02:31 -0500'
-date_gmt: '2009-11-22 08:02:31 -0500'
 categories:
 - General
 - Software
@@ -16,7 +14,7 @@ tags:
 - Software
 - Electronics
 ---
-\[caption id="attachment_432" align="alignright" width="150" caption="Xilinx Spartan"\][![Xilinx Spartan](http://carlitoscontraptions.com/wp-content/uploads/2009/11/Fpga_xilinx_spartan-150x150.jpg "Xilinx Spartan")](http://carlitoscontraptions.com/wp-content/uploads/2009/11/Fpga_xilinx_spartan.jpg)\[/caption\]
+{% include fig.html img="Fpga_xilinx_spartan.jpg" caption="Xilinx Spartan" id=page.id %}
 
 I spent countless hours trying to install the free version of the Xilinx software on may windoze Virtual machine and I have finally succeed.
 
