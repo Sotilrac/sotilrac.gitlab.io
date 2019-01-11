@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Carlos' Resume, portfolio and blog. My projects span software,
   electronics and robotics.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://asmat.ca" # the base hostname & protocol for your site
+url: "https://asmat.ca" # the base hostname & protocol for your site
 twitter_username: asmat
 github_username:  sotilrac
 
