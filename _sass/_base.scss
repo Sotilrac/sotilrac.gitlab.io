@@ -12,8 +12,15 @@
 	font-size: 2em;
 	text-align: center;
 	background-color: $dark;
-	padding: 7em 4em;
 	color: $light;
+/*	padding: 7em 4em;
+	min-width: 250px;
+	max-width: 470px;*/
+}
+
+.name-header .row {
+	min-height: 600px;
+	max-height: 90%;
 }
 
 .dark {
@@ -45,4 +52,17 @@ mark {
 
 footer {
 	color: $light;
+	text-align: center;
+}
+
+.cc-icon {
+	color: $light;
+}
+
+footer .row {
+	padding: 10px 0px;
+}
+
+footer .col {
+	text-align: center;
 }
