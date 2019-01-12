@@ -1,143 +1,145 @@
 {% assign res = site.data.resume %}
 {% assign public = false %}
-<div class="col-xl-9">
-    <div class="row d-none d-print-block">
-        <div class="col">
-            <h1 class="name">{{ res.first_name }} {{ res.last_name }}</h1>
-        </div>
-        <div class="col-sm">
-            <ul>
-                {% if public %}
-                    <li><i class="fas fa-phone"></i><span>{{ res.phone }}</span></li>
-                    <li><i class="fas fa-envelope"></i><span>{{ res.email }}</span></li>
-                {% endif %}
-                {% for link in res.links %}
-                    <li><i class="{{ link.icon }}"></i><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-    <div class="section">
-        <div class="row">
+<div class="row">
+    <div class="col-xl-9">
+        <div class="row d-none d-print-block">
             <div class="col">
-                <h2>Summary</h2>
+                <h1 class="name">{{ res.first_name }} {{ res.last_name }}</h1>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <img src="{{ res.picture }}?s=250" alt="{{ res.first_name }} {{ res.last_name }}" class="mr-3 rounded float-left"/>
-                {% for line in res.summary %}
-                    <p class="lead summary">{{ line }}</p>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="row">
-            <div class="col">
-                <h2>Skills</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm skill_col">
-                <h3 class="sub_section_header">Programming:</h3>
-                <ul class="programming">
-                {% for skill in res.skills.programming %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md skill_col">
-                <h3 class="sub_section_header">Engineering Tools:</h3>
-                <ul class="tools">
-                {% for skill in res.skills.tools %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="col-sm skill_col">
-                <h3 class="sub_section_header">Fluent in:</h3>
-                <ul class="languages">
-                {% for skill in res.skills.languages %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
+            <div class="col-sm">
+                <ul>
+                    {% if public %}
+                        <li><i class="fas fa-phone"></i><span>{{ res.phone }}</span></li>
+                        <li><i class="fas fa-envelope"></i><span>{{ res.email }}</span></li>
+                    {% endif %}
+                    {% for link in res.links %}
+                        <li><i class="{{ link.icon }}"></i><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="section">
-        <div class="row">
-            <div class="col">
-                <h2>Experience</h2>
-            </div>
-        </div>
-        {% for exp in res.experience %}
-            <div class="row job">
-                <div class="col-md-3 date_col">
-                    <span class="dates">{{ exp.start_date }} -</span>
-                    <span class="dates">{{ exp.end_date }}</span>
+        <div class="section">
+            <div class="row">
+                <div class="col">
+                    <h2>Summary</h2>
                 </div>
-                <div class="col job_col">
-                    <h3>
-                        <span class="company">{{ exp.company }}:</span>
-                        <span class="title">{{ exp.title }}</span>
-                        <span class="location">({{ exp.location }})</span>
-                    </h3>
-                    <ul>
-                    {% for line in exp.description %}
-                        <li>{{ line.item }}</li>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="{{ res.picture }}?s=250" alt="{{ res.first_name }} {{ res.last_name }}" class="mr-3 rounded float-left"/>
+                    {% for line in res.summary %}
+                        <p class="lead summary">{{ line }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col">
+                    <h2>Skills</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm skill_col">
+                    <h3 class="sub_section_header">Programming:</h3>
+                    <ul class="programming">
+                    {% for skill in res.skills.programming %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md skill_col">
+                    <h3 class="sub_section_header">Engineering Tools:</h3>
+                    <ul class="tools">
+                    {% for skill in res.skills.tools %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-sm skill_col">
+                    <h3 class="sub_section_header">Fluent in:</h3>
+                    <ul class="languages">
+                    {% for skill in res.skills.languages %}
+                        <li>{{ skill }}</li>
                     {% endfor %}
                     </ul>
                 </div>
             </div>
-        {% endfor %}
-    </div>
-    <div class="section">
-        <div class="row">
-            <div class="col">
-                <h2>Education</h2>
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col">
+                    <h2>Experience</h2>
+                </div>
             </div>
+            {% for exp in res.experience %}
+                <div class="row job">
+                    <div class="col-md-3 date_col">
+                        <span class="dates">{{ exp.start_date }} -</span>
+                        <span class="dates">{{ exp.end_date }}</span>
+                    </div>
+                    <div class="col job_col">
+                        <h3>
+                            <span class="company">{{ exp.company }}:</span>
+                            <span class="title">{{ exp.title }}</span>
+                            <span class="location">({{ exp.location }})</span>
+                        </h3>
+                        <ul>
+                        {% for line in exp.description %}
+                            <li>{{ line.item }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col">
+                    <h2>Education</h2>
+                </div>
+            </div>
+
+            {% for ed in res.education %}
+                <div class="row">
+                    <div class="col-md-2 date_col">
+                        <span class="dates">{{ ed.start_date }} - {{ ed.end_date }}</span>
+                    </div>
+                    <div class="col educ_col">
+                        <h3 class="institution">{{ ed.institution }}</h3>
+                        <ul class="degrees">
+                        {% for degree in ed.degree %}
+                            <li>{{ degree.item }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
 
-        {% for ed in res.education %}
+        <div class="section">
             <div class="row">
-                <div class="col-md-2 date_col">
-                    <span class="dates">{{ ed.start_date }} - {{ ed.end_date }}</span>
-                </div>
-                <div class="col educ_col">
-                    <h3 class="institution">{{ ed.institution }}</h3>
-                    <ul class="degrees">
-                    {% for degree in ed.degree %}
-                        <li>{{ degree.item }}</li>
-                    {% endfor %}
-                    </ul>
+                <div class="col">
+                    <h2>Personal Projects</h2>
                 </div>
             </div>
-        {% endfor %}
-    </div>
-
-    <div class="section">
-        <div class="row">
-            <div class="col">
-                <h2>Personal Projects</h2>
-            </div>
+            {% for project in res.projects %}
+                <div class="row">
+                    <div class="col-md-2 date_col">
+                        <p class="dates">{{ project.start_date }}</p>
+                    </div>
+                    <div class="col proj_col">
+                        <h3>
+                            <span class="project_name">{{ project.name }}</span>
+                        </h3>
+                        <ul class="project_description">
+                        {% for line in project.description %}
+                            <li>{{ line }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-        {% for project in res.projects %}
-            <div class="row">
-                <div class="col-md-2 date_col">
-                    <p class="dates">{{ project.start_date }}</p>
-                </div>
-                <div class="col proj_col">
-                    <h3>
-                        <span class="project_name">{{ project.name }}</span>
-                    </h3>
-                    <ul class="project_description">
-                    {% for line in project.description %}
-                        <li>{{ line }}</li>
-                    {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        {% endfor %}
     </div>
 </div>

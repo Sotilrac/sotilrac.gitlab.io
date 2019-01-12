@@ -4,23 +4,23 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="posts">
+<div class="posts row">
+  <div class="col-xl-9">  
+    <h2 class="page-heading">Posts Archive</h2>
 
-  <h2 class="page-heading">Posts Archive</h2>
-
-  <ul class="post-list">
-    {% assign public_posts = site.posts | where: "status","public" %}
-    {% for post in public_posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <span> - </span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <span> - </span>
-        {% for cat in post.categories limit:1 %}
-          <span class="post-categories">{{ cat }}</span>
-        {% endfor %}
-      </li>
-    {% endfor %}
-  </ul>
-
+    <ul class="post-list">
+      {% assign public_posts = site.posts | where: "status","public" %}
+      {% for post in public_posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span> - </span>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span> - </span>
+          {% for cat in post.categories limit:1 %}
+            <span class="post-categories">{{ cat }}</span>
+          {% endfor %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

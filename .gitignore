@@ -1,7 +1,7 @@
 .sass-cache
 /bower_components/
 /node_modules/
-/img/
+/posts_assets/
 /static/
 /_site/
 *.lock
