@@ -1,4 +1,4 @@
-<footer class="container-fluid dark">
+<footer class="container-fluid dark no-print">
   <div class="row align-items-center justify-content-center">
     <div class="col-sm-1">	
       <a class="cc-icon" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons BY-NC-SA 4.0" target="blank">
@@ -19,3 +19,46 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://bitwiseshiftleft.github.io/sjcl/sjcl.js"></script>
+<script type="text/javascript">
+    // Get URL parameters by name
+    // Usage: http://page.url?parameter_name=something&another_parameter=anotherthing
+    function get_url_parameter(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results == null ? '' : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    var phone = {{ res.phone }};
+    var email = {{ res.email }};
+    // Get key to decrypt phone number and email
+    var key = get_url_parameter('key');
+    // Get msg to be encrypted for convenience
+    var msg = get_url_parameter('msg');
+    if (msg != "") {
+        console.log('Encrypting "' + msg + '" :');
+        console.log(sjcl.encrypt(key, msg));
+    }
+    try {
+        if (key != "") {
+            try {
+                phone = sjcl.decrypt(key, JSON.stringify(phone));
+                email = sjcl.decrypt(key, JSON.stringify(email));
+                $("#phoneContent").html(phone);
+                $("#emailContent").html(email);
+                $("#phone").show();
+                $("#email").show();
+            } catch (err) {
+                // alert(err);
+                throw 'Ah ah ah. You didn\'t say the magic word';
+            }
+        } else {
+            throw "";
+        }
+    } catch (err) {
+        if (err != "") {
+            alert(err);
+        }
+    }
+</script>

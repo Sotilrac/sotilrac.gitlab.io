@@ -27,6 +27,32 @@
 	background-color: $dark;
 }
 
+.pic {
+	height: 200px;
+}
+
+/*.contact {
+    float: right;
+    font-size:  0.9em;
+}*/
+
+.contact ul {
+    list-style: outside none none;
+    margin: 0;
+}
+
+/*.contact ul li i {
+    color: #003366; 
+}*/
+.contact ul li span {
+    padding-left: 1em;
+}
+
+#phone, #email {
+	display: none;
+}
+
+
 h3, .h3{
 	font-size: 1.2em;
 }
@@ -65,4 +91,81 @@ footer .row {
 
 footer .col {
 	text-align: center;
+}
+
+@media print{
+    .resume_container {
+/*        margin: 0;
+        background-color: #FFF;
+        width: 100%;
+        padding: 0;
+        max-width: none;
+        overflow: visible;*/
+    }
+
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }

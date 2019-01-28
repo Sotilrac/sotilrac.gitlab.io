@@ -1,17 +1,14 @@
 {% assign res = site.data.resume %}
-{% assign public = false %}
 <div class="row">
     <div class="col-xl-9">
-        <div class="row d-none d-print-block">
+        <div class="row d-none d-print-flex">
             <div class="col">
-                <h1 class="name">{{ res.first_name }} {{ res.last_name }}</h1>
+                <h1>{{ res.first_name }} {{ res.last_name }}</h1>
             </div>
-            <div class="col-sm">
+            <div class="col-4 align-self-end contact">
                 <ul>
-                    {% if public %}
-                        <li><i class="fas fa-phone"></i><span>{{ res.phone }}</span></li>
-                        <li><i class="fas fa-envelope"></i><span>{{ res.email }}</span></li>
-                    {% endif %}
+                        <li id="phone"><i class="fas fa-phone"></i><span id="phoneContent"></span></li>
+                        <li id="email"><i class="fas fa-envelope"></i><span id="emailContent"></span></li>
                     {% for link in res.links %}
                         <li><i class="{{ link.icon }}"></i><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
                     {% endfor %}
@@ -26,7 +23,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="{{ res.picture }}?s=250" alt="{{ res.first_name }} {{ res.last_name }}" class="mr-3 rounded float-left"/>
+                    <img src="{{ res.picture }}?s=250" alt="{{ res.first_name }} {{ res.last_name }}" class="mr-3 float-left pic"/>
                     {% for line in res.summary %}
                         <p class="lead summary">{{ line }}</p>
                     {% endfor %}
