@@ -13,9 +13,6 @@
 	text-align: center;
 	background-color: $dark;
 	color: $light;
-/*	padding: 7em 4em;
-	min-width: 250px;
-	max-width: 470px;*/
 }
 
 .name-header .row {
@@ -31,11 +28,6 @@
 	height: 200px;
 }
 
-/*.contact {
-    float: right;
-    font-size:  0.9em;
-}*/
-
 .contact ul {
     list-style: outside none none;
     margin: 0;
@@ -46,6 +38,10 @@
 }*/
 .contact ul li span {
     padding-left: 1em;
+}
+
+.contact ul li i {
+    width: 1.1em;
 }
 
 #phone, #email {
@@ -94,13 +90,13 @@ footer .col {
 }
 
 @media print{
-    .resume_container {
-/*        margin: 0;
-        background-color: #FFF;
-        width: 100%;
-        padding: 0;
-        max-width: none;
-        overflow: visible;*/
+
+    .row {
+        page-break-inside: avoid;
+    }
+
+    .no-page-break {
+        page-break-inside: avoid;
     }
 
     .no-print, .no-print *
@@ -166,6 +162,11 @@ footer .col {
 
     h2,
     h3 {
+        margin-top: 0.5em;
         page-break-after: avoid;
+    }
+
+    h2 {
+        border-bottom: 1px solid gray;
     }
 }

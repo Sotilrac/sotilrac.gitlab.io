@@ -9,6 +9,9 @@
 title: Carlos Asmat
 linkedin: http://linkedin.com/in/casmat
 github: http://github.com/Sotilrac
+youtube: https://youtube.com/c/CarlosAsmat
+phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"SOsRUJJzNoTOsu7uG+phkqqY5KXijw=="}'
+email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
 description: > # this means to ignore newlines until "baseurl:"
   Carlos' Resume, portfolio and blog. My projects span software,
   electronics and robotics.
