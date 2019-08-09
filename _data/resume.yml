@@ -31,7 +31,7 @@ experience:
   - item: Lead the Robotics Software Team, focusing on making Gita work in everyday life.
   - item: Develop visual people detection tracking algorthms.
   - item: Design Gita's electronic system architechture for mass production.
-  - item: Help informthe user-experience design.
+  - item: Help inform the user-experience design.
   - item: Perform demos and presentations.
 - title: Robot Software Engineer
   start_date: 06 / 2016
@@ -55,7 +55,7 @@ experience:
   - item: Acted as technical lead and inform the region's software development road map.
 - title: Co-Founder and Co-Organizer
   start_date: 02 / 2012
-  end_date: 11 / 20134
+  end_date: 11 / 2014
   location: Montreal, QC
   company: Cloud Robotics Hackathon
   description:
@@ -176,7 +176,7 @@ projects:
 - name: Nao Mind Control
   start_date: 09 / 2012
   description:
-  - Created a Nao behavior that communicates with the Neurosky MindWave Sensor
+  - Created a Nao behaviour that communicates with the Neurosky MindWave Sensor
       and allows the user to control the humanoid robot with their thoughts. Presented
       at New York Maker Faire 2012
 - name: Nao Rock Paper Scissors Lizard Spock
