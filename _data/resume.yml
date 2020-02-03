@@ -9,6 +9,9 @@ links:
 - title: github.com/Sotilrac
   url: https://github.com/Sotilrac
   icon: fab fa-github
+- title: gitlab.com/sotilrac
+  url: https://gitlab.com/sotilrac
+  icon: fab fa-gitlab
 - title: linkedin.com/in/casmat
   url: https://www.linkedin.com/in/casmat
   icon: fab fa-linkedin
@@ -22,9 +25,20 @@ summary:
 - I'm passionate about open-source hardware and software, electronic prototyping, and developing interactive personal robots that work in real life.
 - As a driven Electrical and Software Engineer specialized in Control Systems, Personal Robots, and Human-Robot Interaction, I have circuit design and software development skills, a substantive work experience, leadership and communication skills, and a true passion for technology and creative work.
 experience:
+- title: Lead Smart System Engineer
+  start_date: 11 / 2019
+  end_date: present
+  location: Boston, MA
+  company: smoodi
+  description:
+  - item: Lead smart smoothie-vending machine industrialization
+  - item: Develop machine intelligence and control software
+  - item: Develop IoT monitoring and control features
+  - item: Lead electrical and electronic systems design
+  - item: Integrate mechanical, electrical and software design
 - title: Lead Robot Software Engineer
-  start_date: 02 /2017
-  end_date: Present
+  start_date: 02 / 2017
+  end_date: 11 / 2019
   location: Boston, MA
   company: Piaggio Fast Forward
   description:
