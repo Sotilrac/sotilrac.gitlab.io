@@ -32,11 +32,3 @@ pages:
     - public
   only:
   - master
-
-renew-letsencrypt:
-  stage: build
-  script:
-    # - bundle install
-    - bundle exec jekyll letsencrypt
-  only:
-    - schedules

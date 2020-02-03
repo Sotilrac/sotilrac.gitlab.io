@@ -9,6 +9,7 @@
 title: Carlos Asmat
 linkedin: http://linkedin.com/in/casmat
 github: http://github.com/Sotilrac
+gitlab: https://gitlab.com/sotilrac
 youtube: https://youtube.com/c/CarlosAsmat
 phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"SOsRUJJzNoTOsu7uG+phkqqY5KXijw=="}'
 email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
@@ -45,12 +46,6 @@ gitlab-letsencrypt:
   # Domain settings:
   domain: 'asmat.ca'   # Domain that the cert will be issued for
   scheme: 'https'
-
-  # Jekyll settings:
-  base_path: '/'  # Where you want the file to go
-  pretty_url: true  # Add a "/" on the end of the URL
-  filename: 'tls.md'
-  layout: 'plain'
 
   # Delay settings:
   initial_delay: 180 # How long to wait for Gitlab CI to push your changes before it starts checking
