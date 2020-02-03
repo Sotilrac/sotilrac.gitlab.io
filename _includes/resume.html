@@ -38,6 +38,14 @@
             </div>
             <div class="row">
                 <div class="col-sm skill_col">
+                    <h3 class="sub_section_header">Leadership:</h3>
+                    <ul class="programming">
+                    {% for skill in res.skills.soft %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-sm skill_col">
                     <h3 class="sub_section_header">Programming:</h3>
                     <ul class="programming">
                     {% for skill in res.skills.programming %}
