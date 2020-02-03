@@ -193,14 +193,14 @@ education:
   - item: Bachelor's degree in Electrical  Engineering - Control & Automation / Power
 projects:
 - name: Love Lantern
-start_date: 12 / 2019
-description:
+  start_date: 12 / 2019
+  description:
   - Using Amazon AWS and the ESP32, created a set of IoT lanterns that turn each
     other ON when touched with the objective of making long-distance
     relationships more bearable.
 - name: Portfolio Builder
-start_date: 01 / 2018
-description:
+  start_date: 01 / 2018
+  description:
   - Using Ruby, HTML, CSS and JS, created a static site generator that layouts
     the information on this resume, and my website asmat.ca
 - name: Nao Mind Control
