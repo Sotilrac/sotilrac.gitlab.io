@@ -175,6 +175,11 @@ skills:
   - Presenting · Communication
   - Strategy · Planning · Scheduling
 education:
+- institution: Udacity
+  start_date: '2018'
+  end_date: '2018'
+  degree:
+  - item: Self-Driving Nanodegree
 - institution: University of Pennsylvania
   start_date: '2013'
   end_date: '2013'
