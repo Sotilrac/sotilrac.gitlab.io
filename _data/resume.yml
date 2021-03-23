@@ -23,8 +23,18 @@ email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mo
 picture: https://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60?s=200
 summary:
 - I'm passionate about open-source hardware and software, electronic prototyping, and developing interactive personal robots that work in real life.
-- As a driven Electrical and Software Engineer specialized in Control Systems, Personal Robots, and Human-Robot Interaction, I have circuit design and software development skills, a substantive work experience, leadership and communication skills, and a true passion for technology and creative work.
+- As a driven Electrical and Software Engineer specialized in Control Systems, Personal Robots, and Human-Robot Interaction, I have circuit design and software development skills, over ten years of work experience, leadership and communication skills, and a true passion for technology and creative work.
 experience:
+- title: Lead Software Engineer
+  start_date: 10 / 2020
+  end_date: Present
+  location: Boston, MA
+  company: Dephy Inc.
+  description:
+  - item: Develop software for exoskeleton systems
+  - item: Implement Continuous Integration and Deployment (CI/CD) for embedded systems
+  - item: Implement code quality standards
+  - item: Develop cross-platform software to support external and internal clients
 - title: Lead Smart System Engineer
   start_date: 11 / 2019
   end_date: 10 / 2020
@@ -69,7 +79,7 @@ experience:
   - item: Acted as technical lead and inform the region's software development road map.
 - title: Co-Founder and Co-Organizer
   start_date: 02 / 2012
-  end_date: 11 / 2014
+  end_date: 11 / 2013
   location: Montreal, QC
   company: Cloud Robotics Hackathon
   description:
