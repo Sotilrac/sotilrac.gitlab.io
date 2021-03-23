@@ -5,3 +5,6 @@
 /static/
 /_site/
 *.lock
+/builds/
+.jekyll-cache/
+public/

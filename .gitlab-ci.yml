@@ -1,15 +1,19 @@
-image: ruby:2.5
+image: ruby:3.0
 
 variables:
   JEKYLL_ENV: production
   LC_ALL: C.UTF-8
+
+stages:
+  - test
+  - deploy
 
 before_script:
   - bundle install
   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
   - apt-get update -qy
-  - apt-get install yarn=1.12.3-1 nodejs -y
+  - apt-get install yarn nodejs -y
   - yarn install --ignore-engines
 
 test:
