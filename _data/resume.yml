@@ -22,144 +22,142 @@ phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mo
 email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
 picture: https://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60?s=200
 summary:
-- I'm passionate about open-source hardware and software, electronic prototyping, and developing interactive personal robots that work in real life.
-- As a driven Electrical and Software Engineer specialized in Control Systems, Personal Robots, and Human-Robot Interaction, I have circuit design and software development skills, over ten years of work experience, leadership and communication skills, and a true passion for technology and creative work.
+- With passion for crafting technology that thrives in real-world scenarios, I've been fortunate to be at the forefront of transformative robotic innovations. Notably, designing intuitive interactions behaviours for Softbank Robotics' humanoids, Nao and Pepper.
+- This foundation paved the way for my leadership role at Piaggio Fast Forward, where I spearheaded the evolution of Gita from a mere concept to a commercial reality in just three years. Gita, a robot designed to be your personal carrier, was a testament to not just technological prowess but also my ability to assemble and nurture high-performing Electrical, Software, and Robotics Engineering teams.
+- Now, at Dephy, I'm channeling my expertise into the realm of wearable robotic (a.k.a. exoskeletons). I've instilled structure and professional rigor into the software division, and more recently, I've initiated and now lead the Electrical Engineering team. Together, we're on a mission to revolutionize mobility with cutting-edge software and embedded systems for exoskeletons.
 experience:
-- title: Software Engineering Lead
-  start_date: 10 / 2020
+- title: Electrical and Software Engineering Team Lead
+  start_date: 01 / 2022
   end_date: Present
+  location: Boxborough, MA
+  company: Dephy Inc.
+  description:
+  - item: Built and nurtured the Electrical Engineering team from the ground up.
+  - item: Fostered growth and development within the Software team.
+  - item: Architected and roadmapped the next-generation embedded controller.
+  - item: Maintained the legacy codebase, ensuring client needs were consistently met.
+- title: Software Engineering Lead
+  start_date: 07 / 2021
+  end_date: 01 / 2022
   location: Maynard, MA
   company: Dephy Inc.
   description:
-  - item: Develop software for exoskeleton systems
-  - item: Implement Continuous Integration and Deployment (CI/CD) for embedded systems
-  - item: Implement code quality standards
-  - item: Develop cross-platform software to support external and internal clients
-- title: Lead Smart System Engineer
+  - item: Developed embedded software and cross-platform apps to cater to both internal and external clients.
+  - item: Implemented software development best practices, including regular code reviews and CI/CD integration.
+  - item: Evaluated the legacy C code, creating roadmaps to not only support existing contracts but also expand its functionality.
+- title: Lead Smart Systems Engineer
   start_date: 11 / 2019
   end_date: 10 / 2020
   location: Boston, MA
   company: smoodi
   description:
-  - item: Lead smart smoothie-vending machine industrialization
-  - item: Develop machine intelligence and control software
-  - item: Develop IoT monitoring and control features
-  - item: Lead electrical and electronic systems design
-  - item: Integrate mechanical, electrical and software design
+  - item: Led the industrialization of smart smoothie-vending machines.
+  - item: Developed the machine's intelligence and control software.
+  - item: Introduced IoT-based monitoring and control features.
+  - item: Oversaw the design of electrical and electronic systems.
+  - item: Seamlessly integrated mechanical, electrical, and software designs.
 - title: Lead Robot Software Engineer
   start_date: 02 / 2017
   end_date: 11 / 2019
   location: Boston, MA
   company: Piaggio Fast Forward
   description:
-  - item: Lead the Robotic Team, focusing on integration and making Gita work in everyday life.
-  - item: Develop visual people detection tracking algorithms.
-  - item: Design Gita's electronic system architechture for mass production.
-  - item: Help inform the user-experience design.
-  - item: Perform demos and presentations to stakeholders.
+  - item: Led the Robotics Team, emphasizing integration and optimizing Gita for everyday use.
+  - item: Developed algorithms for visual people detection and tracking.
+  - item: Designed Gita's electronic system architecture, readying it for mass production.
+  - item: Contributed to the user-experience design process.
+  - item: Conducted demos and presentations for stakeholders.
 - title: Robot Software Engineer
   start_date: 06 / 2016
   end_date: 02 / 2017
   location: Boston, MA
   company: Piaggio Fast Forward
   description:
-  - item: Assembled and lead a team of electrical and software engineers.
-  - item: Designed the software and electronic architecture for the personal cargo robots Gita and Kilo.
-  - item: Developed low and high-level software architecture for autonomous personal robots.
-  - item: Helped in the design of personal robots' interaction and user-experience.
+  - item: Assembled and led a team of electrical and software engineers.
+  - item: Crafted the software and electronic architecture for personal cargo robots, Gita and Kilo.
+  - item: Developed both low and high-level software architectures for autonomous personal robots.
+  - item: Assisted in shaping the interaction and user-experience design of personal robots.
 - title: Robot Software Engineer
   start_date: 12 / 2013
   end_date: 06 / 2016
   location: Boston, MA
   company: Aldebaran - Softbank Group
   description:
-  - item: Developed natural and enjoyable interactions for the robots Pepper and NAO.
-  - item: Trained new recruits.
-  - item: Performed public presentations and demos of the robots capabilities.
-  - item: Acted as technical lead and inform the region's software development road map.
+  - item: Crafted natural and engaging interactions for Pepper and NAO robots.
+  - item: Mentored and trained new team members.
+  - item: Conducted public demonstrations showcasing robot capabilities.
+  - item: Served as the regional technical lead, shaping the software development roadmap.
 - title: Co-Founder and Co-Organizer
   start_date: 02 / 2012
   end_date: 11 / 2013
   location: Montreal, QC
   company: Cloud Robotics Hackathon
   description:
-  - item: Co-founded a yearly international cloud-robotics competition aiming to promote
-      the creation of robotic applications.
-  - item: Coordinated all the aspects of the event, including logistics, technical
-      expertise, and web presence.
-  - item: For two years in a row, gathered more than 200 people in seven cities around
-      the world who were thrilled to hack robots during an entire weekend.
+  - item: Initiated an annual international cloud-robotics competition to foster robotic application development.
+  - item: Managed event logistics, provided technical expertise, and maintained online presence.
+  - item: Successfully hosted events for two consecutive years, attracting over 200 participants across seven global cities.
 - title: External Developer
   start_date: 03 / 2011
   end_date: 11 / 2013
   location: Montreal, QC
   company: Aldebaran Robotics Developers Program
   description:
-  - item: Developed applications and autonomous behaviours for the NAO humanoid robot.
-      This program is only available to select partners with the goal of making NAO
-      a fully autonomous personal robot.
+  - item: Developed applications and autonomous behaviors for the NAO humanoid robot as part of an exclusive partnership program aimed at enhancing NAO's autonomy.
 - title: Project Engineer & Robotics Specialist
   start_date: 01 / 2010
   end_date: 11 / 2013
   location: Mirabel, QC
   company: RobotShop
   description:
-  - item: Designed robotics projects.
-  - item: Provided technical consultation regarding the usage of electronic, electrical,
-      and mechanical components.
-  - item: Designed and implemented the first social network for robots (a remote monitoring
-      and control system for robotic equipment).
-  - item: Searched and selected new robotic products and suppliers for distribution.
-  - item: Blogged about the general field of robotics and produced video tutorials.
+  - item: Spearheaded various robotics projects.
+  - item: Offered technical consultations on electronic, electrical, and mechanical components.
+  - item: Pioneered the creation of the first social network for robots, enabling remote robotic equipment monitoring and control.
+  - item: Identified and onboarded new robotic products and suppliers for distribution.
+  - item: Authored blog posts on robotics and produced instructional videos.
 - title: Digital Design Engineer
   start_date: 08 / 2009
   end_date: 12 / 2009
   location: Montreal, QC
   company: CanSat International Inc
   description:
-  - item: Designed and implemented digital signal processing systems and modems using
-      FPGA technology.
-  - item: Ensured the implemented system performs within specifications.
+  - item: Designed and executed digital signal processing systems and modems using FPGA technology.
+  - item: Ensured systems met performance specifications.
 - title: Project Engineer
   start_date: 04 / 2009
   end_date: '04 / 2009 '
   location: Montreal, QC
   company: Panaxion
   description:
-  - item: Participated in the electrical and mechanical design of a paint application
-      system.
-  - item: Assisted in the mechanical and software design of a paint blending device.
+  - item: Contributed to the electrical and mechanical design of a paint application system.
+  - item: Supported the mechanical and software design of a paint blending device.
 - title: Surveying Field Professional
   start_date: 09 / 2008
   end_date: 11 / 2008
   location: Boisbriand, QC
   company: Group PHB
   description:
-  - item: Verified and adjusted aerial pictures for correctness and suitability.
-  - item: Planned and conducted aerial photographic and LiDAR topographical surveys.
-  - item: Operated the Vexcel camera, the Optec LiDAR, and high precision GPS units
-      at various Quebec locations and at Lagos, Nigeria.
-  - item: Lead a one-month Nigerian survey mission.
+  - item: Adjusted aerial images for accuracy and appropriateness.
+  - item: Orchestrated aerial photographic and LiDAR topographical surveys.
+  - item: Operated Vexcel camera, Optec LiDAR, and high-precision GPS units across Quebec and in Lagos, Nigeria.
+  - item: Led a month-long survey mission in Nigeria.
 - title: Digital System Design Teaching Assistant
   start_date: 07 / 2007
   end_date: 12 / 2007
   location: Montreal, QC
   company: McGill University
   description:
-  - item: Lead two-hour tutorial sessions for a group of 40 students.
-  - item: Answered questions, provided examples and advise regarding
-          theoretical and practical digital system design problems.
+  - item: Conducted two-hour tutorial sessions for groups of 40 students.
+  - item: Addressed queries and provided guidance on theoretical and hands-on digital system design challenges.
 - title: Geomatics Technical Agent
   start_date: 04 / 2006
   end_date: 08 / 2007
   location: Montreal, QC
   company: Ville de Montréal
   description:
-  - item: Researched and implemented various ways of displaying 3D architectural data.
-  - item: Documented the architectural 3D modelling process.
-  - item: Reorganized and documented the Old-Montreal 3D model set.
-  - item: Assisted in the developed a standard classification system for 3D
-          models according to their level of detail.
+  - item: Explored and implemented methods for 3D architectural data visualization.
+  - item: Documented the 3D architectural modeling process.
+  - item: Reorganized and chronicled the Old-Montreal 3D model set.
+  - item: Collaborated in developing a classification system for 3D models based on detail levels.
 skills:
   languages:
   - English
@@ -169,19 +167,20 @@ skills:
   - Git · SSH · Bash/Fish
   - Linux · Android
   - Gimp · Inkscape
-  - Fusion 360 · OpenSCAD · Solidworks
+  - Fusion 360 · Blender · Solidworks
   - KiCAD · Altium
   - Mathematica · Matlab · Octave
   programming:
-  - C/C++ · Python · Qt
+  - C/C++ · Python
+  - Qt · Flutter
   - ROS · OpenCV
-  - Caffe · TensorFlow
-  - Assembly · VHDL
-  - Arduino · Beaglebone · Arm
+  - TensorFlow · PyTorch
+  - Verilog · VHDL
+  - ARM · Arduino · RPi · Beaglebone 
   - HTML · CSS · JavaScript
   soft:
   - Hiring · Mentoring
-  - Leading · Managing Teams
+  - Leading · Managing
   - Presenting · Communication
   - Strategy · Planning · Scheduling
 education:
@@ -210,43 +209,35 @@ projects:
 - name: Love Lantern
   start_date: 12 / 2019
   description:
-  - Using Amazon AWS and the ESP32, created a set of IoT lanterns that turn each
-    other ON when touched with the objective of making long-distance
-    relationships more bearable.
+  - Developed a pair of IoT lanterns using Amazon AWS and ESP32. When one lantern is touched, the other lights up, aiming to bridge the gap in long-distance relationships.
 - name: Portfolio Builder
   start_date: 01 / 2018
   description:
-  - Using Ruby, HTML, CSS and JS, created a static site generator that layouts
-    the information on this resume, and my website asmat.ca
+  - Crafted a static site generator using Ruby, HTML, CSS, and JS. This tool arranges the content of this resume and populates my personal website, asmat.ca.
 - name: Nao Mind Control
   start_date: 09 / 2012
   description:
-  - Created a Nao behaviour that communicates with the Neurosky MindWave Sensor
-    and allows the user to control the humanoid robot with their thoughts.
-    Presented at New York Maker Faire 2012
+  - Designed a behavior for the Nao robot that interfaces with the Neurosky MindWave Sensor, enabling users to control the robot using their thoughts. Showcased at New York Maker Faire 2012.
 - name: Nao Rock Paper Scissors Lizard Spock
   start_date: 08 / 2011
   description:
-  - Nao played the geek version of Rock Paper Scissors against children and 
-    adults at Maker Faire NY 2011. The robot was able to play with the public
-    with minimal intervention.
+  - Programmed Nao to play the expanded version of Rock Paper Scissors. The robot interacted with both children and adults at Maker Faire NY 2011, requiring minimal human intervention.
 - name: International Cooperation Trip to Ecuador
   start_date: 01 / 2010
   description:
-  - Lead a group of CEGEP IB students in a trip to Ecuador.
-  - Built and deployed a wind power generator in a Ecuadorian indigenous community.
-  - Built and deployed a solar water heater for an indigenous Ecuadorian school.
+  - Led a team of CEGEP IB students on a mission to Ecuador.
+  - Constructed and installed a wind power generator in an indigenous Ecuadorian community.
+  - Assembled and set up a solar water heater for a local school.
 - name: McGill Autonomous Robotics Team
   start_date: 04 / 2008
   description:
-  - Acted as an external technical consultant for the team.
-  - Developed a low level control system for MARTy, the McGill AUV
+  - Served as an external technical consultant.
+  - Engineered a low-level control system for MARTy, McGill's Autonomous Underwater Vehicle (AUV).
 - name: McGill University Lunar Excavator Team
   start_date: 07 / 2008
   description:
-  - Integrated the excavator controllers and sensors in a single circuit board.
+  - Unified the excavator's controllers and sensors onto a single circuit board.
 - name: Virtual EIM
   start_date: 07 / 2001
   description:
-  - Created an interactive 3D model of my high-school using the Half-Life 3D
-    engine.
+  - Developed an interactive 3D representation of my high school using the Half-Life 3D engine.
