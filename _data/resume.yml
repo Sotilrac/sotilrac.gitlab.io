@@ -157,9 +157,9 @@ skills:
   - Git · SSH · Bash/Fish
   - Linux · Android
   - Gimp · Inkscape
-  - Fusion 360 · Blender · Solidworks
+  - Blender · Solidworks · Fusion 360
   - KiCAD · Altium
-  - Mathematica · Matlab · Octave
+  - Mathematica · Matlab
   programming:
   - C/C++ · Python
   - Qt · Flutter
@@ -172,6 +172,7 @@ skills:
   - Leading · Managing
   - Presenting · Communication
   - Strategy · Planning · Scheduling
+  - Cross-functional Collaboration
 education:
 - institution: Udacity
   start_date: '2018'
