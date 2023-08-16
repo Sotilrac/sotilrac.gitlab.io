@@ -22,7 +22,7 @@ phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mo
 email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
 picture: https://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60?s=200
 summary:
-- With passion for crafting technology that thrives in real-world scenarios, I've been fortunate to be at the forefront of transformative robotic innovations. Notably, designing intuitive interactions behaviours for Softbank Robotics' humanoids, Nao and Pepper.
+- With a passion for crafting technology that thrives in real-world scenarios, I've been fortunate to be at the forefront of transformative robotic innovations. Notably, designing intuitive interactive behaviours for Softbank Robotics' humanoids, Nao and Pepper.
 - This foundation paved the way for my leadership role at Piaggio Fast Forward, where I spearheaded the evolution of Gita from a mere concept to a commercial reality in just three years. Gita, a robot designed to be your personal carrier, was a testament to not just technological prowess but also my ability to assemble and nurture high-performing Electrical, Software, and Robotics Engineering teams.
 - Now, at Dephy, I'm channeling my expertise into the realm of wearable robotic (a.k.a. exoskeletons). I've instilled structure and professional rigor into the software division, and more recently, I've initiated and now lead the Electrical Engineering team. Together, we're on a mission to revolutionize mobility with cutting-edge software and embedded systems for exoskeletons.
 experience:
