@@ -24,7 +24,7 @@ picture: https://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60?s=200
 summary:
 - With a passion for crafting technology that thrives in real-world scenarios, I've been fortunate to be at the forefront of transformative robotic innovations. Notably, designing intuitive interactive behaviours for Softbank Robotics' humanoids, Nao and Pepper.
 - This foundation paved the way for my leadership role at Piaggio Fast Forward, where I spearheaded the evolution of Gita from a mere concept to a commercial reality in just three years. Gita, a robot designed to be your personal carrier, was a testament to not just technological prowess but also my ability to assemble and nurture high-performing Electrical, Software, and Robotics Engineering teams.
-- Now, at Dephy, I'm channeling my expertise into the realm of wearable robotic (a.k.a. exoskeletons). I've instilled structure and professional rigor into the software division, and more recently, I've initiated and now lead the Electrical Engineering team. Together, we're on a mission to revolutionize mobility with cutting-edge software and embedded systems for exoskeletons.
+- Now, at Dephy, I'm channeling my expertise into the realm of wearable robotics (a.k.a. exoskeletons). I've instilled structure and professional rigor into the software division, and more recently, I've initiated and now lead the Electrical Engineering team. Together, we're on a mission to revolutionize mobility with cutting-edge software and embedded systems for exoskeletons.
 experience:
 - title: Electrical and Software Engineering Team Lead
   start_date: 01 / 2022
@@ -148,16 +148,6 @@ experience:
   description:
   - item: Conducted two-hour tutorial sessions for groups of 40 students.
   - item: Addressed queries and provided guidance on theoretical and hands-on digital system design challenges.
-- title: Geomatics Technical Agent
-  start_date: 04 / 2006
-  end_date: 08 / 2007
-  location: Montreal, QC
-  company: Ville de Montréal
-  description:
-  - item: Explored and implemented methods for 3D architectural data visualization.
-  - item: Documented the 3D architectural modeling process.
-  - item: Reorganized and chronicled the Old-Montreal 3D model set.
-  - item: Collaborated in developing a classification system for 3D models based on detail levels.
 skills:
   languages:
   - English
