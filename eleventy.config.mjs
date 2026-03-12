@@ -13,8 +13,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("font");
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy({ "css/main.css": "css/main.css" });
-  // posts_assets is in .gitignore but copy if present
-  eleventyConfig.addPassthroughCopy("posts_assets");
 
   // --- Ignores ---
   eleventyConfig.ignores.add("README.md");

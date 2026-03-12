@@ -17,7 +17,7 @@ I saw in [this site](http://cleanstream.net/mirrors/coin_ring/) (try [this one](
 *   An ordinary 0.25$ coin (Canadian in my case)
 *   Lots of patience
 
-{% fig "img_1255.jpg", "Canadian Quarter" %}
+{% fig "/img/blog/make-your-girlfriend-happy-for-025/img_1255.jpg", "Canadian Quarter" %}
 
 ## Making it happen  
 

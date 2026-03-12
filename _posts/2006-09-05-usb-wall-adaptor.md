@@ -20,17 +20,17 @@ I built this adaptor very quickly since I needed to charge my Sony Clié SJ30 (t
 - A 5V power adaptor for a cell phone (also found in the garbage).
 - A bottle of soap.
 
-{% fig "usb plug.jpg", "USB Plug" %}
+{% fig "/img/blog/usb-wall-adaptor/usb-plug.jpg", "USB Plug" %}
 
 Cut the cell phone connector and solder a new connector (compatible with the USB connector that you have) or simply solder the adaptors wires directly to the USB ports. Since I have two USBs, I soldered two connectors.
 
-{% fig "usb and cable.jpg", "" %}
+{% fig "/img/blog/usb-wall-adaptor/usb-and-cable.jpg", "" %}
 
 In the end, the +5V wire (usually red) should be connected to Pin 1 and the ground wire (usually black) should be connected to Pin 4 of the USB connector (see the details for the [USB standards](http://en.wikipedia.org/wiki/Universal_Serial_Bus)).
 
 Build a case using a bottle of soap (or any other source of cheap plastic) in order to make the device a bit more robust and aesthetically pleasant. I made sure to do a loose knot in the cable to impede the small connections from breaking if an excessive tension is applied to it.
 
-{% fig "usb wall adapter.jpg", "" %}
+{% fig "/img/blog/usb-wall-adaptor/usb-wall-adapter.jpg", "" %}
 
 This is a very cheap (actually free if you're lucky) wall adaptor for USB devices.
 

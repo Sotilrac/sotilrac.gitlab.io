@@ -11,7 +11,7 @@ categories:
 tags: []
 ---
 
-{% fig "carlos.jpg", "Carlos" %}
+{% fig "/img/blog/introduction/carlos.jpg", "Carlos" %}
 
 I am Carlos Asmat, an electrical engineering undergraduate at McGill University. I have been living in [Montreal](http://en.wikipedia.org/wiki/Montreal "Montreal") (Quebec, Canada) for the past eight years but I was born in [Rosario](http://en.wikipedia.org/wiki/Rosario "Rosario") (Santa Fe, Argentina).
 

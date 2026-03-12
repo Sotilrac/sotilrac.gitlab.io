@@ -19,7 +19,7 @@ I got my palm IIIc from a relative. When I got it, the case was cracked, the bat
 
 ## The charger
 
-{% fig "palm craddle.jpg", "Palm Craddle" %}
+{% fig "/img/blog/overhauling-palm-iiic/palm-craddle.jpg", "Palm Craddle" %}
 
 Fortunately, I'm very lucky and I found a brand new palm cradle in the garbage (along with many other power adaptors). The cradle has a serial port connection to sync the palm but no power input for charging. I went on looking for the Palm IIIc pinout and found this [very useful site](http://www.pspilot.de/ppppiiic/ppppiiic.html)
 
@@ -30,13 +30,13 @@ Another option is to use the 5V coming out the USB ports by using a USB cable. B
 
 I installed a connector for the power adaptor on the back of the cradle by making a square hole using a drill and a small file. If the hole is tight enough, there is no need for glue (I always try to avoid gluing).
 
-{% fig "palm craddle connector.0.jpg", "Craddle Connector" %}
+{% fig "/img/blog/overhauling-palm-iiic/palm-craddle-connector.0.jpg", "Craddle Connector" %}
 
 I soldered the connector to the appropriate pins ( + to  pin 9 and ground to pin 10). There are holes in the cradle PCB named E1 to E10 corresponding to each pin, so soldering was easy.
 
 ## The Stylus
 
-{% fig "stylus.0.jpg", "Stylus" %}
+{% fig "/img/blog/overhauling-palm-iiic/stylus.0.jpg", "Stylus" %}
 
 My brother was kind enough to make a stylus for me. He took a small wood rod slightly thinner than the standard stylus (according to the hole in the Palm), cut it to the right length, sharpened one end with a pencil sharpener, painted it black with a permanent marker, and covered it (except for the sharp end) with heat shrink. I added the tail of a cable tie between the heat shrink and the wood in order to create the little protrusion present in the original stylus.
 
@@ -48,6 +48,6 @@ Using electric tape in the inside and crazy glue in the outside I repaired the c
 
 ## The End Result
 
-{% fig "palm IIIc.0.jpg", "Palm IIIc" %}
+{% fig "/img/blog/overhauling-palm-iiic/palm-iiic.0.jpg", "Palm IIIc" %}
 
 The Palm IIIc is now functioning and, the batteries can be easily charged, and the screws in the front are very sexy looking.

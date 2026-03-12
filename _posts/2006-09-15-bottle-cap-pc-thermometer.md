@@ -24,12 +24,12 @@ I built a very simple thermometer. The major thing I added to the original desig
 
 ## The Circuit
 
-{% fig "shema.jpg", "Digital Thermometer Circuit Schematics" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/shema.jpg", "Digital Thermometer Circuit Schematics" %}
 
 I salvaged all the parts from old electronics (found in garbage) so they were free. All the parts are very easy to find except for the thermistor. I did not get precisely a thermistor but a very close approximation to it. In fact, I'm not very sure of what it is that I used.
 
 I just soldered the components together, no need of PCB.  
-{% fig "thermometer circuit.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer-circuit.jpg", "" %}
 
 ## My Thermistor
 
@@ -37,7 +37,7 @@ I got the thermistor from a broken drinking water dispenser /cooler.
 
 The relationship between the temperature and resistance in an usual thermistor is mostly linear. For my thermistor, the lower bound for the linear region of the resistance-temperature relation is 11Â°C. Below this point, its resistance goes to infinity (it doesn't allow any current to pass). I suppose this is used to stop cooling the water when it gets at the desired 11Â°C temperature. I haven't yet found an upper bound for the linear region.
 
-{% fig "thermometer extended.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer-extended.jpg", "" %}
 
 Anyways, the only problem is that it can't measure temperatures below 11Â°C.
 
