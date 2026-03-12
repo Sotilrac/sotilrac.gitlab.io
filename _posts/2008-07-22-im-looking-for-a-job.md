@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: I'm looking for a job
 author: Carlos
 id: 52
-date: '2008-07-22 22:21:00 -0400'
-date_gmt: '2008-07-23 05:21:00 -0400'
+date: 2008-07-22T22:21:00-04:00
+date_gmt: 2008-07-23T05:21:00-04:00
 categories:
 - General
 tags: []

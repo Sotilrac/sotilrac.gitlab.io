@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Panoramaker
 author: Carlos
 id: 84
-date: '2009-10-04 21:55:03 -0400'
-date_gmt: '2009-10-05 01:55:03 -0400'
+date: 2009-10-04T21:55:03-04:00
+date_gmt: 2009-10-05T01:55:03-04:00
 categories:
 - My Projects
 - Software
@@ -19,9 +19,9 @@ As [promised before](http://carlitoscontraptions.com/2009/09/panoramic-camera-pr
 
 This script requires my [Pololu library](http://carlitoscontraptions.com/2009/07/pololu-python-library/ "Pololu Library") and includes some codes from [here](https://vmlaker.org/geek/python/digital-camera-control-with-gphoto2 "Digital Camera Control with gphoto2 ") in order to control the camera. Besides the basic requirements of lib_pololu, the script also requires [gPhoto](http://gphoto.sourceforge.net/ "gPhoto"). If you are running Linux, you most likely already have it but in case you do not, you can install it through your favourite package manager or by using the console (e.g. for Ubuntu/Debian):
 
-{% highlight bash %}
+```bash
 sudo apt-get install gphoto
-{% endhighlight %}
+```
 
 If you are using some other OS, you can download gPhoto from [here](http://sourceforge.net/projects/gphoto/files/ "Download gPhoto").
 

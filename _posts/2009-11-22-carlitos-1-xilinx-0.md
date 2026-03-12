@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Carlitos 1, Xilinx 0
 author: Carlos
 id: 89
-date: '2009-11-22 04:02:31 -0500'
+date: 2009-11-22T04:02:31-05:00
 categories:
 - General
 - Software
@@ -14,7 +14,7 @@ tags:
 - Software
 - Electronics
 ---
-{% include fig.html img="Fpga_xilinx_spartan.jpg" caption="Xilinx Spartan" id=page.id %}
+{% fig "Fpga_xilinx_spartan.jpg", "Xilinx Spartan" %}
 
 I spent countless hours trying to install the free version of the Xilinx software on may windoze Virtual machine and I have finally succeed.
 

@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Tensegrity and more
 author: Carlos
 id: 41
-date: '2007-12-31 02:14:00 -0500'
-date_gmt: '2007-12-31 09:14:00 -0500'
+date: 2007-12-31T02:14:00-05:00
+date_gmt: 2007-12-31T09:14:00-05:00
 categories:
 - General
 tags: []
@@ -15,13 +15,13 @@ Based on the [DIY Ornaments Weekend Projects Podcast](http://blog.makezine.com/a
 
 I'm particularly proud of the Popsicle sticks tensegrity structure since it is much stronger and cool looking than the straws one.
 
-{% include fig.html img="ss850220.jpg" caption="" id=page.id %}
+{% fig "ss850220.jpg", "" %}
 
 (note the upgraded upcoming POV display on the background)
 
 Also, I got a new camera for Christmas, a nice Samsung s850, so now I can make some great pictures and video without needing to borrow a camera or whatnot (I'm really happy about it).  
 Here is a random picture from this great camera:
 
-{% include fig.html img="ss850306.jpg" caption="" id=page.id %}
+{% fig "ss850306.jpg", "" %}
 
 BTW, the Samsung s850 works very well under Linux!

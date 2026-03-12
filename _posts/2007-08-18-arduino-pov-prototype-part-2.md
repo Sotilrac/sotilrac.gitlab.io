@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Arduino POV Prototype - Part 2
 author: Carlos
 id: 36
-date: '2007-08-18 21:15:00 -0400'
-date_gmt: '2007-08-19 04:15:00 -0400'
+date: 2007-08-18T21:15:00-04:00
+date_gmt: 2007-08-19T04:15:00-04:00
 categories:
 - My Projects
 - Arduino
@@ -22,7 +22,7 @@ The parameters in the code can be changed in order to display other images besid
 
 The displayed image is stored in the data string. Each drawing is divided in frames (i.e. one frame for each letter of a word) and each frame is divided in columns. The image to be displayed must be encoded into 1s (ON) and 0s (OFF) and each value must be stored in the data string in the order illustrated below.  
   
-{% include fig.html img="format.png" caption="" id=page.id %}
+{% fig "format.png", "" %}
 
 The duration of each column (i.e. how much time they stay ON), the spacing between frames and the spacing between images are set respectively by the integers timer1, timer2 and timer3. Keep in mind that their values depend on the rotation speed.
 
@@ -37,7 +37,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 4
 *   frame_num: 1
 
-{% include fig.html img="arrow.JPG" caption="" id=page.id %}
+{% fig "arrow.JPG", "" %}
 
 ## "Alan":
 
@@ -48,7 +48,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 4
 *   frame_num: 4
 
-{% include fig.html img="alan.JPG" caption="" id=page.id %}
+{% fig "alan.JPG", "" %}
 
 ## Sinewave (or flower):
 
@@ -59,7 +59,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 12
 *   frame_num: 1
 
-{% include fig.html img="sine.JPG" caption="" id=page.id %}
+{% fig "sine.JPG", "" %}
 
 ## E = MC²:
 
@@ -70,4 +70,4 @@ Finally, the number of frames and their length is set respectively by frame_num 
 *   frame_len: 5
 *   frame_num: 5
 
-{% include fig.html img="e_mc2.JPG" caption="" id=page.id %}
+{% fig "e_mc2.JPG", "" %}

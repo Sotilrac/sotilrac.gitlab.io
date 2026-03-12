@@ -9,7 +9,7 @@ permalink: /blog/
     <h2 class="page-heading">Posts Archive</h2>
 
     <ul class="post-list">
-      {% for post in collections.posts %}
+      {% for post in collections.publicPosts %}
         <li>
           <span class="post-meta">{{ post.date | dateFormat }}</span>
           <span> - </span>
@@ -22,7 +22,7 @@ permalink: /blog/
       {% endfor %}
     </ul>
 
-    {% if collections.posts.length == 0 %}
+    {% if collections.publicPosts.length == 0 %}
     <p>Blog posts are being migrated. Check back soon.</p>
     {% endif %}
   </div>

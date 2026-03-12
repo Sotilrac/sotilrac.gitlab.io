@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Nao 1337 at the Robot Film Festival
 author: Carlos
 id: 985
 wordpress_url: http://carlitoscontraptions.com/?p=985
-date: '2011-07-24 12:50:52 -0400'
-date_gmt: '2011-07-24 16:50:52 -0400'
+date: 2011-07-24T12:50:52-04:00
+date_gmt: 2011-07-24T16:50:52-04:00
 categories:
 - My Projects
 - Robotics
@@ -15,9 +15,9 @@ tags:
 - Nao
 - Robot Film Festival
 ---
-On July 17th and 18th, we went to the [Robot Film Festival](http://robotfilmfestival.com/). I created a short video with Nao 1337 so we went walk the red carpet and watch the screening as all the other Hollywood stars would do. This was the first robot film festival and we have to thank [Heather Knight](http://www.marilynmonrobot.com/) for the initiative. It was held at the very cool [3 Legged Dog Art + Technology Center](http://www.3leggeddog.org/) at New York City.
+On July 17th and 18th, we went to the [Robot Film Festival](http://robotfilmfestival.com/). I created a short video with Nao 1337 so we went to walk the red carpet and watch the screening as all the other Hollywood stars would do. This was the first robot film festival and we have to thank [Heather Knight](http://www.marilynmonrobot.com/) for the initiative. It was held at the very cool [3 Legged Dog Art + Technology Center](http://www.3leggeddog.org/) at New York City.
 
-{% include fig.html img="IMG_0578.jpg" caption="Nao 1337 getting ready for the red carpet" id=page.id %}
+{% fig "IMG_0578.jpg", "Nao 1337 getting ready for the red carpet" %}
 
 See the video below explaining the festival's raison d'être:
 
@@ -25,16 +25,16 @@ See the video below explaining the festival's raison d'être:
 
 Below you can see our submission to the festival: [Nao 1337 Audition](http://vimeo.com/24947744). 1337 impersonates several popular Hollywood robots in the hope of getting a role in a movie. How many can you recognize? Leave a comment below with your answers.  
 
-{% include youtube.html id="XjWEmJsyMe4" %}
+{% youtube "XjWEmJsyMe4" %}
 
 ## Screening
 
 
-The festival started with a screening of [all the selected robot films](http://vimeo.com/groups/robotfilmfest) (53). It lasted around five hours and was punctuated by a break and some live performances by Jilted, and the excellent Robot Cowboy. Nao 1337 watched the screenings seated on a chair like the humans, but has some issued with the chair clogging its head ventilation and screamed (max volume) "head processor hot" at one point during an action scene of the very excellent [Ping](http://vimeo.com/11550125) film.
+The festival started with a screening of [all the selected robot films](http://vimeo.com/groups/robotfilmfest) (53). It lasted around five hours and was punctuated by a break and some live performances by Jilted, and the excellent Robot Cowboy. Nao 1337 watched the screenings seated on a chair like the humans, but had some issues with the chair clogging its head ventilation and screamed (max volume) "head processor hot" at one point during an action scene of the very excellent [Ping](http://vimeo.com/11550125) film.
 
 See Nao 1337 watch the screening of its own movie below.
 
-{% include youtube.html id="OYxlK63Hx1Q" %}
+{% youtube "OYxlK63Hx1Q" %}
 
 ## Red Carpet
 
@@ -43,7 +43,7 @@ After a fancy dinner at [Bobby Van's Steakhouse](http://www.bobbyvans.com/Bobby_
 
 I had programmed 1337 to hold hands and walk alongside me on the red carpet. I also included the ability to take breaks and show-off while standing on the carpet.
 
-{% include fig.html img="IMG_0553.jpg" caption="Nao 1337 and Carlitos about to walk the red carpet" id=page.id %}
+{% fig "IMG_0553.jpg", "Nao 1337 and Carlitos about to walk the red carpet" %}
 
 Extra points for those who can recognize the [FOTC](http://en.wikipedia.org/wiki/Flight_of_the_Conchords) member in the background of the picture above.
 
@@ -51,7 +51,7 @@ As shown in the video below, walking the red carpet was lots of fun and although
 
 [youtube Nj-Msc7JeDY]
 
-Although it is not shown on the video, 1337 can also tun and go backwards according to how its hand is pulled just like a human would do.
+Although it is not shown on the video, 1337 can also turn and go backwards according to how its hand is pulled just like a human would do.
 
 Unfortunately, 1337 did not get the Best Robot Actor Botsker (robot Oscar) but we met a bunch of new interesting people and it was lots of fun.
 

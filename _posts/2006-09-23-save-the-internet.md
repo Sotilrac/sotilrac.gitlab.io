@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Save the Internet
 author: Carlos
 id: 6
-date: '2006-09-23 17:12:00 -0400'
-date_gmt: '2006-09-24 00:12:00 -0400'
+date: 2006-09-23T17:12:00-04:00
+date_gmt: 2006-09-24T00:12:00-04:00
 categories:
 - General
 tags: []
@@ -15,6 +15,6 @@ These are just a few words about  net neutrality, don't worry, I'll be back with
 
 Please, visit [www.savetheinternet.com](http://www.savetheinternet.com/)
 
-{% include youtube.html id="H69eCYcDcuQ" %}
-{% include youtube.html id="G5RQrxkGgCM" %}
-{% include youtube.html id="w5ERpQ6nv0Q" %}
+{% youtube "H69eCYcDcuQ" %}
+{% youtube "G5RQrxkGgCM" %}
+{% youtube "w5ERpQ6nv0Q" %}

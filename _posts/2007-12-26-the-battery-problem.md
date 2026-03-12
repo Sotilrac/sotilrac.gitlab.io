@@ -1,17 +1,17 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: The Battery Problem
 author: Carlos
 id: 40
-date: '2007-12-26 21:20:00 -0500'
-date_gmt: '2007-12-27 04:20:00 -0500'
+date: 2007-12-26T21:20:00-05:00
+date_gmt: 2007-12-27T04:20:00-05:00
 categories:
 - My Projects
 tags: []
 ---
-{% include fig.html img="ss850292.jpg" caption="" id=page.id %}
+{% fig "ss850292.jpg", "" %}
 
 Many devices require batteries but do not absolutely require to be absolutely portable. Since batteries are expensive and don't last for very long, 
 it could be a would idea to add a wall power adapter connector to such devices. This would allow you to use the electricity from the mains to power a usually battery powered device.
@@ -22,14 +22,14 @@ Adding a power adapter connection to some device doesn't require many materials.
 
 Once you have all materials, simply locate the ground and V+ nodes on the circuit (usually the black and red wires respectively) and solder the connector to them. Then make a nice hole on the device to make it stick out if necessary and you're ready to go.
 
-{% include fig.html img="ss850276.jpg" caption="" id=page.id %}
+{% fig "ss850276.jpg", "" %}
 
-{% include fig.html img="ss850281.jpg" caption="" id=page.id %}
+{% fig "ss850281.jpg", "" %}
 
-{% include fig.html img="ss850282.jpg" caption="" id=page.id %}
+{% fig "ss850282.jpg", "" %}
 
 Make sure your power adapter matches the voltage of the device and always verify all voltages with a voltmeter. If you exceed the expected voltage levels for the device you can be pretty sure to fry it.
 
-{% include fig.html img="ss850298.jpg" caption="" id=page.id %}
+{% fig "ss850298.jpg", "" %}
 
 (note the cool paper counterweight on the helicopter's nose)

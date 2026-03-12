@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: I am the luckiest Engineer ever
 author: Carlos
 id: 88
-date: '2009-11-18 13:14:22 -0500'
+date: 2009-11-18T13:14:22-05:00
 categories:
 - General
 - FPGA
@@ -14,7 +14,7 @@ tags:
 ---
 A few weeks ago, I received a very pleasant message: [Altium](http://altium.com/ "Altium"), an FPGA development board manufacturer and IDE developer, contacted me asking If I wanted to try the (excessively cool) brand new development board (the [NanoBoard 3000](http://nb3000.altium.com/intro.html "NanoBoard 3000")) for free. Of course, I immediately (and quite emphatically) said _YES_.
 
-{% include fig.html img="IMG_2254.JPG" caption="The Altium NanoBoard 3000" id=page.id %}
+{% fig "IMG_2254.JPG", "The Altium NanoBoard 3000" %}
 
 Now that I got it, I'm dying to have some spear time in order to try out their awesome board with their quite intriguing IDE.
 
@@ -22,7 +22,7 @@ Now that I got it, I'm dying to have some spear time in order to try out their a
 
 The NanoBoard 3000 is a beautiful piece of equipment. It boasts lots of cool peripherals and is built and packed as a luxury electronics product. It is a very good looking piece of equipment while remaining perfectly functional, it beats by far all the other development boards I am familiar with (i.e. the Altera DE2 board and the Lattice Mico32 development board) while remaining much cheaper (around 50% of their price).
 
-{% include fig.html img="NanoBoard.jpg" caption="NanoBoard 3000 Unboxing" id=page.id %}
+{% fig "NanoBoard.jpg", "NanoBoard 3000 Unboxing" %}
 
 ## Features
 
@@ -30,7 +30,7 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
 
 *   A Xilinx Spartan-3AN device (XC3S1400AN-4FGG676C)
     
-    {% include fig.html img="IMG_2251.JPG" caption="Nanoboard 3000 Front" id=page.id %}
+    {% fig "IMG_2251.JPG", "Nanoboard 3000 Front" %}
     
 *   4 Serial SPI Flash memory devices
 *   Programmable clock 6 to 200 MHz, accessible by Altium Designer or by an FPGA design
@@ -53,7 +53,7 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
     *   One for use by the User FPGA
 *   SVGA interface (24-bit, 80MHz)
     
-    {% include fig.html img="IMG_2252.JPG" caption="NanoBoard 3000 Back" id=page.id %}
+    {% fig "IMG_2252.JPG", "NanoBoard 3000 Back" %}
     
 *   10/100 Fast Ethernet interface
 *   USB 2.0 High-Speed interface

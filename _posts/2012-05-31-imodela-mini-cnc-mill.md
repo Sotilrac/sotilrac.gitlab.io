@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Hands On the iModela Mini CNC Mill
 author: Carlos
 id: 1157
 wordpress_url: http://carlitoscontraptions.com/?p=1157
-date: '2012-05-31 19:01:05 -0400'
-date_gmt: '2012-05-31 23:01:05 -0400'
+date: 2012-05-31T19:01:05-04:00
+date_gmt: 2012-05-31T23:01:05-04:00
 categories:
 - My Projects
 - Robotics
@@ -24,15 +24,15 @@ Unfortunately the software works only on Windows and it has very few features.
 
 I filmed the unboxing but unfortunately the video got corrupted so I re-shot another video showing all the parts as you can see below.
 
-{% include youtube.html id="sEzx4lhZsSo" %}
+{% youtube "sEzx4lhZsSo" %}
 
 Very quickly, my brother and I drew a simple shape and were cutting in no time. You can see the cutting process below and download the [Deadmau5 model at Thingverse](http://www.thingiverse.com/thing:16391).
 
-{% include fig.html img="carlitoscontraptions.com" caption="Deadmau5 iModela cutout" id=page.id %}
+{% fig "carlitoscontraptions.com", "Deadmau5 iModela cutout" %}
 
 Cutting this shape took roughly an hour and the end-result is very precise. The picture above might not show this but it is important to note we cut this on a scrap piece of plastic. See the machine in action in the video below.
 
-{% include youtube.html id="74NGqpqrkRc" %}
+{% youtube "74NGqpqrkRc" %}
 
 ## Quick impressions
 

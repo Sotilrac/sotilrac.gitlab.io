@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Comic Con in Montreal
 author: Carlos
 id: 761
 wordpress_url: http://carlitoscontraptions.com/?p=761
-date: '2010-12-14 01:15:09 -0500'
-date_gmt: '2010-12-14 05:15:09 -0500'
+date: 2010-12-14T01:15:09-05:00
+date_gmt: 2010-12-14T05:15:09-05:00
 categories:
 - General
 tags: []

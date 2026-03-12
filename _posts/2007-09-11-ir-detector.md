@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: IR Detector
 author: Carlos
 id: 38
-date: '2007-09-11 15:18:00 -0400'
-date_gmt: '2007-09-11 22:18:00 -0400'
+date: 2007-09-11T15:18:00-04:00
+date_gmt: 2007-09-11T22:18:00-04:00
 categories:
 - My Projects
 tags: []
@@ -17,7 +17,7 @@ Besides [my POV display](http://carlitoscontraptions.blogspot.com/2007/08/pov-pr
 
 An IR signal is "seen" by a reverse biased IR diode which produces an electrical signal according to the light intensity. This signal is then amplified trough a transistor which powers an ordinary LED. This means that the LED will light up when the IR diodes receives some IR light (from a TV remote for instance).
 
-{% include fig.html img="dcp_0019.jpg" caption="" id=page.id %}
+{% fig "dcp_0019.jpg", "" %}
 
 ## Materials
 
@@ -29,11 +29,11 @@ An IR signal is "seen" by a reverse biased IR diode which produces an electrical
 *   An old 9V battery (for the casing)
 *   A new 9V battery (for power)
 
-{% include fig.html img="dcp_0002.jpg" caption="" id=page.id %}
+{% fig "dcp_0002.jpg", "" %}
 
 ## The Circuit
 
-{% include fig.html img="IRD_circuit.png" caption="" id=page.id %}
+{% fig "IRD_circuit.png", "" %}
 
 ## Construction Notes
 

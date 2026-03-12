@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Nao 1337 Uses Wolfram Alpha Knowledge
 author: Carlos
 id: 1167
 wordpress_url: http://carlitoscontraptions.com/?p=1167
-date: '2012-06-04 19:52:35 -0400'
-date_gmt: '2012-06-04 23:52:35 -0400'
+date: 2012-06-04T19:52:35-04:00
+date_gmt: 2012-06-04T23:52:35-04:00
 categories:
 - My Projects
 - Robotics
@@ -20,6 +20,6 @@ tags:
 
 Using the [Google Speech-to-Text behaviour](http://carlitoscontraptions.com/2012/01/nao-1337-uses-google-speech-to-text-service/), I created an interface to access the Wolfram\|Alpha knowledge engine through Nao 1337. As shown in the video below, Nao can now be used to answer very important existential questions about memes.
 
-{% include youtube.html id="xwTHOlJwOgA" %}
+{% youtube "xwTHOlJwOgA" %}
 
 You can download the code in [the project page](http://developer.aldebaran-robotics.com/projects/wolframalpha-knowledge/) at the [Developer Program](http://developer.aldebaran-robotics.com/projects/wolframalpha-knowledge/) site.

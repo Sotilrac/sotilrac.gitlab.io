@@ -1,28 +1,28 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: We are (surprisingly) popular
 author: Carlos
 id: 519
 wordpress_url: http://carlitoscontraptions.com/?p=519
-date: '2010-02-23 21:48:56 -0500'
-date_gmt: '2010-02-24 01:48:56 -0500'
+date: 2010-02-23T21:48:56-05:00
+date_gmt: 2010-02-24T01:48:56-05:00
 categories:
 - My Projects
 tags:
 - International Cooperation
 ---
-{% include fig.html img="IMG_1002.jpg" caption="The IB + Engineer in Ecuador" id=page.id %}
+{% fig "IMG_1002.jpg", "The IB + Engineer in Ecuador" %}
 
 Awesome news! The Montreal Gazette recently published a nice article about the international cooperation project I participated some time ago: [The Ecuadorian Makecation](http://carlitoscontraptions.com/2010/02/ecuadorian-makecation/ "Trip to Ecuador").
 
 You can find the article here: [Students' trip to Ecuador is no vacation](http://www.montrealgazette.com/technology/Students+trip+Ecuador+vacation/2599612/story.html).
 
-{% include fig.html img="IMG_4382.jpg" caption="Montreal's Gazette Article" id=page.id %}
+{% fig "IMG_4382.jpg", "Montreal's Gazette Article" %}
 
 And anther picture just for fun:
 
-{% include fig.html img="PA230090.jpg" caption="Ecuador Trip - The TV Series" id=page.id %}
+{% fig "PA230090.jpg", "Ecuador Trip - The TV Series" %}
 
 BTW, lately, I have been overusing the word "awesome".

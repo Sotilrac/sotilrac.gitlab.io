@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Repairing Shoelaces with Heat-shrink Tubing
 author: Carlos
 id: 42
-date: '2008-01-31 13:15:00 -0500'
-date_gmt: '2008-01-31 20:15:00 -0500'
+date: 2008-01-31T13:15:00-05:00
+date_gmt: 2008-01-31T20:15:00-05:00
 categories:
 - My Projects
 tags: []
@@ -17,7 +17,7 @@ Being acquainted with electronics supplies in general, I decided to try using [h
 
 The result? Marvelous. It works like a charm and is really very easy to do and costs nothing (if you already own some tubing).
 
-{% include fig.html img="shoelaces.jpg" caption="" id=page.id %}
+{% fig "shoelaces.jpg", "" %}
 
 In order to do it, simply cut four pieces (~2 cm long) of heat-shrink tubing, put them at the shoelaces tip, apply heat, and it's done. Note that the tubing should be of about the same diameter as the shoelaces.
 

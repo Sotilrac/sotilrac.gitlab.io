@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: layouts/post.njk
 status: draft
 title: Cloud Robotics Hackathon
 author: Carlos
 id: 1161
 wordpress_url: http://carlitoscontraptions.com/?p=1161
-date: '2012-06-01 19:44:22 -0400'
-date_gmt: '2012-06-01 23:44:22 -0400'
+date: 2012-06-01T19:44:22-04:00
+date_gmt: 2012-06-01T23:44:22-04:00
 categories:
 - My Projects
 - Robotics
@@ -19,7 +19,7 @@ Back in March we organized the first [Global Cloud Robotics Hackathon](http://ro
 
 The main goal of the hackathon is to allow programmers to jump into the robotics world through the use of the new and exciting field of Cloud Robotics.
 
-{% include fig.html img="cloud_robotics_hackathon.png" caption="Cloud Robotics Hackathon" id=page.id %}
+{% fig "cloud_robotics_hackathon.png", "Cloud Robotics Hackathon" %}
 
 You can see all the information about the event in [its official](http://roboticshackathon.com/) website as well as the resulting presentations in the [Cloud Robotics Hackathon YouTube Channel](http://www.youtube.com/user/RoboticsHackathon).
 

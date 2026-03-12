@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Enough with the guesswork, I got Logic
 author: Carlos
 id: 91
 wordpress_url: http://carlitoscontraptions.com/?p=455
-date: '2009-12-11 02:30:45 -0500'
-date_gmt: '2009-12-11 06:30:45 -0500'
+date: 2009-12-11T02:30:45-05:00
+date_gmt: 2009-12-11T06:30:45-05:00
 categories:
 - Tools
 tags:
@@ -15,7 +15,7 @@ tags:
 ---
 I just got a shiny new [Logic](http://www.saleae.com/logic/ "The Logic"), a tiny 8-channel, 24 MHz logic analyzer from [Saleae LLC](http://www.saleae.com/home/ "Saleae"), and it is beautiful. I've been wanting to get a logic analyzer for quite some time and this little guy is definitely worth the 150 bucks it costs.
 
-{% include fig.html img="Logic.jpg" caption="Logic Unboxing" id=page.id %}
+{% fig "Logic.jpg", "Logic Unboxing" %}
 
 ## Logic Analyzer?
 
@@ -27,13 +27,13 @@ In short, a logic analyzer allows you to view digital signals and plot them with
 
 ## Casing
 
-{% include fig.html img="IMG_2566.JPG" caption="The Logic, by Saleae" id=page.id %}
+{% fig "IMG_2566.JPG", "The Logic, by Saleae" %}
 
 The Logic has a nice square anodized aluminum body which makes it very sturdy and looks awesome. It is very small (~ 4.5 cm on the side and ~ 0.7 cm high) and features some male headers on the front side and a mini USB port type B on the back. For some reason, I really like the four tiny hex screws that hold together the two aluminum plates that make the body.
 
 ## Accessories
 
-{% include fig.html img="Logic2.jpg" caption="Wires & Hooks" id=page.id %}
+{% fig "Logic2.jpg", "Wires & Hooks" %}
 
 The Logic comes in a nice Logic Case, usually intended for some other electronics such as external hard drives I suppose, that can accommodate itself  and its USB cable, its set of wires and the E-Z-hook clips.
 

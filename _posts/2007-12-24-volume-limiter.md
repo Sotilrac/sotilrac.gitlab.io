@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Volume Limiter
 author: Carlos
 id: 39
-date: '2007-12-24 00:39:00 -0500'
-date_gmt: '2007-12-24 07:39:00 -0500'
+date: 2007-12-24T00:39:00-05:00
+date_gmt: 2007-12-24T07:39:00-05:00
 categories:
 - My Projects
 tags: []
@@ -29,7 +29,7 @@ Since I am a bit short on time (it must be done for Christmas) and since I think
 
 ## Materials
 
-{% include fig.html img="materials.jpg" caption="" id=page.id %}  
+{% fig "materials.jpg", "" %}  
 This little project requires very few materials:
 
 *   A couple of resistors. Their value depends on the headphone's impedance.
@@ -40,15 +40,15 @@ This little project requires very few materials:
 
 ## Construction
 
-{% include fig.html img="ss850185.jpg" caption="" id=page.id %}
+{% fig "ss850185.jpg", "" %}
 
 Simply solder the jack socket to the perf board (which should be cut to fit inside the gutted lipstick ) and put a resistor in series for each channel (left and right). Then connect the jack plug to the resistors and to ground by using the wire.
 
-{% include fig.html img="ss850182.jpg" caption="" id=page.id %}
+{% fig "ss850182.jpg", "" %}
 
 I drilled a hole on one end of the lipstick so the jack socket would fit tightly and stick out from it. The wire with the jack plug goes out of a hole on the other end of the lipstick.
 
-{% include fig.html img="ss850181.jpg" caption="" id=page.id %}
+{% fig "ss850181.jpg", "" %}
 
 At first, I chose to use a 10 Ohms resistor for each channel since I figured that the headphone impedance would be around 16 Ohms at DC. Later, I found out that 10 Ohms wasn't enough , so I added another 10 Ohms resistor in series on each channel, making the total resistance per channel 20 Ohms.
 
@@ -58,4 +58,4 @@ I know this volume reduction technique is very wasteful in terms of power and no
 
 Finally, I used some isolating tape to make the construction a bit more resilient to children.
 
-{% include fig.html img="ss850189.jpg" caption="" id=page.id %}
+{% fig "ss850189.jpg", "" %}

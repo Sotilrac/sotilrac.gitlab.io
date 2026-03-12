@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: layouts/post.njk
 status: draft
 title: Cloud Robotics Hackathon at M.Net
 author: Carlos
 id: 1554
-date: '2013-05-26 10:02:11 -0400'
+date: 2013-05-26T10:02:11-04:00
 categories:
 - General
 tags:

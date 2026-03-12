@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: layouts/post.njk
 status: draft
 title: Nao Mind Control at New York Maker Faire 2012
 author: Carlos
 id: 1438
 wordpress_url: http://carlitoscontraptions.com/?p=1438
-date: '2012-10-08 22:10:30 -0400'
-date_gmt: '2012-10-09 02:10:30 -0400'
+date: 2012-10-08T22:10:30-04:00
+date_gmt: 2012-10-09T02:10:30-04:00
 categories:
 - My Projects
 - Robotics

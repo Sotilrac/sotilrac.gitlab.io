@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: Coming Soon
 author: Carlos
 id: 9
-date: '2006-10-10 21:28:00 -0400'
-date_gmt: '2006-10-11 04:28:00 -0400'
+date: 2006-10-10T21:28:00-04:00
+date_gmt: 2006-10-11T04:28:00-04:00
 categories:
 - General
 tags: []

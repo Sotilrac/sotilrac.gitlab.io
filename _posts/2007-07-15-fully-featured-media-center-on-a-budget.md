@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: Fully Featured Media Center on a Budget
 author: Carlos
 id: 32
-date: '2007-07-15 00:14:00 -0400'
-date_gmt: '2007-07-15 07:14:00 -0400'
+date: 2007-07-15T00:14:00-04:00
+date_gmt: 2007-07-15T07:14:00-04:00
 categories:
 - My Projects
 tags: []
@@ -14,7 +14,7 @@ Recently my girlfriend got rid of her cable television connection and moved to a
 
 [![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeQI/AAAAAAAAATI/9imY9X9iqHk/s320/800px-Xbox.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeQI/AAAAAAAAATI/9imY9X9iqHk/s1600-h/800px-Xbox.jpg)
 
-## Meterials
+## Materials
 
 *   Xbox (not 360)
 *   Xbox remote (not required, but useful)
@@ -57,33 +57,33 @@ Now that you have XBMC up , running and connected to the internet you can:
 
 ## Some Screenshots
 
-{% include fig.html img="media.bmp" caption="" id=page.id %}
+{% fig "media.bmp", "" %}
 
-{% include fig.html img="video.bmp" caption="" id=page.id %}
+{% fig "video.bmp", "" %}
 
-{% include fig.html img="movies_menu_2.bmp" caption="" id=page.id %}
+{% fig "movies_menu_2.bmp", "" %}
 
-{% include fig.html img="movies_menu_1.bmp" caption="" id=page.id %}
+{% fig "movies_menu_1.bmp", "" %}
 
-{% include fig.html img="music.bmp" caption="" id=page.id %}
+{% fig "music.bmp", "" %}
 
-{% include fig.html img="shoutcast.bmp" caption="" id=page.id %}
+{% fig "shoutcast.bmp", "" %}
 
-{% include fig.html img="audio_playback.bmp" caption="" id=page.id %}
+{% fig "audio_playback.bmp", "" %}
 
-{% include fig.html img="games.bmp" caption="" id=page.id %}
+{% fig "games.bmp", "" %}
 
-{% include fig.html img="live.bmp" caption="" id=page.id %}
+{% fig "live.bmp", "" %}
 
-{% include fig.html img="live_places.bmp" caption="" id=page.id %}
+{% fig "live_places.bmp", "" %}
 
-{% include fig.html img="trailers.bmp" caption="" id=page.id %}
+{% fig "trailers.bmp", "" %}
 
-{% include fig.html img="playback.bmp" caption="" id=page.id %}
+{% fig "playback.bmp", "" %}
 
-{% include fig.html img="weather.bmp" caption="" id=page.id %}
+{% fig "weather.bmp", "" %}
 
-{% include fig.html img="joox.bmp" caption="" id=page.id %}
+{% fig "joox.bmp", "" %}
 
 (note that the top and bottom black borders are not shown in the TV screen)
 

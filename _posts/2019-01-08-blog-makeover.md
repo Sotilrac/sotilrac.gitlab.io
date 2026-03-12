@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: layouts/post.njk
 status: public
 title: Blog Makeover
 author: Carlos
 id: 143
-date: '2019-01-08 01:01:01 -0500'
+date: 2019-01-08T01:01:01-05:00
 categories:
 - News
 tags:
@@ -16,7 +16,7 @@ I ignored my blog for long enough and it got infested with Spam. The old WordPre
 
 To avoid this from happening again, I decided to remake the blog, but this time 100% more static. Gone are the days of WordPress, the databases, and canned yet slightly customized themes. I'm now using Jekyll, the static site generator with my custom CSS based on Boostrap (as any stylish developer would).
 
-{% include fig.html img="https://m.media-amazon.com/images/M/MV5BMDdlZTc2NmItNzE2MS00YTgzLTg5NjAtMDk4MzZmMTA0ZDlmL2ltYWdlXkEyXkFqcGdeQXVyNzc5NjM0NA@@._V1_.jpg" caption="Dr. Jekyll (1939)" id=page.id %}
+{% fig "https://m.media-amazon.com/images/M/MV5BMDdlZTc2NmItNzE2MS00YTgzLTg5NjAtMDk4MzZmMTA0ZDlmL2ltYWdlXkEyXkFqcGdeQXVyNzc5NjM0NA@@._V1_.jpg", "Dr. Jekyll (1939)" %}
 
 In a very manual and laborious way, I stripped all the injected Spam from every post, reformatted them in Markdown and hosted them in a [git repo](https://gitlab.com/sotilrac/sotilrac.gitlab.io). It turns out I had many more posts that I remembered when I started this process, 142 to be precise. Rereading everything, I realized that many of my posts could use some improvements, spell-checking, better syntax, and improved graphics; needless to say, this got pretty overwhelming.
 

@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Montreal Mini Maker Faire 2012
 author: Carlos
 id: 1304
 wordpress_url: http://carlitoscontraptions.com/?p=1304
-date: '2012-09-02 17:29:07 -0400'
-date_gmt: '2012-09-02 21:29:07 -0400'
+date: 2012-09-02T17:29:07-04:00
+date_gmt: 2012-09-02T21:29:07-04:00
 categories:
 - News
 tags:
@@ -20,9 +20,9 @@ Nao 1337 and I participated in the first edition of the [Montreal Mini Maker Fai
 
 We had the chance to meet some very interesting people, including (but certainly not limited to) [Bertier Luyt](http://batitrad.pro/) from [Le FabShop](http://www.lefabshop.fr/) and [Marc-André Bazergui](http://www.youtube.com/user/bazmarc), creator of a fully functional LEGO Wall-E.
 
-{% include youtube.html id="6k8BHlrf3Go" %}
+{% youtube "6k8BHlrf3Go" %}
 
-{% include youtube.html id="dwNwM6w1pWs" %}
+{% youtube "dwNwM6w1pWs" %}
 
 See some pictures of the event below.
 

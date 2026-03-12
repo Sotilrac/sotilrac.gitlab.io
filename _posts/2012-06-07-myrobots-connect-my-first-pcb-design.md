@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: MyRobots Connect, My First PCB Design
 author: Carlos
 id: 1177
 wordpress_url: http://carlitoscontraptions.com/?p=1177
-date: '2012-06-07 09:04:53 -0400'
-date_gmt: '2012-06-07 13:04:53 -0400'
+date: 2012-06-07T09:04:53-04:00
+date_gmt: 2012-06-07T13:04:53-04:00
 categories:
 - My Projects
 tags:

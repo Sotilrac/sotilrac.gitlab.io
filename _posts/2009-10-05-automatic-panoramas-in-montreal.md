@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Automatic Panoramas in Montreal
 author: Carlos
 id: 85
-date: '2009-10-05 01:01:44 -0400'
+date: 2009-10-05T01:01:44-04:00
 categories:
 - My Projects
 tags:

@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: layouts/post.njk
 status: draft
 title: Compact Keychain
 author: Carlos
 id: 23
-date: '2007-03-05 21:40:00 -0500'
-date_gmt: '2007-03-06 04:40:00 -0500'
+date: 2007-03-05T21:40:00-05:00
+date_gmt: 2007-03-06T04:40:00-05:00
 categories:
 - Projects
 tags: DIY
@@ -20,15 +20,15 @@ This is a nice keychain I've been using for more than a year now. Since it broke
 *   Some keys (I use only two keys)
 *   A pop rivet (requires a river gun)
 
-{% include fig.html img="keys.JPG" caption="" id=page.id %}
+{% fig "keys.JPG", "" %}
 
 ## Construction
 
 1.  Fasten the keys together using the rivet and put washers between them.
 2.  Admire your creation.
 
-{% include fig.html img="keys2.JPG" caption="" id=page.id %}
+{% fig "keys2.JPG", "" %}
 
 That's it. It works well with my two keys, and it is very compact and quiet.
 
-{% include fig.html img="keys3.JPG" caption="" id=page.id %}
+{% fig "keys3.JPG", "" %}

@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Montreal Hackers Wave
 author: Carlos
 id: 90
-date: '2009-11-30 13:17:04 -0500'
-date_gmt: '2009-11-30 17:17:04 -0500'
+date: 2009-11-30T13:17:04-05:00
+date_gmt: 2009-11-30T17:17:04-05:00
 categories:
 - General
 - Info
@@ -14,7 +14,7 @@ tags:
 - Software
 - Montreal
 ---
-{% include fig.html img="wave.goo" caption="Google Wave" id=page.id %}
+{% fig "wave.goo", "Google Wave" %}
 
 I finally got a [Google Wave](http://www.wave.google.com/ "Google Wave") account and I decided to do something for the community. More precisely, the hacker/tinkerer/DIY community.
 

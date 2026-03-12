@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Nao Hold Hands Behaviour
 author: Carlos
 id: 1163
 wordpress_url: http://carlitoscontraptions.com/?p=1163
-date: '2012-06-03 19:11:39 -0400'
-date_gmt: '2012-06-03 23:11:39 -0400'
+date: 2012-06-03T19:11:39-04:00
+date_gmt: 2012-06-03T23:11:39-04:00
 categories:
 - My Projects
 - Robotics
@@ -20,6 +20,6 @@ tags:
 
 If you remember, for last year's [Robot Film Festival](http://carlitoscontraptions.com/tag/robot-film-festival/), Nao 1337 walked the red carpet by holding my hand. I took some time in order to better document the behaviour, improve it a bit and make a video description of it that you can see below.
 
-{% include youtube.html id="CuanD1vC3as" %}
+{% youtube "CuanD1vC3as" %}
 
 Of course, you can find the code and the [project page](http://developer.aldebaran-robotics.com/projects/hold-hands/) at the [Developer Program Site](http://developer.aldebaran-robotics.com/projects/hold-hands/).

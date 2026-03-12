@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
     <generator>Eleventy</generator>
-    {% for post in collections.posts.slice(0, 10) %}
+    {% for post in collections.publicPosts.slice(0, 10) %}
       <item>
         <title>{{ post.data.title | xmlEscape }}</title>
         <description>{{ post.content | xmlEscape }}</description>

@@ -1,22 +1,22 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: RobotShop + Carlitos' Contraptions
 author: Carlos
 id: 78
 wordpress_url: http://carlitoscontraptions.com/?p=215
-date: '2009-06-29 13:24:09 -0400'
-date_gmt: '2009-06-29 17:24:09 -0400'
+date: 2009-06-29T13:24:09-04:00
+date_gmt: 2009-06-29T17:24:09-04:00
 categories:
 - General
 tags: []
 ---
-{% include fig.html img="www.rob" caption="RobotShop.com" id=page.id %}
+{% fig "www.rob", "RobotShop.com" %}
 
 The robotics parts retailer [RobotShop](http://www.robotshop.com/ "RobotShop.com") will be sponsoring robotics projects at [Carlitos' Contraptions](http://carlitoscontraptions.com "CarlitosContraptions.com"). As a result I'll be rolling out robotics projects for the next weeks/months.
 
-I'll try to make simple projects at the beginning and build up the difficulty level as I go. The idea is that, if you completed the the first projects, you will be able to reuse the skills/parts/code to build the future projects.
+I'll try to make simple projects at the beginning and build up the difficulty level as I go. The idea is that, if you completed the first projects, you will be able to reuse the skills/parts/code to build the future projects.
 
 Of course, all articles are going to be published under the usual Creative Commons license and the code is going to be published under the GPL license.
 

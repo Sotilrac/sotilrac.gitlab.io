@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Tux Laptop Sleeve
 author: Carlos
 id: 82
-date: '2009-09-07 11:50:50 -0400'
-date_gmt: '2009-09-07 15:50:50 -0400'
+date: 2009-09-07T11:50:50-04:00
+date_gmt: 2009-09-07T15:50:50-04:00
 categories:
 - My Projects
 tags:
@@ -17,7 +17,7 @@ The only defect of my new [Vostro 1320](http://carlitoscontraptions.com/2009/09/
 
 I had an old blazer from my girlfriend's father that was too oddly shaped to fit anybody I know, but I liked the fabric and I thought that it could become a very nice laptop sleeve. The only problem about that idea is that I do not know how to sew. Of course, not knowing how to do something, has never stopped me before and is not likely to stop me any time soon.
 
-{% include fig.html img="sleeve_collage.jpg" caption="Tux laptop Sleeve" id=page.id %}
+{% fig "sleeve_collage.jpg", "Tux laptop Sleeve" %}
 
 ## Materials
 
@@ -35,8 +35,8 @@ Also, I chose a section of the blazed which had an internal and external pocked 
 
 Finally, I wanted to ad some decorations to the pouch so I decided to use my brother's fabric markers (he is using for making pretty cool disguises) to ad the word "Linux" to one side of the sleeve. Then I asked him (since he is much more talented than me at drawing (and since I am very lazy) to draw Tux on the back. To achieve that he used a stencil made from the image below that I got from [the internet](http://noisymime.org/blog/?p=27 "Tux Stencil").
 
-{% include fig.html img="carlitoscontraptions.com" caption="Tux Stencil" id=page.id %}
+{% fig "carlitoscontraptions.com", "Tux Stencil" %}
 
 I think the final result is pretty cool and very useful. The pockets are great, I can put all of the things that I usually need to carry with my laptop (e.g. mouse, headphones, USB keys) without any troubles. The only thing missing is perhaps a handle that I may add in the future.
 
-{% include fig.html img="brother.jpg" caption="My Brother Painting Tux" id=page.id %}
+{% fig "brother.jpg", "My Brother Painting Tux" %}

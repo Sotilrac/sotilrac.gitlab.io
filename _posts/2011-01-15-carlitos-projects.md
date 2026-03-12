@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Carlitos' Projects
 author: Carlos
 id: 790
 wordpress_url: http://carlitoscontraptions.com/?p=790
-date: '2011-01-15 17:55:18 -0500'
-date_gmt: '2011-01-15 21:55:18 -0500'
+date: 2011-01-15T17:55:18-05:00
+date_gmt: 2011-01-15T21:55:18-05:00
 categories:
 - General
 - My Projects

@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Tony's LEDs
 author: Carlos
 id: 62
 wordpress_url: http://carlitoscontraptions.com/?p=62
-date: '2008-10-31 12:40:00 -0400'
-date_gmt: '2008-10-31 19:40:00 -0400'
+date: 2008-10-31T12:40:00-04:00
+date_gmt: 2008-10-31T19:40:00-04:00
 categories:
 - My Projects
 tags:
@@ -21,21 +21,21 @@ When you buy an LED, you (should) get two very important parameters, the voltage
 
 So, for the trivial case where we have a battery (V_bat) in series with a resistor (R) and an LED, the value of R must obey the following inequation:
 
-{% include fig.html img="eq1.png" caption="" id=page.id %}
+{% fig "eq1.png", "" %}
 
 If you decide to place many (say, n) LEDs in series, the inequation becomes:
 
-{% include fig.html img="eq2.png" caption="" id=page.id %}
+{% fig "eq2.png", "" %}
 
 Finally, if the LEDs are in parallel (as is the case for the repulsor), the inequation becomes:
 
-{% include fig.html img="eq3.png" caption="" id=page.id %}
+{% fig "eq3.png", "" %}
 
-This result can be obtained by applying Ohm's law (V= RI) to the circuits described above. The proof is of course let as an exercise for the reader ;) .  
+This result can be obtained by applying Ohm's law (V= RI) to the circuits described above. The proof is of course left as an exercise for the reader ;) .  
 This page has a very nice LED calculator which makes life really easy when calculating resistor values: [alan-parekh.com/led\_resistor\_calculator.html](http://alan-parekh.com/led_resistor_calculator.html)
 
 **WARNING**: the repulsor circuit may cause the LEDs to fail sooner or later. I'll post an update as soon as I have one. Thanks to [Tim](http://kd7jz.blogspot.com/) for the hint.
 
 For those interested in the repulsor circuit, below you can find a diagram describing it. It is the same as the circuit with many LEDs in parallel but with a potentiometer added to regulate the light intensity. The only requisite for the potentiometer is to be large enough to attain the dimmest light according to your needs.
 
-{% include fig.html img="circuit.png" caption="" id=page.id %}
+{% fig "circuit.png", "" %}

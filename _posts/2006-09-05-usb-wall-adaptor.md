@@ -1,18 +1,18 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: USB Wall Adaptor
 author: Carlos
 id: 5
-date: '2006-09-05 17:02:00 -0400'
-date_gmt: '2006-09-06 00:02:00 -0400'
+date: 2006-09-05T17:02:00-04:00
+date_gmt: 2006-09-06T00:02:00-04:00
 categories:
 - My Projects
 tags: []
 ---
 This is a very simple wall adaptor that allows to power USB devices without the need of a computer (e.g. for recharging).
 
-I built this adaptor very quickly since I needed to charge my Sony Clié SJ30 (that I got at the same time and from the same person than the [Plam IIIc](http://carlitoscontraptions.com/2006/08/overhauling-palm-iiic/)) in my bedroom (far from my computer) since I use it as an alarm clock (among other things).
+I built this adaptor very quickly since I needed to charge my Sony Clié SJ30 (that I got at the same time and from the same person as the [Palm IIIc](http://carlitoscontraptions.com/2006/08/overhauling-palm-iiic/)) in my bedroom (far from my computer) since I use it as an alarm clock (among other things).
 
 ## Materials:
 
@@ -20,17 +20,17 @@ I built this adaptor very quickly since I needed to charge my Sony Clié SJ30 (t
 - A 5V power adaptor for a cell phone (also found in the garbage).
 - A bottle of soap.
 
-{% include fig.html img="usb plug.jpg" caption="USB Plug" id=page.id %}
+{% fig "usb plug.jpg", "USB Plug" %}
 
 Cut the cell phone connector and solder a new connector (compatible with the USB connector that you have) or simply solder the adaptors wires directly to the USB ports. Since I have two USBs, I soldered two connectors.
 
-{% include fig.html img="usb and cable.jpg" caption="" id=page.id %}
+{% fig "usb and cable.jpg", "" %}
 
 In the end, the +5V wire (usually red) should be connected to Pin 1 and the ground wire (usually black) should be connected to Pin 4 of the USB connector (see the details for the [USB standards](http://en.wikipedia.org/wiki/Universal_Serial_Bus)).
 
-Build a case using a bottle of soap (or any other source of cheap plastic) in order to make the device a bit more robust and aesthetically pleasant. I made sure to do a lose knot in the cable to impede the small connections from breaking if an excessive tension is applied to it.
+Build a case using a bottle of soap (or any other source of cheap plastic) in order to make the device a bit more robust and aesthetically pleasant. I made sure to do a loose knot in the cable to impede the small connections from breaking if an excessive tension is applied to it.
 
-{% include fig.html img="usb wall adapter.jpg" caption="" id=page.id %}
+{% fig "usb wall adapter.jpg", "" %}
 
 This is a very cheap (actually free if you're lucky) wall adaptor for USB devices.
 

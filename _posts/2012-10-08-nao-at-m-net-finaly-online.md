@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Nao 1337 at M. Net Finally Online!
 author: Carlos
 id: 1523
 wordpress_url: http://carlitoscontraptions.com/?p=1523
-date: '2012-10-08 23:11:04 -0400'
-date_gmt: '2012-10-09 03:11:04 -0400'
+date: 2012-10-08T23:11:04-04:00
+date_gmt: 2012-10-09T03:11:04-04:00
 categories:
 - Info
 - Robotics

@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: Switch Debouncer
 author: Carlos
 id: 26
-date: '2007-03-14 23:42:00 -0400'
-date_gmt: '2007-03-15 06:42:00 -0400'
+date: 2007-03-14T23:42:00-04:00
+date_gmt: 2007-03-15T06:42:00-04:00
 categories:
 - My Projects
 tags: []
@@ -16,7 +16,7 @@ When a switch or pushbutton is closed the metal contacts bounce before coming to
 
 A switch debouncer is a small circuit that generates a single clean pulse when a physical switch or pushbutton closes.
 
-{% include fig.html img="debounce_graph.png" caption="" id=page.id %}
+{% fig "debounce_graph.png", "" %}
 
 We implemented a debouncer that produces a single (or as many as you want) clock-cycle-wide pulse when a pushbutton is pushed. Also, it doesn't allow the creation of another pulse for the next 160 ms.
 
@@ -24,9 +24,9 @@ Here is a state transition diagram for the debouncer followed by a nice schemati
   
 *Note*: count_en, count and cout (carry out) refer to the inputs and outputs of the counter on the debouncer schematics (see below), It stands for the number of clock cycles the pulse should last, PB = 1 means that the pushbutton has been pushed, and Q1 and Q2 refer to the output of the S-R latches.
 
-{% include fig.html img="debouncer+std.png" caption="" id=page.id %}
+{% fig "debouncer+std.png", "" %}
 
-{% include fig.html img="debouncer_schematics.png" caption="" id=page.id %}
+{% fig "debouncer_schematics.png", "" %}
 
 This implementation is nice in theory (and for FPGA boards) but in reality, 22-bit counters are impossible to find and using a mix of AND and OR gates is not very practical. This is not really a problem since the combinational logic can be easily mapped into NAND-NAND logic and the 22-bit counter can be replaced by a more standard 32-bit counter for instance (in that case cout should be generated using more combinational logic).  
 

@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: Toast Oven Makeover
 author: Carlos
 id: 20
-date: '2007-01-23 15:46:00 -0500'
-date_gmt: '2007-01-23 22:46:00 -0500'
+date: 2007-01-23T15:46:00-05:00
+date_gmt: 2007-01-23T22:46:00-05:00
 categories:
 - My Projects
 tags: []
@@ -27,11 +27,11 @@ IMHO, the easiest way to clean it is to take it apart, clean each piece, and put
 Enjoy some before and after shots:
 
 ## Before...
-{% include fig.html img="Before1.jpg" caption="" id=page.id %}
+{% fig "Before1.jpg", "" %}
 
-{% include fig.html img="Before2.jpg" caption="" id=page.id %}
+{% fig "Before2.jpg", "" %}
 
 ## After...
-{% include fig.html img="After1.jpg" caption="" id=page.id %}
+{% fig "After1.jpg", "" %}
 
-{% include fig.html img="After2.jpg" caption="" id=page.id %}
+{% fig "After2.jpg", "" %}

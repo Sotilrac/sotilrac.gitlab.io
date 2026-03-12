@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: DIY Universal Robot Gripper
 author: Carlos
 id: 764
 wordpress_url: http://carlitoscontraptions.com/?p=764
-date: '2010-10-31 04:18:37 -0400'
-date_gmt: '2010-10-31 08:18:37 -0400'
+date: 2010-10-31T04:18:37-04:00
+date_gmt: 2010-10-31T08:18:37-04:00
 categories:
 - Robotics
 tags:
@@ -18,7 +18,7 @@ tags:
 
 iRobot and the University of Chicago released a video of their universal robotic gripper. It is basically a gripper that can conform to the shape of seemingly every object. The video below illustrates its capabilities.
 
-{% include youtube.html id="0d4f8fEysf8" %}
+{% youtube "0d4f8fEysf8" %}
 
 The gripper uses the properties of granular materials to become rigid or fluid by applying pressure constraints. Basically, the flexible blue sphere seen in the video is filled with a granular material (ground coffee) and can become solid when a vacuum is applied.
 
@@ -43,7 +43,7 @@ Now, you can connect the contraption to a vacuum pump in order to create a vacuu
 
 ## The Result
 
-Bellow, you can see my gripper gripping many objects and even pouring water as the original one does. You can also see me operate the gripper by sucking the air out of the balloon.
+Below, you can see my gripper gripping many objects and even pouring water as the original one does. You can also see me operate the gripper by sucking the air out of the balloon.
 
 \[youtube q-gHLYIWrrs\]
 

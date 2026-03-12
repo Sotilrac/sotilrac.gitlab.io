@@ -1,17 +1,17 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Big Buck Bunny
 author: Carlos
 id: 48
-date: '2008-05-27 10:49:00 -0400'
-date_gmt: '2008-05-27 17:49:00 -0400'
+date: 2008-05-27T10:49:00-04:00
+date_gmt: 2008-05-27T17:49:00-04:00
 categories:
 - General
 tags: []
 ---
-{% include fig.html img="BigBuckDVD.jpg" caption="" id=page.id %}
+{% fig "BigBuckDVD.jpg", "" %}
 
 I finally got the pre-ordered Big Buck Bunny DVD from the [Peach Open Movie Project](http://peach.blender.org/). All the files from the movie are under the CC license and it was done using the very excellent [Blender](http://www.blender.org/).  
 

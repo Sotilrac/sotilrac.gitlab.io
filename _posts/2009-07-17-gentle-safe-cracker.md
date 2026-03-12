@@ -1,13 +1,13 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Gentle Safe Cracker
 author: Carlos
 id: 79
 wordpress_url: http://carlitoscontraptions.com/?p=277
-date: '2009-07-17 15:30:44 -0400'
-date_gmt: '2009-07-17 19:30:44 -0400'
+date: 2009-07-17T15:30:44-04:00
+date_gmt: 2009-07-17T19:30:44-04:00
 categories:
 - My Projects
 - Robotics
@@ -17,7 +17,7 @@ tags:
 ---
 ## The problem:
 
-{% include fig.html img="IMG_1437.JPG" caption="Mysterious Safe Box" id=page.id %}
+{% fig "IMG_1437.JPG", "Mysterious Safe Box" %}
 
 I found a little safe box in the garbage some time ago and I would really like to open it. The box features some dents and scratches that show some people tried to open it in the past but did not succeed. Also, when shaken, it produces some interesting noises that indicate it is not empty and may contain a valuable treasure some cool junk.
 
@@ -41,7 +41,7 @@ Since this requires precise positioning, I thought a servo motor would be the be
 *   2 gears and a spindle (one four times larger than the other, I got mine from an old photocopier)
 *   A project box (in my case, an old computer power supply case)
 *   A bottle cap and an old heat sink
-*   Steel wire (e.g. form an old coat hanger)
+*   Steel wire (e.g. from an old coat hanger)
 *   Magnets (the stronger the better)
 *   Various screws
 
@@ -53,7 +53,7 @@ Since this requires precise positioning, I thought a servo motor would be the be
 
 ## The How and the Why:
 
-{% include fig.html img="IMG_1388.JPG" caption="Electronic Parts" id=page.id %}
+{% fig "IMG_1388.JPG", "Electronic Parts" %}
 
 I chose the Pololu servo controller since it is easy to interface by either using a computer or a simple microcontroller. Also, I already own a USB-to-serial cable (that I normally use to program the [Arduino](http://carlitoscontraptions.com/category/arduino/ "Arduino")) that I can use to send commands to the controller.
 
@@ -63,31 +63,31 @@ In order to control the servo motor, I devised a simple [python module](http://f
 
 Since, usually, servo motors have a motion range slightly greater than 180 deg, I decided to use gears to be able to produce a motion range large enough to operate the safe (at least two full turns).
 
-{% include fig.html img="Safe_Cracker.jpg" caption="Mechanical Parts" id=page.id %}
+{% fig "Safe_Cracker.jpg", "Mechanical Parts" %}
 
 I used an old heat sink and cut it with the Dremel in order to produce a bracket for the servo and a mounting hole for the secondary (smallest) gear axle.
 
 I attached the larger gear to the servo directly using the brackets and screws that came bundled with [the motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). Also, in order to hold the shaft in place, I used [e-style retaining rings](http://www.mcmaster.com/#retaining-rings/=2saqww "e-style retaining ring") and spacers (other dummy gears and shoulder washers) in order to match the grooves already present in the shaft. Of course, I got all these handy mechanical parts from an old photocopier I found in the garbage.
 
-{% include fig.html img="IMG_1366.JPG" caption="Dial coupling attached to the small gear" id=page.id %}
+{% fig "IMG_1366.JPG", "Dial coupling attached to the small gear" %}
 
 In order to couple the small gear to the safe dial, I used a bottle cap which fitted perfectly over it. The cap has some child proofing which provided a firm grip for the dial.
 
-{% include fig.html img="IMG_1386.JPG" caption="The Project Box" id=page.id %}
+{% fig "IMG_1386.JPG", "The Project Box" %}
 
 Once the assembly was done, I mounted it into an old power supply box. Although the box required some drilling and cutting, it was very easy to adapt. I would recommend using this type of boxes for other projects since they are sturdy and easy to machine.
 
-{% include fig.html img="Safe_Cracker1.jpg" caption="Electronic Assembly" id=page.id %}
+{% fig "Safe_Cracker1.jpg", "Electronic Assembly" %}
 
 So to include the electronic parts into the box, I used a small plastic capsule (that must come from the time when my young brother liked those little toys they sell in a dispensing machine). In the capsule, I placed the Pololu servo controller, the USB to serial cable and the servo motor cable, and the power supply cable.
 
 I needed to adapt the USB to serial cable in order to match the pin-out on the controller. For this, I used a male and a female header, and some wire. I connected the GND and the V+ pins to their respective counterparts, and the TX pin to the Serial-in pin.
 
-In order to supply the appropriate power, I used an old cellphone charger and I replaced its original connector with a female header. As always, it is good practise to isolate the electrical connections with some heat-shrink tubing.
+In order to supply the appropriate power, I used an old cellphone charger and I replaced its original connector with a female header. As always, it is good practice to isolate the electrical connections with some heat-shrink tubing.
 
 ## The (disappointing) outcome
 
-{% include fig.html img="Safe_Cracker2.jpg" caption="Very gentle safe cracker " id=page.id %}
+{% fig "Safe_Cracker2.jpg", "Very gentle safe cracker " %}
 
 Once everything was done, I fixed the new little machine to the safe and got ready to get it trying codes. I used a coat hanger and some rare earth magnets in order to hold the cracker firmly in place.
 
@@ -97,17 +97,17 @@ This represents a (temporary) victory for the safe, but the war is far from bein
 
 ## Epilogue
 
-I decided to publish these results in spite of my failure since too often we read reports of success (notably in science) and often forget that we can learn from failures as well. Never do we read about scientits proving their original hypothesis wrong, but very often, documenting those mistakes could prevent others from doing the same.
+I decided to publish these results in spite of my failure since too often we read reports of success (notably in science) and often forget that we can learn from failures as well. Never do we read about scientists proving their original hypothesis wrong, but very often, documenting those mistakes could prevent others from doing the same.
 
 Finally, for those wondering how I was planning to pull on the safe lids so it opens, it is remarkably simple: since the safe does not have any handle to latch it closed, I merely need to hang it from its handle and try the codes until it opens and the bottom part goes down.
 
-{% include fig.html img="IMG_1391.JPG" caption="The safe hanging unaware of its fate" id=page.id %}
+{% fig "IMG_1391.JPG", "The safe hanging unaware of its fate" %}
 
 Finally (this time for real), I cannot say too much about my next plans on attacking the safe, but be sure that they involve a stepper motor.
 
 ## Acknowledgements:
 
-{% include fig.html img="www.rob" caption="RobotShop.com" id=page.id %}
+{% fig "www.rob", "RobotShop.com" %}
 
 I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller") and the [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). As I mentioned [before](http://carlitoscontraptions.com/2009/06/robotshop-carlitos-contraptions/ "RobotShop + Carlitos' Contraptions"), they will be sponsoring a set of projects here at [Carlitos' Contraptions](http://carlitoscontraptions.com/ "Carlitos' Contraptions") in the foreseeable future.
 

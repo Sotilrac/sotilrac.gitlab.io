@@ -14,13 +14,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("posts_assets");
 
   // --- Ignores ---
-  eleventyConfig.ignores.add("_posts"); // blog posts to be ported in a second pass
   eleventyConfig.ignores.add("README.md");
 
   // --- Collections ---
-  eleventyConfig.addCollection("posts", (collectionApi) => {
+  eleventyConfig.addCollection("publicPosts", (collectionApi) => {
     return collectionApi
-      .getFilteredByGlob("posts/**/*.md")
+      .getFilteredByTag("posts")
       .filter((post) => post.data.status === "public")
       .sort((a, b) => b.date - a.date);
   });

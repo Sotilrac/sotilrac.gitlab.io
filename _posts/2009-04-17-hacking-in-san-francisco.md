@@ -1,19 +1,19 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Hacking in San Francisco
 author: Carlos
 id: 76
 wordpress_url: http://carlitoscontraptions.com/?p=130
-date: '2009-04-17 17:30:02 -0400'
-date_gmt: '2009-04-17 21:30:02 -0400'
+date: 2009-04-17T17:30:02-04:00
+date_gmt: 2009-04-17T21:30:02-04:00
 categories:
 - My Projects
 tags:
 - Travel
 ---
-{% include fig.html img="img_2007.jpg" caption="Hacking in SF" id=page.id %}
+{% fig "img_2007.jpg", "Hacking in SF" %}
 
 I had the chance to spend a week in San Francisco a month ago (which, by the way, is a beautiful city).
 
@@ -27,9 +27,9 @@ I lost my original charger some time ago and I had to buy a new one. Since it wa
 
 When I packed up for the trip, I took the cheap charger and left the official one at home. That was a big, big, stupid mistake.
 
-When I got to the Montreal airport and was waiting to board the plane, I decided to [write something](http://carlitoscontraptions.com/2009/03/compact-keychain-20/ "Compact Keychhain 2") for this blog and I came to the sad realization that my charger was not working. Fortunately, the Eee PC has a very long battery life and I manage preserve the energy for a few days.
+When I got to the Montreal airport and was waiting to board the plane, I decided to [write something](http://carlitoscontraptions.com/2009/03/compact-keychain-20/ "Compact Keychhain 2") for this blog and I came to the sad realization that my charger was not working. Fortunately, the Eee PC has a very long battery life and I managed to preserve the energy for a few days.
 
-{% include fig.html img="img_2009.jpg" caption="Modified Charger" id=page.id %}
+{% fig "img_2009.jpg", "Modified Charger" %}
 
 In San Francisco, I got a 12 Vdc , 3A (the required rating) charger at a stolen goods surplus store. With my trusty Swiss Army knife (the only tool I had) I changed the power connector and taped it with some electrical tape I got at a Dollar store.
 
@@ -37,7 +37,7 @@ Parallel to that, my good friend Guillaume, who was hosting me at his house, had
 
 Using some left over wire from my broken charger and some tape we were able to make the electronic part work again. The mechanical part was also easily repaired by replacing the rotten wooden rods with some new ones.
 
-{% include fig.html img="img_2008.jpg" caption="Horse Circuit" id=page.id %}
+{% fig "img_2008.jpg", "Horse Circuit" %}
 
 In the end, I was glad to be building and tinkering in San Francisco.
 
@@ -45,4 +45,4 @@ I also got the amazing chance of visiting [Noise Bridge](https://noisebridge.net
 
 If you are interested, [my gallery](http://photo.carlitoscontraptions.com "Carlitos' Gallery") is filled with more than 1000 pictures from San Francisco.
 
-{% include fig.html img="img_2013.jpg" caption="Toy horse back in action." id=page.id %}
+{% fig "img_2013.jpg", "Toy horse back in action." %}

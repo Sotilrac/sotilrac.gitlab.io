@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: Arduino POV Prototype
 author: Carlos
 id: 34
-date: '2007-08-12 21:03:00 -0400'
-date_gmt: '2007-08-13 04:03:00 -0400'
+date: 2007-08-12T21:03:00-04:00
+date_gmt: 2007-08-13T04:03:00-04:00
 categories:
 - My Projects
 - Arduino
@@ -34,13 +34,13 @@ This is my first attempt to create a [persistence of vision](http://en.wikipedia
 
 I think the pictures are pretty self explanatory.
 
-{% include fig.html img="Turning+rig.JPG" caption="" id=page.id %}
+{% fig "Turning+rig.JPG", "" %}
 
 The LEDs are directly connected to the pins 2 to 7 of the Arduino and their current is limited by the resistors.  
 The entire circuit is powered by the 9V battery.
 
 So far I have done some simple patterns for the display and I'll upload the code soon (it still needs some polish)
 
-{% include fig.html img="pattern+1.JPG" caption="" id=page.id %}
+{% fig "pattern+1.JPG", "" %}
 
 I expect to add more LEDs to the design as soon as I get the patterns and the overall code working fine.

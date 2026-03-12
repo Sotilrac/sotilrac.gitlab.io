@@ -1,11 +1,11 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: Quick and Cheap Laptop Lamp
 author: Carlos
 id: 17
-date: '2006-12-05 23:30:00 -0500'
-date_gmt: '2006-12-06 06:30:00 -0500'
+date: 2006-12-05T23:30:00-05:00
+date_gmt: 2006-12-06T06:30:00-05:00
 categories:
 - My Projects
 tags: []
@@ -24,14 +24,14 @@ Once the body was clean and shiny (it was completely black before) , I removed t
 
 The lamp is basically done.
 
-{% include fig.html img="laptop lamp.jpg" caption="" id=page.id %}
+{% fig "laptop lamp.jpg", "" %}
 
 Since I did not have the appropriate light bulb for the lamp I had to adapt a bulb by adding a solder blob on its side. Now it fits perfectly.
 
-{% include fig.html img="light.jpg" caption="" id=page.id %}
+{% fig "light.jpg", "" %}
 
-{% include fig.html img="laptop lamp closeup.jpg" caption="" id=page.id %}
+{% fig "laptop lamp closeup.jpg", "" %}
 
 This lamp won't be as power efficient as the [LED ones](http://img.alibaba.com/photo/50490807/Laptop_USB_LED_Reading_Light.jpg) but it is cheap, quick and very simple to build. Enjoy.
 
-{% include fig.html img="laptop lamp in action.jpg" caption="" id=page.id %}
+{% fig "laptop lamp in action.jpg", "" %}

@@ -1,12 +1,12 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: FPGA Board
 author: Carlos
 id: 28
-date: '2007-04-02 21:46:00 -0400'
-date_gmt: '2007-04-03 04:46:00 -0400'
+date: 2007-04-02T21:46:00-04:00
+date_gmt: 2007-04-03T04:46:00-04:00
 categories:
 - General
 - FPGA
@@ -18,13 +18,13 @@ Thanks to a very (extremely) kind professor, I got a Spartan [D2E](http://digile
 
 Have a look at some pictures of the board.
 
-{% include fig.html img="Spartan+001.jpg" caption="" id=page.id %}
+{% fig "Spartan+001.jpg", "" %}
 
 ## The D2E board
 
-{% include fig.html img="Spartan+010.jpg" caption="" id=page.id %}
+{% fig "Spartan+010.jpg", "" %}
 
 ## The DIO1 board
-{% include fig.html img="Spartan+009.jpg" caption="" id=page.id %}
+{% fig "Spartan+009.jpg", "" %}
 
 I shall be back soon with something implemented on it.

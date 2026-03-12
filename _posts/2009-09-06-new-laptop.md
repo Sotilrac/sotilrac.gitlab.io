@@ -1,22 +1,22 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 published: true
 title: New Laptop
 author: Carlos
 id: 81
-date: '2009-09-06 15:56:15 -0400'
-date_gmt: '2009-09-06 19:56:15 -0400'
+date: 2009-09-06T15:56:15-04:00
+date_gmt: 2009-09-06T19:56:15-04:00
 categories:
 - General
 - Tools
 tags: []
 ---
-Following some serious problems with my [Eee PC](http://carlitoscontraptions.com/2008/09/eee-pc-1000-ubuntu-kde-41/ "Eee PC"), I acquired a new laptop, a real one. I was planning to use the Eee as may main and only computer but some very serious problems with its SDD (that I will describe in another post soon) prevented me form doing so.
+Following some serious problems with my [Eee PC](http://carlitoscontraptions.com/2008/09/eee-pc-1000-ubuntu-kde-41/ "Eee PC"), I acquired a new laptop, a real one. I was planning to use the Eee as my main and only computer but some very serious problems with its SSD (that I will describe in another post soon) prevented me from doing so.
 
 I opted for a Dell Vostro 1320 and must say it is a beautiful machine. It is small, powerful, light, and most importantly shiny.
 
-{% include fig.html img="IMG_1651.JPG" caption="Vostro 1320" id=page.id %}
+{% fig "IMG_1651.JPG", "Vostro 1320" %}
 
 ## Some Specs:
 

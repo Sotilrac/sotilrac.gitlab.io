@@ -1,18 +1,18 @@
 ---
-layout: post
-status: darft
+layout: layouts/post.njk
+status: draft
 title: To WordPress from Blogger
 author: Carlos
 id: 75
-date: '2009-04-17 02:56:49 -0400'
-date_gmt: '2009-04-17 06:56:49 -0400'
+date: 2009-04-17T02:56:49-04:00
+date_gmt: 2009-04-17T06:56:49-04:00
 categories:
 - My Projects
 - Software
 tags:
 - Software
 ---
-I recently moved my blog from Blogger to an independently hosted WordPress installation and I needed to dynamically redirect the visitors going into the old pages so that the could see the new ones.
+I recently moved my blog from Blogger to an independently hosted WordPress installation and I needed to dynamically redirect the visitors going into the old pages so that they could see the new ones.
 
 There are many tutorials on how to do this on the net but they usually involve fairly complex procedures and require modifying the Blogger HTML code and installing some plug-ins in WordPress. But, what I really wanted was a simple way of redirecting each blog post into its new version.
 
@@ -27,7 +27,7 @@ Old address: _http://carlitoscontraptions.blogspot.com/2009/03/smoking-cyclops.h
 New address: _http://carlitoscontraptions.com/2009/03/smoking-cyclops/_
 
 ## The script:
-{% highlight html %}
+```html
 <script type="text/javascript">
 function redirect()
 {
@@ -38,8 +38,8 @@ function redirect()
 }
 window.setTimeout('redirect()',5000);
 </script>
-{% endhighlight %}
+```
 
-This script consist of two parts: (1) a function that strips the unneeded parts from the current page URL, and (2) a time delay that executes this code after 5 s.
+This script consists of two parts: (1) a function that strips the unneeded parts from the current page URL, and (2) a time delay that executes this code after 5 s.
 
 The only thing left to do is to insert this code into an HTML/Java script box in the Blogger layout editor and that's it. No messy template edition required.
