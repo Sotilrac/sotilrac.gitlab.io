@@ -1,3 +1,4 @@
+{% from "icon.njk" import icon %}
 <div class="row">
     <div class="col-xl-9">
         <div class="row d-none d-print-flex">
@@ -6,10 +7,10 @@
             </div>
             <div class="col-4 align-self-end contact">
                 <ul>
-                        <li id="phone"><i class="fas fa-phone"></i><span id="phoneContent"></span></li>
-                        <li id="email"><i class="fas fa-envelope"></i><span id="emailContent"></span></li>
+                        <li id="phone"><span class="icon">{{ icon("fa-phone") }}</span><span id="phoneContent"></span></li>
+                        <li id="email"><span class="icon">{{ icon("fa-envelope") }}</span><span id="emailContent"></span></li>
                     {% for link in resume.links %}
-                        <li><i class="{{ link.icon }}"></i><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
+                        <li><span class="icon">{{ icon(link.icon) }}</span><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
                     {% endfor %}
                 </ul>
             </div>

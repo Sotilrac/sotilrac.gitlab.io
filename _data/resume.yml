@@ -5,19 +5,19 @@ last_name: Asmat
 links:
 - title: asmat.ca
   url: https://asmat.ca
-  icon: fas fa-globe
+  icon: fa-globe
 - title: github.com/Sotilrac
   url: https://github.com/Sotilrac
-  icon: fab fa-github
+  icon: fa-github
 - title: gitlab.com/sotilrac
   url: https://gitlab.com/sotilrac
-  icon: fab fa-gitlab
+  icon: fa-gitlab
 - title: linkedin.com/in/casmat
   url: https://www.linkedin.com/in/casmat
-  icon: fab fa-linkedin
+  icon: fa-linkedin
 - title: youtube.com/c/CarlosAsmat
   url: https://youtube.com/c/CarlosAsmat
-  icon: fab fa-youtube
+  icon: fa-youtube
 phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"SOsRUJJzNoTOsu7uG+phkqqY5KXijw=="}'
 email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
 picture: https://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60?s=200

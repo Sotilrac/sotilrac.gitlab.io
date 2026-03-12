@@ -1,3 +1,4 @@
+{% from "icon.njk" import icon %}
 <nav class="navbar sticky-top navbar-expand navbar-dark dark no-print">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
@@ -5,9 +6,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a>
       </li>
-      <li><a class="nav-link" href="{{ site.gitlab }}"><i title="GitLab" class="fab fa-gitlab"></i></a></li>
-      <li><a class="nav-link" href="{{ site.github }}"><i title="GitHub" class="fab fa-github"></i></a></li>
-      <li><a class="nav-link" href="{{ site.linkedin }}"><i title="LinkedIn" class="fab fa-linkedin"></i></a></li>
+      <li><a class="nav-link" href="{{ site.gitlab }}" title="GitLab"><span class="icon">{{ icon("fa-gitlab") }}</span></a></li>
+      <li><a class="nav-link" href="{{ site.github }}" title="GitHub"><span class="icon">{{ icon("fa-github") }}</span></a></li>
+      <li><a class="nav-link" href="{{ site.linkedin }}" title="LinkedIn"><span class="icon">{{ icon("fa-linkedin") }}</span></a></li>
     </ul>
   </div>
 </nav>
