@@ -13,11 +13,12 @@
   ],
   "license": "MIT",
   "private": true,
-  "ignore": ["js"],
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "fancybox": "^3.0.1",
-    "jquery": "1.9.1 - 3",
-    "popper.js": "*"
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^4.1.1"
   }
 }

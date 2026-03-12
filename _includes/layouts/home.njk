@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include "head.njk" %}
 
   <body>
     <div class="container-fluid name-header mono no-print">
@@ -13,14 +13,13 @@
       </div>
     </div>
 
-
-    {% include header.html %}
+    {% include "header.njk" %}
 
     <div id="page-content" class="container-fluid resume_container">
-      {% include resume.html %}
+      {% include "resume.njk" %}
     </div>
 
-    {% include footer.html %}
+    {% include "footer.njk" %}
 
   </body>
 

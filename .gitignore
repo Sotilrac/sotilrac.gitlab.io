@@ -8,3 +8,4 @@
 /builds/
 .jekyll-cache/
 public/
+.cache/

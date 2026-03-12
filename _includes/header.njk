@@ -1,14 +1,10 @@
 <nav class="navbar sticky-top navbar-expand navbar-dark dark no-print">
-  <div class="container-fluid">  
+  <div class="container-fluid">
     <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
     <ul class="navbar-nav ml-auto">
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a>
+      </li>
       <li><a class="nav-link" href="{{ site.gitlab }}"><i title="GitLab" class="fab fa-gitlab"></i></a></li>
       <li><a class="nav-link" href="{{ site.github }}"><i title="GitHub" class="fab fa-github"></i></a></li>
       <li><a class="nav-link" href="{{ site.linkedin }}"><i title="LinkedIn" class="fab fa-linkedin"></i></a></li>

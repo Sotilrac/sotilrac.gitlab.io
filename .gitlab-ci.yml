@@ -1,38 +1,27 @@
-image: ruby:3.0
-
-variables:
-  JEKYLL_ENV: production
-  LC_ALL: C.UTF-8
+image: node:20
 
 stages:
   - test
   - deploy
 
-before_script:
-  - bundle install
-  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-  - apt-get update -qy
-  - apt-get install yarn nodejs -y
-  - yarn install --ignore-engines
-
 test:
   stage: test
   script:
-  - bundle exec jekyll build -d test
+    - npm ci
+    - npx @11ty/eleventy --output=test
   artifacts:
     paths:
-    - test
+      - test
   except:
-  - master
+    - master
 
 pages:
   stage: deploy
   script:
-  - bundle exec jekyll build -d public
-  - for file in ./public/.well-known/acme-challenge/*.html; do cp "$file" "./public/.well-known/acme-challenge/$(basename "$file" .html)"; done
+    - npm ci
+    - npx @11ty/eleventy --output=public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

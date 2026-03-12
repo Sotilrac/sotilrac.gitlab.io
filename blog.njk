@@ -1,0 +1,29 @@
+---
+layout: layouts/page.njk
+title: Blog
+permalink: /blog/
+---
+
+<div class="posts row">
+  <div class="col-xl-9">
+    <h2 class="page-heading">Posts Archive</h2>
+
+    <ul class="post-list">
+      {% for post in collections.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | dateFormat }}</span>
+          <span> - </span>
+          <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+          <span> - </span>
+          {% if post.data.categories %}
+            <span class="post-categories">{{ post.data.categories[0] }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if collections.posts.length == 0 %}
+    <p>Blog posts are being migrated. Check back soon.</p>
+    {% endif %}
+  </div>
+</div>

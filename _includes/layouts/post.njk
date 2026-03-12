@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+<article class="post row" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="col-xl-9">
+        <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ title }}</h1>
+            <p class="post-meta">
+                <time datetime="{{ date | dateFormat('iso') }}" itemprop="datePublished">
+                    {{ date | dateFormat }}
+                </time>
+                {% if author %}
+                <span> &bull; </span>
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">{{ author }}</span>
+                </span>
+                {% endif %}
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+            {{ content | safe }}
+        </div>
+    </div>
+</article>

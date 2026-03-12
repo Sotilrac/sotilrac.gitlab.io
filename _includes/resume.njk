@@ -1,15 +1,14 @@
-{% assign res = site.data.resume %}
 <div class="row">
     <div class="col-xl-9">
         <div class="row d-none d-print-flex">
             <div class="col">
-                <h1>{{ res.first_name }} {{ res.last_name }}</h1>
+                <h1>{{ resume.first_name }} {{ resume.last_name }}</h1>
             </div>
             <div class="col-4 align-self-end contact">
                 <ul>
                         <li id="phone"><i class="fas fa-phone"></i><span id="phoneContent"></span></li>
                         <li id="email"><i class="fas fa-envelope"></i><span id="emailContent"></span></li>
-                    {% for link in res.links %}
+                    {% for link in resume.links %}
                         <li><i class="{{ link.icon }}"></i><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
                     {% endfor %}
                 </ul>
@@ -23,8 +22,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="{{ res.picture }}?s=250" alt="{{ res.first_name }} {{ res.last_name }}" class="mr-3 float-left pic"/>
-                    {% for line in res.summary %}
+                    <img src="{{ resume.picture }}?s=250" alt="{{ resume.first_name }} {{ resume.last_name }}" class="mr-3 float-left pic"/>
+                    {% for line in resume.summary %}
                         <p class="lead summary">{{ line }}</p>
                     {% endfor %}
                 </div>
@@ -40,7 +39,7 @@
                 <div class="col-sm skill_col">
                     <h3 class="sub_section_header">Leadership:</h3>
                     <ul class="programming">
-                    {% for skill in res.skills.soft %}
+                    {% for skill in resume.skills.soft %}
                         <li>{{ skill }}</li>
                     {% endfor %}
                     </ul>
@@ -48,7 +47,7 @@
                 <div class="col-sm skill_col">
                     <h3 class="sub_section_header">Programming:</h3>
                     <ul class="programming">
-                    {% for skill in res.skills.programming %}
+                    {% for skill in resume.skills.programming %}
                         <li>{{ skill }}</li>
                     {% endfor %}
                     </ul>
@@ -56,7 +55,7 @@
                 <div class="col-md skill_col">
                     <h3 class="sub_section_header">Engineering Tools:</h3>
                     <ul class="tools">
-                    {% for skill in res.skills.tools %}
+                    {% for skill in resume.skills.tools %}
                         <li>{{ skill }}</li>
                     {% endfor %}
                     </ul>
@@ -64,7 +63,7 @@
                 <div class="col-sm skill_col">
                     <h3 class="sub_section_header">Fluent in:</h3>
                     <ul class="languages">
-                    {% for skill in res.skills.languages %}
+                    {% for skill in resume.skills.languages %}
                         <li>{{ skill }}</li>
                     {% endfor %}
                     </ul>
@@ -77,7 +76,7 @@
                     <h2>Experience</h2>
                 </div>
             </div>
-            {% for exp in res.experience %}
+            {% for exp in resume.experience %}
                 <div class="row job">
                     <div class="col-md-3 date_col">
                         <span class="dates">{{ exp.start_date }} -</span>
@@ -105,7 +104,7 @@
                 </div>
             </div>
 
-            {% for ed in res.education %}
+            {% for ed in resume.education %}
                 <div class="row">
                     <div class="col-md-3 date_col">
                         <span class="dates">{{ ed.start_date }} - {{ ed.end_date }}</span>
@@ -128,7 +127,7 @@
                     <h2>Personal Projects</h2>
                 </div>
             </div>
-            {% for project in res.projects %}
+            {% for project in resume.projects %}
                 <div class="row">
                     <div class="col-md-3 date_col">
                         <p class="dates">{{ project.start_date }}</p>
