@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: USB Wall Adaptor
 author: Carlos
 id: 5

@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Switching to Ubuntu
 author: Carlos
 id: 22

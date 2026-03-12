@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: First Time Nao 1337 Goes Outside, Photoshoot
 author: Carlos

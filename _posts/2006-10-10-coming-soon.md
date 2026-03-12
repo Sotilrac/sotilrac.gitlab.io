@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Coming Soon
 author: Carlos
 id: 9

@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Arduino Launcher for the KDE menu
 author: Carlos

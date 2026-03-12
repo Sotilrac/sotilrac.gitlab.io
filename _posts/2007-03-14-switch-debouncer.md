@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Switch Debouncer
 author: Carlos
 id: 26

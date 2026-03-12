@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: 'The Wind Turbine Part 3: Building the Generator'
 author: Carlos

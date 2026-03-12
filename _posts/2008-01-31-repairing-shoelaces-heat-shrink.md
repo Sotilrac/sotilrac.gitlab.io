@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Repairing Shoelaces with Heat-shrink Tubing
 author: Carlos

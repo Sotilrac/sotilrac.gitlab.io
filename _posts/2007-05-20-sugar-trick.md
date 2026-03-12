@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Sugar Trick
 author: Carlos
 id: 29

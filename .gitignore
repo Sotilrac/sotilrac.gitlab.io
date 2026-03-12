@@ -15,8 +15,9 @@ public/
 /bower_components/
 /static/
 
-# Assets (large, tracked separately)
-/posts_assets/
-
 # Lock files
 *.lock
+
+# Other
+.claude
+.directory

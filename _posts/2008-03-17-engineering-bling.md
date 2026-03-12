@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Engineering Bling
 author: Carlos
 id: 44

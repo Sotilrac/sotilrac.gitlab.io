@@ -6,6 +6,9 @@ export default function (eleventyConfig) {
     yaml.load(contents)
   );
 
+  // --- Global data ---
+  eleventyConfig.addGlobalData("buildDate", new Date());
+
   // --- Passthrough copy ---
   eleventyConfig.addPassthroughCopy("font");
   eleventyConfig.addPassthroughCopy("img");

@@ -1,6 +1,6 @@
 w---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Arduino Clones
 author: Carlos

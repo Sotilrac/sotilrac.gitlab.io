@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: DIY Universal Jamming Gripper 2.0
 author: Carlos

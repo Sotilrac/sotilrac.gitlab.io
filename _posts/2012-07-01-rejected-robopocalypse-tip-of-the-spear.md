@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: 'REJECTED: Robopocalypse - The Tip Of The Spear'
 author: Carlos

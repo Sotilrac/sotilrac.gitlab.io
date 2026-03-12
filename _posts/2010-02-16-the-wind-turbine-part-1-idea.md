@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: 'The Wind Turbine Part 1: General Idea'
 author: Carlos

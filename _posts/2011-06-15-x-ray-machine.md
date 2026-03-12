@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: 'I''ve Got An X-Ray Machine!'
 author: Carlos

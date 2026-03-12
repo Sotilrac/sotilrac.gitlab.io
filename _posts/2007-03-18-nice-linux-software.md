@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Nice Linux Software
 author: Carlos
 id: 27

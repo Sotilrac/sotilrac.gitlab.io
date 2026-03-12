@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Speech Recognition Using on FPGA
 author: Carlos
 id: 31

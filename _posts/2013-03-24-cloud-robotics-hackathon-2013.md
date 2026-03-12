@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Cloud Robotics Hackathon 2013
 author: Carlos
 id: 1588

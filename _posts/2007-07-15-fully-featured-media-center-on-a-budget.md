@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Fully Featured Media Center on a Budget
 author: Carlos
 id: 32

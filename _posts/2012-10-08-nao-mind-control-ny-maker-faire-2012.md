@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Nao Mind Control at New York Maker Faire 2012
 author: Carlos
 id: 1438

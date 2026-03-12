@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: LCD Screen
 author: Carlos
 id: 21

@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Quick and Cheap Laptop Lamp
 author: Carlos
 id: 17

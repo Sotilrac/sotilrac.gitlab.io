@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Bench Power Supply
 author: Carlos
 id: 12

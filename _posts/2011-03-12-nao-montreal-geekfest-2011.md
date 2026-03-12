@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Nao at the Montreal Geekfest 2011
 author: Carlos

@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Overhauling a Palm IIIc
 author: Carlos
 id: 3

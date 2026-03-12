@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Supercapacitors
 author: Carlos
 id: 25

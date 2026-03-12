@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: To WordPress from Blogger
 author: Carlos
 id: 75

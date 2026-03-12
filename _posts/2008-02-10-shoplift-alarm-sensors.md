@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Shoplift Alarm Sensors
 author: Carlos
 id: 43

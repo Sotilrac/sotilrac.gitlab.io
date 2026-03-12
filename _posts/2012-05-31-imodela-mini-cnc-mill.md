@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Hands On the iModela Mini CNC Mill
 author: Carlos

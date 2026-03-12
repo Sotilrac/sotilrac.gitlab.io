@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Make Your Girlfriend Happy For 0.25$
 author: Carlos
 id: 8

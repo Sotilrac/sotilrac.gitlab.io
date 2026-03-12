@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Arduino-controlled RGB LED Mood Cube
 author: Carlos

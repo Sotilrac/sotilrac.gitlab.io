@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: DIY Universal Gripper in Make Magazine
 author: Carlos

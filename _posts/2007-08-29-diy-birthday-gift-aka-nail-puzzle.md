@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: DIY Birthday Gift (a.k.a. Nail Puzzle)
 author: Carlos

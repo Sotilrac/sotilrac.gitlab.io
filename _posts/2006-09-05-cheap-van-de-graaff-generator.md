@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Cheap Van de Graaff Generator
 author: Carlos
 id: 4

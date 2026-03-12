@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Montreal Mini Maker Faire 2012
 author: Carlos

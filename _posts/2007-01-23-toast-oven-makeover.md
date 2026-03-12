@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Toast Oven Makeover
 author: Carlos
 id: 20

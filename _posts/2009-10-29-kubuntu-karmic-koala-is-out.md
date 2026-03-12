@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Kubuntu Karmic Koala is out!
 author: Carlos

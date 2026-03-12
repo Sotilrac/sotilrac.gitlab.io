@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Blue Mouse
 author: Carlos
 id: 19

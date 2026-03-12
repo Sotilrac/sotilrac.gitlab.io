@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: La Cucaracha
 author: Carlos
 id: 10

@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Compact Keychain
 author: Carlos
 id: 23

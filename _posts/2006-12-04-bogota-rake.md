@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 title: Bogotá Rake
 author: Carlos
 id: 16

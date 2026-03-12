@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 published: true
 title: Nao 1337 Uses Wolfram Alpha Knowledge
 author: Carlos

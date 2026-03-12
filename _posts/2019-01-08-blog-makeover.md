@@ -16,7 +16,7 @@ I ignored my blog for long enough and it got infested with Spam. The old WordPre
 
 To avoid this from happening again, I decided to remake the blog, but this time 100% more static. Gone are the days of WordPress, the databases, and canned yet slightly customized themes. I'm now using Jekyll, the static site generator with my custom CSS based on Boostrap (as any stylish developer would).
 
-{% fig "https://m.media-amazon.com/images/M/MV5BMDdlZTc2NmItNzE2MS00YTgzLTg5NjAtMDk4MzZmMTA0ZDlmL2ltYWdlXkEyXkFqcGdeQXVyNzc5NjM0NA@@._V1_.jpg", "Dr. Jekyll (1939)" %}
+{% fig "https://upload.wikimedia.org/wikipedia/commons/7/76/Jekyll-mansfield_%28cropped%29.jpg", "Richard Mansfield was best known for the dual role depicted in this double exposure: he starred in Dr. Jekyll and Mr. Hyde in both New York and London. The stage adaptation opened in New York in 1887 and London in 1888." %}
 
 In a very manual and laborious way, I stripped all the injected Spam from every post, reformatted them in Markdown and hosted them in a [git repo](https://gitlab.com/sotilrac/sotilrac.gitlab.io). It turns out I had many more posts that I remembered when I started this process, 142 to be precise. Rereading everything, I realized that many of my posts could use some improvements, spell-checking, better syntax, and improved graphics; needless to say, this got pretty overwhelming.
 
