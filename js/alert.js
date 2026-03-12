@@ -1,1 +1,0 @@
-../node_modules/bootstrap/js/src/alert.js

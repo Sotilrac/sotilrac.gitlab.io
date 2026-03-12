@@ -1,4 +1,14 @@
 @charset "UTF-8";
+
+:root {
+  --font-base: 'Open Sans', sans-serif;
+  --font-mono: 'Hack', monospace;
+  --font-title: 'Telegrama', monospace;
+  --color-dark: #000;
+  --color-light: #f8f9fa;
+  --color-orange: #fd7e14;
+}
+
 @font-face {
   font-family: "Hack";
   src: url("../font/Hack-Regular.ttf");
@@ -5748,20 +5758,20 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 .mono {
-  font-family: "Hack", monospace;
+  font-family: var(--font-mono);
 }
 
 .hero-header {
-  font-family: "Telegrama", monospace;
-  color: #fd7e14;
+  font-family: var(--font-title);
+  color: var(--color-orange);
   font-size: 1.7em;
 }
 
 .name-header {
   font-size: 2em;
   text-align: center;
-  background-color: #000;
-  color: #f8f9fa;
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .name-header .row {
@@ -5770,7 +5780,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .dark {
-  background-color: #000;
+  background-color: var(--color-dark);
 }
 
 .pic {
@@ -5822,12 +5832,12 @@ mark {
 }
 
 footer {
-  color: #f8f9fa;
+  color: var(--color-light);
   text-align: center;
 }
 
 .cc-icon {
-  color: #f8f9fa;
+  color: var(--color-light);
 }
 
 footer .row {
