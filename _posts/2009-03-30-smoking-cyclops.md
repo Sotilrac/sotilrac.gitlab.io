@@ -16,7 +16,7 @@ tags:
 ---
 For a long time now, I wanted to have a soldering fumes extractor. Until now I have been using a small fan but I wanted something more appropriate, something that would filter the fumes instead of just moving them away.
 
-{% fig "IMG_1747.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1747.jpg", "" %}
 
 Some days ago, I decided I had to build a fumes extractor. I had a broken humidifier that I found in the garbage so I took it apart and used its pieces to build the extractor.
 
@@ -37,11 +37,11 @@ Some days ago, I decided I had to build a fumes extractor. I had a broken humidi
 
 ## Getting it done
 
-{% fig "IMG_1742.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1742.jpg", "" %}
 
 The first step when building something from a broken appliance is obviously to take it apart and go through the parts in order to find how you could put them together in order to achieve your goal. In my case, I required the suction fan, the air filter (which is actually a sort of sponge used to provide as much surface area as possible for the water to easily evaporate), the base, and the power wire. I also ended up cutting a piece of the plastic casing that has a grid on it so I can attach the filter and put it in front of the air exhaust.
 
-{% fig "IMG_1746.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1746.jpg", "" %}
 
 Then, it is a matter of cutting, drilling, filing, sanding and fitting together until you have the desired shape and function. I really like to use zip ties for binding things together since they are cheap, strong and can be undone (sort of) easily.
 
@@ -51,7 +51,7 @@ Then, it is a matter of cutting, drilling, filing, sanding and fitting together 
 
 As for the electrical part, the can motor had three coils that, when energized, drive the motor shaft at three different speeds. Since I do not have the need for that much speed control, I used a three positions switch in order to control it. I connected the main switch lead to the mains power and the other two leads to the first (slowest) and third (fastest) coils. Then I connected the ground and the mains power to the motor as required and voila. When the switch is in one position, the fan turn at the slowest speed (since the first coil is energized) and when the switch goes the other way, the fan spins at full speed (since the third coil gets energized). Finally, when the switch is at the middle position, all the coils are disconnected and the fan sits still.
 
-{% fig "IMG_1742.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1742.jpg", "" %}
 
 {% fig "IMG_1745.JPG", "" %}
 

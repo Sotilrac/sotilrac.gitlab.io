@@ -17,7 +17,7 @@ The only defect of my new [Vostro 1320](http://carlitoscontraptions.com/2009/09/
 
 I had an old blazer from my girlfriend's father that was too oddly shaped to fit anybody I know, but I liked the fabric and I thought that it could become a very nice laptop sleeve. The only problem about that idea is that I do not know how to sew. Of course, not knowing how to do something, has never stopped me before and is not likely to stop me any time soon.
 
-{% fig "sleeve_collage.jpg", "Tux laptop Sleeve" %}
+{% fig "/img/blog/tux-laptop-sleeve/sleeve_collage.jpg", "Tux laptop Sleeve" %}
 
 ## Materials
 
@@ -39,4 +39,4 @@ Finally, I wanted to ad some decorations to the pouch so I decided to use my bro
 
 I think the final result is pretty cool and very useful. The pockets are great, I can put all of the things that I usually need to carry with my laptop (e.g. mouse, headphones, USB keys) without any troubles. The only thing missing is perhaps a handle that I may add in the future.
 
-{% fig "brother.jpg", "My Brother Painting Tux" %}
+{% fig "/img/blog/tux-laptop-sleeve/brother.jpg", "My Brother Painting Tux" %}

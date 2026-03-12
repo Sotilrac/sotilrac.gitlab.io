@@ -44,7 +44,7 @@ This time, I built a panoramic camera. My main objective was to have a platform 
 
 ## Putting It Together
 
-{% fig "Canon31.jpg", "Panoramic Camera Mount" %}
+{% fig "/img/blog/panoramic-camera-prototype/canon31.jpg", "Panoramic Camera Mount" %}
 
 The first step was to put together the ServoCity Pan and Tilt system. This took away much of the building work since it is really simple to put together in no time at all. Nevertheless, I applied some modifications to it: I discarded the bottom plate that should be attached to the panning servo (since I am using a larger winch servo that would not fit otherwise), and I drilled a hole on the top plate in order to be able to fasten the camera to the rig. Note that I also included a little piece of neoprene that was lying around in order to prevent the bottom of my camera from getting scratched.
 
@@ -58,7 +58,7 @@ I used almost exclusively cable ties to tie everything on the aluminum plate exc
 
 ## Operating it
 
-{% fig "Panorama.jpg", "Panoramic camera in action" %}
+{% fig "/img/blog/panoramic-camera-prototype/panorama.jpg", "Panoramic camera in action" %}
 
 This first prototype requires a laptop to be operated, which can be a little annoying.  I plan to use my EeePC in the immediate future and an embedded computer for an eventual commercial kit. It basically works as follows:
 

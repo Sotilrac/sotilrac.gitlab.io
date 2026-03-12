@@ -15,7 +15,7 @@ tags:
 - Craft
 - Wood
 ---
-{% fig "img_1032.jpg", "Workshop wall" %}
+{% fig "/img/blog/simple-precision-screwdriver-holder/img_1032.jpg", "Workshop wall" %}
 
 This is a very simple and quick hack that anybody can do. The objective is to build a holder that will keep all the precision screwdrivers in one place and facilitate the access to them (i.e. it should be easy to see which one is which and they should be easy to take).
 
@@ -32,7 +32,7 @@ This is a very simple and quick hack that anybody can do. The objective is to bu
 
 ## Doing it
 
-{% fig "IMG_2611.JPG", "Screwdriver Holder" %}
+{% fig "/img/blog/simple-precision-screwdriver-holder/img_2611.jpg", "Screwdriver Holder" %}
 
 1.  Drill or cut a big hole on the top of the cap. This hole will be used to suspend the screwdriver holder.
 2.  Punch in the Screwdrivers in  the rim of the cap. If you do not trust your screwdrivers to pierce your cap, you may use a nail. Keep in mind that the screwdrivers have to be very snug in the holes since they are only being held-in by friction.

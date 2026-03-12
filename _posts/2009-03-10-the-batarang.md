@@ -16,7 +16,7 @@ tags:
 ---
 I always wanted to have a batarang since I have always liked Batman a lot. So, I decided to build one now that they have become much simpler than before in the latest Batman films.
 
-{% fig "IMG_1731.JPG", "" %}
+{% fig "/img/blog/the-batarang/img_1731.jpg", "" %}
 
 ## Materials
 

@@ -18,7 +18,7 @@ tags:
 ---
 In my trip to San Francisco, I had the chance to see many beautiful things. And I wanted to be able to remember them and show them to my friends and family.
 
-{% fig "sf_from_twin_peak1.jpg", "San Francisco Seen From Twin Peaks Park" %}
+{% fig "/img/blog/making-panoramas/sf_from_twin_peak1.jpg", "San Francisco Seen From Twin Peaks Park" %}
 
 Besides taking simple photos, sometimes you need a wider view- angle to really capture the scenery. The obvious solution to this is making a panorama. This means you take many pictures of different sections of your subject and then align them and stitch them together so to form a bigger picture.
 

@@ -18,6 +18,6 @@ tags:
 
 I was interviewed and featured in an article about the future of robotics on the [New Scientist magazine from January 2012](http://www.newscientist.com/issue/2848). The article was written by the awesome [Celeste Biever](http://www.newscientist.com/search?rbauthors=Celeste+Biever).
 
-{% fig "IMG_20120608_001912.jpg", "New Scientist article" %}
+{% fig "/img/blog/im-on-new-scientist/img_20120608_001912.jpg", "New Scientist article" %}
 
 Needless to say, I am truly humbled to have been quoted among so many amazing roboticists including Andrew Ng (my dear [ML Class](https://www.coursera.org/course/ml) professor).

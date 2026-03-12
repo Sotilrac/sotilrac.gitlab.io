@@ -13,7 +13,7 @@ tags:
 - Open Source
 - Linux
 ---
-{% fig "kubuntu_Karmic.jpg", "Kubuntu Karmic Koala" %}
+{% fig "/img/blog/kubuntu-karmic-koala-is-out/kubuntu_karmic.jpg", "Kubuntu Karmic Koala" %}
 
 [Kubuntu Karmic Koala](http://www.kubuntu.org/news/9.10-release "Kubuntu 9.10") is finally out! I use it since the [Release Candidate](http://www.kubuntu.org/news/9.10-rc "Kubuntu 9.10 RC") came Oct. 22 nd, and it is absolutely awesomely mind-blowingly fabulous. All of the kinks in Jaunty have been fixed and a lot of new features have been added.
 
@@ -27,7 +27,7 @@ Also, KDE is much more than a desktop environment and provides a full suite of p
 
 ## Quick Review
 
-{% fig "kde_desktop_grid.png", "My Desktops (Grid View)" %}
+{% fig "/img/blog/kubuntu-karmic-koala-is-out/kde_desktop_grid.png", "My Desktops (Grid View)" %}
 
 I am currently using the 64-bit version of Kubuntu and it is performing incredibly well. The system ([my laptop](http://carlitoscontraptions.com/2009/09/new-laptop/ "Dell Vostro 1320")) boots in around 40 seconds and turns off in less than 15 seconds. The graphical performance is flawless and I can benefit from smooth performance even when doing very processor intensive tasks (such as [stitching photos together](http://carlitoscontraptions.com/2009/10/automatic-panoramas-in-montreal/ "Making Panoramas")).
 

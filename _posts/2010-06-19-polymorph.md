@@ -14,7 +14,7 @@ tags:
 - Polymorph
 - Craft
 ---
-{% fig "IMG_4617.jpg", "Polymorph" %}
+{% fig "/img/blog/polymorph/img_4617.jpg", "Polymorph" %}
 
 [Polymorph](http://en.wikipedia.org/wiki/Polycaprolactone "Polymorph") (or polycaprolactone) is a great nylon-like material that can be melted in hot water and manipulated with bare hands in order to model it into a desired shape. It is very useful when making quick (and not so quick) prototypes and custom parts for a project since it can be easily manipulated and molded and becomes very strong once it cools down.
 
@@ -26,6 +26,6 @@ All this has lately changed since [RobotShop](http://www.robotshop.com/ "RobotSh
 
 I bought some polymorph for my brother's birthday and we experimented with it as shown in the pictures below. Now that Canada has polymorph, let all the Canadians go crazy and build awesome white (or [coloured](http://www.youtube.com/watch?v=u9TkpoTzFMo "Coloured Polymorph")) stuff.
 
-{% fig "IMG_4620.jpg", "Polymorph + hot water" %}
+{% fig "/img/blog/polymorph/img_4620.jpg", "Polymorph + hot water" %}
 
-{% fig "IMG_4621.jpg", "Hot polymorph" %}
+{% fig "/img/blog/polymorph/img_4621.jpg", "Hot polymorph" %}

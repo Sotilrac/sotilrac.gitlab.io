@@ -14,11 +14,11 @@ tags:
 - Nao
 - Geekfest
 ---
-{% fig "IMG_0287.jpg", "Carlos, Alan and Nao 1337 at the Geekfest" %}
+{% fig "/img/blog/nao-montreal-geekfest-2011/img_0287.jpg", "Carlos, Alan and Nao 1337 at the Geekfest" %}
 
 [As announced before](http://carlitoscontraptions.com/2011/02/geekfest/), we attended the Montreal Geekfest and Nao 1337 performed some dances and demos for all fellow geeks. We were placed right at the entrance and Nao 1337 had the mission of giving away free Geekfest pins. He could not do this though, since people preferred to see him greet them and dance. I have to thank my brother Alan for coming along and helping me with the presentation.
 
-{% fig "IMG_0266.jpg", "Nao 1337 chills out at the Geekfest" %}
+{% fig "/img/blog/nao-montreal-geekfest-2011/img_0266.jpg", "Nao 1337 chills out at the Geekfest" %}
 
 Nao 1337 was very popular with pretty much everybody and we made lots of friends. Nao got some Ubuntu stickers, could sit on a Star Wars cannon, and even learned a magic trick. In the picture above you see Nao 1337 actually chilling out (his motors were hot after some intense dancing).
 
@@ -26,9 +26,9 @@ Nao 1337 was very popular with pretty much everybody and we made lots of friends
 
 As you can see towards the end of the video above, Nao 1337 can perform a very cool magic trick. I believe it is the first robot to do magic or at least to assist a magician. Leave a comment if you do not agree.
 
-{% fig "IMG_0270.jpg", "Nao gets some firepower" %}
+{% fig "/img/blog/nao-montreal-geekfest-2011/img_0270.jpg", "Nao gets some firepower" %}
 
-{% fig "IMG_0268.jpg", "Nao wows family" %}
+{% fig "/img/blog/nao-montreal-geekfest-2011/img_0268.jpg", "Nao wows family" %}
 
 The Geekfest was a lot of fun, you can see some more pictures of Carlitos' Contraptions at the Geekfest here:
 

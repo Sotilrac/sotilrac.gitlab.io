@@ -15,7 +15,7 @@ tags:
 ---
 I was invited to a Pride & Prejudice & Zombies themed party and I thought that (although it is not exactly the same era) I could have a steampunk disguise and be a steampunk zombie hunter.
 
-{% fig "IMG_20120527_032921_Carl_Gritty_Trashy.jpg", "Steampunk Zombie Hunter" %}
+{% fig "/img/blog/steampunk-gun-goggles/img_20120527_032921_carl_gritty_trashy.jpg", "Steampunk Zombie Hunter" %}
 
 I wanted to have a steampunk disguise for a long time and this was the perfect excuse to do it, or actually to have my brother, Alan, do it for me. While I worried about the clothes, he built an awesome steampunk gun based on a cheap Nerf knock-off and some goggles using plumbing parts. See the awesome results below.
 

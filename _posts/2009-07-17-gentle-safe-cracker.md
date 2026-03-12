@@ -17,7 +17,7 @@ tags:
 ---
 ## The problem:
 
-{% fig "IMG_1437.JPG", "Mysterious Safe Box" %}
+{% fig "/img/blog/gentle-safe-cracker/img_1437.jpg", "Mysterious Safe Box" %}
 
 I found a little safe box in the garbage some time ago and I would really like to open it. The box features some dents and scratches that show some people tried to open it in the past but did not succeed. Also, when shaken, it produces some interesting noises that indicate it is not empty and may contain a valuable treasure some cool junk.
 
@@ -53,7 +53,7 @@ Since this requires precise positioning, I thought a servo motor would be the be
 
 ## The How and the Why:
 
-{% fig "IMG_1388.JPG", "Electronic Parts" %}
+{% fig "/img/blog/gentle-safe-cracker/img_1388.jpg", "Electronic Parts" %}
 
 I chose the Pololu servo controller since it is easy to interface by either using a computer or a simple microcontroller. Also, I already own a USB-to-serial cable (that I normally use to program the [Arduino](http://carlitoscontraptions.com/category/arduino/ "Arduino")) that I can use to send commands to the controller.
 
@@ -63,21 +63,21 @@ In order to control the servo motor, I devised a simple [python module](http://f
 
 Since, usually, servo motors have a motion range slightly greater than 180 deg, I decided to use gears to be able to produce a motion range large enough to operate the safe (at least two full turns).
 
-{% fig "Safe_Cracker.jpg", "Mechanical Parts" %}
+{% fig "/img/blog/gentle-safe-cracker/safe_cracker.jpg", "Mechanical Parts" %}
 
 I used an old heat sink and cut it with the Dremel in order to produce a bracket for the servo and a mounting hole for the secondary (smallest) gear axle.
 
 I attached the larger gear to the servo directly using the brackets and screws that came bundled with [the motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). Also, in order to hold the shaft in place, I used [e-style retaining rings](http://www.mcmaster.com/#retaining-rings/=2saqww "e-style retaining ring") and spacers (other dummy gears and shoulder washers) in order to match the grooves already present in the shaft. Of course, I got all these handy mechanical parts from an old photocopier I found in the garbage.
 
-{% fig "IMG_1366.JPG", "Dial coupling attached to the small gear" %}
+{% fig "/img/blog/gentle-safe-cracker/img_1366.jpg", "Dial coupling attached to the small gear" %}
 
 In order to couple the small gear to the safe dial, I used a bottle cap which fitted perfectly over it. The cap has some child proofing which provided a firm grip for the dial.
 
-{% fig "IMG_1386.JPG", "The Project Box" %}
+{% fig "/img/blog/gentle-safe-cracker/img_1386.jpg", "The Project Box" %}
 
 Once the assembly was done, I mounted it into an old power supply box. Although the box required some drilling and cutting, it was very easy to adapt. I would recommend using this type of boxes for other projects since they are sturdy and easy to machine.
 
-{% fig "Safe_Cracker1.jpg", "Electronic Assembly" %}
+{% fig "/img/blog/gentle-safe-cracker/safe_cracker1.jpg", "Electronic Assembly" %}
 
 So to include the electronic parts into the box, I used a small plastic capsule (that must come from the time when my young brother liked those little toys they sell in a dispensing machine). In the capsule, I placed the Pololu servo controller, the USB to serial cable and the servo motor cable, and the power supply cable.
 
@@ -87,7 +87,7 @@ In order to supply the appropriate power, I used an old cellphone charger and I 
 
 ## The (disappointing) outcome
 
-{% fig "Safe_Cracker2.jpg", "Very gentle safe cracker " %}
+{% fig "/img/blog/gentle-safe-cracker/safe_cracker2.jpg", "Very gentle safe cracker " %}
 
 Once everything was done, I fixed the new little machine to the safe and got ready to get it trying codes. I used a coat hanger and some rare earth magnets in order to hold the cracker firmly in place.
 
@@ -101,7 +101,7 @@ I decided to publish these results in spite of my failure since too often we rea
 
 Finally, for those wondering how I was planning to pull on the safe lids so it opens, it is remarkably simple: since the safe does not have any handle to latch it closed, I merely need to hang it from its handle and try the codes until it opens and the bottom part goes down.
 
-{% fig "IMG_1391.JPG", "The safe hanging unaware of its fate" %}
+{% fig "/img/blog/gentle-safe-cracker/img_1391.jpg", "The safe hanging unaware of its fate" %}
 
 Finally (this time for real), I cannot say too much about my next plans on attacking the safe, but be sure that they involve a stepper motor.
 

@@ -16,7 +16,7 @@ Following some serious problems with my [Eee PC](http://carlitoscontraptions.com
 
 I opted for a Dell Vostro 1320 and must say it is a beautiful machine. It is small, powerful, light, and most importantly shiny.
 
-{% fig "IMG_1651.JPG", "Vostro 1320" %}
+{% fig "/img/blog/new-laptop/img_1651.jpg", "Vostro 1320" %}
 
 ## Some Specs:
 

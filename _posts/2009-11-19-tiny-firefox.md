@@ -24,6 +24,6 @@ But I wanted to go further (especially since I saw that Chrome uses less screen 
 
 By using these extensions and moving things around in the toolbars, you can achieve a very tiny navigation interface that is perfectly usable.
 
-{% fig "tiny_firefox.png", "Tiny Firefox" %}
+{% fig "/img/blog/tiny-firefox/tiny_firefox.png", "Tiny Firefox" %}
 
 Note the [Tux](http://carlitoscontraptions.com/2009/09/tux-laptop-sleeve/ "Tux") theme (I a'm using Personas)

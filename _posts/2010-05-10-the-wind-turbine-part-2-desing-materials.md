@@ -45,9 +45,9 @@ Now that the [general idea](http://carlitoscontraptions.com/2010/02/the-wind-tur
 *   Cable ties
 *   Lots of bees - No seriously, lots of them
 
-{% fig "IMG_2836.jpg", "Main IBee Turbine Components" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2836.jpg", "Main IBee Turbine Components" %}
 
-{% fig "IMG_2838.jpg", "The main components from another angle" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2838.jpg", "The main components from another angle" %}
 
 ## Making the parts
 
@@ -62,7 +62,7 @@ In order to start the construction, we gathered at [PiÃ¨ces d'Auto Jarry](http
 *   They made and tested the electrical connections for the generating motor. This meant spinning the motor shaft very fast by hand and hoping for an LED to turn ON.
 *   What did I do meanwhile? Mainly look cool and be idle since they were working very well.
 
-{% fig "Construction.jpg", "Construction Day" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/construction.jpg", "Construction Day" %}
 
 ### The Finishing Touches
 
@@ -74,7 +74,7 @@ The turbine body is made form a 6" PVC pipe. The idea behind this for the body t
 
 The tube is slightly larger than the motor it carries and thus required three cuts on one end. These cuts and the natural flexibility of the tube allowed the motor to be held in place firmly when tying it with stainless steel pipe clamps.
 
-{% fig "IMG_2790.jpg", "Closeup of the motor clamped to the body" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2790.jpg", "Closeup of the motor clamped to the body" %}
 
 Also, two cuts were made on the other end. This created a slit where the tale can slide in place. The tale was then held by using cable ties. Another slit was made in order to accommodate the various wires coming out form the motor.
 
@@ -82,7 +82,7 @@ Furthermore, two triangular cuts were made on each side of the body. This result
 
 It is important to note that all cuts in the body end in a circle. This is to prevent the cut from producing a crack because of the resulting weakening of the structure. I am not sure on how necessary (or effective) this is, but at least it gives me peace on mind.
 
-{% fig "IMG_2833.jpg", "The Finished Turbine Body" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2833.jpg", "The Finished Turbine Body" %}
 
 ### The Blades
 
@@ -90,21 +90,21 @@ The blades were cut by the students from an 8" schedule 80 PVC pipe by following
 
 > **Quick Tip:** The back of a box cutter is ideal for smoothing PVC (and other plastics I assume). Simply run it trough the surface back and forth until you get the desired result. I found this to be more effective than any other tool.
 
-{% fig "Construction2.jpg", "Making the blades" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/construction2.jpg", "Making the blades" %}
 
 Also, the mounting holes were drilled taking into account the fact that the blade tips need to be equidistant from one another once mounted on the wheel.
 
-{% fig "IMG_2823.jpg", "The Blades" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2823.jpg", "The Blades" %}
 
 ### The Beautiful Flywheel
 
 The [CIMME](http://www.cimme.ca/ "CIMME") machined a beautiful flywheel based on a [Sketchup drawing](http://carlitoscontraptions.com/wp-content/uploads/2010/02/flywheel.skp "flywheel.skp") I provided. To my great surprise the flywheel turned out to be perfect and to fit flawlessly in the design. We had this piece professionally machined since it is crucial for the blades to be held firmly to the motor spindle. Also, its dimensions have to be very precise in order to achieve optimal balance and prevent any vibration or wobbling of the blades.
 
-{% fig "flywheel_iso.png", "Flywheel Isometric View" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/flywheel_iso.png", "Flywheel Isometric View" %}
 
 The flywheel was machined in aluminum using a CNC mill and sandblasted afterwards in order to increase its coolness factor.
 
-{% fig "Construction12.jpg", "The Flywheel" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/construction12.jpg", "The Flywheel" %}
 
 ### The Pivot
 
@@ -112,20 +112,20 @@ One of the biggest challenges to me was to imagine a good way of coupling the tu
 
 First, it was necessary to carve out a cylinder from the block of wood in order to be able to properly fasten if to the turbines body. This was done manually using mainly a wood knife.
 
-{% fig "IMG_2519.jpg", "First wood attachment prototype" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2519.jpg", "First wood attachment prototype" %}
 
 The preliminary version of the wood coupling evolved into a more sophisticated one as shown below. The latter is larger (increasing the assembly robustness), and features a hole and some cuts in order to allow the motor cables to go trough.
 
-{% fig "IMG_2829.jpg", "The wooden attachment" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2829.jpg", "The wooden attachment" %}
 
 The actual pivoting part was done by using a 1" galvanized steel pipe union. It was modified in such a way that it could turn (almost) freely. This was achieved by not screwing the union completely and adding a hole and a nail that acts similarly to a clevis pin and prevents the union to get unscrewed. Also, a nylon washer was added in between the the rotating metal parts in order to reduce friction and prevent premature wear. The washer was cut form an old cutting board. Finally, in order to attach this rotating part to the wooden attachment, a pipe flange and a nipple were used.
 
-{% fig "IMG_2825.jpg", "The pivoting part" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2825.jpg", "The pivoting part" %}
 
 ### The Tail
 
 The wind turbine requires a tail so it can follow the direction of the wind. For this purpose we used an old computer side panel that we cut, drilled, and painted. The tail fits into a slit cut in the body as mentioned before and was fastened with four cable ties.
 
-{% fig "IMG_2831.jpg", "The finished tail" %}
+{% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2831.jpg", "The finished tail" %}
 
 **Coming up:** [_Part 3: Building the Generator_](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-3-building-the-generator/)

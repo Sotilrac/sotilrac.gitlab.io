@@ -16,7 +16,7 @@ tags:
 - Photography
 - Nao
 ---
-{% fig "IMG_0788.jpg", "Nao 1337 and Carlitos Downtown" %}
+{% fig "/img/blog/nao-1337-outside-photoshoot/img_0788.jpg", "Nao 1337 and Carlitos Downtown" %}
 
 We went downtown Montreal the other day with Nao 1337 and shot some pictures, 
 this was mainly an exercise in vanity. See the resulting photo gallery below.

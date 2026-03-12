@@ -23,7 +23,7 @@ I travelled with this year's International Baccalaureate group. Needless to say,
 
 As expected, the construction of both projects did not go without troubles. There where many unexpected obstacles and a lot of hard work was required in order to complete them. Luckily, I was with the best group of young people I have ever encountered. The Andre Laurendeau IB group of 2010 that travelled with me is remarkable and exceptional. Composed of Nicolas, Roxane, Tiberiu, Angelo, Genevieve and Adam, this is a hard-working, tenacious and dutiful team.
 
-{% fig "IMG_2858.jpg", "IB 2010 group in Quito, Ecuador" %}
+{% fig "/img/blog/ecuadorian-makecation/img_2858.jpg", "IB 2010 group in Quito, Ecuador" %}
 
 As you imagine, I loved this experience. So much so to be already toying with ideas on what to do next year for the next trip. Although I might not be able to go, I might still be able to imagine some cool projects.
 
@@ -33,7 +33,7 @@ I would like to thank the IB in entirety for all the hard work they put in this 
 
 Also, I would like to thank Stephanie who donated many of the awesome tools I brought to Ecuador and that were crucial in making the projects. The single most important tool she gave me being the Leatherman Wave (for Christmas) which is responsible for achieving almost everything during the trip.
 
-{% fig "PA260295.jpg", "Leatherman Wave in Action" %}
+{% fig "/img/blog/ecuadorian-makecation/pa260295.jpg", "Leatherman Wave in Action" %}
 
 ## Forced Acknowledgement
 

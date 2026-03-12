@@ -26,6 +26,6 @@ So, I decided to get some ¼" screws since they fit pretty nicely three keys. Si
 
 I was planning on using some thread lock in order to prevent the screw from loosening itself but it was not necessary. Also, for some keys, it may be required to enlarge their hole so the screw can fit in nicely.
 
-{% fig "IMG_1716.JPG", "" %}
+{% fig "/img/blog/compact-keychain-20/img_1716.jpg", "" %}
 
 Finally, while going through a few jars filled with old keys I got from freecycle, I found an ancestor to my compact keychain. This old version features a custom Chicago screw and a leather jacket that covers the keys.

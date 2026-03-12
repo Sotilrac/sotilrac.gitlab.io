@@ -17,7 +17,7 @@ tags:
 ---
 On July 17th and 18th, we went to the [Robot Film Festival](http://robotfilmfestival.com/). I created a short video with Nao 1337 so we went to walk the red carpet and watch the screening as all the other Hollywood stars would do. This was the first robot film festival and we have to thank [Heather Knight](http://www.marilynmonrobot.com/) for the initiative. It was held at the very cool [3 Legged Dog Art + Technology Center](http://www.3leggeddog.org/) at New York City.
 
-{% fig "IMG_0578.jpg", "Nao 1337 getting ready for the red carpet" %}
+{% fig "/img/blog/nao-1337-robot-film-festival/img_0578.jpg", "Nao 1337 getting ready for the red carpet" %}
 
 See the video below explaining the festival's raison d'être:
 
@@ -43,7 +43,7 @@ After a fancy dinner at [Bobby Van's Steakhouse](http://www.bobbyvans.com/Bobby_
 
 I had programmed 1337 to hold hands and walk alongside me on the red carpet. I also included the ability to take breaks and show-off while standing on the carpet.
 
-{% fig "IMG_0553.jpg", "Nao 1337 and Carlitos about to walk the red carpet" %}
+{% fig "/img/blog/nao-1337-robot-film-festival/img_0553.jpg", "Nao 1337 and Carlitos about to walk the red carpet" %}
 
 Extra points for those who can recognize the [FOTC](http://en.wikipedia.org/wiki/Flight_of_the_Conchords) member in the background of the picture above.
 

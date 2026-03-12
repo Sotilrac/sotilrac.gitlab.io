@@ -21,6 +21,6 @@ We wanted to make a wind turbine from easy-to-find materials and using simple to
 
 In the end, and almost by accident, we decided to use mainly PVC and steel pipes and fittings for the entire construction. Keep reading the upcoming posts to discover our design.
 
-{% fig "IMG_4222.jpg", "Turbine Design Sketch" %}
+{% fig "/img/blog/the-wind-turbine-part-1-idea/img_4222.jpg", "Turbine Design Sketch" %}
 
 **Coming up:** [_Part 2: Design and Materials_](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-2-desing-and-materials/ "The Wind Turbine Part 2: Design and Materials")

@@ -19,7 +19,7 @@ Back in March we organized the first [Global Cloud Robotics Hackathon](http://ro
 
 The main goal of the hackathon is to allow programmers to jump into the robotics world through the use of the new and exciting field of Cloud Robotics.
 
-{% fig "cloud_robotics_hackathon.png", "Cloud Robotics Hackathon" %}
+{% fig "/img/blog/cloud-robotics-hackathon/cloud_robotics_hackathon.png", "Cloud Robotics Hackathon" %}
 
 You can see all the information about the event in [its official](http://roboticshackathon.com/) website as well as the resulting presentations in the [Cloud Robotics Hackathon YouTube Channel](http://www.youtube.com/user/RoboticsHackathon).
 

@@ -17,7 +17,7 @@ tags:
 ---
 As promised, I improved on [my initial rather silly design](http://carlitoscontraptions.com/2010/10/diy-universal-robot-gripper/) of the universal gripper as inspired by iRobot and University of Chicago.
 
-{% fig "IMG_0157.jpg", "The DIY Jamming Gripper" %}
+{% fig "/img/blog/diy-universal-jamming-gripper-2-0/img_0157.jpg", "The DIY Jamming Gripper" %}
 
 My main goal was to create a universal gripper that could be made from off-the-shelf parts in a simple way with minimum customization.
 
@@ -36,7 +36,7 @@ My main goal was to create a universal gripper that could be made from off-the-s
 
 ## Putting it together
 
-{% fig "IMG_0084.jpg", "DIY Jamming Gripper Materials" %}
+{% fig "/img/blog/diy-universal-jamming-gripper-2-0/img_0084.jpg", "DIY Jamming Gripper Materials" %}
 
 I think I succeeded in my goal as you will see below: the gripper is quite easy to assemble and only required very minor modification of the shower head in order to fit the balloon in.
 

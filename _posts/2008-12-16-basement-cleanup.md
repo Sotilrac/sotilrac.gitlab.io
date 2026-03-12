@@ -23,7 +23,7 @@ I finally cleaned up my basement/workshop and put some order into my tools and m
 
 I also got some new tools a while ago. Note the precision screw driver holder made out of a plastic jar cap and the screw driver stand made out of a piece of wood I found in the garbage.
 
-{% fig "img_1032.jpg", "" %}
+{% fig "/img/blog/basement-cleanup/img_1032.jpg", "" %}
 
 I also got some new measuring tools that are extremely useful (and make me extremely happy).
 
