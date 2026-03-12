@@ -28,7 +28,7 @@ export default function (eleventyConfig) {
   // --- Shortcodes (for blog posts, when ported) ---
   eleventyConfig.addShortcode("fig", (img, caption) => {
     const alt = caption || "";
-    return `<figure>
+    return `<figure class="post-fig">
   <a href="${img}" data-fancybox data-caption="${alt}">
     <img src="${img}" alt="${alt}" />
   </a>

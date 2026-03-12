@@ -9424,3 +9424,28 @@ readers do not read off random characters that represent icons */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
+
+/* --- Blog post figures --- */
+figure.post-fig {
+  display: inline-block;
+  max-width: 38em;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
+figure.post-fig img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+figure.post-fig figcaption {
+  margin-top: 0.4em;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
