@@ -1,11 +1,22 @@
-.sass-cache
-/bower_components/
-/node_modules/
-/posts_assets/
-/static/
+# Eleventy
 /_site/
-*.lock
-/builds/
-.jekyll-cache/
-public/
 .cache/
+
+# Dependencies
+/node_modules/
+
+# Build artifacts
+public/
+/builds/
+
+# Legacy (Jekyll / Bower)
+.sass-cache
+.jekyll-cache/
+/bower_components/
+/static/
+
+# Assets (large, tracked separately)
+/posts_assets/
+
+# Lock files
+*.lock
