@@ -1,17 +1,9 @@
 {% from "icon.njk" import icon %}
-<footer class="container-fluid dark no-print">
-  <div class="row align-items-center justify-content-center">
-    <div class="col-sm-1">
-      <a class="cc-icon" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons BY-NC-SA 4.0" target="blank">
-        <span class="icon icon-2x">{{ icon("fa-creative-commons") }}</span>
-      </a>
-    </div>
-    <div class="col-sm-1">
-      <span>
-        {{ buildDate | dateFormat("year") }}
-      </span>
-    </div>
-  </div>
+<footer class="no-print">
+  <a class="cc-icon" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons BY-NC-SA 4.0" target="blank">
+    <span class="icon icon-2x">{{ icon("fa-creative-commons") }}</span>
+  </a>
+  <span>{{ buildDate | dateFormat("year") }}</span>
 </footer>
 
 <!-- JS -->

@@ -4,26 +4,24 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="posts row">
-  <div class="col-xl-9">
-    <h2 class="page-heading">Posts Archive</h2>
+<div class="posts col-content">
+  <h2 class="page-heading">Posts Archive</h2>
 
-    <ul class="post-list">
-      {% for post in collections.publicPosts %}
-        <li>
-          <span class="post-meta">{{ post.date | dateFormat }}</span>
-          <span> - </span>
-          <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-          <span> - </span>
-          {% if post.data.categories %}
-            <span class="post-categories">{{ post.data.categories[0] }}</span>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="post-list">
+    {% for post in collections.publicPosts %}
+      <li>
+        <span class="post-meta">{{ post.date | dateFormat }}</span>
+        <span> - </span>
+        <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+        <span> - </span>
+        {% if post.data.categories %}
+          <span class="post-categories">{{ post.data.categories[0] }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 
-    {% if collections.publicPosts.length == 0 %}
-    <p>Blog posts are being migrated. Check back soon.</p>
-    {% endif %}
-  </div>
+  {% if collections.publicPosts.length == 0 %}
+  <p>Blog posts are being migrated. Check back soon.</p>
+  {% endif %}
 </div>

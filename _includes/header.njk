@@ -1,14 +1,10 @@
 {% from "icon.njk" import icon %}
-<nav class="navbar sticky-top navbar-expand navbar-dark dark no-print">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a>
-      </li>
-      <li><a class="nav-link" href="{{ site.gitlab }}" title="GitLab"><span class="icon">{{ icon("fa-gitlab") }}</span></a></li>
-      <li><a class="nav-link" href="{{ site.github }}" title="GitHub"><span class="icon">{{ icon("fa-github") }}</span></a></li>
-      <li><a class="nav-link" href="{{ site.linkedin }}" title="LinkedIn"><span class="icon">{{ icon("fa-linkedin") }}</span></a></li>
-    </ul>
-  </div>
+<nav class="site-nav no-print">
+  <a class="site-nav-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+  <ul class="site-nav-links">
+    <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+    <li><a href="{{ site.gitlab }}" title="GitLab"><span class="icon">{{ icon("fa-gitlab") }}</span></a></li>
+    <li><a href="{{ site.github }}" title="GitHub"><span class="icon">{{ icon("fa-github") }}</span></a></li>
+    <li><a href="{{ site.linkedin }}" title="LinkedIn"><span class="icon">{{ icon("fa-linkedin") }}</span></a></li>
+  </ul>
 </nav>
