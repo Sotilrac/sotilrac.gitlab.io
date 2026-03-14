@@ -18,8 +18,9 @@
   --color-surface: #f4f4f4;
   --gutter: 3rem;
   --col-min: 20em;
+  --col-skill: 13em;
   --col-aside-width: 12em;
-  --col-content-max: 65em;
+  --col-content-max: 80em;
 }
 
 /* --- Fonts --- */
@@ -46,7 +47,7 @@
   src: url("../font/telegrama_render.otf");
 }
 
-/* --- Reset (modern) --- */
+/* --- Reset --- */
 *,
 *::before,
 *::after {
@@ -202,6 +203,11 @@ th {
 .col {
   flex: 1 1 var(--col-min);
   min-width: 0;
+}
+
+.col-skill {
+  flex: 1 0 var(--col-skill);
+
 }
 
 .col-aside {

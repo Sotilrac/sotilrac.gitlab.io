@@ -24,7 +24,7 @@
     <section class="no-page-break">
         <h2>Skills</h2>
         <div class="row">
-            <div class="col skill_col">
+            <div class="col col-skill">
                 <h3 class="sub_section_header">Leadership:</h3>
                 <ul class="programming">
                     {% for skill in resume.skills.soft %}
@@ -32,7 +32,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col skill_col">
+            <div class="col col-skill">
                 <h3 class="sub_section_header">Programming:</h3>
                 <ul class="programming">
                     {% for skill in resume.skills.programming %}
@@ -40,7 +40,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col skill_col">
+            <div class="col col-skill">
                 <h3 class="sub_section_header">Engineering Tools:</h3>
                 <ul class="tools">
                     {% for skill in resume.skills.tools %}
@@ -48,7 +48,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col skill_col">
+            <div class="col col-skill">
                 <h3 class="sub_section_header">Fluent in:</h3>
                 <ul class="languages">
                     {% for skill in resume.skills.languages %}
