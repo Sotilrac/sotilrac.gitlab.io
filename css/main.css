@@ -433,6 +433,18 @@ footer span{
   font-size: 1.5rem;
 }
 
+.archive-heading {
+  margin-top: 2rem;
+  border-top: 2px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.archive-blurb {
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
 /* --- Archive banner --- */
 .archive-banner {
   padding: 0.5em 1em;
