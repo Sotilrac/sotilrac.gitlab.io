@@ -28,12 +28,7 @@ export default function (eleventyConfig) {
   // --- Shortcodes (for blog posts, when ported) ---
   eleventyConfig.addShortcode("fig", (img, caption) => {
     const alt = caption || "";
-    return `<figure class="post-fig">
-  <a href="${img}" data-fancybox data-caption="${alt}">
-    <img src="${img}" alt="${alt}" />
-  </a>
-  <figcaption>${alt}</figcaption>
-</figure>`;
+    return `<figure class="post-fig"><a href="${img}" data-fancybox data-caption="${alt}"><img src="${img}" alt="${alt}" /></a><figcaption>${alt}</figcaption></figure>`;
   });
 
   eleventyConfig.addShortcode("youtube", (id) => {

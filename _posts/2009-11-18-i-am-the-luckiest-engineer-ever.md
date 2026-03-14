@@ -30,7 +30,7 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
 
 *   A Xilinx Spartan-3AN device (XC3S1400AN-4FGG676C)
     
-    {% fig "/img/blog/i-am-the-luckiest-engineer-ever/img_2251.jpg", "Nanoboard 3000 Front" %}
+{% fig "/img/blog/i-am-the-luckiest-engineer-ever/img_2251.jpg", "Nanoboard 3000 Front" %}
     
 *   4 Serial SPI Flash memory devices
 *   Programmable clock 6 to 200 MHz, accessible by Altium Designer or by an FPGA design
@@ -53,7 +53,7 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
     *   One for use by the User FPGA
 *   SVGA interface (24-bit, 80MHz)
     
-    {% fig "/img/blog/i-am-the-luckiest-engineer-ever/img_2252.jpg", "NanoBoard 3000 Back" %}
+{% fig "/img/blog/i-am-the-luckiest-engineer-ever/img_2252.jpg", "NanoBoard 3000 Back" %}
     
 *   10/100 Fast Ethernet interface
 *   USB 2.0 High-Speed interface
