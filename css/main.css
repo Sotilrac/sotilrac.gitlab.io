@@ -445,6 +445,23 @@ footer span{
   margin-bottom: 1.5rem;
 }
 
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 var(--gutter);
+}
+
+.archive-year h3 {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.3em;
+}
+
+@media (max-width: 40em) {
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Archive banner --- */
 .archive-banner {
   padding: 0.5em 1em;

@@ -51,6 +51,7 @@ export default function (eleventyConfig) {
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
     ];
     if (format === "iso") return d.toISOString();
+    if (format === "isodate") return d.toISOString().slice(0, 10);
     if (format === "rfc822") return d.toUTCString();
     if (format === "year") return d.getFullYear().toString();
     return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;

@@ -11,7 +11,7 @@ permalink: /blog/
     {% for post in collections.publicPosts %}
       {% if post.date.getFullYear() > 2013 %}
       <li>
-        <span class="post-meta">{{ post.date | dateFormat }}</span>
+        <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
         <span> - </span>
         <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
         <span> - </span>
@@ -27,21 +27,23 @@ permalink: /blog/
   <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
   Lovingly recovered from the old <em>carlitoscontraptions.com</em> blog.</p>
 
-  <ul class="post-list">
-    {% for post in collections.publicPosts %}
-      {% if post.date.getFullYear() <= 2013 %}
-      <li>
-        <span class="post-meta">{{ post.date | dateFormat }}</span>
-        <span> - </span>
-        <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-        <span> - </span>
-        {% if post.data.categories %}
-          <span class="post-categories">{{ post.data.categories[0] }}</span>
-        {% endif %}
-      </li>
-      {% endif %}
+  <div class="archive-grid">
+    {% for year in [2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006] %}
+    <section class="archive-year">
+      <h3>{{ year }}</h3>
+      <ul class="post-list">
+        {% for post in collections.publicPosts %}
+          {% if post.date.getFullYear() == year %}
+          <li>
+            <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
+            <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
     {% endfor %}
-  </ul>
+  </div>
 
   {% if collections.publicPosts.length == 0 %}
   <p>Blog posts are being migrated. Check back soon.</p>
