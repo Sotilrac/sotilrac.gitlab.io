@@ -17,9 +17,10 @@
   --color-border: #ddd;
   --color-surface: #f4f4f4;
   --gutter: 3rem;
-  --col-min: 20em;
-  --col-skill: 13em;
-  --col-aside-width: 12em;
+  --col-min: 55em;
+  --col-skill: 15em;
+  --col-job: 60em;
+  --col-aside-width: 18em;
   --col-content-max: 80em;
 }
 
@@ -96,13 +97,18 @@ a:hover {
 
 /* --- Typography --- */
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
+h1 {
+  font-size: 2.5rem;
+}
+h2 { 
+  font-size: 2rem;
+}
 h3 { font-size: 1.2em; }
 
 p {
@@ -115,7 +121,7 @@ p {
 }
 
 mark {
-  padding: 0.2em;
+  padding: 0.1em;
   background-color: var(--color-highlight);
   border-radius: 0.15em;
 }
@@ -197,7 +203,7 @@ th {
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: 0 var(--gutter);
 }
 
 .col {
@@ -206,13 +212,28 @@ th {
 }
 
 .col-skill {
-  flex: 1 0 var(--col-skill);
+  flex: 1 0 calc(50% - var(--gutter));
+  max-width: calc(50% - var(--gutter) / 2);
+}
 
+.col-job {
+  flex: 1 0 var(--col-min);
+  max-width: var(--col-job);
 }
 
 .col-aside {
-  flex: 0 0 var(--col-aside-width);
-  min-width: var(--col-aside-width);
+  flex: 1 1 var(--col-skill);
+  max-width: var(--col-aside-width);
+}
+
+@media (min-width: 75em) {
+  .col-skill {
+    flex-basis: var(--col-skill);
+    max-width: none;
+  }
+  .col-aside {
+    flex: 1 0 10em;
+  }
 }
 
 .col-content {
@@ -324,7 +345,8 @@ th {
 /* --- Site: Resume --- */
 .pic {
   height: 200px;
-  margin-right: var(--gutter);
+  margin-right: calc(var(--gutter)/2);
+  border-radius: 0.4em;
 }
 
 .contact ul {
@@ -357,7 +379,13 @@ footer {
   background-color: var(--color-dark);
   color: var(--color-light);
   text-align: center;
-  padding: var(--gutter);
+  padding: calc(var(--gutter)/2);
+  display: flex;
+  justify-content: center;
+}
+
+footer span{
+  flex: 0 0 5em;
 }
 
 .cc-icon {

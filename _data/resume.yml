@@ -157,14 +157,13 @@ skills:
   - Git · SSH · Bash/Fish
   - Linux · Android
   - Gimp · Inkscape
-  - Blender · Solidworks · Fusion 360
+  - Blender · OnShape · Solidworks
   - KiCAD · Altium
   - Mathematica · Matlab
   programming:
   - C/C++ · Python
   - Qt · Flutter
   - ROS · OpenCV
-  - TensorFlow · PyTorch
   - ARM · Arduino · RPi · Beaglebone 
   - HTML · CSS · JavaScript
   soft:
@@ -183,13 +182,13 @@ education:
   start_date: '2013'
   end_date: '2013'
   degree:
-  - item: Gamification Class
+  - item: Gamification
 - institution: Stanford University
   start_date: '2011'
   end_date: '2011'
   degree:
-  - item: Machine Learning Class
-  - item: Introduction to Artificial Intelligence Class
+  - item: Machine Learning
+  - item: Introduction to Artificial Intelligence
 - institution: McGill University
   start_date: '2004'
   end_date: '2008'
