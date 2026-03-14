@@ -14,6 +14,8 @@ tags:
 - Software
 - Robot
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "cart.png", "" %}
 
 My friend David and I implemented an inverted pendulum controller for the [Quanser cart](http://www.quanser.com/english/html/products/fs_product_challenge.asp?lang_code=english&pcat_code=exp-lin&prod_code=L2-invpen&tmpl=1) in the Control and Robotics Lab. The controller was implemented using Simulink and Matlab, which makes the tasks much simpler than dealing with microcontrollers and C.

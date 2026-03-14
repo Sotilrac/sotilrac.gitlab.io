@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I built this quick laptop lamp some time ago for my mom. It is very simple and requires very few materials.
 
 ## Materials

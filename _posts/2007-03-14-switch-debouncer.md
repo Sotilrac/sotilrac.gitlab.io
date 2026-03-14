@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 For a project I'm doing at school, we needed a debouncer so my teammate David and I designed one.
 
 When a switch or pushbutton is closed the metal contacts bounce before coming to rest, effectively opening and closing the switch many times. This is of no importance for many applications (e.g. a light bulb), but when you want the switch to trigger a single event (e.g. a keyboard key), bouncing is problematic since the switch would trigger many events.

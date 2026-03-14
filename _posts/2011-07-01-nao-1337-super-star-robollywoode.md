@@ -15,6 +15,8 @@ tags:
 - Nao
 - Robot Film Festival
 ---
+{% include "archive-banner.njk" %}
+
 1337 and I will be participating in the [Robot Film Festival](http://robotfilmfestival.com/) at NYC.
 
 {% fig "Nao1337Film.jpe", "Nao 1337 Film" %}

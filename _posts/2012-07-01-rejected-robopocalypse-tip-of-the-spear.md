@@ -18,6 +18,8 @@ tags:
 - '1337'
 - Robopocalypse
 ---
+{% include "archive-banner.njk" %}
+
 Lately, I put some effort into making another [video](http://www.youtube.com/watch?v=XjWEmJsyMe4) for the [Robot Film Festival](http://robotfilmfestival.com/). Along with my brother Alan, we transformed a basement into a high-tech research facility in order to shoot a scene from the best-seller [Robopocalypse](http://www.amazon.com/Robopocalypse-Novel-Daniel-H-Wilson/dp/0385533853/ref=tmm_hrd_title_0) by [Daniel H. Wilson](http://danielhwilson.com/).
 
 \[caption id="attachment_1284" align="aligncenter" width="198"\][![Robopocalypse Book Cover](http://carlitoscontraptions.com/wp-content/uploads/2012/07/Robopocalypse_Book_Cover-198x300.jpg "Robopocalypse Book Cover")](http://carlitoscontraptions.com/wp-content/uploads/2012/07/Robopocalypse_Book_Cover.jpg) Robopocalypse Book Cover\[/caption\]

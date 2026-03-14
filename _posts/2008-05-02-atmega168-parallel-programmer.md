@@ -12,6 +12,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "ss851490.jpg", "" %}
 
 I own a few Rev. C [Bare Bones Boards](http://moderndevice.com/) witch came with ATmega168 chips burned with the old Arduino bootloader (NG). I wanted to upgrade them to the newer (Diecimilia) bootloader so I built a parallel programmer following the instructions in the [Arduino website](http://www.arduino.cc/en/Hacking/ParallelProgrammer) and using parts I found in the garbage (as usual).

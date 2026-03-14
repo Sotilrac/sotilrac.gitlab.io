@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 A Bogotá rake is a very effective [lock picking](http://en.wikipedia.org/wiki/Lock_picking) tool (named after the city of its creation?). It is surprisingly easy to build and allows you to open lots of locks very quickly and easily. I have been able to open many locks just minutes after having this little tool done (including standard door and bicycle locks).
 
 For this project you only need one [street sweeper](http://en.wikipedia.org/wiki/Street_cleaner) bristle. You can find these on the streets after a street sweeper passed by. Their rotating brushes leave behind these precious bristles.

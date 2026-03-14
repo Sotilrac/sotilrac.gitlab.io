@@ -13,6 +13,8 @@ categories:
 - Tools
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I finally cleaned up my basement/workshop and put some order into my tools and materials. My main source for materials in general is the garbage as the faithful readers may already know. Too bad I was too late for the [Hacked Gadgets Workbench Contest](http://hackedgadgets.com/2008/11/16/hacked-gadgets-workbench-contest-winner/).
 
 {% fig "img_0964.jpg", "" %}

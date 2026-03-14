@@ -12,6 +12,8 @@ tags:
 - Software
 - Open Source
 ---
+{% include "archive-banner.njk" %}
+
 Ever since I got [my EeePC](http://carlitoscontraptions.com/2008/09/eee-pc-1000-ubuntu-kde-41/ "EeePC"), I got obsessed by the amount of screen real-state Firefox takes for the top menu, browsing control buttons, address and search bar, etc.
 
 The quickest fix I always apply every time I am in front of a Firefox windows that is not mine is to move the Bookmarks toolbar content right next to the File menu and to disable the Bookmarks toolbar. This removes one full toolbar, and unless you have a really heavily populated Bookmarks toolbar, should function very well.

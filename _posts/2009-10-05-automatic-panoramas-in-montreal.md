@@ -11,6 +11,8 @@ categories:
 tags:
 - Photography
 ---
+{% include "archive-banner.njk" %}
+
 I used [the automated panoramic photography rig](http://carlitoscontraptions.com/2009/09/panoramic-camera-prototype/ "Panoramic Camera Prototype") (or [Panoramaker](http://carlitoscontraptions.com/2009/10/panoramaker/ "Panoramaker"), for short) in order to make some panoramas here in Montreal.
 
 After having the rig working, I went out on my bike with my tripod, my laptop, my digital camera and the panoramic photography rig. I decided I wanted to capture the sunset at [Mount Royal](http://en.wikipedia.org/wiki/Mount_Royal "Mont Royal") but when I was halfway there, I noticed that the sun became completely covered by clouds. So I decided to shoot some other panoramas instead.

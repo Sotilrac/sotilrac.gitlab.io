@@ -11,6 +11,8 @@ tags:
 - M.Net
 - Cloud Robotics Hackathon
 ---
+{% include "archive-banner.njk" %}
+
 Thanks to [M.Net](http://www.musiqueplus.com/emissions/m-net-1.950689) to welcome me once again to their show. This time, I had the pleasure of presenting the [Cloud Robotics Hackathon](http://roboticshackathon.com).
 
 \[caption id="attachment_1688" align="aligncenter" width="300"\][![Cloud Robotics Hackathon at M.Net](http://carlitoscontraptions.com/wp-content/uploads/2013/05/mnet-hackathon.png-300x160.jpg)](http://carlitoscontraptions.com/wp-content/uploads/2013/05/mnet-hackathon.png.jpg) Cloud Robotics Hackathon at M.Net\[/caption\]

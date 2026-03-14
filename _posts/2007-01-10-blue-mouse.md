@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I was tired of the red LED in my Logitech optical mouse, so I changed it. It took me less than 10 minutes (including searching my house for an LED).
 
 It is very simple, just open up the mouse, desolder the LED, replace it by an LED of your choice (blue in my case), put it back together, and that's it!

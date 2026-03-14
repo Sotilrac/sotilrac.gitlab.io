@@ -16,6 +16,8 @@ tags:
 - Aldebaran
 - Wolfram
 ---
+{% include "archive-banner.njk" %}
+
 \[caption id="attachment_1204" align="aligncenter" width="300"\][![Wolfram\|Alpha Knowledge Engine](http://carlitoscontraptions.com/wp-content/uploads/2012/06/WolframAlpha-Knowledge-Engine-300x300.jpg "Wolfram\|Alpha Knowledge Engine")](http://carlitoscontraptions.com/wp-content/uploads/2012/06/WolframAlpha-Knowledge-Engine.jpg) Wolfram\|Alpha Knowledge Engine\[/caption\]
 
 Using the [Google Speech-to-Text behaviour](http://carlitoscontraptions.com/2012/01/nao-1337-uses-google-speech-to-text-service/), I created an interface to access the Wolfram\|Alpha knowledge engine through Nao 1337. As shown in the video below, Nao can now be used to answer very important existential questions about memes.

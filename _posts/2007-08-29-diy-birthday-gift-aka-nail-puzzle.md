@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 ## Hypothetical situation
 
 Let's suppose tomorrow is your friend's birthday and you forgot to get him/her a present. Also, let's assume you have no money whatsoever, all nearby stores are closed and s/he doesn't like things that come from the garbage.

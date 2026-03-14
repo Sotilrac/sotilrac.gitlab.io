@@ -15,6 +15,8 @@ tags:
 - Nao
 - Robot Film Festival
 ---
+{% include "archive-banner.njk" %}
+
 On July 17th and 18th, we went to the [Robot Film Festival](http://robotfilmfestival.com/). I created a short video with Nao 1337 so we went to walk the red carpet and watch the screening as all the other Hollywood stars would do. This was the first robot film festival and we have to thank [Heather Knight](http://www.marilynmonrobot.com/) for the initiative. It was held at the very cool [3 Legged Dog Art + Technology Center](http://www.3leggeddog.org/) at New York City.
 
 {% fig "/img/blog/nao-1337-robot-film-festival/img_0578.jpg", "Nao 1337 getting ready for the red carpet" %}

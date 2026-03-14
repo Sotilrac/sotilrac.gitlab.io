@@ -16,6 +16,8 @@ tags:
 - Nao
 - Xbee
 ---
+{% include "archive-banner.njk" %}
+
 For the second [Carlitos' Project](http://carlitoscontraptions.com/tag/carlitos-project/), I wanted to do something a bit more "useful" than pretty lights. So I decided that a speech controlled Arduino robot should be interesting enough as a project.
 
 {% fig "carlitoscontraptions.com", "Speech-Controlled Arduino Robot" %}

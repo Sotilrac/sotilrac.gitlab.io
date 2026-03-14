@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Here is some information about a home automation system my team and I did some time ago. This was done for the Embedded Systems class and require two [Altera UP1](http://www.altera.com/literature/univ/univ.pdf) FPGA boards, two computers and two [USB-to-TTL](http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm) wires.
 
 {% fig "system+diagram.png", "" %}

@@ -10,6 +10,8 @@ categories:
 - Projects
 tags: DIY
 ---
+{% include "archive-banner.njk" %}
+
 **Update:** I have done an improved version: [the compact keychain 2.0](http://carlitoscontraptions.com/2009/03/compact-keychain-20/ "Compact Keychain 2.0").
 
 This is a nice keychain I've been using for more than a year now. Since it broke, I had to rebuild it so I took this chance to share it with the rest or the world.

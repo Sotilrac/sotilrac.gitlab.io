@@ -16,6 +16,8 @@ tags:
 - Roland
 - Deadmau5
 ---
+{% include "archive-banner.njk" %}
+
 I was very lucky to get my hands on an [iModela mini CNC Router](http://www.rolanddga.com/products/milling/imodela/) from [Roland](http://www.rolanddga.com/). I tested the unit for a few months now and I am terribly late for making a post about it but I believe it is better to share the information late rather than not sharing it at all.
 
 This is a very small USB milling machine aimed at hobbyists. It uses Tamiya motors and gears and feels very sturdy and well made. I was happy to see that it can be completely disassembled and that Roland lists a full list of replacements parts you can use to service it. After some experimentation I found the precision to be quite impressive at 0.01 mm.

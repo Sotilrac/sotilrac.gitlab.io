@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Recently my girlfriend got rid of her cable television connection and moved to a cheaper (almost free) and fully featured media center solution (i.e. Xbox + Xbox Media Center).
 
 [![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeQI/AAAAAAAAATI/9imY9X9iqHk/s320/800px-Xbox.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeQI/AAAAAAAAATI/9imY9X9iqHk/s1600-h/800px-Xbox.jpg)

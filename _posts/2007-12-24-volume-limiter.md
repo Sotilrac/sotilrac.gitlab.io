@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 What to do when a young child listens to very loud music on his headphones?
 
 1.  Educate him: by explaining that he must reduce the time he is exposed to loud sounds depending on how loud they are, and how an over exposure to loud sounds could lead to permanent hearing loss. This is the best approach.

@@ -12,6 +12,8 @@ categories:
 - Arduino
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 This is my first attempt to create a [persistence of vision](http://en.wikipedia.org/wiki/Persistence_of_vision) (POV) display using the Arduino. The ultimate goal is to mount it on my bike wheel and have it display nice things while I ride. But, for now, it consist of an array of 6 LEDs mounted on a turning rig I made from scrap material.
 
 ## Materials for the rig:

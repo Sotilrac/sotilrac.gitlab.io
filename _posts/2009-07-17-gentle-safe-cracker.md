@@ -15,6 +15,8 @@ tags:
 - Cracking
 - Mechanics
 ---
+{% include "archive-banner.njk" %}
+
 ## The problem:
 
 {% fig "/img/blog/gentle-safe-cracker/img_1437.jpg", "Mysterious Safe Box" %}

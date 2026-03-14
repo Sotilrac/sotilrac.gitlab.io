@@ -13,6 +13,8 @@ categories:
 tags:
 - International Cooperation
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "/img/blog/we-are-slightly-popular/img_1002.jpg", "The IB + Engineer in Ecuador" %}
 
 Awesome news! The Montreal Gazette recently published a nice article about the international cooperation project I participated some time ago: [The Ecuadorian Makecation](http://carlitoscontraptions.com/2010/02/ecuadorian-makecation/ "Trip to Ecuador").

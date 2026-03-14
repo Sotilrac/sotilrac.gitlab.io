@@ -13,6 +13,8 @@ tags:
 - Open Source
 - Linux
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "/img/blog/kubuntu-karmic-koala-is-out/kubuntu_karmic.jpg", "Kubuntu Karmic Koala" %}
 
 [Kubuntu Karmic Koala](http://www.kubuntu.org/news/9.10-release "Kubuntu 9.10") is finally out! I use it since the [Release Candidate](http://www.kubuntu.org/news/9.10-rc "Kubuntu 9.10 RC") came Oct. 22 nd, and it is absolutely awesomely mind-blowingly fabulous. All of the kinks in Jaunty have been fixed and a lot of new features have been added.

@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 
 I know the Palm IIIc is getting a bit old and obsolete. Still, it has many useful functions such as serving as a universal remote control.
 

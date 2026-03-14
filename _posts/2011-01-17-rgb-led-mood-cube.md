@@ -17,6 +17,8 @@ tags:
 - Rainbowduino
 - RGB LED
 ---
+{% include "archive-banner.njk" %}
+
 As the first [Carlitos' Project](http://carlitoscontraptions.com/tag/carlitos-project/), I put together a 4x4x4 RGB LED Mood Cube. This cube is composed of 64 RGB LEDs that can generate any colour you can imagine.
 
 {% fig "carlitoscontraptions.com", "RGB LED Mood Cube" %}

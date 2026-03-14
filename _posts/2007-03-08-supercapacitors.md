@@ -10,6 +10,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Today I received some supercapacitors. I'll use them in an upcoming *TOP SECRET* project.
 
 {% fig "box.jpg", "" %}

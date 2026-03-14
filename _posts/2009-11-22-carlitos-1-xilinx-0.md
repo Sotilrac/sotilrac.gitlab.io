@@ -14,6 +14,8 @@ tags:
 - Software
 - Electronics
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "/img/blog/carlitos-1-xilinx-0/fpga_xilinx_spartan.jpg", "Xilinx Spartan" %}
 
 I spent countless hours trying to install the free version of the Xilinx software on may windoze Virtual machine and I have finally succeed.

@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 This is a very simple wall adaptor that allows to power USB devices without the need of a computer (e.g. for recharging).
 
 I built this adaptor very quickly since I needed to charge my Sony Clié SJ30 (that I got at the same time and from the same person as the [Palm IIIc](http://carlitoscontraptions.com/2006/08/overhauling-palm-iiic/)) in my bedroom (far from my computer) since I use it as an alarm clock (among other things).

@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "ss850292.jpg", "" %}
 
 Many devices require batteries but do not absolutely require to be absolutely portable. Since batteries are expensive and don't last for very long, 

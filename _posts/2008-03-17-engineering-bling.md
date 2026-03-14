@@ -10,6 +10,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Finally, I got the ultimate (engineering) bling: The Iron Ring.
 
 {% fig "ss850982.jpg", "" %}

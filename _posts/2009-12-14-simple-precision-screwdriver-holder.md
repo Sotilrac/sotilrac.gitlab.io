@@ -15,6 +15,8 @@ tags:
 - Craft
 - Wood
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "/img/blog/simple-precision-screwdriver-holder/img_1032.jpg", "Workshop wall" %}
 
 This is a very simple and quick hack that anybody can do. The objective is to build a holder that will keep all the precision screwdrivers in one place and facilitate the access to them (i.e. it should be easy to see which one is which and they should be easy to take).

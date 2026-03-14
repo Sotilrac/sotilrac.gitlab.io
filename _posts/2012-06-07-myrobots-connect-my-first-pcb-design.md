@@ -13,6 +13,8 @@ categories:
 tags:
 - OSHW
 ---
+{% include "archive-banner.njk" %}
+
 In the last year, I created my first full hardware design, including its custom firmware, for RobotShop. Of course, the design is open source so you can reuse it however you like. The end-result is the [MyRobots Connect](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Myr-01), a Serial-to-Ethernet gateway.
 
 \[caption id="attachment_1215" align="aligncenter" width="203"\][![MyRobots-Connect - Eagle](http://carlitoscontraptions.com/wp-content/uploads/2012/06/MyRobots-Connect-Eagle-203x300.jpg "MyRobots-Connect - Eagle")](http://carlitoscontraptions.com/wp-content/uploads/2012/06/MyRobots-Connect-Eagle.jpg) MyRobots-Connect - Eagle\[/caption\]

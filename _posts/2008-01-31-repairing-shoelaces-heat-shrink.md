@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I'm always very annoyed by shoelaces tips breaking and thus making them very difficult to insert in shoe eyelets.
 
 Being acquainted with electronics supplies in general, I decided to try using [heat-shrink tubing](http://en.wikipedia.org/wiki/Heat-shrink_tubing) to repair my shoelaces tips.

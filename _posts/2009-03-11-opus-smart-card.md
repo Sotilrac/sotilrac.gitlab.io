@@ -14,6 +14,8 @@ categories:
 tags:
 - Electronics
 ---
+{% include "archive-banner.njk" %}
+
 > _The Opus card is pretty much like an onion_  
 > ~ [Oscar Wilde](http://uncyclopedia.wikia.com/wiki/Oscar_Wilde)
 

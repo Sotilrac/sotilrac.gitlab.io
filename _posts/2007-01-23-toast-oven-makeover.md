@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 My girlfriend had an old toast oven (about 20 years old). Slowly it decayed and eventually, broke (the timer did not work any more but it still heats).
 
 What to do in such a situation when you find yourself to be the most amazingly kind boyfriend in the entire universe known to man?

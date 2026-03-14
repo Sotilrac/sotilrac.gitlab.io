@@ -16,6 +16,8 @@ tags:
 - Developer Program
 - Aldebaran
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "carlitoscontraptions.com", "Nao 1337 Waves" %}
 
 I named him Nao [1337](http://en.wikipedia.org/wiki/Leet) but I am open to suggestions. You can leave a comment below if you think of a better name. You can see a quick presentation of this awesome humanoid robot below.

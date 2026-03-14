@@ -13,6 +13,8 @@ categories:
 tags:
 - International Cooperation
 ---
+{% include "archive-banner.njk" %}
+
 I think I can now safely say I am a _Maker_. I make things and that is what I like to do. Let me explain why I came to this conclusion.
 
 Around five years ago when I was in CEGEP (an obscure educational stage in Quebec between high school and university), I went on an international cooperation trip to Ecuador with my fellow students, in which we mainly planted medicinal plants, trees, taught English and built two bunk beds from scratch. It lasted roughly two weeks and left me with the desire to go back and do more

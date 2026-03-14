@@ -13,6 +13,8 @@ categories:
 tags:
 - International Cooperation
 ---
+{% include "archive-banner.njk" %}
+
 Mainly inspired by the [Chispito Wind Turbine](http://www.velacreations.com/chispito.html "Chispito Wind Generator") and the [Make Magazine version](http://blog.makezine.com/archive/2009/02/make_television_episode_7_urban_pro.html "Make Wind Generator") of the former (see the [PDF](http://cachefly.oreilly.com/make/television/wind.pdf "Wind Turbine Instructions")), [we](http://carlitoscontraptions.com/2010/02/ecuadorian-makecation/ "The 2010 IB group and I") decided to make a wind turbine for the Ecuadorians. Since all the turbines I mentioned have cool names, let us name our Ecuadorian turbine in a similar fashion: **The IBee Turbine** (the name might still need some work).
 
 ## The General Idea

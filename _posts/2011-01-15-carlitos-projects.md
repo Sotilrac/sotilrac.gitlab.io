@@ -14,6 +14,8 @@ categories:
 tags:
 - Carlitos' Project
 ---
+{% include "archive-banner.njk" %}
+
 [RobotShop](http://www.robotshop.com/) in collaboration with [Carlitos' Contraptions](http://carlitoscontraptions.com) is creating a series of videos about DIY electronic and robotic projects.
 
 For these projects, I'll be putting together some electronic kits along with instructional blog posts and videos at [GoRobotics.net](http://www.robotshop.com/gorobotics/ "GoRobotics.net"). The main idea is to create more complex gadgets from off-the-shelf components.

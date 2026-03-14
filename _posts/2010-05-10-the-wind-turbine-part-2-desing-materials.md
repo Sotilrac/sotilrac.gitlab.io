@@ -13,6 +13,8 @@ categories:
 tags:
 - International Cooperation
 ---
+{% include "archive-banner.njk" %}
+
 Now that the [general idea](http://carlitoscontraptions.com/2010/02/the-wind-turbine-part-1-general-idea/ "Wind Turbine Part 1: General Idea") has been introduced, let us have a look at the materials and parts that make up the IBee Turbine design.
 
 ## The Materials

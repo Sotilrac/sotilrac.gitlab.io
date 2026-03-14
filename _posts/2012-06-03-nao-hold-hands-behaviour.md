@@ -16,6 +16,8 @@ tags:
 - Aldebaran
 - Robot Film Festival
 ---
+{% include "archive-banner.njk" %}
+
 [![Nao Holds my Hand](http://carlitoscontraptions.com/wp-content/uploads/2012/06/IMG_0760-300x224.jpg "Nao Holds my Hand")](http://carlitoscontraptions.com/wp-content/uploads/2012/06/IMG_0760.jpg)
 
 If you remember, for last year's [Robot Film Festival](http://carlitoscontraptions.com/tag/robot-film-festival/), Nao 1337 walked the red carpet by holding my hand. I took some time in order to better document the behaviour, improve it a bit and make a video description of it that you can see below.

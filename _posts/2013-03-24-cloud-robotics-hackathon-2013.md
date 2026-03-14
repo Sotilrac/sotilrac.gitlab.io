@@ -14,6 +14,8 @@ tags:
 - Cloud Robotics
 - Hackathon
 ---
+{% include "archive-banner.njk" %}
+
 \[caption id="attachment_1595" align="aligncenter" width="300"\][![Cloud Robotics Hackathon 2013](http://carlitoscontraptions.com/wp-content/uploads/2013/03/cloud-robotics-hackathon-banner4-300x169.png)](http://carlitoscontraptions.com/wp-content/uploads/2013/03/cloud-robotics-hackathon-banner4.png) Cloud Robotics Hackathon 2013\[/caption\]
 
 The [Global Cloud Robotics Hackathon](http://roboticshackathon.com) is happening again this year it offers 3000$ in cash prizes to the winners. I am one of the organizers and judges for the projects that are going to be submitted. I think this is great opportunity for robotics enthusiast to get started making useful and interesting robotics applications using the power of the cloud.

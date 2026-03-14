@@ -13,6 +13,8 @@ categories:
 tags:
 - Travel
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "/img/blog/hacking-in-san-francisco/img_2007.jpg", "Hacking in SF" %}
 
 I had the chance to spend a week in San Francisco a month ago (which, by the way, is a beautiful city).

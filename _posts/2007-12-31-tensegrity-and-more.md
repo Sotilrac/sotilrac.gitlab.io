@@ -11,6 +11,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Based on the [DIY Ornaments Weekend Projects Podcast](http://blog.makezine.com/archive/2007/12/make_diy_ornaments_weeken.html?CMP=OTC-0D6B48984890) my brother and I did some [tensegrity](http://en.wikipedia.org/wiki/Tensegrity) and paper structures.
 
 I'm particularly proud of the Popsicle sticks tensegrity structure since it is much stronger and cool looking than the straws one.

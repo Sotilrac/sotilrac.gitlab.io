@@ -15,6 +15,8 @@ tags:
 - CBC
 - Spark
 ---
+{% include "archive-banner.njk" %}
+
 I was very lucky to have been interviewed by [Nora Young for Spark](http://www.cbc.ca/spark/), a CBC podcast about new technologies. This news is a bit late though because this was for the March 25th edition of the show, but nonetheless, I think it is good to document it here.
 
 {% fig "carlitoscontraptions.com", "Nora Young From CBC Spark" %}

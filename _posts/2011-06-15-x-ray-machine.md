@@ -12,6 +12,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I just found an X-Ray machine in the garbage. Yes, you read right, I now have one of those X-Ray machines like the ones your dentist uses.
 
 {% fig "/img/blog/x-ray-machine/img_0224.jpg", "The X-Ray Machine is watching You" %}

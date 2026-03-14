@@ -10,6 +10,8 @@ categories:
 - Info
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "ss850544.jpg", "" %}
 
 I have seen many times those little anti-theft devices stuck to PDAs, digital cameras and all sorts of small consumer electronics products and I always wondered how they worked and imagined they were very complicated systems involving delicate glass switches (for detecting violent tinkering), optical proximity sensors (for detecting the change of distance/reflectivity between the device and the protected product), impedance meters on the alarm system base (for detecting the change of impedance when someone replaces the device by an equivalent circuit), etc.

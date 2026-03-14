@@ -14,6 +14,8 @@ categories:
 tags:
 - Mechanics
 ---
+{% include "archive-banner.njk" %}
+
 For a long time now, I wanted to have a soldering fumes extractor. Until now I have been using a small fan but I wanted something more appropriate, something that would filter the fumes instead of just moving them away.
 
 {% fig "/img/blog/smoking-cyclops/img_1747.jpg", "" %}

@@ -15,6 +15,8 @@ tags:
 - Cloud Robotics
 - Hackathon
 ---
+{% include "archive-banner.njk" %}
+
 Back in March we organized the first [Global Cloud Robotics Hackathon](http://roboticshackathon.com/). Along with co-organizer Sara Ahmadian, and all the local and global collaborators, we brought together around 200 people in eight locations around the world.
 
 The main goal of the hackathon is to allow programmers to jump into the robotics world through the use of the new and exciting field of Cloud Robotics.

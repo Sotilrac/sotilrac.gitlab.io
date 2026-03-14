@@ -12,6 +12,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 **UPDATE:** Spam removed, security enhanced, spammer squished.
 
 Spammers hit again! I realized very late last night that my website was hacked and was redirecting to some male performance enhancement sites. I apologize for any inconvenience this might have caused on your side.

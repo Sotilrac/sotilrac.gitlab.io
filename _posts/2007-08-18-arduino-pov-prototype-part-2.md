@@ -12,6 +12,8 @@ categories:
 - Arduino
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I polished up the code for my [Arduino POV display](http://carlitoscontraptions.blogspot.com/2007/08/arduino-pov-prototype.html) and I think it is now ready to be shown to the world!
 
 The source code for the POV display can be downloaded [here](http://carlos.asmat.googlepages.com/POV_0_01.pde).

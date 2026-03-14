@@ -12,6 +12,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I have been experimenting with web servers, web design, web applications and many other things that begin with "web". The result? The blog is moving to a new address.
 
 Its new home is [http://carlitoscontraptions.com/](http://carlitoscontraptions.com/ "carlitoscontraptions.com"). I'll try to make the transition as seamless as I can and I hope not to lose too many readers in the process.

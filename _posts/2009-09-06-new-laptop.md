@@ -12,6 +12,8 @@ categories:
 - Tools
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Following some serious problems with my [Eee PC](http://carlitoscontraptions.com/2008/09/eee-pc-1000-ubuntu-kde-41/ "Eee PC"), I acquired a new laptop, a real one. I was planning to use the Eee as my main and only computer but some very serious problems with its SSD (that I will describe in another post soon) prevented me from doing so.
 
 I opted for a Dell Vostro 1320 and must say it is a beautiful machine. It is small, powerful, light, and most importantly shiny.

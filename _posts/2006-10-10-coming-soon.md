@@ -10,6 +10,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Some projects I will be writing on soon:
 
 *   La Cucaracha, a robot without electronics

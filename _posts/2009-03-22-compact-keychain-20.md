@@ -14,6 +14,8 @@ tags:
 - Metal
 - Craft
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "IMG_1715.JPG", "" %}
 
 The first compact [keychain](http://carlitoscontraptions.com/2007/03/compact-keychain/ "Compact Keychain") was a great success among my readers and became very [popular](http://carlitoscontraptions.com/2008/08/im-popular-science/ "Popular Science") very rapidly.

@@ -13,6 +13,8 @@ categories:
 tags:
 - International Cooperation
 ---
+{% include "archive-banner.njk" %}
+
 Once [all the parts were built](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-2-desing-and-materials/ "The Wind Turbine Part 2: Design and Materials"), assembling the generator was a simple task since it was designed to require only a Flat Screw driver (although a Robertson could also help) and some talent. The most difficult part was to prop up the mast so the wind turbine could catch some actual wind.
 
 ## The Location

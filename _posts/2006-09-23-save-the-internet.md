@@ -11,6 +11,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 These are just a few words about  net neutrality, don't worry, I'll be back with more contraptions soon.
 
 Please, visit [www.savetheinternet.com](http://www.savetheinternet.com/)

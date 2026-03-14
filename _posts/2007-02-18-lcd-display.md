@@ -10,6 +10,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I got a brand new LCD screen for free from the guys at [uC Hobby](http://www.uchobby.com/) (their website has many nice projects).
 
 {% fig "LCD3.jpg", "" %}

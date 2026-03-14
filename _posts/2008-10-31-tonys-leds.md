@@ -13,6 +13,8 @@ categories:
 tags:
 - Electronics
 ---
+{% include "archive-banner.njk" %}
+
 I received many questions about the circuits driving the LEDs in many of my projects, especially for the Iron Man's repulsor.
 
 LEDs are pretty neat devices. You make some current flow forward through it and you get some light as a result. Nevertheless, since they are diodes, they can allow an infinite amount of current to flow (which in practice means a lot of current) and this can be problematic since, as any electrical device, it cannot handle that much current. In order to prevent them to pass too much current, a current limiting circuit is required (usually implemented as a resistor in series).

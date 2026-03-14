@@ -12,6 +12,8 @@ categories:
 tags:
 - Electronics
 ---
+{% include "archive-banner.njk" %}
+
 A few weeks ago, I received a very pleasant message: [Altium](http://altium.com/ "Altium"), an FPGA development board manufacturer and IDE developer, contacted me asking If I wanted to try the (excessively cool) brand new development board (the [NanoBoard 3000](http://nb3000.altium.com/intro.html "NanoBoard 3000")) for free. Of course, I immediately (and quite emphatically) said _YES_.
 
 {% fig "/img/blog/i-am-the-luckiest-engineer-ever/img_2254.jpg", "The Altium NanoBoard 3000" %}

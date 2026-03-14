@@ -16,6 +16,8 @@ tags:
 - Roomba
 - Rodeo
 ---
+{% include "archive-banner.njk" %}
+
 This was going to happen sooner or later, Nao 1337 is now able to ride the Roomba robot vacuum rodeo style!  
 
 {% youtube "S18NJ3uPvs4" %}

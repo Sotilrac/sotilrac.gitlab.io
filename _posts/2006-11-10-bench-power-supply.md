@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I saw a long time ago that [someone](http://www.wikihow.com/Convert-a-Computer-ATX-Power-Supply-to-a-Lab-Power-Supply) built a bench power supply using a power supply from an old computer. This is why, when I found an old pre-Pentium computer (fully working with Win 95 on it) in the garbage, I implemented this idea.
 
 Bench power supplies (PS) are very handy for testing electronics because they are reliable, stable and secure. It supplies variable voltage in a fairly large range, and detects when you are drawing too much current from it or when its outputs are shorting, turning itself off elegantly instead of burning or overheating like some cheap power adaptors. Nevertheless, this kind of equipment cost around 200$ (usually more), which is very expensive (at least to me).

@@ -13,6 +13,8 @@ tags:
 - Electronics
 - Photography
 ---
+{% include "archive-banner.njk" %}
+
 ### Update:
 
 Read the follow up posts: [Panoramaker](http://carlitoscontraptions.com/2009/10/panoramaker/ "Panoramaker"), where I present the software, and [Automatic Panoramas in Montreal](http://carlitoscontraptions.com/2009/10/automatic-panoramas-in-montreal/ "Automatic Panoramas in Montreal"), where the final result can be seen.

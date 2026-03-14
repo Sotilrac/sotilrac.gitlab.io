@@ -11,6 +11,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Now that I am a bachelor of engineering (actually I graduated two months ago), I would really like to find an engineering job.
 
 I'm looking for a job where I could gain experience and become a professional engineer. Ideally, I would like to work with robots or toys, but working with any kind of control system (my specialization) would be definitely awesome. It would also be nice if I was asked to actually build prototypes, for instance, and perform some manual job besides programing and designing.

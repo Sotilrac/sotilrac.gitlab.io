@@ -10,6 +10,8 @@ categories:
 - Software
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 ## Amarok  
 Forget about iTunes, and even Winamp. [Amarok](http://amarok.kde.org/) is the best music library organizer there is. I was a big fan of Winamp before, now Amarok is my player of choice.
 

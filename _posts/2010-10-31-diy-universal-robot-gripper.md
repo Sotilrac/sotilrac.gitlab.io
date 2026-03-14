@@ -14,6 +14,8 @@ tags:
 - Jamming Gripper
 - MIT
 ---
+{% include "archive-banner.njk" %}
+
 **UPDATE:** See the [new version of the universal gripper](http://carlitoscontraptions.com/2011/05/diy-universal-jamming-gripper-2-0/) with more pictures and new videos.
 
 iRobot and the University of Chicago released a video of their universal robotic gripper. It is basically a gripper that can conform to the shape of seemingly every object. The video below illustrates its capabilities.

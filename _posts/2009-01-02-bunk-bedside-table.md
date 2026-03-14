@@ -13,6 +13,8 @@ categories:
 tags:
 - Craft
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "img_1092.jpg", "" %}
 
 I built a bedside table for bunk beds from a pile of wood I found in the garbage and some flat nylon rope.

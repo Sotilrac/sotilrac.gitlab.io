@@ -16,6 +16,8 @@ categories:
 tags:
 - Photography
 ---
+{% include "archive-banner.njk" %}
+
 In my trip to San Francisco, I had the chance to see many beautiful things. And I wanted to be able to remember them and show them to my friends and family.
 
 {% fig "/img/blog/making-panoramas/sf_from_twin_peak1.jpg", "San Francisco Seen From Twin Peaks Park" %}

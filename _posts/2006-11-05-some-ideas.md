@@ -10,6 +10,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 This is a list of the things I would like to build (any ideas are welcome):
 
 *   Chocolate Printer: a printer that uses chocolate instead of ink and is capable of printing 3D objects (I've seen some guy stole my idea, but that's OK, I don't mind).

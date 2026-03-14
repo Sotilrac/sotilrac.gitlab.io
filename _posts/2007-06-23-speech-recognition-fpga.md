@@ -11,6 +11,8 @@ categories:
 - FPGA
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 My friends David and Kanwen, and I implemented a speech recognition system on an FPGA development board (Altera DE2 Board) for the Design Project course at McGill (ECSE 494). We did this in two steps: first we wrote a prototype for the algorithm in MATLAB (I'll maybe port it to Octave), and then we did the hardware description for the FPGA.
 
 ## MATLAB Prototype

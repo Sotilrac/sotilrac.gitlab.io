@@ -13,6 +13,8 @@ categories:
 tags:
 - Craft
 ---
+{% include "archive-banner.njk" %}
+
 When I was a young child, I had a double-sided nine pieces wooden puzzle. It featured Pinocchio on one side, and a mermaid on the other. The pieces were all equally-sized rectangles. I really liked this puzzle and had it for a long time since not only it was a puzzle but the wooden blocks could easily become a wall, a pile of bricks, etc.
 
 {% fig "img_1085.jpg", "" %}

@@ -10,6 +10,8 @@ categories:
 - Tools
 tags: software
 ---
+{% include "archive-banner.njk" %}
+
 I was tired of having a slow computer, I did not want to deal any longer with bugs and annoyances (and these where paid annoyances and bugs). This is why I decided to use Linux, instead of a well known mainstream OS.
 
 At first I thought I'll give it a try since I was not sure it suited my needs. I thought Linux was hard to use, that I'll be using the command line a lot and that I would not have any of the functionality a more standard desktop computer has.

@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 A Van de Graff generator (named after its inventor) is a high voltage generator. It basically loads a spherical hollow conductor with static charges which brings the conductor to a very high (or very low) potential. In other words, it is the metal sphere on a vertical tube that makes your hair raise when you touch it. For more info on this, please consult this [Wikipedia article](http://en.wikipedia.org/wiki/Van_de_Graaff_generator).
 
 {% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff.jpg", "Van de Graff generator" %}

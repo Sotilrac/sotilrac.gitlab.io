@@ -16,6 +16,8 @@ tags:
 - Aldebaran
 - MyRobots.com
 ---
+{% include "archive-banner.njk" %}
+
 For close to a year now I have been working on a Cloud Robotics project called [MyRobots.com](http://www.myrobots.com/) along with RobotShop.
 
 \[caption id="attachment_1117" align="aligncenter" width="300"\][![Nao1337 at MyRobots.com](http://carlitoscontraptions.com/wp-content/uploads/2011/12/MyRobots.com_Nao1337-300x224.png "Nao1337 at MyRobots.com")](http://carlitoscontraptions.com/wp-content/uploads/2011/12/MyRobots.com_Nao1337.png) Nao1337 at MyRobots.com\[/caption\]

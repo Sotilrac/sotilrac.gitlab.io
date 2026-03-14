@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I read that one can erase the branding on products by using a sugar cube and a bit of saliva (I'm guessing the saliva part). This came handy when I got a free 128MB USB key in a DVD-R pack.
 
 This is the key in its original state.

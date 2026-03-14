@@ -17,6 +17,8 @@ tags:
 - Aldebaran
 - Unboxing
 ---
+{% include "archive-banner.njk" %}
+
 I got my Nao!
 
 See the video below for a sneak peek of the robot. This video shows you what you would get if you were to join the Aldebaran Developer program.

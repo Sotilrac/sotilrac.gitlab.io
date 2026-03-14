@@ -17,6 +17,8 @@ tags:
 - Mindwave
 - Mind Control
 ---
+{% include "archive-banner.njk" %}
+
 \[caption id="attachment_1492" align="aligncenter" width="300"\][![Super intense focus to control Nao 1337](http://carlitoscontraptions.com/wp-content/uploads/2012/10/IMG_2028-300x225.jpg "Super intense focus to control Nao 1337")](http://carlitoscontraptions.com/wp-content/uploads/2012/10/IMG_2028.jpg) Super intense focus to control Nao 1337\[/caption\]
 
 Nao 1337 and I assisted to the New York "World" Maker Faire 2012. This time, I put together a Nao behavior that communicates with the [Neurosky MindWave Sensor](http://neurosky.com/Products/MindWave.aspx) and allows the user to control the humanoid robot with their thoughts. Unfortunately, I did not get to make a video of the performance (too busy presenting Nao) but you can see many pictures further below. It was awesome to see children really focus in the hope to make the robot react! Their focusing techniques and their reactions were priceless.

@@ -11,6 +11,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "BigBuckDVD.jpg", "" %}
 
 I finally got the pre-ordered Big Buck Bunny DVD from the [Peach Open Movie Project](http://peach.blender.org/). All the files from the movie are under the CC license and it was done using the very excellent [Blender](http://www.blender.org/).  

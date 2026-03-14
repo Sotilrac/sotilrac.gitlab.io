@@ -15,6 +15,8 @@ tags:
 - Craft
 - Ironman
 ---
+{% include "archive-banner.njk" %}
+
 When I saw the new Iron Man movie, I instantly knew I had to build some part of the suit (I like to wear gadgets). Luckily for me, I found an old hard drive that had just the pieces I needed for building a repulsor-like LED flashlight.
 
 {% fig "ironman1.jpg", "" %}

@@ -16,6 +16,8 @@ tags:
 - Aldebaran
 - Tango
 ---
+{% include "archive-banner.njk" %}
+
 I put together this quick tango dance. For those who know Tango, you should be able to see that the dance steps are fairly accurate, albeit a bit limited due to the robot's lack of flexibility and my lack of programming talent.
 
 I'll be publishing my behaviours (the code running in the Nao) for everybody to download once I figure a nice and elegant way to do it.

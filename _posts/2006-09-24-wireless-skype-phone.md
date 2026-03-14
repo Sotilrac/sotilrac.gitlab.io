@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 At first, I saw on [this site](http://www.grynx.com/index.php/projects/siemens-skype/) someone who modified his wireless phone in order to connect it to his computer, transforming it in a wireless speaker and microphone. I thought it was kind of cruel to modify a working phone that way.
 
 Some time later, my girlfriend gave me a broken wireless phone that belonged to her parents. I saw it was a nice phone so I tried to repair it but I couldn't. Basically it worked fine, you can play with the menu, store phone numbers, dial, call, the sound quality is good, the reception is OK and the battery life is satisfactory. It has only one small problem: you can't hang up. So unless you're planning to call someone and talk to him indefinitely, it is kind of useless. So I decided to make it into a cordless internet phone.

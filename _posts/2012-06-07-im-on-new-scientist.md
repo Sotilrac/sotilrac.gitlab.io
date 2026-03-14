@@ -14,6 +14,8 @@ categories:
 tags:
 - New Scientist
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "www.new", "New Scientist - 21/01/2012" %}
 
 I was interviewed and featured in an article about the future of robotics on the [New Scientist magazine from January 2012](http://www.newscientist.com/issue/2848). The article was written by the awesome [Celeste Biever](http://www.newscientist.com/search?rbauthors=Celeste+Biever).

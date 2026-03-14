@@ -11,6 +11,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 Based on a circuit I found in [this website](http://web.archive.org/web/20040215182109/http://www.electronics-lab.com/projects/pc/013/index.html "Wayback Machine Link"),  
 I built a very simple thermometer. The major thing I added to the original design is a nice case.
 

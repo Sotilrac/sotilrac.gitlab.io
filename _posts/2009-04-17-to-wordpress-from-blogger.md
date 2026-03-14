@@ -12,6 +12,8 @@ categories:
 tags:
 - Software
 ---
+{% include "archive-banner.njk" %}
+
 I recently moved my blog from Blogger to an independently hosted WordPress installation and I needed to dynamically redirect the visitors going into the old pages so that they could see the new ones.
 
 There are many tutorials on how to do this on the net but they usually involve fairly complex procedures and require modifying the Blogger HTML code and installing some plug-ins in WordPress. But, what I really wanted was a simple way of redirecting each blog post into its new version.

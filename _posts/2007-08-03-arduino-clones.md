@@ -12,6 +12,8 @@ categories:
 - Arduino
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "Arduino+package.jpg", "" %}
 
 For my birthday my girlfriend got me 4 Bare-Bone Boards (from the [Modern Devices Company](http://www.moderndevice.com/)). The boards are fully featured [Arduino](http://www.arduino.cc/) clones. The only difference with the original Arduino (AFAIK) is that they are cheaper (15$ each or less) and better suited for breadboard connection.

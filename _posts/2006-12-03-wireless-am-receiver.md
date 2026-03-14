@@ -11,6 +11,8 @@ categories:
 - Work in progress
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 
 This is the schematics for a wireless AM receiver composed of a tuned amplifier, an AM demodulator, and an audio amplifier.
 

@@ -14,6 +14,8 @@ tags:
 - Nao
 - Geekfest
 ---
+{% include "archive-banner.njk" %}
+
 {% fig "/img/blog/nao-montreal-geekfest-2011/img_0287.jpg", "Carlos, Alan and Nao 1337 at the Geekfest" %}
 
 [As announced before](http://carlitoscontraptions.com/2011/02/geekfest/), we attended the Montreal Geekfest and Nao 1337 performed some dances and demos for all fellow geeks. We were placed right at the entrance and Nao 1337 had the mission of giving away free Geekfest pins. He could not do this though, since people preferred to see him greet them and dance. I have to thank my brother Alan for coming along and helping me with the presentation.

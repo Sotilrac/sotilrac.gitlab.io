@@ -10,6 +10,8 @@ categories:
 - General
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 
 {% fig "/img/blog/introduction/carlos.jpg", "Carlos" %}
 

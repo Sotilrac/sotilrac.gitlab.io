@@ -13,6 +13,8 @@ categories:
 tags:
 - Cosplay
 ---
+{% include "archive-banner.njk" %}
+
 I was invited to a Pride & Prejudice & Zombies themed party and I thought that (although it is not exactly the same era) I could have a steampunk disguise and be a steampunk zombie hunter.
 
 {% fig "/img/blog/steampunk-gun-goggles/img_20120527_032921_carl_gritty_trashy.jpg", "Steampunk Zombie Hunter" %}

@@ -10,6 +10,8 @@ categories:
 - My Projects
 tags: []
 ---
+{% include "archive-banner.njk" %}
+
 I saw in [this site](http://cleanstream.net/mirrors/coin_ring/) (try [this one](http://homepage.mac.com/johnhuber/CoinRing/PhotoAlbum20.html) if the link is broken) that we can build a coin ring using a spoon, a drill, a Dremel and some metal polish. Immediately, I wanted to do one.
 
 ## Materials:  

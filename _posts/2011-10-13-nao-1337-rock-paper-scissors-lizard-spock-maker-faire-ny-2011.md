@@ -18,6 +18,8 @@ tags:
 - '1337'
 - Maker Faire
 ---
+{% include "archive-banner.njk" %}
+
 {% youtube "0QylLaTzx5Q" %}
 
 Nao 1337 played Rock, Paper, Scissors, Lizard, Spock (the geek version of Rock Paper Scissors) against children and adults at Maker Faire NY 2011. The 1337 robot was able to play with the public with minimal intervention from operators and as shown in the video below, everybody loved him.

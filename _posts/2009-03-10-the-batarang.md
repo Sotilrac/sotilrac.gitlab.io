@@ -14,6 +14,8 @@ tags:
 - Metal
 - Craft
 ---
+{% include "archive-banner.njk" %}
+
 I always wanted to have a batarang since I have always liked Batman a lot. So, I decided to build one now that they have become much simpler than before in the latest Batman films.
 
 {% fig "/img/blog/the-batarang/img_1731.jpg", "" %}
