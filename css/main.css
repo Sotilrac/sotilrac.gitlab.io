@@ -363,12 +363,19 @@ th {
   margin: 0;
 }
 
+.contact-print {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+}
+
 .contact ul li span {
   padding-left: 1em;
 }
 
 .contact {
   align-self: flex-end;
+  text-align: right;
 }
 
 #phone, #email {
@@ -585,6 +592,21 @@ figure.post-fig figcaption {
 
   .d-print-flex {
     display: flex !important;
+    align-items: baseline;
+  }
+
+  .d-print-flex .col {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .d-print-flex h1 {
+    margin-bottom: 0;
+  }
+
+  .contact-print {
+    margin: 0;
+    padding: 0;
   }
 
   .row {

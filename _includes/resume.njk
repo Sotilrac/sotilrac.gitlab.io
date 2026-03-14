@@ -5,11 +5,13 @@
             <h1>{{ resume.first_name }} {{ resume.last_name }}</h1>
         </div>
         <div class="col contact">
-            <ul>
+            <ul class="contact-print">
                 <li id="phone"><span class="icon">{{ icon("fa-phone") }}</span><span id="phoneContent"></span></li>
                 <li id="email"><span class="icon">{{ icon("fa-envelope") }}</span><span id="emailContent"></span></li>
                 {% for link in resume.links %}
+                  {% if link.icon == "fa-globe" %}
                 <li><span class="icon">{{ icon(link.icon) }}</span><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
+                  {% endif %}
                 {% endfor %}
             </ul>
         </div>
