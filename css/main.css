@@ -5,17 +5,22 @@
   --font-base: 'Open Sans', sans-serif;
   --font-mono: 'Hack', monospace;
   --font-title: 'Telegrama', monospace;
-  --color-dark: #000;
-  --color-light: #f8f9fa;
-  --color-text: #212529;
-  --color-text-muted: #828282;
-  --color-accent: #fd7e14;
-  --color-highlight: #ffc107;
-  --color-link: #007bff;
-  --color-link-hover: #0056b3;
-  --color-code: #c7254e;
-  --color-border: #ddd;
-  --color-surface: #f4f4f4;
+  --black: #000;
+  --snow: #f8f9fa;
+  --charcoal: #212529;
+  --slate: #828282;
+  --orange: #fd7e14;
+  --amber: #ffc107;
+  --royal-blue: #007bff;
+  --navy: #0056b3;
+  --crimson: #c7254e;
+  --silver: #ddd;
+  --pearl: #f4f4f4;
+  --violet: #6f42c1;
+  --teal: #20c997;
+  --magenta: #e83e8c;
+  --pewter: #6c757d;
+  --cyan: #17a2b8;
   --gutter: 3rem;
   --col-min: 55em;
   --col-skill: 15em;
@@ -63,8 +68,8 @@ body {
   font-family: var(--font-base);
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-light);
+  color: var(--charcoal);
+  background-color: var(--snow);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -86,12 +91,12 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--royal-blue);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-link-hover);
+  color: var(--navy);
   text-decoration: underline;
 }
 
@@ -122,15 +127,15 @@ p {
 
 mark {
   padding: 0.1em;
-  background-color: var(--color-highlight);
+  background-color: var(--amber);
   border-radius: 0.15em;
 }
 
 blockquote {
   margin-bottom: 1rem;
   padding: 0.5em 1em;
-  border-left: 4px solid var(--color-border);
-  color: var(--color-text-muted);
+  border-left: 4px solid var(--silver);
+  color: var(--slate);
 }
 
 figure {
@@ -140,7 +145,7 @@ figure {
 hr {
   margin: 1rem 0;
   border: 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--silver);
 }
 
 /* --- Code --- */
@@ -151,16 +156,16 @@ pre, code {
 
 code {
   padding: 0.2em 0.4em;
-  background-color: var(--color-surface);
+  background-color: var(--pearl);
   border-radius: 3px;
-  color: var(--color-code);
+  color: var(--crimson);
 }
 
 pre {
   margin-bottom: 1rem;
   overflow: auto;
   padding: 1em;
-  background-color: var(--color-surface);
+  background-color: var(--pearl);
   border-radius: 4px;
 }
 
@@ -190,12 +195,12 @@ table {
 
 th, td {
   padding: 0.5em;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--silver);
   text-align: left;
 }
 
 th {
-  background-color: var(--color-surface);
+  background-color: var(--pearl);
   font-weight: bold;
 }
 
@@ -249,7 +254,7 @@ th {
   display: flex;
   align-items: center;
   padding: 0.5rem var(--gutter);
-  background-color: var(--color-dark);
+  background-color: var(--black);
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -257,14 +262,14 @@ th {
 
 .site-nav-brand {
   font-size: 1.25rem;
-  color: var(--color-light);
+  color: var(--snow);
   white-space: nowrap;
   text-decoration: none;
 }
 
 .site-nav-brand:hover,
 .site-nav-brand:focus {
-  color: var(--color-light);
+  color: var(--snow);
   text-decoration: none;
 }
 
@@ -325,7 +330,7 @@ th {
 /* --- Site: Hero --- */
 .hero-header {
   font-family: var(--font-title);
-  color: var(--color-accent);
+  color: var(--orange);
   font-size: 1.7em;
 }
 
@@ -333,8 +338,8 @@ th {
   font-family: var(--font-mono);
   font-size: 2em;
   text-align: center;
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--black);
+  color: var(--snow);
   padding: 0 var(--gutter);
 }
 
@@ -376,8 +381,8 @@ h3 .location {
 
 /* --- Site: Footer --- */
 footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--black);
+  color: var(--snow);
   text-align: center;
   padding: calc(var(--gutter)/2);
   display: flex;
@@ -389,7 +394,7 @@ footer span{
 }
 
 .cc-icon {
-  color: var(--color-light);
+  color: var(--snow);
 }
 
 /* --- Site: Blog --- */
@@ -402,7 +407,7 @@ footer span{
 }
 
 .post-meta {
-  color: var(--color-text-muted);
+  color: var(--slate);
   font-size: 0.9em;
 }
 
@@ -425,7 +430,7 @@ footer span{
 }
 
 .post-categories {
-  color: var(--color-text-muted);
+  color: var(--slate);
   font-size: 0.85em;
 }
 
@@ -435,12 +440,12 @@ footer span{
 
 .archive-heading {
   margin-top: 2rem;
-  border-top: 2px solid var(--color-border);
+  border-top: 2px solid var(--silver);
   padding-top: 1rem;
 }
 
 .archive-blurb {
-  color: var(--color-text-muted);
+  color: var(--slate);
   font-style: italic;
   margin-bottom: 1.5rem;
 }
@@ -452,7 +457,7 @@ footer span{
 }
 
 .archive-year h3 {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--silver);
   padding-bottom: 0.3em;
 }
 
@@ -464,7 +469,7 @@ footer span{
   gap: 0.4em 1.2em;
   margin-bottom: 1.5rem;
   font-size: 0.85em;
-  color: var(--color-text-muted);
+  color: var(--slate);
 }
 
 .cat-legend li {
@@ -482,16 +487,16 @@ footer span{
   margin: 0 0.5em;
 }
 
-.cat-dot[data-cat="my projects"]    { background: var(--color-accent); }
-.cat-dot[data-cat="general"]        { background: var(--color-link); }
-.cat-dot[data-cat="tools"]          { background: #6f42c1; }
-.cat-dot[data-cat="software"]       { background: #20c997; }
-.cat-dot[data-cat="robotics"]       { background: #e83e8c; }
-.cat-dot[data-cat="info"]           { background: var(--color-highlight); }
-.cat-dot[data-cat="news"]           { background: #6c757d; }
-.cat-dot[data-cat="work in progress"] { background: var(--color-border); }
-.cat-dot[data-cat="arduino"]        { background: #17a2b8; }
-.cat-dot[data-cat="projects"]       { background: var(--color-accent); }
+.cat-dot[data-cat="my projects"]    { background: var(--orange); }
+.cat-dot[data-cat="general"]        { background: var(--royal-blue); }
+.cat-dot[data-cat="tools"]          { background: var(--violet); }
+.cat-dot[data-cat="software"]       { background: var(--teal); }
+.cat-dot[data-cat="robotics"]       { background: var(--magenta); }
+.cat-dot[data-cat="info"]           { background: var(--amber); }
+.cat-dot[data-cat="news"]           { background: var(--pewter); }
+.cat-dot[data-cat="work in progress"] { background: var(--silver); }
+.cat-dot[data-cat="arduino"]        { background: var(--cyan); }
+.cat-dot[data-cat="projects"]       { background: var(--orange); }
 
 @media (max-width: 40em) {
   .archive-grid {
@@ -503,10 +508,10 @@ footer span{
 .archive-banner {
   padding: 0.5em 1em;
   margin-bottom: 1em;
-  border-left: 4px solid var(--color-accent);
-  background: var(--color-surface);
+  border-left: 4px solid var(--orange);
+  background: var(--pearl);
   font-size: 0.9em;
-  color: var(--color-text-muted);
+  color: var(--slate);
   font-style: italic;
 }
 
@@ -514,8 +519,8 @@ footer span{
 figure.post-fig {
   display: inline-block;
   max-width: 38em;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--pearl);
+  border: 1px solid var(--silver);
   border-radius: 4px;
   padding: 0.5em;
   margin: 1em 0;
@@ -528,7 +533,7 @@ figure.post-fig img {
 figure.post-fig figcaption {
   margin-top: 0.4em;
   font-size: 0.9em;
-  color: var(--color-text-muted);
+  color: var(--slate);
   text-align: center;
 }
 
@@ -595,7 +600,7 @@ figure.post-fig figcaption {
   }
 
   pre, blockquote {
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--silver);
     page-break-inside: avoid;
   }
 
