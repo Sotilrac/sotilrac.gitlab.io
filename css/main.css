@@ -501,6 +501,7 @@ footer span{
 .cat-dot[data-cat="work in progress"] { background: var(--silver); }
 .cat-dot[data-cat="arduino"]        { background: var(--cyan); }
 .cat-dot[data-cat="projects"]       { background: var(--orange); }
+.cat-dot[data-cat="til"]            { background: var(--navy); }
 
 @media (max-width: 40em) {
   .archive-grid {

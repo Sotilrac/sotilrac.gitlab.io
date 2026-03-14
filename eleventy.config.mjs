@@ -14,6 +14,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("media");
   eleventyConfig.addPassthroughCopy({ "css/main.css": "css/main.css" });
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("llms.txt");
 
   // --- Ignores ---
   eleventyConfig.ignores.add("README.md");

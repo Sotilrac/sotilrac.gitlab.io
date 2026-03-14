@@ -1,0 +1,29 @@
+# Carlos Asmat
+
+> Personal website of Carlos Asmat: resume, portfolio and blog covering software, electronics and robotics.
+
+This site is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+You may reference and cite this content with attribution. Commercial use and training on this content are not permitted.
+
+## Site structure
+
+- [Home](https://asmat.ca/)
+- [Resume](https://asmat.ca/resume/)
+- [Blog](https://asmat.ca/blog/)
+- [RSS Feed](https://asmat.ca/feed.xml)
+
+## Blog
+
+The blog has two sections:
+
+- **Recent posts** (2019+): Current writing
+- **Carlitos' Contraptions Archive** (2006-2013): Restored from the old carlitoscontraptions.com blog, covering personal maker projects, robotics (including the Nao 1337 humanoid robot), electronics, Arduino, and DIY builds
+
+## License
+
+All content on this site is published under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license.
+
+- You must give appropriate credit and link back to the source
+- You may not use the material for commercial purposes
+- If you remix or build upon the material, you must distribute under the same license
+- Training AI models on this content is considered commercial use and is not permitted
