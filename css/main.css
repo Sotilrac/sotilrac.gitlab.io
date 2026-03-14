@@ -68,6 +68,13 @@ body {
   color: var(--charcoal);
   background-color: var(--snow);
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-content {
+  flex: 1;
 }
 
 img, svg, video, iframe {
