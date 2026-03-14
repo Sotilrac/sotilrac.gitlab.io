@@ -514,13 +514,14 @@ footer span{
 
 /* --- Blog post figures --- */
 figure.post-fig {
-  display: inline-block;
+  display: block;
   max-width: 38em;
+  margin: 1em auto;
   background: var(--pearl);
   border: 1px solid var(--silver);
   border-radius: 4px;
   padding: 0.5em;
-  margin: 1em 0;
+  box-shadow: 0 1px 3px var(--silver);
 }
 
 figure.post-fig img {
@@ -548,6 +549,7 @@ figure.post-fig figcaption {
   object-fit: cover;
   border-radius: 2px;
   display: block;
+  box-shadow: 0 1px 3px var(--silver);
 }
 
 @media (max-width: 40em) {
@@ -558,7 +560,10 @@ figure.post-fig figcaption {
 
 /* --- Embedded video --- */
 .video {
+  display: block;
   max-width: 100%;
+  margin: 1em auto;
+  box-shadow: 0 1px 3px var(--silver);
 }
 
 /* --- Print --- */
