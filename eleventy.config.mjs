@@ -12,6 +12,7 @@ export default function (eleventyConfig) {
   // --- Passthrough copy ---
   eleventyConfig.addPassthroughCopy("font");
   eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("media");
   eleventyConfig.addPassthroughCopy({ "css/main.css": "css/main.css" });
 
   // --- Ignores ---
@@ -29,6 +30,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("fig", (img, caption) => {
     const alt = caption || "";
     return `<figure class="post-fig"><a href="${img}" data-fancybox data-caption="${alt}"><img src="${img}" alt="${alt}" /></a><figcaption>${alt}</figcaption></figure>`;
+  });
+
+  eleventyConfig.addShortcode("gallery", (columns, ...imgs) => {
+    const items = imgs
+      .map((img) => `<a href="${img}" data-fancybox="gallery"><img src="${img}" alt="" /></a>`)
+      .join("");
+    return `<div class="gallery" style="--gallery-cols: ${columns}">${items}</div>`;
   });
 
   eleventyConfig.addShortcode("youtube", (id) => {
