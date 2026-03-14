@@ -569,7 +569,8 @@ figure.post-fig figcaption {
 /* --- Embedded video --- */
 .video {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 38em;
   margin: 1.5em auto;
   box-shadow: 0.1rem 0.1rem 0.5rem var(--silver);
   border-radius: 1rem;
