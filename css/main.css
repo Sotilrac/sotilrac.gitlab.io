@@ -456,6 +456,43 @@ footer span{
   padding-bottom: 0.3em;
 }
 
+.cat-legend {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.2em;
+  margin-bottom: 1.5rem;
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+}
+
+.cat-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.cat-dot {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 0 0.5em;
+}
+
+.cat-dot[data-cat="my projects"]    { background: var(--color-accent); }
+.cat-dot[data-cat="general"]        { background: var(--color-link); }
+.cat-dot[data-cat="tools"]          { background: #6f42c1; }
+.cat-dot[data-cat="software"]       { background: #20c997; }
+.cat-dot[data-cat="robotics"]       { background: #e83e8c; }
+.cat-dot[data-cat="info"]           { background: var(--color-highlight); }
+.cat-dot[data-cat="news"]           { background: #6c757d; }
+.cat-dot[data-cat="work in progress"] { background: var(--color-border); }
+.cat-dot[data-cat="arduino"]        { background: #17a2b8; }
+.cat-dot[data-cat="projects"]       { background: var(--color-accent); }
+
 @media (max-width: 40em) {
   .archive-grid {
     grid-template-columns: 1fr;
