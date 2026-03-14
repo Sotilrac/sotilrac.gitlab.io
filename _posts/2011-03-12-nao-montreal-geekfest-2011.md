@@ -38,4 +38,4 @@ The Geekfest was a lot of fun, you can see some more pictures of Carlitos' Contr
 *   [Geekfestmtl Flickr Pool](http://www.flickr.com/groups/geekfestmtl/pool/)
 *   [Branchez-vous](http://www.branchez-vous.com/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html)
 
-\[gallery link="file" order="DESC" columns="4"\]
+{% gallery 4, "/img/blog/nao-montreal-geekfest-2011/IMG_0287.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0270.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0269.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0268.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0267.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0266.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0264.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0263.jpg" %}

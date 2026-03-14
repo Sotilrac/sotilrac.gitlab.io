@@ -25,4 +25,4 @@ http://www.youtube.com/watch?v=kHSP87icbZQ&w=500
 
 Also, as a follow-up of the video, in order to better protect Nao from the friction in the pelvic region, I use [D-profile self-adhesive rubber tape](http://www.amazon.com/Frost-V25WA-Extreme-Weather-Strip-8-Inch-by1/dp/B000B4N3OA) (the kind you normally use in door frames to prevent air from coming in). Since it is white and matte like Nao it goes very well and makes for a nice belt.
 
-\[caption id="attachment_871" align="aligncenter" width="300"\][![Nao with rubber belt](http://carlitoscontraptions.com/wp-content/uploads/2011/03/Nao_waist_protection-300x225.jpg "Nao with rubber belt")](http://carlitoscontraptions.com/wp-content/uploads/2011/03/Nao_waist_protection.jpg) Nao with rubber belt\[/caption\]
+{% fig "/img/blog/protecting-nao/Nao_waist_protection.jpg", "Nao with rubber belt" %}

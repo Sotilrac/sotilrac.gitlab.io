@@ -16,6 +16,6 @@ tags: []
 
 The 2010 [Montreal Comic Con](http://www.montrealcomiccon.com/) is long over but was a lot of fun and an excellent activity for any geek. It is certainly not as big as the San Diego Comic Con but it is very nice to see that Montreal's geek community is alive and (slowly) growing. I am not too much into comics but it was a good occasion to be costumed (outside of Halloween).
 
-\[gallery link="file"\]
+{% gallery 4, "/img/blog/comiccon-montreal/DSCN3048.jpg", "/img/blog/comiccon-montreal/DSCN3052.jpg", "/img/blog/comiccon-montreal/DSCN3055.jpg", "/img/blog/comiccon-montreal/DSCN3056.jpg", "/img/blog/comiccon-montreal/DSCN3057.jpg", "/img/blog/comiccon-montreal/DSCN3058.jpg", "/img/blog/comiccon-montreal/DSCN3059.jpg", "/img/blog/comiccon-montreal/DSCN3060.jpg", "/img/blog/comiccon-montreal/DSCN3061.jpg" %}
 
 As you can guess, I am Rorschach.

@@ -17,7 +17,7 @@ tags:
 ---
 {% include "archive-banner.njk" %}
 
-[![Pololu Micro Serial Servo Controller](http://carlitoscontraptions.com/wp-content/uploads/2009/07/IMG_1409-300x240.jpg "Pololu Micro Serial Servo Controller")](http://carlitoscontraptions.com/wp-content/uploads/2009/07/IMG_1409.JPG)
+{% fig "/img/blog/pololu-python-library/IMG_1409.JPG", "Pololu Micro Serial Servo Controller" %}
 
 I started writing a library for controlling the Pololu motor controllers with a computer through a serial port.
 

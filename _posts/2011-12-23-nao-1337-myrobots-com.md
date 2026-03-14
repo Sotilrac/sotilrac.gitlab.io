@@ -20,7 +20,7 @@ tags:
 
 For close to a year now I have been working on a Cloud Robotics project called [MyRobots.com](http://www.myrobots.com/) along with RobotShop.
 
-\[caption id="attachment_1117" align="aligncenter" width="300"\][![Nao1337 at MyRobots.com](http://carlitoscontraptions.com/wp-content/uploads/2011/12/MyRobots.com_Nao1337-300x224.png "Nao1337 at MyRobots.com")](http://carlitoscontraptions.com/wp-content/uploads/2011/12/MyRobots.com_Nao1337.png) Nao1337 at MyRobots.com\[/caption\]
+{% fig "/img/blog/nao-1337-myrobots-com/MyRobots.com_Nao1337.png", "Nao1337 at MyRobots.com" %}
 
 We finally released it on the December the 20th and so far it has been a huge success in popularity! See the press coverage [here](http://www.myrobots.com/wiki/Press). [MyRobots.com](http://www.myrobots.com/) is a social network for robots where they can interact and collaborate.
 

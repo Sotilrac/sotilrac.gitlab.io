@@ -21,4 +21,4 @@ I was invited to a Pride & Prejudice & Zombies themed party and I thought that (
 
 I wanted to have a steampunk disguise for a long time and this was the perfect excuse to do it, or actually to have my brother, Alan, do it for me. While I worried about the clothes, he built an awesome steampunk gun based on a cheap Nerf knock-off and some goggles using plumbing parts. See the awesome results below.
 
-\[gallery link="file" order="DESC"\]
+{% gallery 4, "/img/blog/steampunk-gun-goggles/IMG_20120529_092409_Carl_Sand_Pint.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120529_092236_Carl_Skin_Flowery.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120529_091925_Carl_Metal_Sand.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120529_091633_Carl_Streaked_Trashy.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120529_091544_Carl_Stoned_Circle.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120527_033101-1_Carl_Sand_Flowery.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120527_032750_Logan_Sand_Crack.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120527_032523-1_Carl_Sand_Whiteone.jpg", "/img/blog/steampunk-gun-goggles/IMG_20120515_185451_Jean_Skin_Blackeiht.jpg" %}

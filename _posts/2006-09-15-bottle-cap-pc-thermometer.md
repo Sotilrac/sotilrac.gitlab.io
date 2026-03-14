@@ -47,14 +47,14 @@ Anyways, the only problem is that it can't measure temperatures below 11Â°C.
 
 To build a nice looking case, I simply used two plastic bottle caps (from a Propel and Powerade bottles) that my girlfriend brought me from the recycling bin at her job (a gym).
 
-{% fig "thermometer.2.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer.2.jpg", "" %}
 
 These two caps happen to fit perfectly one inside the other. So I simply cut a hole for the cable and drilled another for the probe (MT). I placed the circuit (properly insulated with tape, of course) inside, closed it and the thermometer was done.
 
-{% fig "thermometer inside.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer inside.jpg", "" %}
 
 ## The Software
 
-In order to use the thermometer you need a small program. I used the original [digital thermometer program](http://carlitoscontraptions.com/wp-content/uploads/2006/09/tempmeter.zip) but it wouldn't be hard to write a new one or to improve the existing one.
+In order to use the thermometer you need a small program. I used the original [digital thermometer program](/img/blog/bottle-cap-pc-thermometer/tempmeter.zip) but it wouldn't be hard to write a new one or to improve the existing one.
 
-{% fig "thermometer full.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer full.jpg", "" %}

@@ -39,7 +39,7 @@ On last Saturday, my girlfriend and I took the metro after going to the movies a
 
 The conclusion to this is that when a day ends, there STM fare algorithm fails and defaults to charge you an extra ticket. Unfortunately, It is unlikely that this bug is noticed by the STM any time soon since they are not loosing any profit from it and they do not accept bug reports. Even the lady at the reclamations booth had a hard time to understand what the problem was.
 
-[![Opus Card Fail](http://carlitoscontraptions.com/wp-content/uploads/2009/12/IMG_2674-300x225.jpg "Opus Card Fail")](http://carlitoscontraptions.com/wp-content/uploads/2009/12/IMG_2674.jpg)
+{% fig "/img/blog/stm-bug-report/IMG_2674.jpg", "Opus Card Fail" %}
 
 In the end, instead of a full refund she got a "_courtoisie_" ticket which expires on next Sunday (instead of a regular ticket that which expires in around two years). So much for costumer service.
 

@@ -31,7 +31,7 @@ I wanted to reproduce this toy so my girlfriend and I built a new version of thi
 
 ## Getting it done
 
-First I divided the images in nine pieces of the appropriate dimensions so they fit nicely in my pieces of wood. In order to achieve this I used [Inkscape](http://carlos.asmat.googlepages.com/BBB_printouts.zip) and the resulting SVGs can be found [here](http://carlitoscontraptions.com/wp-content/uploads/2009/04/bbb_printouts.zip "Big Buck Bunny puzzle printouts") (6.7 MiB). Note that each piece on the SVGs is larger than the required dimensions so I can have a buffer in case the images are not precisely applied to the wood. I also drew cut lines in order to know where the section of the image to be cut is.
+First I divided the images in nine pieces of the appropriate dimensions so they fit nicely in my pieces of wood. In order to achieve this I used [Inkscape](http://carlos.asmat.googlepages.com/BBB_printouts.zip) and the resulting SVGs can be found [here](/img/blog/big-buck-bunny-puzzle/bbb_printouts.zip "Big Buck Bunny puzzle printouts") (6.7 MiB). Note that each piece on the SVGs is larger than the required dimensions so I can have a buffer in case the images are not precisely applied to the wood. I also drew cut lines in order to know where the section of the image to be cut is.
 
 Since I wanted the end result to be durable and nice looking, I decided to order some laser prints for my SVGs instead of printing them myself. This was not too expensive (it cost around 3$ in total) and the print quality was quite good.
 

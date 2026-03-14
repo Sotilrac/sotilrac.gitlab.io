@@ -18,7 +18,7 @@ tags:
 ---
 {% include "archive-banner.njk" %}
 
-\[caption id="attachment_1126" align="aligncenter" width="300"\][![Google Chrome Speech-to-Text](http://carlitoscontraptions.com/wp-content/uploads/2012/01/google-chrome-speech-to-text-300x237.png "Google Chrome Speech-to-Text")](http://carlitoscontraptions.com/wp-content/uploads/2012/01/google-chrome-speech-to-text.png) Google Chrome Speech-to-Text\[/caption\]
+{% fig "/img/blog/nao-1337-google-speech-to-text/google-chrome-speech-to-text.png", "Google Chrome Speech-to-Text" %}
 
 I created a behaviour for Nao that used the same speech-to-text services found in Android devices and google chrome to translate spoken words into text. It works better than the standard speech recognition engine and can be used for many more things. I'm eager to see what other Nao developers do with it.
 

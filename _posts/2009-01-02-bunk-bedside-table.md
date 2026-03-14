@@ -15,7 +15,7 @@ tags:
 ---
 {% include "archive-banner.njk" %}
 
-{% fig "img_1092.jpg", "" %}
+{% fig "/img/blog/bunk-bedside-table/img_1092.jpg", "" %}
 
 I built a bedside table for bunk beds from a pile of wood I found in the garbage and some flat nylon rope.
 
@@ -33,7 +33,7 @@ I wanted to build a bedside table for the top bed on a bunk bed but I did not wa
 
 ## Putting it Together
 
-By stapling the nylon rope to one side of the wood pieces (as shown in the picture below) they become linked in a way that is rigid when applying force from the top, but can be folded easily if the force comes from the bottom. Note that the staples must be very close to the wood's edge, otherwise, the structure will become a sort of ladder since the pieces can freely hang from one another. The original [SVG](arlitoscontraptions.com/wp-content/uploads/2009/04/bedsidetable.svg "Bunk Bedside Table plans") is also available for download for those wanting to have more precise measurements.
+By stapling the nylon rope to one side of the wood pieces (as shown in the picture below) they become linked in a way that is rigid when applying force from the top, but can be folded easily if the force comes from the bottom. Note that the staples must be very close to the wood's edge, otherwise, the structure will become a sort of ladder since the pieces can freely hang from one another. The original [SVG](/img/blog/bunk-bedside-table/bedsidetable.svg "Bunk Bedside Table plans") is also available for download for those wanting to have more precise measurements.
 
 {% fig "nightTable.png", "" %}
 

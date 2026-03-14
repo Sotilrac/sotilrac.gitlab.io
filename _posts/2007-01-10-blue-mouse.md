@@ -18,8 +18,7 @@ It is very simple, just open up the mouse, desolder the LED, replace it by an LE
 
 I also slightly bent the spring in the scroll wheel so it scrolls much more smoothly and quietly.
 
-[![Blue mouse](http://carlitoscontraptions.com/wp-content/uploads/2009/04/bluemouse-300x147.jpg "Blue Mouse")](http://carlitoscontraptions.com/wp-content/uploads/2009/04/bluemouse.jpg)
-*Blue Mouse*
+{% fig "/img/blog/blue-mouse/bluemouse.jpg", "Blue Mouse" %}
 
 By the way, I noticed a better performance of the mouse on surfaces where it failed to work properly in the past... weird, but cool.
 

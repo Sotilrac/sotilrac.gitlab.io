@@ -14,7 +14,7 @@ tags: []
 
 Recently my girlfriend got rid of her cable television connection and moved to a cheaper (almost free) and fully featured media center solution (i.e. Xbox + Xbox Media Center).
 
-[![](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeQI/AAAAAAAAATI/9imY9X9iqHk/s320/800px-Xbox.jpg)](http://4.bp.blogspot.com/_940DBYqYeYo/RpxM_06eeQI/AAAAAAAAATI/9imY9X9iqHk/s1600-h/800px-Xbox.jpg)
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/800px-Xbox.jpg", "" %}
 
 ## Materials
 
@@ -59,33 +59,33 @@ Now that you have XBMC up , running and connected to the internet you can:
 
 ## Some Screenshots
 
-{% fig "media.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/media.bmp", "" %}
 
-{% fig "video.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/video.bmp", "" %}
 
-{% fig "movies_menu_2.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_2.bmp", "" %}
 
-{% fig "movies_menu_1.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_1.bmp", "" %}
 
-{% fig "music.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/music.bmp", "" %}
 
-{% fig "shoutcast.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/shoutcast.bmp", "" %}
 
-{% fig "audio_playback.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/audio_playback.bmp", "" %}
 
-{% fig "games.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/games.bmp", "" %}
 
-{% fig "live.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/live.bmp", "" %}
 
-{% fig "live_places.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/live_places.bmp", "" %}
 
-{% fig "trailers.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/trailers.bmp", "" %}
 
-{% fig "playback.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/playback.bmp", "" %}
 
-{% fig "weather.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/weather.bmp", "" %}
 
-{% fig "joox.bmp", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/joox.bmp", "" %}
 
 (note that the top and bottom black borders are not shown in the TV screen)
 

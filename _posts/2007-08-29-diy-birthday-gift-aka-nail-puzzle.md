@@ -24,7 +24,7 @@ c. You go into exile.
 
 I chose "b". Below, instruction on how to make a quick and nice puzzle.
 
-{% fig "nail+puzzle2.JPG", "" %}
+{% fig "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle2.JPG", "" %}
 
 ## Materials
 
@@ -50,7 +50,7 @@ In order to build a nice puzzle that will...well puzzle your friend for a while,
 6.  If you have some printable labels you can print the game instruction and stick them on an empty spot on the wood board. Make sure you sand everything well before applying the labels.
 7.  It should look like the picture below.
 
-{% fig "nail+puzzle.JPG", "" %}
+{% fig "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle.JPG", "" %}
 
 Game Instructions: Put all 18 nails on the central nail. The resulting structure should be stable.  
 
@@ -58,4 +58,4 @@ This means they should all be placed so that they only touch the central nail's 
 
 Game Solution: You can find the puzzle solution [here](http://google.com/).
 
-Now enjoy your new puzzle.[_](http://3.bp.blogspot.com/_940DBYqYeYo/RtYxrwGzkRI/AAAAAAAAAXg/QyfFmWJalSI/s320/sdxfbdfbdfh.JPG)
+Now enjoy your new puzzle.
