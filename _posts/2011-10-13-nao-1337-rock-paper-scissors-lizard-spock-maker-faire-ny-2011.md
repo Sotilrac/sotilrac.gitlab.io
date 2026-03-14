@@ -28,4 +28,13 @@ The idea is to have Nao memorize all the matches and come up with a way of predi
 
 See the pictures below in order to see more robotic awesomeness from the World Maker Faire 2011 which was held in Queens, NY.
 
-[gallery]
+{% gallery 4,
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1056.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1067.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1095.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1110.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1065.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1094.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1109.JPG",
+ "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1111.JPG" %}
+
