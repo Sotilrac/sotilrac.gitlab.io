@@ -5,27 +5,6 @@ permalink: /blog/
 ---
 
 <div class="posts col-content">
-  <h2 class="page-heading">Posts</h2>
-
-  <ul class="post-list">
-    {% for post in collections.publicPosts %}
-      {% if post.date.getFullYear() > 2013 %}
-      <li>
-        <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-        <span> - </span>
-        <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-        <span> - </span>
-        {% if post.data.categories %}
-          <span class="post-categories">{{ post.data.categories[0] }}</span>
-        {% endif %}
-      </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-  <h2 class="page-heading archive-heading">Carlitos' Contraptions Archive</h2>
-  <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
-  Lovingly recovered from the old <em>carlitoscontraptions.com</em> blog.</p>
 
   <ul class="cat-legend">
     <li><span class="cat-dot" data-cat="my projects"></span> Projects</li>
@@ -37,6 +16,29 @@ permalink: /blog/
     <li><span class="cat-dot" data-cat="news"></span> News</li>
     <li><span class="cat-dot" data-cat="work in progress"></span> WIP</li>
   </ul>
+
+  <div class="archive-grid">
+    {% for year in [2026, 2019] %}
+    <section class="archive-year">
+      <h3>{{ year }}</h3>
+      <ul class="post-list">
+        {% for post in collections.publicPosts %}
+          {% if post.date.getFullYear() == year %}
+          <li>
+            <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
+            {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | lower }}"></span>{% endif %}
+            <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+
+  <h2 class="page-heading archive-heading">Carlitos' Contraptions Archive</h2>
+  <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
+  Dug out from the sands of WordPress at the old <em>carlitoscontraptions.com</em> domain.</p>
 
   <div class="archive-grid">
     {% for year in [2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006] %}
