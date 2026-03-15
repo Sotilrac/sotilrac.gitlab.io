@@ -21,10 +21,10 @@
   --magenta: #e83e8c;
   --pewter: #6c757d;
   --cyan: #17a2b8;
-  --gutter: 3rem;
-  --col-min: 55em;
+  --gutter: 1rem;
+  --col-min: 100%;
   --col-skill: 15em;
-  --col-job: 60em;
+  --col-job: 100%;
   --col-aside-width: 18em;
   --col-content-max: 80em;
 }
@@ -113,10 +113,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
-h2 { 
-  font-size: 2rem;
+h2 {
+  font-size: 1.4rem;
 }
 h3 { font-size: 1.2em; }
 
@@ -235,6 +235,34 @@ th {
   max-width: var(--col-aside-width);
 }
 
+@media (min-width: 40em) {
+  :root {
+    --gutter: 3rem;
+    --col-min: 55em;
+    --col-job: 60em;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .name-header {
+    font-size: 0.95em;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .site-nav {
+    padding: 0.25rem calc(var(--gutter) / 2);
+  }
+}
+
 @media (min-width: 75em) {
   .col-skill {
     flex-basis: var(--col-skill);
@@ -299,13 +327,19 @@ th {
   text-decoration: none;
 }
 
+@media (max-width: 40em) {
+  .site-nav-links a {
+    padding: 0.1rem 0.1rem;
+  }
+}
+
 /* --- Utilities --- */
 .d-none {
   display: none !important;
 }
 
 .float-left {
-  float: left !important;
+  float: left;
 }
 
 .row-center {
@@ -351,12 +385,26 @@ th {
   min-height: 600px;
 }
 
+@media (max-width: 40em) {                                                                                       
+  .name-header {                                                                       
+    font-size: 0.95em;                                                                 
+  }
+}
+
+
 /* --- Site: Resume --- */
 .pic {
   height: 200px;
   margin-right: calc(var(--gutter)/2);
   border-radius: 0.4em;
 }
+
+@media (max-width: 40em) {                                                                             
+  .pic {                                                                                               
+    float: none;                                                                
+    margin: 0 auto 1rem;
+  }                                                                                                    
+} 
 
 .contact ul {
   list-style: outside none none;
