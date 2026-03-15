@@ -1,0 +1,19 @@
+---
+layout: layouts/post.njk
+status: public
+title: Run Raspbian in a chroot
+date: 2021-11-30T15:33:00-05:00
+categories:
+- TIL
+tags:
+- linux
+- raspberry-pi
+---
+You can run a Raspberry Pi's Raspbian from a `chroot` on a regular Linux machine. Mount the Pi's SD card, then:
+
+```bash
+sudo apt install qemu-user proot -y
+sudo proot -q qemu-arm -S /mnt/path/to/raspbian/
+```
+
+This uses QEMU to emulate ARM, so you can install packages and configure the system without booting the Pi.

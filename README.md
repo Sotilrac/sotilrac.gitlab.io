@@ -19,17 +19,21 @@ npm run build    # production build to _site/
 │   └── resume.yml        # Resume data (experience, skills, education, projects)
 ├── _includes/
 │   ├── layouts/          # Page layouts (base, home, post, page, plain)
-│   ├── head.njk          # HTML <head>
+│   ├── head.njk          # HTML <head> (includes Umami analytics)
 │   ├── header.njk        # Navigation bar
 │   ├── footer.njk        # Footer + contact decryption JS
-│   └── resume.njk        # Resume template
+│   ├── resume.njk        # Resume template
+│   └── archive-banner.njk # "Dusting off the archives" banner for old posts
 ├── _posts/               # Blog posts (Markdown + Nunjucks)
-├── css/main.css          # Compiled stylesheet (Bootstrap 4 + custom)
-├── font/                 # Custom fonts (Hack, Open Sans, Telegrama, FontAwesome)
-├── img/                  # Favicons
-├── index.njk             # Home page (resume)
-├── blog.njk              # Blog archive
-└── feed.njk              # RSS feed
+├── css/main.css          # Custom stylesheet (no frameworks)
+├── font/                 # Custom fonts (Hack, Open Sans variable, Telegrama)
+├── img/                  # Favicons + blog post images (img/blog/<slug>/)
+├── _tools/               # Helper scripts (e.g. lowercase-files.sh)
+├── index.njk             # Home page (hero with typing animation)
+├── blog.njk              # Blog archive (recent posts + Carlitos' Contraptions archive)
+├── feed.njk              # RSS feed
+├── robots.txt            # Crawler rules (blocks AI training, allows citation bots)
+└── llms.txt              # LLM-readable site summary and license
 ```
 
 ## Resume
@@ -62,7 +66,14 @@ Use these in post content:
 
 ```
 {% fig "image-url.jpg", "Caption text" %}
+{% gallery 3, "img1.jpg", "img2.jpg", "img3.jpg" %}
 {% youtube "video-id" %}
+```
+
+Post images go in `img/blog/<post-slug>/`. For archived posts (pre-2014), include the archive banner manually:
+
+```
+{% include "archive-banner.njk" %}
 ```
 
 ## Encrypted Contact Info
@@ -89,10 +100,28 @@ https://asmat.ca?key=YOUR_SECRET_KEY
 
 3. Copy the JSON object and paste it into `_data/resume.yml` as the `phone` or `email` value.
 
+## Blog Archive
+
+The blog has two sections:
+
+- **Recent posts** (2019+): current writing
+- **Carlitos' Contraptions Archive** (2006-2013): restored from the old carlitoscontraptions.com WordPress blog, covering maker projects, robotics, electronics, and Arduino
+
+Posts are grouped by year in a two-column grid with color-coded category dots.
+
+## Analytics
+
+Page views are tracked with [Umami](https://umami.is/) (privacy-friendly, no cookies). The tracking script is loaded in `_includes/head.njk`.
+
+## AI Crawlers
+
+`robots.txt` blocks AI training crawlers (GPTBot, ClaudeBot, CCBot, etc.) while allowing citation/search crawlers (ChatGPT-User, PerplexityBot, etc.). `llms.txt` provides a machine-readable site summary and declares the CC BY-NC-SA 4.0 license.
+
 ## Deployment
 
-The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` trigger a production build.
+The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` trigger a production build (Node 20, Eleventy v3).
 
 ## Useful Tools
 
 - [Turndown](https://domchristie.github.io/turndown/) — HTML to Markdown converter (used during the WordPress migration)
+- `_tools/lowercase-files.sh` — lowercase all filenames in a directory
