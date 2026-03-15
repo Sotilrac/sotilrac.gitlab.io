@@ -8,7 +8,7 @@
       <div class="row row-center">
         <div>
           <h1 class="hero-header">Carlos Asmat</h1>
-          <p>I make <mark>robots</mark> that</br>work in the <mark>real world</mark>.</p>
+          <p>I make <mark id="slot1">robots</mark> that</br>work <mark id="slot2">in the real world</mark>.</p>
         </div>
       </div>
     </div>
@@ -20,6 +20,61 @@
     </div>
 
     {% include "footer.njk" %}
+
+    <script>
+    (function() {
+      var slot1 = document.getElementById('slot1');
+      var slot2 = document.getElementById('slot2');
+      var words1 = ['robots', 'wearable devices', 'embedded systems', 'exoskeletons', 'connected devices'];
+      var words2 = ['in the real world', 'with real people', 'outside the lab', 'on real humans'];
+      var speed = 40;
+      var pause = 200;
+
+      function pick(arr, current) {
+        var next;
+        do { next = arr[Math.floor(Math.random() * arr.length)]; } while (next === current && arr.length > 1);
+        return next;
+      }
+
+      function erase(el, cb) {
+        var text = el.textContent;
+        if (text.length === 0) { cb(); return; }
+        function step() {
+          text = text.slice(0, -1);
+          el.textContent = text;
+          if (text.length > 0) setTimeout(step, speed);
+          else setTimeout(cb, pause);
+        }
+        step();
+      }
+
+      function type(el, text, cb) {
+        var i = 0;
+        function step() {
+          i++;
+          el.textContent = text.slice(0, i);
+          if (i < text.length) setTimeout(step, speed);
+          else if (cb) setTimeout(cb, pause);
+        }
+        step();
+      }
+
+      var turn = 0;
+
+      function cycle() {
+        if (turn % 2 === 0) {
+          var w = pick(words1, slot1.textContent);
+          erase(slot1, function() { type(slot1, w); });
+        } else {
+          var w = pick(words2, slot2.textContent);
+          erase(slot2, function() { type(slot2, w); });
+        }
+        turn++;
+      }
+
+      setInterval(cycle, 7000);
+    })();
+    </script>
 
   </body>
 
