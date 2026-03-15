@@ -13,7 +13,7 @@ After yet another five-year hiatus, the blog is back... again.
 
 Last time around, I migrated from a spam-infested WordPress to Jekyll and called it a day. This time, Jekyll itself started feeling like the old guard. Ruby dependencies, slow builds, and an ecosystem that hadn't quite kept up. So I did what any reasonable engineer would do: I ignored it for half a decade and then rewrote it in something else.
 
-The site now runs on [Eleventy](https://www.11ty.dev/), a simpler and faster static site generator. No more Ruby, no more Gemfiles, no more SCSS compilation step. Just Node.js, Nunjucks templates, and plain CSS. The build takes about 0.3 seconds for all 142 posts, which, coincidentally, is roughly how much time I get to invest in this blog per month.
+The site now runs on [Eleventy](https://www.11ty.dev/), a simpler and faster static site generator. No more Ruby, no more Gemfiles, no more SCSS compilation step. Just Node.js, Nunjucks templates, and plain CSS. The build takes about 0.67 seconds for all 148 files, which, coincidentally, is roughly how much time I get to invest in this blog per month.
 
 All these upgrades are mainly possible thanks to the advancements of CSS and JS in the last decade or so. However, there's one feature that is back from the 2010s: RSS! The blog now contains 100% more RSS, which should make it easier for my (most likely imaginary) readers to receive the content.
 
