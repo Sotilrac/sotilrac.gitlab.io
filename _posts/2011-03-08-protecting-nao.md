@@ -22,7 +22,7 @@ Nao is a very expensive piece of equipment and it would be a shame if it got dir
 
 As explained in the video below, I also use clear Duck tape to protect Nao's surfaces. This tape is inexpensive, does not leave any residue and is very strong.
 
-http://www.youtube.com/watch?v=kHSP87icbZQ&w=500
+{% youtube "kHSP87icbZQ" %}
 
 Also, as a follow-up of the video, in order to better protect Nao from the friction in the pelvic region, I use [D-profile self-adhesive rubber tape](http://www.amazon.com/Frost-V25WA-Extreme-Weather-Strip-8-Inch-by1/dp/B000B4N3OA) (the kind you normally use in door frames to prevent air from coming in). Since it is white and matte like Nao it goes very well and makes for a nice belt.
 

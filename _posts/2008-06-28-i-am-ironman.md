@@ -77,4 +77,4 @@ I hope you enjoyed the information and you like the end result.
 
 Below is a video of the repulsor beam. I know it lacks the repulsive action but still, I think it looks nice. Enjoy.
 
-http://www.youtube.com/watch?v=g3c_dvuceb8
+{% youtube "g3c_dvuceb8" %}

@@ -30,7 +30,7 @@ This location was chosen at night and seemed ideal at the time but it hid a dark
 
 When we first announced to the Ecuadorians that we thought the bees had to be eliminated, they did not agree with us and suggested they would block the chimney hole during the night (when the bees are asleep) so that they would be temporarily trapped there until the work is completed. Until its execution, the plan seemed reasonable, humane, and rather smart. Unfortunately, the Ecuadorians decided to block the hole with some old rags that were not effective at all. The only result achieved by this was to upset the bees by making it very difficult (and frustrating) for them to get in and out of their colony. In the most _courageous_ way, we (Tiberiu and I) removed the bee infested cloth blocking the chimney as illustrated in the video below.
 
-\[youtube Y-SPcwa_aMc\]
+{% youtube "Y-SPcwa_aMc" %}
 
 The solution to this problem was simple enough and it involved fire and ninjas. First, the ninja part (since the fire part is sort of obvious) : I decided that having a ninja mask and glasses would be an impenetrable protection for the face against the bees. I remembered that [someone in Youtube](http://www.youtube.com/watch?v=e4NoKfrQ9tw "Ninja mask from t-shirt") showed how to do a ninja mask from a t-shirt and I used that Youtube-earned skill to make my own. Besides the mask, using long pants, a jacket and gloves was enough to cover the rest of my body.
 

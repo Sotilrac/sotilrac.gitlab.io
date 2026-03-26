@@ -23,7 +23,7 @@ tags:
 
 I named him Nao [1337](http://en.wikipedia.org/wiki/Leet) but I am open to suggestions. You can leave a comment below if you think of a better name. You can see a quick presentation of this awesome humanoid robot below.
 
-\[youtube -GwpDdNeuLM\]
+{% youtube "-GwpDdNeuLM" %}
 
 I'll be posting further developments, images and pictures as I progress. I am planning on making several applications in order to achieve my ultimate goal of having Nao play chess.
 

@@ -50,7 +50,7 @@ Extra points for those who can recognize the [FOTC](http://en.wikipedia.org/wiki
 
 As shown in the video below, walking the red carpet was lots of fun and although it was fairly rough terrain for Nao (the carpet had some minor bumps that go unnoticed to humans). 1337 could traverse it without too much difficulty. The fall manager was enabled as well in order to soften the falls caused by the robot stumbling.
 
-[youtube Nj-Msc7JeDY]
+{% youtube "Nj-Msc7JeDY" %}
 
 Although it is not shown on the video, 1337 can also turn and go backwards according to how its hand is pulled just like a human would do.
 

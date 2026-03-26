@@ -48,7 +48,7 @@ Now, you can connect the contraption to a vacuum pump in order to create a vacuu
 
 Below, you can see my gripper gripping many objects and even pouring water as the original one does. You can also see me operate the gripper by sucking the air out of the balloon.
 
-\[youtube q-gHLYIWrrs\]
+{% youtube "q-gHLYIWrrs" %}
 
 ## The Future
 
