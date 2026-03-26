@@ -21,7 +21,7 @@ tags:
 
 {% fig "/img/blog/nao-1337-wolfram-alpha/WolframAlpha-Knowledge-Engine.jpg", "Wolfram|Alpha Knowledge Engine" %}
 
-Using the [Google Speech-to-Text behaviour](http://carlitoscontraptions.com/2012/01/nao-1337-uses-google-speech-to-text-service/), I created an interface to access the Wolfram\|Alpha knowledge engine through Nao 1337. As shown in the video below, Nao can now be used to answer very important existential questions about memes.
+Using the [Google Speech-to-Text behaviour](/blog/nao-1337-google-speech-to-text/), I created an interface to access the Wolfram\|Alpha knowledge engine through Nao 1337. As shown in the video below, Nao can now be used to answer very important existential questions about memes.
 
 {% youtube "xwTHOlJwOgA" %}
 

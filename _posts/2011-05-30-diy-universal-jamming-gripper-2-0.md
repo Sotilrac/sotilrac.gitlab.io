@@ -18,7 +18,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-As promised, I improved on [my initial rather silly design](http://carlitoscontraptions.com/2010/10/diy-universal-robot-gripper/) of the universal gripper as inspired by iRobot and University of Chicago.
+As promised, I improved on [my initial rather silly design](/blog/diy-universal-robot-gripper/) of the universal gripper as inspired by iRobot and University of Chicago.
 
 {% fig "/img/blog/diy-universal-jamming-gripper-2-0/img_0157.jpg", "The DIY Jamming Gripper" %}
 

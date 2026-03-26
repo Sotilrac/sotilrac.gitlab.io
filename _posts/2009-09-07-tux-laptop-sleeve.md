@@ -16,7 +16,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-The only defect of my new [Vostro 1320](http://carlitoscontraptions.com/2009/09/new-laptop/ "Vostro 1320") is that it did not come with a sleeve as the Eee PC does. Since I would like to protect the laptop from scratched and dust, a sleeve is absolutely required. So, from my perspective, the only solution to this problem was to do one myself.
+The only defect of my new [Vostro 1320](/blog/new-laptop/ "Vostro 1320") is that it did not come with a sleeve as the Eee PC does. Since I would like to protect the laptop from scratched and dust, a sleeve is absolutely required. So, from my perspective, the only solution to this problem was to do one myself.
 
 I had an old blazer from my girlfriend's father that was too oddly shaped to fit anybody I know, but I liked the fabric and I thought that it could become a very nice laptop sleeve. The only problem about that idea is that I do not know how to sew. Of course, not knowing how to do something, has never stopped me before and is not likely to stop me any time soon.
 

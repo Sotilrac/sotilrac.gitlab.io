@@ -14,7 +14,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-Besides [my POV display](http://carlitoscontraptions.blogspot.com/2007/08/pov-prototype-part-2.html), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, I built a very simple IR detector based on [this article](http://www.thekeeser.com/Projects/simple_ir_detector.htm).
+Besides [my POV display](/blog/arduino-pov-prototype-part-2/), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, I built a very simple IR detector based on [this article](http://www.thekeeser.com/Projects/simple_ir_detector.htm).
 
 ## General Idea
 

@@ -21,7 +21,7 @@ tags:
 
 {% fig "/img/blog/nao-hold-hands-behaviour/IMG_0760.jpg", "Nao Holds my Hand" %}
 
-If you remember, for last year's [Robot Film Festival](http://carlitoscontraptions.com/tag/robot-film-festival/), Nao 1337 walked the red carpet by holding my hand. I took some time in order to better document the behaviour, improve it a bit and make a video description of it that you can see below.
+If you remember, for last year's Robot Film Festival, Nao 1337 walked the red carpet by holding my hand. I took some time in order to better document the behaviour, improve it a bit and make a video description of it that you can see below.
 
 {% youtube "CuanD1vC3as" %}
 

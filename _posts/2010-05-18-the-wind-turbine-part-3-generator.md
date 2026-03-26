@@ -16,7 +16,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Once [all the parts were built](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-2-desing-and-materials/ "The Wind Turbine Part 2: Design and Materials"), assembling the generator was a simple task since it was designed to require only a Flat Screw driver (although a Robertson could also help) and some talent. The most difficult part was to prop up the mast so the wind turbine could catch some actual wind.
+Once [all the parts were built](/blog/the-wind-turbine-part-2-desing-materials/ "The Wind Turbine Part 2: Design and Materials"), assembling the generator was a simple task since it was designed to require only a Flat Screw driver (although a Robertson could also help) and some talent. The most difficult part was to prop up the mast so the wind turbine could catch some actual wind.
 
 ## The Location
 
@@ -56,7 +56,7 @@ Five brackets with two bolts each hold the mast to the wall of the chimney. This
 
 ## Assembling the wind Turbine
 
-As [stated before](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-2-desing-and-materials/ "The wind Turbine Part 2: Desing and Materials"), all the parts for the IBee Turbine were made previous to the trip Canada, partly at [Mr. Plante](http://maps.google.ca/maps?layer=c&cbll=45.580455,-73.788764&cbp=12,97.27,,0,2.17&ved=0CBkQ2wU&ei=ZLx8S4KWMo6GzASBs-XkCA&ie=UTF8&hq=&hnear=5478+Avenue+Bourret,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&ll=45.580977,-73.788922&spn=0,359.97262&z=16&panoid=gwm0VGZgTiDg36BtysL9zw) (Genevieve's father)workshop and partly in [my workshop](http://carlitoscontraptions.com/2008/12/basement-cleanup/ "Carlitos' Workshop").
+As [stated before](/blog/the-wind-turbine-part-2-desing-materials/ "The wind Turbine Part 2: Desing and Materials"), all the parts for the IBee Turbine were made previous to the trip Canada, partly at [Mr. Plante](http://maps.google.ca/maps?layer=c&cbll=45.580455,-73.788764&cbp=12,97.27,,0,2.17&ved=0CBkQ2wU&ei=ZLx8S4KWMo6GzASBs-XkCA&ie=UTF8&hq=&hnear=5478+Avenue+Bourret,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&ll=45.580977,-73.788922&spn=0,359.97262&z=16&panoid=gwm0VGZgTiDg36BtysL9zw) (Genevieve's father)workshop and partly in [my workshop](/blog/basement-cleanup/ "Carlitos' Workshop").
 
 Below, you can see the parts in their final stage being weighted and prepared for packaging. This happened the night before I left and I kept working on the parts until pretty much the very last minute.
 

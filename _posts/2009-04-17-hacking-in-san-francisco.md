@@ -20,7 +20,7 @@ tags:
 
 I had the chance to spend a week in San Francisco a month ago (which, by the way, is a beautiful city).
 
-For some reason, everywhere I go, I end up having to repair, re-purpose, or build something. In this case, my [Eee PC](http://carlitoscontraptions.com/2008/09/eee-pc-1000-ubuntu-kde-41/ "My Eee PC")'s charger broke and I had to fix it.
+For some reason, everywhere I go, I end up having to repair, re-purpose, or build something. In this case, my [Eee PC](/blog/eee-pc-1000-ubuntu-kde-41/ "My Eee PC")'s charger broke and I had to fix it.
 
 ## Flashback
 
@@ -30,7 +30,7 @@ I lost my original charger some time ago and I had to buy a new one. Since it wa
 
 When I packed up for the trip, I took the cheap charger and left the official one at home. That was a big, big, stupid mistake.
 
-When I got to the Montreal airport and was waiting to board the plane, I decided to [write something](http://carlitoscontraptions.com/2009/03/compact-keychain-20/ "Compact Keychhain 2") for this blog and I came to the sad realization that my charger was not working. Fortunately, the Eee PC has a very long battery life and I managed to preserve the energy for a few days.
+When I got to the Montreal airport and was waiting to board the plane, I decided to [write something](/blog/compact-keychain-20/ "Compact Keychhain 2") for this blog and I came to the sad realization that my charger was not working. Fortunately, the Eee PC has a very long battery life and I managed to preserve the energy for a few days.
 
 {% fig "/img/blog/hacking-in-san-francisco/img_2009.jpg", "Modified Charger" %}
 

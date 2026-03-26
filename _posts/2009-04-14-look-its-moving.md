@@ -17,7 +17,7 @@ tags: []
 
 I have been experimenting with web servers, web design, web applications and many other things that begin with "web". The result? The blog is moving to a new address.
 
-Its new home is [http://carlitoscontraptions.com/](http://carlitoscontraptions.com/ "carlitoscontraptions.com"). I'll try to make the transition as seamless as I can and I hope not to lose too many readers in the process.
+Its new home is [the blog](/blog/). I'll try to make the transition as seamless as I can and I hope not to lose too many readers in the process.
 
 I came to this decision since I started playing with [WordPress](http://wordpress.org/ "WordPress") and I really enjoyed it. Not that I don't like Blogger, it is just that I feel I need more control over the site. I also got a pretty good deal in web hosting so getting a domain and infinite server space and bandwidth was really cheap.
 

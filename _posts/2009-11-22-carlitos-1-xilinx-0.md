@@ -25,4 +25,4 @@ I must say that although I have never used Xilinx ISE Webpack, I already hate it
 
 Anyway, after installing/uninstalling/installing many times I finally got it to work. And this very lengthy and painful process reminded me why the Open Source world is so much more convenient. Installing a full linux distribution with tons of extra programs takes half the required storage and a third of the time. Too bad FPGA programming tools are ruled by the chip manufacturers.
 
-All this painful process was required in order to get my new [NanoBoard 3000](http://carlitoscontraptions.com/2009/11/i-am-the-luckiest-engineer-ever/ "NanoBoard 3000") running. Hopefully I wont have to use Xilinx ISE anytime soon. Altium Designer was much easier to install and requires less storage.
+All this painful process was required in order to get my new [NanoBoard 3000](/blog/i-am-the-luckiest-engineer-ever/ "NanoBoard 3000") running. Hopefully I wont have to use Xilinx ISE anytime soon. Altium Designer was much easier to install and requires less storage.

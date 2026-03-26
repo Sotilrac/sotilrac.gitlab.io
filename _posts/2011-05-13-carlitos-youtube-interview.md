@@ -16,7 +16,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-[Benoit](http://www.benoitchamontin.com/) from [Geeks and Com](http://www.geeksandcom.com/) was kind enough to interview me a while back at the [Geekfest](http://carlitoscontraptions.com/tag/geekfest/). I am not sure I perform particularly well in an interview but I guess this might be interesting for those who want to know more about [Nao](http://carlitoscontraptions.com/tag/nao/). BTW, the interview is in French.
+[Benoit](http://www.benoitchamontin.com/) from [Geeks and Com](http://www.geeksandcom.com/) was kind enough to interview me a while back at the Geekfest. I am not sure I perform particularly well in an interview but I guess this might be interesting for those who want to know more about Nao. BTW, the interview is in French.
 
 {% youtube "Sr3iPzYZSOE" %}
 

@@ -58,11 +58,11 @@ Since this requires precise positioning, I thought a servo motor would be the be
 
 {% fig "/img/blog/gentle-safe-cracker/img_1388.jpg", "Electronic Parts" %}
 
-I chose the Pololu servo controller since it is easy to interface by either using a computer or a simple microcontroller. Also, I already own a USB-to-serial cable (that I normally use to program the [Arduino](http://carlitoscontraptions.com/category/arduino/ "Arduino")) that I can use to send commands to the controller.
+I chose the Pololu servo controller since it is easy to interface by either using a computer or a simple microcontroller. Also, I already own a USB-to-serial cable (that I normally use to program the Arduino) that I can use to send commands to the controller.
 
 The choice of the servo motor was based in getting the maximum torque at a reasonable price.
 
-In order to control the servo motor, I devised a simple [python module](http://files.carlitoscontraptions.com/programming/Pololu/lib_pololu.txt "lib_pololu.py") as seen in [my previous post](http://carlitoscontraptions.com/2009/07/pololu-python-library/ "Pololu Library").
+In order to control the servo motor, I devised a simple [python module](http://files.carlitoscontraptions.com/programming/Pololu/lib_pololu.txt "lib_pololu.py") as seen in [my previous post](/blog/pololu-python-library/ "Pololu Library").
 
 Since, usually, servo motors have a motion range slightly greater than 180 deg, I decided to use gears to be able to produce a motion range large enough to operate the safe (at least two full turns).
 
@@ -112,6 +112,6 @@ Finally (this time for real), I cannot say too much about my next plans on attac
 
 {# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
-I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller") and the [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). As I mentioned [before](http://carlitoscontraptions.com/2009/06/robotshop-carlitos-contraptions/ "RobotShop + Carlitos' Contraptions"), they will be sponsoring a set of projects here at [Carlitos' Contraptions](http://carlitoscontraptions.com/ "Carlitos' Contraptions") in the foreseeable future.
+I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller") and the [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). As I mentioned [before](/blog/robotshop-carlitos-contraptions/ "RobotShop + Carlitos' Contraptions"), they will be sponsoring a set of projects here at [Carlitos' Contraptions](/blog/) in the foreseeable future.
 
 They were also kind enough to quickly ship a [replacement gear set](http://www.robotshop.ca/hitec-hs-422-425-gear-set.html "Hitec HS-422/425 Replacement Resin Gears") when I ruined the original one on the servo motor by hand forcing it to turn (I know, I sound brilliant).

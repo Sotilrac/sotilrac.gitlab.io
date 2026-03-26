@@ -17,7 +17,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-**UPDATE:** See the [new version of the universal gripper](http://carlitoscontraptions.com/2011/05/diy-universal-jamming-gripper-2-0/) with more pictures and new videos.
+**UPDATE:** See the [new version of the universal gripper](/blog/diy-universal-jamming-gripper-2-0/) with more pictures and new videos.
 
 iRobot and the University of Chicago released a video of their universal robotic gripper. It is basically a gripper that can conform to the shape of seemingly every object. The video below illustrates its capabilities.
 
@@ -52,6 +52,6 @@ Below, you can see my gripper gripping many objects and even pouring water as th
 
 ## The Future
 
-As soon as I secure a nice vacuum pump, I will make a [second version of the gripper](http://carlitoscontraptions.com/2011/05/diy-universal-jamming-gripper-2-0/) using better materials. Again, any suggestions regarding the pump are welcome.
+As soon as I secure a nice vacuum pump, I will make a [second version of the gripper](/blog/diy-universal-jamming-gripper-2-0/) using better materials. Again, any suggestions regarding the pump are welcome.
 
-**UPDATE:** I found a pump thanks to the Youtube Comments! See the [2.0 version of the gripper](http://carlitoscontraptions.com/2011/05/diy-universal-jamming-gripper-2-0/).
+**UPDATE:** I found a pump thanks to the Youtube Comments! See the [2.0 version of the gripper](/blog/diy-universal-jamming-gripper-2-0/).

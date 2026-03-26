@@ -19,7 +19,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-For the second [Carlitos' Project](http://carlitoscontraptions.com/tag/carlitos-project/), I wanted to do something a bit more "useful" than pretty lights. So I decided that a speech controlled Arduino robot should be interesting enough as a project.
+For the second Carlitos' Project, I wanted to do something a bit more "useful" than pretty lights. So I decided that a speech controlled Arduino robot should be interesting enough as a project.
 
 {% fig "/img/blog/speech-controlled-arduino-robot/speech-controlled_arduino_robot.jpg", "Speech-Controlled Arduino Robot" %}
 

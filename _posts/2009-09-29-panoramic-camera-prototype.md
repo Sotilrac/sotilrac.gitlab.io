@@ -18,7 +18,7 @@ tags:
 
 ### Update:
 
-Read the follow up posts: [Panoramaker](http://carlitoscontraptions.com/2009/10/panoramaker/ "Panoramaker"), where I present the software, and [Automatic Panoramas in Montreal](http://carlitoscontraptions.com/2009/10/automatic-panoramas-in-montreal/ "Automatic Panoramas in Montreal"), where the final result can be seen.
+Read the follow up posts: [Panoramaker](/blog/panoramaker/ "Panoramaker"), where I present the software, and [Automatic Panoramas in Montreal](/blog/automatic-panoramas-in-montreal/ "Automatic Panoramas in Montreal"), where the final result can be seen.
 
 I have finally completed my second project sponsored by [RobotShop](http://www.robotshop.com/ "RobotShop"). I apologize for the immense delay, I really missed my promise of rolling out a new project every two weeks. Let's just say that I had a lot going on lately and I could barely keep up with my obligations, let alone blogging or building new projects.
 
@@ -70,9 +70,9 @@ This first prototype requires a laptop to be operated, which can be a little ann
 3.  The controlling program is run.
 4.  The user waits in awe while the camera takes pictures by itself.
 
-In order to control the hardware, I use a python script that uses my [Pololu library](http://carlitoscontraptions.com/2009/07/pololu-python-library/ "Pololu Library") and [gPhoto](http://gphoto.sourceforge.net/ "gPhoto") in order to operate the servos and the camera respectively. I chose gPhoto since it supports a very wide range of cameras and it is very easy to use.
+In order to control the hardware, I use a python script that uses my [Pololu library](/blog/pololu-python-library/ "Pololu Library") and [gPhoto](http://gphoto.sourceforge.net/ "gPhoto") in order to operate the servos and the camera respectively. I chose gPhoto since it supports a very wide range of cameras and it is very easy to use.
 
-For now, taking a full 360 panorama takes about 15 minutes. This is a very long time and is mostly due to the fact that my script was hastily put together without care about the performance and in very little time. I will, very soon, post a cleaner version of the code, as well as all the panoramas I took properly processes and in full format, similarly to what I did with my [San Francisco panoramas](http://carlitoscontraptions.com/2009/05/making-panoramas/ "San Francisco Panoramas").
+For now, taking a full 360 panorama takes about 15 minutes. This is a very long time and is mostly due to the fact that my script was hastily put together without care about the performance and in very little time. I will, very soon, post a cleaner version of the code, as well as all the panoramas I took properly processes and in full format, similarly to what I did with my [San Francisco panoramas](/blog/making-panoramas/ "San Francisco Panoramas").
 
 ## Acknowledgements
 

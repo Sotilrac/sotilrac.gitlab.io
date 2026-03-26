@@ -21,7 +21,7 @@ This is a list of the things I would like to build (any ideas are welcome):
 - Frictionless Electricity Generation on a Bike
 - Skype Phone Ringer
 - Faraday's Torch: the ones you shake.
-- Big [Van de Graaff Generator](http://carlitoscontraptions.com/2006/09/cheap-van-de-graaff-generator/)
+- Big [Van de Graaff Generator](/blog/cheap-van-de-graaff-generator/)
 - [OWI 007](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Owi-09) Computer interface
 - Weather Cube: a transparent cube that emulates current or future weather on its inside (uses internet weather information).
 - Wooden IPod Case (nano)

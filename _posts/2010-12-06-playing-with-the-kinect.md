@@ -21,7 +21,7 @@ Nevertheless, I got a Kinect and [libfreenect and the entire OpenKinect project]
 
 So far my contributions to the OpenKinect project are not too great and are limited to a [Logo candidate](http://openkinect.org/wiki/Logo_Proposals). I hope to create some neat applications with the Kinect in the future.
 
-In the meantime, I created a tripod mount for my Kinect using a 1/4"-20 machine nut and some [polymorph](http://carlitoscontraptions.com/2010/06/we-have-polymorph/). This was very easy to achieve and snaps around the Kinect to hold it very firmly. The main goal of this mount was to provide a very firm grip without permanently damaging or modifying the Kinect. See the video below for more details.
+In the meantime, I created a tripod mount for my Kinect using a 1/4"-20 machine nut and some [polymorph](/blog/polymorph/). This was very easy to achieve and snaps around the Kinect to hold it very firmly. The main goal of this mount was to provide a very firm grip without permanently damaging or modifying the Kinect. See the video below for more details.
 
 {% youtube "e9ue9D1Ee_8" %}
 

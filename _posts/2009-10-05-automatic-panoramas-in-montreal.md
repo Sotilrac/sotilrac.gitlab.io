@@ -14,7 +14,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-I used [the automated panoramic photography rig](http://carlitoscontraptions.com/2009/09/panoramic-camera-prototype/ "Panoramic Camera Prototype") (or [Panoramaker](http://carlitoscontraptions.com/2009/10/panoramaker/ "Panoramaker"), for short) in order to make some panoramas here in Montreal.
+I used [the automated panoramic photography rig](/blog/panoramic-camera-prototype/ "Panoramic Camera Prototype") (or [Panoramaker](/blog/panoramaker/ "Panoramaker"), for short) in order to make some panoramas here in Montreal.
 
 After having the rig working, I went out on my bike with my tripod, my laptop, my digital camera and the panoramic photography rig. I decided I wanted to capture the sunset at [Mount Royal](http://en.wikipedia.org/wiki/Mount_Royal "Mont Royal") but when I was halfway there, I noticed that the sun became completely covered by clouds. So I decided to shoot some other panoramas instead.
 
@@ -34,4 +34,4 @@ This is a panorama of Place Ville-Marie taken at the central fountain.
 
 The parallax errors in this one are much more significant, but then again, laziness got the best of me. They are mainly caused by the fact that the camera was not perfectly flat on the tripod when shooting this.
 
-If you want to know what are the tools used to create these panoramas, please read my previous posting on [Making Panoramas](http://carlitoscontraptions.com/2009/05/making-panoramas/ "Making Panoramas").
+If you want to know what are the tools used to create these panoramas, please read my previous posting on [Making Panoramas](/blog/making-panoramas/ "Making Panoramas").

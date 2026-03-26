@@ -19,7 +19,7 @@ tags:
 
 {% fig "/img/blog/compact-keychain-20/img_1715.jpg", "" %}
 
-The first compact [keychain](http://carlitoscontraptions.com/2007/03/compact-keychain/ "Compact Keychain") was a great success among my readers and became very [popular](http://carlitoscontraptions.com/2008/08/im-popular-science/ "Popular Science") very rapidly.
+The first compact [keychain](/blog/compact-keychain/ "Compact Keychain") was a great success among my readers and became very [popular](/blog/im-popular-science/ "Popular Science") very rapidly.
 
 Now that my life has become slightly more complex, I need an extra key (and also, I've lost my original keychain) so I had to build another one. This exposes the most obvious fault of the design: no keys can be added or removed.
 

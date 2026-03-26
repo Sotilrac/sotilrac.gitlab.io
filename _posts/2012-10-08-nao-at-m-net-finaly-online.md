@@ -18,7 +18,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-As reported before, [Nao 1337 and I appeared at the M.Net TV Show on MusiquePlus](http://carlitoscontraptions.com/2012/09/nao-1337-at-m-net/). You can now see the full [M.Net episode](http://www.musiqueplus.com/videos/m-net-14-septembre-2012-int%C3%A9grale-1.1063834) from September 14th below or at the [MusiquePlus site](http://www.musiqueplus.com/videos/m-net-14-septembre-2012-int%C3%A9grale-1.1063834).
+As reported before, [Nao 1337 and I appeared at the M.Net TV Show on MusiquePlus](/blog/nao-1337-at-m-net/). You can now see the full [M.Net episode](http://www.musiqueplus.com/videos/m-net-14-septembre-2012-int%C3%A9grale-1.1063834) from September 14th below or at the [MusiquePlus site](http://www.musiqueplus.com/videos/m-net-14-septembre-2012-int%C3%A9grale-1.1063834).
 
 {% fig "/img/blog/nao-at-m-net-finaly-online/Nao1337_Carlitos_mnet.png", "Nao1337 and Carlitos on M.Net" %}
 

@@ -15,7 +15,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-I wrote a quick debouncer code in VHDL that I thought people could enjoy and may be useful for FPGA projects. For more info on debouncers see [this post](http://carlitoscontraptions.com/2007/03/switch-debouncer/ "Switch debouncer").
+I wrote a quick debouncer code in VHDL that I thought people could enjoy and may be useful for FPGA projects. For more info on debouncers see [this post](/blog/switch-debouncer/ "Switch debouncer").
 
 As shown in the block diagram below, it takes as inputs a switch signal (SW_IN) and a clock signal (CLK) and outputs a signal SIG.
 

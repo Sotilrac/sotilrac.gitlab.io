@@ -17,7 +17,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Ever since the implementation of the new [Opus Card system](http://carlitoscontraptions.com/2009/03/opus-smart-card/ "Opus Card") by the Montreal's Public Transportation ([STM](http://stm.info/ "STM")), there have been lots of malfunctions and bugs.
+Ever since the implementation of the new [Opus Card system](/blog/opus-smart-card/ "Opus Card") by the Montreal's Public Transportation ([STM](http://stm.info/ "STM")), there have been lots of malfunctions and bugs.
 
 {% fig "/img/blog/stm-bug-report/ss851347.jpg", "Crashed STM Ticket Vending Machine" %}
 

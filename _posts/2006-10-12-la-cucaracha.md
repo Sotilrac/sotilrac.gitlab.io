@@ -23,7 +23,7 @@ This is a small and very simple robot that requires no electronics. It is inspir
 
 ## Materials:
 
-- 2 big plastic bottle caps (much like the [PC Thermometer](http://carlitoscontraptions.com/2006/09/bottle-cap-pc-thermometer/))
+- 2 big plastic bottle caps (much like the [PC Thermometer](/blog/bottle-cap-pc-thermometer/))
 - 2 Wire ties
 - 1 screw
 - 2 DC Motors

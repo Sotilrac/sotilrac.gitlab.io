@@ -20,11 +20,11 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-As the first [Carlitos' Project](http://carlitoscontraptions.com/tag/carlitos-project/), I put together a 4x4x4 RGB LED Mood Cube. This cube is composed of 64 RGB LEDs that can generate any colour you can imagine.
+As the first Carlitos' Project, I put together a 4x4x4 RGB LED Mood Cube. This cube is composed of 64 RGB LEDs that can generate any colour you can imagine.
 
 {% fig "/img/blog/rgb-led-mood-cube/led-mood-cube-kit.jpg", "RGB LED Mood Cube" %}
 
-The main idea is to display colourful patterns and nice animations in this 3D LED matrix. In order to do so, the LEDs are controlled by a [Rainbowduino](http://www.robotshop.com/ProductInfo.aspx?pc=RB-See-76), the lovechild of an [Arduino](http://carlitoscontraptions.com/project/arduino/) and an LED driver. The Rainbowduino can power up to 192 LEDs which is exactly the number required for this project (4x4x4x3 = 192).
+The main idea is to display colourful patterns and nice animations in this 3D LED matrix. In order to do so, the LEDs are controlled by a [Rainbowduino](http://www.robotshop.com/ProductInfo.aspx?pc=RB-See-76), the lovechild of an Arduino and an LED driver. The Rainbowduino can power up to 192 LEDs which is exactly the number required for this project (4x4x4x3 = 192).
 
 See the instructional video below if you want to put together a cube of your own. Be prepared to watch me do a lot of soldering at 10x speed.
 

@@ -46,6 +46,6 @@ The OQAJ founded part of this project and deserves my gratitude. If I say it is 
 
 I know, I started with all this _Maker_ thing and so far there are no instructions, no pictures of things being built, etc.
 
-The projects deserve a lot of writing, so I will dedicate one, if not several, posts to each one of them: the [wind turbine](http://carlitoscontraptions.com/2010/02/the-wind-turbine-part-1-general-idea/ "The IBee Wind Turbine"), and the solar water heater.
+The projects deserve a lot of writing, so I will dedicate one, if not several, posts to each one of them: the [wind turbine](/blog/the-wind-turbine-part-1-idea/ "The IBee Wind Turbine"), and the solar water heater.
 
 Stay put for more!

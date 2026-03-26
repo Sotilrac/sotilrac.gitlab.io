@@ -17,7 +17,7 @@ tags: []
 
 {# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
-The robotics parts retailer [RobotShop](http://www.robotshop.com/ "RobotShop.com") will be sponsoring robotics projects at [Carlitos' Contraptions](http://carlitoscontraptions.com "CarlitosContraptions.com"). As a result I'll be rolling out robotics projects for the next weeks/months.
+The robotics parts retailer [RobotShop](http://www.robotshop.com/ "RobotShop.com") will be sponsoring robotics projects at [Carlitos' Contraptions](/blog/). As a result I'll be rolling out robotics projects for the next weeks/months.
 
 I'll try to make simple projects at the beginning and build up the difficulty level as I go. The idea is that, if you completed the first projects, you will be able to reuse the skills/parts/code to build the future projects.
 

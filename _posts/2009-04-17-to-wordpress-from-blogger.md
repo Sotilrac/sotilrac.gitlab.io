@@ -25,9 +25,9 @@ I decided to write a little java script code that will do the job since it is a 
 
 ## Example:
 
-Old address: _http://carlitoscontraptions.blogspot.com/2009/03/smoking-cyclops.html_
+Old address: _/blog/smoking-cyclops/_
 
-New address: _http://carlitoscontraptions.com/2009/03/smoking-cyclops/_
+New address: _/blog/smoking-cyclops/_
 
 ## The script:
 

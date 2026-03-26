@@ -32,7 +32,7 @@ Also, KDE is much more than a desktop environment and provides a full suite of p
 
 {% fig "/img/blog/kubuntu-karmic-koala-is-out/kde_desktop_grid.png", "My Desktops (Grid View)" %}
 
-I am currently using the 64-bit version of Kubuntu and it is performing incredibly well. The system ([my laptop](http://carlitoscontraptions.com/2009/09/new-laptop/ "Dell Vostro 1320")) boots in around 40 seconds and turns off in less than 15 seconds. The graphical performance is flawless and I can benefit from smooth performance even when doing very processor intensive tasks (such as [stitching photos together](http://carlitoscontraptions.com/2009/10/automatic-panoramas-in-montreal/ "Making Panoramas")).
+I am currently using the 64-bit version of Kubuntu and it is performing incredibly well. The system ([my laptop](/blog/new-laptop/ "Dell Vostro 1320")) boots in around 40 seconds and turns off in less than 15 seconds. The graphical performance is flawless and I can benefit from smooth performance even when doing very processor intensive tasks (such as [stitching photos together](/blog/automatic-panoramas-in-montreal/ "Making Panoramas")).
 
 Also, It comes with [Ubutu One](https://one.ubuntu.com/ "Ubuntu One") (a remote storage service) which is pretty convenient for sharing and backing up files.
 

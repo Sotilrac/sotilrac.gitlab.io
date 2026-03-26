@@ -16,7 +16,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Now that the [general idea](http://carlitoscontraptions.com/2010/02/the-wind-turbine-part-1-general-idea/ "Wind Turbine Part 1: General Idea") has been introduced, let us have a look at the materials and parts that make up the IBee Turbine design.
+Now that the [general idea](/blog/the-wind-turbine-part-1-idea/ "Wind Turbine Part 1: General Idea") has been introduced, let us have a look at the materials and parts that make up the IBee Turbine design.
 
 ## The Materials
 
@@ -131,4 +131,4 @@ The wind turbine requires a tail so it can follow the direction of the wind. For
 
 {% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2831.jpg", "The finished tail" %}
 
-**Coming up:** [_Part 3: Building the Generator_](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-3-building-the-generator/)
+**Coming up:** [_Part 3: Building the Generator_](/blog/the-wind-turbine-part-3-generator/)

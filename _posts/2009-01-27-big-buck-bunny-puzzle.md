@@ -30,7 +30,7 @@ I wanted to reproduce this toy so my girlfriend and I built a new version of thi
 
 ## Materials
 
-- Wood (the same pieces from the garbage I used in the [bunk bedside table](http://carlitoscontraptions.com/2009/01/bunk-bedside-table/ "Bunk Bedside Table"), in my case)
+- Wood (the same pieces from the garbage I used in the [bunk bedside table](/blog/bunk-bedside-table/ "Bunk Bedside Table"), in my case)
 - Wood glue
 - Two picture printouts (see the SVGs below)
 
