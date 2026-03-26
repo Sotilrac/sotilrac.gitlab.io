@@ -1,0 +1,4787 @@
+[
+  {
+    "repoFile": "2006-08-22-introduction.md",
+    "postSlug": "introduction",
+    "title": "Introduction",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/08/introduction.html",
+    "availableImages": ["carlos.0.jpg", "carlos.1.jpg", "carlos.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "carlos.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/carlos.1.jpg"
+      },
+      {
+        "localName": "carlos.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/carlos.0.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/introduction/carlos.jpg",
+        "caption": "Carlos"
+      }
+    ],
+    "issues": [
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 1,
+        "blogspotCount": 2
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-09-05-cheap-van-de-graaff-generator.md",
+    "postSlug": "cheap-van-de-graaff-generator",
+    "title": "Cheap Van de Graaff Generator",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/09/cheap-van-de-graaff-generator.html",
+    "availableImages": [
+      "van-de-graaf-on.0.jpg",
+      "van-de-graaf-on.jpg",
+      "van-de-graaf-wiki.jpg",
+      "van-de-graaff-disassembled.jpg",
+      "van-de-graaff-front-close-up.jpg",
+      "van-de-graaff-inside.jpg",
+      "van-de-graaff-off.0.jpg",
+      "van-de-graaff-off.jpg",
+      "van-de-graaff-side.jpg",
+      "van-de-graaff.jpg",
+      "van_de_graaff_generator_sm.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "van_de_graaff_generator_sm.jpg",
+        "originalUrl": "http://upload.wikimedia.org/wikipedia/commons/8/82/Van_de_graaff_generator_sm.jpg"
+      },
+      {
+        "localName": "van-de-graaf-wiki.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaf%20wiki.jpg"
+      },
+      {
+        "localName": "van-de-graaff.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff.jpg"
+      },
+      {
+        "localName": "van-de-graaff-disassembled.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff%20disassembled.jpg"
+      },
+      {
+        "localName": "van-de-graaff-side.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff%20side.jpg"
+      },
+      {
+        "localName": "van-de-graaff-inside.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff%20inside.jpg"
+      },
+      {
+        "localName": "van-de-graaff-front-close-up.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff%20front%20close%20up.jpg"
+      },
+      {
+        "localName": "van-de-graaff-off.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff%20off.0.jpg"
+      },
+      {
+        "localName": "van-de-graaff-off.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaff%20off.jpg"
+      },
+      {
+        "localName": "van-de-graaf-on.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaf%20on.0.jpg"
+      },
+      {
+        "localName": "van-de-graaf-on.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/van%20de%20graaf%20on.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff.jpg",
+        "caption": "Van de Graff generator"
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaf-wiki.jpg",
+        "caption": "Generator Design"
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff.jpg",
+        "caption": "How it works"
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-disassembled.jpg",
+        "caption": "The Parts"
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-side.jpg",
+        "caption": "Side view"
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-inside.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-front-close-up.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-off.0.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/cheap-van-de-graaff-generator/van-de-graaf-on.0.jpg",
+        "caption": "Van de Graff Generator ON"
+      }
+    ],
+    "issues": [
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 9,
+        "blogspotCount": 11
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-09-15-bottle-cap-pc-thermometer.md",
+    "postSlug": "bottle-cap-pc-thermometer",
+    "title": "Bottle Cap PC Thermometer",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/09/bottle-cap-pc-thermometer.html",
+    "availableImages": [
+      "shema.jpg",
+      "thermometer-circuit.jpg",
+      "thermometer-extended.jpg",
+      "thermometer-full.jpg",
+      "thermometer-inside.jpg",
+      "thermometer.2.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "shema.jpg",
+        "originalUrl": "http://www.electronics-lab.com/projects/pc/013/shema.jpg"
+      },
+      {
+        "localName": "thermometer-circuit.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/thermometer%20circuit.jpg"
+      },
+      {
+        "localName": "thermometer-extended.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/thermometer%20extended.jpg"
+      },
+      {
+        "localName": "thermometer.2.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/thermometer.2.jpg"
+      },
+      {
+        "localName": "thermometer-inside.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/thermometer%20inside.jpg"
+      },
+      {
+        "localName": "thermometer-full.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/thermometer%20full.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/bottle-cap-pc-thermometer/shema.jpg",
+        "caption": "Digital Thermometer Circuit Schematics"
+      },
+      {
+        "path": "/img/blog/bottle-cap-pc-thermometer/thermometer-circuit.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/bottle-cap-pc-thermometer/thermometer-extended.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/bottle-cap-pc-thermometer/thermometer.2.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/bottle-cap-pc-thermometer/thermometer inside.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/bottle-cap-pc-thermometer/thermometer full.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "missing_image",
+        "current": "/img/blog/bottle-cap-pc-thermometer/thermometer inside.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "/img/blog/bottle-cap-pc-thermometer/thermometer full.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-09-24-wireless-skype-phone.md",
+    "postSlug": "wireless-skype-phone",
+    "title": "Wireless Skype Phone",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/09/wireless-skype-phone.html",
+    "availableImages": [
+      "phone-connection.jpg",
+      "phone-finished.jpg",
+      "phone-inside.jpg",
+      "phone-switch-inside.jpg",
+      "phone-switch.jpg",
+      "phone-washer.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "phone-inside.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/phone%20inside.jpg"
+      },
+      {
+        "localName": "phone-connection.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/phone%20connection.jpg"
+      },
+      {
+        "localName": "phone-washer.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/phone%20washer.jpg"
+      },
+      {
+        "localName": "phone-switch-inside.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/phone%20switch%20inside.jpg"
+      },
+      {
+        "localName": "phone-switch.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/phone%20switch.jpg"
+      },
+      {
+        "localName": "phone-finished.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/phone%20finished.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "2498_full.jpg",
+        "caption": ""
+      },
+      {
+        "path": "phone inside.jpg",
+        "caption": ""
+      },
+      {
+        "path": "phone connection.jpg",
+        "caption": ""
+      },
+      {
+        "path": "phone washer.jpg",
+        "caption": ""
+      },
+      {
+        "path": "phone switch inside.jpg",
+        "caption": ""
+      },
+      {
+        "path": "phone switch.jpg",
+        "caption": ""
+      },
+      {
+        "path": "phone finished.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "2498_full.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "phone inside.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "phone connection.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "phone washer.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "phone switch inside.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "phone switch.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "phone finished.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "2498_full.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "phone inside.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "phone connection.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "phone washer.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "phone switch inside.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "phone switch.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "phone finished.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-10-07-make-your-girlfriend-happy-for-025.md",
+    "postSlug": "make-your-girlfriend-happy-for-025",
+    "title": "Make Your Girlfriend Happy For 0.25$",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/10/make-your-girlfriend-happy-for-025.html",
+    "availableImages": [
+      "coin-spining.jpg",
+      "coin.jpg",
+      "hammer-coin.jpg",
+      "img_1255.jpg",
+      "ring.jpg",
+      "ring2.jpg",
+      "screwed-coin.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "hammer-coin.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjIfiR-BQ1wnKygRFCUcz9cBEfuql7Y_T70bYLSdnQ-BMbTXZsTQgsv-dGTxu3uhhcIhvLeOFdO3YP-ViUp52x-GwmUHpzVotwcu2JykLNXClMqBCHii8l1vMY8NnyS1DZo0j7/s0/hammer+coin.jpg"
+      },
+      {
+        "localName": "coin.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYVTSQ10OEPyvQKd6b1wGoUnX-HjaU4i22qt7oANH_5l5GSwwOBxhNTuzgeMC6PTWrLMXKDNIQ7WmuVXctNuR94Suk_O2cdbzzXVFxI4vliRH7WlvBhdXmVvmogHG0hPgCHXWn/s0/coin.jpg"
+      },
+      {
+        "localName": "coin-spining.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9RndAd3XM6M6_8jEt2iQ6iNXQyfnknSicUOa37jHpDuOlKfvWoE9JQ1CY0DeNOp-ZSCScb_tI5DL3t5kSMR9fmke8W4-lqj4BC6ENa2jRT3jqQXNZDIGEu8EvrT5fEMq3zkw9/s0/coin+spining.jpg"
+      },
+      {
+        "localName": "screwed-coin.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkgI6btJSLqh92OzCa6M1qUmVh6a2aKf5iU5Pi30mZev8yCifCGNS8m-61x33AS5xEVL41ftDp0D0KwZeA1DUuXgD15PVX3hToWhNL2zQgV2RW1ONxPCT1VQc75a3zSpCrV9TE/s0/screwed+coin.jpg"
+      },
+      {
+        "localName": "ring.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/ring.jpg"
+      },
+      {
+        "localName": "ring2.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/ring2.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/make-your-girlfriend-happy-for-025/img_1255.jpg",
+        "caption": "Canadian Quarter"
+      },
+      {
+        "path": "hammer+coin.jpg",
+        "caption": ""
+      },
+      {
+        "path": "coin.jpg",
+        "caption": ""
+      },
+      {
+        "path": "coin+spining.jpg",
+        "caption": ""
+      },
+      {
+        "path": "screwed+coin.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ring.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ring2.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "hammer+coin.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "coin.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "coin+spining.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "screwed+coin.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ring.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ring2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "hammer+coin.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "coin+spining.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "screwed+coin.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-10-10-coming-soon.md",
+    "postSlug": "coming-soon",
+    "title": "Coming Soon",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/10/coming-soon.html",
+    "availableImages": ["powersupply.0.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "powersupply.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/powersupply.0.jpg"
+      }
+    ],
+    "currentFigRefs": [],
+    "issues": [
+      {
+        "type": "no_images_in_post",
+        "blogspotImageCount": 1
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 0,
+        "blogspotCount": 1
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-10-12-la-cucaracha.md",
+    "postSlug": "la-cucaracha",
+    "title": "La Cucaracha",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/10/la-cucaracha.html",
+    "availableImages": [
+      "cuca-circuit.jpg",
+      "cucaracha-back.1.jpg",
+      "cucaracha-back.jpg",
+      "cucaracha-bottom.jpg",
+      "cucaracha-charger.0.jpg",
+      "cucaracha-charger.1.jpg",
+      "cucaracha-charging.1.jpg",
+      "cucaracha-charging.jpg",
+      "cucaracha-close.1.jpg",
+      "cucaracha-close.jpg",
+      "cucaracha-front.jpg",
+      "cucaracha-side.jpg",
+      "plastic-clip.0.jpg",
+      "plastic-clip.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "cucaracha-side.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20side.jpg"
+      },
+      {
+        "localName": "cucaracha-back.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20back.1.jpg"
+      },
+      {
+        "localName": "cucaracha-back.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20back.jpg"
+      },
+      {
+        "localName": "cucaracha-close.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20close.1.jpg"
+      },
+      {
+        "localName": "cucaracha-close.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20close.jpg"
+      },
+      {
+        "localName": "cuca-circuit.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cuca%20circuit.jpg"
+      },
+      {
+        "localName": "cucaracha-charging.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20charging.1.jpg"
+      },
+      {
+        "localName": "cucaracha-charging.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20charging.jpg"
+      },
+      {
+        "localName": "cucaracha-charger.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20charger.1.jpg"
+      },
+      {
+        "localName": "cucaracha-charger.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20charger.0.jpg"
+      },
+      {
+        "localName": "plastic-clip.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/plastic%20clip.0.jpg"
+      },
+      {
+        "localName": "plastic-clip.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/plastic%20clip.jpg"
+      },
+      {
+        "localName": "cucaracha-bottom.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20bottom.jpg"
+      },
+      {
+        "localName": "cucaracha-front.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/cucaracha%20front.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "cucaracha side.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cucaracha back.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cucaracha close.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cuca circuit.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cucaracha charging.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cucaracha charger.0.jpg",
+        "caption": ""
+      },
+      {
+        "path": "plastic clip.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cucaracha bottom.jpg",
+        "caption": ""
+      },
+      {
+        "path": "cucaracha front.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "cucaracha side.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cucaracha back.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cucaracha close.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cuca circuit.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cucaracha charging.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cucaracha charger.0.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "plastic clip.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cucaracha bottom.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "cucaracha front.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha side.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha back.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha close.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cuca circuit.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha charging.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha charger.0.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "plastic clip.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha bottom.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "cucaracha front.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 9,
+        "blogspotCount": 14
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-11-10-bench-power-supply.md",
+    "postSlug": "bench-power-supply",
+    "title": "Bench Power Supply",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/11/bench-power-supply.html",
+    "availableImages": [
+      "captpost.jpg",
+      "power-supply-circuit.gif",
+      "power-supply-pinout.0.gif",
+      "power-supply1.jpg",
+      "power-supply3.jpg",
+      "power-supply4.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "captpost.jpg",
+        "originalUrl": "http://www.futurlec.com/Pictures/CAPTPOST.jpg"
+      },
+      {
+        "localName": "power-supply-pinout.0.gif",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply%20pinout.0.gif"
+      },
+      {
+        "localName": "power-supply-circuit.gif",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply%20circuit.gif"
+      },
+      {
+        "localName": "power-supply1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply1.jpg"
+      },
+      {
+        "localName": "power-supply3.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply3.jpg"
+      },
+      {
+        "localName": "power-supply4.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/Power%20Supply4.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "Power Supply pinout.0.gif",
+        "caption": ""
+      },
+      {
+        "path": "Power Supply circuit.gif",
+        "caption": ""
+      },
+      {
+        "path": "Power Supply1.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Power Supply3.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Power Supply4.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "Power Supply pinout.0.gif",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Power Supply circuit.gif",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Power Supply1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Power Supply3.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Power Supply4.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Power Supply pinout.0.gif",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Power Supply circuit.gif",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Power Supply1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Power Supply3.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Power Supply4.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 5,
+        "blogspotCount": 6
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-11-15-1000-visits.md",
+    "postSlug": "1000-visits",
+    "title": "1000 Visits!",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/11/1000-visits.html",
+    "availableImages": ["gmail.gif"],
+    "blogspotImages": [
+      {
+        "localName": "gmail.gif",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/gmail.gif"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "gmail.gif",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "gmail.gif",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-12-02-opamp.md",
+    "postSlug": "opamp",
+    "title": "Opamp",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/12/opamp.html",
+    "availableImages": [],
+    "blogspotImages": [],
+    "currentFigRefs": [
+      {
+        "path": "chip.active loaded diff amp.jpg",
+        "caption": ""
+      },
+      {
+        "path": "chip.class AB output stage.jpg",
+        "caption": ""
+      },
+      {
+        "path": "chip.layout.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_0030.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_0023.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_0020.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "chip.active loaded diff amp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "chip.class AB output stage.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "chip.layout.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_0030.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_0023.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_0020.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "chip.active loaded diff amp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "chip.class AB output stage.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "chip.layout.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_0030.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_0023.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_0020.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-12-03-wireless-am-receiver.md",
+    "postSlug": "wireless-am-receiver",
+    "title": "Wireless AM receiver",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/12/wireless-am-receiver.html",
+    "availableImages": [],
+    "blogspotImages": [],
+    "currentFigRefs": [
+      {
+        "path": "wireless AM receiver.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_0028.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "wireless AM receiver.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_0028.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "wireless AM receiver.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_0028.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-12-04-bogota-rake.md",
+    "postSlug": "bogota-rake",
+    "title": "Bogotá Rake",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/12/bogot-rake.html",
+    "availableImages": [],
+    "blogspotImages": [],
+    "currentFigRefs": [
+      {
+        "path": "bristle.jpg",
+        "caption": ""
+      },
+      {
+        "path": "bogota template.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_0018.jpg",
+        "caption": ""
+      },
+      {
+        "path": "bogota closeup.jpg",
+        "caption": ""
+      },
+      {
+        "path": "tension wrench.jpg",
+        "caption": ""
+      },
+      {
+        "path": "bogota2.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "bristle.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "bogota template.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_0018.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "bogota closeup.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "tension wrench.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "bogota2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "bristle.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "bogota template.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_0018.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "bogota closeup.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "tension wrench.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "bogota2.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-12-05-quick-and-cheap-laptop-lamp.md",
+    "postSlug": "quick-and-cheap-laptop-lamp",
+    "title": "Quick and Cheap Laptop Lamp",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/12/quick-and-cheap-laptop-lamp.html",
+    "availableImages": ["laptop_usb_led_reading_light.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "laptop_usb_led_reading_light.jpg",
+        "originalUrl": "http://img.alibaba.com/photo/50490807/Laptop_USB_LED_Reading_Light.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "laptop lamp.jpg",
+        "caption": ""
+      },
+      {
+        "path": "light.jpg",
+        "caption": ""
+      },
+      {
+        "path": "laptop lamp closeup.jpg",
+        "caption": ""
+      },
+      {
+        "path": "laptop lamp in action.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "laptop lamp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "light.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "laptop lamp closeup.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "laptop lamp in action.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "laptop lamp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "light.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "laptop lamp closeup.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "laptop lamp in action.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-12-24-cd-lamp.md",
+    "postSlug": "cd-lamp",
+    "title": "CD Lamp²",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/12/cd-lamp.html",
+    "availableImages": [
+      "calcium-tablet-package.jpg",
+      "cdlamp-on-front.jpg",
+      "cdlamp-on-side.jpg",
+      "cdlamp-side-2.jpg",
+      "cdlamp-side.jpg",
+      "cdlamp-washer.jpg",
+      "cdlamp.jpg",
+      "lamp-switch.jpg",
+      "lampcircuit.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "cdlamp-side-2.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdcRH71BiTsW446cSfcVOrB8KfxNurRsdrHZVKZQl6D8y79gKrqvG2qLPRRPcq923E-iMldcBI0R6XCptvK532_xIyqktTnI01hbXa4WoOSreoBdDpz2c-xyuUnsOy9NY1194s/s0/CDLamp+Side+2.jpg"
+      },
+      {
+        "localName": "cdlamp.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSZvR0Y8LYnQ4mbUVZq0b0Q9NcmOx3NbBvru2L9EFbFYR_iLYdzj0OG4J6Yr0rp0P3u1Bhmpgud_XXNdgJuBiYOOTSnZ7zbVFlqa6E_6R1skH8sDLo2n_QSf9dFxS9WvvJ8ZHz/s0/CDLamp.jpg"
+      },
+      {
+        "localName": "cdlamp-side.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1a16XQ4ULI5tAez_wzoXQgtmGKnp42j9ArKaGnqkfxiYSYBG3tqTzGF6UN7NoaOzSgjp8Sa3UqDG9slUNltsrPJfl43BHbd-mBTrZXSWYUp-anuJYj81IfRyJLIc1xoeBTME0/s0/CDLamp+Side.jpg"
+      },
+      {
+        "localName": "lampcircuit.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjni-nRckDvu4et8UcTg65648K60vjUmdT-hY3nY24u8zGDeeO3vvHWqYNn-OkodkEbAE55geHaPlhthufP7rFDh92NcjYo4ZOskS9OActLiFYLoxsR0-yHEx2JQUgvbtESpAw/s0/LampCircuit.jpg"
+      },
+      {
+        "localName": "calcium-tablet-package.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFdOBzRscjlyVwx7wSP_1SjHTLtEpk98yVv_bJbSKzXvU6fYvct95qkpoYEDkMhxQDQnEgjP5yp6JJO8mJOtE5RQ9VLI2siNFeC1zjJGV3u0MGJm5aBoBD9RlsFzQ_kKNSnQd-/s0/Calcium+tablet+package.jpg"
+      },
+      {
+        "localName": "lamp-switch.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz3oEc3iDSJ6-JKGVh0H7Wtjsox70rtUmrR1Vr5WRnV04ibLRbzsNB7El0X6UBqxzoPwK_zvrdMal5zPRa3s3uTIXBAquh0WiCzvtsTZXiiGlmXO9TxJlAX9OLS7slCDXpyRUC/s0/Lamp+Switch.jpg"
+      },
+      {
+        "localName": "cdlamp-washer.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglAkdKMFbfDfh-a9qECYNZJIgluDZqnf6k7PIELg3NNBbv5ExHCzDABs64q-F0MPNswvlXLp2KCs4Ufcms515m_sUqGKE-oXbDXC162F6yXa44Z9d1Q1CyhnRNkoV3y8RViPnz/s0/CDLamp+Washer.jpg"
+      },
+      {
+        "localName": "cdlamp-on-front.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvyF4QyxM1h-aGb-72kawxkuLVP4CIZVyuQHJe8I9mOqoVf5p4coxhIqWoHcYqlAi-OcrwNXjpcvW9MuVJmoavKqpggjIvXaTGaty65gtsWaa2S9VMITvYCPx63QCxXNjszeni/s0/CDLamp+ON+front.jpg"
+      },
+      {
+        "localName": "cdlamp-on-side.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV-E_2p8ojlr6XlBWcJ1XKA2Bk37pNZnSulVEA4zlOy1ljmsZIdbFuXow8a_w2_N8dGlRaUfwUMzfUS2aIw6gTRn-y85IkhoNUJbwhTBpYZiWtS1WUNmPdWBpBZSfMCwikHhAk/s0/CDLamp+ON+Side.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "CDLamp+Side+2.jpg",
+        "caption": ""
+      },
+      {
+        "path": "CDLamp.jpg",
+        "caption": ""
+      },
+      {
+        "path": "CDLamp+Side.jpg",
+        "caption": ""
+      },
+      {
+        "path": "LampCircuit.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Calcium+tablet+package.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Lamp+Switch.jpg",
+        "caption": ""
+      },
+      {
+        "path": "CDLamp+Washer.jpg",
+        "caption": ""
+      },
+      {
+        "path": "CDLamp+ON+front.jpg",
+        "caption": ""
+      },
+      {
+        "path": "CDLamp+ON+Side.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "CDLamp+Side+2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "CDLamp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "CDLamp+Side.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "LampCircuit.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Calcium+tablet+package.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Lamp+Switch.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "CDLamp+Washer.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "CDLamp+ON+front.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "CDLamp+ON+Side.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CDLamp+Side+2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CDLamp.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CDLamp+Side.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "LampCircuit.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Calcium+tablet+package.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Lamp+Switch.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CDLamp+Washer.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CDLamp+ON+front.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CDLamp+ON+Side.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-01-23-toast-oven-makeover.md",
+    "postSlug": "toast-oven-makeover",
+    "title": "Toast Oven Makeover",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/01/toast-oven-makeover.html",
+    "availableImages": [
+      "after1.jpg",
+      "after2.jpg",
+      "before1.jpg",
+      "before2.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "before1.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-9M5sAQQJquPCoJa-iRW6myhM4mwwI89EaXQ012phcWdrxdh5Yo843XfnrP97UCGXxlgBLN_Czg0jCBMlgwt4x1oDpcdy34PnKU-eW5NTHJaeEdYdqy__zhJrVdQPjvj3BwxZ/s0/Before1.jpg"
+      },
+      {
+        "localName": "before2.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGZjfd2dibiQQLl-Hci549BMQl7-kH4Tvx8ZO1xH6yc7gyzgyR1wDzA1xoMyQAnLK2rKewyMuv1dSjMAG47rMbWxEE8GWv1sA4uRziijoGjd19yAkcMwdELsn2II4uhKF6uwpA/s0/Before2.jpg"
+      },
+      {
+        "localName": "after1.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3FxEA76fC5ieUeOSdXc4RXxu5cv_12rY3EZOCfoL-Hg-idt4mjVeA-lykJ40Wgwdnz9lkDJBauhlOBSrTGLgoUeXaitzTEDB7ymHPB5zy_Ib2YpHddi3Xyqxpzcq1VeMGdrOj/s0/After1.jpg"
+      },
+      {
+        "localName": "after2.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU0XCR3AA7BhWdDW5W0aRdUyWt0yjwumwZ8MlFZLGteD3Fxwep-KoUUuGhJqAEhBppyfMjkMY3KpgiApEijsZrmugbYenY9oHumUVEz3lgn8gIvRMoYdv9jCPKcdcuAhSOSJl-/s0/After2.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "Before1.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Before2.jpg",
+        "caption": ""
+      },
+      {
+        "path": "After1.jpg",
+        "caption": ""
+      },
+      {
+        "path": "After2.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "Before1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Before2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "After1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "After2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Before1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Before2.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "After1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "After2.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-02-18-lcd-display.md",
+    "postSlug": "lcd-display",
+    "title": "LCD Display",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/02/lcd-display.html",
+    "availableImages": ["lcd3.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "lcd3.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeD-MVBpcSzYBcRcsrNAGTHo-W_qbW43rLPenykkXqeNvenRd-QOl64WNNopW1qhHfS4tPJr7k7HqLo8O8JFJxLC-eweYXC1eTweSoJ1X9VKcfJJz-iFNeZp7Z9wUfP-A5nExe/s0/LCD3.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "LCD3.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "LCD3.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "LCD3.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-02-21-switching-to-ubuntu.md",
+    "postSlug": "switching-to-ubuntu",
+    "title": "Switching to Ubuntu",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/02/switching-to-ubuntu.html",
+    "availableImages": ["screenshot-1.png", "tux-swatter-2.png"],
+    "blogspotImages": [
+      {
+        "localName": "tux-swatter-2.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjylbJDqpKisrdUzZa20pDoPu33_dD4FyX18un3U-KDzaY9xM95WHbcwrzaLbROvSS42o8ayrA2aKIXLPsVRd6rkiQFJizkjCYIGL5U30Ym-5VQ62N05BWSCI4RprvITJvvY1mw/s0/tux+swatter+2.png"
+      },
+      {
+        "localName": "screenshot-1.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipio3t1GI4X7AHS5-7WK816sM4S6-e36omaVU2h8YorUVzkOYhEmTyyanFhx2OAgqYeHXiI3NkDgViJ2jgYc9bT5yT684s_vkUONojIProK6RXPR40DBnQ0iaTYtZsfnshfZDy/s0/Screenshot-1.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/switching-to-ubuntu/tux+swatter+2.png",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/switching-to-ubuntu/Screenshot-1.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "missing_image",
+        "current": "/img/blog/switching-to-ubuntu/tux+swatter+2.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "/img/blog/switching-to-ubuntu/Screenshot-1.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-03-05-compact-keychain.md",
+    "postSlug": "compact-keychain",
+    "title": "Compact Keychain",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/03/compact-keychain.html",
+    "availableImages": ["keys.jpg", "keys2.jpg", "keys3.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "keys.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFna5olqvVpky2xzSlDN5MJJCEiuNnwAQNL3lZM73jSN85MHLObgChIQLsVRDAowLCbkKcb0O-ivIMD3a1hO2TuvyaCRodnDuWURA5iYNjE4IArFzDvGN9Cem5Bj-ww20pLgno/s0/keys.JPG"
+      },
+      {
+        "localName": "keys2.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5PleaYOLZPtcS103mRRdhaJCG2II4KbsXQII9vuGOqY6CmdSbWNsl09PmsoAsqP_cVQxOlqUGR80lPRqEAEhAP6dF4kBJzicUAp0sCNym1-bjHqQiuM_VONXcNL7mjkxaM-dH/s0/keys2.JPG"
+      },
+      {
+        "localName": "keys3.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2FMd_tFiZgJVAyigiY7l7stvKBd5T6m79z9xb7ZBu6WxF4u43l7BREffndB3Qt1NscYCkChYHiogI_2PaJc-34GCfnWXqZHeWB24Uyb92dmk63uzNTl1Zop6JMRGPE_5dwDCG/s0/keys3.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "keys.JPG",
+        "caption": ""
+      },
+      {
+        "path": "keys2.JPG",
+        "caption": ""
+      },
+      {
+        "path": "keys3.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "keys.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "keys2.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "keys3.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "keys.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "keys2.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "keys3.JPG",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-03-08-more-linux.md",
+    "postSlug": "more-linux",
+    "title": "More Linux",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/03/more-linux.html",
+    "availableImages": [
+      "kde1.png",
+      "konqueror.png",
+      "konqueror1.png",
+      "nautilus.png",
+      "panels.png",
+      "resize-icon.png",
+      "scale.png",
+      "thumbnails.png"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "scale.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLyZ6RjhC-S-BXIqXbfanupn9ZosqISN3EElJJFLjAQ6RS0nHck54kGU8ERltcE0xTl6J91v7wEyZd61iNd6JypG9v2U_c5YGpH_Zrra64TRH7PVCTCQ-wARpqeKTxMRD0NrVK/s0/scale.png"
+      },
+      {
+        "localName": "resize-icon.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQSgvR5jukF9ikvjsh_z_fmP65rOfeJMN0ZbzMD9gu88xIvRXu8VNklcDo2-4iPeYKAXfTyMaM3j2eusO8Ld3E_xSQ35PXjWRZ5XJxJhvIBVwlB-54cKBZkrzPsCg15Ed6mdkQ/s0/resize+icon.png"
+      },
+      {
+        "localName": "panels.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKU_4smzOsUCAYiB1kjGpRhiyq1OZeeRcdiLZf9182zKxhjUTolQWg-Mmt_L18P77P-CJDyfJMtD2bNKRZvO8FwSk5vXee9R6sPyC9M1G8IL9J1o1LhVWC0ZPR2kn-IHaAog2y/s0/panels.png"
+      },
+      {
+        "localName": "kde1.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKbYKRUFgilJb7IR1d1wfNMxJfUXGxLmdUo0vqPzKcmifS5_3DoYGpX66gomssVqoBDHBOH67Kq3PRQ2lPQMn4HlJbitQ8X8omwwTwQ8bHBzxfedF6jbpzBdhXuE1DTwX0dFP8/s0/KDE1.png"
+      },
+      {
+        "localName": "nautilus.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiHOyJ-nB5ieo7EapuHld66PKmBMBhrAJ7RBthBVicgMpwz6Hi8M6ENPtY-Mki9alnJyCCXEJIehE9QV07XwScuZZWCn2ypsmbWn8XpTG2QnI_-yK15Ok3CI1pk8HHlB8K-O4y/s0/nautilus.png"
+      },
+      {
+        "localName": "thumbnails.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5vNIjuvlvswyDph5kIzhjoopdWc7fKGcSwcSDqju6ZaKzynqZ73s6PHHoaE9Js8P8lzDu89y9Ek8qumD0KPiQukpA1x-N468a3H1tofS4w2uCRIjnpAwbeWixOK7JjUhlk1vW/s0/thumbnails.png"
+      },
+      {
+        "localName": "konqueror.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuMEW1hjlUi00nrTCTDHt0cY8z2QVyFzu-st4P-q02iLLRexdKsgRb0Oqt2FvB-z5o5GdOiClVoAJlLAgQn4EjTwY_3CNlMiFtWhezFpiiuXoka1zo0qhjIrAtko6onr1q4Fae/s0/Konqueror.png"
+      },
+      {
+        "localName": "konqueror1.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzWlZSsG97HMS05vn9tfuCEqQRtPA_ckzRAloGJTojUrzMRCPCSfm2R7EU4LA4nq3-eo_kqIohXAjJCIaO3Lv3qz_SQMgw6iLn7DZk3VpxDZImiYjnV1ujOZ2R4ZH-IRyEuKzd/s0/Konqueror1.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "scale.png",
+        "caption": ""
+      },
+      {
+        "path": "resize+icon.png",
+        "caption": ""
+      },
+      {
+        "path": "panels.png",
+        "caption": ""
+      },
+      {
+        "path": "KDE1.png",
+        "caption": ""
+      },
+      {
+        "path": "nautilus.png",
+        "caption": ""
+      },
+      {
+        "path": "thumbnails.png",
+        "caption": ""
+      },
+      {
+        "path": "Konqueror.png",
+        "caption": ""
+      },
+      {
+        "path": "Konqueror1.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "scale.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "resize+icon.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "panels.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "KDE1.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "nautilus.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "thumbnails.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Konqueror.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Konqueror1.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "resize+icon.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "KDE1.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Konqueror.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Konqueror1.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-03-08-supercapacitors.md",
+    "postSlug": "supercapacitors",
+    "title": "Supercapacitors",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/03/supercapacitors.html",
+    "availableImages": ["box.jpg", "capacitorsbox.jpg", "supercapacitors.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "box.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTN5H-pODcgyFQnBcsZ_NbNA1BdzjklpmkKPv6ze4dK9Yu-PdmR7Zfr_v40UOOZ_cBg9jEWSJa4uB7_2M_yIdc80rtzti0u0tJWygf9nAbRn1ZDcxd8qIBMR9Om5UggfeI95Sv/s0/box.jpg"
+      },
+      {
+        "localName": "capacitorsbox.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLBDxrJ_R8VGXzDh_IgiWps7FDEGtx_e2NhJaNbnGku3dreTcxt1N69HSZJRVNJfQ_5iRevadSpLyEwvtOIfP2p0tPOccHWUadcMQI8Dj723bjdsdZtLczBljbossENPxeBAxs/s0/capacitorsbox.jpg"
+      },
+      {
+        "localName": "supercapacitors.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgj2HdXaCmvuSCggnoSbE2pzdV_nERAooMMzVKSxn0ZLbud8BoIxijWEyE5Cjvq1mLUF0bw0mcKLh_srXQdtXQPwQ3HIEn01bsQfDUT8e01U_YNwKyQrDvfDD_fOZyGP1VmmxOu/s0/supercapacitors.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "box.jpg",
+        "caption": ""
+      },
+      {
+        "path": "capacitorsbox.jpg",
+        "caption": ""
+      },
+      {
+        "path": "supercapacitors.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "box.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "capacitorsbox.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "supercapacitors.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-03-14-switch-debouncer.md",
+    "postSlug": "switch-debouncer",
+    "title": "Switch Debouncer",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/03/switch-debouncer.html",
+    "availableImages": [
+      "debounce_graph.png",
+      "debouncer-std.png",
+      "debouncer_schematics.png"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "debounce_graph.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirpFuHadaLZlPJ4u7iz2OuV2Q54eek7k94_9xrdMSZLATy6PERyI8DpqWjt8_dkVy0sa99Lc4ROiwt710DPBlKTsSz9_oc_71dBToYHNPtSpcS1GVosMQA3G0KpiNdrgwub_EN/s0/debounce_graph.png"
+      },
+      {
+        "localName": "debouncer-std.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX1zeXKnchnU3eqtuDSOhP2nhvuPPdrpdP5G7B3ltfFpqvm9QqtyOXi8zAsj9FJPYfaI9JIG8TjmsSni2-KM0UavEzpPoRM8nXKEQxDLeFUGPg1Y2MZ9fa7YGE6Or1zgGBhZCz/s0/debouncer+std.png"
+      },
+      {
+        "localName": "debouncer_schematics.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0GB_5qtptom2TtJtQVSagKaU_3scR0uPXWIXDwvcxTlJFxus8lLYsUOp4_KMj0LaqkgMJK-2d4WmCSs2D1W2HWybCB-oLW44bEl7GHX01s_QT4gBLWBUiepbOcbZIopj6IWOz/s0/debouncer_schematics.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "debounce_graph.png",
+        "caption": ""
+      },
+      {
+        "path": "debouncer+std.png",
+        "caption": ""
+      },
+      {
+        "path": "debouncer_schematics.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "debounce_graph.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "debouncer+std.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "debouncer_schematics.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "debouncer+std.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-03-18-nice-linux-software.md",
+    "postSlug": "nice-linux-software",
+    "title": "Nice Linux Software",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/03/nice-linux-software.html",
+    "availableImages": [
+      "amarok.png",
+      "amarok2.png",
+      "automarix.png",
+      "beagle.png",
+      "inkscape.png",
+      "linwin.png",
+      "linwin2.png",
+      "oo.o.png"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "amarok.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6wCm8ls4jF-Qqe0otCJfHSyUK6UjRoIiFX4CxjC5PGE_lnJbbdotTPAJMwUWY6HH9F1OgL3xeVOdqehiV27TI2LCSdW_f2tOHM5x1lekvqYzvEAWUPS7QzK4ZG6JCsuHanv4E/s0/amarok.png"
+      },
+      {
+        "localName": "amarok2.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLbGwuZEzAZ5HMoaA9WjTgf-de3iNKVGc2eaMIWHBMY2C_gnGdAUtpDXUIqkmdHb5saiheJkPtEg2Irh_FaLOhAiT5ZXZPJctwhaHM6P34CObJFuqnCCIsDbIEMjU2zslBSmis/s0/amarok2.png"
+      },
+      {
+        "localName": "inkscape.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQzmHpw9z8nD8kWcHOph3Ew8vVARaWEUazlxx_eNxSGMuLffUR34hoB1xVGHLcdIFca6y2Tl3O_4_OSS1IVJ8UrncmNA5jXxgc_4NqWuWsSD0CfeLP_RH7LNLy3qStWfV_ZGAt/s0/inkscape.png"
+      },
+      {
+        "localName": "oo.o.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVJLcz307ma-7mlCu1FlEujOOYtvNHIGkkbdrC2YHSl3WQM2mGo5KiarDnrISrCpDFlU12ksbVxdO1S5pExECv-LIMEU7Y1wF9Kh8w0ahjIGpSsmhCcLMnEzO3x5Q24_qfuJV0/s0/oo.o.png"
+      },
+      {
+        "localName": "beagle.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTqOTXIEJAvqERXXjcZ6fMMubO5_plhW1kJzgO4JKHrLzCra4Pla13KFgxGqG-MQrKfyl6JSRfiFJ6O3PfBmhPTde1ddiELfR4eF1NJAzYBsMivFbtV_Om97lHkw9m_kjhSHAw/s0/beagle.png"
+      },
+      {
+        "localName": "automarix.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK-9dE5Vol1m4MvcTlajfJLh3XslgW-mqFRB1UCcg8fzfVn6ceOS478wchiAqrusKsrtxdWE4glwrrQktCjfQuxjudfLFMIZUru-8zkI559CGTes5orlXz-O4FppjoaJ0naCzo/s0/automarix.png"
+      },
+      {
+        "localName": "linwin2.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgja3KFFYkuCqKYhRFtbE_RA2f2pj3rFnT21BOSlI3kSiZP0f1GdWacaGgEk-ECOQIMRWx0fe2sTaYrAXC6of8ZPl6Ca17k7MHLc07OU1UUNRGausuIsEvy9aHK5luldEisLjKW/s0/linwin2.png"
+      },
+      {
+        "localName": "linwin.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2e4SBSFgmcxmfnr5IdG_K2c76-TEgGn832J0pxj2KElDsc6ei-foKDXkUnjreAxb_gdk1yRCbNy7R9TnzrE3oZcSd_jXr6xxMdU_6VWNNT4Va1h_oxc2XbxD51NjbZl0yubep/s0/linwin.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "amarok.png",
+        "caption": ""
+      },
+      {
+        "path": "amarok2.png",
+        "caption": ""
+      },
+      {
+        "path": "inkscape.png",
+        "caption": ""
+      },
+      {
+        "path": "oo.o.png",
+        "caption": ""
+      },
+      {
+        "path": "beagle.png",
+        "caption": ""
+      },
+      {
+        "path": "automarix.png",
+        "caption": ""
+      },
+      {
+        "path": "linwin2.png",
+        "caption": ""
+      },
+      {
+        "path": "linwin.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "amarok.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "amarok2.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "inkscape.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "oo.o.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "beagle.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "automarix.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "linwin2.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "linwin.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-04-02-fpga-board.md",
+    "postSlug": "fpga-board",
+    "title": "FPGA Board",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/04/fpga-board.html",
+    "availableImages": [
+      "spartan-001.jpg",
+      "spartan-009.jpg",
+      "spartan-010.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "spartan-001.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDbZn1n7i6vq7CZNOh7I-ohiOI735rIi7thwb505_OuZhuHykpqdGuihGPf_mIqxYsZZKJhOzAIoNXRNtdyEF6vQzXo1byBRVUEGJUENWeUqiWUMz3qiv-W_RyjWWr86BuN9jr/s0/Spartan+001.jpg"
+      },
+      {
+        "localName": "spartan-010.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyUGi93H8ZoOg9IjtJVWP15HA9-VrpdEXJdKjdUHNI1dOKjcqVB0RhoHROHQrH_es3WraQIVGLquYv_iaJxm5947KcVM1vajyRaPcwHds9ixP7dQ9CX9W4op9zwhyLazMCaRmP/s0/Spartan+010.jpg"
+      },
+      {
+        "localName": "spartan-009.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQs-t7HySgHF5LXAjqSU287F4A4X4f6-zi0DN8rEe1pmQSxK2newjQh4sajzGzNUkMK7skmCnKDYX0PLpd9Aekixp4bWgGkO03mnd0F9HHpy9SRRpRUnsD4cANZCy-8tyTZcaP/s0/Spartan+009.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "Spartan+001.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Spartan+010.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Spartan+009.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "Spartan+001.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Spartan+010.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Spartan+009.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Spartan+001.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Spartan+010.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Spartan+009.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-05-20-sugar-trick.md",
+    "postSlug": "sugar-trick",
+    "title": "Sugar Trick",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/05/sugar-trick.html",
+    "availableImages": [
+      "stick-after.jpg",
+      "stick-before.jpg",
+      "stick-sugar.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "stick-before.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtCqAhf-1xhLrJOC7iQ3pNCS3TxrrbyAhlmvv-iZFw3eF2-cA7zhQ8Kvav1BIAYZ8tn_Kh-Us8Y4vKEiQ8oTR5pmGauAn7mwX1WQuJwoCVdpddBRBW2ULN1JaP8jJUdyiZ8z-D/s0/stick+before.jpg"
+      },
+      {
+        "localName": "stick-sugar.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0qvMh7dTykWuesRz3ghDBO3GjX_lsUeOSeCsOLrv4Tpt3nKU3vlolBHIgYo0lZ0OW8vaIgFxg8PbO3Zc6nLvOFz3O-lGopM9BUtPwctPmOpd0Ls0EjJ-9DIVxf8tjDbGchUwP/s0/stick+sugar.jpg"
+      },
+      {
+        "localName": "stick-after.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx0hUwNpMMUhjO08z_Ca5Lgo29SS1fZUha7Pvu7r6JFIDHetuEdW41kjGGhaDNs48qY4F89q2id-YCNx85AwzVc_LWkv0DEx-f3qN4xmn3H8pln7CPlEwCzvDUb-RI1I21093Z/s0/stick+after.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "stick+before.jpg",
+        "caption": ""
+      },
+      {
+        "path": "stick+sugar.jpg",
+        "caption": ""
+      },
+      {
+        "path": "stick+after.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "stick+before.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "stick+sugar.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "stick+after.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "stick+before.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "stick+sugar.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "stick+after.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-06-08-debouncer-v2.md",
+    "postSlug": "debouncer-v2",
+    "title": "Debouncer v2",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/06/debouncer-v2.html",
+    "availableImages": ["cc_debouncer-std.png", "cc_debouncer.png"],
+    "blogspotImages": [
+      {
+        "localName": "cc_debouncer.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0xtcytkSxpoB6OekPX0t4S2pZNZrw1POnqu4NhfIs5l0SWFrLR6nzKZVSfV9jIGcQP8QlRccg4kS-M-mapm5jwajikwvDobr-4EvWrl6yQPm0TSndNDrSZd6QWqx7zjEc2Tsi/s0/CC_Debouncer.png"
+      },
+      {
+        "localName": "cc_debouncer-std.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYW8M6oDgCN2u2Qx4QnB0Razqw1bukMW72GmJ8YyC6BCebd-l9u050NChWDB3S1MtY7F2UNxpDLdF00_FGU5p1apk4pfQDb59CFs24sr4Wms5gkWXkiRLZiqqaBaEC_5_IW7gF/s0/CC_Debouncer+std.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "CC_Debouncer.png",
+        "caption": ""
+      },
+      {
+        "path": "CC_Debouncer+std.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "CC_Debouncer.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "CC_Debouncer+std.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CC_Debouncer.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "CC_Debouncer+std.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+    "postSlug": "fully-featured-media-center-on-a-budget",
+    "title": "Fully Featured Media Center on a Budget",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/07/fully-featured-media-center-on-budget.html",
+    "availableImages": [
+      "800px-xbox.jpg",
+      "audio_playback.bmp",
+      "games.bmp",
+      "joox.bmp",
+      "live.bmp",
+      "live_places.bmp",
+      "media.bmp",
+      "movies_menu_1.bmp",
+      "movies_menu_2.bmp",
+      "music.bmp",
+      "playback.bmp",
+      "shoutcast.bmp",
+      "trailers.bmp",
+      "video.bmp",
+      "weather.bmp"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "800px-xbox.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdeR2MqI3stb_5Mxp-9hEPb2VBk0OG0FeSLO-ZcK0Tl2vwXrQkc14pNmuDApLDmzofJCSG_QoWLzE56OAqDFEuoGDgnUEkXzkCVQurpsPelyY0Z2VG5BjDkT8muB7Z1sYRYwTH/s0/800px-Xbox.jpg"
+      },
+      {
+        "localName": "media.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh56p952QCaZ4d1cvOZu-n-qj4wJ6A54tUi9UQ67hxCNgD35sYoz_R9jWmNPiMdXH1cRLO4fOM6gu_niO3B0fJhHdEwSqNwdochYiLK0GdBgkZPCiMApHh34XDrYHRfauWAz9Oc/s0/media.bmp"
+      },
+      {
+        "localName": "video.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj21URhkQDsqCqtEMkvroWuAIL3u0O-SCNm1ePe0ZTpopdtfg1u5TYhhc4PyaSqkedg6uhdqqg3S6mbrCop7YEPrnxpXxPLotcdZq0ZsXSESh-4V4QhezHhdN2Fwq6YPiIeTiHn/s0/video.bmp"
+      },
+      {
+        "localName": "movies_menu_2.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaxL3HYKaFDrL1kHtNlJidwClJVA7V7LiSn8nQo4ugayILE501F8wq__2uwzktRjzA8wabHQq1kXubujR5YjknxhyXW01ALQ8VGzGUp2BDOCHwod2DkocHpB_pz5XH3TW2PVbx/s0/movies_menu_2.bmp"
+      },
+      {
+        "localName": "movies_menu_1.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUYP4Ts6CFPs6awurqu8L9ipJIf0JCLsNxcD3ZJE83h0BiYMzPI7vOieGFwNBanvWPyl88pxNoP2Upn2_iGogwHly1J-Ew_mvdH72HUBL_NAIiAqKoW5rFTny9pEUJBliOc7Yk/s0/movies_menu_1.bmp"
+      },
+      {
+        "localName": "music.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaEdeeiHdsGQTSxemNlZGsseoXn035neQYRWbNlfq3yyIzGftejzf_hCGeTnaMKGKq42BMLLa-j31rN-lAtBQ375FsgUpJ823N34yTdZyLbBAAzV6UP78-uQBu4zBlKFDkkfQI/s0/music.bmp"
+      },
+      {
+        "localName": "shoutcast.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAawB022_Vo0Da5cE_OewnjcPv2bVPoxsXZNonPRP6jCqymvsXaboxoH05TYpCJZPHJ28b-mxJtmZebBRFwgHPPNCKx8VggaZmRxRy-W90oDzZdYuMZ9OyLX-mp5Sqx4Nir1G7/s0/shoutcast.bmp"
+      },
+      {
+        "localName": "audio_playback.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIwhTOgJWjB-X2rXgNqex7J5Zd5pqVBWai5dY0172hxswtX6XKsdHqShN7v10B7M8AFw_Ivof3s34r2hzt5qz_oCdPcanUTdZKUFFeHW8-n55lgRMXqpGYyOpXH23X9KPk_8yR/s0/audio_playback.bmp"
+      },
+      {
+        "localName": "games.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOVXDaSCsvLvSgxBhnHysvymQlOWhXOCdTWJP13i5h5SjIQj9F4ZE-ZKffxjYZVm4XEcSw7pBXuFnNPhDdn1D7UTgkWHQVZkUOVNkMFnVNk10tGbtxYUCKFDYPAjqBMrQ7EifA/s0/games.bmp"
+      },
+      {
+        "localName": "live.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTvaRcMk3Ds8QgwsqZt_gd8nfIs9VvFRNMyz15PJTOq3FJ_PP6JYpaqSFiFQQCo8vMykHoyNjs19z4eGeovd4VX18o0Mx43MjHpg5usqkqfuqAr4qnn1xcIPr2Ftgqj3EVcgea/s0/live.bmp"
+      },
+      {
+        "localName": "live_places.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisqIpJXpaGz7DthQzGzdQ3tojqBLLjmuJTaenDjJ1KbVp1QZV83BKUKLCRQrjAExWiCkNmJv6sszUbKMNXFkpImmhcd-yk-iAV2fhbtzdMp8FOgb2A8RwftjSDbmnAj-wdp29K/s0/live_places.bmp"
+      },
+      {
+        "localName": "trailers.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh023zKnA_8chZ9ay56RrEDYtRRGNuFoA5FI80XEcJ-S6t7F20d0T_mbEbrbZtc-TQJKCG9QXuEE-fYD_vGgRgcjcVwZAU0xCrsrimuJktGXBlY8fASJ7uIHja7EAUIAqWCA3u8/s0/trailers.bmp"
+      },
+      {
+        "localName": "playback.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2NKqHsXhuUmYGYrkwUNT_l6JXrMPuLrRszMDOV0_-Vt-Wgn8GDmLiP8jg5csY89agjfaB7Nq-_RwMcetcvmpPHwdmYI-_55coo7Vcg3dUXMGIqrP6HWpPcs02uuMcW9lb5C5G/s0/playback.bmp"
+      },
+      {
+        "localName": "weather.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8qdZ0PXHrPr7O0jPlvrWM7dYQ_e1fiACit30wRFZJwGrRwBBIZCXyFssGUSlSkANhfoCl6bHJt2wE7pvFWmPTlVFtpOxO5vSTZjL5RbK5H_4kKkXH3SufXMjLJjRh4gMolIbj/s0/weather.bmp"
+      },
+      {
+        "localName": "joox.bmp",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQN6c5BWHavZr9q9fLK3KcbkXGnxMBGl0ZNwIpZxTbELGy-zKtCr0kGcSdm4lS-0SKh0wPTlI-wJ_u4FilRgSBIJoD6z7Vprhm3UqjSGHafE9gkSVFZnPyQNIY7z-uprkVtenX/s0/joox.bmp"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/800px-Xbox.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/media.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/video.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_2.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_1.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/music.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/shoutcast.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/audio_playback.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/games.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/live.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/live_places.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/trailers.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/playback.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/weather.bmp",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/fully-featured-media-center-on-a-budget/joox.bmp",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "missing_image",
+        "current": "/img/blog/fully-featured-media-center-on-a-budget/800px-Xbox.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-08-03-arduino-clones.md",
+    "postSlug": "arduino-clones",
+    "title": "Arduino Clones",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/08/arduino-clones.html",
+    "availableImages": [
+      "arduino-package.jpg",
+      "arduino-parts.jpg",
+      "assembled-arduino.jpg",
+      "ss851467.jpg",
+      "ss851468.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "arduino-package.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW-scAgbPrdVnIJeni9BV-JyRbxRcJMLEiAgGPCmClfeXVbVpjJVxmJ_kcRoHBPll7R3thVTe9LAz1zZRXQh1YghaV1a-yTvE-ddinHmRFMk2Cgby9j3EUtRA6rJvnAbVpDSaX/s0/Arduino+package.jpg"
+      },
+      {
+        "localName": "arduino-parts.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvk4GGKZUWDOFj5lWmM5t-HPNS1wl-C1rJnivp-8aajopQazWrBiF_vPEApF4jb74qvEv6JXSl2JbUL1Pb_fu7nwTRx4Ahjuu-LuXu6V39OWYYNvudXITPuYyQsN5ZkOVPnut5/s0/Arduino+parts.jpg"
+      },
+      {
+        "localName": "assembled-arduino.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGWzsZ3hz5YDNGQ6e5g21uHvvnjugqMK26FfFn0LxM8Bcbr-YWPzZT1MpW4fD-kS_JJ4xmbkrBvj-pwcCza8utCRwwZF_mouqaykWaJsHd2h6qPXyQxQeBOpaDjhoCjhLtKLY2/s0/Assembled+Arduino.jpg"
+      },
+      {
+        "localName": "ss851468.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG9s-59P0hzuga6PkUZEPM3oOK7dkkujDViFgNyJ9vQOtd7Yf9RtnLptMtKVl794ihJqcVDO2PxkTvuF2UvY9Cu5LtT6GYfHu_pZ-y4bVNai9LKg2HnRFfJUiqMiuAZM697SaB/s0/ss851468.jpg"
+      },
+      {
+        "localName": "ss851467.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3n-aF3YqnNLT11mFZb4y7brXMgwI1Rgi-wUVblPDG0MFqJtPcaPPlMmBAhWla2Ci0R0KHp_I5ewP7MCY5LnpdbEmQ4d7-ss7fFptENwIwIg_REPh_TnGDDk6jSYGlZdvvsi15/s0/ss851467.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "Arduino+package.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Arduino+parts.jpg",
+        "caption": ""
+      },
+      {
+        "path": "Assembled+Arduino.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851468.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851467.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "Arduino+package.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Arduino+parts.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Assembled+Arduino.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851468.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851467.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Arduino+package.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Arduino+parts.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Assembled+Arduino.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-08-12-arduino-pov-prototype.md",
+    "postSlug": "arduino-pov-prototype",
+    "title": "Arduino POV Prototype",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/08/arduino-pov-prototype.html",
+    "availableImages": [
+      "pattern-1.jpg",
+      "pov-prototype.jpg",
+      "turning-rig.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "turning-rig.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKN47qQyzopcvc_j6F72bYMBy4yvFUYBYSLe0ClDTn7PNJ32la4Xq-ExhXr9QCiLSJzXx7HBbAjRrkoO9qjnH1QWhB-trA32ffOdeD__hJtu00rXib_wXWAI-7qxqrcVqdtMhu/s0/Turning+rig.JPG"
+      },
+      {
+        "localName": "pov-prototype.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlCfj35bMn7pJqPPDDmUX3bWwsOodSxDaW1dVOpv_5boC3Xg0NnUp8cRJQHO_RN7FbO4hnjMguIn2YMHHgzmjpp80Qxl4Hc58w8X5JuzQfYAv10Hbh_BlzO9Sj4vk95sw1V_-7/s0/POV+Prototype.JPG"
+      },
+      {
+        "localName": "pattern-1.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3vy_mUCaP-W_YqEo1QAMahKPGzl65gf5E8xblT1MKPicKMX6-KYQFTuzH2d0ktPsX4ZJK0RUN3m205R9HbZXCSfzgZySjrQjEVJyckDrMEi-QGfr1RWggzW-xrusNvuqBRlS8/s0/pattern+1.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "Turning+rig.JPG",
+        "caption": ""
+      },
+      {
+        "path": "pattern+1.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "Turning+rig.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "pattern+1.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Turning+rig.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "pattern+1.JPG",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 2,
+        "blogspotCount": 3
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-08-17-arduino-launcher-for-the-kde-menu.md",
+    "postSlug": "arduino-launcher-for-the-kde-menu",
+    "title": "Arduino Launcher for the KDE menu",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/08/arduino-launcher-for-kde-menu.html",
+    "availableImages": ["arduino-launcher.png"],
+    "blogspotImages": [
+      {
+        "localName": "arduino-launcher.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlujvNMubyICJxzzUHMpXpicol1haYM5E8_VrQMou_b7u5H0UkicydUlILSQHzl969rjlwz3Tnd05NKxXRU9CNc3x97cz2QN-AIeRpULXtsF6wHqdwvRUMHV2os7P5CYcYpF2a/s0/Arduino+Launcher.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "Arduino+Launcher.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "Arduino+Launcher.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Arduino+Launcher.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-08-18-arduino-pov-prototype-part-2.md",
+    "postSlug": "arduino-pov-prototype-part-2",
+    "title": "Arduino POV Prototype - Part 2",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/08/pov-prototype-part-2.html",
+    "availableImages": [
+      "alan.jpg",
+      "arrow.jpg",
+      "e_mc2.jpg",
+      "format.png",
+      "sine.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "format.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3io3kBcr5FWcjlqxSBpMMeIo1q_jNXque3iUN5-gxpUcmJbhd55CTlH1GCIVyN_gb6SpA6dyuOhyWL9z6xi0qiUyLEiPWq95bgl1Bqi0KxPC6ZQ8d0CDuLNZoj7SPjMA3bnif/s0/format.png"
+      },
+      {
+        "localName": "arrow.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI5nAdszrgRWjeU1DlDg5QfSr8QL9Mv_gZsHWXEepGKUOhSO_oBjQ3zA0mFn0n5RyS9u0g2zy2gtJEZtsTc0Fz-d-Zw8qE3TYniq_5g8EzrehAPWvyfk545KCd4ttcBuHJmtr2/s0/arrow.JPG"
+      },
+      {
+        "localName": "alan.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSuh4WNQ4ZlPnO3fQWxfwD9g06hUGQhczTzqPHhNsrc9OSwa8HHUY2_xVLIXMb1cLmDOGA1OFqDnbH6g7GKgnkElaFWmwABKSLjzjYZlgc2zl9ulSDsoPSv2nSeGZyKIHJy3NM/s0/alan.JPG"
+      },
+      {
+        "localName": "sine.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwBGGzIIoUQFYQPSdIfp8adJQv2m5C1SnM1kdZDmB_E2CkpEChgk-JNeS91ZzdbTT4ykdmHZ1gV3893JVXn7FXm9AH4UVmTAcNs4avGieP7EqzLS9zc0naWF59k1iqgFMTQcBJ/s0/sine.JPG"
+      },
+      {
+        "localName": "e_mc2.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf0CNdgOI08_HMRjNV9_yOfZnkeXBO4Yosil1JfvF_dgRmfHIi081IPvtNISRgF8B0xooqy-EG5gNJ3GZLaAHtGnt6LoEFsk6xbpeweB379d0uH2d_4ZNP7AMyMgfcKj5hCwmQ/s0/e_mc2.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "format.png",
+        "caption": ""
+      },
+      {
+        "path": "arrow.JPG",
+        "caption": ""
+      },
+      {
+        "path": "alan.JPG",
+        "caption": ""
+      },
+      {
+        "path": "sine.JPG",
+        "caption": ""
+      },
+      {
+        "path": "e_mc2.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "format.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "arrow.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "alan.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "sine.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "e_mc2.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "arrow.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "alan.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "sine.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "e_mc2.JPG",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-08-29-diy-birthday-gift-aka-nail-puzzle.md",
+    "postSlug": "diy-birthday-gift-aka-nail-puzzle",
+    "title": "DIY Birthday Gift (a.k.a. Nail Puzzle)",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/08/diy-birthday-gift-aka-nail-puzzle.html",
+    "availableImages": [
+      "nail-puzzle.jpg",
+      "nail-puzzle2.jpg",
+      "sdxfbdfbdfh.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "nail-puzzle2.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCffDQ4MqmDksHA2kLQIPba_dGl0vTY_ZmuvJsJZ0lVf1SalPNl6UdDL1KayLdoNHLsi1_b_d2bG0M3RBaoALOYqlRVnstUm1aBgiNPg5tg-yc-DgYksREqfFHNZqOanCRWaJs/s0/nail+puzzle2.JPG"
+      },
+      {
+        "localName": "nail-puzzle.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkAf5DbshWESQ-1WkZ2sz_w2cDv-lAqu9zLPDRKpOV6k_XLGXtuDC94j3aGjJqGO6G0lgof0OQLUXR95yMgKi9uytykG6I8YKEHGxmb302PXQZJiJDtgu-4aJzKAQrNU9lArLw/s0/nail+puzzle.JPG"
+      },
+      {
+        "localName": "sdxfbdfbdfh.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDZ1g9R-vM0sXmheu_ioYXlc8IPM0tr1fRHTP79z8Etelbk7ClCzTogqwmC6_jgFDQPU6H1MlG9UvCgbMkg9G22cHXSQwYBenFOGP3M5grTeV6kYqYYb6OaRQn0_2czC0Hejbm/s0/sdxfbdfbdfh.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle2.JPG",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "missing_image",
+        "current": "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle2.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle.JPG",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 2,
+        "blogspotCount": 3
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-09-11-ir-detector.md",
+    "postSlug": "ir-detector",
+    "title": "IR Detector",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/09/ir-detector.html",
+    "availableImages": ["dcp_0002.jpg", "dcp_0019.jpg", "ird_circuit.png"],
+    "blogspotImages": [
+      {
+        "localName": "dcp_0019.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIl-Nk2m1u4S5d2j9t2k1iYZlEPMt8oNHJ3ZvNd-k1Yvv5_q8RmtYJOvGsc6sDgHpr0j4TRH-zZuae0BbHpGX9PrEWglgvJsmv5SATg4_UxpUHgFC0VQ1gIMywOX3tnehKpNDK/s0/dcp_0019.jpg"
+      },
+      {
+        "localName": "dcp_0002.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsxZiYurzcJso-0WCjeKcAuTsngck49K7RiPz4Ky-xFY0qN08pLAMF9GOgswYfYWtmkltRmSwiWdxo-gW7A1Orfee79KMGJXYMkprBRZzLU6fAS4iVrgw5QihJ0oGXagTxzwMX/s0/dcp_0002.jpg"
+      },
+      {
+        "localName": "ird_circuit.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkzf60UdFs2hoR1Jn-VXOjfiDVRiFGyN_PXpnyzhgRfoRoK6dqbW85U-Wf8ZUuEiG9Y1xkvkfueHX40td5qATgvpCpumwZBps4NWeXt2-Botrj2vg8Te6cDrNtnm9WFCsEL1kR/s0/IRD_circuit.png"
+      },
+      {
+        "localName": "dcp_0007.jpg",
+        "originalUrl": "http://2.bp.blogspot.com/_940DBYqYeYo/RuloR7sPfyI/AAAAAAAAAaQ/pKLwAgTstLY/s0/dcp_0007.jpg"
+      },
+      {
+        "localName": "dcp_0010.jpg",
+        "originalUrl": "http://2.bp.blogspot.com/_940DBYqYeYo/RuloR7sPfzI/AAAAAAAAAaY/rvc-eCitK7c/s0/dcp_0010.jpg"
+      },
+      {
+        "localName": "ir_detector-7.jpg",
+        "originalUrl": "http://3.bp.blogspot.com/_940DBYqYeYo/RuouC7sPf3I/AAAAAAAAAa4/YHyhZHLUOgA/s0/IR_detector-7.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "dcp_0019.jpg",
+        "caption": ""
+      },
+      {
+        "path": "dcp_0002.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IRD_circuit.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "dcp_0019.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "dcp_0002.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IRD_circuit.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IRD_circuit.png",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 3,
+        "blogspotCount": 6
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-12-24-volume-limiter.md",
+    "postSlug": "volume-limiter",
+    "title": "Volume Limiter",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/12/volume-limiter.html",
+    "availableImages": [
+      "materials.jpg",
+      "ss850181.jpg",
+      "ss850182.jpg",
+      "ss850185.jpg",
+      "ss850189.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "materials.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJkBCWzCv1Ho7o_iGDQQXqKewA0eY6_0-wZw69AXgS7FTduXgdgn59ihT8zwP0VXwSv9BntYm76vD7queLgdC6SfGrgNVk268494FE9I4oVRpj0QAvn1QpSz7q64q1EoQdsvEr/s0/materials.jpg"
+      },
+      {
+        "localName": "ss850185.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqngfQu9LqMJKGUQJ6IRCgifLm9o8jFEsu9JEPZWv48Xj4Wlhx7o1MSA_URSB1FHS44moKM2DgoJZK97ccbH6szxdlTkkqzNLX7FxCtJhJ4xi6nB6lS1Oij_ziznQU6MWBWuZQ/s0/ss850185.jpg"
+      },
+      {
+        "localName": "ss850182.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEik7uyFUBPWzqu-CN1KBA1lTBADYTXuENETMekybE1JsLpxyGsP8zNtCuvEofGpE3DECjl0cVKScHci4I7K9WPupD4PHw1FTL9mm8ECjDtBXWEqwLcwHtSWw24S22ZhsiiReVOA/s0/ss850182.jpg"
+      },
+      {
+        "localName": "ss850181.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIYNRwfsgkm-oJBhIaXhGu-1WkRUXjsDCXI4UFiG8-36rdcU3UxOJY8n62Jamk0f4sWYriWHL_USidszE1UN-fK6lLLsdwm-4CCgsslnH7DCc395F8xMViQ8-tBJVH_GGKql_l/s0/ss850181.jpg"
+      },
+      {
+        "localName": "ss850189.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1iJIjBGyHru_SMFtsuLJ1X_GlIRWVRglO_y9uz6doSJf3fltwYc0USM7HiAlMSOSn85m9Aq2ngue1Jq21Oynd5d2gt86GiGRVBljlSFiVP6upeLABb9ZJsFsP0rk9KcmqZzE9/s0/ss850189.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "materials.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850185.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850182.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850181.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850189.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "materials.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850185.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850182.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850181.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850189.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-12-26-the-battery-problem.md",
+    "postSlug": "the-battery-problem",
+    "title": "The Battery Problem",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/12/battery-problem.html",
+    "availableImages": [
+      "ss850276.jpg",
+      "ss850281.jpg",
+      "ss850282.jpg",
+      "ss850292.jpg",
+      "ss850298.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ss850292.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiE1Gz4AO7INPxUBJV4IThfNtXuu2H60pzoOjElrKsB7kS1EYaOarMBDiT73v4iXUiNf4pAnXuaReXLRj7TJiQdsJxIZFlvgn9Z9_9G63eCf9oN1WXn_UMgROMBNC_91Ob97cOX/s0/ss850292.jpg"
+      },
+      {
+        "localName": "ss850276.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMzVS3oDpUAyaXEPczWilqOEC5l7gxE59qonOeSvrTVhFV6kxsbqMSuERfl30j5f27L8Td737P0_fcG1gZR2R4dp3Rbtxl2KgHPWl4afPZGPiRi7aGCQTb73CTh4MRrbuMO7SP/s0/ss850276.jpg"
+      },
+      {
+        "localName": "ss850281.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-qvoDwwX8l5XmQe-hoQKx1stkKXRxtW_gQGXx76fcj8bA8UZW41HvTjvbKZoDO8D3Qc6uY2f2vtywjIoduwMBHvnSb8DtoTHBa-p-g2WG_xrbnfyK1BezQmu1tQREsovkCZTQ/s0/ss850281.jpg"
+      },
+      {
+        "localName": "ss850282.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgC2BJyoH1DfiCwoMz8FRIfTJI9gg13PC2df1BpWjNLwAzyoWNBR4M7XqUbTUBKGIvvATTuyZo7ydQDNAWwMxSQraqRfvdTJpCKHMROGYUXkPG3rDXFZrCL_QB_GITuQ_xZSDM5/s0/ss850282.jpg"
+      },
+      {
+        "localName": "ss850298.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwySwyBMz-BcA5qhcj1707VHUvIF4O7sD8Tv2zyHBlJiSJCpDUzaI_g6tmE0LVgLXEL1Pr0fZdZXUx-jKg6p6EsBc2NF77Qs00TrshW_KjfaA2vpcvTZjhvDnyBbgkb6FS-woV/s0/ss850298.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss850292.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850276.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850281.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850282.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850298.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss850292.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850276.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850281.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850282.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850298.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2007-12-31-tensegrity-and-more.md",
+    "postSlug": "tensegrity-and-more",
+    "title": "Tensegrity and more",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/12/tensegrity-and-more.html",
+    "availableImages": ["ss850220.jpg", "ss850306.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "ss850220.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU0FZx6scoaVIcXOsPuIoZRbFcv2ONrNnoGY9AZIr9qd2omiWnKqvP6EY0JnrYc2ydJnCViWxIXyKJmZBm9xXk0KwkW4e_WHbuVnOMDiF67JA9-wAnvrUlsYdgECJYsxqYmG_e/s0/ss850220.jpg"
+      },
+      {
+        "localName": "ss850306.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEif4XKrB45iuJgzi4dflqST7x6jSeqry8EWZDatzC2TjKg8mNLHJcdSq82w3xeIUqQSMZU6wSDf5XsS1BwzVm_4phpx4JN77PcUlCTg7lzhGlk1ZcJhUtw51ADyBbl7w2lortBf/s0/ss850306.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss850220.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850306.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss850220.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850306.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-01-31-repairing-shoelaces-heat-shrink.md",
+    "postSlug": "repairing-shoelaces-heat-shrink",
+    "title": "Repairing Shoelaces with Heat-shrink Tubing",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/01/repairing-shoelaces-with-heat-shinrk.html",
+    "availableImages": ["shoelaces.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "shoelaces.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ebHDKWNUjHN5MqP0V8GYcvhOhjAmqK3F0PHQKm5f2Q6Ptru_GyZEpcD5rp9FQK2-gv9LDQ0gn9DGHNaUBFRApdIkhXCV3_Bl61S-1-VywveIb-VL1rd3xeg01ilHnD6blMRP/s0/shoelaces.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "shoelaces.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "shoelaces.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-02-10-shoplift-alarm-sensors.md",
+    "postSlug": "shoplift-alarm-sensors",
+    "title": "Shoplift Alarm Sensors",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/02/shoplift-alarm-sensors.html",
+    "availableImages": [
+      "shoplift-tag.png",
+      "ss850540.jpg",
+      "ss850541.jpg",
+      "ss850544.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ss850544.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmSPV-ELSDM3fEeSVLwDZa_ZGcpKedvjmSUtsqh0MR3xbekSXPHBY2gmeiEfQtI3kRa1IrcxTrQqLXph16kNjLv-39MtqO9jWFLhUMlyZVpRax4NSjJQafuJa1IWcnTygZSIzi/s0/ss850544.jpg"
+      },
+      {
+        "localName": "ss850541.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglvdCoIcPW2lX7hxbR0otMSbip93kTT8NMhbuUpSPD7ShMy67Y0VXnAl7ngXkuJook0hiwcnvx5opQsR2TdSPYBv2ZNGtPMCu9zvUzB2yvwv93iGwx3ljUHlYsbrogdrLgM21U/s0/ss850541.jpg"
+      },
+      {
+        "localName": "ss850540.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYVZw4iUhJlL1mptN0eM3qLFwrlu9UxREWzhCS5Wfhec4DOhWxC3m3QBt59V3-TgawhzZSgTR_Gd5-HNcPSk6YAhsRNUko2Ec3Rw7ug5NVqh0PFF5HwJ6r56df7tjgut0hA9V8/s0/ss850540.jpg"
+      },
+      {
+        "localName": "shoplift-tag.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeQ8Z2bopCxWCGLsZGQVxTNyusHefvNey8oQb0TjoBIfTnQqfc-4p-PGQOUMhUQ1j8RJkHwn-Fa0Yse4Bn9_hNwmsG-YsA1ZHZ8NVQcLKXGdJyKAl_NUM1PCqZVg_KULmtuZDI/s0/shoplift+tag.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss850544.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850541.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850540.jpg",
+        "caption": ""
+      },
+      {
+        "path": "shoplift+tag.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss850544.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850541.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850540.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "shoplift+tag.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "shoplift+tag.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-03-17-engineering-bling.md",
+    "postSlug": "engineering-bling",
+    "title": "Engineering Bling",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/03/engineering-bling.html",
+    "availableImages": [
+      "ss850947.jpg",
+      "ss850953.jpg",
+      "ss850978.jpg",
+      "ss850982.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ss850982.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgD9vErpZQCmJGRFWnTJ_BS2D8rrXZN4Kf2WE8DRG4lZt_T3ay_302PddZHIEHYOrp0P9MPe1vvhvINycRUIhbnVW0TFkR2rfhr7V4qdVG8pS1CrNut3Wkcu2zraFQIXpOHCBLC/s0/ss850982.jpg"
+      },
+      {
+        "localName": "ss850978.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0KWLJXf4OtHMfXT42APD4SalZH73jBfZeNRtiWaEATOSYkHMu69RjZrq3HzLf2IAJuP-_9fui_J7dXXavefla9wYpKkBZ5l9b6QzoRV2KcFOs-LToFPdxPCi6tZ468DNiWCvL/s0/ss850978.jpg"
+      },
+      {
+        "localName": "ss850953.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdh9HD1ko70zfA2k7WiKmzCWaAGtVtvI1q2JovLhREYHwS2lN4famKt7We5UqKBvBS3IxEIwsCnhbH5JBgR_1PDxzyI6lQKmqbfrhKULBp6j0iIWj9hyphenhypheneywSXvkUTAclHUm5GI/s0/ss850953.jpg"
+      },
+      {
+        "localName": "ss850947.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwWVn7oBuM0poF3_0oWgbg4ekgOF0ZweoxDjIYHL1cwTvsN1erCQg_ClOFlttOUhvryh9WYncowvqA-FoQxkwXVahPEXQY8SXqdZ1S7OB6-dD37I3Z8A6bDbzviz9YIu3Pfk_x/s0/ss850947.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss850982.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850978.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850953.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss850947.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss850982.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850978.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850953.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss850947.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-05-02-atmega168-parallel-programmer.md",
+    "postSlug": "atmega168-parallel-programmer",
+    "title": "ATmega168 Parallel Programmer",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/05/atmega168-parallel-programmer.html",
+    "availableImages": [
+      "parallelprogrammer.svg",
+      "schematics.png",
+      "ss851490.jpg",
+      "ss851494.jpg",
+      "ss851496-mod.jpg",
+      "ss851498.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ss851490.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8TMBaCHknXlz6SApta9HKh5PpG645_n5N4kMqQKe3YymRrQyxB0zR3Lqym0HiUM-8eA4456APT8Xj6zD20A9qadA8KMZCEN1F1f8giB7nEICdFLSk0r8dtm2yuhXhZEO4OAzR/s0/ss851490.jpg"
+      },
+      {
+        "localName": "parallelprogrammer.svg",
+        "originalUrl": "http://carlos.asmat.googlepages.com/parallelProgrammer.svg"
+      },
+      {
+        "localName": "schematics.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIulU0NF2nxV-aaS9SNgAiId4MGE5OpVrVVOnHn9KIShL24_j071CX3LCWZUUTk-d74h3P9TOqT-Ec_XP44TNQOTBb2raFSVlBnFi1hcOmIbEBnAUxbpQiJ4Qvt1hdTyw0Fs_W/s0/schematics.png"
+      },
+      {
+        "localName": "ss851498.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgssh0XH83teAlAtBq6QgoS68TSxBP3gPjxORIy9RGkn4s0Ahuk5sU2__faz3FEC4q1EwMQIt89Ewv6rYRex_OQ9DzljhcCiIoE-oKLioYQj2MzUIpwVlUZJiwNpO8D22rwq2vv/s0/ss851498.jpg"
+      },
+      {
+        "localName": "ss851496-mod.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhj-M97aMz9f4Xg9DtyDzTaiOrgw5sdIUJ_OeYNZjFyMW2u_Vxm0e_bwKjQ8TjSio6kwtGcedJuPjKGz0iTbk_cs1gQSiYZrILs2GaiYZGWoFV7c5I7qgVMkUkym4A3sTjChdlQ/s0/ss851496-mod.jpg"
+      },
+      {
+        "localName": "ss851494.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhocraBjlWFYTFdFZFBUERrjyjByvByWWYqLsegkfQvxsLNpbsQqkaA3YrZwrguPzKgDIbrS60CGsUXoCkz5-Js6G2AkknBdLs9o_s8-wCFDcAI_PDZu7fEc8Knv9I4eFBrm6e0/s0/ss851494.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/atmega168-parallel-programmer/ss851490.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/atmega168-parallel-programmer/schematics.png",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/atmega168-parallel-programmer/ss851498.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/atmega168-parallel-programmer/ss851496-mod.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/atmega168-parallel-programmer/ss851494.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 5,
+        "blogspotCount": 6
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-05-06-home-automation.md",
+    "postSlug": "home-automation",
+    "title": "Home Automation",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/05/home-automation.html",
+    "availableImages": [
+      "simulator.png",
+      "ss851269.jpg",
+      "ss851270.jpg",
+      "system-diagram.png",
+      "system.png"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ss851270.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgH_tlzD_tABQqwTiVJnQxnu602gs7eD02VbkpV7V8BHqnuwCcPN8oVy8sGqhvv3cMYs-pzjMEwIc5GZ0axuKA2F8EPkI7pzYhE1ad2k8idMcFqHaQ_W5FozMgkksyCB6614DWw/s0/ss851270.jpg"
+      },
+      {
+        "localName": "system-diagram.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHLQNzJzhP6aUfGGg3EUnhrhxY5cH2kJ6H2mQYkWtvwqTSX4c93fR7u0M4NsmRno3t1tLwUd5UMUJMl4aw8aU2DgxrKAPnPljQjx6BxcipPhRYeRc3deNnj5bWMFJ0cakzKGTy/s0/system+diagram.png"
+      },
+      {
+        "localName": "system.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU1DvOoUGOA5MGW828V80tHC6ebuhT-eaeWjcM8khyphenhyphenljzQ15TUpEApWIDxCqqVbR7A81cpV9ABFh9YPmBanqs9w_6sfRIox4Dt4rWHWD6cF5hGFat6PHAldPFtQCdkaEwaFsB_/s0/system.png"
+      },
+      {
+        "localName": "simulator.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuk5kSbMAzxpFdJDwQjtxS3bI1_6Je4lcMk4ey83ItahZ7tTfvvKXeUnDODaKtoSwusfKaYvLxv727p9hHLLiys_oWsGXanqMNal6rE32LI88fOA1ecLSCiVmrXVOOeNwyBFFF/s0/simulator.png"
+      },
+      {
+        "localName": "ss851269.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgF596_R2JXc5iHl4r30Rs3QzsxChbRoAXRbt5PIC4jdpcdES9JtPw3Votw4ztgDKDsStFyqeQSVxVweHS17dzQgdTUtjTe4OcoQH2Vxav4jyiYGElkt7SLJjM8qs9dZURCJHBz/s0/ss851269.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/home-automation/system+diagram.png",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/home-automation/system.png",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/home-automation/simulator.png",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/home-automation/ss851269.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "missing_image",
+        "current": "/img/blog/home-automation/system+diagram.png",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 4,
+        "blogspotCount": 5
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-05-27-big-buck-bunny.md",
+    "postSlug": "big-buck-bunny",
+    "title": "Big Buck Bunny",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/05/big-buck-bunny.html",
+    "availableImages": ["bigbuckdvd.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "bigbuckdvd.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhL-d_YZFe5Gtf1ce5mxqIkNTL-GpX-4h1FlK4MsV1yBluXk5a8S6Gjj7iFXV7al_hI3gmoUyxvPyIIEF89I5K9VBNWMIAFVJkguJ0GIcjSSYea0f4aBIz8FFe5mO2zKP19piM/s0/BigBuckDVD.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "BigBuckDVD.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "BigBuckDVD.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "BigBuckDVD.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-05-28-floppy-note-pad.md",
+    "postSlug": "floppy-note-pad",
+    "title": "Floppy Note Pad",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/05/floppy-note-pad.html",
+    "availableImages": ["floppynotepadpapermodel.svg", "floppynotepads.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "floppynotepads.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiedY9rWe4OUnl-3KnT5hxpv4dTHyKuGO2TXYSTM82EBGl9_oSJp7V85s1TZG6r4BlMbEfAMQxxH9KFMxvb6Bmvw70-1k39NlfWWxYvhEDp3AB9ji2wkzfWFUpY8XZfMHwAkwX-/s0/floppyNotePads.jpg"
+      },
+      {
+        "localName": "floppynotepadpapermodel.svg",
+        "originalUrl": "http://carlos.asmat.googlepages.com/floppyNotePadPaperModel.svg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "floppyNotePads.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "floppyNotePads.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "floppyNotePads.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 1,
+        "blogspotCount": 2
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-06-20-inverted-pendulum.md",
+    "postSlug": "inverted-pendulum",
+    "title": "Inverted Pendulum",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/06/inverted-pendulum.html",
+    "availableImages": ["cart.png", "full-state-feedback-diagram.png"],
+    "blogspotImages": [
+      {
+        "localName": "cart.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgErYEIj9n4lN2BTErs5hZzLzEGzGjRXAEya2fFKDQN7spwAUHW6uWyS3ppmRe_iVWTeWcxzfnFA7v-LsrKe-TaTqRPt78Wr0kpfgPgVbd9yS-7ixRTIcIuOnrR0sUzLMNgYHp/s0/cart.png"
+      },
+      {
+        "localName": "full-state-feedback-diagram.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFbtIf6ZIauORtTmhWsx_T2tCxg717VMgtRLVd-sop4jUiD35Fp4YEAE_jyFoThzOWkVAiCu_Wg9Ij70O3-DQO_bj-we89StmKVOMsJcgEpLdbYJ52OyF6nkQvR0E6mE4fS9fp/s0/Full+State+Feedback+Diagram.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "cart.png",
+        "caption": ""
+      },
+      {
+        "path": "Full+State+Feedback+Diagram.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "cart.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "Full+State+Feedback+Diagram.png",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "Full+State+Feedback+Diagram.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-06-28-i-am-ironman.md",
+    "postSlug": "i-am-ironman",
+    "title": "I am Iron Man",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/06/i-am-ironman.html",
+    "availableImages": [
+      "ironman1.jpg",
+      "ss851626.jpg",
+      "ss851627.jpg",
+      "ss851632.jpg",
+      "ss851633.jpg",
+      "ss851643.jpg",
+      "ss851656.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ironman1.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRjWn1dzyJ67vWJXuDX9My2CL63XmQO0Q2cnYJWlvivcU3bAwW-xNzcB380uCQwoqCIPWJ4pawP7F_jeZlch91PTIxyoARSJRD1oZO8S__gKuF8ti1P7Z51v8qBtmZ2ZW1EVo1/s0/ironman1.jpg"
+      },
+      {
+        "localName": "ss851627.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkfOjiPeHiBe_lwWhfMmGmrxSB_jtxM8QscRKfhmHVsE4sXhyphenhyphenF4QrzVGjhZpd7bev0FG4BA5WeBnVrj8PRt2Y7RdBqLL3DeX9qLFp2x1vieUfmHo7sFwIzZIx24ca7RtuPMKKN/s0/ss851627.jpg"
+      },
+      {
+        "localName": "ss851633.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh53n0hHRkVIK0A69vZe0EvVgKnJvEY6HEPBeZvfYsIT8ZQExydu20yYDRa7cQxcTlaQphNvmn60KEfkqHrydWj0EvxH5EhAyNKNTKODwVjzpGW5jRugxYahECH579FkaqizXCe/s0/ss851633.jpg"
+      },
+      {
+        "localName": "ss851632.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_MSVO5fDPv2XPCDcR9uto6Z2jCroEamjLXYEmsz1WrOT4I1IIRPrjw3ztjycHSLD0ZhRGnpetds2vvkcYmt4h3Touziglt4HJ9takbebuPTW4uTiLiC7znSLEiWp4Lpmmvinf/s0/ss851632.jpg"
+      },
+      {
+        "localName": "ss851626.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhv5nBele93hnXK6WXFIx4KBIG7PUnQvcJkuyl4LuUJpy32kXce1qdXcKWpsiKSiOkBV-uly0O_9F3_N7czOazl-4uuiVyqfOdtXmcH_4yJUN7_mAwjI6p9cWBFnnolTpZM9S8G/s0/ss851626.jpg"
+      },
+      {
+        "localName": "ss851656.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw2QpbLvi3La61bISw5SScJyuSY7crZBxSwmHu_wtalPwtpRa5tKuIz-QKMGV3A7YOIhXTjDN82RfajYFVMg4TjCnpcngrp_21w47StSb_0dqmSAvRdLAlag0e4tPHMdKI8zL7/s0/ss851656.jpg"
+      },
+      {
+        "localName": "ss851643.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKQHzjF8_zHomKNwaBPLoDlaHJd-4pUEEr-OjqDxs5_KwozEkmS4mDfNKjgIXPgBrhhi-yi01zxhlAVwqHeTJECbp7MFqNWrLUpwWghy7Xk4gLa4x1YLc5HGbBlt6WSRTdP7C1/s0/ss851643.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ironman1.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851627.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851633.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851632.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851626.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851656.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss851643.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ironman1.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851627.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851633.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851632.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851626.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851656.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss851643.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-08-20-hospital-garbage.md",
+    "postSlug": "hospital-garbage",
+    "title": "Hospital Garbage",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/08/hospital-garbage.html",
+    "availableImages": ["ss852261.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "ss852261.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFX5IDyrOYzafLydUpp6XmG3tKLfe87-iNF_gPi1GEBYD_c8SELCmMo31ePFO7bJ50RG5jyRKBLeCYh3i-UvouOtP982_EsPeOf6-j7ey3qqKUYFzTK3OLMF6e_LT1uaD0Jz18/s0/ss852261.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss852261.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss852261.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-08-20-im-popular-science.md",
+    "postSlug": "im-popular-science",
+    "title": "I&#39;m Popular (Science)",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/08/im-popular-science.html",
+    "availableImages": ["pop_sci.png"],
+    "blogspotImages": [
+      {
+        "localName": "pop_sci.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvAlktMqOMps6dQqJlHkcldfgYy1_BIPqLlQKsFIZwQI12gom7mr7PVjQMJlhDHDmTqfYl9aTTL60NMQBR2rxL2Cee0oTzZqzWx-TEiFtVJzYt84b1qn3mdsyCMcfxTKJvZ_Ky/s0/pop_sci.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "pop_sci.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "pop_sci.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-08-20-lunar-excavator.md",
+    "postSlug": "lunar-excavator",
+    "title": "Lunar Excavator",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/08/lunar-excavator.html",
+    "availableImages": ["ss852227.jpg", "ss852231.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "ss852231.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhyphenhyphenuMI5BzVBElHz7RJbtDB0Iz5K_yp-rcKdqwA-EjnEizMjHunY71Kp_SKbynHtooo_a3Z628F03C0Y1304Fnx4sc2sAd0jiRwYsZqz6Yynr9TavsZX54DT8Mxfx0uzAlRxAWY/s0/ss852231.jpg"
+      },
+      {
+        "localName": "ss852227.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigGtnqauaqrfTdnwmdH1Ly8mXIm9h0Zuj6lQqeycP3w9ietM-L8mv6mnjcWChyphenhyphenzLrsb4RO_7En5PcUe7Eb9JlLNDRNbU0MStgrv5SHmLUVBWEdxyAgD0eFYqK4HdcBigIJdJZC/s0/ss852227.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss852231.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss852227.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss852231.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss852227.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-09-01-eee-pc-1000-ubuntu-kde-41.md",
+    "postSlug": "eee-pc-1000-ubuntu-kde-41",
+    "title": "Eee PC 1000 + Ubuntu + KDE 4.1",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/09/eee-pc-1000-ubuntu-kde-41.html",
+    "availableImages": [
+      "ss852386.jpg",
+      "ss852387.jpg",
+      "ss852391.jpg",
+      "ss852412.jpg",
+      "ss852421.jpg",
+      "ss852429.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "ss852421.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVWB7sTISHdExc9lP7py9RAvbMH0s3N_L6nt9Tz1UjGbIwGJJEUqIPXN4ORRjyD41qRaukqbPLZ7LvQRWHhjhKB4mdKnVkhKh03v28c0ifjfRcR-Z7hut9kY7LXl015bZ2-_um/s0/ss852421.jpg"
+      },
+      {
+        "localName": "ss852412.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8p5o27BScy69BD7HfDwgOhPAnVZd7Ouub4hFc1t0U8mkIsbXry__-Rh0s2m4lfweIsDjxCy7PstQdPEPyPA49zAmQ2JDnP5URvlXkEMDZqs__reBukOb6QnrqqdNFVN7b3LLK/s0/ss852412.jpg"
+      },
+      {
+        "localName": "ss852386.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB-zmw71MsAlAMOtgnybDX9SH8OVqXomTblYhfvWP_Inw9au9NQmUDh5usMA5yCn5KwPUeI_cPBMTLpSDUVJJB83NVrsWKW-EOQpDSZKgw0w9zGXk1D9FcLmxy5K8IyQfFZADo/s0/ss852386.jpg"
+      },
+      {
+        "localName": "ss852391.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7GF4-JYkz1ad_S-RzMUE__5mCWTCHuc0wWz-KaTgBBncs2115XNCE8UEVIX-zduOH486Rk2tz1hjC_omGJDqDOS_YgpCi4kX3yVpLRzo0EbYT548_1grXZI1M5wGYCLLlbw7N/s0/ss852391.jpg"
+      },
+      {
+        "localName": "ss852429.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5FrVAFZUW-bN7zWhD2q_nzsA_b0OsUnvJ15i21rx4Hy87_66-thYVsCvTUWrSlEf0eS_pEEpBOKrOij8-kN1Kw-ULsKWrMAvSmwR9NrCZZJ19oSnHUuGsFLY0JJ1NL140-j7k/s0/ss852429.jpg"
+      },
+      {
+        "localName": "ss852387.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXQ_bO7deZWnXp1qz0Tz-lsTuLKo12RawVZyLP5nWSVTOf5El9Far5oDVzYmuixL3R3uTgyGm9ngYcJ1Kh9Ig6U0vGp1D3qGTtwePIa0nWpJJ9V1lxvhrn2LpCp7JGn8opjPrc/s0/ss852387.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "ss852412.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss852386.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss852391.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss852429.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ss852387.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "ss852412.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss852386.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss852391.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss852429.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ss852387.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 5,
+        "blogspotCount": 6
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-10-31-tonys-leds.md",
+    "postSlug": "tonys-leds",
+    "title": "Tony&#39;s LEDs",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/10/tonys-leds.html",
+    "availableImages": ["circuit.png", "eq1.png", "eq2.png", "eq3.png"],
+    "blogspotImages": [
+      {
+        "localName": "eq1.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgl3pzo7rK0RTae40Fy8gLWYQIaD8juVvefxRKblfblOAl0jBiXzRPq9eaJogmd1uCPr-HgxaSf_GzkM_x6TY_jy7xR-H06HdNZmjgGeO35Y0_EFtO013bXJtqUVLHV3tHLuZz_/s0/eq1.png"
+      },
+      {
+        "localName": "eq2.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNcR7NuV6InoDc-hH-G-NxTbRy5w8r5_q9FLipG3M0XH_X93U1fXOWwGfdWLtnnXEIuQ69cj4JXNO9ILf5LBNwtNKxM7iVs-s-k8Aj_hbxMp_G_ktVRanjrf9-ayesDC6xKidF/s0/eq2.png"
+      },
+      {
+        "localName": "eq3.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6TuDjT7KV2ksIFDn4KVlVRfx2JHSt9mLn8lOOBEJO-3nRIdJwri5_IWKxTJIm8iT6nLd7zxw6OBhb5pwpWtu9VY1bB27PghyQGraqP7PRw1YSA9ttXWm5imDA3ofa2SeZnpd6/s0/eq3.png"
+      },
+      {
+        "localName": "circuit.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtz0QD42-_cfAkOXxX8aL-xNSY5glfMq38ibN9MGalV2BYeS7-y8xKD5QHk_qgKEbjV89ARE2-k72yFaKkI29O6rbbzGvVEu6bDRFeG_u2SOcTI7t5maeoBSUJh68AFuu3gXa8/s0/circuit.png"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "eq1.png",
+        "caption": ""
+      },
+      {
+        "path": "eq2.png",
+        "caption": ""
+      },
+      {
+        "path": "eq3.png",
+        "caption": ""
+      },
+      {
+        "path": "circuit.png",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "eq1.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "eq2.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "eq3.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "circuit.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-12-16-basement-cleanup.md",
+    "postSlug": "basement-cleanup",
+    "title": "Basement Cleanup",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/12/basement-cleanup.html",
+    "availableImages": [
+      "img_0964.jpg",
+      "img_1032.jpg",
+      "img_1034.jpg",
+      "img_1037.jpg",
+      "img_1051.jpg",
+      "img_1053.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_0964.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisXQtrfh4CecETIT2xdGWsfwd6sFmntqFCzEhmnV1kqRJiXxF8hBecgVLlVIBRC_UdwMiayVl_bnSuMnwIy2wgVMH8nBhn_A0kMeBfHWK-q-iW9LCSeFZd-RicJoOEC_Wup2IH/s0/img_0964.jpg"
+      },
+      {
+        "localName": "img_1034.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjP00xZEc1lQjMukgO49XaJI93_2CKoND_lRxtoUtTLWw6HnfgjfXoKhz0oHSLodlK8h-7PVrtmJYxv0QHLUj1u5tOS5STpAHiH2KrBtPm6x7QdahbhtoJGgDkQ2HaZZ9ygPLDt/s0/img_1034.jpg"
+      },
+      {
+        "localName": "img_1032.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi68Ri267_dncJw2zdgMVZJi8wlMEe7IC7baam23LBdAs17urG65OPdbvRps6T6gqaa4LaKCMO4rP2B_gwNm1eP5Ohzu3jFJWU5MqW7pRDV-kchoaNd9Ad9dZenPRkmCxiwL0RI/s0/img_1032.jpg"
+      },
+      {
+        "localName": "img_1051.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBnf1w6v36FJFeDLvU1Uj67MLHnVAWHrts2W26K5jZPc9sMwZfhq9E5Q_CrLmBdWhHLgFyJ1z8Wfxga0h9hycrk2Sqi6ZCFQHVWYxLhmqg27IINqYO5VhudAaz1Fm-zyekOuJW/s0/img_1051.jpg"
+      },
+      {
+        "localName": "img_1037.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu_48cLTaPATqrLRTNgjKOqsbYPAde3fiPiyZoL05KEr2k8tVqo-D6CuQmzo75XNWmYX6zijSa_UhLL1BxSLZD0aYepjYW9euHsto8FrcsK9Ws0G-ol31rTO2m4UZwyz3SXYNH/s0/img_1037.jpg"
+      },
+      {
+        "localName": "img_1053.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6qWwJfAAvnHXDVLF337pXCPNiSp06zrromqPRIoi6KSzV_-Zxd17zG9bMRA3NHrRKwkig12ATqVWFjd9aGTsbQaaZjMm1VhR1RzMAF6r8VJbK-Kd4Ag40fXEODM4Gfq5n82fd/s0/img_1053.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "img_0964.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1034.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/basement-cleanup/img_1032.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1051.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1037.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1053.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "img_0964.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1034.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1051.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1037.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1053.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-12-16-big-pot.md",
+    "postSlug": "big-pot",
+    "title": "Big Pot",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/12/big-pot.html",
+    "availableImages": ["img_1055.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "img_1055.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCzh8G3nFojKzioI4u1dnwquNONQQ4qMWgD-H1BJAGShZB8D6JVPtv9pqC46EvXHsrw8aJrm82knrDeU5aOC-EuIWA98qS5LiP_W7y2CeOKgYaCEmj1Z-A1MuC5UN1jTNMfZ4I/s0/img_1055.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "img_1055.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "img_1055.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-12-16-brass-sponge.md",
+    "postSlug": "brass-sponge",
+    "title": "Brass Sponge",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/12/brass-sponge.html",
+    "availableImages": ["img_1059.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "img_1059.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzPXh-F25OyD2OE3bu3l3x5tLfCTOM9fX-NLJ3TlFM9Qzf_BfAEtG-chPoAiq1NE3HLEfVKT3reudHyWNsIb2CZyJTzcuO_H_5BmgwzKTO0j3OEPtoM2rqcV_yNd8UGQsW8ZWX/s0/img_1059.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "img_1059.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "img_1059.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2008-12-31-breadboard-bench.md",
+    "postSlug": "breadboard-bench",
+    "title": "Breadboard Bench",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2008/12/breadboard-bench.html",
+    "availableImages": [
+      "atx_diagram.png",
+      "img_1043.jpg",
+      "img_1045.jpg",
+      "img_1048.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_1043.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjE8m-ad9KBn-DvLDo4I7bm9smHKhuBZxjFA3SPy7PtlZiMjnceIPF95zSOkfbHLH7_nFxAp5f9E_Cl7C0uyNwcBm45F3stLcm0qV2kxyy3m7O7cUoNjO1eS0IxuUH7gAc9JI-T/s0/img_1043.jpg"
+      },
+      {
+        "localName": "atx_diagram.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYugVXcEyXqmBl76XkkzPjfITQrAXxTWppY3tMi5hh2XZH9RYI7Wrx8VF5_liti0R_gbldv5AMQRDpcfSbf7Gb7KbfQSnd5gW2E82iDcUNY8ZCXvhcgTfkydKfQVtILA91F47R/s0/ATX_diagram.png"
+      },
+      {
+        "localName": "img_1045.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8wDTu6v9gsDMnchrncJICtl8XkN7_RggG7LOI1BoGIdA9icDYMM8hDPTn_4P3U4ddyGE3hPZ57MPuQwm4i23ztlMoJuB-Xwn6tcBv_yTH7VoeSkWZn6YRPvvnokl9xFcb_XIc/s0/img_1045.jpg"
+      },
+      {
+        "localName": "img_1048.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigW6gMpRuuvx51fgdvyn4BqIOpl1y9vXZNbEBWEaQdAmA1wuM2CpKlxxGIjgrvB_-Z861O5lMcT9N2HLKS17c8bwDs2Ko8NOpAt1BOs-bScktLo_5bfXPew0ehEkBkicvD0RtP/s0/img_1048.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "img_1043.jpg",
+        "caption": ""
+      },
+      {
+        "path": "ATX_diagram.png",
+        "caption": ""
+      },
+      {
+        "path": "img_1045.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1048.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "img_1043.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "ATX_diagram.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1045.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1048.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "ATX_diagram.png",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-01-02-bunk-bedside-table.md",
+    "postSlug": "bunk-bedside-table",
+    "title": "Bunk Bedside Table",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/01/bunk-bedside-table.html",
+    "availableImages": [
+      "bedsidetable.svg",
+      "img_1089.jpg",
+      "img_1092.jpg",
+      "img_1096.jpg",
+      "img_1097.jpg",
+      "nighttable.png"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_1092.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvFg-I7dphxN5oE2Xb1X_AGzeIAX-_-5Kv8B-tcGTfV8tco3R9LkeBuotuim1BrUuOa9VV4kt9Ncto5f9xAFdKvCFNnfWfIgSnnTD2UtnZ0kAGr923XkjC2R39jrhH8MkgLJx4/s0/img_1092.jpg"
+      },
+      {
+        "localName": "bedsidetable.svg",
+        "originalUrl": "http://carlos.asmat.googlepages.com/bedsideTable.svg"
+      },
+      {
+        "localName": "nighttable.png",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0oXShz5Jkh4NGZFangrgSHwIbqNTFYKjaTe0eLbwPuh_KXOdQ4yZ5kXAs8kpbxGkFBBF7LNOVevLK2xckNO1cZftUh33jQmNAo9qXjQej1iVl3vZax1dGn0iOdI4hLT-d_o0G/s0/nightTable.png"
+      },
+      {
+        "localName": "img_1096.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9VAtyYycjzUqlp3ov31T5tutfOJSNPea3CLPMlkjiniwmW_7Ji263Ou0hW-R8gdq5Jew1Qug-mV7p2KiXJQxUDhTNquNLAbbiN9ttAUZWa-pF2Vp4dM0dgVedUqeTTG4ryBMd/s0/img_1096.jpg"
+      },
+      {
+        "localName": "img_1097.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr87zFxyvMec1-YfA_Q0OwDq5O-ovRdgBXsnJonwagCeu90dEo8qWRZNsjxXUHCunn7_86imM3m4jgE25JPoXsE5Nm28yrLFgb6JlnCuRC5f_Kkt-nBVkHHa7eELGbECad7zj7/s0/img_1097.jpg"
+      },
+      {
+        "localName": "img_1089.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEii6S2zq8SBWs4L469gszQ2eITITu2Ku_vo_FYQGAwldiFkaR28I8397yMgf_5hhwva_ZWx-gIX2_gOpr0FQ0R_PLWlDA6AWGBuU6HK-6DjD6rLusrfrEjScCmjWhAbXmLEM6G3/s0/img_1089.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/bunk-bedside-table/img_1092.jpg",
+        "caption": ""
+      },
+      {
+        "path": "nightTable.png",
+        "caption": ""
+      },
+      {
+        "path": "img_1096.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1097.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1089.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "nightTable.png",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1096.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1097.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1089.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "nightTable.png",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 5,
+        "blogspotCount": 6
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-01-27-big-buck-bunny-puzzle.md",
+    "postSlug": "big-buck-bunny-puzzle",
+    "title": "Big Buck Bunny Puzzle",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/01/big-buck-bunny-puzzle.html",
+    "availableImages": [
+      "bbb-splash.png",
+      "img_1076.jpg",
+      "img_1081.jpg",
+      "img_1082.jpg",
+      "img_1085.jpg",
+      "img_1086.jpg",
+      "rodents.png"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_1085.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfDb5pTK3k_X6di29AlG9qZqdNNkcnQvy231ynHtkYehaVM6PX_r6izYcOGhXUnUDA94gKdQQkEbeV56W7PbZUtu87EQ1yGREmlYNnUfUchIuWwOG50n90ynRnVI5HjfkX-K7z/s0/img_1085.jpg"
+      },
+      {
+        "localName": "img_1086.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFgTR2OV9rMyOJnJwH19lFjNmrkd5loDvxSiuVxrz9NDLq2-EhlVUBVy91hnvur8evMPi4NxLik96kEpY7jvbtmlBOwnHduJfE0K_P8Dk1_-acuSKQvy_ju07gRheQvsMo2kHP/s0/img_1086.jpg"
+      },
+      {
+        "localName": "bbb-splash.png",
+        "originalUrl": "http://peach.blender.org/wp-content/uploads/bbb-splash.png"
+      },
+      {
+        "localName": "rodents.png",
+        "originalUrl": "http://peach.blender.org/wp-content/uploads/rodents.png"
+      },
+      {
+        "localName": "img_1076.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhM3PBYLHNuVXuAgicTGwTRJihgADA1JgeDicrhvY-ftbZdJ6BkGBZoYTFw8ppdPFv59yqSGdXrtxoLgB672JiTZeVo0wwL0MxCQnJjCEvsk40d77g8BLhA9pv9VfWxxLU7SS7S/s0/img_1076.jpg"
+      },
+      {
+        "localName": "img_1082.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLQlpEKrYFKrLnziNs9nYa0GQR6puMaeVBZub5cFvVGO8ICGv7qrm7O1PdIiBlzdNLndFMQfRETXW7xxCXERr3jKr88hOXx-TQJkuRCfYEM_WeC7BmPeVmD8HlrYDiQXU4ORZy/s0/img_1082.jpg"
+      },
+      {
+        "localName": "img_1081.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOLLkK1JGdWaOAWeVbBi-3zRQ_tmRgqmcmCvY4WJK5f042ShYRb3GOaKpH0t1uZiubbmO1aV7varC63K81EvGeLwRuwlY1XpesRQhGxGAYB4SvMH0aullFhl2mBfiMYvyrEZiY/s0/img_1081.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "img_1085.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1086.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1076.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1082.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1081.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "img_1085.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1086.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1076.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1082.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1081.jpg",
+        "caption": ""
+      },
+      {
+        "type": "image_count_mismatch",
+        "postRefs": 5,
+        "blogspotCount": 7
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-02-18-solitudes.md",
+    "postSlug": "solitudes",
+    "title": "Solitudes",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/02/solitudes.html",
+    "availableImages": [
+      "img_1537.jpg",
+      "img_1538.jpg",
+      "img_1541.jpg",
+      "img_1542.jpg",
+      "img_1543.jpg",
+      "img_1545.jpg",
+      "img_1546.jpg",
+      "img_1549.jpg",
+      "img_1551.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_1538.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCDJiPw6cf0Ji6zFQgPvoMA_mu_eg2OY6Yf7N4j2DWwQO9QX_38yMGKsj4K98RHPnHqkRHb3zWuEF0oAcZBlRYJ_YEJYJF2NXQeFDbb9oaHcQ-D8sLAM7I8a4FskEeZne_OWme/s0/img_1538.jpg"
+      },
+      {
+        "localName": "img_1537.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsYgffkh1_XfIgpdYaoW3IE2lJzA3GpFkqIgXTPmF3Tai2AGm7aXBie3Y4O7POCJVmHAPAGM7ADnhGyPdH1C_eFRtkA0MxiRrm7UFgudFUinMtUs_3vRABeH0cPf5_u5PCSCK9/s0/img_1537.jpg"
+      },
+      {
+        "localName": "img_1551.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHzuyQH9RfjDc1w-3KgOSlmpknVmPMtjgqqrBt2__Zg8xSbjTGpqNsPowZ5-H7YzoRUKBT5jE_96jariDtYGmcKF3AITP19GJjZu18kdJ9e8uCEnWed-pB1UUWlMM0O9l-8RtX/s0/img_1551.jpg"
+      },
+      {
+        "localName": "img_1545.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqDTxU0dXIrzoN_MSL_DPYMVf33IC1QV40uzZoZyUjIK8_2vCYJZZndMaPUjmZ0OnjJyhcamaNBplJPzfAZLBd8gGi-dnU2zAfSqN4afk-RlWoXX6MqSmtmeYxOhwPteHEihx3/s0/img_1545.jpg"
+      },
+      {
+        "localName": "img_1541.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3kfREfxF12xYUw7Ibj7-T7W6vVztR6nU94Ol1DAvCpdRnoLHVGP3cumd6egE06ZLw5ZWlsaLc0P1kn9LmsGB4PK_BTTYKRZxAJgsJ88gOHs5zZP-nC6PAySgQ98c9aYF2dwuK/s0/img_1541.jpg"
+      },
+      {
+        "localName": "img_1542.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpBuY1zoAw6egTo4XBkn7WY49MJoVCS7302WGUSFicVJJArJm61Ats2laRabKWDEwU9t2OcuufpWntEKG01D_taq7TkP_s-m6UYg5OIDHUYbzQkMpBndJTIPrLdfkF_3MjQxj_/s0/img_1542.jpg"
+      },
+      {
+        "localName": "img_1543.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_6IAZ-Kl2Iv7TYWcG4ibmXmNpsChuWZgaq-WSghU5pE_n0BhtPbmLUH68m_EKZpnNqId3I-LtX3IKQOnuCy3xheICsuKrfXxgD2aSnN9txI6jDSvf_szvNG2XVvWkt3hDnWac/s0/img_1543.jpg"
+      },
+      {
+        "localName": "img_1546.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXUtuugjugO-ChgNvwvZfll2tf4TikqdPnBILSTEWhjpBC2YQ2mx9QFsQm7aXobjneW-5EqclZ_Io6LVq8ckg380nkahUIRd5h_vmI_NBUxautytGxBZnSUQNMu8uuSW5gl_po/s0/img_1546.jpg"
+      },
+      {
+        "localName": "img_1549.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBBBHpOqfNMMEGqpqV8IrpOnv6fi7DdvRi-A1G8vbbx8n6Yi4iNelehWqf0gyYypZRaoV1DCh-m1ptIuPRGCYJwNAGzhpm_SqtRr-VtD1JCX6cBMzwXeU-oqjqC2R8VKnV7VpJ/s0/img_1549.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "img_1538.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1537.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1551.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1545.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1541.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1542.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1543.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1546.jpg",
+        "caption": ""
+      },
+      {
+        "path": "img_1549.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "img_1538.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1537.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1551.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1545.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1541.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1542.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1543.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1546.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "img_1549.jpg",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-03-10-the-batarang.md",
+    "postSlug": "the-batarang",
+    "title": "The Batrang",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/03/batrang.html",
+    "availableImages": ["batmanbeginslogo.jpg", "img_1718.jpg", "img_1731.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "img_1731.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZySQvKv9q6VrlNRmlr_IumWJlwqPtfVYOVagA-g2iq4PBUU-x4YTDTayfqiSwWZNV5PSYs1Vb3nbtHvzQje9iptBcLdVq3f0IlLe0WD7mz0pYy96em7mFVQEJpHBOxXPLmJ8J/s0/IMG_1731.JPG"
+      },
+      {
+        "localName": "batmanbeginslogo.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNfPu7YvAnSnMLqtsU2SAge6IjxeIksJ01JuYpZ6rqIV8aeCj2vFx9fPmmbsTf_1zA3V7tmSDJxchfJmXPcxTiLJZhNQSSzt3EuAPLb4pb_v2FMC6eQ1FaOK7TFVXL6NVZxBUz/s0/BatmanBeginsLogo.jpg"
+      },
+      {
+        "localName": "img_1718.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn0qRQtdpzzvfmiXF_B4r7_4JXfq4umOEvGYxNrlz65KzeVdMjK-qCVlCWE2X7AjBW6lHxzPy-k-6mZhW4oMX27tkbuLbE9FsJ8i0PQR0czqBcCIX2udcTpt4ZjAm5_Pbua8Tj/s0/IMG_1718.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/the-batarang/img_1731.jpg",
+        "caption": ""
+      },
+      {
+        "path": "BatmanBeginsLogo.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1718.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "BatmanBeginsLogo.jpg",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1718.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "BatmanBeginsLogo.jpg",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1718.JPG",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-03-11-opus-smart-card.md",
+    "postSlug": "opus-smart-card",
+    "title": "Opus Smart Card",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/03/opus-smart-card.html",
+    "availableImages": [
+      "img_1611.jpg",
+      "img_1614.jpg",
+      "img_1618.jpg",
+      "img_1627.jpg",
+      "img_1634.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_1611.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMyKcmkQT4SYgLUF4KddH4jbCy-ozTWOZAiv5OCdlEZ_-IZeF__EkjfADlapXjEoEhCZcIqU7Z1gSbZ-q4qnM6iAEd4fbH9nHGtrj5dcw6oyP7q978DURwj_DwLP9sNhYudfFY/s0/IMG_1611.JPG"
+      },
+      {
+        "localName": "img_1614.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8_KD4Z80dVZZRgedSvzg2Hzw26K-Q4BeueYY9Va_io1KJnLxmasv8LvIdiV19XgMAZnsrZH5OzULEiNIUWHEdR4M3DnSNwrzQWvP6l0_WjfBwiXE5oCnB1KAfssBdIrZGtgjQ/s0/IMG_1614.JPG"
+      },
+      {
+        "localName": "img_1618.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQljdKta8UYnx2cUIM8QQQfpha7_JcqG90PaNr6WmrVRh0-u6j10roDZG79levk1KtZFAmdmhALZkT3khAKqECdfBOtHQCQzBJfD2nUMbeK1BIK2Q6dsYbonIVIrBMgm2MDFY7/s0/IMG_1618.JPG"
+      },
+      {
+        "localName": "img_1627.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrzl_99UxCmQGr30ostoow9kxD3dqaMXII8MrMYH662eI4to49jTpVb_uDwJh7985iEqVlLAMWmsACV6X9tf-LvcpzD_jOSgppFOsR7eWRydn4CTkAG0ZbUm4EowQ7mWtIXrAn/s0/IMG_1627.JPG"
+      },
+      {
+        "localName": "img_1634.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBfu6Pt7F-iD1VW0nQfZ8hklQmYAra1dgcflBzmlIzueaUU9iS-u5KxXI8L2434fGkSMaIFFF8Ht0_4q9CNdLTZqhZaEz0A3ietiyUmi74u6LQmJvUOmIqEx0rB7C8hDGF27Qb/s0/IMG_1634.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "IMG_1611.JPG",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1614.JPG",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1618.JPG",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1627.JPG",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1634.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "IMG_1611.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1614.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1618.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1627.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1634.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1611.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1614.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1618.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1627.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1634.JPG",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-03-22-compact-keychain-20.md",
+    "postSlug": "compact-keychain-20",
+    "title": "Compact Keychain 2.0",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/03/compact-keychain-20.html",
+    "availableImages": ["img_1715.jpg", "img_1716.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "img_1715.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIquOmMneDWlkCaMOa4MuOwDUE2uZlel4Bqywk3fvOMkm8ZgPWRg2Wh-QJ7uubXO_xcOeDHk90og3offLuKZG60XUXHMvg-Y8uFdQbMy5jkeB-IrpcMRSouebd5VoC35N_Rfim/s0/IMG_1715.JPG"
+      },
+      {
+        "localName": "img_1716.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggHePvzUl7x8Oo7WHuiqe2IJPYFeLopt71JJDWRoLbgKs6PQQQjMqMtnooG1IXIUfhmgHDRo7kbLMx-zMkUrB7H6qxbdWT7LWbzVPjeYF6rQi9iilk4SkqTRphHVysb2DFaJO8/s0/IMG_1716.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "IMG_1715.JPG",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/compact-keychain-20/img_1716.jpg",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "IMG_1715.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1715.JPG",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2009-03-30-smoking-cyclops.md",
+    "postSlug": "smoking-cyclops",
+    "title": "Smoking Cyclops",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2009/03/smoking-cyclops.html",
+    "availableImages": [
+      "img_1742.jpg",
+      "img_1743.jpg",
+      "img_1744.jpg",
+      "img_1745.jpg",
+      "img_1746.jpg",
+      "img_1747.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "img_1747.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNrKJm9OFazQHyrgs-B1sZPV0k665MW7RdhnsrF1f-5qUACZxqo_j5HvIDyK-M77J3iozR5oEPgnSzh1hZGJ22CgThXD7JSveT0qmVJTiBm0vdLyRhF3hS6ME2gdKWQalIwtt4/s0/IMG_1747.JPG"
+      },
+      {
+        "localName": "img_1742.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiCaalXPVn61uLADAUn8Q0QtSl40E7xJbp7_xqDqt1-8Gt0wfEYnYz0UD8r2EtUmCVuOJ6tTlrqCu2NAU0xAVtRGH9yEP-TbIOFPYOlzsadwdUmgxsag3LZ6pG0lvkGNRC38in/s0/IMG_1742.JPG"
+      },
+      {
+        "localName": "img_1746.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXsSGCONkB2Jswep26lUD6B0QtZnHFzyhqwTqrMSzX_bKBnTUAfH7e8k2ZsZvC46a6O0KedgEcvoOz0liuru9AuI8eUoX05OquoXzM3NxMIsuoXspKnGZrWo0hGQPw6QrASr7S/s0/IMG_1746.JPG"
+      },
+      {
+        "localName": "img_1743.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiR08KrB9oWK4aIGw9zlOmaPF0Q19yVpAqZfBw7D_bXZKAyee1bApTAbNi_efJrS9UyHUGpHJQFMkWXfc9wWqNxfC8rbAfjdDGSd5biKR_HGlKIMdkYmjqqodtJzlGsCYXq8Td/s0/IMG_1743.JPG"
+      },
+      {
+        "localName": "img_1744.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjofLzDwkKnlOhHfI-INTgFlUoH8jUYrTaa8zvsQrFlfN8Q_Yhi90lbyjtKCsElbckAXbFzxLk6ihQipeIb08AwDTRBJkFRqPonv7EOfs5FZY3YS5YEe500M7fgXveyXoRImke7/s0/IMG_1744.JPG"
+      },
+      {
+        "localName": "img_1745.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggC2_GI2JKDeFprf9-NqdCdA493ZIiFK9VmO-nJoMz61JPB5QKTCWSGyMXkxv58ug8ru1S5wtry8L8JhDczr1g6a4ARcCRewWHqmbZKiDjL4WqpvrcqzpWtGvDSlUAd-Tj-zVH/s0/IMG_1745.JPG"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/smoking-cyclops/img_1747.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/smoking-cyclops/img_1742.jpg",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/smoking-cyclops/img_1746.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1743.JPG",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1744.JPG",
+        "caption": ""
+      },
+      {
+        "path": "/img/blog/smoking-cyclops/img_1742.jpg",
+        "caption": ""
+      },
+      {
+        "path": "IMG_1745.JPG",
+        "caption": ""
+      }
+    ],
+    "issues": [
+      {
+        "type": "bare_filename",
+        "current": "IMG_1743.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1744.JPG",
+        "caption": ""
+      },
+      {
+        "type": "bare_filename",
+        "current": "IMG_1745.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1743.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1744.JPG",
+        "caption": ""
+      },
+      {
+        "type": "missing_image",
+        "current": "IMG_1745.JPG",
+        "caption": ""
+      }
+    ],
+    "needsUpdate": true
+  },
+  {
+    "repoFile": "2006-08-23-my-tools.md",
+    "postSlug": "my-tools",
+    "title": "My Tools",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/08/my-tools.html",
+    "availableImages": [
+      "breadboard.1.jpg",
+      "hak-93613p-a.jpg",
+      "knife.0.jpg",
+      "multimeter.0.jpg",
+      "powersupply.0.jpg",
+      "pump.1.jpg",
+      "stripper.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "pump.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/pump.1.jpg"
+      },
+      {
+        "localName": "stripper.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/stripper.jpg"
+      },
+      {
+        "localName": "knife.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/knife.0.jpg"
+      },
+      {
+        "localName": "breadboard.1.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/breadboard.1.jpg"
+      },
+      {
+        "localName": "multimeter.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/multimeter.0.jpg"
+      },
+      {
+        "localName": "powersupply.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/powersupply.0.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/my-tools/hak-93613p-a.jpg",
+        "caption": "Hakko 936 ESD"
+      },
+      {
+        "path": "/img/blog/my-tools/pump.1.jpg",
+        "caption": "Desoldering Pump"
+      },
+      {
+        "path": "/img/blog/my-tools/stripper.jpg",
+        "caption": "Wire Stripper"
+      },
+      {
+        "path": "/img/blog/my-tools/knife.0.jpg",
+        "caption": "Swiss Army Knife"
+      },
+      {
+        "path": "/img/blog/my-tools/breadboard.1.jpg",
+        "caption": "Breadboard"
+      },
+      {
+        "path": "/img/blog/my-tools/multimeter.0.jpg",
+        "caption": "Multimeter"
+      },
+      {
+        "path": "/img/blog/my-tools/powersupply.0.jpg",
+        "caption": "Power Supply"
+      }
+    ],
+    "issues": [],
+    "needsUpdate": false
+  },
+  {
+    "repoFile": "2006-08-25-overhauling-palm-iiic.md",
+    "postSlug": "overhauling-palm-iiic",
+    "title": "Overhauling a Palm IIIc",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2006/08/overhauling-palm-iiic.html",
+    "availableImages": [
+      "palm-craddle-connector.0.jpg",
+      "palm-craddle.jpg",
+      "palm-iiic.0.jpg",
+      "stylus.0.jpg"
+    ],
+    "blogspotImages": [
+      {
+        "localName": "palm-craddle.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/palm%20craddle.jpg"
+      },
+      {
+        "localName": "palm-craddle-connector.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/palm%20craddle%20connector.0.jpg"
+      },
+      {
+        "localName": "stylus.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/stylus.0.jpg"
+      },
+      {
+        "localName": "palm-iiic.0.jpg",
+        "originalUrl": "http://photos1.blogger.com/blogger/4122/3639/1600/palm%20IIIc.0.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/overhauling-palm-iiic/palm-craddle.jpg",
+        "caption": "Palm Craddle"
+      },
+      {
+        "path": "/img/blog/overhauling-palm-iiic/palm-craddle-connector.0.jpg",
+        "caption": "Craddle Connector"
+      },
+      {
+        "path": "/img/blog/overhauling-palm-iiic/stylus.0.jpg",
+        "caption": "Stylus"
+      },
+      {
+        "path": "/img/blog/overhauling-palm-iiic/palm-iiic.0.jpg",
+        "caption": "Palm IIIc"
+      }
+    ],
+    "issues": [],
+    "needsUpdate": false
+  },
+  {
+    "repoFile": "2007-01-10-blue-mouse.md",
+    "postSlug": "blue-mouse",
+    "title": "Blue Mouse",
+    "blogspotUrl": "https://carlitoscontraptions.blogspot.com/2007/01/blue-mouse.html",
+    "availableImages": ["bluemouse.jpg"],
+    "blogspotImages": [
+      {
+        "localName": "bluemouse.jpg",
+        "originalUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnAd9itrP5U3LaasYupKF-6hEyq5IhRqpY2c8a_t5pAh9a5v3S3o58aqO_nIZmJ911XyxW0QoEwrRYAuwLKW_YEDSMm-pNIrqejG9RfI8mxhqumVBk8sTiLogTpZrwzPBy8FUM/s0/bluemouse.jpg"
+      }
+    ],
+    "currentFigRefs": [
+      {
+        "path": "/img/blog/blue-mouse/bluemouse.jpg",
+        "caption": "Blue Mouse"
+      }
+    ],
+    "issues": [],
+    "needsUpdate": false
+  }
+]
