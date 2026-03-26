@@ -14,7 +14,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-Besides [my POV display](/blog/arduino-pov-prototype-part-2/), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, I built a very simple IR detector based on [this article](http://www.thekeeser.com/Projects/simple_ir_detector.htm).
+Besides [my POV display](/blog/arduino-pov-prototype-part-2/), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, I built a very simple IR detector based on {% wayback "https://web.archive.org/web/20060322221012/http://www.thekeeser.com:80/Projects/simple_ir_detector.htm", "this article" %}.
 
 ## General Idea
 
@@ -25,7 +25,7 @@ An IR signal is "seen" by a reverse biased IR diode which produces an electrical
 ## Materials
 
 - An IR Diode (I got mine from an old TV set)
-- An LED (a [yellow one](http://alan-parekh.vstore.ca/product_info.php/cPath/4_6/products_id/18) in my case)
+- An LED (a {% wayback "https://web.archive.org/web/20060214181207/http://alan-parekh.vstore.ca:80/product_info.php/cPath/4_6/products_id/18", "yellow one" %} in my case)
 - A 1k Ohms resistor
 - A 50 Ohms resistor (two 100 Ohms resistors in parallel)
 - A BJT (I used the 2N3904, but any common BJT should work with the right biasing)

@@ -28,8 +28,8 @@ This time, I built a panoramic camera. My main objective was to have a platform 
 
 ## Materials
 
-- [Hitec HS-785HB Winch Servo Motor](http://www.robotshop.ca/hitec-hs785hb-servo-motor.html "Hitec HS-785HB Winch Servo Motor")
-- [ServoCity SPT200 Direct Drive Pan & Tilt System](http://www.robotshop.ca/servocity-spt200-pan-tilt.html "ServoCity SPT200 Direct Drive Pan & Tilt System")
+- {% wayback "https://web.archive.org/web/20090124042928/http://www.robotshop.ca:80/hitec-hs785hb-servo-motor.html", "Hitec HS-785HB Winch Servo Motor" %}
+- {% wayback "https://web.archive.org/web/20090125121707/http://www.robotshop.ca:80/servocity-spt200-pan-tilt.html", "ServoCity SPT200 Direct Drive Pan & Tilt System" %}
 - [Pololu Micro Serial 8 Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html)
 - [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor")
 - A digital camera
@@ -78,6 +78,6 @@ For now, taking a full 360 panorama takes about 15 minutes. This is a very long 
 
 {# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
-I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller"), the [ServoCity SPT200 Direct Drive Pan & Tilt System](http://www.robotshop.ca/servocity-spt200-pan-tilt.html "ServoCity SPT200 Direct Drive Pan & Tilt System"), and the [Hitec HS-785HB Winch Servo Motor](http://www.robotshop.ca/hitec-hs785hb-servo-motor.html "Hitec HS-785HB Winch Servo Motor"). This is the second (and hopefully not the last) project they sponsor here at [Carlitos' Contraptions](../ "Carlitos' Contraptions"). Without their help, I would have never been able to afford any of the materials (except for those that come straight from the garbage as usual).
+I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller"), the {% wayback "https://web.archive.org/web/20090125121707/http://www.robotshop.ca:80/servocity-spt200-pan-tilt.html", "ServoCity SPT200 Direct Drive Pan & Tilt System" %}, and the {% wayback "https://web.archive.org/web/20090124042928/http://www.robotshop.ca:80/hitec-hs785hb-servo-motor.html", "Hitec HS-785HB Winch Servo Motor" %}. This is the second (and hopefully not the last) project they sponsor here at [Carlitos' Contraptions](../ "Carlitos' Contraptions"). Without their help, I would have never been able to afford any of the materials (except for those that come straight from the garbage as usual).
 
 They have also being very patient and understanding about my unexpected delay in rolling out this project.

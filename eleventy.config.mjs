@@ -44,6 +44,10 @@ export default function (eleventyConfig) {
     return `<div class="gallery" style="--gallery-cols: ${columns}">${items}</div>`;
   });
 
+  eleventyConfig.addShortcode("wayback", (url, text) => {
+    return `<a href="${url}" class="wayback-link" title="Archived page">${text}<svg class="wayback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/><path d="M3 12h1M20 12h1"/></svg></a>`;
+  });
+
   eleventyConfig.addShortcode("youtube", (id) => {
     return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
   });

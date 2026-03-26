@@ -18,7 +18,7 @@ A Bogotá rake is a very effective [lock picking](http://en.wikipedia.org/wiki/L
 For this project you only need one [street sweeper](http://en.wikipedia.org/wiki/Street_cleaner) bristle. You can find these on the streets after a street sweeper passed by. Their rotating brushes leave behind these precious bristles.
 
 {# {% fig "bristle.jpg", "" %} - image lost #}  
-First you need a template. I found this very good one from [Exodus5000](http://www.lockpicking101.com/profile.php?mode=viewprofile&u=2273).
+First you need a template. I found this very good one from {% wayback "https://web.archive.org/web/20060328232614/http://www.lockpicking101.com/profile.php?mode=viewprofile&u=2273", "Exodus5000" %}.
 
 {# {% fig "bogota template.jpg", "" %} - image lost #}
 

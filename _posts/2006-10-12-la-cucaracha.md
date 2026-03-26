@@ -15,7 +15,7 @@ tags: []
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 
-_Update:_ La Cucaracha has got lots of attention lately (mainly thanks to Alan Parekh from [HackedGadgets](http://www2.blogger.com/http//www.hackaday.com/)). I found some of its cousins built by 7 year olds. See them at [ArtBots Robots](http://www.pubgin.com/2006/11/03/artbots-robots-art-bots-made-from-computer-mice/).
+_Update:_ La Cucaracha has got lots of attention lately (mainly thanks to Alan Parekh from [HackedGadgets](http://www2.blogger.com/http//www.hackaday.com/)). I found some of its cousins built by 7 year olds. See them at {% wayback "https://web.archive.org/web/20071022193138/http://pubgin.com:80/2006/11/03/artbots-robots-art-bots-made-from-computer-mice/", "ArtBots Robots" %}.
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 

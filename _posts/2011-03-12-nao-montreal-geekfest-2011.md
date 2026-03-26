@@ -37,6 +37,6 @@ The Geekfest was a lot of fun, you can see some more pictures of Carlitos' Contr
 
 - [Magicol Media](http://www.magicolmedia.com/?p=11566)
 - [Geekfestmtl Flickr Pool](http://www.flickr.com/groups/geekfestmtl/pool/)
-- [Branchez-vous](http://www.branchez-vous.com/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html)
+- {% wayback "https://web.archive.org/web/20110326060011/http://www.branchez-vous.com:80/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html", "Branchez-vous" %}
 
-{% gallery 4, "/img/blog/nao-montreal-geekfest-2011/IMG_0287.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0270.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0269.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0268.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0267.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0266.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0264.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0263.jpg" %}
+{% gallery 4, "/img/blog/nao-montreal-geekfest-2011/img_0287.jpg", "/img/blog/nao-montreal-geekfest-2011/img_0270.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0269.jpg", "/img/blog/nao-montreal-geekfest-2011/img_0268.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0267.jpg", "/img/blog/nao-montreal-geekfest-2011/img_0266.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0264.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0263.jpg" %}

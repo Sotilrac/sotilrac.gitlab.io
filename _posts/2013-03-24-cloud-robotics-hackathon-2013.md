@@ -19,11 +19,11 @@ tags:
 
 {% fig "/img/blog/cloud-robotics-hackathon-2013/cloud-robotics-hackathon-banner4.png", "Cloud Robotics Hackathon 2013" %}
 
-The [Global Cloud Robotics Hackathon](http://roboticshackathon.com) is happening again this year it offers 3000$ in cash prizes to the winners. I am one of the organizers and judges for the projects that are going to be submitted. I think this is great opportunity for robotics enthusiast to get started making useful and interesting robotics applications using the power of the cloud.
+The {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "Global Cloud Robotics Hackathon" %} is happening again this year it offers 3000$ in cash prizes to the winners. I am one of the organizers and judges for the projects that are going to be submitted. I think this is great opportunity for robotics enthusiast to get started making useful and interesting robotics applications using the power of the cloud.
 
 ## What is the Cloud Robotics Hackathon?
 
-The [Cloud Robotics Hackathon](http://roboticshackathon.com) is an event where robotic, whether novice or expert, are called to create robotics applications involving the cloud. By using the [MyRobots.com](http://MyRobots.com) web service, hackers can create useful robotic applications that connect to the Internet and feature interesting behaviours. This year specifically, they invite hackers to focus on remote monitoring during the National Robotics Week, from April 6th to 14th 2013.
+The {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "Cloud Robotics Hackathon" %} is an event where robotic, whether novice or expert, are called to create robotics applications involving the cloud. By using the [MyRobots.com](http://MyRobots.com) web service, hackers can create useful robotic applications that connect to the Internet and feature interesting behaviours. This year specifically, they invite hackers to focus on remote monitoring during the National Robotics Week, from April 6th to 14th 2013.
 
 ## Where?
 
@@ -31,4 +31,4 @@ This hackathon does not have physical restrictions. Participants can register an
 
 ## How to participate?
 
-Simply register your project in their [registration page](http://roboticshackathon.com/register/).
+Simply register your project in their {% wayback "https://web.archive.org/web/20120117003917/http://roboticshackathon.com/register/", "registration page" %}.

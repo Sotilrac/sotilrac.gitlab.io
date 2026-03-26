@@ -18,7 +18,7 @@ tags:
 {% include "archive-banner.njk" %}
 
 > _The Opus card is pretty much like an onion_  
-> ~ [Oscar Wilde](http://uncyclopedia.wikia.com/wiki/Oscar_Wilde)
+> ~ {% wayback "https://web.archive.org/web/20080203202857/http://uncyclopedia.wikia.com:80/wiki/Oscar_Wilde", "Oscar Wilde" %}
 
 {% fig "/img/blog/opus-smart-card/img_1611.jpg", "" %}
 
@@ -26,7 +26,7 @@ Here in Montreal, the public transportation system ([STM](http://stm.info/)) sta
 
 {% fig "/img/blog/opus-smart-card/img_1614.jpg", "" %}
 
-This smartcard is called [Opus](http://www.carteopus.info/en/main_nav/home/) and features contactless communication as well as regular metal pads (like those on telephone cards). This card can be recharged with various tickets, month passes, week passes, etc. More info on it can be found in its very own [wiki page](http://en.wikipedia.org/wiki/Opus_card).
+This smartcard is called {% wayback "https://web.archive.org/web/20080424131426/http://www.carteopus.info:80/en/main_nav/home/", "Opus" %} and features contactless communication as well as regular metal pads (like those on telephone cards). This card can be recharged with various tickets, month passes, week passes, etc. More info on it can be found in its very own [wiki page](http://en.wikipedia.org/wiki/Opus_card).
 
 Ever since it came out, I wanted to hack it and learn more about it. By searching a bit on the net, I found out that it is similar to other smart cards being used elsewhere in the world and this allowed me to learn some interesting things.
 

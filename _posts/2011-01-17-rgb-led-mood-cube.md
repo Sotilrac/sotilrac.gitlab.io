@@ -30,8 +30,8 @@ See the instructional video below if you want to put together a cube of your own
 
 {% youtube "_-zgh6amwbM#" %}
 
-In order to access the full instructions and documentation for this project please visit the [RGB LED Mood Cube project page](http://www.robotshop.com/gorobotics/articles/microcontrollers/carlitos-project-rgb-led-mood-cube) I put together over at GoRobotics.net.
+In order to access the full instructions and documentation for this project please visit the {% wayback "https://web.archive.org/web/20110117074705/http://www.robotshop.com:80/gorobotics/articles/microcontrollers/carlitos-project-rgb-led-mood-cube", "RGB LED Mood Cube project page" %} I put together over at GoRobotics.net.
 
 {% fig "/img/blog/rgb-led-mood-cube/led-mood-cube.jpg", "RGB LED Mood Cube Kit" %}
 
-If you want to make your own cube and are prepared to solder a lot, you might want to have a look at the [full RGB LED Mood Cube Kit](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Rbo-87) we put together at RobotShop.
+If you want to make your own cube and are prepared to solder a lot, you might want to have a look at the {% wayback "https://web.archive.org/web/20110119012217/http://www.robotshop.com:80/ProductInfo.aspx?pc=RB-Rbo-87", "full RGB LED Mood Cube Kit" %} we put together at RobotShop.

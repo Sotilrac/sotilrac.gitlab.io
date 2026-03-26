@@ -17,7 +17,7 @@ A Van de Graff generator (named after its inventor) is a high voltage generator.
 
 {% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff.jpg", "Van de Graff generator" %}
 
-Inspired by many web sites ([1](http://web.singnet.com.sg/%7Esengam/construction.htm) [2](http://scitoys.com/scitoys/scitoys/electro/electro6.html) [3](http://web.archive.org/web/20041026074140/http://www.angelfire.com/ak/egel/vande.html) [4](http://jnaudin.free.fr/html/jlnvdg.htm) [5](http://amasci.com/emotor/vdg.html#plns)), I decided to build my own Van de Graaff generator. It will not raise your hair but it is fun, easy to build, and very cheap. Also it doesn't require any glue (I always try to avoid glue).
+Inspired by many web sites ({% wayback "https://web.archive.org/web/20050212140309/http://web.singnet.com.sg:80/~sengam/construction.htm", "1" %} [2](http://scitoys.com/scitoys/scitoys/electro/electro6.html) [3](http://web.archive.org/web/20041026074140/http://www.angelfire.com/ak/egel/vande.html) [4](http://jnaudin.free.fr/html/jlnvdg.htm) [5](http://amasci.com/emotor/vdg.html#plns)), I decided to build my own Van de Graaff generator. It will not raise your hair but it is fun, easy to build, and very cheap. Also it doesn't require any glue (I always try to avoid glue).
 
 ## Materials
 

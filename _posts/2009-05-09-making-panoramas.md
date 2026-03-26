@@ -39,7 +39,7 @@ Once you stitched your images together (which can be done in the three steps the
 
 The only problem is that if you want to share this picture it can be hard since it may be too big for sending by email and will take a long time to (upload and) download if you put it on a website.
 
-Now you can use the [Google Maps Image Cutter](http://www.casa.ucl.ac.uk/software/googlemapimagecutter.asp "Google Maps Image Cutter"). This little Java program developed by [UCL](http://www.ucl.ac.uk/ "University College London") enables you to use the Google Maps engine as a picture viewing system. It creates many copies of your image at various resolutions and chops those images into small square pieces. Then when you view the image through the Google Maps engine, you are only loading the small squares at which you are currently looking at the resolution corresponding to your zoom level.
+Now you can use the {% wayback "https://web.archive.org/web/20080112100545/http://www.casa.ucl.ac.uk:80/software/googlemapimagecutter.asp", "Google Maps Image Cutter" %}. This little Java program developed by {% wayback "https://web.archive.org/web/20080103125718/http://www.ucl.ac.uk:80/", "UCL" %} enables you to use the Google Maps engine as a picture viewing system. It creates many copies of your image at various resolutions and chops those images into small square pieces. Then when you view the image through the Google Maps engine, you are only loading the small squares at which you are currently looking at the resolution corresponding to your zoom level.
 
 Here you can enjoy a few examples I made (click on the title to view them in full screen).
 

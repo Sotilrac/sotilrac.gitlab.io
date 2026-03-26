@@ -14,7 +14,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-Here is some information about a home automation system my team and I did some time ago. This was done for the Embedded Systems class and require two [Altera UP1](http://www.altera.com/literature/univ/univ.pdf) FPGA boards, two computers and two [USB-to-TTL](http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm) wires.
+Here is some information about a home automation system my team and I did some time ago. This was done for the Embedded Systems class and require two {% wayback "https://web.archive.org/web/20090529223417/http://www.altera.com:80/literature/univ/univ.pdf", "Altera UP1" %} FPGA boards, two computers and two {% wayback "https://web.archive.org/web/20070107074314/http://www.ftdichip.com:80/Products/EvaluationKits/TTL-232R.htm", "USB-to-TTL" %} wires.
 
 {% fig "/img/blog/home-automation/system-diagram.png", "" %}
 

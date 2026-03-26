@@ -75,4 +75,4 @@ Here is a selection of the [NanoBoard's features](http://wiki.altium.com/display
 - 1.8" ATA/IDE connector providing access to user LED and generic switch I/O
 - Remote Control and IR interface.
 
-I should post some further details and perhaps even a simple test project soon (as soon as I get [Altium Designer](http://www.altium.com/altiumsite/products/altium-designer/en/altium-designer_home.cfm "Altium Designer") and Xilinx ISE installed and running)
+I should post some further details and perhaps even a simple test project soon (as soon as I get {% wayback "https://web.archive.org/web/20090122121558/http://altium.com:80/altiumsite/products/altium-designer/en/altium-designer_home.cfm", "Altium Designer" %} and Xilinx ISE installed and running)

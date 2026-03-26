@@ -19,7 +19,7 @@ Some projects I will be writing on soon:
 - Cheap Bench Power Supply, see [this picture](http://photos1.blogger.com/blogger/4122/3639/1600/powersupply.0.jpg)
 - Laptop USB Lamp
 - CD Lamp², the obvious evolution of the [CD lamp](http://neil.fraser.name/hardware/lamp/)
-- Cornstarch Pet, a small project based on [this experiment](http://hackedgadgets.com/2006/09/29/shaken-cornstarch-grows-fingers/)
+- Cornstarch Pet, a small project based on {% wayback "https://web.archive.org/web/20061024060455/http://hackedgadgets.com:80/2006/09/29/shaken-cornstarch-grows-fingers/", "this experiment" %}
 - Ultra Cheap XBOX USB adaptor.
 - Skype phone ringer.
 

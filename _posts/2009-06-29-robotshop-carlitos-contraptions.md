@@ -17,7 +17,7 @@ tags: []
 
 {# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
-The robotics parts retailer [RobotShop](http://www.robotshop.com/ "RobotShop.com") will be sponsoring robotics projects at [Carlitos' Contraptions](/blog/). As a result I'll be rolling out robotics projects for the next weeks/months.
+The robotics parts retailer {% wayback "https://web.archive.org/web/20080107153801/http://www.robotshop.com:80/", "RobotShop" %} will be sponsoring robotics projects at [Carlitos' Contraptions](/blog/). As a result I'll be rolling out robotics projects for the next weeks/months.
 
 I'll try to make simple projects at the beginning and build up the difficulty level as I go. The idea is that, if you completed the first projects, you will be able to reuse the skills/parts/code to build the future projects.
 
@@ -27,4 +27,4 @@ I am planning to use [Python](http://www.python.org/ "Python.org") for any progr
 
 As always, I am open to any suggestions or wishes regarding the projects.
 
-_Note_: the [RobotShop](http://www.robotshop.com/ "RobotShop.com") logo above is not published under the CC license.
+_Note_: the {% wayback "https://web.archive.org/web/20080107153801/http://www.robotshop.com:80/", "RobotShop" %} logo above is not published under the CC license.

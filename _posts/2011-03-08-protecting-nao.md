@@ -18,7 +18,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Nao is a very expensive piece of equipment and it would be a shame if it got dirty, scratched or damaged. Nevertheless, the official Nao suitcase is priced at 777.77 USD. This is rather expensive. A suitable alternative is the cheaper [Plasticase Nanuk 945](http://www.robotshop.com/ca/plasticase-nanuk-extreme-heavy-duty-case-22-inch-3.html) which is as sturdy and IMHO much better looking.
+Nao is a very expensive piece of equipment and it would be a shame if it got dirty, scratched or damaged. Nevertheless, the official Nao suitcase is priced at 777.77 USD. This is rather expensive. A suitable alternative is the cheaper {% wayback "https://web.archive.org/web/20110306081421/http://www.robotshop.com:80/ca/plasticase-nanuk-extreme-heavy-duty-case-22-inch-3.html", "Plasticase Nanuk 945" %} which is as sturdy and IMHO much better looking.
 
 As explained in the video below, I also use clear Duck tape to protect Nao's surfaces. This tape is inexpensive, does not leave any residue and is very strong.
 

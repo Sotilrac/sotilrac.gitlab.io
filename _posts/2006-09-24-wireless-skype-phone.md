@@ -14,7 +14,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-At first, I saw on [this site](http://www.grynx.com/index.php/projects/siemens-skype/) someone who modified his wireless phone in order to connect it to his computer, transforming it in a wireless speaker and microphone. I thought it was kind of cruel to modify a working phone that way.
+At first, I saw on {% wayback "https://web.archive.org/web/20050612023923/http://www.grynx.com:80/index.php/projects/siemens-skype/", "this site" %} someone who modified his wireless phone in order to connect it to his computer, transforming it in a wireless speaker and microphone. I thought it was kind of cruel to modify a working phone that way.
 
 Some time later, my girlfriend gave me a broken wireless phone that belonged to her parents. I saw it was a nice phone so I tried to repair it but I couldn't. Basically it worked fine, you can play with the menu, store phone numbers, dial, call, the sound quality is good, the reception is OK and the battery life is satisfactory. It has only one small problem: you can't hang up. So unless you're planning to call someone and talk to him indefinitely, it is kind of useless. So I decided to make it into a cordless internet phone.
 
@@ -26,7 +26,7 @@ In order to achieve this goal, I hard wired the voice inputs and outputs of the 
 
 {# {% fig "2498_full.jpg", "" %} - image lost #}Materials:
 
-- 1 cordless phone (mine is a [VTech 2428](http://www.vtechcanada.com/en/products/24/data/vt2498.htm))
+- 1 cordless phone (mine is a {% wayback "https://web.archive.org/web/20060105185138/http://www.vtechcanada.com:80/en/products/24/data/vt2498.htm", "VTech 2428" %})
 - 2 3.5mm plugs (headphone plugs)
 - 1 switch
 - 1 screw

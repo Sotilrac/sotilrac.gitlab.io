@@ -27,9 +27,9 @@ For this project, I used the DFRobotShop Rover (a mobile Arduino kit), the VRbot
 
 {% youtube "cKY9tpxtkvE" %}
 
-In order to get more information about the project, the required tools, materials and code, please visit the [Speech-Controlled Arduino Robot project page](http://www.robotshop.com/gorobotics/articles/microcontrollers/carlitos-projects-speech-controlled-arduino-robot) at GoRobotics.net. The code is also available over there.
+In order to get more information about the project, the required tools, materials and code, please visit the {% wayback "https://web.archive.org/web/20110304145245/http://www.robotshop.com:80/gorobotics/articles/microcontrollers/carlitos-projects-speech-controlled-arduino-robot", "Speech-Controlled Arduino Robot project page" %} at GoRobotics.net. The code is also available over there.
 
-If you are interested in making your own, have a look at the [kit we put together with RobotShop](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Rbo-89).
+If you are interested in making your own, have a look at the {% wayback "https://web.archive.org/web/20110318033608/http://www.robotshop.com:80/ProductInfo.aspx?pc=RB-Rbo-89", "kit we put together with RobotShop" %}.
 
 ## So what about Nao?
 

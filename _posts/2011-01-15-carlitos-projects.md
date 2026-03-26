@@ -19,7 +19,7 @@ tags:
 
 [RobotShop](http://www.robotshop.com/) in collaboration with [Carlitos' Contraptions](/blog/) is creating a series of videos about DIY electronic and robotic projects.
 
-For these projects, I'll be putting together some electronic kits along with instructional blog posts and videos at [GoRobotics.net](http://www.robotshop.com/gorobotics/ "GoRobotics.net"). The main idea is to create more complex gadgets from off-the-shelf components.
+For these projects, I'll be putting together some electronic kits along with instructional blog posts and videos at {% wayback "https://web.archive.org/web/20110113111946/http://www.robotshop.com:80/gorobotics/", "GoRobotics.net" %}. The main idea is to create more complex gadgets from off-the-shelf components.
 
 So far, I have some projects in mind such as an LED mood cube, a mini automation web-server, and a speech-controlled robot to name a few.
 

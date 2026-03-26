@@ -25,7 +25,7 @@ tags:
 
 Unfortunately, this great material was not available for purchase in Canada (or at least not to my knowledge) and had to be ordered from the US which was rather expensive in shipping costs.
 
-All this has lately changed since [RobotShop](http://www.robotshop.com/ "RobotShop"), the Canadian based robot part distributor, included [Polymorph](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Dag-09 "Polymorph") into their catalogue. Now Canadians can buy 1 kg of [polymorph](http://www.robotshop.ca/ProductInfo.aspx?pc=RB-Dag-09 "Polymorph") for roughly 44 CAD and have it quickly and cheaply delivered to their doorstep.
+All this has lately changed since [RobotShop](http://www.robotshop.com/ "RobotShop"), the Canadian based robot part distributor, included {% wayback "https://web.archive.org/web/20100620104239/http://www.robotshop.com:80/productinfo.aspx?pc=RB-Dag-09", "Polymorph" %} into their catalogue. Now Canadians can buy 1 kg of {% wayback "https://web.archive.org/web/20100628184500/http://www.robotshop.ca:80/ProductInfo.aspx?pc=RB-Dag-09", "polymorph" %} for roughly 44 CAD and have it quickly and cheaply delivered to their doorstep.
 
 I bought some polymorph for my brother's birthday and we experimented with it as shown in the pictures below. Now that Canada has polymorph, let all the Canadians go crazy and build awesome white (or [coloured](http://www.youtube.com/watch?v=u9TkpoTzFMo "Coloured Polymorph")) stuff.
 

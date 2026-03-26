@@ -16,7 +16,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-I just got a shiny new [Logic](http://www.saleae.com/logic/ "The Logic"), a tiny 8-channel, 24 MHz logic analyzer from [Saleae LLC](http://www.saleae.com/home/ "Saleae"), and it is beautiful. I've been wanting to get a logic analyzer for quite some time and this little guy is definitely worth the 150 bucks it costs.
+I just got a shiny new [Logic](http://www.saleae.com/logic/ "The Logic"), a tiny 8-channel, 24 MHz logic analyzer from {% wayback "https://web.archive.org/web/20080609005002/http://www.saleae.com:80/home/", "Saleae LLC" %}, and it is beautiful. I've been wanting to get a logic analyzer for quite some time and this little guy is definitely worth the 150 bucks it costs.
 
 {% fig "/img/blog/i-got-logic/logic.jpg", "Logic Unboxing" %}
 

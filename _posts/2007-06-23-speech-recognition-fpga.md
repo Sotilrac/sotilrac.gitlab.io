@@ -20,7 +20,7 @@ My friends David and Kanwen, and I implemented a speech recognition system on an
 
 {# {% fig "blackboard.jpg", "" %} - image lost #}
 
-Inspired by the algorithm described in [a site from the University of Toronto](http://www.eecg.toronto.edu/%7Eaamodt/ece341/speech-recognition/), we wrote two MATLAB scripts: [train.m](http://carlos.asmat.googlepages.com/train.m) and [recogniz.m](http://carlos.asmat.googlepages.com/recogniz.m).
+Inspired by the algorithm described in {% wayback "https://web.archive.org/web/20060529172335/http://www.eecg.toronto.edu:80/~aamodt/ece341/speech-recognition/", "a site from the University of Toronto" %}, we wrote two MATLAB scripts: [train.m](http://carlos.asmat.googlepages.com/train.m) and [recogniz.m](http://carlos.asmat.googlepages.com/recogniz.m).
 
 train.m deals with the training phase, in which many versions of a sound (a spoken word for instance) are input and averaged in the frequency domain thus generating the sound's reference fingerprint.
 

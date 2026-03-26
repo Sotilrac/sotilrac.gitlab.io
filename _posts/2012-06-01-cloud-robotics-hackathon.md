@@ -18,12 +18,12 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Back in March we organized the first [Global Cloud Robotics Hackathon](http://roboticshackathon.com/). Along with co-organizer Sara Ahmadian, and all the local and global collaborators, we brought together around 200 people in eight locations around the world.
+Back in March we organized the first {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "Global Cloud Robotics Hackathon" %}. Along with co-organizer Sara Ahmadian, and all the local and global collaborators, we brought together around 200 people in eight locations around the world.
 
 The main goal of the hackathon is to allow programmers to jump into the robotics world through the use of the new and exciting field of Cloud Robotics.
 
 {% fig "/img/blog/cloud-robotics-hackathon/cloud_robotics_hackathon.png", "Cloud Robotics Hackathon" %}
 
-You can see all the information about the event in [its official](http://roboticshackathon.com/) website as well as the resulting presentations in the [Cloud Robotics Hackathon YouTube Channel](http://www.youtube.com/user/RoboticsHackathon).
+You can see all the information about the event in {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "its official" %} website as well as the resulting presentations in the [Cloud Robotics Hackathon YouTube Channel](http://www.youtube.com/user/RoboticsHackathon).
 
 For sure, there will be more iterations of this hackathon in the future!

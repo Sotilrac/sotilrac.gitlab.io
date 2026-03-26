@@ -35,7 +35,7 @@ Since this requires precise positioning, I thought a servo motor would be the be
 ## The Materials:
 
 - [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller")
-- [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor")
+- {% wayback "https://web.archive.org/web/20090529130749/http://www.robotshop.ca:80/Hitec-HS-425BB-Servo-Motor.html", "Hitec HS-425BB Servo Motor" %}
 - Male and female headers
 - Power adaptor (4 to 6 VDC)
 - Wire
@@ -70,7 +70,7 @@ Since, usually, servo motors have a motion range slightly greater than 180 deg, 
 
 I used an old heat sink and cut it with the Dremel in order to produce a bracket for the servo and a mounting hole for the secondary (smallest) gear axle.
 
-I attached the larger gear to the servo directly using the brackets and screws that came bundled with [the motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). Also, in order to hold the shaft in place, I used [e-style retaining rings](http://www.mcmaster.com/#retaining-rings/=2saqww "e-style retaining ring") and spacers (other dummy gears and shoulder washers) in order to match the grooves already present in the shaft. Of course, I got all these handy mechanical parts from an old photocopier I found in the garbage.
+I attached the larger gear to the servo directly using the brackets and screws that came bundled with {% wayback "https://web.archive.org/web/20090529130749/http://www.robotshop.ca:80/Hitec-HS-425BB-Servo-Motor.html", "the motor" %}. Also, in order to hold the shaft in place, I used [e-style retaining rings](http://www.mcmaster.com/#retaining-rings/=2saqww "e-style retaining ring") and spacers (other dummy gears and shoulder washers) in order to match the grooves already present in the shaft. Of course, I got all these handy mechanical parts from an old photocopier I found in the garbage.
 
 {% fig "/img/blog/gentle-safe-cracker/img_1366.jpg", "Dial coupling attached to the small gear" %}
 
@@ -112,6 +112,6 @@ Finally (this time for real), I cannot say too much about my next plans on attac
 
 {# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
-I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller") and the [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor"). As I mentioned [before](/blog/robotshop-carlitos-contraptions/ "RobotShop + Carlitos' Contraptions"), they will be sponsoring a set of projects here at [Carlitos' Contraptions](/blog/) in the foreseeable future.
+I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller") and the {% wayback "https://web.archive.org/web/20090529130749/http://www.robotshop.ca:80/Hitec-HS-425BB-Servo-Motor.html", "Hitec HS-425BB Servo Motor" %}. As I mentioned [before](/blog/robotshop-carlitos-contraptions/ "RobotShop + Carlitos' Contraptions"), they will be sponsoring a set of projects here at [Carlitos' Contraptions](/blog/) in the foreseeable future.
 
-They were also kind enough to quickly ship a [replacement gear set](http://www.robotshop.ca/hitec-hs-422-425-gear-set.html "Hitec HS-422/425 Replacement Resin Gears") when I ruined the original one on the servo motor by hand forcing it to turn (I know, I sound brilliant).
+They were also kind enough to quickly ship a {% wayback "https://web.archive.org/web/20090711202438/http://www.robotshop.ca:80/hitec-hs-422-425-gear-set.html", "replacement gear set" %} when I ruined the original one on the servo motor by hand forcing it to turn (I know, I sound brilliant).

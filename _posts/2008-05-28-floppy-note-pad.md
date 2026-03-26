@@ -14,7 +14,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-Inspired by [this commercial product](http://www.fractalspin.com/x/product.php?productid=124), my girlfriend and I did a small craft with her elementary school class (she is a teacher).
+Inspired by {% wayback "https://web.archive.org/web/20070918051013/http://fractalspin.com:80/x/product.php?productid=124", "this commercial product" %}, my girlfriend and I did a small craft with her elementary school class (she is a teacher).
 
 The main goal of this activity was to have the children make something useful by themselves by using everyday household materials and (what normally would be considered as) garbage.
 

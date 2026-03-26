@@ -14,7 +14,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Thanks to [M.Net](http://www.musiqueplus.com/emissions/m-net-1.950689) to welcome me once again to their show. This time, I had the pleasure of presenting the [Cloud Robotics Hackathon](http://roboticshackathon.com).
+Thanks to [M.Net](http://www.musiqueplus.com/emissions/m-net-1.950689) to welcome me once again to their show. This time, I had the pleasure of presenting the {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "Cloud Robotics Hackathon" %}.
 
 {% fig "/img/blog/cloud-robotics-hackathon-m-net/mnet-hackathon.png.jpg", "Cloud Robotics Hackathon at M.Net" %}
 

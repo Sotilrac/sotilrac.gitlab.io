@@ -40,7 +40,7 @@ See Nao 1337 watch the screening of its own movie below.
 
 ## Red Carpet
 
-After a fancy dinner at [Bobby Van's Steakhouse](http://www.bobbyvans.com/Bobby_Vans_Steakhouse/Wall_St.html), we headed back to the 3LD for the Red Carpet Ceremony. The red carpet was already deployed so 1337 and I got ready to walk it.
+After a fancy dinner at {% wayback "https://web.archive.org/web/20101019021752/http://bobbyvans.com/Bobby_Vans_Steakhouse/Wall_St.html", "Bobby Van's Steakhouse" %}, we headed back to the 3LD for the Red Carpet Ceremony. The red carpet was already deployed so 1337 and I got ready to walk it.
 
 I had programmed 1337 to hold hands and walk alongside me on the red carpet. I also included the ability to take breaks and show-off while standing on the carpet.
 
@@ -60,8 +60,8 @@ There were also performances by Double Rainbow, Reggie Watts and Josh Ventura du
 
 See more pictures or videos of Nao 1337 at the film festival here:
 
-- [New Scientist](http://www.newscientist.com/blogs/culturelab/2011/07/of-chorebots-and-broken-hearted-humanoids.html)
-- [Robot Dreams](http://www.robots-dreams.com/2011/07/robot-film-festival-videos-available-online-video.html)
+- {% wayback "https://web.archive.org/web/20110719150209/http://www.newscientist.com:80/blogs/culturelab/2011/07/of-chorebots-and-broken-hearted-humanoids.html", "New Scientist" %}
+- {% wayback "https://web.archive.org/web/20110821143811/http://www.robots-dreams.com/2011/07/robot-film-festival-videos-available-online-video.html", "Robot Dreams" %}
 - [Galo](http://www.galomagazine.com/technology/a-look-into-the-robot-film-festival/)
 - [DSP Studios](http://danielsethpagelstudios.blogspot.com/)
 - [Technology Reviews](http://www.technologyreview.com/blog/guest/27044/?p1=blogs)

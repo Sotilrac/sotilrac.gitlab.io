@@ -18,7 +18,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-I was lucky enough to help my friend Stephen and his team to build a [lunar excavator](http://lunarex.mcgill.ca/) to participate in the [Regolith Excavation Challenge](http://regolith.csewi.org/), sponsored by NASA.
+I was lucky enough to help my friend Stephen and his team to build a {% wayback "https://web.archive.org/web/20090429052244/http://lunarex.mcgill.ca:80/", "lunar excavator" %} to participate in the [Regolith Excavation Challenge](http://regolith.csewi.org/), sponsored by NASA.
 
 We put lots of efforts and many hours to get the robot done in time and we managed to get it running before it had to be shipped to California (from McGill University in Montreal).
 

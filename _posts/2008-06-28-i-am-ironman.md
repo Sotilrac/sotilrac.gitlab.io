@@ -22,7 +22,7 @@ When I saw the new Iron Man movie, I instantly knew I had to build some part of 
 
 {% fig "/img/blog/i-am-ironman/ironman1.jpg", "" %}
 
-(This picture comes from [IDontLikeYouInThatWay.com](http://www.idontlikeyouinthatway.com/pictures/20080505/iron%20man%20premiere/big_ironman1.html))
+(This picture comes from {% wayback "https://web.archive.org/web/20080510112440/http://www.idontlikeyouinthatway.com:80/pictures/20080505/iron%20man%20premiere/big_ironman1.html", "IDontLikeYouInThatWay.com" %})
 
 ## Objective
 
@@ -37,7 +37,7 @@ Materials
 - A long and thin aluminum piece from a copy machine
 - A street cleaner brush bristle (like the one used to build a [Bogota Rake](/blog/bogota-rake/ "Bogota Rake"))
 - An aluminum disk and a thick aluminum ring (they were the holder and separator for the plates on a very old hard drive)
-- 6 [5 mm](http://alan-parekh.vstore.ca/product_info.php/cPath/4_6/products_id/14) and one [10 mm](http://alan-parekh.vstore.ca/product_info.php/cPath/4_9/products_id/36) ultra bright LEDs
+- 6 {% wayback "https://web.archive.org/web/20080311062029/http://alan-parekh.vstore.ca:80/product_info.php/cPath/4_6/products_id/14", "5 mm" %} and one {% wayback "https://web.archive.org/web/20080710112959/http://alan-parekh.vstore.ca:80/product_info.php/cPath/4_9/products_id/36", "10 mm" %} ultra bright LEDs
 - A linear potentiometer (from an old sound system equalizer)
 - A switch
 - An old laptop battery

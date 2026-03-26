@@ -45,7 +45,7 @@ For those wondering about M$ Office compatibility, I can say that Word compatibi
 
 ## Automatix
 
-Although installing software on Ubuntu is quite easy (you simply select it in the package manager) some things may be slightly more tricky to install (such as nVidia drivers). [Automatix](http://www.getautomatix.com/) allows you to install all the most popular programs with very few clicks.
+Although installing software on Ubuntu is quite easy (you simply select it in the package manager) some things may be slightly more tricky to install (such as nVidia drivers). {% wayback "https://web.archive.org/web/20060623080143/http://www.getautomatix.com:80/", "Automatix" %} allows you to install all the most popular programs with very few clicks.
 
 {% fig "/img/blog/nice-linux-software/automarix.png", "" %}
 
