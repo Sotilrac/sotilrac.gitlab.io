@@ -1,0 +1,1304 @@
+{
+  "summary": {
+    "total": 200,
+    "alive": 103,
+    "dead": 97,
+    "withWayback": 66,
+    "noWayback": 31
+  },
+  "alive": [
+    {
+      "url": "http://www.pspilot.de/ppppiiic/ppppiiic.html",
+      "file": "2006-08-25-overhauling-palm-iiic.md",
+      "status": 200
+    },
+    {
+      "url": "http://scitoys.com/scitoys/scitoys/electro/electro6.html",
+      "file": "2006-09-05-cheap-van-de-graaff-generator.md",
+      "status": 200
+    },
+    {
+      "url": "http://web.archive.org/web/20041026074140/http://www.angelfire.com/ak/egel/vande.html",
+      "file": "2006-09-05-cheap-van-de-graaff-generator.md",
+      "status": 200
+    },
+    {
+      "url": "http://jnaudin.free.fr/html/jlnvdg.htm",
+      "file": "2006-09-05-cheap-van-de-graaff-generator.md",
+      "status": 200
+    },
+    {
+      "url": "http://amasci.com/emotor/vdg.html#plns",
+      "file": "2006-09-05-cheap-van-de-graaff-generator.md",
+      "status": 200
+    },
+    {
+      "url": "http://web.archive.org/web/20040215182109/http://www.electronics-lab.com/projects/pc/013/index.html",
+      "file": "2006-09-15-bottle-cap-pc-thermometer.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.savetheinternet.com/",
+      "file": "2006-09-23-save-the-internet.md",
+      "status": 200
+    },
+    {
+      "url": "http://photos1.blogger.com/blogger/4122/3639/1600/powersupply.0.jpg",
+      "file": "2006-10-10-coming-soon.md",
+      "status": 200
+    },
+    {
+      "url": "http://neil.fraser.name/hardware/lamp/",
+      "file": "2006-10-10-coming-soon.md",
+      "status": 200
+    },
+    {
+      "url": "http://beetlerobot.solarbotics.net/index1.htm",
+      "file": "2006-10-12-la-cucaracha.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.wikihow.com/Convert-a-Computer-ATX-Power-Supply-to-a-Lab-Power-Supply",
+      "file": "2006-11-10-bench-power-supply.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.futurlec.com/Pictures/CAPTPOST.jpg",
+      "file": "2006-11-10-bench-power-supply.md",
+      "status": 200
+    },
+    {
+      "url": "http://alan-parekh.com/led_resistor_calculator.html",
+      "file": "2006-11-10-bench-power-supply.md",
+      "status": 200
+    },
+    {
+      "url": "http://trashmail.net/",
+      "file": "2006-11-15-1000-visits.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.staticfreesoft.com/",
+      "file": "2006-12-02-opamp.md",
+      "status": 200
+    },
+    {
+      "url": "http://img.alibaba.com/photo/50490807/Laptop_USB_LED_Reading_Light.jpg",
+      "file": "2006-12-05-quick-and-cheap-laptop-lamp.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.uchobby.com/",
+      "file": "2007-02-18-lcd-display.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.uchobby.com/index.php/2006/12/12/free-graphic-lcd/",
+      "file": "2007-02-18-lcd-display.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.ubuntu.com/",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.openoffice.org/",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.gimp.org/",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "status": 200
+    },
+    {
+      "url": "http://gaim.sourceforge.net/",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.mozilla.com/en-US/firefox/",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.ubuntu.com/products/GetUbuntu/download?action=show&redirect=download",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.gnome.org/",
+      "file": "2007-03-08-more-linux.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.beryl-project.org/",
+      "file": "2007-03-08-more-linux.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.kde.org/",
+      "file": "2007-03-08-more-linux.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.cooperet.com/library/products/PS-5102%20B%20Series.pdf",
+      "file": "2007-03-08-supercapacitors.md",
+      "status": 200
+    },
+    {
+      "url": "http://amarok.kde.org/",
+      "file": "2007-03-18-nice-linux-software.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.inkscape.org/",
+      "file": "2007-03-18-nice-linux-software.md",
+      "status": 200
+    },
+    {
+      "url": "http://beagle-project.org/Main_Page",
+      "file": "2007-03-18-nice-linux-software.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.vmware.com/",
+      "file": "2007-03-18-nice-linux-software.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/CC_Debouncer.vhd",
+      "file": "2007-06-08-debouncer-v2.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/train.m",
+      "file": "2007-06-23-speech-recognition-fpga.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/recogniz.m",
+      "file": "2007-06-23-speech-recognition-fpga.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/SpeechRecognitionUsingFPGATechnology.pdf",
+      "file": "2007-06-23-speech-recognition-fpga.md",
+      "status": 200
+    },
+    {
+      "url": "http://openoffice.org/",
+      "file": "2007-06-23-speech-recognition-fpga.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.xbox-linux.org/wiki/Xbox_Linux_USB_HOWTO",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "status": 200
+    },
+    {
+      "url": "http://torrentspy.com/download.asp?id=1736745",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.konqueror.org/",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.xboxmediacenter.com/wiki/index.php?title=As_a_Dashboard",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.xboxmediacenter.com/wiki/index.php?title=Xbox_Media_Center_Online_Manual",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.umontreal.ca/",
+      "file": "2007-08-12-arduino-pov-prototype.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/POV_0_01.pde",
+      "file": "2007-08-18-arduino-pov-prototype-part-2.md",
+      "status": 200
+    },
+    {
+      "url": "http://google.com/",
+      "file": "2007-08-29-diy-birthday-gift-aka-nail-puzzle.md",
+      "status": 200
+    },
+    {
+      "url": "http://blog.makezine.com/archive/2007/12/make_diy_ornaments_weeken.html?CMP=OTC-0D6B48984890",
+      "file": "2007-12-31-tensegrity-and-more.md",
+      "status": 200
+    },
+    {
+      "url": "http://moderndevice.com/",
+      "file": "2008-05-02-atmega168-parallel-programmer.md",
+      "status": 200
+    },
+    {
+      "url": "http://peach.blender.org/",
+      "file": "2008-05-27-big-buck-bunny.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.blender.org/",
+      "file": "2008-05-27-big-buck-bunny.md",
+      "status": 200
+    },
+    {
+      "url": "http://apricot.blender.org/",
+      "file": "2008-05-27-big-buck-bunny.md",
+      "status": 200
+    },
+    {
+      "url": "http://ca.groups.yahoo.com/group/freecyclemontreal/",
+      "file": "2008-05-28-floppy-note-pad.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/floppyNotePadPaperModel.pdf",
+      "file": "2008-05-28-floppy-note-pad.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.kubuntu.org/",
+      "file": "2008-09-01-eee-pc-1000-ubuntu-kde-41.md",
+      "status": 200
+    },
+    {
+      "url": "http://unetbootin.sourceforge.net/",
+      "file": "2008-09-01-eee-pc-1000-ubuntu-kde-41.md",
+      "status": 200
+    },
+    {
+      "url": "https://help.ubuntu.com/community/Installation/FromUSBStick",
+      "file": "2008-09-01-eee-pc-1000-ubuntu-kde-41.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.kde.org/announcements/4.1/",
+      "file": "2008-09-01-eee-pc-1000-ubuntu-kde-41.md",
+      "status": 200
+    },
+    {
+      "url": "http://kd7jz.blogspot.com/",
+      "file": "2008-10-31-tonys-leds.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.mcgill.ca/",
+      "file": "2008-12-16-big-pot.md",
+      "status": 200
+    },
+    {
+      "url": "http://peach.blender.org/wp-content/uploads/bbb-splash.png",
+      "file": "2009-01-27-big-buck-bunny-puzzle.md",
+      "status": 200
+    },
+    {
+      "url": "http://peach.blender.org/wp-content/uploads/rodents.png",
+      "file": "2009-01-27-big-buck-bunny-puzzle.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.bigbuckbunny.org/",
+      "file": "2009-01-27-big-buck-bunny-puzzle.md",
+      "status": 200
+    },
+    {
+      "url": "http://carlos.asmat.googlepages.com/BBB_printouts.zip",
+      "file": "2009-01-27-big-buck-bunny-puzzle.md",
+      "status": 200
+    },
+    {
+      "url": "http://stm.info/",
+      "file": "2009-03-11-opus-smart-card.md",
+      "status": 200
+    },
+    {
+      "url": "http://wordpress.org/",
+      "file": "2009-04-14-look-its-moving.md",
+      "status": 200
+    },
+    {
+      "url": "https://noisebridge.net",
+      "file": "2009-04-17-hacking-in-san-francisco.md",
+      "status": 200
+    },
+    {
+      "url": "http://hugin.sourceforge.net/",
+      "file": "2009-05-09-making-panoramas.md",
+      "status": 200
+    },
+    {
+      "url": "http://hugin.sourceforge.net/tutorials/index.shtml",
+      "file": "2009-05-09-making-panoramas.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.pololu.com/catalog/product/207/resources",
+      "file": "2009-07-16-pololu-python-library.md",
+      "status": 200
+    },
+    {
+      "url": "http://sourceforge.net/projects/pyserial/files/",
+      "file": "2009-07-16-pololu-python-library.md",
+      "status": 200
+    },
+    {
+      "url": "http://python.net/crew/mhammond/win32/Downloads.html",
+      "file": "2009-07-16-pololu-python-library.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.mcmaster.com/#retaining-rings/=2saqww",
+      "file": "2009-07-17-gentle-safe-cracker.md",
+      "status": 200
+    },
+    {
+      "url": "http://kde.org/announcements/announce-4.3.1.php",
+      "file": "2009-09-06-new-laptop.md",
+      "status": 200
+    },
+    {
+      "url": "http://gphoto.sourceforge.net/",
+      "file": "2009-09-29-panoramic-camera-prototype.md",
+      "status": 200
+    },
+    {
+      "url": "http://sourceforge.net/projects/gphoto/files/",
+      "file": "2009-10-04-panoramaker.md",
+      "status": 200
+    },
+    {
+      "url": "http://maps.google.ca/?ie=UTF8&hq=&hnear=5478+Avenue+Bourret,+Montreal,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Quebec&ll=45.49088,-73.578403&spn=0.000936,0.00239&t=h&z=19&lci=com.panoramio.all",
+      "file": "2009-10-05-automatic-panoramas-in-montreal.md",
+      "status": 200
+    },
+    {
+      "url": "http://panaxion.ca/",
+      "file": "2009-10-06-the-axion.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.decoraxion.com/axion.html",
+      "file": "2009-10-06-the-axion.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.decoraxion.com/start.html",
+      "file": "2009-10-06-the-axion.md",
+      "status": 200
+    },
+    {
+      "url": "http://kde.org/",
+      "file": "2009-10-29-kubuntu-karmic-koala-is-out.md",
+      "status": 200
+    },
+    {
+      "url": "http://altium.com/",
+      "file": "2009-11-18-i-am-the-luckiest-engineer-ever.md",
+      "status": 200
+    },
+    {
+      "url": "http://wiki.altium.com/display/ADOH/NanoBoard+3000+Series",
+      "file": "2009-11-18-i-am-the-luckiest-engineer-ever.md",
+      "status": 200
+    },
+    {
+      "url": "http://wiki.altium.com",
+      "file": "2009-11-18-i-am-the-luckiest-engineer-ever.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.saleae.com/logic/",
+      "file": "2009-12-11-i-got-logic.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.saleae.com/logic/features/",
+      "file": "2009-12-11-i-got-logic.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.saleae.com/downloads/",
+      "file": "2009-12-11-i-got-logic.md",
+      "status": 200
+    },
+    {
+      "url": "http://blog.makezine.com/archive/2009/02/make_television_episode_7_urban_pro.html",
+      "file": "2010-02-16-the-wind-turbine-part-1-idea.md",
+      "status": 200
+    },
+    {
+      "url": "http://cachefly.oreilly.com/make/television/wind.pdf",
+      "file": "2010-02-16-the-wind-turbine-part-1-idea.md",
+      "status": 200
+    },
+    {
+      "url": "http://maps.google.ca/maps?layer=c&cbll=45.580455,-73.788764&cbp=12,97.27,,0,2.17&ved=0CBkQ2wU&ei=ZLx8S4KWMo6GzASBs-XkCA&ie=UTF8&hq=&hnear=5478+Avenue+Bourret,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&ll=45.580977,-73.788922&spn=0,359.97262&z=16&panoid=gwm0VGZgTiDg36BtysL9zw",
+      "file": "2010-05-10-the-wind-turbine-part-2-desing-materials.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.cimme.ca/",
+      "file": "2010-05-10-the-wind-turbine-part-2-desing-materials.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.cimme.ca",
+      "file": "2010-05-18-the-wind-turbine-part-3-generator.md",
+      "status": 200
+    },
+    {
+      "url": "http://openkinect.org",
+      "file": "2010-12-06-playing-with-the-kinect.md",
+      "status": 200
+    },
+    {
+      "url": "http://openkinect.org/wiki/Logo_Proposals",
+      "file": "2010-12-06-playing-with-the-kinect.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.montrealcomiccon.com/",
+      "file": "2010-12-14-comiccon-montreal.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.otakuthon.com/",
+      "file": "2011-02-27-geekfest.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.anticipationsf.ca/",
+      "file": "2011-02-27-geekfest.md",
+      "status": 200
+    },
+    {
+      "url": "http://podcampmontreal.org/",
+      "file": "2011-02-27-geekfest.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.webcom-montreal.com/",
+      "file": "2011-02-27-geekfest.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.w3qc.org/",
+      "file": "2011-02-27-geekfest.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.magicolmedia.com/?p=11566",
+      "file": "2011-03-12-nao-montreal-geekfest-2011.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.flickr.com/groups/geekfestmtl/pool/",
+      "file": "2011-03-12-nao-montreal-geekfest-2011.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.geeksandcom.com/",
+      "file": "2011-05-13-carlitos-youtube-interview.md",
+      "status": 200
+    },
+    {
+      "url": "http://robotfilmfestival.com/",
+      "file": "2011-07-01-nao-1337-super-star-robollywoode.md",
+      "status": 200
+    },
+    {
+      "url": "http://www.galomagazine.com/technology/a-look-into-the-robot-film-festival/",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "status": 200
+    }
+  ],
+  "dead": [
+    {
+      "url": "http://web.singnet.com.sg/%7Esengam/construction.htm",
+      "text": "1",
+      "file": "2006-09-05-cheap-van-de-graaff-generator.md",
+      "postDate": "2006-09-05",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20050212140309/http://web.singnet.com.sg:80/~sengam/construction.htm"
+    },
+    {
+      "url": "http://www.grynx.com/index.php/projects/siemens-skype/",
+      "text": "this site",
+      "file": "2006-09-24-wireless-skype-phone.md",
+      "postDate": "2006-09-24",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20050612023923/http://www.grynx.com:80/index.php/projects/siemens-skype/"
+    },
+    {
+      "url": "http://www.vtechcanada.com/en/products/24/data/vt2498.htm",
+      "text": "VTech 2428",
+      "file": "2006-09-24-wireless-skype-phone.md",
+      "postDate": "2006-09-24",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20060105185138/http://www.vtechcanada.com:80/en/products/24/data/vt2498.htm"
+    },
+    {
+      "url": "http://cleanstream.net/mirrors/coin_ring/",
+      "text": "this site",
+      "file": "2006-10-07-make-your-girlfriend-happy-for-025.md",
+      "postDate": "2006-10-07",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20060804080842/http://cleanstream.net/mirrors/coin_ring/"
+    },
+    {
+      "url": "http://homepage.mac.com/johnhuber/CoinRing/PhotoAlbum20.html",
+      "text": "this one",
+      "file": "2006-10-07-make-your-girlfriend-happy-for-025.md",
+      "postDate": "2006-10-07",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20060406054642/http://homepage.mac.com:80/johnhuber/CoinRing/PhotoAlbum20.html"
+    },
+    {
+      "url": "http://hackedgadgets.com/2006/09/29/shaken-cornstarch-grows-fingers/",
+      "text": "this experiment",
+      "file": "2006-10-10-coming-soon.md",
+      "postDate": "2006-10-10",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20061024060455/http://hackedgadgets.com:80/2006/09/29/shaken-cornstarch-grows-fingers/"
+    },
+    {
+      "url": "http://www2.blogger.com/http//www.hackaday.com/",
+      "text": "HackedGadgets",
+      "file": "2006-10-12-la-cucaracha.md",
+      "postDate": "2006-10-12",
+      "status": 405,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.pubgin.com/2006/11/03/artbots-robots-art-bots-made-from-computer-mice/",
+      "text": "ArtBots Robots",
+      "file": "2006-10-12-la-cucaracha.md",
+      "postDate": "2006-10-12",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20071022193138/http://pubgin.com:80/2006/11/03/artbots-robots-art-bots-made-from-computer-mice/"
+    },
+    {
+      "url": "http://www.rapidonline.com/netalogue/zoomed/Large/78240001.jpg",
+      "text": "SPDT Switches",
+      "file": "2006-10-12-la-cucaracha.md",
+      "postDate": "2006-10-12",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.robotshop.com/ProductInfo.aspx?pc=RB-Owi-09",
+      "text": "OWI 007",
+      "file": "2006-11-05-some-ideas.md",
+      "postDate": "2006-11-05",
+      "status": 403,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.electronicsoutfitter.com/images/items/47247-rto-213.jpg",
+      "text": "protective rubber pads",
+      "file": "2006-11-10-bench-power-supply.md",
+      "postDate": "2006-11-10",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.lockpicking101.com/profile.php?mode=viewprofile&u=2273",
+      "text": "Exodus5000",
+      "file": "2006-12-04-bogota-rake.md",
+      "postDate": "2006-12-04",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20060328232614/http://www.lockpicking101.com/profile.php?mode=viewprofile&u=2273"
+    },
+    {
+      "url": "http://www.gnome.org/projects/evolution/",
+      "text": "Evolution",
+      "file": "2007-02-21-switching-to-ubuntu.md",
+      "postDate": "2007-02-21",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20060101033907/http://www.gnome.org:80/projects/evolution/"
+    },
+    {
+      "url": "http://www.getautomatix.com/",
+      "text": "Automatix",
+      "file": "2007-03-18-nice-linux-software.md",
+      "postDate": "2007-03-18",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20060623080143/http://www.getautomatix.com:80/"
+    },
+    {
+      "url": "http://www.winehq.com/",
+      "text": "wine",
+      "file": "2007-03-18-nice-linux-software.md",
+      "postDate": "2007-03-18",
+      "status": 403,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://digilentinc.com/Data/Products/D2E/D2E-brochure.pdf",
+      "text": "D2E",
+      "file": "2007-04-02-fpga-board.md",
+      "postDate": "2007-04-02",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://digilentinc.com/Data/Products/DIO1/DIO1-brochure.pdf",
+      "text": "DIO1",
+      "file": "2007-04-02-fpga-board.md",
+      "postDate": "2007-04-02",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.eecg.toronto.edu/%7Eaamodt/ece341/speech-recognition/",
+      "text": "a site from the University of Toronto",
+      "file": "2007-06-23-speech-recognition-fpga.md",
+      "postDate": "2007-06-23",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20060529172335/http://www.eecg.toronto.edu:80/~aamodt/ece341/speech-recognition/"
+    },
+    {
+      "url": "http://www.xbox.com/en-US/games/m/mechassault/",
+      "text": "MechAssault",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.torrentbox.com/download/24832/XBOX%20Krayzie%20Ndure%20SOFTMOD%20Pack.torrent",
+      "text": "Krayzie Ndure SOFTMOD Pack",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20091115073917/http://www.torrentbox.com:80/download/24832/XBOX%20Krayzie%20Ndure%20SOFTMOD%20Pack.torrent"
+    },
+    {
+      "url": "http://www.xbox100.com/tutorials/beginnermodfaq.htm",
+      "text": "hard",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20080416234729/http://www.xbox100.com:80/tutorials/beginnermodfaq.htm"
+    },
+    {
+      "url": "http://us.codejunkies.com/shop/product.asp?c=US&cr=USD&cs=$&r=0&l=1&id=119",
+      "text": "Action Replay",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://dvd2xbox.xbox-scene.com/",
+      "text": "dvd2xbox,",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20060103090228/http://dvd2xbox.xbox-scene.com:80/"
+    },
+    {
+      "url": "http://www.xbox-hq.com/html/modules.php?name=Xbox_Homebrew&op=view&=288",
+      "text": "boXplorer",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.xbox-scene.com/articles/xbins.php",
+      "text": "usual places",
+      "file": "2007-07-15-fully-featured-media-center-on-a-budget.md",
+      "postDate": "2007-07-15",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20060101031316/http://www.xbox-scene.com:80/articles/xbins.php"
+    },
+    {
+      "url": "http://www.thekeeser.com/Projects/simple_ir_detector.htm",
+      "text": "this article",
+      "file": "2007-09-11-ir-detector.md",
+      "postDate": "2007-09-11",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20060322221012/http://www.thekeeser.com:80/Projects/simple_ir_detector.htm"
+    },
+    {
+      "url": "http://alan-parekh.vstore.ca/product_info.php/cPath/4_6/products_id/18",
+      "text": "yellow one",
+      "file": "2007-09-11-ir-detector.md",
+      "postDate": "2007-09-11",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20060214181207/http://alan-parekh.vstore.ca:80/product_info.php/cPath/4_6/products_id/18"
+    },
+    {
+      "url": "http://www.altera.com/literature/univ/univ.pdf",
+      "text": "Altera UP1",
+      "file": "2008-05-06-home-automation.md",
+      "postDate": "2008-05-06",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20090529223417/http://www.altera.com:80/literature/univ/univ.pdf"
+    },
+    {
+      "url": "http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm",
+      "text": "USB-to-TTL",
+      "file": "2008-05-06-home-automation.md",
+      "postDate": "2008-05-06",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20070107074314/http://www.ftdichip.com:80/Products/EvaluationKits/TTL-232R.htm"
+    },
+    {
+      "url": "http://www.fractalspin.com/x/product.php?productid=124",
+      "text": "this commercial product",
+      "file": "2008-05-28-floppy-note-pad.md",
+      "postDate": "2008-05-28",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20070918051013/http://fractalspin.com:80/x/product.php?productid=124"
+    },
+    {
+      "url": "http://www.quanser.com/english/html/products/fs_product_challenge.asp?lang_code=english&pcat_code=exp-lin&prod_code=L2-invpen&tmpl=1",
+      "text": "Quanser cart",
+      "file": "2008-06-20-inverted-pendulum.md",
+      "postDate": "2008-06-20",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20070716161654/http://www.quanser.com:80/english/html/products/fs_product_challenge.asp?lang_code=english&pcat_code=exp-lin&prod_code=L2-invpen&tmpl=1"
+    },
+    {
+      "url": "http://www.idontlikeyouinthatway.com/pictures/20080505/iron%20man%20premiere/big_ironman1.html",
+      "text": "IDontLikeYouInThatWay.com",
+      "file": "2008-06-28-i-am-ironman.md",
+      "postDate": "2008-06-28",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20080510112440/http://www.idontlikeyouinthatway.com:80/pictures/20080505/iron%20man%20premiere/big_ironman1.html"
+    },
+    {
+      "url": "http://alan-parekh.vstore.ca/product_info.php/cPath/4_6/products_id/14",
+      "text": "5 mm",
+      "file": "2008-06-28-i-am-ironman.md",
+      "postDate": "2008-06-28",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20080311062029/http://alan-parekh.vstore.ca:80/product_info.php/cPath/4_6/products_id/14"
+    },
+    {
+      "url": "http://alan-parekh.vstore.ca/product_info.php/cPath/4_9/products_id/36",
+      "text": "10 mm",
+      "file": "2008-06-28-i-am-ironman.md",
+      "postDate": "2008-06-28",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20080710112959/http://alan-parekh.vstore.ca:80/product_info.php/cPath/4_9/products_id/36"
+    },
+    {
+      "url": "http://lunarex.mcgill.ca/",
+      "text": "lunar excavator",
+      "file": "2008-08-20-lunar-excavator.md",
+      "postDate": "2008-08-20",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20090429052244/http://lunarex.mcgill.ca:80/"
+    },
+    {
+      "url": "http://regolith.csewi.org/",
+      "text": "Regolith Excavation Challenge",
+      "file": "2008-08-20-lunar-excavator.md",
+      "postDate": "2008-08-20",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://array.org/ubuntu/",
+      "text": "Array.org",
+      "file": "2008-09-01-eee-pc-1000-ubuntu-kde-41.md",
+      "postDate": "2008-09-01",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20080614033116/http://www.array.org:80/ubuntu/"
+    },
+    {
+      "url": "http://hackedgadgets.com/2008/11/16/hacked-gadgets-workbench-contest-winner/",
+      "text": "Hacked Gadgets Workbench Contest",
+      "file": "2008-12-16-basement-cleanup.md",
+      "postDate": "2008-12-16",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.solitudes.com/",
+      "text": "Solitudes",
+      "file": "2009-02-18-solitudes.md",
+      "postDate": "2009-02-18",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://uncyclopedia.wikia.com/wiki/Oscar_Wilde",
+      "text": "Oscar Wilde",
+      "file": "2009-03-11-opus-smart-card.md",
+      "postDate": "2009-03-11",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20080203202857/http://uncyclopedia.wikia.com:80/wiki/Oscar_Wilde"
+    },
+    {
+      "url": "http://www.carteopus.info/en/main_nav/home/",
+      "text": "Opus",
+      "file": "2009-03-11-opus-smart-card.md",
+      "postDate": "2009-03-11",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20080424131426/http://www.carteopus.info:80/en/main_nav/home/"
+    },
+    {
+      "url": "http://photo.carlitoscontraptions.com",
+      "text": "my gallery",
+      "file": "2009-04-17-hacking-in-san-francisco.md",
+      "postDate": "2009-04-17",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.casa.ucl.ac.uk/software/googlemapimagecutter.asp",
+      "text": "Google Maps Image Cutter",
+      "file": "2009-05-09-making-panoramas.md",
+      "postDate": "2009-05-09",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20080112100545/http://www.casa.ucl.ac.uk:80/software/googlemapimagecutter.asp"
+    },
+    {
+      "url": "http://www.ucl.ac.uk/",
+      "text": "UCL",
+      "file": "2009-05-09-making-panoramas.md",
+      "postDate": "2009-05-09",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20080103125718/http://www.ucl.ac.uk:80/"
+    },
+    {
+      "url": "http://www.robotshop.com/",
+      "text": "RobotShop",
+      "file": "2009-06-29-robotshop-carlitos-contraptions.md",
+      "postDate": "2009-06-29",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20080107153801/http://www.robotshop.com:80/"
+    },
+    {
+      "url": "http://www.robotshop.ca/pololu-micro-serial-servo-controller.html",
+      "text": "RobotShop",
+      "file": "2009-07-16-pololu-python-library.md",
+      "postDate": "2009-07-16",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20090202203321/http://www.robotshop.ca:80/pololu-micro-serial-servo-controller.html"
+    },
+    {
+      "url": "http://dmt195.wordpress.com/2009/01/19/python-to-interface-with-the-pololu-8-channel-servo-controller/",
+      "text": "python interface",
+      "file": "2009-07-16-pololu-python-library.md",
+      "postDate": "2009-07-16",
+      "status": 410,
+      "waybackUrl": "https://web.archive.org/web/20090228211923/http://dmt195.wordpress.com:80/2009/01/19/python-to-interface-with-the-pololu-8-channel-servo-controller/"
+    },
+    {
+      "url": "http://files.carlitoscontraptions.com/programming/Pololu/lib_pololu.txt",
+      "text": "lib_pololu.py",
+      "file": "2009-07-16-pololu-python-library.md",
+      "postDate": "2009-07-16",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20090726001237/http://files.carlitoscontraptions.com:80/programming/Pololu/lib_pololu.txt"
+    },
+    {
+      "url": "http://files.carlitoscontraptions.com/programming/Pololu/servo_example.txt",
+      "text": "servo_example.py",
+      "file": "2009-07-16-pololu-python-library.md",
+      "postDate": "2009-07-16",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20091124142943/http://files.carlitoscontraptions.com:80/programming/Pololu/servo_example.txt"
+    },
+    {
+      "url": "http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html",
+      "text": "Hitec HS-425BB Servo Motor",
+      "file": "2009-07-17-gentle-safe-cracker.md",
+      "postDate": "2009-07-17",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20090529130749/http://www.robotshop.ca:80/Hitec-HS-425BB-Servo-Motor.html"
+    },
+    {
+      "url": "http://www.robotshop.ca/hitec-hs-422-425-gear-set.html",
+      "text": "replacement gear set",
+      "file": "2009-07-17-gentle-safe-cracker.md",
+      "postDate": "2009-07-17",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20090711202438/http://www.robotshop.ca:80/hitec-hs-422-425-gear-set.html"
+    },
+    {
+      "url": "http://www.robotshop.ca/hitec-hs785hb-servo-motor.html",
+      "text": "Hitec HS-785HB Winch Servo Motor",
+      "file": "2009-09-29-panoramic-camera-prototype.md",
+      "postDate": "2009-09-29",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20090124042928/http://www.robotshop.ca:80/hitec-hs785hb-servo-motor.html"
+    },
+    {
+      "url": "http://www.robotshop.ca/servocity-spt200-pan-tilt.html",
+      "text": "ServoCity SPT200 Direct Drive Pan & Tilt System",
+      "file": "2009-09-29-panoramic-camera-prototype.md",
+      "postDate": "2009-09-29",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20090125121707/http://www.robotshop.ca:80/servocity-spt200-pan-tilt.html"
+    },
+    {
+      "url": "https://vmlaker.org/geek/python/digital-camera-control-with-gphoto2",
+      "text": "here",
+      "file": "2009-10-04-panoramaker.md",
+      "postDate": "2009-10-04",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.cca.qc.ca/en/collection/443-photographic-documentation-of-the-shaughnessy-house-1971",
+      "text": "Maison Van-Horne Shaughnessi (a.k.a. The Canadian Centre for Architecture)",
+      "file": "2009-10-05-automatic-panoramas-in-montreal.md",
+      "postDate": "2009-10-05",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.kubuntu.org/news/9.10-release",
+      "text": "Kubuntu Karmic Koala",
+      "file": "2009-10-29-kubuntu-karmic-koala-is-out.md",
+      "postDate": "2009-10-29",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20091003125149/http://www.kubuntu.org:80/news/9.10-release"
+    },
+    {
+      "url": "http://www.kubuntu.org/news/9.10-rc",
+      "text": "Release Candidate",
+      "file": "2009-10-29-kubuntu-karmic-koala-is-out.md",
+      "postDate": "2009-10-29",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20091025051720/http://www.kubuntu.org:80/news/9.10-rc"
+    },
+    {
+      "url": "https://one.ubuntu.com/",
+      "text": "Ubutu One",
+      "file": "2009-10-29-kubuntu-karmic-koala-is-out.md",
+      "postDate": "2009-10-29",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://nb3000.altium.com/intro.html",
+      "text": "NanoBoard 3000",
+      "file": "2009-11-18-i-am-the-luckiest-engineer-ever.md",
+      "postDate": "2009-11-18",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.altium.com/altiumsite/products/altium-designer/en/altium-designer_home.cfm",
+      "text": "Altium Designer",
+      "file": "2009-11-18-i-am-the-luckiest-engineer-ever.md",
+      "postDate": "2009-11-18",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20090122121558/http://altium.com:80/altiumsite/products/altium-designer/en/altium-designer_home.cfm"
+    },
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/1530",
+      "text": "autoHideStatusbar",
+      "file": "2009-11-19-tiny-firefox.md",
+      "postDate": "2009-11-19",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20101017130048/https://addons.mozilla.org/en-US/firefox/addon/1530/"
+    },
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/7401",
+      "text": "Smart Stop/Reload",
+      "file": "2009-11-19-tiny-firefox.md",
+      "postDate": "2009-11-19",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/1455",
+      "text": "Tiny Menu",
+      "file": "2009-11-19-tiny-firefox.md",
+      "postDate": "2009-11-19",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20090416065806/https://addons.mozilla.org//en-US//firefox//addon//1455"
+    },
+    {
+      "url": "http://www.wave.google.com/",
+      "text": "Google Wave",
+      "file": "2009-11-30-montreal-hackers-wave.md",
+      "postDate": "2009-11-30",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "https://wave.google.com/wave/#restored:wave:googlewave.com!w%252BPUXPJxujA",
+      "text": "here",
+      "file": "2009-11-30-montreal-hackers-wave.md",
+      "postDate": "2009-11-30",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.saleae.com/home/",
+      "text": "Saleae LLC",
+      "file": "2009-12-11-i-got-logic.md",
+      "postDate": "2009-12-11",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20080609005002/http://www.saleae.com:80/home/"
+    },
+    {
+      "url": "http://www.velacreations.com/chispito.html",
+      "text": "Chispito Wind Turbine",
+      "file": "2010-02-16-the-wind-turbine-part-1-idea.md",
+      "postDate": "2010-02-16",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20090123164600/http://velacreations.com:80/chispito.html"
+    },
+    {
+      "url": "http://www.montrealgazette.com/technology/Students+trip+Ecuador+vacation/2599612/story.html",
+      "text": "Students' trip to Ecuador is no vacation",
+      "file": "2010-02-23-we-are-slightly-popular.md",
+      "postDate": "2010-02-23",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://carlitoscontraptions.com/wp-content/uploads/2010/02/flywheel.skp",
+      "text": "Sketchup drawing",
+      "file": "2010-05-10-the-wind-turbine-part-2-desing-materials.md",
+      "postDate": "2010-05-10",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20110205021423/http://carlitoscontraptions.com:80/wp-content/uploads/2010/02/flywheel.skp"
+    },
+    {
+      "url": "http://www.robotshop.com/ProductInfo.aspx?pc=RB-Dag-09",
+      "text": "Polymorph",
+      "file": "2010-06-19-polymorph.md",
+      "postDate": "2010-06-19",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20100620104239/http://www.robotshop.com:80/productinfo.aspx?pc=RB-Dag-09"
+    },
+    {
+      "url": "http://www.robotshop.ca/ProductInfo.aspx?pc=RB-Dag-09",
+      "text": "polymorph",
+      "file": "2010-06-19-polymorph.md",
+      "postDate": "2010-06-19",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20100628184500/http://www.robotshop.ca:80/ProductInfo.aspx?pc=RB-Dag-09"
+    },
+    {
+      "url": "http://www.robotshop.com/gorobotics/",
+      "text": "GoRobotics.net",
+      "file": "2011-01-15-carlitos-projects.md",
+      "postDate": "2011-01-15",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20110113111946/http://www.robotshop.com:80/gorobotics/"
+    },
+    {
+      "url": "http://www.robotshop.com/ProductInfo.aspx?pc=RB-See-76",
+      "text": "Rainbowduino",
+      "file": "2011-01-17-rgb-led-mood-cube.md",
+      "postDate": "2011-01-17",
+      "status": 403,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.robotshop.com/gorobotics/articles/microcontrollers/carlitos-project-rgb-led-mood-cube",
+      "text": "RGB LED Mood Cube project page",
+      "file": "2011-01-17-rgb-led-mood-cube.md",
+      "postDate": "2011-01-17",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20110117074705/http://www.robotshop.com:80/gorobotics/articles/microcontrollers/carlitos-project-rgb-led-mood-cube"
+    },
+    {
+      "url": "http://www.robotshop.com/ProductInfo.aspx?pc=RB-Rbo-87",
+      "text": "full RGB LED Mood Cube Kit",
+      "file": "2011-01-17-rgb-led-mood-cube.md",
+      "postDate": "2011-01-17",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20110119012217/http://www.robotshop.com:80/ProductInfo.aspx?pc=RB-Rbo-87"
+    },
+    {
+      "url": "http://www.ilesansfil.org/",
+      "text": "Ile Sans Fil",
+      "file": "2011-02-27-geekfest.md",
+      "postDate": "2011-02-27",
+      "status": 405,
+      "waybackUrl": "https://web.archive.org/web/20100106034904/http://www.ilesansfil.org/"
+    },
+    {
+      "url": "http://geekfestmtl.com/un-festival-geek/",
+      "text": "geekfestmtl.com",
+      "file": "2011-02-27-geekfest.md",
+      "postDate": "2011-02-27",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.robotshop.com/ca/plasticase-nanuk-extreme-heavy-duty-case-22-inch-3.html",
+      "text": "Plasticase Nanuk 945",
+      "file": "2011-03-08-protecting-nao.md",
+      "postDate": "2011-03-08",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20110306081421/http://www.robotshop.com:80/ca/plasticase-nanuk-extreme-heavy-duty-case-22-inch-3.html"
+    },
+    {
+      "url": "http://www.amazon.com/Frost-V25WA-Extreme-Weather-Strip-8-Inch-by1/dp/B000B4N3OA",
+      "text": "D-profile self-adhesive rubber tape",
+      "file": "2011-03-08-protecting-nao.md",
+      "postDate": "2011-03-08",
+      "status": 405,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.branchez-vous.com/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html",
+      "text": "Branchez-vous",
+      "file": "2011-03-12-nao-montreal-geekfest-2011.md",
+      "postDate": "2011-03-12",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20110326060011/http://www.branchez-vous.com:80/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html"
+    },
+    {
+      "url": "http://www.robotshop.com/gorobotics/articles/microcontrollers/carlitos-projects-speech-controlled-arduino-robot",
+      "text": "Speech-Controlled Arduino Robot project page",
+      "file": "2011-03-13-speech-controlled-arduino-robot.md",
+      "postDate": "2011-03-13",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20110304145245/http://www.robotshop.com:80/gorobotics/articles/microcontrollers/carlitos-projects-speech-controlled-arduino-robot"
+    },
+    {
+      "url": "http://www.robotshop.com/ProductInfo.aspx?pc=RB-Rbo-89",
+      "text": "kit we put together with RobotShop",
+      "file": "2011-03-13-speech-controlled-arduino-robot.md",
+      "postDate": "2011-03-13",
+      "status": 403,
+      "waybackUrl": "https://web.archive.org/web/20110318033608/http://www.robotshop.com:80/ProductInfo.aspx?pc=RB-Rbo-89"
+    },
+    {
+      "url": "http://www.benoitchamontin.com/",
+      "text": "Benoit",
+      "file": "2011-05-13-carlitos-youtube-interview.md",
+      "postDate": "2011-05-13",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20100711113652/http://www.benoitchamontin.com:80/"
+    },
+    {
+      "url": "http://t.co/ZfHn5Wb",
+      "text": "A shower head",
+      "file": "2011-05-30-diy-universal-jamming-gripper-2-0.md",
+      "postDate": "2011-05-30",
+      "status": 500,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.robotshop.com/ProductInfo.aspx?pc=RB-Spa-498",
+      "text": "A DC pump",
+      "file": "2011-05-30-diy-universal-jamming-gripper-2-0.md",
+      "postDate": "2011-05-30",
+      "status": 403,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.marilynmonrobot.com/",
+      "text": "Heather Knight",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "postDate": "2011-07-24",
+      "status": 500,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.3leggeddog.org/",
+      "text": "3 Legged Dog Art + Technology Center",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "postDate": "2011-07-24",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.bobbyvans.com/Bobby_Vans_Steakhouse/Wall_St.html",
+      "text": "Bobby Van's Steakhouse",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "postDate": "2011-07-24",
+      "status": 404,
+      "waybackUrl": "https://web.archive.org/web/20101019021752/http://bobbyvans.com/Bobby_Vans_Steakhouse/Wall_St.html"
+    },
+    {
+      "url": "http://www.newscientist.com/blogs/culturelab/2011/07/of-chorebots-and-broken-hearted-humanoids.html",
+      "text": "New Scientist",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "postDate": "2011-07-24",
+      "status": 410,
+      "waybackUrl": "https://web.archive.org/web/20110719150209/http://www.newscientist.com:80/blogs/culturelab/2011/07/of-chorebots-and-broken-hearted-humanoids.html"
+    },
+    {
+      "url": "http://www.robots-dreams.com/2011/07/robot-film-festival-videos-available-online-video.html",
+      "text": "Robot Dreams",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "postDate": "2011-07-24",
+      "status": "error",
+      "waybackUrl": "https://web.archive.org/web/20110821143811/http://www.robots-dreams.com/2011/07/robot-film-festival-videos-available-online-video.html"
+    },
+    {
+      "url": "http://danielsethpagelstudios.blogspot.com/",
+      "text": "DSP Studios",
+      "file": "2011-07-24-nao-1337-robot-film-festival.md",
+      "postDate": "2011-07-24",
+      "status": 404,
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.myrobots.com/",
+      "text": "MyRobots.com",
+      "file": "2011-12-23-nao-1337-myrobots-com.md",
+      "postDate": "2011-12-23",
+      "status": 405,
+      "waybackUrl": "https://web.archive.org/web/20100503211817/http://www.myrobots.com:80/"
+    },
+    {
+      "url": "http://www.myrobots.com/wiki/Press",
+      "text": "here",
+      "file": "2011-12-23-nao-1337-myrobots-com.md",
+      "postDate": "2011-12-23",
+      "status": 405,
+      "waybackUrl": "https://web.archive.org/web/20120107175259/http://www.myrobots.com:80/wiki/Press"
+    },
+    {
+      "url": "http://www.myrobots.com/wiki/FAQ#What_is_Cloud_Robotics.3F",
+      "text": "cloud robotics",
+      "file": "2011-12-23-nao-1337-myrobots-com.md",
+      "postDate": "2011-12-23",
+      "status": 405,
+      "waybackUrl": "https://web.archive.org/web/20111203222540/http://www.myrobots.com:80/wiki/FAQ"
+    },
+    {
+      "url": "http://www.myrobots.com/wiki/About",
+      "text": "MyRobots.com - About",
+      "file": "2011-12-23-nao-1337-myrobots-com.md",
+      "postDate": "2011-12-23",
+      "status": 405,
+      "waybackUrl": "https://web.archive.org/web/20111127012008/http://www.myrobots.com:80/wiki/About"
+    },
+    {
+      "url": "http://developer.aldebaran-robotics.com/projects/nao-monitoring/",
+      "text": "NaoMonitor",
+      "file": "2011-12-23-nao-1337-myrobots-com.md",
+      "postDate": "2011-12-23",
+      "status": "error",
+      "waybackUrl": null
+    },
+    {
+      "url": "http://www.myrobots.com/wiki/Aldebaran_Nao",
+      "text": "here",
+      "file": "2011-12-23-nao-1337-myrobots-com.md",
+      "postDate": "2011-12-23",
+      "status": 405,
+      "waybackUrl": "https://web.archive.org/web/20120107172513/http://www.myrobots.com:80/wiki/Aldebaran_Nao"
+    }
+  ]
+}
