@@ -17,12 +17,12 @@ I read that one can erase the branding on products by using a sugar cube and a b
 
 This is the key in its original state.
 
-{% fig "stick+before.jpg", "" %}
+{% fig "/img/blog/sugar-trick/stick-before.jpg", "" %}
 
 By rubbing a cube of sugar (lubricated with some handy saliva), I easily removed the branding without scratching the plastic.
 
-{% fig "stick+sugar.jpg", "" %}
+{% fig "/img/blog/sugar-trick/stick-sugar.jpg", "" %}
 
 After a bit of cleaning I got a nice USB key without any branding and no traces of saliva.
 
-{% fig "stick+after.jpg", "" %}
+{% fig "/img/blog/sugar-trick/stick-after.jpg", "" %}

@@ -34,7 +34,7 @@ When we first announced to the Ecuadorians that we thought the bees had to be el
 
 The solution to this problem was simple enough and it involved fire and ninjas. First, the ninja part (since the fire part is sort of obvious) : I decided that having a ninja mask and glasses would be an impenetrable protection for the face against the bees. I remembered that [someone in Youtube](http://www.youtube.com/watch?v=e4NoKfrQ9tw "Ninja mask from t-shirt") showed how to do a ninja mask from a t-shirt and I used that Youtube-earned skill to make my own. Besides the mask, using long pants, a jacket and gloves was enough to cover the rest of my body.
 
-{% fig "carlitoscontraptions.com", "Ninja Wannabe vs. Bees" %}
+{# {% fig "carlitoscontraptions.com", "Ninja Wannabe vs. Bees" %} - image lost #}
 
 Once protected, we could set fire to the chimney (from the top obviously since the bottom was shut off as stated earlier) and get rid of the bees. It is important to note that the bees did not like the fire and came out slightly angry. Luckily, the smoke disoriented and even stun them quite effectively. It was a long combat and I got stung (only) once, but, in the end, we vanquished the vicious vermin.
 
@@ -42,7 +42,7 @@ Once protected, we could set fire to the chimney (from the top obviously since t
 
 This method and our outfit was much more effective and comfortable than the Ecuadorian alternative depicted below. This is by no means mockery and is intended to prevent people from putting garbage bags over their heads.
 
-{% fig "carlitoscontraptions.com", "Ecuadorian Bee Protection" %}
+{# {% fig "carlitoscontraptions.com", "Ecuadorian Bee Protection" %} - image lost #}
 
 With the way cleared, it was straight forward to install the mast by bolting it to the chimney with custom made metal brackets.
 

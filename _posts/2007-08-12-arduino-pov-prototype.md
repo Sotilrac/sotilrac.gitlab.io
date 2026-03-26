@@ -17,6 +17,8 @@ tags: []
 
 This is my first attempt to create a [persistence of vision](http://en.wikipedia.org/wiki/Persistence_of_vision) (POV) display using the Arduino. The ultimate goal is to mount it on my bike wheel and have it display nice things while I ride. But, for now, it consist of an array of 6 LEDs mounted on a turning rig I made from scrap material.
 
+{% fig "/img/blog/arduino-pov-prototype/pov-prototype.jpg", "" %}
+
 ## Materials for the rig:
 
 - 2 old cell phone batteries (found in the garbage) that serve as a counterweight
@@ -37,13 +39,13 @@ This is my first attempt to create a [persistence of vision](http://en.wikipedia
 
 I think the pictures are pretty self explanatory.
 
-{% fig "Turning+rig.JPG", "" %}
+{% fig "/img/blog/arduino-pov-prototype/turning-rig.jpg", "" %}
 
 The LEDs are directly connected to the pins 2 to 7 of the Arduino and their current is limited by the resistors.  
 The entire circuit is powered by the 9V battery.
 
 So far I have done some simple patterns for the display and I'll upload the code soon (it still needs some polish)
 
-{% fig "pattern+1.JPG", "" %}
+{% fig "/img/blog/arduino-pov-prototype/pattern-1.jpg", "" %}
 
 I expect to add more LEDs to the design as soon as I get the patterns and the overall code working fine.

@@ -18,9 +18,13 @@ tags:
 
 When I was a young child, I had a double-sided nine pieces wooden puzzle. It featured Pinocchio on one side, and a mermaid on the other. The pieces were all equally-sized rectangles. I really liked this puzzle and had it for a long time since not only it was a puzzle but the wooden blocks could easily become a wall, a pile of bricks, etc.
 
-{% fig "img_1085.jpg", "" %}
+{% fig "/img/blog/big-buck-bunny-puzzle/bbb-splash.png", "" %}
 
-{% fig "img_1086.jpg", "" %}
+{% fig "/img/blog/big-buck-bunny-puzzle/rodents.png", "" %}
+
+{% fig "/img/blog/big-buck-bunny-puzzle/img_1085.jpg", "" %}
+
+{% fig "/img/blog/big-buck-bunny-puzzle/img_1086.jpg", "" %}
 
 I wanted to reproduce this toy so my girlfriend and I built a new version of this puzzle for her two-year-old cousin and gave it to her last Christmas. Since we are no artists, we chose to use [some](http://peach.blender.org/wp-content/uploads/bbb-splash.png) [frames](http://peach.blender.org/wp-content/uploads/rodents.png) from the open animation short [Big Buck Bunny](http://www.bigbuckbunny.org/).
 
@@ -42,12 +46,12 @@ The next step was to thin the wood glue with some water so it was easier to appl
 
 Once all the sections of one image were glued and dry, the exceeding paper margin was cut by laying the wood block flat on a smooth surface on the picture side and slicing it with a utility knife. Obtaining a clean cut was surprisingly difficult and depended heavily on the smoothness of the cutting surface (I recommend using a clean section of cardboard on a cutting board) and the sharpness of the blade (we had to change the blade several times during the process. If the blade was not sharp enough or there were bumps on the surface, the printed part of the paper pealed off very easily. In retrospective, maybe, applying a coat of varnish to the paper before cutting would have made the cutting job easier.
 
-{% fig "img_1076.jpg", "" %}
+{% fig "/img/blog/big-buck-bunny-puzzle/img_1076.jpg", "" %}
 
 After one side of the puzzle was complete, the same process was applied to the other side with the other image. Then, we applied several coats of varnish to the blocks in order to make them more durable and easier to clean.
 
-{% fig "img_1082.jpg", "" %}
+{% fig "/img/blog/big-buck-bunny-puzzle/img_1082.jpg", "" %}
 
 The child was very pleased with the puzzle and I'm confident she will play with it for many years to come.
 
-{% fig "img_1081.jpg", "" %}
+{% fig "/img/blog/big-buck-bunny-puzzle/img_1081.jpg", "" %}

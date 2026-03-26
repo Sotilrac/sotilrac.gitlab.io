@@ -21,14 +21,14 @@ Thanks to a very (extremely) kind professor, I got a Spartan [D2E](http://digile
 
 Have a look at some pictures of the board.
 
-{% fig "Spartan+001.jpg", "" %}
+{% fig "/img/blog/fpga-board/spartan-001.jpg", "" %}
 
 ## The D2E board
 
-{% fig "Spartan+010.jpg", "" %}
+{% fig "/img/blog/fpga-board/spartan-010.jpg", "" %}
 
 ## The DIO1 board
 
-{% fig "Spartan+009.jpg", "" %}
+{% fig "/img/blog/fpga-board/spartan-009.jpg", "" %}
 
 I shall be back soon with something implemented on it.

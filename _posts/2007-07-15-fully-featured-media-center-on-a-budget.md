@@ -15,7 +15,7 @@ tags: []
 
 Recently my girlfriend got rid of her cable television connection and moved to a cheaper (almost free) and fully featured media center solution (i.e. Xbox + Xbox Media Center).
 
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/800px-Xbox.jpg", "" %}
+{% fig "/img/blog/fully-featured-media-center-on-a-budget/800px-xbox.jpg", "" %}
 
 ## Materials
 
@@ -62,33 +62,7 @@ Now that you have XBMC up , running and connected to the internet you can:
 
 ## Some Screenshots
 
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/media.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/video.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_2.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_1.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/music.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/shoutcast.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/audio_playback.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/games.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/live.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/live_places.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/trailers.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/playback.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/weather.bmp", "" %}
-
-{% fig "/img/blog/fully-featured-media-center-on-a-budget/joox.bmp", "" %}
+{% gallery 4, "/img/blog/fully-featured-media-center-on-a-budget/media.bmp", "/img/blog/fully-featured-media-center-on-a-budget/video.bmp", "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_2.bmp", "/img/blog/fully-featured-media-center-on-a-budget/movies_menu_1.bmp", "/img/blog/fully-featured-media-center-on-a-budget/music.bmp", "/img/blog/fully-featured-media-center-on-a-budget/shoutcast.bmp", "/img/blog/fully-featured-media-center-on-a-budget/audio_playback.bmp", "/img/blog/fully-featured-media-center-on-a-budget/games.bmp", "/img/blog/fully-featured-media-center-on-a-budget/live.bmp", "/img/blog/fully-featured-media-center-on-a-budget/live_places.bmp", "/img/blog/fully-featured-media-center-on-a-budget/trailers.bmp", "/img/blog/fully-featured-media-center-on-a-budget/playback.bmp", "/img/blog/fully-featured-media-center-on-a-budget/weather.bmp", "/img/blog/fully-featured-media-center-on-a-budget/joox.bmp" %}
 
 (note that the top and bottom black borders are not shown in the TV screen)
 

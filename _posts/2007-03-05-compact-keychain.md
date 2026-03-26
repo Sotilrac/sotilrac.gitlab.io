@@ -23,15 +23,15 @@ This is a nice keychain I've been using for more than a year now. Since it broke
 - Some keys (I use only two keys)
 - A pop rivet (requires a river gun)
 
-{% fig "keys.JPG", "" %}
+{% fig "/img/blog/compact-keychain/keys.jpg", "" %}
 
 ## Construction
 
 1.  Fasten the keys together using the rivet and put washers between them.
 2.  Admire your creation.
 
-{% fig "keys2.JPG", "" %}
+{% fig "/img/blog/compact-keychain/keys2.jpg", "" %}
 
 That's it. It works well with my two keys, and it is very compact and quiet.
 
-{% fig "keys3.JPG", "" %}
+{% fig "/img/blog/compact-keychain/keys3.jpg", "" %}

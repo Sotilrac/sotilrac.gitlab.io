@@ -25,7 +25,7 @@ The parameters in the code can be changed in order to display other images besid
 
 The displayed image is stored in the data string. Each drawing is divided in frames (i.e. one frame for each letter of a word) and each frame is divided in columns. The image to be displayed must be encoded into 1s (ON) and 0s (OFF) and each value must be stored in the data string in the order illustrated below.
 
-{% fig "format.png", "" %}
+{% fig "/img/blog/arduino-pov-prototype-part-2/format.png", "" %}
 
 The duration of each column (i.e. how much time they stay ON), the spacing between frames and the spacing between images are set respectively by the integers timer1, timer2 and timer3. Keep in mind that their values depend on the rotation speed.
 
@@ -40,7 +40,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 - frame_len: 4
 - frame_num: 1
 
-{% fig "arrow.JPG", "" %}
+{% fig "/img/blog/arduino-pov-prototype-part-2/arrow.jpg", "" %}
 
 ## "Alan":
 
@@ -51,7 +51,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 - frame_len: 4
 - frame_num: 4
 
-{% fig "alan.JPG", "" %}
+{% fig "/img/blog/arduino-pov-prototype-part-2/alan.jpg", "" %}
 
 ## Sinewave (or flower):
 
@@ -62,7 +62,7 @@ Finally, the number of frames and their length is set respectively by frame_num 
 - frame_len: 12
 - frame_num: 1
 
-{% fig "sine.JPG", "" %}
+{% fig "/img/blog/arduino-pov-prototype-part-2/sine.jpg", "" %}
 
 ## E = MC²:
 
@@ -73,4 +73,4 @@ Finally, the number of frames and their length is set respectively by frame_num 
 - frame_len: 5
 - frame_num: 5
 
-{% fig "e_mc2.JPG", "" %}
+{% fig "/img/blog/arduino-pov-prototype-part-2/e_mc2.jpg", "" %}

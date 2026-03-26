@@ -24,15 +24,15 @@ When you buy an LED, you (should) get two very important parameters, the voltage
 
 So, for the trivial case where we have a battery (V_bat) in series with a resistor (R) and an LED, the value of R must obey the following inequation:
 
-{% fig "eq1.png", "" %}
+{% fig "/img/blog/tonys-leds/eq1.png", "" %}
 
 If you decide to place many (say, n) LEDs in series, the inequation becomes:
 
-{% fig "eq2.png", "" %}
+{% fig "/img/blog/tonys-leds/eq2.png", "" %}
 
 Finally, if the LEDs are in parallel (as is the case for the repulsor), the inequation becomes:
 
-{% fig "eq3.png", "" %}
+{% fig "/img/blog/tonys-leds/eq3.png", "" %}
 
 This result can be obtained by applying Ohm's law (V= RI) to the circuits described above. The proof is of course left as an exercise for the reader ;) .  
 This page has a very nice LED calculator which makes life really easy when calculating resistor values: [alan-parekh.com/led_resistor_calculator.html](http://alan-parekh.com/led_resistor_calculator.html)
@@ -41,4 +41,4 @@ This page has a very nice LED calculator which makes life really easy when calcu
 
 For those interested in the repulsor circuit, below you can find a diagram describing it. It is the same as the circuit with many LEDs in parallel but with a potentiometer added to regulate the light intensity. The only requisite for the potentiometer is to be large enough to attain the dimmest light according to your needs.
 
-{% fig "circuit.png", "" %}
+{% fig "/img/blog/tonys-leds/circuit.png", "" %}

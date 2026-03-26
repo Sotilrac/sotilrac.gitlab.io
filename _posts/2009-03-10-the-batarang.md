@@ -38,11 +38,11 @@ I always wanted to have a batarang since I have always liked Batman a lot. So, I
 
 I used the pattern below, extracted from a film poster (or something like that) and obtained by accentuating the contrast and cutting off colours until the shape was clean enough. I printed it so it measures around 3.5 cm by 12 cm.
 
-{% fig "BatmanBeginsLogo.jpg", "" %}
+{% fig "/img/blog/the-batarang/batmanbeginslogo.jpg", "" %}
 
 Then, I overlaid the printed and cut shape on the metal, traced it out with a marker and cut it roughly with the hack saw and the jigsaw (the jigsaw is not mine so I mainly used the hack saw). The next step was to grind and file the metal until it had the right shape. The last steps were to polish it and sharpen it so it could actually cut. I preferred making it sharp than polishing, as a result, it now serves as a multi-purpose knife or letter opener. I put a magnet on it so I can stick it to other metal surfaces such as a fridge.  
 As my readers may have guessed, I always prefer function instead of looks.
 
-{% fig "IMG_1718.JPG", "" %}
+{% fig "/img/blog/the-batarang/img_1718.jpg", "" %}
 
 I may try to temper it to make it stronger and more durable.

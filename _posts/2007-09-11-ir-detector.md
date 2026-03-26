@@ -20,7 +20,7 @@ Besides [my POV display](http://carlitoscontraptions.blogspot.com/2007/08/pov-pr
 
 An IR signal is "seen" by a reverse biased IR diode which produces an electrical signal according to the light intensity. This signal is then amplified trough a transistor which powers an ordinary LED. This means that the LED will light up when the IR diodes receives some IR light (from a TV remote for instance).
 
-{% fig "dcp_0019.jpg", "" %}
+{% fig "/img/blog/ir-detector/dcp_0019.jpg", "" %}
 
 ## Materials
 
@@ -32,11 +32,11 @@ An IR signal is "seen" by a reverse biased IR diode which produces an electrical
 - An old 9V battery (for the casing)
 - A new 9V battery (for power)
 
-{% fig "dcp_0002.jpg", "" %}
+{% fig "/img/blog/ir-detector/dcp_0002.jpg", "" %}
 
 ## The Circuit
 
-{% fig "IRD_circuit.png", "" %}
+{% fig "/img/blog/ir-detector/ird_circuit.png", "" %}
 
 ## Construction Notes
 

@@ -15,14 +15,14 @@ tags: []
 
 Today I received some supercapacitors. I'll use them in an upcoming _TOP SECRET_ project.
 
-{% fig "box.jpg", "" %}
+{% fig "/img/blog/supercapacitors/box.jpg", "" %}
 
 I have got a [10F,](http://www.cooperet.com/library/products/PS-5102%20B%20Series.pdf) a 22F and a 50F capacitors.
 
 Here are some pictures:
 
-{% fig "capacitorsbox.jpg", "" %}
+{% fig "/img/blog/supercapacitors/capacitorsbox.jpg", "" %}
 
-{% fig "supercapacitors.jpg", "" %}
+{% fig "/img/blog/supercapacitors/supercapacitors.jpg", "" %}
 
 By the way, please only order free samples if you need them.

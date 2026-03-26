@@ -15,7 +15,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-{% fig "pop_sci.png", "" %}
+{% fig "/img/blog/im-popular-science/pop_sci.png", "" %}
 
 My [compact keychain](http://carlitoscontraptions.com/2007/03/compact-keychain/ "Compact Keychain") is featured in the August edition of the Popular Science magazine. Needless to say, I'm very happy about this.
 

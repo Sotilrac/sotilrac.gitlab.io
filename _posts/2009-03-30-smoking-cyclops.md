@@ -48,14 +48,14 @@ The first step when building something from a broken appliance is obviously to t
 
 Then, it is a matter of cutting, drilling, filing, sanding and fitting together until you have the desired shape and function. I really like to use zip ties for binding things together since they are cheap, strong and can be undone (sort of) easily.
 
-{% fig "IMG_1743.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1743.jpg", "" %}
 
-{% fig "IMG_1744.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1744.jpg", "" %}
 
 As for the electrical part, the can motor had three coils that, when energized, drive the motor shaft at three different speeds. Since I do not have the need for that much speed control, I used a three positions switch in order to control it. I connected the main switch lead to the mains power and the other two leads to the first (slowest) and third (fastest) coils. Then I connected the ground and the mains power to the motor as required and voila. When the switch is in one position, the fan turn at the slowest speed (since the first coil is energized) and when the switch goes the other way, the fan spins at full speed (since the third coil gets energized). Finally, when the switch is at the middle position, all the coils are disconnected and the fan sits still.
 
 {% fig "/img/blog/smoking-cyclops/img_1742.jpg", "" %}
 
-{% fig "IMG_1745.JPG", "" %}
+{% fig "/img/blog/smoking-cyclops/img_1745.jpg", "" %}
 
 Also, since I do not have a crimper, I used a diagonal cutter to crimp all the connectors (that go to the switch). Using a diagonal cutter for this purpose can be tricky since, if you apply too much pressure, you may end up cutting the connector, or if you apply too little pressure, then the cable may slip away from the connector. As it can be seen in the picture to the right, crimping with a diagonal cutter leaves a very distinctive mark on the connectors.

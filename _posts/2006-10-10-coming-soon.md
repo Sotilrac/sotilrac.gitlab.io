@@ -22,3 +22,5 @@ Some projects I will be writing on soon:
 - Cornstarch Pet, a small project based on [this experiment](http://hackedgadgets.com/2006/09/29/shaken-cornstarch-grows-fingers/)
 - Ultra Cheap XBOX USB adaptor.
 - Skype phone ringer.
+
+{% fig "/img/blog/coming-soon/powersupply.0.jpg", "" %}

@@ -38,7 +38,7 @@ This is a small and very simple robot that requires no electronics. It is inspir
 
 ## Main Idea
 
-{% fig "cucaracha side.jpg", "" %}
+{% fig "/img/blog/la-cucaracha/cucaracha-side.jpg", "" %}
 
 The idea is to construct a robot that can move around and that will backup and change the direction of the motion when it hits an obstacle.
 
@@ -49,21 +49,21 @@ The idea is to construct a robot that can move around and that will backup and c
 3.  Cut two more holes spaced by about 1.5 cm so the switches fit in tightly (seeing the pictures help visualizing this).
 4.  Drill a hole in the center of both caps with the same diameter as your screw.
 5.  Install the switch and the female audio jack on the top bottle cap.
-    {% fig "cucaracha back.jpg", "" %}
-    {% fig "cucaracha close.jpg", "" %}
+    {% fig "/img/blog/la-cucaracha/cucaracha-back.1.jpg", "" %}
+    {% fig "/img/blog/la-cucaracha/cucaracha-close.1.jpg", "" %}
 6.  Connect everything together as shown in the circuit diagram. I used the audio jack to make the charger connection. The charger is simply a 3V power adapter connected in series with a diode in the + terminal.
-    {% fig "cuca circuit.jpg", "" %}
-    {% fig "cucaracha charging.jpg", "" %}
-    {% fig "cucaracha charger.0.jpg", "" %}
+    {% fig "/img/blog/la-cucaracha/cuca-circuit.jpg", "" %}
+    {% fig "/img/blog/la-cucaracha/cucaracha-charging.1.jpg", "" %}
+    {% fig "/img/blog/la-cucaracha/cucaracha-charger.1.jpg", "" %}
 7.  Solder the paper clips to the SPDT blades and add a little solder blob on each paper clip end so they look more like antennas.
 8.  Test to see if the circuit works properly. When the robot is switched on,  
     both spindles should spin so it goes forward. If an antenna is pushed, the spindle on the opposite side (left spindle if right antenna) should spin backwards.
 9.  Fasten the motors to the base cap using the cable ties and secure the other cap on top of it using the screw. Also secure the cable holder using the same screw on top of the top cap, this serves as a battery holder.
-    {% fig "plastic clip.jpg", "" %}
+    {% fig "/img/blog/la-cucaracha/plastic-clip.jpg", "" %}
 10. Insert the toy wheels on each motor spindle. You can also add a piece of plastic for stability under the base cap.
 
-{% fig "cucaracha bottom.jpg", "" %}
+{% fig "/img/blog/la-cucaracha/cucaracha-bottom.jpg", "" %}
 
 It's done! Now you have a small robot that will go around your house bumping on whatever is on its path.
 
-{% fig "cucaracha front.jpg", "" %}
+{% fig "/img/blog/la-cucaracha/cucaracha-front.jpg", "" %}

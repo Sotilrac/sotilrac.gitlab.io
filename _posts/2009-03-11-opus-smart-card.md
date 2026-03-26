@@ -20,11 +20,11 @@ tags:
 > _The Opus card is pretty much like an onion_  
 > ~ [Oscar Wilde](http://uncyclopedia.wikia.com/wiki/Oscar_Wilde)
 
-{% fig "IMG_1611.JPG", "" %}
+{% fig "/img/blog/opus-smart-card/img_1611.jpg", "" %}
 
 Here in Montreal, the public transportation system ([STM](http://stm.info/)) started to use a new system for paying the fares: a smartcard.
 
-{% fig "IMG_1614.JPG", "" %}
+{% fig "/img/blog/opus-smart-card/img_1614.jpg", "" %}
 
 This smartcard is called [Opus](http://www.carteopus.info/en/main_nav/home/) and features contactless communication as well as regular metal pads (like those on telephone cards). This card can be recharged with various tickets, month passes, week passes, etc. More info on it can be found in its very own [wiki page](http://en.wikipedia.org/wiki/Opus_card).
 
@@ -63,15 +63,15 @@ Also, at some point, the card may send its unique ID number to the reader.
 
 I also wanted to see how the card is built, and the easiest way of doing so is to disassemble it.
 
-{% fig "IMG_1618.JPG", "" %}
+{% fig "/img/blog/opus-smart-card/img_1618.jpg", "" %}
 
 Since it is made out of plastic, I put it to soak in a bath of acetone (nail polish remover) for a bit less than a day while periodically checking how it was doing. I poured the acetone in an old iPod metal casing since it has almost the same size as the card.
 
-{% fig "IMG_1627.JPG", "" %}
+{% fig "/img/blog/opus-smart-card/img_1627.jpg", "" %}
 
 In the end I found out that the card is made up of several layers. These layers are very thin (or so are they after being soaked in acetone for 20 hours) but very sturdy.
 
-{% fig "IMG_1634.JPG", "" %}
+{% fig "/img/blog/opus-smart-card/img_1634.jpg", "" %}
 
 The middle layer contains the antenna and contact pads in order to be connected to the microprocessor. The chip is merely sitting on the pads, this may explain why the cards are so prone to break: when it is bent, the pads do not touch the antenna any more and the card becomes inactive.
 

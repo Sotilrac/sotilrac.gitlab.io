@@ -16,9 +16,9 @@ tags: []
 
 This is the schematics for a wireless AM receiver composed of a tuned amplifier, an AM demodulator, and an audio amplifier.
 
-{% fig "wireless AM receiver.jpg", "" %}
+{# {% fig "wireless AM receiver.jpg", "" %} - image lost #}
 
-{% fig "IMG_0028.jpg", "" %}
+{# {% fig "IMG_0028.jpg", "" %} - image lost #}
 
 This is the radio receiver implemented on a breadboard.
 

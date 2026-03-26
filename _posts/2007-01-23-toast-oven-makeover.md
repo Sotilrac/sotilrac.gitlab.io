@@ -31,12 +31,12 @@ Enjoy some before and after shots:
 
 ## Before...
 
-{% fig "Before1.jpg", "" %}
+{% fig "/img/blog/toast-oven-makeover/before1.jpg", "" %}
 
-{% fig "Before2.jpg", "" %}
+{% fig "/img/blog/toast-oven-makeover/before2.jpg", "" %}
 
 ## After...
 
-{% fig "After1.jpg", "" %}
+{% fig "/img/blog/toast-oven-makeover/after1.jpg", "" %}
 
-{% fig "After2.jpg", "" %}
+{% fig "/img/blog/toast-oven-makeover/after2.jpg", "" %}

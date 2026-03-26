@@ -27,14 +27,14 @@ Once the body was clean and shiny (it was completely black before) , I removed t
 
 The lamp is basically done.
 
-{% fig "laptop lamp.jpg", "" %}
+{# {% fig "laptop lamp.jpg", "" %} - image lost #}
 
 Since I did not have the appropriate light bulb for the lamp I had to adapt a bulb by adding a solder blob on its side. Now it fits perfectly.
 
-{% fig "light.jpg", "" %}
+{# {% fig "light.jpg", "" %} - image lost #}
 
-{% fig "laptop lamp closeup.jpg", "" %}
+{# {% fig "laptop lamp closeup.jpg", "" %} - image lost #}
 
 This lamp won't be as power efficient as the [LED ones](http://img.alibaba.com/photo/50490807/Laptop_USB_LED_Reading_Light.jpg) but it is cheap, quick and very simple to build. Enjoy.
 
-{% fig "laptop lamp in action.jpg", "" %}
+{# {% fig "laptop lamp in action.jpg", "" %} - image lost #}

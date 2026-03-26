@@ -21,7 +21,7 @@ Spammers hit again! I realized very late last night that my website was hacked a
 
 On my side, Goggle now thinks I am really into male drugs and there are a bunch of weird keywords all over the place. So far, I contained the damages but I still need to clean my WordPress php in order to remove any spammer-injected code.
 
-{% fig "carlitoscontraptions.com", "Hacked" %}
+{# {% fig "carlitoscontraptions.com", "Hacked" %} - image lost #}
 
 As a result, now I added a bunch of security features, most of which are invisible to the readers. A noteworthy and certainly not invisible feature is the use of CAPTCHAs in the comments and the login area.
 

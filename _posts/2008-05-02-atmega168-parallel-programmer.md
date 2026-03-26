@@ -35,6 +35,8 @@ I own a few Rev. C [Bare Bones Boards](http://moderndevice.com/) witch came with
 
 {% fig "/img/blog/atmega168-parallel-programmer/schematics.png", "" %}
 
+{% fig "/img/blog/atmega168-parallel-programmer/parallelprogrammer.svg", "" %}
+
 ## Construction
 
 I got a DB-25 connector from an extension parallel port of a PC I found in the garbage. First, I removed the original cable that came with it and I soldered the programmer's resistors to the back of the DB-25 and connected them to new wires. Then, I covered the resistors and cable connections with a piece of heat shrink tubing.

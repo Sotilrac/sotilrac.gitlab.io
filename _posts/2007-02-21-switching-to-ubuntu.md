@@ -19,7 +19,7 @@ At first I thought I'll give it a try since I was not sure it suited my needs. I
 
 Guess what, I was wrong. Linux is a beautiful piece of software that enables your computer to perform at its maximum capacity. It is stable, slick and fast.
 
-{% fig "/img/blog/switching-to-ubuntu/tux+swatter+2.png", "" %}Installation
+{% fig "/img/blog/switching-to-ubuntu/tux-swatter-2.png", "" %}Installation
 
 Installing Linux, [Ubuntu](http://www.ubuntu.com/) more specifically (a [Linux distribution](http://en.wikipedia.org/wiki/Linux_distribution)) is very fast. It takes about 45 minutes and when you're done you have a full desktop environment with a beautiful user interface, lots of software, including [OpenOffice.Org](http://www.openoffice.org/) (an office suite), [The Gimp](http://www.gimp.org/) (a Photoshop like application), [Gaim](http://gaim.sourceforge.net/) (instant messaging), Rithmbox (music player/organizer), [Evolution](http://www.gnome.org/projects/evolution/) (email client), [Firefox](http://www.mozilla.com/en-US/firefox/) (no introduction needed), and lots of other nice software out of the box. The best is that it all takes about 1GB.
 
@@ -58,4 +58,4 @@ Now that I use a good operating system my computer runs fast (as hell) without a
 - 2GB iPod nano 1st generation
 - 1GB Lexar USB key
 
-{% fig "/img/blog/switching-to-ubuntu/Screenshot-1.png", "" %}
+{% fig "/img/blog/switching-to-ubuntu/screenshot-1.png", "" %}

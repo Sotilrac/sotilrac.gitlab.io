@@ -20,7 +20,7 @@ Being acquainted with electronics supplies in general, I decided to try using [h
 
 The result? Marvelous. It works like a charm and is really very easy to do and costs nothing (if you already own some tubing).
 
-{% fig "shoelaces.jpg", "" %}
+{% fig "/img/blog/repairing-shoelaces-heat-shrink/shoelaces.jpg", "" %}
 
 In order to do it, simply cut four pieces (~2 cm long) of heat-shrink tubing, put them at the shoelaces tip, apply heat, and it's done. Note that the tubing should be of about the same diameter as the shoelaces.
 

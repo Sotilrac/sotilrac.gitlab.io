@@ -22,7 +22,7 @@ Read the follow up posts: [Panoramaker](http://carlitoscontraptions.com/2009/10/
 
 I have finally completed my second project sponsored by [RobotShop](http://www.robotshop.com/ "RobotShop"). I apologize for the immense delay, I really missed my promise of rolling out a new project every two weeks. Let's just say that I had a lot going on lately and I could barely keep up with my obligations, let alone blogging or building new projects.
 
-{% fig "ville_marie_2_fused.tif", "Place Ville-Marie Panorama" %}
+{# {% fig "ville_marie_2_fused.tif", "Place Ville-Marie Panorama" %} - image lost #}
 
 This time, I built a panoramic camera. My main objective was to have a platform that can be used with pretty much any camera and that can produce panoramas with a minimum of work. If there is enough interest from the public and if this prototype is well received by the DIY community, I'm planning to produce (and hopefully sell) kits that would include all the parts to build this device.
 
@@ -76,7 +76,7 @@ For now, taking a full 360 panorama takes about 15 minutes. This is a very long 
 
 ## Acknowledgements
 
-{% fig "www.rob", "RobotShop.com" %}
+{# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
 I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller"), the [ServoCity SPT200 Direct Drive Pan & Tilt System](http://www.robotshop.ca/servocity-spt200-pan-tilt.html "ServoCity SPT200 Direct Drive Pan & Tilt System"), and the [Hitec HS-785HB Winch Servo Motor](http://www.robotshop.ca/hitec-hs785hb-servo-motor.html "Hitec HS-785HB Winch Servo Motor"). This is the second (and hopefully not the last) project they sponsor here at [Carlitos' Contraptions](../ "Carlitos' Contraptions"). Without their help, I would have never been able to afford any of the materials (except for those that come straight from the garbage as usual).
 

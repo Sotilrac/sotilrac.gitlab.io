@@ -52,10 +52,10 @@ To build a nice looking case, I simply used two plastic bottle caps (from a Prop
 
 These two caps happen to fit perfectly one inside the other. So I simply cut a hole for the cable and drilled another for the probe (MT). I placed the circuit (properly insulated with tape, of course) inside, closed it and the thermometer was done.
 
-{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer inside.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer-inside.jpg", "" %}
 
 ## The Software
 
 In order to use the thermometer you need a small program. I used the original [digital thermometer program](/img/blog/bottle-cap-pc-thermometer/tempmeter.zip) but it wouldn't be hard to write a new one or to improve the existing one.
 
-{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer full.jpg", "" %}
+{% fig "/img/blog/bottle-cap-pc-thermometer/thermometer-full.jpg", "" %}

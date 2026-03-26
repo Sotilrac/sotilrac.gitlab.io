@@ -38,7 +38,7 @@ Also, I chose a section of the blazed which had an internal and external pocked 
 
 Finally, I wanted to ad some decorations to the pouch so I decided to use my brother's fabric markers (he is using for making pretty cool disguises) to ad the word "Linux" to one side of the sleeve. Then I asked him (since he is much more talented than me at drawing (and since I am very lazy) to draw Tux on the back. To achieve that he used a stencil made from the image below that I got from [the internet](http://noisymime.org/blog/?p=27 "Tux Stencil").
 
-{% fig "carlitoscontraptions.com", "Tux Stencil" %}
+{# {% fig "carlitoscontraptions.com", "Tux Stencil" %} - image lost #}
 
 I think the final result is pretty cool and very useful. The pockets are great, I can put all of the things that I usually need to carry with my laptop (e.g. mouse, headphones, USB keys) without any troubles. The only thing missing is perhaps a handle that I may add in the future.
 

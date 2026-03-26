@@ -18,7 +18,7 @@ My friends David and Kanwen, and I implemented a speech recognition system on an
 
 ## MATLAB Prototype
 
-{% fig "blackboard.jpg", "" %}
+{# {% fig "blackboard.jpg", "" %} - image lost #}
 
 Inspired by the algorithm described in [a site from the University of Toronto](http://www.eecg.toronto.edu/%7Eaamodt/ece341/speech-recognition/), we wrote two MATLAB scripts: [train.m](http://carlos.asmat.googlepages.com/train.m) and [recogniz.m](http://carlos.asmat.googlepages.com/recogniz.m).
 
@@ -34,7 +34,7 @@ Also you might encounter problems if the sound file is too short (it should last
 
 ## Hardware Implementation
 
-{% fig "system.jpg", "" %}
+{# {% fig "system.jpg", "" %} - image lost #}
 
 Once we had played enough with the MATLAB prototype parameters, we mapped the algorithm into combinational logic and finite state machines (FSM) by breaking it down into independent modules.
 
@@ -42,6 +42,6 @@ For more details about the hardware implementation and the project in general yo
 
 Unfortunately, I cannot post the project files (i.e. VHDL code).
 
-{% fig "DE2+board.jpg", "" %}
+{# {% fig "DE2+board.jpg", "" %} - image lost #}
 
 Note that all the documentation for this project was done using the very excellent [OpenOffice.org](http://openoffice.org/).

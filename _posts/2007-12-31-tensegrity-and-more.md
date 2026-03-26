@@ -18,13 +18,13 @@ Based on the [DIY Ornaments Weekend Projects Podcast](http://blog.makezine.com/a
 
 I'm particularly proud of the Popsicle sticks tensegrity structure since it is much stronger and cool looking than the straws one.
 
-{% fig "ss850220.jpg", "" %}
+{% fig "/img/blog/tensegrity-and-more/ss850220.jpg", "" %}
 
 (note the upgraded upcoming POV display on the background)
 
 Also, I got a new camera for Christmas, a nice Samsung s850, so now I can make some great pictures and video without needing to borrow a camera or whatnot (I'm really happy about it).  
 Here is a random picture from this great camera:
 
-{% fig "ss850306.jpg", "" %}
+{% fig "/img/blog/tensegrity-and-more/ss850306.jpg", "" %}
 
 BTW, the Samsung s850 works very well under Linux!

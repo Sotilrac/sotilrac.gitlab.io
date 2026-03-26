@@ -16,7 +16,7 @@ tags: []
 
 Here is some information about a home automation system my team and I did some time ago. This was done for the Embedded Systems class and require two [Altera UP1](http://www.altera.com/literature/univ/univ.pdf) FPGA boards, two computers and two [USB-to-TTL](http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm) wires.
 
-{% fig "/img/blog/home-automation/system+diagram.png", "" %}
+{% fig "/img/blog/home-automation/system-diagram.png", "" %}
 
 - The nice picture above was done by Frank (see below) -
 
@@ -36,6 +36,8 @@ All the coding was done in Java and VHDL and since it is not very well organized
 {% fig "/img/blog/home-automation/ss851269.jpg", "" %}
 
 Above you can see my friend Frank, he's the leader of the group (transformed from the norm by the nuclear goop).
+
+{% fig "/img/blog/home-automation/ss851270.jpg", "" %}
 
 Just so you know, the project went well and allowed us to learn a lot. We even ended up having a very good mark, so everybody should be (and is) happy.
 

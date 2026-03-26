@@ -15,7 +15,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-{% fig "www.rob", "RobotShop.com" %}
+{# {% fig "www.rob", "RobotShop.com" %} - image lost #}
 
 The robotics parts retailer [RobotShop](http://www.robotshop.com/ "RobotShop.com") will be sponsoring robotics projects at [Carlitos' Contraptions](http://carlitoscontraptions.com "CarlitosContraptions.com"). As a result I'll be rolling out robotics projects for the next weeks/months.
 
