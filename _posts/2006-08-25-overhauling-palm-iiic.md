@@ -7,11 +7,11 @@ id: 3
 date: 2006-08-25T20:08:00-04:00
 date_gmt: 2006-08-26T03:08:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
-{% include "archive-banner.njk" %}
 
+{% include "archive-banner.njk" %}
 
 I know the Palm IIIc is getting a bit old and obsolete. Still, it has many useful functions such as serving as a universal remote control.
 
@@ -25,8 +25,7 @@ I got my palm IIIc from a relative. When I got it, the case was cracked, the bat
 
 Fortunately, I'm very lucky and I found a brand new palm cradle in the garbage (along with many other power adaptors). The cradle has a serial port connection to sync the palm but no power input for charging. I went on looking for the Palm IIIc pinout and found this [very useful site](http://www.pspilot.de/ppppiiic/ppppiiic.html)
 
-I learned that the palm IIIc has a built in charger and it only needs a 5V in pin 9 in order to charge.  So I browsed through the many power adapters that I had and found a 5V DC power adaptor.
-
+I learned that the palm IIIc has a built in charger and it only needs a 5V in pin 9 in order to charge. So I browsed through the many power adapters that I had and found a 5V DC power adaptor.
 
 Another option is to use the 5V coming out the USB ports by using a USB cable. But that would waste one precious USB port.
 
@@ -34,7 +33,7 @@ I installed a connector for the power adaptor on the back of the cradle by makin
 
 {% fig "/img/blog/overhauling-palm-iiic/palm-craddle-connector.0.jpg", "Craddle Connector" %}
 
-I soldered the connector to the appropriate pins ( + to  pin 9 and ground to pin 10). There are holes in the cradle PCB named E1 to E10 corresponding to each pin, so soldering was easy.
+I soldered the connector to the appropriate pins ( + to pin 9 and ground to pin 10). There are holes in the cradle PCB named E1 to E10 corresponding to each pin, so soldering was easy.
 
 ## The Stylus
 

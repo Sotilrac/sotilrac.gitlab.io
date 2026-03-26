@@ -7,9 +7,10 @@ id: 22
 date: 2007-02-21T22:09:00-05:00
 date_gmt: 2007-02-22T05:09:00-05:00
 categories:
-- Tools
+  - Tools
 tags: software
 ---
+
 {% include "archive-banner.njk" %}
 
 I was tired of having a slow computer, I did not want to deal any longer with bugs and annoyances (and these where paid annoyances and bugs). This is why I decided to use Linux, instead of a well known mainstream OS.
@@ -36,25 +37,25 @@ Now that I use a good operating system my computer runs fast (as hell) without a
 
 ## For the record, this is the hardware I use
 
-*   1 GHz AMD Athlon Thunderbird
-*   nVidia gForce II 32 MB
-*   Yamaha low end sound card
-*   640 MB of RAM @ 133 MHz
-*   ASUS A7V Motherboard
-*   4+1 ports USB2 PCI card
+- 1 GHz AMD Athlon Thunderbird
+- nVidia gForce II 32 MB
+- Yamaha low end sound card
+- 640 MB of RAM @ 133 MHz
+- ASUS A7V Motherboard
+- 4+1 ports USB2 PCI card
 
-*   20 GB Maxtor HD
-*   160 GB Western Digital HD
-*   16x, 10x, 40x LG CDRW drive
-*   floppy disk drive
+- 20 GB Maxtor HD
+- 160 GB Western Digital HD
+- 16x, 10x, 40x LG CDRW drive
+- floppy disk drive
 
-*   Logitech Wheel mouse
-*   Logitech Internet Keyboard
-*   HP photosmart 1115 (printer & memory card reader)
-*   Canon LiDE 20 scanner
-*   Smasung SyncMaster 753df 17" display.
-*   Altec Lansing 2.1 speakers
-*   2GB iPod nano 1st generation
-*   1GB Lexar USB key
+- Logitech Wheel mouse
+- Logitech Internet Keyboard
+- HP photosmart 1115 (printer & memory card reader)
+- Canon LiDE 20 scanner
+- Smasung SyncMaster 753df 17" display.
+- Altec Lansing 2.1 speakers
+- 2GB iPod nano 1st generation
+- 1GB Lexar USB key
 
 {% fig "/img/blog/switching-to-ubuntu/Screenshot-1.png", "" %}

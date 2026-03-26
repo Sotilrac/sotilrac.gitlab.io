@@ -7,9 +7,10 @@ id: 12
 date: 2006-11-10T18:00:00-05:00
 date_gmt: 2006-11-11T01:00:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 I saw a long time ago that [someone](http://www.wikihow.com/Convert-a-Computer-ATX-Power-Supply-to-a-Lab-Power-Supply) built a bench power supply using a power supply from an old computer. This is why, when I found an old pre-Pentium computer (fully working with Win 95 on it) in the garbage, I implemented this idea.
@@ -22,13 +23,13 @@ Enough chitchat, let's get started.
 
 ## Materials:
 
-*   5 female [panel-mount banana connectors](http://www.futurlec.com/Pictures/CAPTPOST.jpg) (I had to buy them @ 8 for 12$)
-*   A computer power supply (from the old computer I found)
-*   2 LEDs + panel-mount (I got them from the same computer)
-*   A switch (I had it lying around)
-*   A resistor (use [this calculator](http://alan-parekh.com/led_resistor_calculator.html) to get a value for your resistor)
-*   4 [protective rubber pads](http://www.electronicsoutfitter.com/images/items/47247-rto-213.jpg)
-*   A power cord
+- 5 female [panel-mount banana connectors](http://www.futurlec.com/Pictures/CAPTPOST.jpg) (I had to buy them @ 8 for 12$)
+- A computer power supply (from the old computer I found)
+- 2 LEDs + panel-mount (I got them from the same computer)
+- A switch (I had it lying around)
+- A resistor (use [this calculator](http://alan-parekh.com/led_resistor_calculator.html) to get a value for your resistor)
+- 4 [protective rubber pads](http://www.electronicsoutfitter.com/images/items/47247-rto-213.jpg)
+- A power cord
 
 ## Putting it together
 
@@ -58,5 +59,6 @@ As a finishing touch I added rubber pads on the bottom so it doesn't scratch my 
 
 {% fig "Power Supply4.jpg", "" %}
 
-## Future improvements  
+## Future improvements
+
 I will add a variable voltage divider in order to easily get other useful voltages out of it, such as 3.3V and 9V.

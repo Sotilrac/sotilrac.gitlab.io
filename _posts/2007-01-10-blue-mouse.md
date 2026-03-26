@@ -7,9 +7,10 @@ id: 19
 date: 2007-01-10T20:01:00-05:00
 date_gmt: 2007-01-11T03:01:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 I was tired of the red LED in my Logitech optical mouse, so I changed it. It took me less than 10 minutes (including searching my house for an LED).

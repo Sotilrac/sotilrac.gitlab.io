@@ -1,8 +1,30 @@
 image: node:20
 
 stages:
+  - lint
   - test
   - deploy
+
+lint:
+  stage: lint
+  script:
+    - npm ci
+    - npx prettier --check .
+    - |
+      echo "Checking trailing whitespace in .njk, .txt, .sh files..."
+      bad=0
+      for f in $(find . -name '*.njk' -o -name '*.txt' -o -name '*.sh' | grep -v node_modules | grep -v _site); do
+        if grep -Pn '\s+$' "$f"; then
+          echo "  trailing whitespace: $f"
+          bad=1
+        fi
+        if [ -s "$f" ] && [ -n "$(tail -c1 "$f")" ]; then
+          echo "  missing final newline: $f"
+          bad=1
+        fi
+      done
+      [ "$bad" -eq 0 ] && echo "All clean!"
+      exit $bad
 
 test:
   stage: test

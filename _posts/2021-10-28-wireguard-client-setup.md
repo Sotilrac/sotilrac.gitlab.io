@@ -4,11 +4,12 @@ status: public
 title: WireGuard Client Setup
 date: 2021-10-28T19:17:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
-- vpn
+  - linux
+  - vpn
 ---
+
 After setting up a WireGuard server, configure a Linux client:
 
 ```bash

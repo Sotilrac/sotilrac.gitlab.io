@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=130
 date: 2009-04-17T17:30:02-04:00
 date_gmt: 2009-04-17T21:30:02-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Travel
+  - Travel
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/hacking-in-san-francisco/img_2007.jpg", "Hacking in SF" %}

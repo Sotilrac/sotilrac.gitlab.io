@@ -9,12 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=66
 date: 2008-12-31T14:48:00-05:00
 date_gmt: 2008-12-31T21:48:00-05:00
 categories:
-- Tools
-- My Projects
+  - Tools
+  - My Projects
 tags:
-- Electronics
-- Trash
+  - Electronics
+  - Trash
 ---
+
 {% include "archive-banner.njk" %}
 
 I found a nice breadboard in McGill's garbage a while ago and decided to convert it into an electronics bench. My main goal was to have a powerful power supply with regulated outputs combined with a breadboard and some useful connectors so I can build circuit prototypes easily. Also, I needed a new bench power supply since [mine](http://carlitoscontraptions.com/2006/11/bench-power-supply/ "Bench Power Supply") was lost in the [Lunar Excavator](http://carlitoscontraptions.com/2008/08/lunar-excavator/ "Lunar Excavator") shipment.
@@ -23,12 +24,12 @@ I found a nice breadboard in McGill's garbage a while ago and decided to convert
 
 ## Materials
 
-*   A nice breadboard found in the garbage
-*   A computer power supply
-*   An ATX motherboard power connector
-*   Two LEDs with resistors for current limiting
-*   A switch
-*   Some cables
+- A nice breadboard found in the garbage
+- A computer power supply
+- An ATX motherboard power connector
+- Two LEDs with resistors for current limiting
+- A switch
+- Some cables
 
 ## Putting it Together
 

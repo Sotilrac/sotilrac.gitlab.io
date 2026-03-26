@@ -4,11 +4,12 @@ status: public
 title: Linux Command Line Tips
 date: 2022-03-30T10:35:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
-- bash
+  - linux
+  - bash
 ---
+
 A growing collection of command line tricks.
 
 ## Bash `shift`

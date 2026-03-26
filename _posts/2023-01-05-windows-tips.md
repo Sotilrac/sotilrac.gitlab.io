@@ -4,10 +4,11 @@ status: public
 title: Windows Tips
 date: 2023-01-05T13:21:00-05:00
 categories:
-- TIL
+  - TIL
 tags:
-- windows
+  - windows
 ---
+
 Notes from the times I had to deal with Windows.
 
 ## Debloat Windows 10

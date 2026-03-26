@@ -2,50 +2,51 @@
 layout: layouts/post.njk
 status: public
 published: true
-title: 'The Wind Turbine Part 2: Design and Materials'
+title: "The Wind Turbine Part 2: Design and Materials"
 author: Carlos
 id: 573
 wordpress_url: http://carlitoscontraptions.com/?p=573
 date: 2010-05-10T01:52:46-04:00
 date_gmt: 2010-05-10T05:52:46-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- International Cooperation
+  - International Cooperation
 ---
+
 {% include "archive-banner.njk" %}
 
 Now that the [general idea](http://carlitoscontraptions.com/2010/02/the-wind-turbine-part-1-general-idea/ "Wind Turbine Part 1: General Idea") has been introduced, let us have a look at the materials and parts that make up the IBee Turbine design.
 
 ## The Materials
 
-*   ~ 2 ft. of 8" Schedule 80 PVC pipe - For the blades
-*   ~ 2 ft. of 6" 1/4 " thick PVC pipe - For the body
-*   A desktop computer side panel - For the tail
-*   An old AC motor - For the generator
-*   A 1.5" x 3.5" x 8" block of wood - For holding the body to the mast
-*   Several 6" and 8" stainless pipe clamps - For holding the motor and the block of wood to the body
-*   A beautiful custom machined flywheel - For holding the blades
-*   A 1" pipe flange - For holding the body to the mast
-*   A 6" x 1" galvanized steel nipple - For the pivoting assembly
-*   A 24" x 1" galvanized steel pipe - For the pivoting assembly
-*   A 1" galvanized steel union - For the pivoting assembly
-*   A 1" to 1.25" galvanized steel reduction - For the pivoting assembly
-*   A 5 m 1.25" galvanized steel pipe - For the mast
-*   Five steel brackets and appropriate wall screws - For holding the mast to the wall
-*   A car battery - For the energy storage
-*   A high power resistor - For the charge controller
-*   A DPST switch - For the charge controller
-*   A fuse - For the charge controller
-*   A battery charge controller (for solar panels in our case) - For the battery charge control
-*   A 75W (in our case) power inverter - For producing 110 VAC
-*   A nice bedside table - For creating a nice "Energy" station.
-*   ~ 10 m of two-conductor electrical cable - For connecting the Generator to the battery
-*   An old computer power supply case - For holding all the electronics components together
-*   Stainless steel screws, washers and lock washers, and a nail
-*   A nylon cutting board (or at least a piece of it)
-*   Cable ties
-*   Lots of bees - No seriously, lots of them
+- ~ 2 ft. of 8" Schedule 80 PVC pipe - For the blades
+- ~ 2 ft. of 6" 1/4 " thick PVC pipe - For the body
+- A desktop computer side panel - For the tail
+- An old AC motor - For the generator
+- A 1.5" x 3.5" x 8" block of wood - For holding the body to the mast
+- Several 6" and 8" stainless pipe clamps - For holding the motor and the block of wood to the body
+- A beautiful custom machined flywheel - For holding the blades
+- A 1" pipe flange - For holding the body to the mast
+- A 6" x 1" galvanized steel nipple - For the pivoting assembly
+- A 24" x 1" galvanized steel pipe - For the pivoting assembly
+- A 1" galvanized steel union - For the pivoting assembly
+- A 1" to 1.25" galvanized steel reduction - For the pivoting assembly
+- A 5 m 1.25" galvanized steel pipe - For the mast
+- Five steel brackets and appropriate wall screws - For holding the mast to the wall
+- A car battery - For the energy storage
+- A high power resistor - For the charge controller
+- A DPST switch - For the charge controller
+- A fuse - For the charge controller
+- A battery charge controller (for solar panels in our case) - For the battery charge control
+- A 75W (in our case) power inverter - For producing 110 VAC
+- A nice bedside table - For creating a nice "Energy" station.
+- ~ 10 m of two-conductor electrical cable - For connecting the Generator to the battery
+- An old computer power supply case - For holding all the electronics components together
+- Stainless steel screws, washers and lock washers, and a nail
+- A nylon cutting board (or at least a piece of it)
+- Cable ties
+- Lots of bees - No seriously, lots of them
 
 {% fig "/img/blog/the-wind-turbine-part-2-desing-materials/img_2836.jpg", "Main IBee Turbine Components" %}
 
@@ -59,10 +60,10 @@ We started building the turbine before the trip. This way, we were able to make 
 
 In order to start the construction, we gathered at [PiÃ¨ces d'Auto Jarry](http://maps.google.ca/maps?layer=c&cbll=45.580455,-73.788764&cbp=12,97.27,,0,2.17&ved=0CBkQ2wU&ei=ZLx8S4KWMo6GzASBs-XkCA&ie=UTF8&hq=&hnear=5478+Avenue+Bourret,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&ll=45.580977,-73.788922&spn=0,359.97262&z=16&panoid=gwm0VGZgTiDg36BtysL9zw "PiÃ¨ces d'Auto Jarry"). Mr. Plante (the owner) was kind enough to allow us to use his tools and warehouse to build the blades and the turbine's body. On that construction day, the students worked very hard:
 
-*   They made the blades following the [MAKE instructions](http://cachefly.oreilly.com/make/television/wind.pdf "MAKE Wind Turbine") using the 8" PVC pipe.
-*   After realizing a smaller 6" pipe could fit almost perfectly the generator motor, they made the turbine body out of it. The pipe was brought in case we could not find the appropriate 8" pipe for the blades.
-*   They made and tested the electrical connections for the generating motor. This meant spinning the motor shaft very fast by hand and hoping for an LED to turn ON.
-*   What did I do meanwhile? Mainly look cool and be idle since they were working very well.
+- They made the blades following the [MAKE instructions](http://cachefly.oreilly.com/make/television/wind.pdf "MAKE Wind Turbine") using the 8" PVC pipe.
+- After realizing a smaller 6" pipe could fit almost perfectly the generator motor, they made the turbine body out of it. The pipe was brought in case we could not find the appropriate 8" pipe for the blades.
+- They made and tested the electrical connections for the generating motor. This meant spinning the motor shaft very fast by hand and hoping for an LED to turn ON.
+- What did I do meanwhile? Mainly look cool and be idle since they were working very well.
 
 {% fig "/img/blog/the-wind-turbine-part-2-desing-materials/construction.jpg", "Construction Day" %}
 

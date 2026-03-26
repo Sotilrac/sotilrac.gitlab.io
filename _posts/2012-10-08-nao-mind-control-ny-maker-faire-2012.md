@@ -8,14 +8,15 @@ wordpress_url: http://carlitoscontraptions.com/?p=1438
 date: 2012-10-08T22:10:30-04:00
 date_gmt: 2012-10-09T02:10:30-04:00
 categories:
-- Robotics
+  - Robotics
 tags:
-- Nao
-- Maker Faire
-- Neurosky
-- Mindwave
-- Mind Control
+  - Nao
+  - Maker Faire
+  - Neurosky
+  - Mindwave
+  - Mind Control
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-mind-control-ny-maker-faire-2012/IMG_2028.jpg", "Super intense focus to control Nao 1337" %}

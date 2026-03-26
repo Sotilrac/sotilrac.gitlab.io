@@ -7,9 +7,10 @@ id: 44
 date: 2008-03-17T01:53:00-04:00
 date_gmt: 2008-03-17T08:53:00-04:00
 categories:
-- General
+  - General
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 Finally, I got the ultimate (engineering) bling: The Iron Ring.
@@ -22,7 +23,7 @@ Needless to say, I'm happy. Also, since this means that now that I'm an engineer
 
 Below you can enjoy a few pictures of my homies (David and Cynthia) and I.
 
-{% fig "ss850953.jpg", "" %}  
+{% fig "ss850953.jpg", "" %}
 
 {% fig "ss850947.jpg", "" %}
 

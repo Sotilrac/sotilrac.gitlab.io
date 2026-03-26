@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=764
 date: 2010-10-31T04:18:37-04:00
 date_gmt: 2010-10-31T08:18:37-04:00
 categories:
-- Robotics
+  - Robotics
 tags:
-- Jamming Gripper
-- MIT
+  - Jamming Gripper
+  - MIT
 ---
+
 {% include "archive-banner.njk" %}
 
 **UPDATE:** See the [new version of the universal gripper](http://carlitoscontraptions.com/2011/05/diy-universal-jamming-gripper-2-0/) with more pictures and new videos.
@@ -28,20 +29,20 @@ Since this is a rather simple principle, I thought I could quickly do one for my
 
 ## Materials
 
-*   A party balloon (silver in my case)
-*   A piece of plastic tubing (I used a hose fitting I had lying around)
-*   A piece of cloth
-*   Ground coffee (I use some very old coffee I found in my freezer)
-*   A rubber band.
-*   Functional lungs (unfortunately, my vacuum pump is dead)
+- A party balloon (silver in my case)
+- A piece of plastic tubing (I used a hose fitting I had lying around)
+- A piece of cloth
+- Ground coffee (I use some very old coffee I found in my freezer)
+- A rubber band.
+- Functional lungs (unfortunately, my vacuum pump is dead)
 
 ## How to do it
 
-1.  Fill the balloon with coffee (you might need to put it in a  vacuum chamber in order to be able to expand the balloon and thus stuff more coffee in it).
+1.  Fill the balloon with coffee (you might need to put it in a vacuum chamber in order to be able to expand the balloon and thus stuff more coffee in it).
 2.  Cover one end of the plastic tubing with the piece of cloth and hold it together with the rubber band. This will be used an air-permeable filter that will keep the coffee inside the balloon and allow air to circulate.
 3.  Insert the plastic tube in the balloon (so the filter is inside the balloon).
 
-Now, you can connect the contraption to a vacuum pump in order to create a vacuum. you can also use your mouth and lungs in order to suck the air out. I had to resort to the latter method since my vacuum pump is broken :'(.  I am trying to source a cheap vacuum pump in order to improve the project and make it into a real robotic gripper. Any suggestions are welcome!
+Now, you can connect the contraption to a vacuum pump in order to create a vacuum. you can also use your mouth and lungs in order to suck the air out. I had to resort to the latter method since my vacuum pump is broken :'(. I am trying to source a cheap vacuum pump in order to improve the project and make it into a real robotic gripper. Any suggestions are welcome!
 
 ## The Result
 

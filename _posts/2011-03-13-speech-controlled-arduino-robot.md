@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=888
 date: 2011-03-13T16:14:47-04:00
 date_gmt: 2011-03-13T20:14:47-04:00
 categories:
-- Arduino
+  - Arduino
 tags:
-- Carlitos' Project
-- Arduino
-- Nao
-- Xbee
+  - Carlitos' Project
+  - Arduino
+  - Nao
+  - Xbee
 ---
+
 {% include "archive-banner.njk" %}
 
 For the second [Carlitos' Project](http://carlitoscontraptions.com/tag/carlitos-project/), I wanted to do something a bit more "useful" than pretty lights. So I decided that a speech controlled Arduino robot should be interesting enough as a project.

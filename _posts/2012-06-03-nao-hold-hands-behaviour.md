@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=1163
 date: 2012-06-03T19:11:39-04:00
 date_gmt: 2012-06-03T23:11:39-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Aldebaran
-- Robot Film Festival
+  - Nao
+  - Aldebaran
+  - Robot Film Festival
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-hold-hands-behaviour/IMG_0760.jpg", "Nao Holds my Hand" %}

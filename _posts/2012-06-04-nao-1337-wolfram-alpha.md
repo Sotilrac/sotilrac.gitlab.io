@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=1167
 date: 2012-06-04T19:52:35-04:00
 date_gmt: 2012-06-04T23:52:35-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Aldebaran
-- Wolfram
+  - Nao
+  - Aldebaran
+  - Wolfram
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-1337-wolfram-alpha/WolframAlpha-Knowledge-Engine.jpg", "Wolfram|Alpha Knowledge Engine" %}

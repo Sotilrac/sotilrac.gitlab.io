@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=55
 date: 2008-06-20T07:32:00-04:00
 date_gmt: 2008-06-20T14:32:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Software
-- Robot
+  - Software
+  - Robot
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "cart.png", "" %}
@@ -22,7 +23,7 @@ My friend David and I implemented an inverted pendulum controller for the [Quans
 
 We implemented many kinds of controllers, but the best turned out to be the full state feedback controller where we get to control the position and velocity of both the cart and the rod. The controller block diagram is shown below.
 
-{% fig "Full+State+Feedback+Diagram.png", "" %}  
+{% fig "Full+State+Feedback+Diagram.png", "" %}
 
 Below you can find the slides for a presentation giving a quick overview of this subject and a video demonstration featuring David as the presenter.
 

@@ -4,11 +4,12 @@ status: public
 title: Convert Video to GIF with ffmpeg
 date: 2021-05-05T22:35:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
-- ffmpeg
+  - linux
+  - ffmpeg
 ---
+
 A good-looking GIF with an optimized 256-colour palette:
 
 ```bash

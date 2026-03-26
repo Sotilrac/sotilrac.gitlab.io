@@ -9,15 +9,16 @@ wordpress_url: http://carlitoscontraptions.com/?p=1109
 date: 2011-10-13T22:18:29-04:00
 date_gmt: 2011-10-14T02:18:29-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Aldebaran
-- Make
-- '1337'
-- Maker Faire
+  - Nao
+  - Aldebaran
+  - Make
+  - "1337"
+  - Maker Faire
 ---
+
 {% include "archive-banner.njk" %}
 
 {% youtube "0QylLaTzx5Q" %}
@@ -37,4 +38,3 @@ See the pictures below in order to see more robotic awesomeness from the World M
  "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1094.JPG",
  "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1109.JPG",
  "/img/blog/nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011/IMG_1111.JPG" %}
-

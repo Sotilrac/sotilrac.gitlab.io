@@ -8,16 +8,18 @@ id: 37
 date: 2007-08-29T19:01:00-04:00
 date_gmt: 2007-08-30T02:01:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 ## Hypothetical situation
 
 Let's suppose tomorrow is your friend's birthday and you forgot to get him/her a present. Also, let's assume you have no money whatsoever, all nearby stores are closed and s/he doesn't like things that come from the garbage.
 
-## What to do?  
+## What to do?
+
 a. You don't give her/him any present at all (second best option).  
 b. You make a gift yourself (best option).  
 c. You go into exile.
@@ -28,17 +30,17 @@ I chose "b". Below, instruction on how to make a quick and nice puzzle.
 
 ## Materials
 
-*   19 big nails
-*   a piece of wood
+- 19 big nails
+- a piece of wood
 
 ## Tools
 
-*   hammer
-*   sand paper
-*   sanding machine (particularly useful, but optional)
-*   glue
-*   drill
-*   jig saw
+- hammer
+- sand paper
+- sanding machine (particularly useful, but optional)
+- glue
+- drill
+- jig saw
 
 In order to build a nice puzzle that will...well puzzle your friend for a while, especially if s/he is an engineering student, do as follows:
 
@@ -52,7 +54,7 @@ In order to build a nice puzzle that will...well puzzle your friend for a while,
 
 {% fig "/img/blog/diy-birthday-gift-aka-nail-puzzle/nail+puzzle.JPG", "" %}
 
-Game Instructions: Put all 18 nails on the central nail. The resulting structure should be stable.  
+Game Instructions: Put all 18 nails on the central nail. The resulting structure should be stable.
 
 This means they should all be placed so that they only touch the central nail's head and maybe each other.
 

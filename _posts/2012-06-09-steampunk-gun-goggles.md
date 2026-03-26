@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=1171
 date: 2012-06-09T00:47:45-04:00
 date_gmt: 2012-06-09T04:47:45-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Cosplay
+  - Cosplay
 ---
+
 {% include "archive-banner.njk" %}
 
 I was invited to a Pride & Prejudice & Zombies themed party and I thought that (although it is not exactly the same era) I could have a steampunk disguise and be a steampunk zombie hunter.

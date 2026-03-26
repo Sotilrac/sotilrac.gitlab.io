@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=71
 date: 2009-03-11T00:11:00-04:00
 date_gmt: 2009-03-11T07:11:00-04:00
 categories:
-- Work in progress
-- Info
+  - Work in progress
+  - Info
 tags:
-- Electronics
+  - Electronics
 ---
+
 {% include "archive-banner.njk" %}
 
 > _The Opus card is pretty much like an onion_  
@@ -35,11 +36,11 @@ Also, each card has its own identification number.
 
 ## Observations on the card behaviour:
 
-*   Cards loaded with a monthly pass will make the readers shine a green light (or yellow for students) during the given month and grant access.
-*   Cards loaded with tickets will make the reader say that one ticket has been used, shine a green light and grant access (same behaviour as with alternative magnetic band tickets). The ticket is then spent.
-*   If the card with a ticket is read again within two hours of spending a ticket, the reader will shine a green light and grant access without spending another ticket. The readers also displays a message acknowledging this.
-*   The process of loading a card with new fares takes around two seconds after the payment has been performed. While the card is being loaded, a yellow progress bar is shown. This means that writing to the card is a slow operation and cannot be performed on the fly while passing the card by the reader when entering the bus, for instance.
-*   It is unlikely that the readers in the buses are connected in a network with all metro stations and themselves.
+- Cards loaded with a monthly pass will make the readers shine a green light (or yellow for students) during the given month and grant access.
+- Cards loaded with tickets will make the reader say that one ticket has been used, shine a green light and grant access (same behaviour as with alternative magnetic band tickets). The ticket is then spent.
+- If the card with a ticket is read again within two hours of spending a ticket, the reader will shine a green light and grant access without spending another ticket. The readers also displays a message acknowledging this.
+- The process of loading a card with new fares takes around two seconds after the payment has been performed. While the card is being loaded, a yellow progress bar is shown. This means that writing to the card is a slow operation and cannot be performed on the fly while passing the card by the reader when entering the bus, for instance.
+- It is unlikely that the readers in the buses are connected in a network with all metro stations and themselves.
 
 ## How I think the card works:
 
@@ -47,18 +48,19 @@ Also, each card has its own identification number.
 2.  The reader sends the current time to the card.
 3.  The card checks if it can grant access to the transportation at the given time.
 
-1.  If it has a month pass, the card only worries to see if the month is right.
-2.  If it has a ticket it stores the time and spends a ticket.
-3.  If it has spent the ticket in the previous two hours it does not decrement the ticket count
+4.  If it has a month pass, the card only worries to see if the month is right.
+5.  If it has a ticket it stores the time and spends a ticket.
+6.  If it has spent the ticket in the previous two hours it does not decrement the ticket count
 
-5.  In all the previous cases, the card sends the instruction to the reader to grant access and tells it what kind of message/light it should show.
-6.  If the card does not have tickets or month passes or transfers (a ticket spent in the last two hours) it lets the reader know and the reader does not grant access.
+7.  In all the previous cases, the card sends the instruction to the reader to grant access and tells it what kind of message/light it should show.
+8.  If the card does not have tickets or month passes or transfers (a ticket spent in the last two hours) it lets the reader know and the reader does not grant access.
 
 If this card is any similar to the ones in other countries, all the communication between the reader and the card are encrypted. The encryption may be symmetrical which means that there is a secret key shared by all the readers and the cards.
 
-Also, at some point, the card may send its unique ID number to the reader.  
-  
+Also, at some point, the card may send its unique ID number to the reader.
+
 ## Some extra info:
+
 I also wanted to see how the card is built, and the easiest way of doing so is to disassemble it.
 
 {% fig "IMG_1618.JPG", "" %}

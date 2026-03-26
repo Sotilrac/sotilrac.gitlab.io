@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=790
 date: 2011-01-15T17:55:18-05:00
 date_gmt: 2011-01-15T21:55:18-05:00
 categories:
-- General
-- My Projects
+  - General
+  - My Projects
 tags:
-- Carlitos' Project
+  - Carlitos' Project
 ---
+
 {% include "archive-banner.njk" %}
 
 [RobotShop](http://www.robotshop.com/) in collaboration with [Carlitos' Contraptions](http://carlitoscontraptions.com) is creating a series of videos about DIY electronic and robotic projects.

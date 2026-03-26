@@ -7,11 +7,11 @@ id: 1
 date: 2006-08-22T22:25:00-04:00
 date_gmt: 2006-08-23T05:25:00-04:00
 categories:
-- General
+  - General
 tags: []
 ---
-{% include "archive-banner.njk" %}
 
+{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/introduction/carlos.jpg", "Carlos" %}
 

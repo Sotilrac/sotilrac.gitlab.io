@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=68
 date: 2009-01-27T17:11:00-05:00
 date_gmt: 2009-01-28T00:11:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Craft
+  - Craft
 ---
+
 {% include "archive-banner.njk" %}
 
 When I was a young child, I had a double-sided nine pieces wooden puzzle. It featured Pinocchio on one side, and a mermaid on the other. The pieces were all equally-sized rectangles. I really liked this puzzle and had it for a long time since not only it was a puzzle but the wooden blocks could easily become a wall, a pile of bricks, etc.
@@ -25,9 +26,9 @@ I wanted to reproduce this toy so my girlfriend and I built a new version of thi
 
 ## Materials
 
-*   Wood (the same pieces from the garbage I used in the [bunk bedside table](http://carlitoscontraptions.com/2009/01/bunk-bedside-table/ "Bunk Bedside Table"), in my case)
-*   Wood glue
-*   Two picture printouts (see the SVGs below)
+- Wood (the same pieces from the garbage I used in the [bunk bedside table](http://carlitoscontraptions.com/2009/01/bunk-bedside-table/ "Bunk Bedside Table"), in my case)
+- Wood glue
+- Two picture printouts (see the SVGs below)
 
 ## Getting it done
 

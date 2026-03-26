@@ -4,11 +4,12 @@ status: public
 title: Run Raspbian in a chroot
 date: 2021-11-30T15:33:00-05:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
-- raspberry-pi
+  - linux
+  - raspberry-pi
 ---
+
 You can run a Raspberry Pi's Raspbian from a `chroot` on a regular Linux machine. Mount the Pi's SD card, then:
 
 ```bash

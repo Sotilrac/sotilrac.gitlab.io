@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=1173
 date: 2012-06-07T19:48:23-04:00
 date_gmt: 2012-06-07T23:48:23-04:00
 categories:
-- Robotics
-- News
+  - Robotics
+  - News
 tags:
-- New Scientist
+  - New Scientist
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/im-on-new-scientist/new_scientist_20120121.jpg", "New Scientist 2012-01-21" %}

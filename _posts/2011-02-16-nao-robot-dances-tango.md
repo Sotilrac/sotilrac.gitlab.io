@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=843
 date: 2011-02-16T22:23:44-05:00
 date_gmt: 2011-02-17T02:23:44-05:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Aldebaran
-- Tango
+  - Nao
+  - Aldebaran
+  - Tango
 ---
+
 {% include "archive-banner.njk" %}
 
 I put together this quick tango dance. For those who know Tango, you should be able to see that the dance steps are fairly accurate, albeit a bit limited due to the robot's lack of flexibility and my lack of programming talent.

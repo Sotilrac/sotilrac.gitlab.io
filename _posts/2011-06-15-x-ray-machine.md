@@ -2,16 +2,17 @@
 layout: layouts/post.njk
 status: public
 published: true
-title: 'I''ve Got An X-Ray Machine!'
+title: "I've Got An X-Ray Machine!"
 author: Carlos
 id: 968
 wordpress_url: http://carlitoscontraptions.com/?p=968
 date: 2011-06-15T21:44:47-04:00
 date_gmt: 2011-06-16T01:44:47-04:00
 categories:
-- General
+  - General
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 I just found an X-Ray machine in the garbage. Yes, you read right, I now have one of those X-Ray machines like the ones your dentist uses.

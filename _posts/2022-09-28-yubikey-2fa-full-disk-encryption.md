@@ -4,11 +4,12 @@ status: public
 title: Yubikey for 2FA Login and Full-Disk Encryption
 date: 2022-09-28T20:06:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
-- security
+  - linux
+  - security
 ---
+
 How to use a Yubikey for 2FA on KDE login and LUKS full-disk encryption on Kubuntu 22.04.
 
 ## Login

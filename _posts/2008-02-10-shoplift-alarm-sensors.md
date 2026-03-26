@@ -7,9 +7,10 @@ id: 43
 date: 2008-02-10T16:45:00-05:00
 date_gmt: 2008-02-10T23:45:00-05:00
 categories:
-- Info
+  - Info
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "ss850544.jpg", "" %}
@@ -24,9 +25,9 @@ The other day I was lucky enough to see (and even photograph) a broken shoplift 
 
 {% fig "ss850541.jpg", "" %}
 
-{% fig "ss850540.jpg", "" %}  
+{% fig "ss850540.jpg", "" %}
 
-### How I think the system works:  
+### How I think the system works:
 
 {% fig "shoplift+tag.png", "" %}
 

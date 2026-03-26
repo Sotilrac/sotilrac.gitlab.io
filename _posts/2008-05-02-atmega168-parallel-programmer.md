@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=50
 date: 2008-05-02T00:26:00-04:00
 date_gmt: 2008-05-02T07:26:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/atmega168-parallel-programmer/ss851490.jpg", "" %}
@@ -20,13 +21,13 @@ I own a few Rev. C [Bare Bones Boards](http://moderndevice.com/) witch came with
 
 ## Materials
 
-*   Two 470 Ohms resistors
-*   One 220 Ohms resistor
-*   Some wire
-*   A female header at least 3x2
-*   A ferrite core (not required but looks cool)
-*   Some heat shrink (it could be replaced by some electrical tape)
-*   A male parallel port connector (DB-25)
+- Two 470 Ohms resistors
+- One 220 Ohms resistor
+- Some wire
+- A female header at least 3x2
+- A ferrite core (not required but looks cool)
+- Some heat shrink (it could be replaced by some electrical tape)
+- A male parallel port connector (DB-25)
 
 ## Programmer Schematics
 

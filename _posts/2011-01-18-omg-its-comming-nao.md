@@ -9,12 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=817
 date: 2011-01-18T01:45:09-05:00
 date_gmt: 2011-01-18T05:45:09-05:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Developer Program
+  - Nao
+  - Developer Program
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "carlitoscontraptions.com", "Nao's Packing Picture" %}

@@ -7,12 +7,13 @@ author: Carlos
 id: 87
 date: 2009-10-29T15:20:52-04:00
 categories:
-- Software
+  - Software
 tags:
-- Software
-- Open Source
-- Linux
+  - Software
+  - Open Source
+  - Linux
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/kubuntu-karmic-koala-is-out/kubuntu_karmic.jpg", "Kubuntu Karmic Koala" %}

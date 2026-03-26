@@ -9,14 +9,15 @@ wordpress_url: http://carlitoscontraptions.com/?p=830
 date: 2011-02-07T22:43:53-05:00
 date_gmt: 2011-02-08T02:43:53-05:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Developer Program
-- Aldebaran
-- Unboxing
+  - Nao
+  - Developer Program
+  - Aldebaran
+  - Unboxing
 ---
+
 {% include "archive-banner.njk" %}
 
 I got my Nao!

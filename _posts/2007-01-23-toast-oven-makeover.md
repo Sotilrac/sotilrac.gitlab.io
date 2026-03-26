@@ -7,9 +7,10 @@ id: 20
 date: 2007-01-23T15:46:00-05:00
 date_gmt: 2007-01-23T22:46:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 My girlfriend had an old toast oven (about 20 years old). Slowly it decayed and eventually, broke (the timer did not work any more but it still heats).
@@ -29,11 +30,13 @@ IMHO, the easiest way to clean it is to take it apart, clean each piece, and put
 Enjoy some before and after shots:
 
 ## Before...
+
 {% fig "Before1.jpg", "" %}
 
 {% fig "Before2.jpg", "" %}
 
 ## After...
+
 {% fig "After1.jpg", "" %}
 
 {% fig "After2.jpg", "" %}

@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=1304
 date: 2012-09-02T17:29:07-04:00
 date_gmt: 2012-09-02T21:29:07-04:00
 categories:
-- News
+  - News
 tags:
-- Make
-- Maker Faire
+  - Make
+  - Maker Faire
 ---
+
 {% include "archive-banner.njk" %}
 
 Nao 1337 and I participated in the first edition of the [Montreal Mini Maker Faire](http://www.makerfairemontreal.ca). We were quite impressed by the organization and the attendance, it was a blast. Nao1337 could play with children at Rock Paper Scissors Lizard Spock, hold their hands and walk with them, do some dance demonstrations, and show off.

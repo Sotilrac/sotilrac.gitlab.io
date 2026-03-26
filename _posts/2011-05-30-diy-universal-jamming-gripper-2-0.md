@@ -9,12 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=938
 date: 2011-05-30T02:03:40-04:00
 date_gmt: 2011-05-30T06:03:40-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Jamming Gripper
-- MIT
+  - Jamming Gripper
+  - MIT
 ---
+
 {% include "archive-banner.njk" %}
 
 As promised, I improved on [my initial rather silly design](http://carlitoscontraptions.com/2010/10/diy-universal-robot-gripper/) of the universal gripper as inspired by iRobot and University of Chicago.
@@ -25,16 +26,16 @@ My main goal was to create a universal gripper that could be made from off-the-s
 
 ## Materials
 
-*   [A shower head](http://t.co/ZfHn5Wb) (that you will need to modify slightly)
-*   Some 1/4" silicon tubing
-*   Some cotton balls
-*   A balloon
-*   [A DC pump](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Spa-498)
-*   A DC wall adaptor
-*   A switch
-*   Some coffee
-*   A coupling
-*   A funnel to fill the balloon with coffee
+- [A shower head](http://t.co/ZfHn5Wb) (that you will need to modify slightly)
+- Some 1/4" silicon tubing
+- Some cotton balls
+- A balloon
+- [A DC pump](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Spa-498)
+- A DC wall adaptor
+- A switch
+- Some coffee
+- A coupling
+- A funnel to fill the balloon with coffee
 
 ## Putting it together
 

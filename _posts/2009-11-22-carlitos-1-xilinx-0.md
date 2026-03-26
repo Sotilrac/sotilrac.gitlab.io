@@ -7,13 +7,14 @@ author: Carlos
 id: 89
 date: 2009-11-22T04:02:31-05:00
 categories:
-- General
-- Software
-- FPGA
+  - General
+  - Software
+  - FPGA
 tags:
-- Software
-- Electronics
+  - Software
+  - Electronics
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/carlitos-1-xilinx-0/fpga_xilinx_spartan.jpg", "Xilinx Spartan" %}

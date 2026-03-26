@@ -2,17 +2,18 @@
 layout: layouts/post.njk
 status: public
 published: true
-title: 'The Wind Turbine Part 3: Building the Generator'
+title: "The Wind Turbine Part 3: Building the Generator"
 author: Carlos
 id: 578
 wordpress_url: http://carlitoscontraptions.com/?p=578
 date: 2010-05-18T19:30:35-04:00
 date_gmt: 2010-05-18T23:30:35-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- International Cooperation
+  - International Cooperation
 ---
+
 {% include "archive-banner.njk" %}
 
 Once [all the parts were built](http://carlitoscontraptions.com/2010/05/the-wind-turbine-part-2-desing-and-materials/ "The Wind Turbine Part 2: Design and Materials"), assembling the generator was a simple task since it was designed to require only a Flat Screw driver (although a Robertson could also help) and some talent. The most difficult part was to prop up the mast so the wind turbine could catch some actual wind.

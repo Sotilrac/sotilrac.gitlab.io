@@ -8,10 +8,11 @@ id: 28
 date: 2007-04-02T21:46:00-04:00
 date_gmt: 2007-04-03T04:46:00-04:00
 categories:
-- General
-- FPGA
+  - General
+  - FPGA
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 Ever since I discovered the wonders of FPGA boards I wanted to have one of my own (instead of using the one provided by the university only for university projects). Not long ago my wish granted.
@@ -27,6 +28,7 @@ Have a look at some pictures of the board.
 {% fig "Spartan+010.jpg", "" %}
 
 ## The DIO1 board
+
 {% fig "Spartan+009.jpg", "" %}
 
 I shall be back soon with something implemented on it.

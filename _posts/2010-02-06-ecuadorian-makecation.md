@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=487
 date: 2010-02-06T01:20:15-05:00
 date_gmt: 2010-02-06T05:20:15-05:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- International Cooperation
+  - International Cooperation
 ---
+
 {% include "archive-banner.njk" %}
 
 I think I can now safely say I am a _Maker_. I make things and that is what I like to do. Let me explain why I came to this conclusion.

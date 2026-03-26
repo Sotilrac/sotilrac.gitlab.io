@@ -7,9 +7,10 @@ id: 5
 date: 2006-09-05T17:02:00-04:00
 date_gmt: 2006-09-06T00:02:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 This is a very simple wall adaptor that allows to power USB devices without the need of a computer (e.g. for recharging).

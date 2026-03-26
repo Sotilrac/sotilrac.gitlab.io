@@ -8,9 +8,10 @@ id: 52
 date: 2008-07-22T22:21:00-04:00
 date_gmt: 2008-07-23T05:21:00-04:00
 categories:
-- General
+  - General
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 Now that I am a bachelor of engineering (actually I graduated two months ago), I would really like to find an engineering job.

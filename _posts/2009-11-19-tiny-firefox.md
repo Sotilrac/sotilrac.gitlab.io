@@ -7,11 +7,12 @@ author: Carlos
 id: 89
 date: 2009-11-19T14:58:33-05:00
 categories:
-- Software
+  - Software
 tags:
-- Software
-- Open Source
+  - Software
+  - Open Source
 ---
+
 {% include "archive-banner.njk" %}
 
 Ever since I got [my EeePC](http://carlitoscontraptions.com/2008/09/eee-pc-1000-ubuntu-kde-41/ "EeePC"), I got obsessed by the amount of screen real-state Firefox takes for the top menu, browsing control buttons, address and search bar, etc.
@@ -20,9 +21,9 @@ The quickest fix I always apply every time I am in front of a Firefox windows th
 
 But I wanted to go further (especially since I saw that Chrome uses less screen real-state). So I installed a few add-ons that make a significant difference:
 
-*   AHS. [autoHideStatusbar](https://addons.mozilla.org/en-US/firefox/addon/1530 "autoHideStatusbar") does precisely that. It hides the status bar unless it is required (i.e. a page is loading or you hover a link) or you go near it with the mouse pointer.
-*   [Smart Stop/Reload](https://addons.mozilla.org/en-US/firefox/addon/7401 "Smart Stop/Reload"). It combines the Stop and Reload buttons (since they are never used at he same time).
-*   [Tiny Menu](https://addons.mozilla.org/en-US/firefox/addon/1455 "Tiny Menu"). It transforms the File menu into a single item. This extension saves a lot of real-state and the menu remains nice ans usable.
+- AHS. [autoHideStatusbar](https://addons.mozilla.org/en-US/firefox/addon/1530 "autoHideStatusbar") does precisely that. It hides the status bar unless it is required (i.e. a page is loading or you hover a link) or you go near it with the mouse pointer.
+- [Smart Stop/Reload](https://addons.mozilla.org/en-US/firefox/addon/7401 "Smart Stop/Reload"). It combines the Stop and Reload buttons (since they are never used at he same time).
+- [Tiny Menu](https://addons.mozilla.org/en-US/firefox/addon/1455 "Tiny Menu"). It transforms the File menu into a single item. This extension saves a lot of real-state and the menu remains nice ans usable.
 
 By using these extensions and moving things around in the toolbars, you can achieve a very tiny navigation interface that is perfectly usable.
 

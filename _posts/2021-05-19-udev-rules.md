@@ -4,10 +4,11 @@ status: public
 title: udev Rules for Predictable Device Names
 date: 2021-05-19T14:53:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
+  - linux
 ---
+
 udev rules let you run actions when a device is connected. A common use case is creating a symlink with a predictable name for a device that would otherwise show up as `/dev/ttyACM0`.
 
 First, find device info (serial number, vendor ID, etc.):

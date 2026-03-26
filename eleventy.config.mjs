@@ -3,7 +3,7 @@ import yaml from "js-yaml";
 export default function (eleventyConfig) {
   // --- YAML data file support (removed in 11ty v3) ---
   eleventyConfig.addDataExtension("yml,yaml", (contents) =>
-    yaml.load(contents)
+    yaml.load(contents),
   );
 
   // --- Global data ---
@@ -36,7 +36,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addShortcode("gallery", (columns, ...imgs) => {
     const items = imgs
-      .map((img) => `<a href="${img}" data-fancybox="gallery"><img src="${img}" alt="" /></a>`)
+      .map(
+        (img) =>
+          `<a href="${img}" data-fancybox="gallery"><img src="${img}" alt="" /></a>`,
+      )
       .join("");
     return `<div class="gallery" style="--gallery-cols: ${columns}">${items}</div>`;
   });
@@ -49,8 +52,18 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("dateFormat", (date, format) => {
     const d = new Date(date);
     const months = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     if (format === "iso") return d.toISOString();
     if (format === "isodate") return d.toISOString().slice(0, 10);

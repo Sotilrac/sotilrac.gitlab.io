@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=471
 date: 2009-12-16T16:03:52-05:00
 date_gmt: 2009-12-16T20:03:52-05:00
 categories:
-- Info
+  - Info
 tags:
-- Software
-- Montreal
+  - Software
+  - Montreal
 ---
+
 {% include "archive-banner.njk" %}
 
 Ever since the implementation of the new [Opus Card system](http://carlitoscontraptions.com/2009/03/opus-smart-card/ "Opus Card") by the Montreal's Public Transportation ([STM](http://stm.info/ "STM")), there have been lots of malfunctions and bugs.
@@ -29,9 +30,9 @@ On last weekend, I witnessed a bug that I would have never thought possible in a
 **Quick note on the STM's fares (for those who do not live it day-to-day):**  
 There are mainly two transportation systems: the bus and the metro (subway) and the fare pricing is governed by a (somewhat) simple set of rules:
 
-*   There are monthly passes that allow unlimited fares within the month in both the metro and the bus. They are more expensive for adults than for students or elders.
-*   There are weekly cards that are similar to the monthly cards by work for a given week.
-*   There are tickets (either as a magnetic paper card or as some information on a smartcard) which allow for one fare that allow to take the metro, the bus, or both within a two-hour time limit. Should the time period be elapsed, or should you take the metro or the same bus more than once, you will need another ticket.
+- There are monthly passes that allow unlimited fares within the month in both the metro and the bus. They are more expensive for adults than for students or elders.
+- There are weekly cards that are similar to the monthly cards by work for a given week.
+- There are tickets (either as a magnetic paper card or as some information on a smartcard) which allow for one fare that allow to take the metro, the bus, or both within a two-hour time limit. Should the time period be elapsed, or should you take the metro or the same bus more than once, you will need another ticket.
 
 Since the Opus Card implementation, one of the first things that came into my mind was the attention required to compute the fare price when a month ends (i.e. at 12:00 on the 31th, 30th, 29th, or 28th), or when a week or a day ends. Everyone who has programed at least a little bit (like me) knows that these boundary conditions are usually exceptions to the normal behaviour of a program and need to be taken into account. I, of course, assumed that such mundane exceptions would be addressed by professional programmers swiftly and painlessly. I was wrong.
 

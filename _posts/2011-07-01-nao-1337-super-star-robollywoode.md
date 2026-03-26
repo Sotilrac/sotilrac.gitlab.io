@@ -9,12 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=973
 date: 2011-07-01T19:37:42-04:00
 date_gmt: 2011-07-01T23:37:42-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Robot Film Festival
+  - Nao
+  - Robot Film Festival
 ---
+
 {% include "archive-banner.njk" %}
 
 1337 and I will be participating in the [Robot Film Festival](http://robotfilmfestival.com/) at NYC.

@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=1157
 date: 2012-05-31T19:01:05-04:00
 date_gmt: 2012-05-31T23:01:05-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- iModela
-- Roland
-- Deadmau5
+  - iModela
+  - Roland
+  - Deadmau5
 ---
+
 {% include "archive-banner.njk" %}
 
 I was very lucky to get my hands on an [iModela mini CNC Router](http://www.rolanddga.com/products/milling/imodela/) from [Roland](http://www.rolanddga.com/). I tested the unit for a few months now and I am terribly late for making a post about it but I believe it is better to share the information late rather than not sharing it at all.
@@ -38,7 +39,7 @@ Cutting this shape took roughly an hour and the end-result is very precise. The 
 
 ## Quick impressions
 
-*   The machine is very slow. This is understandable because of its small size, but it can take forever (>4 hours) to make a simple model.
-*   The software is terrible and Windows-only on top of that. Fortunately, it seems it can be used with Linux CNC drivers but I have not tested that yet. In the meantime, you will be happy to learn it is possible to paste from Inkscape into the software in order to mill more complex paths.
-*   The router motor gets very hot and although the machine seems to be able to run like this for a while, I use an external fan on it in order to cool it down.
-*   The precision and accuracy are truly impressive.
+- The machine is very slow. This is understandable because of its small size, but it can take forever (>4 hours) to make a simple model.
+- The software is terrible and Windows-only on top of that. Fortunately, it seems it can be used with Linux CNC drivers but I have not tested that yet. In the meantime, you will be happy to learn it is possible to paste from Inkscape into the software in order to mill more complex paths.
+- The router motor gets very hot and although the machine seems to be able to run like this for a while, I use an external fan on it in order to cool it down.
+- The precision and accuracy are truly impressive.

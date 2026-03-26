@@ -9,12 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=277
 date: 2009-07-17T15:30:44-04:00
 date_gmt: 2009-07-17T19:30:44-04:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Cracking
-- Mechanics
+  - Cracking
+  - Mechanics
 ---
+
 {% include "archive-banner.njk" %}
 
 ## The problem:
@@ -33,25 +34,25 @@ Since this requires precise positioning, I thought a servo motor would be the be
 
 ## The Materials:
 
-*   [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller")
-*   [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor")
-*   Male and female headers
-*   Power adaptor (4 to 6 VDC)
-*   Wire
-*   Heat shrink tubing
-*   [USB to Serial cable](http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm)
-*   2 gears and a spindle (one four times larger than the other, I got mine from an old photocopier)
-*   A project box (in my case, an old computer power supply case)
-*   A bottle cap and an old heat sink
-*   Steel wire (e.g. from an old coat hanger)
-*   Magnets (the stronger the better)
-*   Various screws
+- [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller")
+- [Hitec HS-425BB Servo Motor](http://www.robotshop.ca/Hitec-HS-425BB-Servo-Motor.html "Hitec HS-425BB Servo Motor")
+- Male and female headers
+- Power adaptor (4 to 6 VDC)
+- Wire
+- Heat shrink tubing
+- [USB to Serial cable](http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm)
+- 2 gears and a spindle (one four times larger than the other, I got mine from an old photocopier)
+- A project box (in my case, an old computer power supply case)
+- A bottle cap and an old heat sink
+- Steel wire (e.g. from an old coat hanger)
+- Magnets (the stronger the better)
+- Various screws
 
 ## Essential Tools
 
-*   Screwdrivers
-*   Rotary tool (Dremel)
-*   File
+- Screwdrivers
+- Rotary tool (Dremel)
+- File
 
 ## The How and the Why:
 

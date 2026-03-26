@@ -9,19 +9,20 @@ wordpress_url: http://carlitoscontraptions.com/?p=56
 date: 2008-06-28T17:14:00-04:00
 date_gmt: 2008-06-29T00:14:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Electronics
-- Craft
-- Ironman
+  - Electronics
+  - Craft
+  - Ironman
 ---
+
 {% include "archive-banner.njk" %}
 
 When I saw the new Iron Man movie, I instantly knew I had to build some part of the suit (I like to wear gadgets). Luckily for me, I found an old hard drive that had just the pieces I needed for building a repulsor-like LED flashlight.
 
 {% fig "ironman1.jpg", "" %}
 
-(This picture comes from [IDontLikeYouInThatWay.com](http://www.idontlikeyouinthatway.com/pictures/20080505/iron man premiere/big_ironman1.html))
+(This picture comes from [IDontLikeYouInThatWay.com](http://www.idontlikeyouinthatway.com/pictures/20080505/iron%20man%20premiere/big_ironman1.html))
 
 ## Objective
 
@@ -32,15 +33,15 @@ For those who have not guessed yet, this is what [I was building](http://carlito
 {% fig "ss851627.jpg", "" %}  
 Materials
 
-*   An old (aluminum) heat sink (from a broken computer monitor I believe)
-*   A long and thin aluminum piece from a copy machine
-*   A street cleaner brush bristle (like the one used to build a [Bogota Rake](http://carlitoscontraptions.com/2006/12/bogot-rake/ "Bogota Rake"))
-*   An aluminum disk and a thick aluminum ring (they were the holder and separator for the plates on a very old hard drive)
-*   6 [5 mm](http://alan-parekh.vstore.ca/product_info.php/cPath/4_6/products_id/14) and one [10 mm](http://alan-parekh.vstore.ca/product_info.php/cPath/4_9/products_id/36) ultra bright LEDs
-*   A linear potentiometer (from an old sound system equalizer)
-*   A switch
-*   An old laptop battery
-*   Some cable, some female and male headers, heat shrink tubing, a paperclip, a plastic cable tie, and lots of love.
+- An old (aluminum) heat sink (from a broken computer monitor I believe)
+- A long and thin aluminum piece from a copy machine
+- A street cleaner brush bristle (like the one used to build a [Bogota Rake](http://carlitoscontraptions.com/2006/12/bogot-rake/ "Bogota Rake"))
+- An aluminum disk and a thick aluminum ring (they were the holder and separator for the plates on a very old hard drive)
+- 6 [5 mm](http://alan-parekh.vstore.ca/product_info.php/cPath/4_6/products_id/14) and one [10 mm](http://alan-parekh.vstore.ca/product_info.php/cPath/4_9/products_id/36) ultra bright LEDs
+- A linear potentiometer (from an old sound system equalizer)
+- A switch
+- An old laptop battery
+- Some cable, some female and male headers, heat shrink tubing, a paperclip, a plastic cable tie, and lots of love.
 
 ## How to do it
 

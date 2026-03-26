@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=455
 date: 2009-12-11T02:30:45-05:00
 date_gmt: 2009-12-11T06:30:45-05:00
 categories:
-- Tools
+  - Tools
 tags:
-- Electronics
+  - Electronics
 ---
+
 {% include "archive-banner.njk" %}
 
 I just got a shiny new [Logic](http://www.saleae.com/logic/ "The Logic"), a tiny 8-channel, 24 MHz logic analyzer from [Saleae LLC](http://www.saleae.com/home/ "Saleae"), and it is beautiful. I've been wanting to get a logic analyzer for quite some time and this little guy is definitely worth the 150 bucks it costs.
@@ -37,7 +38,7 @@ The Logic has a nice square anodized aluminum body which makes it very sturdy an
 
 {% fig "/img/blog/i-got-logic/logic2.jpg", "Wires & Hooks" %}
 
-The Logic comes in a nice Logic Case, usually intended for some other electronics such as external hard drives I suppose, that can accommodate itself  and its USB cable, its set of wires and the E-Z-hook clips.
+The Logic comes in a nice Logic Case, usually intended for some other electronics such as external hard drives I suppose, that can accommodate itself and its USB cable, its set of wires and the E-Z-hook clips.
 
 What I enjoy the most is that the wires are robust and kink-proof, and they are terminated in female headers, which makes them very easy to use in breadboards and on male pins in general. Also, the hooks are removable and they can connect to harder-to-access pins in a secure way. The wire colour coding follows the resistor colour coding (i.e. Channel 0 is black, channel 1 is brown, etc) and this might be a bit confusing at the beginning since the Ground wire is grey instead of being the usual black.
 
@@ -45,7 +46,7 @@ Finally, the carrying case is a very nice feature since it allows you to have th
 
 ## Hardware
 
-I did not want to take the Logic apart in order to see its guts (so far) so I do not have too many details about the hardware other than what is listed in [Saleae's website](http://www.saleae.com/logic/features/ "Logic features"): (1)the inputs are protected to you don't fry anything, (2) it can sample at 24 MHz,  and (3) it is able to store up to 500 M samples.
+I did not want to take the Logic apart in order to see its guts (so far) so I do not have too many details about the hardware other than what is listed in [Saleae's website](http://www.saleae.com/logic/features/ "Logic features"): (1)the inputs are protected to you don't fry anything, (2) it can sample at 24 MHz, and (3) it is able to store up to 500 M samples.
 
 ## Software
 

@@ -8,9 +8,10 @@ id: 6
 date: 2006-09-15T12:32:00-04:00
 date_gmt: 2006-09-15T19:32:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 Based on a circuit I found in [this website](http://web.archive.org/web/20040215182109/http://www.electronics-lab.com/projects/pc/013/index.html "Wayback Machine Link"),  
@@ -18,11 +19,11 @@ I built a very simple thermometer. The major thing I added to the original desig
 
 ## Materials:
 
-*   1 Diode
-*   1 Thermistor
-*   1 Capacitor
-*   1 Serial cable (or plug)
-*   2 Plastic bottle caps (one slightly bigger than the other)
+- 1 Diode
+- 1 Thermistor
+- 1 Capacitor
+- 1 Serial cable (or plug)
+- 2 Plastic bottle caps (one slightly bigger than the other)
 
 ## The Circuit
 

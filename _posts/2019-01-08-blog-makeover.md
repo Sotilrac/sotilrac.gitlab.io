@@ -6,10 +6,11 @@ author: Carlos
 id: 143
 date: 2019-01-08T01:01:01-05:00
 categories:
-- News
+  - News
 tags:
-- web
+  - web
 ---
+
 After a five year hiatus, the blog is back, and emptier than ever.
 
 I ignored my blog for long enough and it got infested with Spam. The old WordPress posts database got injected with male enhancement links and generally mangled.

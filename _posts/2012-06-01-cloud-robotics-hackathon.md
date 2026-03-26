@@ -8,13 +8,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=1161
 date: 2012-06-01T19:44:22-04:00
 date_gmt: 2012-06-01T23:44:22-04:00
 categories:
-- My Projects
-- Robotics
-- News
+  - My Projects
+  - Robotics
+  - News
 tags:
-- Cloud Robotics
-- Hackathon
+  - Cloud Robotics
+  - Hackathon
 ---
+
 {% include "archive-banner.njk" %}
 
 Back in March we organized the first [Global Cloud Robotics Hackathon](http://roboticshackathon.com/). Along with co-organizer Sara Ahmadian, and all the local and global collaborators, we brought together around 200 people in eight locations around the world.

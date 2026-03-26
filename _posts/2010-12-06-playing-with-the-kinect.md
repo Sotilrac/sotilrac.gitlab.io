@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=770
 date: 2010-12-06T01:34:29-05:00
 date_gmt: 2010-12-06T05:34:29-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 When [Adafruit created a contest rewarding the first person that would create a Linux driver for the Kinect](http://www.adafruit.com/blog/2010/11/04/the-open-kinect-project-the-ok-prize-get-1000-bounty-for-kinect-for-xbox-360-open-source-drivers/), I immediately went out to get one of my own. At the time I had the foolish hope of being the first to hack it. This hope crashed into the ground when the [Kinect was hacked in three hours by an uber hacker](http://www.adafruit.com/blog/2010/11/10/we-have-a-winner-open-kinect-drivers-released-winner-will-use-3k-for-more-hacking-plus-an-additional-2k-goes-to-the-eff/).

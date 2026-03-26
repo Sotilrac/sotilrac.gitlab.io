@@ -6,11 +6,12 @@ author: Carlos
 id: 1554
 date: 2013-05-26T10:02:11-04:00
 categories:
-- General
+  - General
 tags:
-- M.Net
-- Cloud Robotics Hackathon
+  - M.Net
+  - Cloud Robotics Hackathon
 ---
+
 {% include "archive-banner.njk" %}
 
 Thanks to [M.Net](http://www.musiqueplus.com/emissions/m-net-1.950689) to welcome me once again to their show. This time, I had the pleasure of presenting the [Cloud Robotics Hackathon](http://roboticshackathon.com).

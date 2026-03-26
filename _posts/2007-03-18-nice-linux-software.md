@@ -7,12 +7,14 @@ id: 27
 date: 2007-03-18T14:43:00-04:00
 date_gmt: 2007-03-18T21:43:00-04:00
 categories:
-- Software
+  - Software
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
-## Amarok  
+## Amarok
+
 Forget about iTunes, and even Winamp. [Amarok](http://amarok.kde.org/) is the best music library organizer there is. I was a big fan of Winamp before, now Amarok is my player of choice.
 
 {% fig "amarok.png", "" %}
@@ -21,25 +23,28 @@ With Amarok, you can download album covers, lyrics, see songs related to the one
 
 {% fig "amarok2.png", "" %}
 
-## Inkscape  
+## Inkscape
 
 [Inkscape](http://www.inkscape.org/) is a free vector drawing program. It is full of features, allows you to create professional quality vector drawings and is really light. Really, amazing software.
 
 {% fig "inkscape.png", "" %}
 
-## OpenOffice.org  
+## OpenOffice.org
+
 [OO.o](http://www.openoffice.org/) is the office suite you always wanted. Imagine an office suite where all the features work as they should. Where you can apply styles to your text and be safe to think the program won't mess it up by applying the formatting it thinks is right. Where you can do "advanced" page numbering (e.g. numbering only some pages while leaving other pages unnumbered for instance) without having to spend lots of time getting it right (if you ever manage to get it right). OO.o is all that and more (that I have not discovered yet).
 
 {% fig "oo.o.png", "" %}
 
 For those wondering about M$ Office compatibility, I can say that Word compatibility is not that good, Powerpoint compatibility seems flawless, and I have not tried the rest.
 
-## Beagle  
+## Beagle
+
 [Beagle](http://beagle-project.org/Main_Page) allows you to index and search files on the computer. IMHO it is much better than Google desktop search. It searches inside almost every file type and even in rss feeds very fast.
 
 {% fig "beagle.png", "" %}
 
-## Automatix  
+## Automatix
+
 Although installing software on Ubuntu is quite easy (you simply select it in the package manager) some things may be slightly more tricky to install (such as nVidia drivers). [Automatix](http://www.getautomatix.com/) allows you to install all the most popular programs with very few clicks.
 
 {% fig "automarix.png", "" %}

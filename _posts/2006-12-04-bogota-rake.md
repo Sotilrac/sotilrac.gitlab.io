@@ -7,9 +7,10 @@ id: 16
 date: 2006-12-04T21:44:00-05:00
 date_gmt: 2006-12-05T04:44:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 A Bogotá rake is a very effective [lock picking](http://en.wikipedia.org/wiki/Lock_picking) tool (named after the city of its creation?). It is surprisingly easy to build and allows you to open lots of locks very quickly and easily. I have been able to open many locks just minutes after having this little tool done (including standard door and bicycle locks).
@@ -17,13 +18,13 @@ A Bogotá rake is a very effective [lock picking](http://en.wikipedia.org/wiki/L
 For this project you only need one [street sweeper](http://en.wikipedia.org/wiki/Street_cleaner) bristle. You can find these on the streets after a street sweeper passed by. Their rotating brushes leave behind these precious bristles.
 
 {% fig "bristle.jpg", "" %}  
-First you need a template. I found this very good one from [Exodus5000](http://www.lockpicking101.com/profile.php?mode=viewprofile&u=2273).  
+First you need a template. I found this very good one from [Exodus5000](http://www.lockpicking101.com/profile.php?mode=viewprofile&u=2273).
 
 {% fig "bogota template.jpg", "" %}
 
 You have to print it at its original size (@ 500 pixels/inch) onto a piece of paper, cut it using scissors or some other cutting device, and paste the paper using normal glue onto the bristle (after it has been cleaned of course). You should get something like this:
 
-{% fig "IMG_0018.jpg", "" %}  
+{% fig "IMG_0018.jpg", "" %}
 
 Then, using a permanent marker paint around it and remove the paper.
 

@@ -8,13 +8,14 @@ id: 54
 date: 2008-08-20T19:46:00-04:00
 date_gmt: 2008-08-21T02:46:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Electronics
-- Mechanics
-- Metal
-- Robot
+  - Electronics
+  - Mechanics
+  - Metal
+  - Robot
 ---
+
 {% include "archive-banner.njk" %}
 
 I was lucky enough to help my friend Stephen and his team to build a [lunar excavator](http://lunarex.mcgill.ca/) to participate in the [Regolith Excavation Challenge](http://regolith.csewi.org/), sponsored by NASA.

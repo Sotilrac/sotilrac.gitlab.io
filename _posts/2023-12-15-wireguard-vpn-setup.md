@@ -4,11 +4,12 @@ status: public
 title: WireGuard VPN Server Setup
 date: 2023-12-15T10:20:00-05:00
 categories:
-- TIL
+  - TIL
 tags:
-- linux
-- vpn
+  - linux
+  - vpn
 ---
+
 Quick WireGuard VPN server setup using [ansible-easy-vpn](https://github.com/notthebee/ansible-easy-vpn).
 
 ## Server

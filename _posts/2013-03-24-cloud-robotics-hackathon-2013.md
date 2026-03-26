@@ -8,12 +8,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=1588
 date: 2013-03-24T13:55:45-04:00
 date_gmt: 2013-03-24T17:55:45-04:00
 categories:
-- Robotics
-- News
+  - Robotics
+  - News
 tags:
-- Cloud Robotics
-- Hackathon
+  - Cloud Robotics
+  - Hackathon
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/cloud-robotics-hackathon-2013/cloud-robotics-hackathon-banner4.png", "Cloud Robotics Hackathon 2013" %}

@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=73
 date: 2009-03-30T13:31:00-04:00
 date_gmt: 2009-03-30T20:31:00-04:00
 categories:
-- Tools
-- My Projects
+  - Tools
+  - My Projects
 tags:
-- Mechanics
+  - Mechanics
 ---
+
 {% include "archive-banner.njk" %}
 
 For a long time now, I wanted to have a soldering fumes extractor. Until now I have been using a small fan but I wanted something more appropriate, something that would filter the fumes instead of just moving them away.
@@ -24,18 +25,18 @@ Some days ago, I decided I had to build a fumes extractor. I had a broken humidi
 
 ## Materials
 
-*   An old humidifier
-*   Some assorted crimp connectors
-*   Some zip ties
-*   A rubber band
-*   A two positions switch
+- An old humidifier
+- Some assorted crimp connectors
+- Some zip ties
+- A rubber band
+- A two positions switch
 
 ## Tools
 
-*   A set of files
-*   A hacksaw or rotary tool
-*   A drill
-*   A diagonal cutter
+- A set of files
+- A hacksaw or rotary tool
+- A drill
+- A diagonal cutter
 
 ## Getting it done
 

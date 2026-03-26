@@ -7,11 +7,12 @@ id: 75
 date: 2009-04-17T02:56:49-04:00
 date_gmt: 2009-04-17T06:56:49-04:00
 categories:
-- My Projects
-- Software
+  - My Projects
+  - Software
 tags:
-- Software
+  - Software
 ---
+
 {% include "archive-banner.njk" %}
 
 I recently moved my blog from Blogger to an independently hosted WordPress installation and I needed to dynamically redirect the visitors going into the old pages so that they could see the new ones.
@@ -29,16 +30,16 @@ Old address: _http://carlitoscontraptions.blogspot.com/2009/03/smoking-cyclops.h
 New address: _http://carlitoscontraptions.com/2009/03/smoking-cyclops/_
 
 ## The script:
+
 ```html
 <script type="text/javascript">
-function redirect()
-{
-	oldURL = document.URL;
-	oldURL = oldURL.replace(/.blogspot/, "");
-	oldURL = oldURL.replace(/.html/, "/");
-	window.location.href=oldURL;
-}
-window.setTimeout('redirect()',5000);
+  function redirect() {
+    oldURL = document.URL;
+    oldURL = oldURL.replace(/.blogspot/, "");
+    oldURL = oldURL.replace(/.html/, "/");
+    window.location.href = oldURL;
+  }
+  window.setTimeout("redirect()", 5000);
 </script>
 ```
 

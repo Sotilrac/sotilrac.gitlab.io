@@ -5,10 +5,11 @@ title: Blog Makeover, Take 2
 author: Carlos
 date: 2026-03-12T12:00:00-05:00
 categories:
-- News
+  - News
 tags:
-- web
+  - web
 ---
+
 After yet another five-year hiatus, the blog is back... again.
 
 Last time around, I migrated from a spam-infested WordPress to Jekyll and called it a day. This time, Jekyll itself started feeling like the old guard. Ruby dependencies, slow builds, and an ecosystem that hadn't quite kept up. So I did what any reasonable engineer would do: I ignored it for half a decade and then rewrote it in something else.

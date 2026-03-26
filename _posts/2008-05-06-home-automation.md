@@ -8,14 +8,16 @@ id: 46
 date: 2008-05-06T22:17:00-04:00
 date_gmt: 2008-05-07T05:17:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 Here is some information about a home automation system my team and I did some time ago. This was done for the Embedded Systems class and require two [Altera UP1](http://www.altera.com/literature/univ/univ.pdf) FPGA boards, two computers and two [USB-to-TTL](http://www.ftdichip.com/Products/EvaluationKits/TTL-232R.htm) wires.
 
 {% fig "/img/blog/home-automation/system+diagram.png", "" %}
+
 - The nice picture above was done by Frank (see below) -
 
 Although at the beginning of the project we were really motivated to do a robust and optimal design that could set an example on how to do home automation and that could be shared with everybody, the project quickly degenerated and the general design approach became: "We don't care of how inelegant, inefficient or completely surrealist the system is as long as it works". The main reason for this radical change was the implacable deadline that got closer and closer, and the usual lack of time Electrical Engineering students suffer from.

@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=215
 date: 2009-06-29T13:24:09-04:00
 date_gmt: 2009-06-29T17:24:09-04:00
 categories:
-- General
+  - General
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "www.rob", "RobotShop.com" %}
@@ -26,4 +27,4 @@ I am planning to use [Python](http://www.python.org/ "Python.org") for any progr
 
 As always, I am open to any suggestions or wishes regarding the projects.
 
-*Note*: the [RobotShop](http://www.robotshop.com/ "RobotShop.com") logo above is not published under the CC license.
+_Note_: the [RobotShop](http://www.robotshop.com/ "RobotShop.com") logo above is not published under the CC license.

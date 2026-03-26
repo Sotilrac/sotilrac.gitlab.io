@@ -8,11 +8,12 @@ id: 82
 date: 2009-09-07T11:50:50-04:00
 date_gmt: 2009-09-07T15:50:50-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Linux
-- Craft
+  - Linux
+  - Craft
 ---
+
 {% include "archive-banner.njk" %}
 
 The only defect of my new [Vostro 1320](http://carlitoscontraptions.com/2009/09/new-laptop/ "Vostro 1320") is that it did not come with a sleeve as the Eee PC does. Since I would like to protect the laptop from scratched and dust, a sleeve is absolutely required. So, from my perspective, the only solution to this problem was to do one myself.
@@ -23,9 +24,9 @@ I had an old blazer from my girlfriend's father that was too oddly shaped to fit
 
 ## Materials
 
-*   Old blazer
-*   Zipper
-*   Fabric Marker (not required but rather cool)
+- Old blazer
+- Zipper
+- Fabric Marker (not required but rather cool)
 
 ## Doing it
 

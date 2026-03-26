@@ -8,20 +8,23 @@ id: 33
 date: 2007-08-03T09:48:00-04:00
 date_gmt: 2007-08-03T16:48:00-04:00
 categories:
+
 - General
 - Arduino
-tags: []
+  tags: []
+
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "Arduino+package.jpg", "" %}
 
 For my birthday my girlfriend got me 4 Bare-Bone Boards (from the [Modern Devices Company](http://www.moderndevice.com/)). The boards are fully featured [Arduino](http://www.arduino.cc/) clones. The only difference with the original Arduino (AFAIK) is that they are cheaper (15$ each or less) and better suited for breadboard connection.
 
-## What's an Arduino?  
+## What's an Arduino?
 
 > Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments.
-> 
+>
 > \- [The Arduino Website](http://www.arduino.cc/) -
 
 {% fig "Arduino+parts.jpg", "" %}

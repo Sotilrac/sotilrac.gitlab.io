@@ -7,9 +7,10 @@ id: 23
 date: 2007-03-05T21:40:00-05:00
 date_gmt: 2007-03-06T04:40:00-05:00
 categories:
-- Projects
+  - Projects
 tags: DIY
 ---
+
 {% include "archive-banner.njk" %}
 
 **Update:** I have done an improved version: [the compact keychain 2.0](http://carlitoscontraptions.com/2009/03/compact-keychain-20/ "Compact Keychain 2.0").
@@ -18,9 +19,9 @@ This is a nice keychain I've been using for more than a year now. Since it broke
 
 ## Materials
 
-*   3 washers (number of keys + 1)
-*   Some keys (I use only two keys)
-*   A pop rivet (requires a river gun)
+- 3 washers (number of keys + 1)
+- Some keys (I use only two keys)
+- A pop rivet (requires a river gun)
 
 {% fig "keys.JPG", "" %}
 

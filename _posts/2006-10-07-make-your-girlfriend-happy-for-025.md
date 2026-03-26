@@ -7,23 +7,24 @@ id: 8
 date: 2006-10-07T22:33:00-04:00
 date_gmt: 2006-10-08T05:33:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 I saw in [this site](http://cleanstream.net/mirrors/coin_ring/) (try [this one](http://homepage.mac.com/johnhuber/CoinRing/PhotoAlbum20.html) if the link is broken) that we can build a coin ring using a spoon, a drill, a Dremel and some metal polish. Immediately, I wanted to do one.
 
-## Materials:  
+## Materials:
 
-*   An ordinary 0.25$ coin (Canadian in my case)
-*   Lots of patience
+- An ordinary 0.25$ coin (Canadian in my case)
+- Lots of patience
 
 {% fig "/img/blog/make-your-girlfriend-happy-for-025/img_1255.jpg", "Canadian Quarter" %}
 
-## Making it happen  
+## Making it happen
 
-*Warning*: your family and especially your dog could become agitated if you hit a coin with a spoon during an entire day.
+_Warning_: your family and especially your dog could become agitated if you hit a coin with a spoon during an entire day.
 
 I started by hitting my coin on its edge with a spoon. I used a small metal plate a found laying on the street as a rigid surface for the hitting. After about 2 hour of lots of hitting and almost no change I tried using a small hammer. It bended the coin faster but the results were a little deceiving. In the original site pictures, you see the inside of the coin bending uniformly outward., Instead I got flat edge and a smashed inside. After about two more hours of hitting I switch to a normal full-sized hammer.
 

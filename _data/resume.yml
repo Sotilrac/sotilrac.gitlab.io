@@ -3,230 +3,230 @@
 first_name: Carlos
 last_name: Asmat
 links:
-- title: asmat.ca
-  url: https://asmat.ca
-  icon: fa-globe
-- title: github.com/Sotilrac
-  url: https://github.com/Sotilrac
-  icon: fa-github
-- title: gitlab.com/sotilrac
-  url: https://gitlab.com/sotilrac
-  icon: fa-gitlab
-- title: linkedin.com/in/casmat
-  url: https://www.linkedin.com/in/casmat
-  icon: fa-linkedin
-- title: youtube.com/c/CarlosAsmat
-  url: https://youtube.com/c/CarlosAsmat
-  icon: fa-youtube
+  - title: asmat.ca
+    url: https://asmat.ca
+    icon: fa-globe
+  - title: github.com/Sotilrac
+    url: https://github.com/Sotilrac
+    icon: fa-github
+  - title: gitlab.com/sotilrac
+    url: https://gitlab.com/sotilrac
+    icon: fa-gitlab
+  - title: linkedin.com/in/casmat
+    url: https://www.linkedin.com/in/casmat
+    icon: fa-linkedin
+  - title: youtube.com/c/CarlosAsmat
+    url: https://youtube.com/c/CarlosAsmat
+    icon: fa-youtube
 phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"SOsRUJJzNoTOsu7uG+phkqqY5KXijw=="}'
 email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
 picture: https://www.gravatar.com/avatar/eff8d77644ef7532075a9060a62f8f60?s=200
 summary:
-- I'm an engineering leader specializing in robotics, embedded systems, and connected devices. My work spans humanoid robots, autonomous consumer robots, and wearable robotic platforms, always with a focus on delivering across the full product lifecycle, from early concept through commercial deployment.
-- Early in my career, I developed physical and verbal interactions for humanoid robots at Softbank Robotics, supporting high-profile public demonstrations that demanded robust real-world performance and intuitive human-robot interaction. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea stage into a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, then formed and grew the dedicated EE, software, and robotics teams. The product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system, evolving from an initial ROS-based prototype into a custom production platform.
-- Currently, I lead architecture and system integration for wearable robotic platforms at Dephy, where our exoskeleton product is now available to consumers. I've re-architected controller systems to enable scalable deployments, and designed telemetry and data infrastructure. I'm now working on the next generation platform in collaboration with Nike. I mentor engineers across firmware, hardware, and software, combining hands-on technical depth with structured system thinking, strong documentation practices, and translating complex robotics challenges into reliable, maintainable products.
+  - I'm an engineering leader specializing in robotics, embedded systems, and connected devices. My work spans humanoid robots, autonomous consumer robots, and wearable robotic platforms, always with a focus on delivering across the full product lifecycle, from early concept through commercial deployment.
+  - Early in my career, I developed physical and verbal interactions for humanoid robots at Softbank Robotics, supporting high-profile public demonstrations that demanded robust real-world performance and intuitive human-robot interaction. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea stage into a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, then formed and grew the dedicated EE, software, and robotics teams. The product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system, evolving from an initial ROS-based prototype into a custom production platform.
+  - Currently, I lead architecture and system integration for wearable robotic platforms at Dephy, where our exoskeleton product is now available to consumers. I've re-architected controller systems to enable scalable deployments, and designed telemetry and data infrastructure. I'm now working on the next generation platform in collaboration with Nike. I mentor engineers across firmware, hardware, and software, combining hands-on technical depth with structured system thinking, strong documentation practices, and translating complex robotics challenges into reliable, maintainable products.
 experience:
-- title: Connected Systems Engineering Manager
-  start_date: 01 / 2022
-  end_date: Present
-  location: Boxborough, MA
-  company: Dephy Inc.
-  description:
-  - item: Built and nurtured the Electrical Engineering team from the ground up.
-  - item: Fostered growth and development within the Software team.
-  - item: Architected and roadmapped the next-generation embedded controller.
-  - item: Maintained the legacy codebase, ensuring client needs were consistently met.
-- title: Software Engineering Lead
-  start_date: 10 / 2020
-  end_date: 01 / 2022
-  location: Maynard, MA
-  company: Dephy Inc.
-  description:
-  - item: Developed embedded software and cross-platform apps to cater to both internal and external clients.
-  - item: Implemented software development best practices, including regular code reviews and CI/CD integration.
-  - item: Evaluated the legacy C code, creating roadmaps to not only support existing contracts but also expand its functionality.
-- title: Lead Smart Systems Engineer
-  start_date: 11 / 2019
-  end_date: 10 / 2020
-  location: Boston, MA
-  company: smoodi
-  description:
-  - item: Led the industrialization of smart smoothie-vending machines.
-  - item: Developed the machine's intelligence and control software.
-  - item: Introduced IoT-based monitoring and control features.
-  - item: Oversaw the design of electrical and electronic systems.
-  - item: Seamlessly integrated mechanical, electrical, and software designs.
-- title: Lead Robot Software Engineer
-  start_date: 02 / 2017
-  end_date: 11 / 2019
-  location: Boston, MA
-  company: Piaggio Fast Forward
-  description:
-  - item: Led the Robotics Team, emphasizing integration and optimizing Gita for everyday use.
-  - item: Developed algorithms for visual people detection and tracking.
-  - item: Designed Gita's electronic system architecture, readying it for mass production.
-  - item: Contributed to the user-experience design process.
-  - item: Conducted demos and presentations for stakeholders.
-- title: Robot Software Engineer
-  start_date: 06 / 2016
-  end_date: 02 / 2017
-  location: Boston, MA
-  company: Piaggio Fast Forward
-  description:
-  - item: Assembled and led a team of electrical and software engineers.
-  - item: Crafted the software and electronic architecture for personal cargo robots, Gita and Kilo.
-  - item: Developed both low and high-level software architectures for autonomous personal robots.
-  - item: Assisted in shaping the interaction and user-experience design of personal robots.
-- title: Robot Software Engineer
-  start_date: 12 / 2013
-  end_date: 06 / 2016
-  location: Boston, MA
-  company: Aldebaran - Softbank Group
-  description:
-  - item: Crafted natural and engaging interactions for Pepper and NAO robots.
-  - item: Mentored and trained new team members.
-  - item: Conducted public demonstrations showcasing robot capabilities.
-  - item: Served as the regional technical lead, shaping the software development roadmap.
-- title: Co-Founder and Co-Organizer
-  start_date: 02 / 2012
-  end_date: 11 / 2013
-  location: Montreal, QC
-  company: Cloud Robotics Hackathon
-  description:
-  - item: Initiated an annual international cloud-robotics competition to foster robotic application development.
-  - item: Managed event logistics, provided technical expertise, and maintained online presence.
-  - item: Successfully hosted events for two consecutive years, attracting over 200 participants across seven global cities.
-- title: External Developer
-  start_date: 03 / 2011
-  end_date: 11 / 2013
-  location: Montreal, QC
-  company: Aldebaran Robotics Developers Program
-  description:
-  - item: Developed applications and autonomous behaviors for the NAO humanoid robot as part of an exclusive partnership program aimed at enhancing NAO's autonomy.
-- title: Project Engineer & Robotics Specialist
-  start_date: 01 / 2010
-  end_date: 11 / 2013
-  location: Mirabel, QC
-  company: RobotShop
-  description:
-  - item: Spearheaded various robotics projects.
-  - item: Offered technical consultations on electronic, electrical, and mechanical components.
-  - item: Pioneered the creation of the first social network for robots, enabling remote robotic equipment monitoring and control.
-  - item: Identified and onboarded new robotic products and suppliers for distribution.
-  - item: Authored blog posts on robotics and produced instructional videos.
-- title: Digital Design Engineer
-  start_date: 08 / 2009
-  end_date: 12 / 2009
-  location: Montreal, QC
-  company: CanSat International Inc
-  description:
-  - item: Designed and executed digital signal processing systems and modems using FPGA technology.
-  - item: Ensured systems met performance specifications.
-- title: Project Engineer
-  start_date: 04 / 2009
-  end_date: '04 / 2009 '
-  location: Montreal, QC
-  company: Panaxion
-  description:
-  - item: Contributed to the electrical and mechanical design of a paint application system.
-  - item: Supported the mechanical and software design of a paint blending device.
-- title: Surveying Field Professional
-  start_date: 09 / 2008
-  end_date: 11 / 2008
-  location: Boisbriand, QC
-  company: Group PHB
-  description:
-  - item: Adjusted aerial images for accuracy and appropriateness.
-  - item: Orchestrated aerial photographic and LiDAR topographical surveys.
-  - item: Operated Vexcel camera, Optec LiDAR, and high-precision GPS units across Quebec and in Lagos, Nigeria.
-  - item: Led a month-long survey mission in Nigeria.
-- title: Digital System Design Teaching Assistant
-  start_date: 07 / 2007
-  end_date: 12 / 2007
-  location: Montreal, QC
-  company: McGill University
-  description:
-  - item: Conducted two-hour tutorial sessions for groups of 40 students.
-  - item: Addressed queries and provided guidance on theoretical and hands-on digital system design challenges.
+  - title: Connected Systems Engineering Manager
+    start_date: 01 / 2022
+    end_date: Present
+    location: Boxborough, MA
+    company: Dephy Inc.
+    description:
+      - item: Built and nurtured the Electrical Engineering team from the ground up.
+      - item: Fostered growth and development within the Software team.
+      - item: Architected and roadmapped the next-generation embedded controller.
+      - item: Maintained the legacy codebase, ensuring client needs were consistently met.
+  - title: Software Engineering Lead
+    start_date: 10 / 2020
+    end_date: 01 / 2022
+    location: Maynard, MA
+    company: Dephy Inc.
+    description:
+      - item: Developed embedded software and cross-platform apps to cater to both internal and external clients.
+      - item: Implemented software development best practices, including regular code reviews and CI/CD integration.
+      - item: Evaluated the legacy C code, creating roadmaps to not only support existing contracts but also expand its functionality.
+  - title: Lead Smart Systems Engineer
+    start_date: 11 / 2019
+    end_date: 10 / 2020
+    location: Boston, MA
+    company: smoodi
+    description:
+      - item: Led the industrialization of smart smoothie-vending machines.
+      - item: Developed the machine's intelligence and control software.
+      - item: Introduced IoT-based monitoring and control features.
+      - item: Oversaw the design of electrical and electronic systems.
+      - item: Seamlessly integrated mechanical, electrical, and software designs.
+  - title: Lead Robot Software Engineer
+    start_date: 02 / 2017
+    end_date: 11 / 2019
+    location: Boston, MA
+    company: Piaggio Fast Forward
+    description:
+      - item: Led the Robotics Team, emphasizing integration and optimizing Gita for everyday use.
+      - item: Developed algorithms for visual people detection and tracking.
+      - item: Designed Gita's electronic system architecture, readying it for mass production.
+      - item: Contributed to the user-experience design process.
+      - item: Conducted demos and presentations for stakeholders.
+  - title: Robot Software Engineer
+    start_date: 06 / 2016
+    end_date: 02 / 2017
+    location: Boston, MA
+    company: Piaggio Fast Forward
+    description:
+      - item: Assembled and led a team of electrical and software engineers.
+      - item: Crafted the software and electronic architecture for personal cargo robots, Gita and Kilo.
+      - item: Developed both low and high-level software architectures for autonomous personal robots.
+      - item: Assisted in shaping the interaction and user-experience design of personal robots.
+  - title: Robot Software Engineer
+    start_date: 12 / 2013
+    end_date: 06 / 2016
+    location: Boston, MA
+    company: Aldebaran - Softbank Group
+    description:
+      - item: Crafted natural and engaging interactions for Pepper and NAO robots.
+      - item: Mentored and trained new team members.
+      - item: Conducted public demonstrations showcasing robot capabilities.
+      - item: Served as the regional technical lead, shaping the software development roadmap.
+  - title: Co-Founder and Co-Organizer
+    start_date: 02 / 2012
+    end_date: 11 / 2013
+    location: Montreal, QC
+    company: Cloud Robotics Hackathon
+    description:
+      - item: Initiated an annual international cloud-robotics competition to foster robotic application development.
+      - item: Managed event logistics, provided technical expertise, and maintained online presence.
+      - item: Successfully hosted events for two consecutive years, attracting over 200 participants across seven global cities.
+  - title: External Developer
+    start_date: 03 / 2011
+    end_date: 11 / 2013
+    location: Montreal, QC
+    company: Aldebaran Robotics Developers Program
+    description:
+      - item: Developed applications and autonomous behaviors for the NAO humanoid robot as part of an exclusive partnership program aimed at enhancing NAO's autonomy.
+  - title: Project Engineer & Robotics Specialist
+    start_date: 01 / 2010
+    end_date: 11 / 2013
+    location: Mirabel, QC
+    company: RobotShop
+    description:
+      - item: Spearheaded various robotics projects.
+      - item: Offered technical consultations on electronic, electrical, and mechanical components.
+      - item: Pioneered the creation of the first social network for robots, enabling remote robotic equipment monitoring and control.
+      - item: Identified and onboarded new robotic products and suppliers for distribution.
+      - item: Authored blog posts on robotics and produced instructional videos.
+  - title: Digital Design Engineer
+    start_date: 08 / 2009
+    end_date: 12 / 2009
+    location: Montreal, QC
+    company: CanSat International Inc
+    description:
+      - item: Designed and executed digital signal processing systems and modems using FPGA technology.
+      - item: Ensured systems met performance specifications.
+  - title: Project Engineer
+    start_date: 04 / 2009
+    end_date: "04 / 2009 "
+    location: Montreal, QC
+    company: Panaxion
+    description:
+      - item: Contributed to the electrical and mechanical design of a paint application system.
+      - item: Supported the mechanical and software design of a paint blending device.
+  - title: Surveying Field Professional
+    start_date: 09 / 2008
+    end_date: 11 / 2008
+    location: Boisbriand, QC
+    company: Group PHB
+    description:
+      - item: Adjusted aerial images for accuracy and appropriateness.
+      - item: Orchestrated aerial photographic and LiDAR topographical surveys.
+      - item: Operated Vexcel camera, Optec LiDAR, and high-precision GPS units across Quebec and in Lagos, Nigeria.
+      - item: Led a month-long survey mission in Nigeria.
+  - title: Digital System Design Teaching Assistant
+    start_date: 07 / 2007
+    end_date: 12 / 2007
+    location: Montreal, QC
+    company: McGill University
+    description:
+      - item: Conducted two-hour tutorial sessions for groups of 40 students.
+      - item: Addressed queries and provided guidance on theoretical and hands-on digital system design challenges.
 skills:
   languages:
-  - English
-  - French
-  - Spanish
+    - English
+    - French
+    - Spanish
   tools:
-  - Git · SSH · Bash/Fish
-  - Linux · Android
-  - Gimp · Inkscape
-  - Blender · OnShape · Solidworks
-  - KiCAD · Altium
-  - Mathematica · Matlab
+    - Git · SSH · Bash/Fish
+    - Linux · Android
+    - Gimp · Inkscape
+    - Blender · OnShape · Solidworks
+    - KiCAD · Altium
+    - Mathematica · Matlab
   programming:
-  - C/C++ · Python
-  - Qt · Flutter
-  - ROS · OpenCV
-  - ARM · Arduino · RPi · Beaglebone 
-  - HTML · CSS · JavaScript
+    - C/C++ · Python
+    - Qt · Flutter
+    - ROS · OpenCV
+    - ARM · Arduino · RPi · Beaglebone
+    - HTML · CSS · JavaScript
   soft:
-  - Hiring · Mentoring
-  - Leading · Managing
-  - Presenting · Communication
-  - Strategy · Planning · Scheduling
-  - Cross-functional Collaboration
+    - Hiring · Mentoring
+    - Leading · Managing
+    - Presenting · Communication
+    - Strategy · Planning · Scheduling
+    - Cross-functional Collaboration
 education:
-- institution: Udacity
-  start_date: '2018'
-  end_date: '2018'
-  degree:
-  - item: Self-Driving Nanodegree
-- institution: University of Pennsylvania
-  start_date: '2013'
-  end_date: '2013'
-  degree:
-  - item: Gamification
-- institution: Stanford University
-  start_date: '2011'
-  end_date: '2011'
-  degree:
-  - item: Machine Learning
-  - item: Introduction to Artificial Intelligence
-- institution: McGill University
-  start_date: '2004'
-  end_date: '2008'
-  degree:
-  - item: Bachelor's degree in Electrical  Engineering - Control & Automation / Power
+  - institution: Udacity
+    start_date: "2018"
+    end_date: "2018"
+    degree:
+      - item: Self-Driving Nanodegree
+  - institution: University of Pennsylvania
+    start_date: "2013"
+    end_date: "2013"
+    degree:
+      - item: Gamification
+  - institution: Stanford University
+    start_date: "2011"
+    end_date: "2011"
+    degree:
+      - item: Machine Learning
+      - item: Introduction to Artificial Intelligence
+  - institution: McGill University
+    start_date: "2004"
+    end_date: "2008"
+    degree:
+      - item: Bachelor's degree in Electrical  Engineering - Control & Automation / Power
 projects:
-- name: Love Lantern
-  start_date: 12 / 2019
-  description:
-  - Developed a pair of IoT lanterns using Amazon AWS and ESP32. When one lantern is touched, the other lights up, aiming to bridge the gap in long-distance relationships.
-- name: Portfolio Builder
-  start_date: 01 / 2018
-  description:
-  - Crafted a static site generator using Ruby, HTML, CSS, and JS. This tool arranges the content of this resume and populates my personal website, asmat.ca.
-- name: Nao Mind Control
-  start_date: 09 / 2012
-  description:
-  - Designed a behavior for the Nao robot that interfaces with the Neurosky MindWave Sensor, enabling users to control the robot using their thoughts. Showcased at New York Maker Faire 2012.
-- name: Nao Rock Paper Scissors Lizard Spock
-  start_date: 08 / 2011
-  description:
-  - Programmed Nao to play the expanded version of Rock Paper Scissors. The robot interacted with both children and adults at Maker Faire NY 2011, requiring minimal human intervention.
-- name: International Cooperation Trip to Ecuador
-  start_date: 01 / 2010
-  description:
-  - Led a team of CEGEP IB students on a mission to Ecuador.
-  - Constructed and installed a wind power generator in an indigenous Ecuadorian community.
-  - Assembled and set up a solar water heater for a local school.
-- name: McGill Autonomous Robotics Team
-  start_date: 04 / 2008
-  description:
-  - Served as an external technical consultant.
-  - Engineered a low-level control system for MARTy, McGill's Autonomous Underwater Vehicle (AUV).
-- name: McGill University Lunar Excavator Team
-  start_date: 07 / 2008
-  description:
-  - Unified the excavator's controllers and sensors onto a single circuit board.
-- name: Virtual EIM
-  start_date: 07 / 2001
-  description:
-  - Developed an interactive 3D representation of my high school using the Half-Life 3D engine.
+  - name: Love Lantern
+    start_date: 12 / 2019
+    description:
+      - Developed a pair of IoT lanterns using Amazon AWS and ESP32. When one lantern is touched, the other lights up, aiming to bridge the gap in long-distance relationships.
+  - name: Portfolio Builder
+    start_date: 01 / 2018
+    description:
+      - Crafted a static site generator using Ruby, HTML, CSS, and JS. This tool arranges the content of this resume and populates my personal website, asmat.ca.
+  - name: Nao Mind Control
+    start_date: 09 / 2012
+    description:
+      - Designed a behavior for the Nao robot that interfaces with the Neurosky MindWave Sensor, enabling users to control the robot using their thoughts. Showcased at New York Maker Faire 2012.
+  - name: Nao Rock Paper Scissors Lizard Spock
+    start_date: 08 / 2011
+    description:
+      - Programmed Nao to play the expanded version of Rock Paper Scissors. The robot interacted with both children and adults at Maker Faire NY 2011, requiring minimal human intervention.
+  - name: International Cooperation Trip to Ecuador
+    start_date: 01 / 2010
+    description:
+      - Led a team of CEGEP IB students on a mission to Ecuador.
+      - Constructed and installed a wind power generator in an indigenous Ecuadorian community.
+      - Assembled and set up a solar water heater for a local school.
+  - name: McGill Autonomous Robotics Team
+    start_date: 04 / 2008
+    description:
+      - Served as an external technical consultant.
+      - Engineered a low-level control system for MARTy, McGill's Autonomous Underwater Vehicle (AUV).
+  - name: McGill University Lunar Excavator Team
+    start_date: 07 / 2008
+    description:
+      - Unified the excavator's controllers and sensors onto a single circuit board.
+  - name: Virtual EIM
+    start_date: 07 / 2001
+    description:
+      - Developed an interactive 3D representation of my high school using the Half-Life 3D engine.

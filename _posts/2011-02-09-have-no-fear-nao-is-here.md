@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=828
 date: 2011-02-09T00:34:21-05:00
 date_gmt: 2011-02-09T04:34:21-05:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Developer Program
-- Aldebaran
+  - Nao
+  - Developer Program
+  - Aldebaran
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "carlitoscontraptions.com", "Nao 1337 Waves" %}

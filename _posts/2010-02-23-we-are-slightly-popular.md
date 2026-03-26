@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=519
 date: 2010-02-23T21:48:56-05:00
 date_gmt: 2010-02-24T01:48:56-05:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- International Cooperation
+  - International Cooperation
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/we-are-slightly-popular/img_1002.jpg", "The IB + Engineer in Ecuador" %}

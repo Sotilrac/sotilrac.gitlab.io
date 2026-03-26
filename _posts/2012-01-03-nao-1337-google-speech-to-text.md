@@ -9,20 +9,21 @@ wordpress_url: http://carlitoscontraptions.com/?p=1125
 date: 2012-01-03T01:01:13-05:00
 date_gmt: 2012-01-03T05:01:13-05:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Aldebaran
-- Speech Recognition
+  - Nao
+  - Aldebaran
+  - Speech Recognition
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-1337-google-speech-to-text/google-chrome-speech-to-text.png", "Google Chrome Speech-to-Text" %}
 
 I created a behaviour for Nao that used the same speech-to-text services found in Android devices and google chrome to translate spoken words into text. It works better than the standard speech recognition engine and can be used for many more things. I'm eager to see what other Nao developers do with it.
 
-See a quick demo of the speech recognition:  
+See a quick demo of the speech recognition:
 
 {% youtube "lb2usV4vGWU" %}
 

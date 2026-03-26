@@ -7,18 +7,19 @@ id: 17
 date: 2006-12-05T23:30:00-05:00
 date_gmt: 2006-12-06T06:30:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 I built this quick laptop lamp some time ago for my mom. It is very simple and requires very few materials.
 
 ## Materials
 
-*   1 type A male [USB](http://en.wikipedia.org/wiki/USB) plug
-*   1 light bulb (that works well at around 5V)
-*   1 lamp body (I found mine in the garbage)
+- 1 type A male [USB](http://en.wikipedia.org/wiki/USB) plug
+- 1 light bulb (that works well at around 5V)
+- 1 lamp body (I found mine in the garbage)
 
 First, I thoroughly cleaned, sanded, and polished the lamp body (which comes from a sort of old reading lamp).
 

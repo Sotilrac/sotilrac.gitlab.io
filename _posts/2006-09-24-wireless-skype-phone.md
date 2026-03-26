@@ -8,9 +8,10 @@ id: 7
 date: 2006-09-24T23:01:00-04:00
 date_gmt: 2006-09-25T06:01:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 At first, I saw on [this site](http://www.grynx.com/index.php/projects/siemens-skype/) someone who modified his wireless phone in order to connect it to his computer, transforming it in a wireless speaker and microphone. I thought it was kind of cruel to modify a working phone that way.
@@ -25,12 +26,12 @@ In order to achieve this goal, I hard wired the voice inputs and outputs of the 
 
 {% fig "2498_full.jpg", "" %}Materials:
 
-*   1 cordless phone (mine is a [VTech 2428](http://www.vtechcanada.com/en/products/24/data/vt2498.htm))
-*   2 3.5mm plugs (headphone plugs)
-*   1 switch
-*   1 screw
-*   1 washer
-*   some cables
+- 1 cordless phone (mine is a [VTech 2428](http://www.vtechcanada.com/en/products/24/data/vt2498.htm))
+- 2 3.5mm plugs (headphone plugs)
+- 1 switch
+- 1 screw
+- 1 washer
+- some cables
 
 ## Getting it done
 

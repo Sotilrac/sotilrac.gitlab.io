@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=64
 date: 2008-12-16T21:09:00-05:00
 date_gmt: 2008-12-17T04:09:00-05:00
 categories:
-- General
-- Tools
+  - General
+  - Tools
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 I finally cleaned up my basement/workshop and put some order into my tools and materials. My main source for materials in general is the garbage as the faithful readers may already know. Too bad I was too late for the [Hacked Gadgets Workbench Contest](http://hackedgadgets.com/2008/11/16/hacked-gadgets-workbench-contest-winner/).

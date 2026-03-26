@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=67
 date: 2009-01-02T11:23:00-05:00
 date_gmt: 2009-01-02T18:23:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Craft
+  - Craft
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/bunk-bedside-table/img_1092.jpg", "" %}
@@ -20,16 +21,17 @@ tags:
 I built a bedside table for bunk beds from a pile of wood I found in the garbage and some flat nylon rope.
 
 ## The Main Goal
+
 I wanted to build a bedside table for the top bed on a bunk bed but I did not want it to become a head-banging hazard for those sleeping under it. So the table has to be rigid as seen from the top and mobile for those under it. My solution: a folding bedside table.
 
 ## The Materials
 
-*   Wood (six 6.8 cm  x 60 cm pieces)
-*   Flat nylon rope
-*   Three cabinet-door stoppers
-*   Three bolts with nuts
-*   Staples
-*   Varnish
+- Wood (six 6.8 cm x 60 cm pieces)
+- Flat nylon rope
+- Three cabinet-door stoppers
+- Three bolts with nuts
+- Staples
+- Varnish
 
 ## Putting it Together
 

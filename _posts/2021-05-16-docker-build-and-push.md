@@ -4,10 +4,11 @@ status: public
 title: Docker Build and Push to DockerHub
 date: 2021-05-16T17:16:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- docker
+  - docker
 ---
+
 Building a Docker image from a Dockerfile and pushing it to DockerHub:
 
 ```bash

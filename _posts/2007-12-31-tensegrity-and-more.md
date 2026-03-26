@@ -8,9 +8,10 @@ id: 41
 date: 2007-12-31T02:14:00-05:00
 date_gmt: 2007-12-31T09:14:00-05:00
 categories:
-- General
+  - General
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 Based on the [DIY Ornaments Weekend Projects Podcast](http://blog.makezine.com/archive/2007/12/make_diy_ornaments_weeken.html?CMP=OTC-0D6B48984890) my brother and I did some [tensegrity](http://en.wikipedia.org/wiki/Tensegrity) and paper structures.

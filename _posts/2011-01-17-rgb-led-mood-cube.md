@@ -9,14 +9,15 @@ wordpress_url: http://carlitoscontraptions.com/?p=795
 date: 2011-01-17T01:16:40-05:00
 date_gmt: 2011-01-17T05:16:40-05:00
 categories:
-- My Projects
-- Arduino
+  - My Projects
+  - Arduino
 tags:
-- Carlitos' Project
-- Arduino
-- Rainbowduino
-- RGB LED
+  - Carlitos' Project
+  - Arduino
+  - Rainbowduino
+  - RGB LED
 ---
+
 {% include "archive-banner.njk" %}
 
 As the first [Carlitos' Project](http://carlitoscontraptions.com/tag/carlitos-project/), I put together a 4x4x4 RGB LED Mood Cube. This cube is composed of 64 RGB LEDs that can generate any colour you can imagine.

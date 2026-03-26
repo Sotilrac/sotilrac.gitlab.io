@@ -8,13 +8,14 @@ id: 84
 date: 2009-10-04T21:55:03-04:00
 date_gmt: 2009-10-05T01:55:03-04:00
 categories:
-- My Projects
-- Software
-- Robotics
+  - My Projects
+  - Software
+  - Robotics
 tags:
-- Software
-- Photography
+  - Software
+  - Photography
 ---
+
 {% include "archive-banner.njk" %}
 
 As [promised before](http://carlitoscontraptions.com/2009/09/panoramic-camera-prototype/ "Panoramic Camera Prototype"), here is the Python script that runs my [panoramic camera hardware](http://carlitoscontraptions.com/2009/09/panoramic-camera-prototype/ "Panoramic Camera Prototype"). It is a very quick prototype and is by no means intended for widespread use since it requires manual calibration. Nevertheless, it might be very useful to those seeking to learn how to position the servos or control a digital camera through Python.

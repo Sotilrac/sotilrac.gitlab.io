@@ -7,9 +7,10 @@ id: 4
 date: 2006-09-05T20:05:00-04:00
 date_gmt: 2006-09-06T03:05:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 A Van de Graff generator (named after its inventor) is a high voltage generator. It basically loads a spherical hollow conductor with static charges which brings the conductor to a very high (or very low) potential. In other words, it is the metal sphere on a vertical tube that makes your hair raise when you touch it. For more info on this, please consult this [Wikipedia article](http://en.wikipedia.org/wiki/Van_de_Graaff_generator).
@@ -19,6 +20,7 @@ A Van de Graff generator (named after its inventor) is a high voltage generator.
 Inspired by many web sites ([1](http://web.singnet.com.sg/%7Esengam/construction.htm) [2](http://scitoys.com/scitoys/scitoys/electro/electro6.html) [3](http://web.archive.org/web/20041026074140/http://www.angelfire.com/ak/egel/vande.html) [4](http://jnaudin.free.fr/html/jlnvdg.htm) [5](http://amasci.com/emotor/vdg.html#plns)), I decided to build my own Van de Graaff generator. It will not raise your hair but it is fun, easy to build, and very cheap. Also it doesn't require any glue (I always try to avoid glue).
 
 ## Materials
+
 - A soft drink can.
 - A Gatorade bottle (or any bottle that, at some point, has a bigger diameter than the can's diameter).
 - A small piece of tubing (PBC if you're fancy or just a cardboard roll from aluminium foil).
@@ -89,12 +91,12 @@ If you're unlucky and your motor's casing is broken, build a new case around it 
 1. Attach the comb end of the shortest wire to the top of the tube with a rubber band (I know, I should have found a better way to attach it. Anyways, it turns out to be very robust). The comb should gently caress the rubber band.
 1. Insert the can and make sure the other end of the wire makes a good contact with it.
 1. Pull the rubber band from the bottom of the tube so it hangs between the motor shaft and the nail. I think the motor shaft should be insulated but mine is not and it works perfectly well.
-{% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-inside.jpg", "" %}
+   {% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-inside.jpg", "" %}
 1. Pass the other comb end wire through the remaining hole (5mm one at the bottom) so it caresses (lots of caressing going on) the bottom of the rubber band. Fasten the wire to the base with a piece of plastic and some screws, for instance.
-{% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-front-close-up.jpg", "" %}
+   {% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-front-close-up.jpg", "" %}
 1. Add a switch, a power source (you can case the switch with a plastic bottle cap).
 1. Voila! It's done (you'll have to tinker with it until everything works fine, but that shouldn't be too hard).
-{% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-off.0.jpg", "" %}
+   {% fig "/img/blog/cheap-van-de-graaff-generator/van-de-graaff-off.0.jpg", "" %}
 
 Now enjoy your Van de Graaff generator (try putting some tissue strips or small strings on it and turning it on).
 

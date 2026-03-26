@@ -4,10 +4,11 @@ status: public
 title: Unfreeze a Stuck SSH Terminal
 date: 2021-12-08T18:38:00-05:00
 categories:
-- TIL
+  - TIL
 tags:
-- ssh
+  - ssh
 ---
+
 When an SSH session hangs (network drop, server reboot), the terminal appears frozen. To kill it, type this escape sequence:
 
 `Enter`, `~`, `.`

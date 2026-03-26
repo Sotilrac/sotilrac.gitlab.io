@@ -4,10 +4,11 @@ status: public
 title: Useful ADB Commands
 date: 2023-09-02T00:55:00-04:00
 categories:
-- TIL
+  - TIL
 tags:
-- android
+  - android
 ---
+
 A couple of handy ADB commands:
 
 ```bash

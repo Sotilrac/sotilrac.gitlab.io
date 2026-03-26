@@ -8,9 +8,10 @@ id: 39
 date: 2007-12-24T00:39:00-05:00
 date_gmt: 2007-12-24T07:39:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 What to do when a young child listens to very loud music on his headphones?
@@ -34,11 +35,11 @@ Since I am a bit short on time (it must be done for Christmas) and since I think
 {% fig "materials.jpg", "" %}  
 This little project requires very few materials:
 
-*   A couple of resistors. Their value depends on the headphone's impedance.
-*   An old lipstick for the casing
-*   A piece of perf board. Not really required but helps to make it more robust (it's going to be used by a child, so it must be sturdy)
-*   A jack plug and a jack socket.
-*   A piece of wire.
+- A couple of resistors. Their value depends on the headphone's impedance.
+- An old lipstick for the casing
+- A piece of perf board. Not really required but helps to make it more robust (it's going to be used by a child, so it must be sturdy)
+- A jack plug and a jack socket.
+- A piece of wire.
 
 ## Construction
 

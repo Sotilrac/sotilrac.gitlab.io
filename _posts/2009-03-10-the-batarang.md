@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=70
 date: 2009-03-10T18:58:00-04:00
 date_gmt: 2009-03-11T01:58:00-04:00
 categories:
-- My Projects
+  - My Projects
 tags:
-- Metal
-- Craft
+  - Metal
+  - Craft
 ---
+
 {% include "archive-banner.njk" %}
 
 I always wanted to have a batarang since I have always liked Batman a lot. So, I decided to build one now that they have become much simpler than before in the latest Batman films.
@@ -22,18 +23,18 @@ I always wanted to have a batarang since I have always liked Batman a lot. So, I
 
 ## Materials
 
-*   A chunk of steel
+- A chunk of steel
 
 ## The tools I used
 
-*   Various files
-*   A Jigsaw
-*   A hacksaw
-*   A Dremel with a heavy duty cutting blade
-*   A grinder
-*   A sharpening stone
-*   Various grit sandpaper
-*   A steel wool sponge
+- Various files
+- A Jigsaw
+- A hacksaw
+- A Dremel with a heavy duty cutting blade
+- A grinder
+- A sharpening stone
+- Various grit sandpaper
+- A steel wool sponge
 
 I used the pattern below, extracted from a film poster (or something like that) and obtained by accentuating the contrast and cutting off colours until the shape was clean enough. I printed it so it measures around 3.5 cm by 12 cm.
 

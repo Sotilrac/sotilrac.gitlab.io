@@ -9,11 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=873
 date: 2011-03-12T10:53:57-05:00
 date_gmt: 2011-03-12T14:53:57-05:00
 categories:
-- News
+  - News
 tags:
-- Nao
-- Geekfest
+  - Nao
+  - Geekfest
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-montreal-geekfest-2011/img_0287.jpg", "Carlos, Alan and Nao 1337 at the Geekfest" %}
@@ -34,8 +35,8 @@ As you can see towards the end of the video above, Nao 1337 can perform a very c
 
 The Geekfest was a lot of fun, you can see some more pictures of Carlitos' Contraptions at the Geekfest here:
 
-*   [Magicol Media](http://www.magicolmedia.com/?p=11566)
-*   [Geekfestmtl Flickr Pool](http://www.flickr.com/groups/geekfestmtl/pool/)
-*   [Branchez-vous](http://www.branchez-vous.com/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html)
+- [Magicol Media](http://www.magicolmedia.com/?p=11566)
+- [Geekfestmtl Flickr Pool](http://www.flickr.com/groups/geekfestmtl/pool/)
+- [Branchez-vous](http://www.branchez-vous.com/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html)
 
 {% gallery 4, "/img/blog/nao-montreal-geekfest-2011/IMG_0287.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0270.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0269.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0268.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0267.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0266.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0264.jpg", "/img/blog/nao-montreal-geekfest-2011/IMG_0263.jpg" %}

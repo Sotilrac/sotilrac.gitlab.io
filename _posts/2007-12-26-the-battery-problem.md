@@ -8,14 +8,15 @@ id: 40
 date: 2007-12-26T21:20:00-05:00
 date_gmt: 2007-12-27T04:20:00-05:00
 categories:
-- My Projects
+  - My Projects
 tags: []
 ---
+
 {% include "archive-banner.njk" %}
 
 {% fig "ss850292.jpg", "" %}
 
-Many devices require batteries but do not absolutely require to be absolutely portable. Since batteries are expensive and don't last for very long, 
+Many devices require batteries but do not absolutely require to be absolutely portable. Since batteries are expensive and don't last for very long,
 it could be a would idea to add a wall power adapter connector to such devices. This would allow you to use the electricity from the mains to power a usually battery powered device.
 
 I did precisely that to my new Air Hog helicopter I got for Christmas (I now, I'm a bit old for toys, but although I did not ask for it, I'm got I got it ). This small helicopter is lots of fun, but batteries (at least the rechargeable alkaline I use) last for about two flights (the helicopter must be charges by the remote in order to be able to fly for about 20 minutes).

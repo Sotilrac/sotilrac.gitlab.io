@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=1116
 date: 2011-12-23T04:03:46-05:00
 date_gmt: 2011-12-23T08:03:46-05:00
 categories:
-- My Projects
-- Robotics
+  - My Projects
+  - Robotics
 tags:
-- Nao
-- Aldebaran
-- MyRobots.com
+  - Nao
+  - Aldebaran
+  - MyRobots.com
 ---
+
 {% include "archive-banner.njk" %}
 
 For close to a year now I have been working on a Cloud Robotics project called [MyRobots.com](http://www.myrobots.com/) along with RobotShop.
@@ -25,9 +26,9 @@ For close to a year now I have been working on a Cloud Robotics project called [
 We finally released it on the December the 20th and so far it has been a huge success in popularity! See the press coverage [here](http://www.myrobots.com/wiki/Press). [MyRobots.com](http://www.myrobots.com/) is a social network for robots where they can interact and collaborate.
 
 > MyRobots.com aims to connect all robots and intelligent devices to the Internet. In doing so we augment their capabilities enabling them to be remotely monitored and controlled. We strive to make [cloud robotics](http://www.myrobots.com/wiki/FAQ#What_is_Cloud_Robotics.3F "FAQ") a reality accessible to everyone and everything.
-> 
+>
 > You can think of MyRobots as a social network for robots and smart objects. In other words, the Facebook for robots. In the same way humans benefit from socializing, collaborating and sharing, robots can benefit from those interactions too by sharing their sensor information giving insight on their perspective of their current state.
-> 
+>
 > \- [MyRobots.com - About](http://www.myrobots.com/wiki/About)
 
 All robot and smart devices can be supported by the site since it uses an open API for communication. If you have a Nao, you can use this behaviour in order to get it connected: [NaoMonitor](http://developer.aldebaran-robotics.com/projects/nao-monitoring/) You can find more information on how to get your Nao connected [here](http://www.myrobots.com/wiki/Aldebaran_Nao).

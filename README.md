@@ -36,6 +36,23 @@ npm run build    # production build to _site/
 └── llms.txt              # LLM-readable site summary and license
 ```
 
+## Linting & Formatting
+
+[Prettier](https://prettier.io/) handles autoformatting for Markdown, JSON, YAML, CSS, and JS. [Lefthook](https://lefthook.dev/) runs checks automatically as a pre-commit hook.
+
+```bash
+npm run lint       # check formatting (CI runs this)
+npm run lint:fix   # auto-fix formatting
+```
+
+Pre-commit hooks are installed automatically via `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook will:
+
+- Run Prettier on `md, json, yml, yaml, css, mjs, js` files
+- Trim trailing whitespace in `njk, txt, sh` files
+- Ensure all files end with a newline
+
+An `.editorconfig` is included so most editors enforce the same rules (LF line endings, 2-space indent, trim trailing whitespace, final newline).
+
 ## Resume
 
 The resume is rendered from `_data/resume.yml`. Edit that file to update experience, skills, education, or projects — the site rebuilds automatically.

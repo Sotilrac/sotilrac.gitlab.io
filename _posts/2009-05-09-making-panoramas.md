@@ -9,13 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=169
 date: 2009-05-09T20:34:06-04:00
 date_gmt: 2009-05-10T00:34:06-04:00
 categories:
-- My Projects
-- Work in progress
-- Software
-- Info
+  - My Projects
+  - Work in progress
+  - Software
+  - Info
 tags:
-- Photography
+  - Photography
 ---
+
 {% include "archive-banner.njk" %}
 
 In my trip to San Francisco, I had the chance to see many beautiful things. And I wanted to be able to remember them and show them to my friends and family.
@@ -26,11 +27,11 @@ Besides taking simple photos, sometimes you need a wider view- angle to really c
 
 Many people believe this is a very difficult procedure and that the results are never as good as expected, and they are partially correct. In order to get a nice looking panoramic picture that will align and stitch together correctly you need to follow some rules:
 
-*   Make sure that contiguous pictures have a good 30% overlap between them.
-*   Make sure the overlapping areas contain some hard object, like a building. If they overlap only over the sky or some water, then the stitching together will be more difficult.
-*   Make sure you follow a simple pattern when shooting the photos. Follow a horizontal line, for instance, and shoot the pictures in order. Also, if you're making a taller panorama, I suggest you shoot many horizontal lines that will stack up together. This will make things easier when recognizing which photos to stitch together.
-*   Make sure all the pictures have a similar exposure. This should be no problem if you are shooting your pictures all at once.
-*   Make sure your subject is always on the same focal plane. You can have many focal planes but it will make the stitching more difficult.
+- Make sure that contiguous pictures have a good 30% overlap between them.
+- Make sure the overlapping areas contain some hard object, like a building. If they overlap only over the sky or some water, then the stitching together will be more difficult.
+- Make sure you follow a simple pattern when shooting the photos. Follow a horizontal line, for instance, and shoot the pictures in order. Also, if you're making a taller panorama, I suggest you shoot many horizontal lines that will stack up together. This will make things easier when recognizing which photos to stitch together.
+- Make sure all the pictures have a similar exposure. This should be no problem if you are shooting your pictures all at once.
+- Make sure your subject is always on the same focal plane. You can have many focal planes but it will make the stitching more difficult.
 
 Once you have shot all the pictures you can start the stitching. In order to do so, you can use an excellent software package called [Hugin](http://hugin.sourceforge.net/ "Hugin - Panorama photo stitcher"). Of course since I'm using it, Hugin is open source and (thus) cross-platform. It is a very intuitive program to use and since there are many [good tutorials](http://hugin.sourceforge.net/tutorials/index.shtml "Hugin tutorials") about it, I won't be outlining the instructions on how to use it.
 
