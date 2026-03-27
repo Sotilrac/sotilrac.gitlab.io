@@ -101,7 +101,7 @@ Also, the mounting holes were drilled taking into account the fact that the blad
 
 ### The Beautiful Flywheel
 
-The [CIMME](http://www.cimme.ca/ "CIMME") machined a beautiful flywheel based on a {% wayback "https://web.archive.org/web/20110205021423/http://carlitoscontraptions.com:80/wp-content/uploads/2010/02/flywheel.skp", "Sketchup drawing" %} I provided. To my great surprise the flywheel turned out to be perfect and to fit flawlessly in the design. We had this piece professionally machined since it is crucial for the blades to be held firmly to the motor spindle. Also, its dimensions have to be very precise in order to achieve optimal balance and prevent any vibration or wobbling of the blades.
+The [CIMME](http://www.cimme.ca/ "CIMME") machined a beautiful flywheel based on a [Sketchup drawing](/img/blog/the-wind-turbine-part-2-desing-materials/flywheel.skp) I provided. To my great surprise the flywheel turned out to be perfect and to fit flawlessly in the design. We had this piece professionally machined since it is crucial for the blades to be held firmly to the motor spindle. Also, its dimensions have to be very precise in order to achieve optimal balance and prevent any vibration or wobbling of the blades.
 
 {% fig "/img/blog/the-wind-turbine-part-2-desing-materials/flywheel_iso.png", "Flywheel Isometric View" %}
 

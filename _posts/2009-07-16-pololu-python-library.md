@@ -28,7 +28,7 @@ As of now it can interface with the [Pololu Micro Serial Servo Controller](http:
 
 I know there is already a {% wayback "https://web.archive.org/web/20090228211923/http://dmt195.wordpress.com:80/2009/01/19/python-to-interface-with-the-pololu-8-channel-servo-controller/", "python interface" %} for it but I really wanted to have an object oriented way of managing motors (i.e. they can be instantiated and controlled more easily).
 
-You can download the library here: {% wayback "https://web.archive.org/web/20090726001237/http://files.carlitoscontraptions.com:80/programming/Pololu/lib_pololu.txt", "lib_pololu.py" %} (you will need to change the extension of the file to .py instead of txt).
+You can download the library here: [lib_pololu.py](/img/blog/pololu-python-library/lib_pololu.py).
 
 In order to properly use this library you will require:
 
@@ -41,7 +41,7 @@ If you use a civilized OS you may be able to get all this by typing this in a co
 sudo apt-get install idle python-serial
 ```
 
-Here is a sample script that will use the library in order to control a servo: {% wayback "https://web.archive.org/web/20091124142943/http://files.carlitoscontraptions.com:80/programming/Pololu/servo_example.txt", "servo_example.py" %} (you will need to change the extension of the file to .py instead of txt).
+Here is a sample script that will use the library in order to control a servo: [servo_example.py](/img/blog/pololu-python-library/servo_example.py).
 
 \[gist id=3746513 h=200\]
 

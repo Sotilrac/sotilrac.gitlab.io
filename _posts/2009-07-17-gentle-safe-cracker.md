@@ -62,7 +62,7 @@ I chose the Pololu servo controller since it is easy to interface by either usin
 
 The choice of the servo motor was based in getting the maximum torque at a reasonable price.
 
-In order to control the servo motor, I devised a simple [python module](http://files.carlitoscontraptions.com/programming/Pololu/lib_pololu.txt "lib_pololu.py") as seen in [my previous post](/blog/pololu-python-library/ "Pololu Library").
+In order to control the servo motor, I devised a simple [python module](/img/blog/gentle-safe-cracker/lib_pololu.py "lib_pololu.py") as seen in [my previous post](/blog/pololu-python-library/ "Pololu Library").
 
 Since, usually, servo motors have a motion range slightly greater than 180 deg, I decided to use gears to be able to produce a motion range large enough to operate the safe (at least two full turns).
 
