@@ -76,7 +76,7 @@ For now, taking a full 360 panorama takes about 15 minutes. This is a very long 
 
 ## Acknowledgements
 
-{# {% fig "www.rob", "RobotShop.com" %} - image lost #}
+{% fig "/img/blog/panoramic-camera-prototype/robotshop_logoSIDE_001.jpg", "RobotShop.com" %}
 
 I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller"), the {% wayback "https://web.archive.org/web/20090125121707/http://www.robotshop.ca:80/servocity-spt200-pan-tilt.html", "ServoCity SPT200 Direct Drive Pan & Tilt System" %}, and the {% wayback "https://web.archive.org/web/20090124042928/http://www.robotshop.ca:80/hitec-hs785hb-servo-motor.html", "Hitec HS-785HB Winch Servo Motor" %}. This is the second (and hopefully not the last) project they sponsor here at [Carlitos' Contraptions](../ "Carlitos' Contraptions"). Without their help, I would have never been able to afford any of the materials (except for those that come straight from the garbage as usual).
 

@@ -24,7 +24,7 @@ I wanted to have a wireless phone that connects to my computer speakers and micr
 
 In order to achieve this goal, I hard wired the voice inputs and outputs of the wireless phone to my computer.
 
-{# {% fig "2498_full.jpg", "" %} - image lost #}Materials:
+## Materials:
 
 - 1 cordless phone (mine is a {% wayback "https://web.archive.org/web/20060105185138/http://www.vtechcanada.com:80/en/products/24/data/vt2498.htm", "VTech 2428" %})
 - 2 3.5mm plugs (headphone plugs)

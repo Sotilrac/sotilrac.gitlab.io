@@ -20,6 +20,6 @@ tags:
 
 I was very lucky to have been interviewed by [Nora Young for Spark](http://www.cbc.ca/spark/), a CBC podcast about new technologies. This news is a bit late though because this was for the March 25th edition of the show, but nonetheless, I think it is good to document it here.
 
-{# {% fig "carlitoscontraptions.com", "Nora Young From CBC Spark" %} - image lost #}
+{% fig "/img/blog/interview-cbc-spark/Nora-headshot-275x300.jpg", "Nora Young From CBC Spark" %}
 
 You can listen to the full interview {% wayback "https://web.archive.org/web/20120506071436/http://www.cbc.ca/spark/2012/03/spark-177-march-25-2012/", "here" %}. It is about MyRobots.com and the concept of a social network for robots.

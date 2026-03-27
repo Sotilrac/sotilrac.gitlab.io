@@ -31,7 +31,7 @@ I filmed the unboxing but unfortunately the video got corrupted so I re-shot ano
 
 Very quickly, my brother and I drew a simple shape and were cutting in no time. You can see the cutting process below and download the [Deadmau5 model at Thingverse](http://www.thingiverse.com/thing:16391).
 
-{# {% fig "carlitoscontraptions.com", "Deadmau5 iModela cutout" %} - image lost #}
+{% fig "/img/blog/imodela-mini-cnc-mill/deadmau5-imodela-cutout.jpg", "Deadmau5 iModela cutout" %}
 
 Cutting this shape took roughly an hour and the end-result is very precise. The picture above might not show this but it is important to note we cut this on a scrap piece of plastic. See the machine in action in the video below.
 

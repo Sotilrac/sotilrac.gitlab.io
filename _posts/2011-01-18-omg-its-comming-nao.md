@@ -18,7 +18,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-{# {% fig "carlitoscontraptions.com", "Nao's Packing Picture" %} - image lost #}
+{% fig "/img/blog/omg-its-comming-nao/Naos-packing-Picture.jpg", "Nao's Packing Picture" %}
 
 I joined [Aldebaran's developer program](http://www.robotshop.com/blog/aldebaran-developer-program-the-future-is-nao-1137) and now my Nao is coming (much faster than I expected). They even sent me a picture of the box prior to shipping it.
 

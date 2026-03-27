@@ -21,7 +21,7 @@ tags:
 
 [Polymorph](http://en.wikipedia.org/wiki/Polycaprolactone "Polymorph") (or polycaprolactone) is a great nylon-like material that can be melted in hot water and manipulated with bare hands in order to model it into a desired shape. It is very useful when making quick (and not so quick) prototypes and custom parts for a project since it can be easily manipulated and molded and becomes very strong once it cools down.
 
-{# {% fig "carlitoscontraptions.com", "Ring opening polymerization of Îµ-caprolactone to polycaprolactone" %} - image lost #}
+{% fig "/img/blog/polymorph/800px-Pcl_synthesis.png", "Ring opening polymerization of ε-caprolactone to polycaprolactone" %}
 
 Unfortunately, this great material was not available for purchase in Canada (or at least not to my knowledge) and had to be ordered from the US which was rather expensive in shipping costs.
 

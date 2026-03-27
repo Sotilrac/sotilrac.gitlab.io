@@ -19,7 +19,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-{# {% fig "carlitoscontraptions.com", "Nao 1337 Waves" %} - image lost #}
+{% fig "/img/blog/have-no-fear-nao-is-here/Nao-Wave.jpg", "Nao 1337 Waves" %}
 
 I named him Nao [1337](http://en.wikipedia.org/wiki/Leet) but I am open to suggestions. You can leave a comment below if you think of a better name. You can see a quick presentation of this awesome humanoid robot below.
 
@@ -27,10 +27,10 @@ I named him Nao [1337](http://en.wikipedia.org/wiki/Leet) but I am open to sugge
 
 I'll be posting further developments, images and pictures as I progress. I am planning on making several applications in order to achieve my ultimate goal of having Nao play chess.
 
-{# {% fig "carlitoscontraptions.com", "Nao 1337 Stands Up" %} - image lost #}
+{% fig "/img/blog/have-no-fear-nao-is-here/Nao-Stand.jpg", "Nao 1337 Stands Up" %}
 
 ### The Bandana
 
 As you can see in the pictures and videos, Nao1337 wears a red bandana. This is mainly because he is bad-ass and utterly cool.
 
-{# {% fig "carlitoscontraptions.com", "Nao 1337 Sitting" %} - image lost #}
+{% fig "/img/blog/have-no-fear-nao-is-here/Nao-Sit.jpg", "Nao 1337 Sitting" %}

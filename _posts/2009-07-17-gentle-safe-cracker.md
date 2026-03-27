@@ -110,7 +110,7 @@ Finally (this time for real), I cannot say too much about my next plans on attac
 
 ## Acknowledgements:
 
-{# {% fig "www.rob", "RobotShop.com" %} - image lost #}
+{% fig "/img/blog/gentle-safe-cracker/robotshop_logoTOP_004.jpg", "RobotShop.com" %}
 
 I would like to thank the great people at [RobotShop](http://www.robotshop.com/ "RobotShop") for providing the [Pololu Micro Serial Servo Controller](http://www.robotshop.ca/pololu-micro-serial-servo-controller.html "Pololu servo controller") and the {% wayback "https://web.archive.org/web/20090529130749/http://www.robotshop.ca:80/Hitec-HS-425BB-Servo-Motor.html", "Hitec HS-425BB Servo Motor" %}. As I mentioned [before](/blog/robotshop-carlitos-contraptions/ "RobotShop + Carlitos' Contraptions"), they will be sponsoring a set of projects here at [Carlitos' Contraptions](/blog/) in the foreseeable future.
 

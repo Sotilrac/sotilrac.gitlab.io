@@ -17,7 +17,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-{# {% fig "wave.goo", "Google Wave" %} - image lost #}
+{% fig "/img/blog/montreal-hackers-wave/google_wave_logo.jpg", "Google Wave" %}
 
 I finally got a [Google Wave](http://www.wave.google.com/ "Google Wave") account and I decided to do something for the community. More precisely, the hacker/tinkerer/DIY community.
 

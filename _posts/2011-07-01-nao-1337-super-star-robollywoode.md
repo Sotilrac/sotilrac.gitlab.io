@@ -20,7 +20,7 @@ tags:
 
 1337 and I will be participating in the [Robot Film Festival](http://robotfilmfestival.com/) at NYC.
 
-{# {% fig "Nao1337Film.jpe", "Nao 1337 Film" %} - image lost #}
+{% fig "/img/blog/nao-1337-super-star-robollywoode/Nao1337Film.jpg", "Nao 1337 Film" %}
 
 The short video will premier at the festival, on July 17th, and I'll make it available on [my Youtube channel](http://www.youtube.com/user/fcaneo2) at the same time (if there is a WiFi connection available) or a bit later that day. So stay tuned and see 1337's awesome performance.
 
