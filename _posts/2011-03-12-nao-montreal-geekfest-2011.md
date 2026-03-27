@@ -35,7 +35,7 @@ As you can see towards the end of the video above, Nao 1337 can perform a very c
 
 The Geekfest was a lot of fun, you can see some more pictures of Carlitos' Contraptions at the Geekfest here:
 
-- [Magicol Media](http://www.magicolmedia.com/?p=11566)
+- {% wayback "https://web.archive.org/web/20110805170203/http://www.magicolmedia.com/?p=11566", "Magicol Media" %}
 - [Geekfestmtl Flickr Pool](http://www.flickr.com/groups/geekfestmtl/pool/)
 - {% wayback "https://web.archive.org/web/20110326060011/http://www.branchez-vous.com:80/techno/actualite/2011/03/nao-robot-humanoide-aldebaran-robotics-robotique-geekfest-mtl-2011.html", "Branchez-vous" %}
 

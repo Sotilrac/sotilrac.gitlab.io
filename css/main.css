@@ -21,6 +21,7 @@
   --magenta: #e83e8c;
   --pewter: #6c757d;
   --cyan: #17a2b8;
+  --deep-sea: #29527a;
   --gutter: 1rem;
   --col-min: 100%;
   --col-skill: 15em;
@@ -612,13 +613,28 @@ footer span {
 
 /* --- Archive banner --- */
 .archive-banner {
-  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1em;
   margin-bottom: 1em;
-  border-left: 4px solid var(--orange);
-  background: var(--pearl);
-  font-size: 0.9em;
-  color: var(--slate);
+  border-radius: 6px;
+  background: var(--deep-sea);
+  font-size: 2em;
+  color: var(--snow);
   font-style: italic;
+  text-align: center;
+}
+
+.archive-banner span {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.archive-banner-logo {
+  height: 2.5em;
+  width: auto;
+  flex-shrink: 0;
 }
 
 /* --- Wayback Machine archived links --- */
