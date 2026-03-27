@@ -22,4 +22,4 @@ I was very lucky to have been interviewed by [Nora Young for Spark](http://www.c
 
 {# {% fig "carlitoscontraptions.com", "Nora Young From CBC Spark" %} - image lost #}
 
-You can listen to the full interview [here](http://www.cbc.ca/spark/2012/03/spark-177-march-25-2012/). It is about MyRobots.com and the concept of a social network for robots.
+You can listen to the full interview {% wayback "https://web.archive.org/web/20120506071436/http://www.cbc.ca/spark/2012/03/spark-177-march-25-2012/", "here" %}. It is about MyRobots.com and the concept of a social network for robots.

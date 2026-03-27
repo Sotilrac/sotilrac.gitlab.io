@@ -24,6 +24,6 @@ I got my Nao!
 
 See the video below for a sneak peek of the robot. This video shows you what you would get if you were to join the Aldebaran Developer program.
 
-{% youtube "_R1PbsjTkwg" %}
+{% youtube \_R1PbsjTkwg %}
 
-Stay posted for more Nao action. You can also visit my {% youtube "channel" %}(http://www.youtube.com/user/fcaneo2) in order to see my latest Nao videos.
+Stay posted for more Nao action. You can also visit my [youtube channel](http://www.youtube.com/user/fcaneo2) in order to see my latest Nao videos.
