@@ -573,7 +573,7 @@ const STYLE = `
   gap: 1px;
   margin-left: 10px;
 }
-.byte-group:last-child { margin-left: 0; }
+.byte-group:first-child { margin-left: 0; }
 .nibble-group {
   display: flex;
   gap: 1px;
@@ -603,13 +603,14 @@ const STYLE = `
   border-color: var(--bit-on);
 }
 .bit-row-indices .byte-group { margin-left: 10px; }
-.bit-row-indices .byte-group:last-child { margin-left: 0; }
+
 .bit-row-indices .nibble-group { margin-left: 6px; }
 .bit-row-indices .nibble-group:first-child { margin-left: 0; }
 .bit-idx {
-  width: 1.5em;
+  width: 2.25em;
   text-align: center;
   font-size: 0.6em;
+  border: 1px solid transparent;
   color: var(--text-dim);
 }
 
