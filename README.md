@@ -134,6 +134,10 @@ Page views are tracked with [Umami](https://umami.is/) (privacy-friendly, no coo
 
 `robots.txt` blocks AI training crawlers (GPTBot, ClaudeBot, CCBot, etc.) while allowing citation/search crawlers (ChatGPT-User, PerplexityBot, etc.). `llms.txt` provides a machine-readable site summary and declares the CC BY-NC-SA 4.0 license.
 
+## Responsive Design
+
+The smallest target viewport is **360px** wide (standard Android phones). The mobile breakpoint is `30em` (480px). Test at 360px to ensure nothing overflows.
+
 ## Deployment
 
 The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` trigger a production build (Node 20, Eleventy v3).
