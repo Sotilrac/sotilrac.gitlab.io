@@ -1,8 +1,9 @@
 // ============================================================
-// Programmer Calculator — Web Component
+// 0xDEADBEEF: A Calculator for Programmers
 // A browser-based calculator for engineers working with
 // binary, octal, decimal, and hexadecimal numbers.
 // Zero dependencies. Single file. Works forever.
+// Author: Carlos Asmat, https://asmat.ca
 // ============================================================
 
 // ---- CalcEngine: pure computation, no DOM ----
@@ -532,11 +533,11 @@ const STYLE = `
 .base-value.hex { color: var(--blue); }
 .base-value.dec { color: var(--text); }
 .base-value.oct { color: var(--teal); }
-.base-value.bin { color: var(--accent); }
+.base-value.bin { color: var(--accent); width: 26em;}
 .btn-copy {
   font-family: inherit;
   font-size: 0.75em;
-  padding: 0.2em 0.5em;
+  padding: 0.2em 0.7em;
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 3px;
@@ -806,6 +807,7 @@ const STYLE = `
   .nibble-group { margin-left: 4px; }
   .bit-row-indices .byte-group { margin-left: 6px; }
   .bit-row-indices .nibble-group { margin-left: 4px; }
+  .base-value.bin {width: 13em;}
 }
 `;
 
