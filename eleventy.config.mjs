@@ -10,6 +10,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("buildDate", new Date());
 
   // --- Passthrough copy ---
+  eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("font");
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("media");
