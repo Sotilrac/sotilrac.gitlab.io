@@ -775,8 +775,8 @@ const STYLE = `
 /* -- Responsive -- */
 @media (max-width: 40em) {
   .calc { padding: 0.75em; font-size: 12px; }
-  .bit-cell { width: 1.3em; height: 1.5em; font-size: 0.8em; }
-  .bit-idx { width: 1.3em; font-size: 0.5em; }
+  .bit-cell { width: 1.7em; height: 1.9em; font-size: 0.85em; }
+  .bit-idx { width: 2.88em; font-size: 0.5em; }
   .byte-group { margin-left: 6px; }
   .nibble-group { margin-left: 4px; }
   .bit-row-indices .byte-group { margin-left: 6px; }
@@ -795,6 +795,12 @@ class ProgrammerCalculator extends HTMLElement {
   connectedCallback() {
     this._wireEvents();
     this._render();
+    this._resizeObserver = new ResizeObserver(() => this._renderBitGrid());
+    this._resizeObserver.observe(this._calc);
+  }
+
+  disconnectedCallback() {
+    this._resizeObserver?.disconnect();
   }
 
   _buildDOM() {
@@ -1090,7 +1096,8 @@ class ProgrammerCalculator extends HTMLElement {
   _renderBitGrid() {
     const container = this._calc.querySelector(".bit-grid-container");
     const bits = this.engine.bitWidth;
-    const bitsPerRow = 32;
+    const narrow = container.offsetWidth < 480;
+    const bitsPerRow = narrow ? 16 : 32;
     const totalRows = Math.ceil(bits / bitsPerRow);
     let html = "";
 
