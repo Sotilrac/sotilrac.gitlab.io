@@ -405,8 +405,32 @@ class CalcEngine {
     return parseExpr(0);
   }
 
+  // ---- Float to bits ----
+  floatToBits(f) {
+    const buf = new ArrayBuffer(8);
+    const view = new DataView(buf);
+    if (this.bitWidth <= 32) {
+      view.setFloat32(0, f);
+      return BigInt(view.getUint32(0));
+    }
+    view.setFloat64(0, f);
+    const hi = BigInt(view.getUint32(0)) << 32n;
+    const lo = BigInt(view.getUint32(4));
+    return hi | lo;
+  }
+
   evaluate(expr) {
-    const tokens = this.tokenize(expr);
+    // Float literal: contains a dot or scientific notation (e.g. 3.14, 1e-5)
+    const trimmed = expr.trim();
+    if (
+      /^-?(\d+\.\d*|\d*\.\d+)([eE][+-]?\d+)?$/.test(trimmed) ||
+      /^-?\d+[eE][+-]?\d+$/.test(trimmed)
+    ) {
+      const f = parseFloat(trimmed);
+      if (!isNaN(f)) return this.clamp(this.floatToBits(f));
+    }
+
+    const tokens = this.tokenize(trimmed);
     if (tokens.length === 0) return this.value;
     const result = this.parse(tokens);
     return this.clamp(result);
@@ -775,6 +799,7 @@ const STYLE = `
 /* -- Responsive -- */
 @media (max-width: 40em) {
   .calc { padding: 0.75em; font-size: 12px; }
+  .expr-input::placeholder { font-size: 0.8em; }
   .bit-cell { width: 1.7em; height: 1.9em; font-size: 0.85em; }
   .bit-idx { width: 2.88em; font-size: 0.5em; }
   .byte-group { margin-left: 6px; }
@@ -815,7 +840,7 @@ class ProgrammerCalculator extends HTMLElement {
     calc.innerHTML = `
       <!-- Expression input -->
       <div class="expr-row">
-        <input class="expr-input" type="text" placeholder="e.g. 0xFF & (0x0F << 4)" spellcheck="false" autocomplete="off">
+        <input class="expr-input" type="text" placeholder="e.g. 0xFF & (0x0F << 4) or 3.14" spellcheck="false" autocomplete="off">
         <button class="btn-eval">=</button>
       </div>
 
@@ -867,15 +892,15 @@ class ProgrammerCalculator extends HTMLElement {
             <button class="btn-op" data-op="xor">XOR</button>
             <button class="btn-op" data-op="not">NOT</button>
             <div class="ops-group-label">Shift / Rotate</div>
-            <button class="btn-op" data-op="lsh">Lsh</button>
-            <button class="btn-op" data-op="rsh">Rsh</button>
-            <button class="btn-op" data-op="ashr">AShr</button>
-            <button class="btn-op" data-op="rol">RoL</button>
-            <button class="btn-op" data-op="ror">RoR</button>
+            <button class="btn-op" data-op="lsh" title="Left Shift — shifts all bits left, fills with 0 (value << n)">Lsh</button>
+            <button class="btn-op" data-op="rsh" title="Logical Right Shift — shifts bits right, fills with 0 (value >>> n)">Rsh</button>
+            <button class="btn-op" data-op="ashr" title="Arithmetic Right Shift — shifts bits right, preserves sign bit (value >> n)">AShr</button>
+            <button class="btn-op" data-op="rol" title="Rotate Left — bits shifted out the left wrap to the right">RoL</button>
+            <button class="btn-op" data-op="ror" title="Rotate Right — bits shifted out the right wrap to the left">RoR</button>
             <div class="ops-group-label">Byte</div>
-            <button class="btn-op" data-op="byteswap">ByteSwap</button>
-            <button class="btn-op" data-op="bitrev">BitRev</button>
-            <button class="btn-op" data-op="nibswap">NibSwap</button>
+            <button class="btn-op" data-op="byteswap" title="Byte Swap — reverses byte order (e.g. 0xAABBCCDD → 0xDDCCBBAA)">ByteSwap</button>
+            <button class="btn-op" data-op="bitrev" title="Bit Reverse — reverses all bit positions">BitRev</button>
+            <button class="btn-op" data-op="nibswap" title="Nibble Swap — swaps high and low nibble within each byte (e.g. 0xAB → 0xBA)">NibSwap</button>
           </div>
         </div>
       </div>
@@ -923,9 +948,22 @@ class ProgrammerCalculator extends HTMLElement {
     // Expression submit
     const input = $(".expr-input");
     const evalBtn = $(".btn-eval");
+    const isFloat = (s) =>
+      /^-?(\d+\.\d*|\d*\.\d+)([eE][+-]?\d+)?$/.test(s) ||
+      /^-?\d+[eE][+-]?\d+$/.test(s);
+
     const submit = () => {
       const expr = input.value.trim();
       if (!expr) return;
+
+      // Auto-select 32-bit for float input
+      if (isFloat(expr) && this.engine.bitWidth < 32) {
+        this.engine.bitWidth = 32;
+        $$('[data-control="width"] .btn').forEach((b) =>
+          b.classList.toggle("active", b.dataset.width === "32"),
+        );
+      }
+
       const result = this.engine.evaluate(expr);
       this.engine.value = result;
       this.engine.history.unshift({
