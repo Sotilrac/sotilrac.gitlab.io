@@ -9,7 +9,6 @@ date: 2008-05-20T23:12:00-04:00
 date_gmt: 2008-05-21T06:12:00-04:00
 categories:
   - My Projects
-  - Work in progress
 tags: []
 ---
 

@@ -14,7 +14,6 @@ permalink: /blog/
     <li><span class="cat-dot" data-cat="robotics"></span> Robotics</li>
     <li><span class="cat-dot" data-cat="info"></span> Info</li>
     <li><span class="cat-dot" data-cat="news"></span> News</li>
-    <li><span class="cat-dot" data-cat="work in progress"></span> WIP</li>
     <li><span class="cat-dot" data-cat="til"></span> TIL</li>
   </ul>
 
@@ -64,3 +63,38 @@ permalink: /blog/
   <p>Blog posts are being migrated. Check back soon.</p>
   {% endif %}
 </div>
+
+<script>
+(function () {
+  var legend = document.querySelector(".cat-legend");
+  if (!legend) return;
+  var items = legend.querySelectorAll("li");
+  var posts = document.querySelectorAll(".post-list li");
+  var active = null;
+
+  items.forEach(function (li) {
+    li.addEventListener("click", function () {
+      var dot = li.querySelector(".cat-dot");
+      var cat = dot ? dot.getAttribute("data-cat") : null;
+      if (!cat) return;
+
+      if (active === cat) {
+        active = null;
+        legend.classList.remove("filtering");
+        li.classList.remove("active");
+        posts.forEach(function (p) { p.style.display = ""; });
+      } else {
+        active = cat;
+        legend.classList.add("filtering");
+        items.forEach(function (i) { i.classList.remove("active"); });
+        li.classList.add("active");
+        posts.forEach(function (p) {
+          var pDot = p.querySelector(".cat-dot");
+          var pCat = pDot ? pDot.getAttribute("data-cat") : null;
+          p.style.display = pCat === cat ? "" : "none";
+        });
+      }
+    });
+  });
+})();
+</script>

@@ -30,7 +30,7 @@ If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikip
 
 **Expression input**: type [C-style](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Arithmetic.html) expressions with proper operator precedence. Supports `0x` (hex), `0b` (binary), and `0o` (octal) prefixes:
 
-```
+```c
 0xFF & (0x0F << 4)
 0b11001000 ^ 0xFF
 (0x10F << 8) | 0x2C

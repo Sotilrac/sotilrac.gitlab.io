@@ -560,6 +560,24 @@ footer span {
   display: flex;
   align-items: center;
   gap: 0.3em;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+  padding: 0.15em 0.3em;
+  transition: opacity 0.15s;
+}
+
+.cat-legend li:hover {
+  background: var(--pearl);
+}
+
+.cat-legend li.active {
+  outline: 2px solid var(--charcoal);
+  outline-offset: 1px;
+}
+
+.cat-legend.filtering li:not(.active) {
+  opacity: 0.4;
 }
 
 .cat-dot {

@@ -9,7 +9,6 @@ wordpress_url: http://carlitoscontraptions.com/?p=71
 date: 2009-03-11T00:11:00-04:00
 date_gmt: 2009-03-11T07:11:00-04:00
 categories:
-  - Work in progress
   - Info
 tags:
   - Electronics

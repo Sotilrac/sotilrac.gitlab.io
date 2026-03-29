@@ -10,9 +10,6 @@ date: 2009-05-09T20:34:06-04:00
 date_gmt: 2009-05-10T00:34:06-04:00
 categories:
   - My Projects
-  - Work in progress
-  - Software
-  - Info
 tags:
   - Photography
 ---
