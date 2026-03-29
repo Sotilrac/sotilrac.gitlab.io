@@ -1,6 +1,9 @@
 import yaml from "js-yaml";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default function (eleventyConfig) {
+  // --- Plugins ---
+  eleventyConfig.addPlugin(syntaxHighlight);
   // --- YAML data file support (removed in 11ty v3) ---
   eleventyConfig.addDataExtension("yml,yaml", (contents) =>
     yaml.load(contents),
