@@ -14,4 +14,12 @@ layout: layouts/base.njk
     <div class="post-content" itemprop="articleBody">
         {{ content | safe }}
     </div>
+
+    {% set nav = collections.publicPosts | postNavigation(page.url) %}
+    {% if nav.prev or nav.next %}
+    <nav class="post-nav">
+        {% if nav.prev %}<a class="post-nav-prev" href="{{ nav.prev.url }}">&larr; {{ nav.prev.data.title }}</a>{% endif %}
+        {% if nav.next %}<a class="post-nav-next" href="{{ nav.next.url }}">{{ nav.next.data.title }} &rarr;</a>{% endif %}
+    </nav>
+    {% endif %}
 </article>

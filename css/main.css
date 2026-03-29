@@ -712,6 +712,32 @@ figure.post-fig figcaption {
   text-align: center;
 }
 
+/* --- Post navigation (prev/next) --- */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 2em;
+  padding: 1.5em 0;
+  border-top: 1px solid var(--silver);
+  font-size: 0.9em;
+}
+
+.post-nav a {
+  color: var(--royal-blue);
+  text-decoration: none;
+  max-width: 45%;
+}
+
+.post-nav a:hover {
+  text-decoration: underline;
+}
+
+.post-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
 /* --- Gallery --- */
 .gallery {
   display: grid;

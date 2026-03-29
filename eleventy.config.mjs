@@ -89,6 +89,15 @@ export default function (eleventyConfig) {
       .replace(/"/g, "&quot;");
   });
 
+  eleventyConfig.addFilter("postNavigation", (posts, url) => {
+    const i = posts.findIndex((p) => p.url === url);
+    if (i === -1) return {};
+    return {
+      next: i > 0 ? posts[i - 1] : null,
+      prev: i < posts.length - 1 ? posts[i + 1] : null,
+    };
+  });
+
   // --- Config ---
   return {
     dir: {
