@@ -475,6 +475,7 @@ const STYLE = `
   border-radius: 8px;
   padding: 1em;
   max-width: 52em;
+  box-shadow: 0em 0.25em 0.3em rgba(0, 0, 0, 0.3);
 }
 
 /* -- Expression input -- */
