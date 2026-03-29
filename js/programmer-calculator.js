@@ -797,6 +797,20 @@ const STYLE = `
 .history-item .hist-result { color: var(--blue); }
 .history-empty { color: var(--text-dim); font-style: italic; }
 
+/* -- Branding -- */
+.calc-footer {
+  text-align: right;
+  font-size: 0.7em;
+  color: var(--text-dim);
+  margin-top: 0.75em;
+  opacity: 0.6;
+}
+.calc-footer a {
+  color: var(--text-dim);
+  text-decoration: none;
+}
+.calc-footer a:hover { color: var(--accent); }
+
 /* -- Responsive -- */
 @media (max-width: 40em) {
   .calc { padding: 0.75em; font-size: 12px; }
@@ -842,7 +856,7 @@ class ProgrammerCalculator extends HTMLElement {
     calc.innerHTML = `
       <!-- Expression input -->
       <div class="expr-row">
-        <input class="expr-input" type="text" placeholder="e.g. 0xFF & (0x0F << 4) or 3.14" spellcheck="false" autocomplete="off">
+        <input class="expr-input" type="text" placeholder="e.g. (0xDEAD << 16) | 0xBEEF or 3.14" spellcheck="false" autocomplete="off">
         <button class="btn-eval">=</button>
       </div>
 
@@ -931,12 +945,14 @@ class ProgrammerCalculator extends HTMLElement {
         </div>
       </div>
 
-      <div class="panel" data-panel="history">
+      <div class="panel open" data-panel="history">
         <div class="panel-header"><span class="panel-arrow">&#9654;</span> History</div>
         <div class="panel-body history-body">
           <div class="history-list"><span class="history-empty">No history yet</span></div>
         </div>
       </div>
+
+      <div class="calc-footer">0xDEADBEEF by <a href="https://asmat.ca">Carlos Asmat</a></div>
     `;
 
     root.appendChild(calc);
