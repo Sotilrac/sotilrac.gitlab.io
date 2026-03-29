@@ -704,6 +704,8 @@ figure.post-fig img {
 }
 
 figure.post-fig figcaption {
+  width: 0;
+  min-width: 100%;
   margin-top: 0.4em;
   font-size: 0.9em;
   color: var(--slate);

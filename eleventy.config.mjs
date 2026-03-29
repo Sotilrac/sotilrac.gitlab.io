@@ -17,7 +17,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("font");
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("media");
-  eleventyConfig.addPassthroughCopy({ "css/main.css": "css/main.css" });
+  eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
 
