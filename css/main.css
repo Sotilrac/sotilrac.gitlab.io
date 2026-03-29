@@ -508,8 +508,20 @@ footer span {
 }
 
 .post-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
   margin-bottom: 0.3em;
   padding-left: 0;
+}
+
+.post-list li .post-meta {
+  flex-shrink: 0;
+}
+
+.post-list li .post-link {
+  flex: 1;
+  min-width: 0;
 }
 
 .post-link {
