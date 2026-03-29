@@ -28,7 +28,7 @@ The main goal of this activity was to have the children make something useful by
 
 Instructions
 
-1.  Print the note pad paper model that is available in [PDF](http://carlos.asmat.googlepages.com/floppyNotePadPaperModel.pdf). Make sure this is printed at the original scale. You may need to modify it to fit the margins of your printer.
+1.  Print the note pad paper model that is available in [PDF](/img/blog/floppy-note-pad/floppynotepadpapermodel.pdf). Make sure this is printed at the original scale. You may need to modify it to fit the margins of your printer.
 2.  Take all the paper sheets and stack them while making sure they are well aligned together. Put the printed model on top of the stack and fasten everything with paper clips.
 3.  Cut along the model lines. This should result in 48 small paper squares.
 4.  Pierce the holes as shown in the model on every sheet.

@@ -25,7 +25,7 @@ tags:
 
 Nao 1337 played Rock, Paper, Scissors, Lizard, Spock (the geek version of Rock Paper Scissors) against children and adults at Maker Faire NY 2011. The 1337 robot was able to play with the public with minimal intervention from operators and as shown in the video below, everybody loved him.
 
-The idea is to have Nao memorize all the matches and come up with a way of predicting the human moves much like the [New York Times version of the game](www.nytimes.com/interactive/science/rock-paper-scissors.html).
+The idea is to have Nao memorize all the matches and come up with a way of predicting the human moves much like the [New York Times version of the game](https://archive.nytimes.com/www.nytimes.com/interactive/science/rock-paper-scissors.html).
 
 See the pictures below in order to see more robotic awesomeness from the World Maker Faire 2011 which was held in Queens, NY.
 
