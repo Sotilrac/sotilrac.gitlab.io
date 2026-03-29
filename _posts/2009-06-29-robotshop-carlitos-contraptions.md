@@ -15,7 +15,7 @@ tags: []
 
 {% include "archive-banner.njk" %}
 
-{% fig "montreal-hackers-wave/robotshop-carlitos-contraptions/robotshop_logoside_001.jpg", "RobotShop.com" %}
+{% fig "/img/blog/robotshop-carlitos-contraptions/robotshop_logoside_001.jpg", "RobotShop.com" %}
 
 The robotics parts retailer {% wayback "https://web.archive.org/web/20080107153801/http://www.robotshop.com:80/", "RobotShop" %} will be sponsoring robotics projects at [Carlitos' Contraptions](/blog/). As a result I'll be rolling out robotics projects for the next weeks/months.
 
