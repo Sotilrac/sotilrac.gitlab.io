@@ -18,7 +18,7 @@
     </div>
     <section class="no-page-break">
         <h2>Summary</h2>
-        <img src="{{ resume.picture }}?s=250" alt="{{ resume.first_name }} {{ resume.last_name }}" class="float-left pic"/>
+        <img src="{{ resume.picture }}" alt="{{ resume.first_name }} {{ resume.last_name }}" class="float-left pic"/>
         {% for line in resume.summary %}
         <p class="lead summary">{{ line }}</p>
         {% endfor %}
