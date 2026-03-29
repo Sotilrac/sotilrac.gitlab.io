@@ -596,7 +596,7 @@ const STYLE = `
 .byte-group {
   display: flex;
   gap: 1px;
-  margin-left: 10px;
+  margin-left: 14px;
 }
 .byte-group:first-child { margin-left: 0; }
 .nibble-group {
@@ -627,7 +627,7 @@ const STYLE = `
   font-weight: bold;
   border-color: var(--bit-on);
 }
-.bit-row-indices .byte-group { margin-left: 10px; }
+.bit-row-indices .byte-group { margin-left: 14px; }
 
 .bit-row-indices .nibble-group { margin-left: 6px; }
 .bit-row-indices .nibble-group:first-child { margin-left: 0; }
@@ -817,7 +817,7 @@ const STYLE = `
   .expr-input::placeholder { font-size: 0.8em; }
   .bit-cell { width: 1.7em; height: 1.9em; font-size: 0.85em; }
   .bit-idx { width: 2.88em; font-size: 0.5em; }
-  .byte-group { margin-left: 6px; }
+  .byte-group { margin-left: 8px; }
   .nibble-group { margin-left: 4px; }
   .bit-row-indices .byte-group { margin-left: 6px; }
   .bit-row-indices .nibble-group { margin-left: 4px; }
@@ -952,7 +952,7 @@ class ProgrammerCalculator extends HTMLElement {
         </div>
       </div>
 
-      <div class="calc-footer">0xDEADBEEF by <a href="https://asmat.ca">Carlos Asmat</a></div>
+      <div class="calc-footer"><a href="https://asmat.ca">0xDEADBEEF by Carlos Asmat</a></div>
     `;
 
     root.appendChild(calc);

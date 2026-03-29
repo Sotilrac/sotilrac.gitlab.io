@@ -10,17 +10,17 @@ tags:
   - web-components
 ---
 
-For years I've wanted a proper programmer calculator that runs in the browser. The kind of tool you reach for when you're staring at register dumps, debugging bitfields, or trying to remember what an IEEE 754 float looks like in hex.
+For years I've wanted a proper programmer calculator that I can have always handy. The kind of tool you reach for when you're staring at register dumps, debugging bitfields, looking into UART lines, or trying to remember what an IEEE 754 float looks like in hex.
 
-The options out there never quite cut it. Many people use the Windows Calculator's programmer mode, which is sad, it doesn't even support unsigned numbers (which incidentally is the [#1 most requested feature](https://github.com/microsoft/calculator/issues/66) since they open-sourced it in 2019). Plus, it's from Micro$oft 🤮.
+The options out there never quite cut it. Many people use the Windows Calculator's programmer mode, which is sad; it doesn't even support unsigned numbers, which incidentally is the [#1 most requested feature](https://github.com/microsoft/calculator/issues/66) since they open-sourced it in 2019. Plus, it's from Micro$oft 🤮.
 
-Web-based alternatives are either too basic (just binary arithmetic), too cluttered, or missing the features that matter most: IEEE 754 visualization, endianness views, C-style expression input, and, most important of all, all bits and bytes must align nicely for maximum visual clarity. Oh, and it should look cool!
+I couldn't find web-based alternatives that aren't either too basic (just binary arithmetic), too cluttered, or missing the features that matter most: IEEE 754 floats, endianness, C-style expression input, and, most important of all, all bits and bytes must align nicely for maximum visual clarity. Oh, and it should look cool!
 
-So, I built one.
+So, I made one.
 
 ## 0xDEADBEEF
 
-If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Debug_values>)
+If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Debug_value>)
 
 <programmer-calculator></programmer-calculator>
 
@@ -28,11 +28,12 @@ If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikip
 
 ## How to Use It
 
-**Expression input**: type C-style expressions with proper operator precedence. Supports `0x` (hex), `0b` (binary), and `0o` (octal) prefixes:
+**Expression input**: type [C-style](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Arithmetic.html) expressions with proper operator precedence. Supports `0x` (hex), `0b` (binary), and `0o` (octal) prefixes:
 
 ```
 0xFF & (0x0F << 4)
-0b11001100 ^ 0xFF
+0b11001000 ^ 0xFF
+(0x10F << 8) | 0x2C
 (0xDEAD << 16) | 0xBEEF
 ```
 
@@ -80,11 +81,11 @@ That's it. [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_com
 
 ## How It's Built
 
-The entire calculator is a single JavaScript file (~1300 lines) with zero dependencies:
+The entire calculator is a single JavaScript file (~1300 lines) with no dependencies:
 
 - **Web Component** with Shadow DOM for complete style encapsulation
 - **BigInt** for correct 64-bit integer arithmetic (`BigInt.asIntN`/`asUintN` for signed/unsigned)
 - **Pratt parser** for C-style expression evaluation with proper operator precedence
 - **DataView** for IEEE 754 float-to-bits conversion
 
-No framework, no build step, no dependencies to go stale. It should work as long as browsers exist.
+No framework, no build step, no dependencies to go stale, no gluten, 32g of protein. It should work as long as browsers exist.
