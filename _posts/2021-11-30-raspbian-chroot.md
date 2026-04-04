@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Run Raspbian in a chroot
 date: 2021-11-30T15:33:00-05:00
 categories:

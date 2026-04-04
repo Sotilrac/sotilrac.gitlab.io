@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: WireGuard Client Setup
 date: 2021-10-28T19:17:00-04:00
 categories:

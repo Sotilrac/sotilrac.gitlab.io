@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Unfreeze a Stuck SSH Terminal
 date: 2021-12-08T18:38:00-05:00
 categories:

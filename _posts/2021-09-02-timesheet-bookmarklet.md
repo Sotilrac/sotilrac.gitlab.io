@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Auto-fill Timesheet Bookmarklet
 date: 2021-09-02T18:14:00-04:00
 categories:

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: WireGuard VPN Server Setup
 date: 2023-12-15T10:20:00-05:00
 categories:

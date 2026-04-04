@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Linux Command Line Tips
 date: 2022-03-30T10:35:00-04:00
 categories:

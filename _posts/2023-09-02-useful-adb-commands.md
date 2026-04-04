@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Useful ADB Commands
 date: 2023-09-02T00:55:00-04:00
 categories:

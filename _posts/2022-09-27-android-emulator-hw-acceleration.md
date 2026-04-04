@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Android Emulator Hardware Acceleration
 date: 2022-09-27T21:00:00-04:00
 categories:

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Convert Video to GIF with ffmpeg
 date: 2021-05-05T22:35:00-04:00
 categories:

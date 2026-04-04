@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 status: public
+author: Carlos
 title: Docker Build and Push to DockerHub
 date: 2021-05-16T17:16:00-04:00
 categories:
