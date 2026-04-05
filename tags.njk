@@ -1,0 +1,86 @@
+---
+layout: layouts/page.njk
+title: Tags
+permalink: /tags/
+---
+
+<div class="posts col-content">
+
+  <div class="tag-cloud" id="tag-cloud">
+    {% set allTags = [] %}
+    {% for post in collections.publicPosts %}
+      {% if post.data.tags %}
+        {% for tag in post.data.tags %}
+          {% if tag != "posts" and tag not in allTags %}
+            {% set allTags = (allTags.push(tag), allTags) %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    {% for tag in allTags | sort %}
+    <a class="post-tag tag-filter" href="/tags/?tag={{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+
+  <p id="tag-heading" class="tag-heading" style="display:none"></p>
+
+  <div class="archive-grid">
+    {% set years = [] %}
+    {% for post in collections.publicPosts %}
+      {% set y = post.date.getFullYear() %}
+      {% if y not in years %}
+        {% set years = (years.push(y), years) %}
+      {% endif %}
+    {% endfor %}
+    {% for year in years %}
+    <section class="archive-year">
+      <h3>{{ year }}</h3>
+      <ul class="post-list">
+        {% for post in collections.publicPosts %}
+          {% if post.date.getFullYear() == year %}
+          <li data-tags="{{ post.data.tags | join(',') | lower }}">
+            <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
+            {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | lower }}"></span>{% endif %}
+            <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var tag = params.get("tag");
+  if (!tag) return;
+
+  tag = tag.toLowerCase();
+  var heading = document.getElementById("tag-heading");
+  heading.textContent = "Posts tagged: " + tag;
+  heading.style.display = "";
+
+  var links = document.querySelectorAll(".tag-filter");
+  links.forEach(function (a) {
+    if (a.textContent.trim().toLowerCase() === tag) a.classList.add("active");
+  });
+
+  var posts = document.querySelectorAll(".post-list li");
+  posts.forEach(function (li) {
+    var tags = (li.getAttribute("data-tags") || "").split(",");
+    li.style.display = tags.indexOf(tag) !== -1 ? "" : "none";
+  });
+
+  var sections = document.querySelectorAll(".archive-year");
+  sections.forEach(function (sec) {
+    var visible = sec.querySelectorAll(".post-list li[style=''],.post-list li:not([style])");
+    var hasVisible = false;
+    sec.querySelectorAll(".post-list li").forEach(function (li) {
+      if (li.style.display !== "none") hasVisible = true;
+    });
+    sec.style.display = hasVisible ? "" : "none";
+  });
+})();
+</script>

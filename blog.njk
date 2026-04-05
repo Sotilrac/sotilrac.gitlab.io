@@ -6,11 +6,12 @@ permalink: /blog/
 
 <div class="posts col-content">
 
+  <p class="archive-blurb">Musings, projects, and learnings by a robotics engineer.</p>
+
   <ul class="cat-legend">
-    <li><span class="cat-dot" data-cat="general"></span>General</li>
     <li><span class="cat-dot" data-cat="info"></span>Info</li>
     <li><span class="cat-dot" data-cat="news"></span>News</li>
-    <li><span class="cat-dot" data-cat="my projects"></span>Projects</li>
+    <li><span class="cat-dot" data-cat="projects"></span>Projects</li>
     <li><span class="cat-dot" data-cat="robotics"></span>Robotics</li>
     <li><span class="cat-dot" data-cat="software"></span>Software</li>
     <li><span class="cat-dot" data-cat="til"></span>TIL</li>
@@ -72,29 +73,39 @@ permalink: /blog/
   var posts = document.querySelectorAll(".post-list li");
   var active = null;
 
+  function filterCat(cat) {
+    if (!cat || active === cat) {
+      active = null;
+      legend.classList.remove("filtering");
+      items.forEach(function (i) { i.classList.remove("active"); });
+      posts.forEach(function (p) { p.style.display = ""; });
+      history.replaceState(null, "", "/blog/");
+    } else {
+      active = cat;
+      legend.classList.add("filtering");
+      items.forEach(function (i) { i.classList.remove("active"); });
+      items.forEach(function (li) {
+        var d = li.querySelector(".cat-dot");
+        if (d && d.getAttribute("data-cat") === cat) li.classList.add("active");
+      });
+      posts.forEach(function (p) {
+        var pDot = p.querySelector(".cat-dot");
+        var pCat = pDot ? pDot.getAttribute("data-cat") : null;
+        p.style.display = pCat === cat ? "" : "none";
+      });
+      history.replaceState(null, "", "/blog/?cat=" + encodeURIComponent(cat));
+    }
+  }
+
   items.forEach(function (li) {
     li.addEventListener("click", function () {
       var dot = li.querySelector(".cat-dot");
       var cat = dot ? dot.getAttribute("data-cat") : null;
-      if (!cat) return;
-
-      if (active === cat) {
-        active = null;
-        legend.classList.remove("filtering");
-        li.classList.remove("active");
-        posts.forEach(function (p) { p.style.display = ""; });
-      } else {
-        active = cat;
-        legend.classList.add("filtering");
-        items.forEach(function (i) { i.classList.remove("active"); });
-        li.classList.add("active");
-        posts.forEach(function (p) {
-          var pDot = p.querySelector(".cat-dot");
-          var pCat = pDot ? pDot.getAttribute("data-cat") : null;
-          p.style.display = pCat === cat ? "" : "none";
-        });
-      }
+      filterCat(cat);
     });
   });
+
+  var param = new URLSearchParams(window.location.search).get("cat");
+  if (param) filterCat(param.toLowerCase());
 })();
 </script>

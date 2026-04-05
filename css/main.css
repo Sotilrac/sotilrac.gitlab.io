@@ -525,17 +525,42 @@ footer span {
 }
 
 .post-tags {
-  margin-left: 0.75em;
 }
 
 .post-tag {
   display: inline-block;
   padding: 0.1em 0.5em;
-  margin-left: 0.25em;
+  margin-left: 0.75em;
   font-size: 0.85em;
   color: var(--deep-sea);
   background: var(--amber);
   border-radius: 3px;
+  opacity: 85%;
+  text-decoration: none;
+}
+
+.post-tag:hover {
+  opacity: 100%;
+}
+
+.tag-cloud {
+  margin-bottom: 1.5em;
+}
+
+.tag-cloud .post-tag {
+  margin: 0.2em;
+  margin-left: 0;
+}
+
+.tag-cloud .post-tag.active {
+  opacity: 100%;
+  outline: 2px solid var(--deep-sea);
+}
+
+.tag-heading {
+  font-size: 1.1em;
+  color: var(--slate);
+  margin-bottom: 1em;
 }
 
 .post-content {
@@ -644,9 +669,6 @@ footer span {
   margin: 0 0.5em;
 }
 
-.cat-dot[data-cat="my projects"] {
-  background: var(--orange);
-}
 .cat-dot[data-cat="general"] {
   background: var(--royal-blue);
 }

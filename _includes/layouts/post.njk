@@ -9,7 +9,7 @@ layout: layouts/base.njk
                 {{ date | dateFormat('isodate') }}
             </time>
             {% if tags | length %}
-            <span class="post-tags">{% for tag in tags %}{% if tag != "posts" %}<span class="post-tag">{{ tag }}</span>{% endif %}{% endfor %}</span>
+            <span class="post-tags">{% for tag in tags %}{% if tag != "posts" %}<a class="post-tag" href="/tags/?tag={{ tag }}">{{ tag }}</a>{% endif %}{% endfor %}</span>
             {% endif %}
         </p>
     </header>
