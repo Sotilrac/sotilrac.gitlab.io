@@ -9,10 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=938
 date: 2011-05-30T02:03:40-04:00
 date_gmt: 2011-05-30T06:03:40-04:00
 categories:
-  - My Projects
   - Robotics
 tags:
-  - Jamming Gripper
+  - jamming gripper
   - MIT
 ---
 

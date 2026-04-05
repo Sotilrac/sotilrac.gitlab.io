@@ -7,7 +7,7 @@ id: 9
 date: 2006-10-10T21:28:00-04:00
 date_gmt: 2006-10-11T04:28:00-04:00
 categories:
-  - General
+  - Info
 tags: []
 ---
 

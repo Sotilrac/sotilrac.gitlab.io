@@ -7,9 +7,11 @@ author: Carlos
 id: 85
 date: 2009-10-05T01:01:44-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Photography
+  - photography
+  - software
+  - vision
 ---
 
 {% include "archive-banner.njk" %}

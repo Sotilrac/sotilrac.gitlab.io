@@ -9,8 +9,7 @@ wordpress_url: http://carlitoscontraptions.com/?p=790
 date: 2011-01-15T17:55:18-05:00
 date_gmt: 2011-01-15T21:55:18-05:00
 categories:
-  - General
-  - My Projects
+  - News
 tags:
   - Carlitos' Project
 ---

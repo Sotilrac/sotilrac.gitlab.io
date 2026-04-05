@@ -8,9 +8,9 @@ id: 36
 date: 2007-08-18T21:15:00-04:00
 date_gmt: 2007-08-19T04:15:00-04:00
 categories:
-  - My Projects
+  - Projects
+tags:
   - Arduino
-tags: []
 ---
 
 {% include "archive-banner.njk" %}

@@ -11,7 +11,8 @@ date_gmt: 2008-12-17T03:55:00-05:00
 categories:
   - Tools
 tags:
-  - Craft
+  - craft
+  - soldering
 ---
 
 {% include "archive-banner.njk" %}

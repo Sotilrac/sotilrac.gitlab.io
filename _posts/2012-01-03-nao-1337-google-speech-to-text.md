@@ -9,12 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=1125
 date: 2012-01-03T01:01:13-05:00
 date_gmt: 2012-01-03T05:01:13-05:00
 categories:
-  - My Projects
   - Robotics
 tags:
   - Nao
   - Aldebaran
-  - Speech Recognition
+  - speech recognition
 ---
 
 {% include "archive-banner.njk" %}

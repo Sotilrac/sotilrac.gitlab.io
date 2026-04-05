@@ -9,12 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=1116
 date: 2011-12-23T04:03:46-05:00
 date_gmt: 2011-12-23T08:03:46-05:00
 categories:
-  - My Projects
-  - Robotics
+  - Projects
 tags:
   - Nao
   - Aldebaran
   - MyRobots.com
+  - robotics
+  - IoT
 ---
 
 {% include "archive-banner.njk" %}

@@ -7,8 +7,10 @@ id: 3
 date: 2006-08-25T20:08:00-04:00
 date_gmt: 2006-08-26T03:08:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - palm
+  - trash
 ---
 
 {% include "archive-banner.njk" %}

@@ -9,8 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=968
 date: 2011-06-15T21:44:47-04:00
 date_gmt: 2011-06-16T01:44:47-04:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - trash
 ---
 
 {% include "archive-banner.njk" %}

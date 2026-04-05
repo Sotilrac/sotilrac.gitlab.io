@@ -9,8 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=74
 date: 2009-04-14T10:25:03-04:00
 date_gmt: 2009-04-14T17:25:03-04:00
 categories:
-  - General
-tags: []
+  - News
+tags:
+  - WordPress
+  - software
 ---
 
 {% include "archive-banner.njk" %}

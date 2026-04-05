@@ -8,7 +8,8 @@ date: 2007-03-08T22:52:00-05:00
 date_gmt: 2007-03-09T05:52:00-05:00
 categories:
   - Software
-tags: []
+tags:
+  - linux
 ---
 
 {% include "archive-banner.njk" %}

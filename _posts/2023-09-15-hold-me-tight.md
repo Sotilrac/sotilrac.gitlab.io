@@ -5,12 +5,13 @@ author: Carlos
 title: Hold Me Tight
 date: 2023-09-15T12:00:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
   - jewelry
   - cad
   - 3d-printing
   - ring
+  - Blender
 ---
 
 How I got engaged, or the most convoluted way of making an engagement ring.

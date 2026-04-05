@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=62
 date: 2008-10-31T12:40:00-04:00
 date_gmt: 2008-10-31T19:40:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Electronics
+  - electronics
+  - cosplay
 ---
 
 {% include "archive-banner.njk" %}

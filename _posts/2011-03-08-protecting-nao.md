@@ -9,11 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=867
 date: 2011-03-08T00:30:36-05:00
 date_gmt: 2011-03-08T04:30:36-05:00
 categories:
-  - General
-  - My Projects
-  - Robotics
+  - Info
 tags:
   - Nao
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

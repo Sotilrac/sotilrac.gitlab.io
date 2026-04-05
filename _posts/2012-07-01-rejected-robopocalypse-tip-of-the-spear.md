@@ -9,14 +9,14 @@ wordpress_url: http://carlitoscontraptions.com/?p=1179
 date: 2012-07-01T17:01:41-04:00
 date_gmt: 2012-07-01T21:01:41-04:00
 categories:
-  - My Projects
-  - Robotics
+  - Projects
 tags:
   - Nao
   - Aldebaran
   - Robot Film Festival
   - "1337"
   - Robopocalypse
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

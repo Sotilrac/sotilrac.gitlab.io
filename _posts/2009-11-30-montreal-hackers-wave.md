@@ -8,10 +8,9 @@ id: 90
 date: 2009-11-30T13:17:04-05:00
 date_gmt: 2009-11-30T17:17:04-05:00
 categories:
-  - General
   - Info
 tags:
-  - Software
+  - software
   - Montreal
 ---
 

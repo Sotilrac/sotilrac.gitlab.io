@@ -7,12 +7,11 @@ author: Carlos
 id: 89
 date: 2009-11-22T04:02:31-05:00
 categories:
-  - General
-  - Software
-  - FPGA
+  - Info
 tags:
-  - Software
-  - Electronics
+  - FPGA
+  - software
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

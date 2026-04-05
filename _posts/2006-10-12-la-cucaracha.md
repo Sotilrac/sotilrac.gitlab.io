@@ -7,8 +7,10 @@ id: 10
 date: 2006-10-12T23:43:00-04:00
 date_gmt: 2006-10-13T06:43:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - robotics
+  - trash
 ---
 
 {% include "archive-banner.njk" %}

@@ -9,8 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=50
 date: 2008-05-02T00:26:00-04:00
 date_gmt: 2008-05-02T07:26:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Tools
+tags:
+  - ATmega
 ---
 
 {% include "archive-banner.njk" %}

@@ -6,10 +6,12 @@ author: Carlos
 id: 1554
 date: 2013-05-26T10:02:11-04:00
 categories:
-  - General
+  - News
 tags:
   - M.Net
-  - Cloud Robotics Hackathon
+  - cloud robotics
+  - hackathon
+  - press
 ---
 
 {% include "archive-banner.njk" %}

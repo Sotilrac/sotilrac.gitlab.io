@@ -7,8 +7,9 @@ id: 20
 date: 2007-01-23T15:46:00-05:00
 date_gmt: 2007-01-23T22:46:00-05:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - trash
 ---
 
 {% include "archive-banner.njk" %}

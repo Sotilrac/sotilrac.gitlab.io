@@ -10,10 +10,9 @@ date: 2008-12-31T14:48:00-05:00
 date_gmt: 2008-12-31T21:48:00-05:00
 categories:
   - Tools
-  - My Projects
 tags:
-  - Electronics
-  - Trash
+  - electronics
+  - trash
 ---
 
 {% include "archive-banner.njk" %}

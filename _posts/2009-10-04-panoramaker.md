@@ -8,12 +8,10 @@ id: 84
 date: 2009-10-04T21:55:03-04:00
 date_gmt: 2009-10-05T01:55:03-04:00
 categories:
-  - My Projects
-  - Software
   - Robotics
 tags:
-  - Software
-  - Photography
+  - software
+  - photography
 ---
 
 {% include "archive-banner.njk" %}

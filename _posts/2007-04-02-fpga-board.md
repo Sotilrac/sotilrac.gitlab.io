@@ -8,9 +8,9 @@ id: 28
 date: 2007-04-02T21:46:00-04:00
 date_gmt: 2007-04-03T04:46:00-04:00
 categories:
-  - General
+  - Tools
+tags:
   - FPGA
-tags: []
 ---
 
 {% include "archive-banner.njk" %}

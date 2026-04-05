@@ -9,12 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=888
 date: 2011-03-13T16:14:47-04:00
 date_gmt: 2011-03-13T20:14:47-04:00
 categories:
-  - Arduino
+  - Projects
 tags:
   - Carlitos' Project
   - Arduino
   - Nao
-  - Xbee
+  - XBee
 ---
 
 {% include "archive-banner.njk" %}

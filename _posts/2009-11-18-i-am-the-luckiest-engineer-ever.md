@@ -7,10 +7,10 @@ author: Carlos
 id: 88
 date: 2009-11-18T13:14:22-05:00
 categories:
-  - General
-  - FPGA
+  - News
 tags:
-  - Electronics
+  - FPGA
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

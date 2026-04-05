@@ -8,12 +8,11 @@ id: 54
 date: 2008-08-20T19:46:00-04:00
 date_gmt: 2008-08-21T02:46:00-04:00
 categories:
-  - My Projects
+  - Robotics
 tags:
-  - Electronics
-  - Mechanics
-  - Metal
-  - Robot
+  - electronics
+  - mechanical
+  - metal
 ---
 
 {% include "archive-banner.njk" %}

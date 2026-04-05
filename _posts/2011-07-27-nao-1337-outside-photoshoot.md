@@ -9,12 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=1056
 date: 2011-07-27T23:04:40-04:00
 date_gmt: 2011-07-28T03:04:40-04:00
 categories:
-  - My Projects
-  - Robotics
+  - News
 tags:
   - Montreal
-  - Photography
+  - photography
   - Nao
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

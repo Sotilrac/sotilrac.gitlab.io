@@ -9,10 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=70
 date: 2009-03-10T18:58:00-04:00
 date_gmt: 2009-03-11T01:58:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Metal
-  - Craft
+  - metal
+  - craft
 ---
 
 {% include "archive-banner.njk" %}

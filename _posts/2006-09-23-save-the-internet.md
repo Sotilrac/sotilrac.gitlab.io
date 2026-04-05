@@ -8,8 +8,9 @@ id: 6
 date: 2006-09-23T17:12:00-04:00
 date_gmt: 2006-09-24T00:12:00-04:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - software
 ---
 
 {% include "archive-banner.njk" %}

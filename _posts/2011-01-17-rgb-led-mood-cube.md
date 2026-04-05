@@ -9,13 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=795
 date: 2011-01-17T01:16:40-05:00
 date_gmt: 2011-01-17T05:16:40-05:00
 categories:
-  - My Projects
-  - Arduino
+  - Projects
 tags:
   - Carlitos' Project
   - Arduino
   - Rainbowduino
-  - RGB LED
+  - RGB
+  - LED
 ---
 
 {% include "archive-banner.njk" %}

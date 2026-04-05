@@ -14,7 +14,7 @@ tags:
   - Maker Faire
   - Neurosky
   - Mindwave
-  - Mind Control
+  - mind control
 ---
 
 {% include "archive-banner.njk" %}

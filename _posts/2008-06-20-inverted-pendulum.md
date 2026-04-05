@@ -9,10 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=55
 date: 2008-06-20T07:32:00-04:00
 date_gmt: 2008-06-20T14:32:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Software
-  - Robot
+  - software
+  - robotics
+  - control
 ---
 
 {% include "archive-banner.njk" %}

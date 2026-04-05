@@ -9,12 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=843
 date: 2011-02-16T22:23:44-05:00
 date_gmt: 2011-02-17T02:23:44-05:00
 categories:
-  - My Projects
   - Robotics
 tags:
   - Nao
   - Aldebaran
   - Tango
+  - dance
 ---
 
 {% include "archive-banner.njk" %}

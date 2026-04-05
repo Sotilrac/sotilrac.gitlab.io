@@ -11,7 +11,7 @@ date_gmt: 2010-10-31T08:18:37-04:00
 categories:
   - Robotics
 tags:
-  - Jamming Gripper
+  - jamming gripper
   - MIT
 ---
 

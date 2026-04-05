@@ -9,8 +9,8 @@ date: 2007-08-17T13:17:00-04:00
 date_gmt: 2007-08-17T20:17:00-04:00
 categories:
   - Software
+tags:
   - Arduino
-tags: []
 ---
 
 {% include "archive-banner.njk" %}

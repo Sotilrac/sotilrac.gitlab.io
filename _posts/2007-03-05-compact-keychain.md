@@ -8,7 +8,9 @@ date: 2007-03-05T21:40:00-05:00
 date_gmt: 2007-03-06T04:40:00-05:00
 categories:
   - Projects
-tags: DIY
+tags:
+  - DIY
+  - caft
 ---
 
 {% include "archive-banner.njk" %}

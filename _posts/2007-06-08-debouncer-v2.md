@@ -8,9 +8,9 @@ id: 30
 date: 2007-06-08T23:56:00-04:00
 date_gmt: 2007-06-09T06:56:00-04:00
 categories:
-  - My Projects
+  - Projects
+tags:
   - FPGA
-tags: []
 ---
 
 {% include "archive-banner.njk" %}

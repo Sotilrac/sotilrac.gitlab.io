@@ -1,4 +1,4 @@
-w---
+---
 layout: layouts/post.njk
 status: public
 published: true
@@ -8,11 +8,9 @@ id: 33
 date: 2007-08-03T09:48:00-04:00
 date_gmt: 2007-08-03T16:48:00-04:00
 categories:
-
-- General
-- Arduino
-  tags: []
-
+  - Info
+tags:
+  - Arduino
 ---
 
 {% include "archive-banner.njk" %}

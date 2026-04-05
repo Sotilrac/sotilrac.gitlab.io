@@ -8,8 +8,10 @@ id: 6
 date: 2006-09-15T12:32:00-04:00
 date_gmt: 2006-09-15T19:32:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - trash
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

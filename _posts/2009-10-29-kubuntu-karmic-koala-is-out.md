@@ -9,9 +9,9 @@ date: 2009-10-29T15:20:52-04:00
 categories:
   - Software
 tags:
-  - Software
+  - software
   - Open Source
-  - Linux
+  - linux
 ---
 
 {% include "archive-banner.njk" %}

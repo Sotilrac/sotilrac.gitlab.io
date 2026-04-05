@@ -7,8 +7,9 @@ id: 11
 date: 2006-11-05T23:36:00-05:00
 date_gmt: 2006-11-06T06:36:00-05:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - idea
 ---
 
 {% include "archive-banner.njk" %}

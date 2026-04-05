@@ -9,11 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=56
 date: 2008-06-28T17:14:00-04:00
 date_gmt: 2008-06-29T00:14:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Electronics
-  - Craft
-  - Ironman
+  - electronics
+  - craft
+  - cosplay
 ---
 
 {% include "archive-banner.njk" %}

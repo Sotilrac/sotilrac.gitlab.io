@@ -7,8 +7,11 @@ id: 4
 date: 2006-09-05T20:05:00-04:00
 date_gmt: 2006-09-06T03:05:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - craft
+  - trash
+  - physics
 ---
 
 {% include "archive-banner.njk" %}

@@ -10,10 +10,9 @@ date: 2009-12-14T15:45:32-05:00
 date_gmt: 2009-12-14T19:45:32-05:00
 categories:
   - Tools
-  - My Projects
 tags:
-  - Craft
-  - Wood
+  - craft
+  - wood
 ---
 
 {% include "archive-banner.njk" %}

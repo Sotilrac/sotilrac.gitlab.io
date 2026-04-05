@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=1177
 date: 2012-06-07T09:04:53-04:00
 date_gmt: 2012-06-07T13:04:53-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
   - OSHW
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

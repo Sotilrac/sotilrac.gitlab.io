@@ -9,9 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=578
 date: 2010-05-18T19:30:35-04:00
 date_gmt: 2010-05-18T23:30:35-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - International Cooperation
+  - international cooperation
+  - wind
+  - Ecuador
+  - trip
 ---
 
 {% include "archive-banner.njk" %}

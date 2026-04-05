@@ -9,10 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=638
 date: 2010-06-19T21:09:35-04:00
 date_gmt: 2010-06-20T01:09:35-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
   - Polymorph
-  - Craft
+  - craft
 ---
 
 {% include "archive-banner.njk" %}

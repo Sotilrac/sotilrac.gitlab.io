@@ -9,8 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=215
 date: 2009-06-29T13:24:09-04:00
 date_gmt: 2009-06-29T17:24:09-04:00
 categories:
-  - General
-tags: []
+  - News
+tags:
+  - sponsor
 ---
 
 {% include "archive-banner.njk" %}

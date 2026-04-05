@@ -11,7 +11,7 @@ date_gmt: 2009-12-11T06:30:45-05:00
 categories:
   - Tools
 tags:
-  - Electronics
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

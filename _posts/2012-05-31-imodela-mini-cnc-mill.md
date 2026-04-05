@@ -9,12 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=1157
 date: 2012-05-31T19:01:05-04:00
 date_gmt: 2012-05-31T23:01:05-04:00
 categories:
-  - My Projects
-  - Robotics
+  - Projects
 tags:
   - iModela
   - Roland
   - Deadmau5
+  - CNC
 ---
 
 {% include "archive-banner.njk" %}

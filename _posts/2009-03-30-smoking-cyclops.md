@@ -10,9 +10,9 @@ date: 2009-03-30T13:31:00-04:00
 date_gmt: 2009-03-30T20:31:00-04:00
 categories:
   - Tools
-  - My Projects
 tags:
-  - Mechanics
+  - mechanical
+  - soldering
 ---
 
 {% include "archive-banner.njk" %}

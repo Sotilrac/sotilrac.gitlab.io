@@ -7,9 +7,10 @@ id: 31
 date: 2007-06-23T15:28:00-04:00
 date_gmt: 2007-06-23T22:28:00-04:00
 categories:
-  - My Projects
+  - Projects
+tags:
+  - speech recognition
   - FPGA
-tags: []
 ---
 
 {% include "archive-banner.njk" %}

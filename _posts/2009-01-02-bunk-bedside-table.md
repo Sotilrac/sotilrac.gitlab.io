@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=67
 date: 2009-01-02T11:23:00-05:00
 date_gmt: 2009-01-02T18:23:00-05:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Craft
+  - craft
+  - wood
 ---
 
 {% include "archive-banner.njk" %}

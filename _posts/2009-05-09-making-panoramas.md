@@ -9,9 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=169
 date: 2009-05-09T20:34:06-04:00
 date_gmt: 2009-05-10T00:34:06-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Photography
+  - photography
+  - vision
 ---
 
 {% include "archive-banner.njk" %}

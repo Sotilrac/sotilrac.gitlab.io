@@ -8,8 +8,9 @@ id: 37
 date: 2007-08-29T19:01:00-04:00
 date_gmt: 2007-08-30T02:01:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - wood
 ---
 
 {% include "archive-banner.njk" %}

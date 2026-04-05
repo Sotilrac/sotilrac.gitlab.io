@@ -9,7 +9,6 @@ wordpress_url: http://carlitoscontraptions.com/?p=1109
 date: 2011-10-13T22:18:29-04:00
 date_gmt: 2011-10-14T02:18:29-04:00
 categories:
-  - My Projects
   - Robotics
 tags:
   - Nao
@@ -17,6 +16,7 @@ tags:
   - Make
   - "1337"
   - Maker Faire
+  - game
 ---
 
 {% include "archive-banner.njk" %}

@@ -7,8 +7,10 @@ id: 32
 date: 2007-07-15T00:14:00-04:00
 date_gmt: 2007-07-15T07:14:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Software
+tags:
+  - Xbox
+  - XBMC
 ---
 
 {% include "archive-banner.njk" %}

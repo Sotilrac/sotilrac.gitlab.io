@@ -8,8 +8,9 @@ id: 49
 date: 2008-05-28T21:25:00-04:00
 date_gmt: 2008-05-29T04:25:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - craft
 ---
 
 {% include "archive-banner.njk" %}

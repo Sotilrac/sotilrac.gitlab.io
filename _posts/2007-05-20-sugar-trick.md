@@ -7,8 +7,10 @@ id: 29
 date: 2007-05-20T20:34:00-04:00
 date_gmt: 2007-05-21T03:34:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Info
+tags:
+  - craft
+  - hack
 ---
 
 {% include "archive-banner.njk" %}

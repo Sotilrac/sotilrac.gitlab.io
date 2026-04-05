@@ -7,8 +7,10 @@ id: 5
 date: 2006-09-05T17:02:00-04:00
 date_gmt: 2006-09-06T00:02:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - palm
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

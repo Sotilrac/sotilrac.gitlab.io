@@ -9,11 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=277
 date: 2009-07-17T15:30:44-04:00
 date_gmt: 2009-07-17T19:30:44-04:00
 categories:
-  - My Projects
-  - Robotics
+  - Projects
 tags:
-  - Cracking
-  - Mechanics
+  - robotics
+  - cracking
+  - mechanics
 ---
 
 {% include "archive-banner.njk" %}

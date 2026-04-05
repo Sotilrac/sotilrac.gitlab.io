@@ -9,8 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=761
 date: 2010-12-14T01:15:09-05:00
 date_gmt: 2010-12-14T05:15:09-05:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - cosplay
+  - geek
 ---
 
 {% include "archive-banner.njk" %}

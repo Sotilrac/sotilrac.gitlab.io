@@ -7,7 +7,7 @@ id: 44
 date: 2008-03-17T01:53:00-04:00
 date_gmt: 2008-03-17T08:53:00-04:00
 categories:
-  - General
+  - Info
 tags:
   - ring
 ---

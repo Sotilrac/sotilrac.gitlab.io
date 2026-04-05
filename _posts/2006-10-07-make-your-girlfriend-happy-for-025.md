@@ -7,7 +7,7 @@ id: 8
 date: 2006-10-07T22:33:00-04:00
 date_gmt: 2006-10-08T05:33:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
   - ring
 ---

@@ -7,8 +7,10 @@ id: 16
 date: 2006-12-04T21:44:00-05:00
 date_gmt: 2006-12-05T04:44:00-05:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - hack
+  - metal
 ---
 
 {% include "archive-banner.njk" %}

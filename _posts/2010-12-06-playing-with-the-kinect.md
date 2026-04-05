@@ -9,8 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=770
 date: 2010-12-06T01:34:29-05:00
 date_gmt: 2010-12-06T05:34:29-05:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - vision
 ---
 
 {% include "archive-banner.njk" %}

@@ -9,7 +9,7 @@ date: 2009-11-19T14:58:33-05:00
 categories:
   - Software
 tags:
-  - Software
+  - software
   - Open Source
 ---
 

@@ -9,12 +9,12 @@ wordpress_url: http://carlitoscontraptions.com/?p=1167
 date: 2012-06-04T19:52:35-04:00
 date_gmt: 2012-06-04T23:52:35-04:00
 categories:
-  - My Projects
-  - Robotics
+  - Software
 tags:
   - Nao
   - Aldebaran
   - Wolfram
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

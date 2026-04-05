@@ -9,7 +9,7 @@ wordpress_url: http://carlitoscontraptions.com/?p=926
 date: 2011-05-13T00:19:39-04:00
 date_gmt: 2011-05-13T04:19:39-04:00
 categories:
-  - My Projects
+  - News
 tags:
   - Nao
 ---

@@ -9,7 +9,8 @@ date: 2006-12-03T00:37:00-05:00
 date_gmt: 2006-12-03T07:37:00-05:00
 categories:
   - Projects
-tags: []
+tags:
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

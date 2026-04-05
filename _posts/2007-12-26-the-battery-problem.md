@@ -8,8 +8,9 @@ id: 40
 date: 2007-12-26T21:20:00-05:00
 date_gmt: 2007-12-27T04:20:00-05:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

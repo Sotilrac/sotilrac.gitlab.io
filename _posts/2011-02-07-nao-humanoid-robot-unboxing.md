@@ -9,13 +9,13 @@ wordpress_url: http://carlitoscontraptions.com/?p=830
 date: 2011-02-07T22:43:53-05:00
 date_gmt: 2011-02-08T02:43:53-05:00
 categories:
-  - My Projects
-  - Robotics
+  - Info
 tags:
   - Nao
   - Developer Program
   - Aldebaran
-  - Unboxing
+  - unboxing
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

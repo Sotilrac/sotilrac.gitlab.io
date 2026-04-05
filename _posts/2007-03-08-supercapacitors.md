@@ -7,8 +7,9 @@ id: 25
 date: 2007-03-08T21:47:00-05:00
 date_gmt: 2007-03-09T04:47:00-05:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

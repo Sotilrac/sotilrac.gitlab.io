@@ -8,9 +8,10 @@ id: 81
 date: 2009-09-06T15:56:15-04:00
 date_gmt: 2009-09-06T19:56:15-04:00
 categories:
-  - General
-  - Tools
-tags: []
+  - Info
+tags:
+  - linux
+  - tool
 ---
 
 {% include "archive-banner.njk" %}

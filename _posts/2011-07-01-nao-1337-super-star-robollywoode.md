@@ -9,11 +9,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=973
 date: 2011-07-01T19:37:42-04:00
 date_gmt: 2011-07-01T23:37:42-04:00
 categories:
-  - My Projects
-  - Robotics
+  - News
 tags:
   - Nao
   - Robot Film Festival
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

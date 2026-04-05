@@ -10,7 +10,7 @@ date_gmt: 2009-02-18T23:35:00-05:00
 categories:
   - Info
 tags:
-  - Trash
+  - trash
 ---
 
 {% include "archive-banner.njk" %}

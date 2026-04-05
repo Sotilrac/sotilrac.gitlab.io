@@ -11,7 +11,7 @@ date_gmt: 2009-03-11T07:11:00-04:00
 categories:
   - Info
 tags:
-  - Electronics
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

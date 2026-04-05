@@ -8,8 +8,9 @@ id: 52
 date: 2008-07-22T22:21:00-04:00
 date_gmt: 2008-07-23T05:21:00-04:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - "2008"
 ---
 
 {% include "archive-banner.njk" %}

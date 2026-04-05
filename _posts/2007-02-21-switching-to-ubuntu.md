@@ -7,8 +7,10 @@ id: 22
 date: 2007-02-21T22:09:00-05:00
 date_gmt: 2007-02-22T05:09:00-05:00
 categories:
-  - Tools
-tags: software
+  - Software
+tags:
+  - linux
+  - tool
 ---
 
 {% include "archive-banner.njk" %}

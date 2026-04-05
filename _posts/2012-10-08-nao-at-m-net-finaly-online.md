@@ -10,10 +10,10 @@ date: 2012-10-08T23:11:04-04:00
 date_gmt: 2012-10-09T03:11:04-04:00
 categories:
   - Info
-  - Robotics
 tags:
   - Nao
   - M.Net
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

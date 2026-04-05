@@ -8,8 +8,9 @@ id: 46
 date: 2008-05-06T22:17:00-04:00
 date_gmt: 2008-05-07T05:17:00-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - FPGA
 ---
 
 {% include "archive-banner.njk" %}

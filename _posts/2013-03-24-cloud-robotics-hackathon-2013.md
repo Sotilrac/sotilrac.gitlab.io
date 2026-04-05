@@ -8,11 +8,11 @@ wordpress_url: http://carlitoscontraptions.com/?p=1588
 date: 2013-03-24T13:55:45-04:00
 date_gmt: 2013-03-24T17:55:45-04:00
 categories:
-  - Robotics
   - News
 tags:
-  - Cloud Robotics
-  - Hackathon
+  - cloud robotics
+  - hackathon
+  - robotics
 ---
 
 {% include "archive-banner.njk" %}

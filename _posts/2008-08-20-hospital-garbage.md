@@ -8,10 +8,10 @@ id: 52
 date: 2008-08-20T20:40:00-04:00
 date_gmt: 2008-08-21T03:40:00-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Trash
-  - Craft
+  - trash
+  - craft
 ---
 
 {% include "archive-banner.njk" %}

@@ -7,8 +7,9 @@ id: 17
 date: 2006-12-05T23:30:00-05:00
 date_gmt: 2006-12-06T06:30:00-05:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - electronics
 ---
 
 {% include "archive-banner.njk" %}

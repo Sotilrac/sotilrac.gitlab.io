@@ -9,9 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=130
 date: 2009-04-17T17:30:02-04:00
 date_gmt: 2009-04-17T21:30:02-04:00
 categories:
-  - My Projects
+  - Info
 tags:
-  - Travel
+  - trip
 ---
 
 {% include "archive-banner.njk" %}

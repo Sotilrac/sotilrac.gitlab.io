@@ -8,8 +8,10 @@ id: 41
 date: 2007-12-31T02:14:00-05:00
 date_gmt: 2007-12-31T09:14:00-05:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - craft
+  - wood
 ---
 
 {% include "archive-banner.njk" %}

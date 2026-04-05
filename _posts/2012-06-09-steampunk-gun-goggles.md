@@ -9,9 +9,9 @@ wordpress_url: http://carlitoscontraptions.com/?p=1171
 date: 2012-06-09T00:47:45-04:00
 date_gmt: 2012-06-09T04:47:45-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Cosplay
+  - cosplay
 ---
 
 {% include "archive-banner.njk" %}

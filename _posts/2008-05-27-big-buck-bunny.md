@@ -8,8 +8,9 @@ id: 48
 date: 2008-05-27T10:49:00-04:00
 date_gmt: 2008-05-27T17:49:00-04:00
 categories:
-  - General
-tags: []
+  - Info
+tags:
+  - Blender
 ---
 
 {% include "archive-banner.njk" %}

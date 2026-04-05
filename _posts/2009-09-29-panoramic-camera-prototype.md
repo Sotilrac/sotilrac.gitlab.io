@@ -7,11 +7,11 @@ author: Carlos
 id: 83
 date: 2009-09-29T01:46:45-04:00
 categories:
-  - My Projects
-  - Robotics
+  - Projects
 tags:
-  - Electronics
-  - Photography
+  - robotics
+  - electronics
+  - photography
 ---
 
 {% include "archive-banner.njk" %}

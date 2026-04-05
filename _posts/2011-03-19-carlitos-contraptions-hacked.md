@@ -9,8 +9,10 @@ wordpress_url: http://carlitoscontraptions.com/?p=897
 date: 2011-03-19T13:47:53-04:00
 date_gmt: 2011-03-19T17:47:53-04:00
 categories:
-  - My Projects
-tags: []
+  - Projects
+tags:
+  - WordPress
+  - hack
 ---
 
 {% include "archive-banner.njk" %}

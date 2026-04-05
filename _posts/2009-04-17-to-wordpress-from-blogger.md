@@ -7,10 +7,9 @@ id: 75
 date: 2009-04-17T02:56:49-04:00
 date_gmt: 2009-04-17T06:56:49-04:00
 categories:
-  - My Projects
   - Software
 tags:
-  - Software
+  - software
 ---
 
 {% include "archive-banner.njk" %}

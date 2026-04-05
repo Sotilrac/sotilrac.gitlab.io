@@ -8,10 +8,10 @@ id: 82
 date: 2009-09-07T11:50:50-04:00
 date_gmt: 2009-09-07T15:50:50-04:00
 categories:
-  - My Projects
+  - Projects
 tags:
-  - Linux
-  - Craft
+  - linux
+  - craft
 ---
 
 {% include "archive-banner.njk" %}
