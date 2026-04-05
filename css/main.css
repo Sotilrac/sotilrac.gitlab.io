@@ -524,6 +524,20 @@ footer span {
   font-family: var(--font-mono);
 }
 
+.post-tags {
+  margin-left: 0.75em;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  margin-left: 0.25em;
+  font-size: 0.85em;
+  color: var(--deep-sea);
+  background: var(--amber);
+  border-radius: 3px;
+}
+
 .post-content {
   margin-bottom: 2rem;
 }
