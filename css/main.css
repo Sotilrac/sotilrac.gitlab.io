@@ -160,10 +160,36 @@ mark {
 }
 
 blockquote {
-  margin-bottom: 1rem;
-  padding: 0.5em 1em;
-  border-left: 4px solid var(--silver);
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.5em 2em 1.5em 3em;
+  border-left: 4px solid var(--deep-sea);
+  background: var(--pearl);
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5em;
+  font-style: italic;
   color: var(--slate);
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.1em;
+  left: 0.3em;
+  font-size: 4em;
+  line-height: 1;
+  color: var(--silver);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.75em;
+  font-family: var(--font-base);
+  font-size: 0.75em;
+  font-style: italic;
+  text-align: right;
+  color: var(--pewter);
 }
 
 figure {

@@ -52,6 +52,14 @@ export default function (eleventyConfig) {
     return `<a href="${url}" class="wayback-link" title="Archived page">${text}<svg class="wayback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/><path d="M3 12h1M20 12h1"/></svg></a>`;
   });
 
+  eleventyConfig.addShortcode("model", (src, caption, height, width, orbit) => {
+    const h = height || "400px";
+    const w = width || "50em";
+    const a = caption || "";
+    const o = orbit || "0deg 75deg auto";
+    return `<figure class="post-fig" style="max-width:${w}"><model-viewer src="${src}" alt="${a}" camera-controls touch-action="pan-y" camera-orbit="${o}" style="width:${w};height:${h}"></model-viewer><figcaption>${a}</figcaption></figure><script type="module" src="/js/model-viewer.min.js"></script>`;
+  });
+
   eleventyConfig.addShortcode("youtube", (id) => {
     return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
   });
