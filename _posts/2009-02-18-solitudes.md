@@ -11,6 +11,7 @@ categories:
   - Info
 tags:
   - trash
+  - CD
 ---
 
 {% include "archive-banner.njk" %}
