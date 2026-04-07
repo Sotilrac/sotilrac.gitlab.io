@@ -64,6 +64,10 @@ export default function (eleventyConfig) {
     return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
   });
 
+  eleventyConfig.addShortcode("spotify", (id) => {
+    return `<iframe style="border-radius:12px;margin:2em 0" width="100%" height="152" src="https://open.spotify.com/embed/track/${id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+  });
+
   // --- Filters ---
   eleventyConfig.addFilter("dateFormat", (date, format) => {
     const d = new Date(date);
