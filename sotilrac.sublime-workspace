@@ -1,0 +1,582 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ar",
+				"archive-banner"
+			],
+			[
+				"--p",
+				"--pewter"
+			],
+			[
+				"--",
+				"--pearl"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"--bl",
+				"--blue-dark"
+			],
+			[
+				"s",
+				"absolute"
+			],
+			[
+				"--blue",
+				"--blue-dark"
+			],
+			[
+				"u",
+				"uppercase"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"git",
+				"Git: Diff All Files"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"bau",
+				"HTMLBeautify"
+			],
+			[
+				"beauti",
+				"HTMLBeautify"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"saage",
+				"Set Syntax: Git Attributes"
+			],
+			[
+				"chat",
+				"ChatGPT"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 256.0,
+		"history":
+		[
+			"view.run_command(\"saage\")",
+			"view.run_command(\"example\")",
+			"view.run_command(\"ExampleCommand\")",
+			"view.run_command(\"Example\")",
+			"view.run_command(\"sample_plugin\")",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(\"sample_plugin\")",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(\"sample_plugin\")",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(saage_plugin)",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(saage_plugin)",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(saage_plugin)",
+			"view.run_command(SaageCommand)",
+			"view.run_command(saage_plugin)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/carlos/dev/sotilrac.gitlab.io"
+	],
+	"file_history":
+	[
+		"/home/carlos/dev/sotilrac.gitlab.io/sotilrac.sublime-project",
+		"/home/carlos/dev/take-it-back/text/ack.md",
+		"/home/carlos/dev/take-it-back/css/stylesheet-epub-indent.css",
+		"/home/carlos/dev/take-it-back/metadata.yaml",
+		"/home/carlos/.claude/CLAUDE.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-02-18-solitudes.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-24-cd-lamp.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-06-ecuadorian-makecation.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-27-big-buck-bunny.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/blog.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2013-03-25-zorro.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-16-the-wind-turbine-part-1-idea.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-23-we-are-slightly-popular.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-05-10-the-wind-turbine-part-2-desing-materials.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-05-18-the-wind-turbine-part-3-generator.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2023-09-15-hold-me-tight.md",
+		"/home/carlos/Downloads/transactions.csv",
+		"/home/carlos/dev/anniversary-cal/anniversaries.ics",
+		"/home/carlos/Downloads/Fermion _ MFG Battery Sync.txt",
+		"/home/carlos/dev/terminator/install-instructions.md",
+		"/home/carlos/dev/terminator/pr-description.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/js/programmer-calculator.js",
+		"/home/carlos/dev/sotilrac.gitlab.io/css/main.css",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-28-floppy-note-pad.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-03-28-i-see-0xdeadbeef.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/head.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/resume.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/footer.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-03-wireless-am-receiver.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-03-11-opus-smart-card.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-02-opamp.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-05-09-making-panoramas.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-20-what-am-i-building.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/tools/programmer-calculator.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2007-06-23-speech-recognition-fpga.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-08-18-diy-universal-gripper-make-magazine.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-09-29-panoramic-camera-prototype.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-09-roscon-2012.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-08-interview-cbc-spark.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-05-31-imodela-mini-cnc-mill.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-07-01-nao-1337-super-star-robollywoode.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-23-nao-1337-is-famous.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-19-carlitos-contraptions-hacked.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-27-geekfest.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-01-18-omg-its-comming-nao.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-09-have-no-fear-nao-is-here.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-06-19-polymorph.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-09-07-tux-laptop-sleeve.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-07-17-gentle-safe-cracker.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-09-24-wireless-skype-phone.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/archive-banner.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-11-30-montreal-hackers-wave.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/README.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-07-nao-humanoid-robot-unboxing.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/public/my projects/2010/02/16/the-wind-turbine-part-1-idea.html",
+		"/home/carlos/Downloads/BrightcovePlayer.swf",
+		"/home/carlos/dev/sotilrac.gitlab.io/.editorconfig",
+		"/home/carlos/dev/sotilrac.gitlab.io/lefthook.yml",
+		"/home/carlos/Documents/Status Change/JH Passport/make_pdf.py",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/resume.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/.gitignore",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-01-17-rgb-led-mood-cube.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-03-12-blog-makeover-2.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-07-im-on-new-scientist.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-07-myrobots-connect-my-first-pcb-design.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/layouts/post.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/public/arduino/2011/03/13/speech-controlled-arduino-robot.html",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-13-speech-controlled-arduino-robot.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-10-08-nao-mind-control-ny-maker-faire-2012.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-09-02-montreal-mini-maker-faire-2012.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/header.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-11-18-i-am-the-luckiest-engineer-ever.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2019-01-08-blog-makeover.md",
+		"/home/carlos/dev/hack/adb/debloat-oneplus.sh",
+		"/home/carlos/lit.conf",
+		"/home/carlos/router-lit.conf",
+		"/home/carlos/Downloads/alan_cell.conf",
+		"/home/carlos/Downloads/alan_pc.conf",
+		"/home/carlos/Torrent/movies/Drunken Master (1978) [Jackie Chan] 1080p BluRay H264 DolbyD 5.1 + nickarad/Drunken Master (1978) 1080p BluRay H264 DolbyD 5.1 + nickarad.eng.srt",
+		"/home/carlos/.ssh/config",
+		"/home/carlos/dev/dephy/FlexSEA/build-Plan3-Desktop_Qt_6_3_2_GCC_64bit-Debug/app/UTTFiles/UttCsvLocation.txt",
+		"/home/carlos/Documents/Condo/3D/matterport-dl/matterport-dl.py",
+		"/home/carlos/dev/kscreenlocker_monitor/monitor_kscreenlocker.sh",
+		"/home/carlos/Documents/Condo/3D/matterport-dl/vzKfTuq28n9/index.html",
+		"/home/carlos/Downloads/usagedb.all_usages.csv",
+		"/home/carlos/dev/wedding-site/src/static/css/style.css",
+		"/home/carlos/dev/wedding-site/src/_includes/rsvp-form.html",
+		"/home/carlos/dev/wedding-site/src/_data/site.json",
+		"/home/carlos/dev/wedding-site/src/_includes/layout.njk",
+		"/home/carlos/dev/wedding-site/src/static/js/rsvp.js",
+		"/home/carlos/dev/wedding-site/src/index.md",
+		"/home/carlos/dev/wedding-site/src/_includes/gallery.njk",
+		"/home/carlos/dev/wedding-site/src/_includes/gallery_top.njk",
+		"/home/carlos/dev/wedding-site/src/_includes/gallery_top.md",
+		"/home/carlos/dev/wedding-site/.eleventy.js",
+		"/home/carlos/dev/wedding-site/src/_includes/gallery_bottom.njk",
+		"/home/carlos/dev/wedding-site/src/_includes/macros/gallery.njk",
+		"/home/carlos/dev/wedding-site/src/_includes/gallery.html",
+		"/home/carlos/.config/BambuStudio/BambuStudio.conf",
+		"/home/carlos/dev/wedding-site/_site/static/css/style.css",
+		"/home/carlos/dev/wedding-site/_site/style.css",
+		"/home/carlos/dev/wedding-site/src/style.css",
+		"/home/carlos/dev/wedding-site/src/_includes/base.html",
+		"/home/carlos/dev/wedding-site/src/index.njk",
+		"/home/carlos/dev/wedding-site/src/data/site.json",
+		"/home/carlos/dev/wedding-site/.gitlab-ci.yml",
+		"/home/carlos/dev/wedding-site/index.md",
+		"/home/carlos/dev/wedding-site/_includes/base.html",
+		"/home/carlos/dev/wedding-site/.gitignore",
+		"/home/carlos/dev/hack/deepseek/Modelfile",
+		"/home/carlos/Downloads/Release",
+		"/home/carlos/Downloads/minted-addressbook-template.csv",
+		"/home/carlos/Downloads/Wedding Info Form (Responses) - Sheet1.csv",
+		"/home/carlos/Documents/backup_codes/carta-backup-codes.txt",
+		"/media/carlos/bkp/carlos/carlos/Email/carlos.asmat@gmail.com/Takeout/Mail/All mail Including Spam and Trash.mbox",
+		"/home/carlos/dev/coaster_maps/prints/draw_maps.ipynb",
+		"/home/carlos/Documents/backup_codes/cloudamo.txt",
+		"/home/carlos/.local/share/Steam/steamapps/common/The Sims 3/Game/Bin/Sims3.ini",
+		"/home/carlos/.local/share/Steam/steamapps/common/The Sims 3/Game/Bin/Sims3LauncherW.exe.config",
+		"/home/carlos/dev/hack/invisalign/box.base64",
+		"/home/carlos/dev/dephy/FlexSEA/flexsea-build/PSoC/regulate_builder.sh",
+		"/home/carlos/Documents/backup_codes/gitlab-recovery-codes.txt",
+		"/home/carlos/dev/dephy/talaria/talaria-os/README.md",
+		"/home/carlos/dev/dephy/talaria/talaria-os/Dockerfile",
+		"/home/carlos/Downloads/vpn-09ad83cb6ebc3ff88.txt"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 166.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 58.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "sotilrac.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"solitu.md",
+				"_posts/2009-02-18-solitudes.md"
+			],
+			[
+				"cd.md",
+				"_posts/2006-12-24-cd-lamp.md"
+			],
+			[
+				"big.md",
+				"_posts/2008-05-27-big-buck-bunny.md"
+			],
+			[
+				"css/mai",
+				"sotilrac.gitlab.io/css/main.css"
+			],
+			[
+				"maincss",
+				"sotilrac.gitlab.io/css/main.css"
+			],
+			[
+				"robotshop.md",
+				"sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md"
+			],
+			[
+				"floppy.md",
+				"sotilrac.gitlab.io/_posts/2008-05-28-floppy-note-pad.md"
+			],
+			[
+				"rock.md",
+				"sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md"
+			],
+			[
+				"zorromd",
+				"sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"
+			],
+			[
+				"opus.md",
+				"sotilrac.gitlab.io/_posts/2009-03-11-opus-smart-card.md"
+			],
+			[
+				"opamp.md",
+				"sotilrac.gitlab.io/_posts/2006-12-02-opamp.md"
+			],
+			[
+				"recei.md",
+				"sotilrac.gitlab.io/_posts/2006-12-03-wireless-am-receiver.md"
+			],
+			[
+				"isee.md",
+				"sotilrac.gitlab.io/_posts/2026-03-28-i-see-0xdeadbeef.md"
+			],
+			[
+				"js/programmer-calculator.js",
+				"sotilrac.gitlab.io/js/programmer-calculator.js"
+			],
+			[
+				"ribotshopmd",
+				"sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md"
+			],
+			[
+				"wavemd",
+				"sotilrac.gitlab.io/_posts/2009-11-30-montreal-hackers-wave.md"
+			],
+			[
+				"unboxingmd",
+				"sotilrac.gitlab.io/_posts/2011-02-07-nao-humanoid-robot-unboxing.md"
+			],
+			[
+				"geek2011md",
+				"sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md"
+			],
+			[
+				"geek.md",
+				"sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md"
+			],
+			[
+				"wind.md",
+				"sotilrac.gitlab.io/_posts/2010-02-16-the-wind-turbine-part-1-idea.md"
+			],
+			[
+				"wind",
+				"public/my projects/2010/02/16/the-wind-turbine-part-1-idea.html"
+			],
+			[
+				"css",
+				"sotilrac.gitlab.io/css/main.css"
+			],
+			[
+				"resume",
+				"sotilrac.gitlab.io/_data/resume.yml"
+			],
+			[
+				"rgb-led.md",
+				"sotilrac.gitlab.io/_posts/2011-01-17-rgb-led-mood-cube.md"
+			],
+			[
+				"zorro.md",
+				"sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"
+			],
+			[
+				"rock-paper",
+				"sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md"
+			],
+			[
+				"on-new",
+				"sotilrac.gitlab.io/_posts/2012-06-07-im-on-new-scientist.md"
+			],
+			[
+				"speechmd",
+				"sotilrac.gitlab.io/_posts/2011-03-13-speech-controlled-arduino-robot.md"
+			],
+			[
+				"spee",
+				"public/arduino/2011/03/13/speech-controlled-arduino-robot.html"
+			],
+			[
+				"zorro",
+				"sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"
+			],
+			[
+				"luck",
+				"sotilrac.gitlab.io/_posts/2009-11-18-i-am-the-luckiest-engineer-ever.md"
+			],
+			[
+				"hugo_source/themes/dephytheme/layouts/_default/list.html",
+				"hugo_source/themes/dephytheme/layouts/_default/list.html"
+			],
+			[
+				"FieldUpdate/version.py",
+				"FieldUpdate/version.py"
+			],
+			[
+				"device_structs.py",
+				"Device/device_structs.py"
+			],
+			[
+				"FieldUpdate/bootloader.py",
+				"FieldUpdate/bootloader.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
