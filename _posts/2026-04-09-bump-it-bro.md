@@ -19,7 +19,7 @@ From late 2011 through mid-2016, I worked at Aldebaran, the French robotics comp
 
 SoftBank acquired Aldebaran and rebranded it. After years of struggling to commercialize Pepper at scale, SoftBank Robotics sold the European division to United Robotics Group, which restored the Aldebaran name. Then, in mid-2025, Aldebaran entered receivership in France, and its assets were acquired by Maxvision Technologies, a Chinese company that created a subsidiary called Maxtronics to carry the work forward. The name has changed four times and the Paris headquarters emptied out. Regardless, roughly 20,000 NAO and 27,000 Pepper units were sold to more than 70 countries, and many of the interaction behaviors I helped develop are still running on them. The robots outlasted the company that made them, which is either a testament to good engineering or a quiet indictment of the business models built around them.
 
-My job in Boston was to make these robots engaging to interact with. NAO and Pepper were capable machines, especially for their time, but, like all robots, constrained by the energy and size limitations that result from needing to move and exists in the physical world. The processor was an Intel Atom, roughly comparable in single-thread performance to what you would find in a budget netbook circa 2013. For context, the phone in your pocket today has perhaps ten times the processing power, dedicated neural accelerators, and multiple high-resolution cameras with hardware-accelerated depth sensing. The robots had a single RGB camera (Pepper later added a depth sensor roughly equivalent to a first-generation Kinect). The tactile sensors in the hands were unreliable on a good day. The motors could not command much torque given thermal and battery limitations. The whole system ran on Gentoo Linux (a very configurale flavour that could be pared down to the bare minimum it needed), with a middleware called NAOqi, and we wrote behaviors in Python 2.7 on top of that stack.
+My job in Boston was to make these robots engaging to interact with. NAO and Pepper were capable machines, especially for their time, but, like all robots, constrained by the energy and size limitations that result from needing to move and exist in the physical world. The processor was an Intel Atom, roughly comparable in single-thread performance to what you would find in a budget netbook circa 2013. For context, the phone in your pocket today has perhaps ten times the processing power, dedicated neural accelerators, and multiple high-resolution cameras with hardware-accelerated depth sensing. The robots had a single RGB camera (Pepper later added a depth sensor roughly equivalent to a first-generation Kinect). The tactile sensors in the hands were unreliable on a good day. The motors could not command much torque given thermal and battery limitations. The whole system ran on Gentoo Linux (a very configurable flavour that could be pared down to the bare minimum it needed), with a middleware called NAOqi, and we wrote behaviors in Python 2.7 on top of that stack.
 
 |                        | NAO V5 (2014)                     | Pepper (2015)                                        |
 | ---------------------- | --------------------------------- | ---------------------------------------------------- |
@@ -39,24 +39,24 @@ My job in Boston was to make these robots engaging to interact with. NAO and Pep
 | **OS**                 | Gentoo Linux / NAOqi 2.1          | NAOqi OS (Linux) / Android 4.0 tablet                |
 | **Connectivity**       | WiFi a/b/g/n, Ethernet            | WiFi a/b/g/n, Gigabit Ethernet, BT 4.0 LE            |
 
-The natural instinct is to try to overcome these constraints by building more efficient perception, writing smarter tracking algorithms, and using better sensors. But that path leads to a bloated systems that is a best way too expensive and still doens;t come close to human-level capabilities. What I learned instead is that the best interaction design does not fight a robot's limitations; It recruits the human.
+The natural instinct is to try to overcome these constraints by building more efficient perception, writing smarter tracking algorithms, and using better sensors. But that path leads to a bloated system that is at best way too expensive and still doesn't come close to human-level capabilities. What I learned instead is that the best interaction design does not fight a robot's limitations; it recruits the human.
 
 ## Daps
 
 {% spotify "3chDozhup5tVqpL2I7yuHA" %}
 
 <blockquote>
-  The only way of knowing if a word is a <strong>real word</strong> in english, is for it to be in a song.
+  The only way of knowing if a word is a <strong>real word</strong> in English, is for it to be in a song.
   <cite>— Carlos</cite>
 </blockquote>
 
 One of my main projects was developing a suite of physical social interactions: fist bumps, handshakes, high (and low) fives, and hugs. We called it _Daps_, which turns out is a real word.
 
-These are gestures so deeply engrained in human social behaviour that everyone has very specific, very high expectations for how they should feel. A limp handshake from a person is off-putting; Likewise for a weak handshake from a robot. Why had I never stopped to think what my body actually does during a fist bump?
+These are gestures so deeply engrained in human social behaviour that everyone has very specific, very high expectations for how they should feel. A limp handshake from a person is off-putting; likewise for a weak handshake from a robot. Why had I never stopped to think what my body actually does during a fist bump?
 
 Consider: when someone extends a fist toward you, your visual cortex identifies the gesture and its social meaning in a fraction of a second. Your binocular vision triangulates the position of the fist in three-dimensional space. Your proprioceptive system knows where your own hand is without looking at it. Your motor cortex plans a trajectory, your shoulder and elbow and wrist execute it in a smooth coordinated motion, and your somatosensory system provides real-time feedback so you can adjust mid-flight as the target shifts. You modulate force on contact through haptic feedback loops running below your conscious awareness. You do all of this while, simultaneously, maintaining eye contact, reading the other person's expression, and generating an appropriate verbal response. The whole sequence takes about a second.
 
-Now all we need to do is replicate all this on the Intel Atom with a single camera, no depth information, unreliable sensors, and overheating motors...Or, the robot could put out its fist and say, _"Bump it, bro."_
+Now all we need to do is replicate all this on the Intel Atom with a single camera, no depth information, unreliable sensors, and overheating motors... Or, the robot could put out its fist and say, _"Bump it, bro."_
 
 {% youtube "K5KXGszMwMI" %}
 
@@ -68,15 +68,15 @@ The robot still has a job to do, though. The moment contact is detected, it has 
 
 I was backstage at the 2015 Clinton Global Initiative when Pepper ran Daps on stage with Neil deGrasse Tyson. The robot complimented his vest, cracked a pun about his style being "out of this world," and then asked him for a hug. Tyson opened his arms without a second of hesitation. The clip went everywhere. What made it work was that the robot knew how to ask, and knew what to do the instant someone said yes.
 
-I ran most of the high-profile demos in that period. At WSJD Live in Laguna Beach, Pepper performed for Tyra Banks and will.i.am (who insidentally was quite adept at talking to the robot becuase hiw wristwatch phone venture was using the same Nuance speech-recognition). Buzz Aldrin visited our Boston office once. The man had walked on the moon, and here he was fist-bumping our robot. He seemed delighted. All these interactions went well becuase of the careful timing and performance delivery.
+I ran most of the high-profile demos in that period. At WSJD Live in Laguna Beach, Pepper performed for Tyra Banks and will.i.am (who incidentally was quite adept at talking to the robot because his wristwatch phone venture was using the same Nuance speech-recognition). Buzz Aldrin visited our Boston office once. The man had walked on the moon, and here he was fist-bumping our robot. He seemed delighted. All these interactions went well because of the careful timing and performance delivery.
 
 {% gallery 3, "/img/blog/bump-it-bro/IMG_20151019_140015.jpg", "/img/blog/bump-it-bro/D41_DSC_2669.jpg", "/img/blog/bump-it-bro/D41_DSC_4815-ANIMATION(1).gif" %}
 
 Working on the hug behavior taught me things about human physical interaction that I had never consciously considered. Are you an over-arm hugger or an under-arm hugger? Do you go crisscross, one arm over and one under? Do you pat or squeeze? When is the hug done? These are choices people make instantaneously and unconsciously, but a robot has to have a very specific opinion about them.
 
-We settled on a wide-open posture that let the human choose their preferred style. The robot presented an invitation, arms wide, and when it sensed the person leaning in, it responded with a gentle press. That was enough. The human filled in the rest with their own muscle memory, their own expectations of what a hug should feel like. Oh and all these interactions need to degrade gracefully... but that is way too much detail.
+We settled on a wide-open posture that let the human choose their preferred style. The robot presented an invitation, arms wide, and when it sensed the person leaning in, it responded with a gentle press. That was enough. The human filled in the rest with their own muscle memory, their own expectations of what a hug should feel like. Oh, and all these interactions need to degrade gracefully... but that is way too much detail.
 
-{% fig "/img/blog/bump-it-bro/giphy.gif", "Pepper Huggin Neil" %}
+{% fig "/img/blog/bump-it-bro/giphy.gif", "Pepper Hugging Neil" %}
 
 ## You already know how
 
@@ -98,7 +98,7 @@ Something even more unexpected happened. When people held the robot's hand, they
 
 {% gallery 3,"/img/blog/bump-it-bro/IMG_20151020_175811-ANIMATION.gif", "/img/blog/bump-it-bro/IMG_20160424_163540.jpg", "/img/blog/bump-it-bro/IMG_20160425_142400.jpg" %}
 
-Aldebaran is gone, at least in the form I knew it. The office in Boston closed. The Paris headquarters changed hands and then changed hands again. The name has been through more owners than some of the robots. But somewhere, in a university lab or a hospital lobby or a classroom in a country I have never visited, a NAO robot is extending its fist and waiting. Don't leave him haniging.
+Aldebaran is gone, at least in the form I knew it. The office in Boston closed. The Paris headquarters changed hands and then changed hands again. The name has been through more owners than some of the robots. But somewhere, in a university lab or a hospital lobby or a classroom in a country I have never visited, a NAO robot is extending its fist and waiting. Don't leave him hanging.
 
 I work on exoskeletons now. Different robots, same question: where does the machine end and the person begin?
 
