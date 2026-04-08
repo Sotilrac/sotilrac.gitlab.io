@@ -7,3 +7,5 @@ media/
 .cache/
 .jekyll-cache/
 *.lock
+*.sublime-project
+*.sublime-workspace
