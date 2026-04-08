@@ -1,0 +1,445 @@
+- author: elio
+  date: "2008-04-15"
+  text: |
+    hello
+    I'm elio, philippines...
+    I'm having a hard time looking for a good reference book discussing thoroughly FPGA. i saw your project and i was amazed on how it works. what books must I acquire to understand more the program. if you have the books, can i download it and have it too?
+    Thank you...
+    God Bless
+- author: Carlos
+  date: "2008-04-15"
+  text: >
+    I don't know of any book treating specifically on FPGAs. The book I used for the Digital System Design Class (the one where I learned to use FPGAs) was Fundamentals of Digital Logic with VHDL Design Second Edition.I don't really remember reading it but it looks like I did. I think you could try to get it online (although it may be illegal). Please, send me an email if you need more info on the book.
+- author: elio
+  date: "2008-04-17"
+  text: |
+    thank you...
+    by the way may i know who's the athur of the book?
+- author: Carlos
+  date: "2008-04-17"
+  text: >
+    The authors are Stephen Brown and Zvonko Vranesic. Here is a link to the book's website: http://highered.mcgraw-hill.com/sites/0072460857/
+- author: sarfaraz
+  date: "2008-07-29"
+  text: |
+    hy i am sarfaraz.I read and found this project very good and taken an idea from this project now I wants to implement this speech recognition method using VHDL and FPGA for car locking, unlocking  and ignition which is my final year project.Please help me for this.I hope u will. 
+    my email addresses are
+    sarfarazattariciit@gmail.com
+
+    sarfaraz_attari_ciit@yahoo.com
+- author: tahder
+  date: "2008-09-13"
+  text: |
+    Hi Carlos! I am new to FPGA (had just started early this year) and I find your blog interesting and helpful. btw, I had added your blog site in my links. Here's my url
+    http://fpga-dsp-scratch.blogspot.com/
+
+    Thank you so much for sharing! Your site helps many :).
+- author: saurabh chadha
+  date: "2009-01-12"
+  text: >
+    sir i have read your entire project. i found it very interesting.am also working on voice recognition based on fpga..am using the same altera de2 board..am facing problems in programming the codec..we have to load the control word in codec..how to check the output of adcdat pin where digital data will be there.plz help me in this regard...
+- author: fayaz kamali
+  date: "2009-05-03"
+  text: >
+    Thanks u vv much , vv clear and easy code .
+- author: Carlitos
+  date: "2009-05-05"
+  text: >
+    You are very welcome!
+- author: baumer
+  date: "2009-05-28"
+  text: >
+    I was wondering if you knew how to save pictures taken with the de2 d5m ltm combo onto your computer.
+- author: nhat
+  date: "2009-06-22"
+  text: |
+    hi!
+    i'm Nhat, im from vietnam!
+    i'm working with FPGA, currently, i'm researching in speech recognize by using VHDL code for the FFT, ADC.
+    because i'm newbie, can u help me code these? 
+    thanks you!
+- author: Carlitos
+  date: "2009-06-29"
+  text: |
+    Sorry for the late response. I have been very busy and without regular access to a computer lately.
+
+    I am afraid I never tried such a device. It seems that they have some Verilog sample code for it on the manufacturers website.
+
+    I am sorry I cannot be of much help. Good luck with your project.
+- author: Carlitos
+  date: "2009-06-29"
+  text: |
+    Hi Nhat,
+
+    For the FFT, depending on the platform you are using, there are IP mocules that you can import into your project, Also there is opencores.org which features lors of useful modules.
+
+    As  for the ADC, you will need to interface with your hardware ADC and the best way to get started on that is to read your ADC datasheet.
+
+    I hope this helps and good luck.
+- author: fayaz kamali
+  date: "2009-07-26"
+  text: >
+    Iam Computer Engineering student i appreciate ur work u have done excellent job but system is still not 100% accurate how to achieve that please help
+- author: Ryan
+  date: "2009-07-30"
+  text: |
+    @fayaz kamali  
+
+    im just a Electronic engineering student,now i am doing such project also, here is some ideal can share which u..
+
+    i think u shuold improve ur filter. try to design a filter which is perfectly match to the sample voice clip which is going to be compare with the incoming one..
+- author: mahesh
+  date: "2009-08-06"
+  text: |
+    hey i liked ur project i wish to implement it im having cyclon ii fpga processor de2 board but m not having knowledge of vhdl ..will u plz provide me the vhdl code for speach recog.. plz mait it on my mail id rhythmdevine88@gmail.com 
+    thank you
+- author: mahesh
+  date: "2009-08-06"
+  text: >
+    im hving the same board u hav used
+- author: Alireza
+  date: "2009-08-19"
+  text: >
+    Hi,that was a nicce job,I am using DE2 for image transfering ,can you help me how to use the SD Card module to store and restore images?thanks.
+- author: Guardy
+  date: "2009-08-28"
+  text: |
+    Hi Carlos,
+
+    Greeting from the Caribbean. I find your speech recognition project very interesting and nicely done. Is there a way to share/send-by-email your Quartus II project so I can try it on my DE2 board...plz, Thanks, GCG
+- author: Amanda
+  date: "2009-09-29"
+  text: |
+    I think this article made some interesting points, I read a textbook directly related to this topic, its called Digital Systems Design Using VHDL by , I found my used copy for less than the bookstores at http://www.belabooks.com/books/9780534384623.htm
+
+    [WORDPRESS HASHCASH] The poster sent us '0 which is not a hashcash value.
+- author: Carlitos
+  date: "2009-11-10"
+  text: |
+    @Alireza 
+    Alireza, I do not have a lot of experience with SD cards but I think they use an SPI bus so you will require an SPI controller in order to be able to write or read from them.
+
+    (Sorry for the late response)
+- author: kahtan
+  date: "2009-12-02"
+  text: |
+    Hi Carlitos,
+    Can you please send me VHDL code, i need it in my project
+    Thank you in advance.
+    my Email is:
+    kahtan.jwair@gmail.com
+- author: Carlitos
+  date: "2009-12-02"
+  text: |
+    @kahtan  
+    I get this question very often so I think I have to answer it publicly once and for all: no.
+
+    Allow me to elaborate, I do not exclusively own the copyright for this work and thus I cannot share it freely. Also, I do not know where my source files are (they are in some backup somewhere). Finally, I do believe that implementing such a system is a very regarding experience and the instant gratification of having the source code might ruin the learning process.
+
+    Sorry for the negative response. Rest assured that I will answer any specific question that you (or anybody else) might have within my the limits of my knowledge.
+- author: varalakshmi
+  date: "2009-12-30"
+  text: >
+    i want to do project on speech recognition using fpga technology . i want some guidance regarding this project
+- author: swapniln joshi
+  date: "2009-12-31"
+  text: |
+    sir i have read your entire project. i found it very interesting.am also working on speech recognition based on fpga..am using the same altera de2 board..am facing problems in VHDL code for this project can u  please help me for this & tell me how to devolope vhdl code .
+    my emailid is
+    swapnil01joshi@gmail.com
+- author: Carlitos
+  date: "2009-12-31"
+  text: |
+    @varalakshmi  
+    @swapniln joshi  
+    As always, I will be please to answer any specific questions you may have.
+
+    Some tips: when writing VHDL code remember you are actually describing a circuit and not a program. Also, stick to standards, make everything modular and parameterizable (no hard coded constants) and KISS ( I guess this applies to programming in general)
+
+    Cheers and good luck.
+- author: varalakshmi
+  date: "2009-12-31"
+  text: >
+    acutually there is mapping from matlab to combinational logic and fsm using quartes there is problem in vhdl plese guide me i have no guidance but i want do project if any details send varalakshmi8882yahoo.co.in
+- author: varalakshmi
+  date: "2009-12-31"
+  text: >
+    sorry sir.varalakshmi888@yahoo.co.in previous sent mail id is wrong
+- author: kshore
+  date: "2010-01-03"
+  text: >
+    your project nice i also do that project give some guidance please
+- author: anodt
+  date: "2010-01-09"
+  text: |
+    i am executed the matlab program but how give the input.
+    i download one wave file.when i gave that input it gives invalid format.plese help
+- author: Rushil
+  date: "2010-01-16"
+  text: |
+    Hi,
+        I am working on speech to text conversion based on sopc.It uses audio codec in de2 ording and sampling of a signal.I dont understand how to make settings in it and how to use it.Please help me.
+- author: siri
+  date: "2010-02-01"
+  text: |
+    hiiii
+           Will u plz give the details of the detection part plzzz i.e, how it detects the input word and all............
+- author: Carlitos
+  date: "2010-02-01"
+  text: |
+    @siri  
+    The detection is rather simple. As shown in the slides, we used an averaging window. Whenever the average of the current window is larger by a certain threshold than the previous average, we consider a word is being said to the system.
+
+    I hope this helps.
+- author: rony
+  date: "2010-02-03"
+  text: |
+    please help..
+    im student,i have read ur project entirely, n also i have spartan3e500 fpga board,now i want to implement speech recognition on my board for my final task, may u give me ur guidance??anythings??
+    please send me on my email : shiro_nugros182@hotmail.com
+    thanx u so much..
+- author: Carlitos
+  date: "2010-02-03"
+  text: |
+    @rony  
+    I'll gladly answer any specific question that you (or anybody else for that matter) might have with respect to the project.
+- author: rony
+  date: "2010-02-04"
+  text: |
+    @Carlitos  
+    thx for ur reply,can u start 2 help me with step-by-step how to made it,,
+    first,u might be know if spartan3e don't have port for any mic,so,where i have to put my input signal for my mic??however there's few of,but where the best to??or i have to connect it directly to adc??
+    if i want it to recognise some word to control something,4 word maybe,which filter i have to choose??fft,dtw or hmm?? 
+    what file i have to create first for convenience??
+    is there any code that i can make it to be my guidance?? 
+    im gladly to hear ur reply...
+    thanx for ur att
+- author: Carlitos
+  date: "2010-02-04"
+  text: |
+    @rony  
+    1- You will receive your step-by-step guide in the mail in two to three business days. Would you like a cup of tea with that?  Seriously though, I am a blogger, not your personal electrical engineer.
+
+    2- Yup, you need an adc or ideally an audio coded for a mic.
+
+    3- You know best what algorithm best suits your application.
+
+    4- As stated before, I will not provide any sample code.
+- author: Milind Kawale
+  date: "2010-02-04"
+  text: |
+    this project very nice 
+    i need help for this project
+    this my final year project 
+    so i requst you please sir 
+    help
+- author: Rushil
+  date: "2010-02-04"
+  text: >
+    Hi, I ahve been able to get the adc data using audio codec.Now will i need to store the data?How can I record and store the data.
+- author: Carlitos
+  date: "2010-02-05"
+  text: |
+    @Rushil  
+    You need a memory device such as some SRAM or Flash
+- author: rony
+  date: "2010-02-05"
+  text: |
+    thx for ur rep,thats help me a lot...
+    i think thats a good idea to put some tutorial in ur blog though,u r expert on this FPGA..
+- author: badr
+  date: "2010-02-06"
+  text: |
+    Hello, I am a Moroccan student vhdl my teacher suggested I work on a project that seems to mind that you offered on your site I have to start the project I am beginning to hope that you will help me send me if you have any document on that and tell me how you started with this project.
+    best regards.
+- author: Carlitos
+  date: "2010-02-06"
+  text: |
+    @rony  
+    I did this project a long time ago. Let's just say I am a bit rusty on the working of the DE2. 
+
+    Also, writing a tutorial would take a lot of work and would be terribly specific and thus of no value for the great majority of people.
+- author: Carlitos
+  date: "2010-02-06"
+  text: |
+    @badr  
+    All the info I have is already posted on the website. Enjoy and good luck with your project!
+- author: Leo
+  date: "2010-02-08"
+  text: |
+    hello, your project is really important I am a beginner in this field and my teacher suggested I work on a project like please is what you can give me the vhdl code blocks of your architecture?
+    best regards.
+- author: rony
+  date: "2010-02-08"
+  text: |
+    @Carlitos  
+    if u not very busy,im still hope for ur email...
+    thx a lot..
+- author: Carlitos
+  date: "2010-02-08"
+  text: |
+    @rony  
+    Is there any question I missed?
+- author: badr
+  date: "2010-02-10"
+  text: |
+    hi Mr.Carlos. I am  reading your project report but I have not understood that part of such detection W1 and W2 and Th represents what? and why if the difference is greater than Th then the word is considered from sc? I hope you will help me on that, thank you in advance.
+    best regards.
+- author: Carlitos
+  date: "2010-02-10"
+  text: |
+    @badr  
+    If the average of Window 1 (W1) is greater (by a certain threshold Th) than the average of Window 2 (W2), then we consider that the sound started. Else, it is still silence (or background noise).
+
+    I hope this helps.
+- author: LEO
+  date: "2010-02-15"
+  text: |
+    hi Mr.Carlos,
+    plz, for the ADC , why did you take 8 bits for the precision??
+- author: jesska
+  date: "2010-02-15"
+  text: |
+    Hello Mr. Carlos, I have not understood this phrase exists in the frequency content
+    ''Since the length of a word is 1.024 s and the sound is sampled at 5 kHz, five 1024-points FFTs are required to fully characterize a single word.''  plzzz explain me that.
+
+    best regards.
+- author: jesska
+  date: "2010-02-17"
+  text: >
+    answer me plzzzz
+- author: Carlitos
+  date: "2010-02-17"
+  text: |
+    @jesska  
+    Sorry for the delay. This is quite simple: let us say a word (an actual sound) lasts for 1.024 seconds, and that the sound is sampled at 5 KHz (5 thousands times per second). This means that for a 1.024s sound there will be roughly 5000 samples. So, in order to compute the FFT on the sample we need a roughly 5000 points FFT, or five 1024-points FFTs.
+
+    I hope this is clearer.
+- author: jesska
+  date: "2010-02-17"
+  text: |
+    Mr.carlos plzzzzzz  can you give me just the code of block that compute  the distance I'm really need it very much. please sir send me only that.
+    Here is my email if you want to send it to me.                 style2006_b@hotmail.com
+    sorry for such questions and thank you for your help.
+    best regards.
+- author: Carlitos
+  date: "2010-02-17"
+  text: |
+    @jesska  
+    As I said before: I do not have the code any more. It is in some obscure backup who knows where (that's how organized I am). And also, I'm sure you can do it yourself. It is a simple mathematical formula (euclidean distance).
+
+    Good Luck!
+- author: Carlitos
+  date: "2010-02-17"
+  text: |
+    @LEO  
+    For convenience solely.
+- author: jesska
+  date: "2010-02-17"
+  text: >
+    ok thank you very much Mr.carlos and sorry for such questions
+- author: Carlitos
+  date: "2010-02-17"
+  text: |
+    @jesska  
+    Don't be sorry.
+
+    BTW, I will gladly answer any specific question you may have. Of course this applies to all my readers.
+- author: sujith
+  date: "2010-02-23"
+  text: |
+    Hello Carlos,
+                       Wats the major advantage in processing Speech in FPGA rather DSP ? 
+    Which compiler u gonna implement here in your project?
+- author: HARINI NELLUTLA
+  date: "2010-02-28"
+  text: >
+    I Just want the brief idea about the performance of speech recognition process using VHDL implementation.
+- author: Asma
+  date: "2010-03-01"
+  text: |
+    hi carlos,
+    I read your report of your project on speech recognition.
+    I would like if possible for me to understand the working principle of inputs / outputs of the block Memory Batch operator, and especially "start_addr", "end_addr" and "done".
+    thank you.
+- author: Rushil
+  date: "2010-03-06"
+  text: |
+    Hi,
+       I have read your project, it is good.I just wanted to know that threshold value remains 0.05 only when you implemented it in fpga or it changes.
+- author: Rushil
+  date: "2010-03-06"
+  text: |
+    Hi,
+       Considery that one person trains the kit.So, FFT values of his speech will be stored in training mode.Now if during recognition speaker is a different person, then what will be the accuracy of recognition?
+- author: Carlitos
+  date: "2010-03-08"
+  text: |
+    @Rushil  
+    The threshold must be calibrated to your particular setup.
+- author: Carlitos
+  date: "2010-03-08"
+  text: |
+    @Rushil  
+    The recognition is only accurate with the same user saying the same word in the same situation.
+- author: Asmae
+  date: "2010-03-09"
+  text: |
+    hi carlos,
+    I read your report of your project on speech recognition.
+    I would like if possible for me to understand the working principle of inputs / outputs of the block Memory Batch operator, and especially “start_addr”, “end_addr” and “done”.
+    thank you.
+- author: jaswar
+  date: "2010-03-12"
+  text: |
+    Hi carlos,
+    the sound length is exactly 1.024 sec or grater than that for input to training phase of speech recognition using matlab.i gave the input using microphone of wavelength 9 sec.after running the program it gives the error INDEX EXCEEDS MATRIX DlMENSION.
+- author: vasun
+  date: "2010-03-19"
+  text: |
+    hi carlos,
+                   speech recognition already present in operating sysems like vista.what is the importance of this project.because it hardware cost more.please clear my doubt........
+    i also done vhdl code for this project.please reply......
+- author: Carlitos
+  date: "2010-03-19"
+  text: |
+    @vasun  
+    Speech recognition performed in hardware is different from the software counterpart in the sense that it can be integrated in a single chip and work without a computer. Also, this project aim was mainly combine various disciplines learned in the electrical engineering curriculum in a single capstone project.
+- author: Thiru
+  date: "2010-03-21"
+  text: |
+    hi carlitos,
+    I read your project....i like it...and myself i want do the same as my final year project...
+
+    i can understand the matlab codes...i 'm new to Matlab and Quartus II ...
+
+    could u explain the steps from Matlab to QuartusII...
+- author: Thiru
+  date: "2010-03-21"
+  text: |
+    hai,sir
+    i'm from india..i already posted a comment..but i didn't mentioned clearly about my doubts.
+
+    i can understand the matlab programs..and i gave one wave file as input & i got the output as distance 0,word is recognized!...
+
+    could u please guide me...wat  can i do next sir...then after this i have to move to Quartus ii or else here itself steps are there sir...
+
+    then sir with the help your documents...i sucessfully created Block  design files for memory controller,distance module and mux....
+
+    so please guide sir...wat are all steps i can do next...for your Kind Attention my 
+    email:th71comniq@gmail.com
+- author: Thiru
+  date: "2010-03-26"
+  text: >
+    could u please...reply sir
+- author: Carlitos
+  date: "2010-03-26"
+  text: |
+    @Thiru  
+    I suggest you make sure you understand the algorithm in general. then, the implementation should be straight forward. It is very important to understand all the basic concepts before you worry about the details of the algorithm.
+- author: rushil
+  date: "2010-04-18"
+  text: |
+    Hi,
+       Your project is good.But I didn't understand the need of using FFT. Why was FFT used?
+    Can't we recognize speech without using FFT? What will be the effect of not using FFT?

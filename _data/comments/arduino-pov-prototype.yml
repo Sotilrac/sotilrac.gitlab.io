@@ -1,0 +1,91 @@
+- author: Kevin
+  date: "2007-08-20"
+  text: |
+    Hi, 
+    how do you know how fast the blade turns?
+    i mean you have to know that so that the leds are on at the same location every turn
+- author: Carlos
+  date: "2007-08-20"
+  text: |
+    Good question Kevin. I don't really know it. In order to have everything synchronized, I tried many delays and before long I got the pattern nicely in sync (trial and error rules).
+
+    The time of one full revolution can be estimated by adding the time it takes to produce a drawring with the time between drawings. I'll upload the calculation tonight.
+- author: Anonymous
+  date: "2007-08-21"
+  text: >
+    use a magnet and a hall sensor!!!
+- author: Carlos
+  date: "2007-08-21"
+  text: |
+    A hall sensor would be good, but unfortunately I don't have one.
+
+    I plan to use my bike's speedmeter once the POV is mounted on it.
+- author: Anonymous
+  date: "2007-08-30"
+  text: |
+    You can also use an opto coupling device from an old mouse, simply making a hole. Sure you have an old mouse, don't you?
+
+    Serkeros
+- author: "Diaak!"
+  date: "2008-06-07"
+  text: |
+    Hey there. I'm trying to do something similar right now. Unfortunately i'm not that good in coding. Did you upload your code by now? It would really help me alot, i initially started this project after stumbling across this blog-entry. 
+
+    greetings!
+- author: Carlos
+  date: "2008-06-08"
+  text: >
+    Diaak, just check the post that comes after this one to get the answer to your question.
+- author: ALFONSO
+  date: "2008-08-24"
+  text: |
+    Hola Carlos,
+
+    tengo un apregunta que hace mucho tiempo me intriga y no sabía a quién preguntar.
+
+    En tu proyecto utilisás, para unir los cables, un tipo de "capuchones" de color amarillo, los cuales como que se "enroscan" a los cables empalmados (en tu proyecto, los de color blanco y negro).
+
+    Encontré que aquí, en Montreal, es la manera más común de unir cables, y me pregunto si esta manera es tan buena como la de utilizar un "dado" para hacer las uniones.
+
+    En mis clases de electricidad, había aprendido que la manera más segura y mejor en cuanto a la conducción, es con los dados.
+
+    Llego acá, y me encuentro con que todas las conexiones eléctricas se hacen con esto, y no me parece tan seguro como el dado, que aprieta los cables con un tornillo, esta manera de aquí, como que tiene la tendencia a zafarse.
+
+    Tenés idea de por qué, los ingenieros canadienses determinaron que es más útil, o más confiable, el uso de este tipo de dispositivos ?
+- author: Carlos
+  date: "2008-08-24"
+  text: |
+    Los capuchones no son la mejor manera de unir cables, se pueden zafar fácilmente con un poco de tensión mecánica en el cable.
+
+    Es cierto que en Montreal son muy comunes y baratos, y debe ser por eso que todos los usan. Yo los uso para hacer conexiones provisorias rápidas. Si miras un proyecto mas en serio como el  excavador lunar, donde me encargué de hacer las conexiones eléctricas, no vas a ver ni un capuchón.
+
+    No sé que piensan los otros ingenieros de estas conexiones, pero es cierto que casi todas la conexiones eléctricas en las casas están echas así (con capuchones).
+
+    Gracias por leer mi blog y suerte.
+- author: nacho
+  date: "2008-11-05"
+  text: |
+    Hola Carlos, yo hace poco me he comprado una Arduino y esto es asombroso, el mejor proyecto que he visto hasta el momento hecho con Arduino. En que lo programaste? Tienes pensado poner más info para que nosotros también podamos hacer algo parecido? Te comprendo y no creo que quieras desvelar más datos, pero sería maravilloso.
+
+    Gracias?
+- author: nacho
+  date: "2008-11-05"
+  text: >
+    perdóname... el "gracias?", lógicamente era un "gracias!"
+- author: Ben Harvey
+  date: "2009-01-05"
+  text: |
+    Hi Carlito!
+    Just found your site and think it's great! I've been wanting to build something like this for ages, and I used your code and instructions to do it. Thanks!
+
+    I've written a little flash movie that allows you to build your array data visually, so you can copy and paste the data in, rather than having to type all those little ones and zeros. It saved me a lot of time.
+
+    I hope someone will find it useful! It's at my site -> http://gomako.co.uk/main/?p=11
+- author: Andy
+  date: "2009-03-30"
+  text: |
+    Hey Guys, check this out.
+
+    http://www.spikenzielabs.com/SpikenzieLabs/SMC_POV.html
+
+    This Spikenzie guy, has automated the process, i know he sells arduinos, but this POV that he made was using a pic processor.

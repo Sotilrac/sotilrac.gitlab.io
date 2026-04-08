@@ -1,0 +1,95 @@
+- author: mrbiotech
+  date: "2008-09-08"
+  text: |
+    Hi,
+
+    Love your blog!  How does the Eee-PC feel in terms of build quality?  Does it flex a bit when closed or is it relatively solid?  How's the keyboard?  Also curious about typing on the keyboard: is it bouncy and feel like it has no reinforcement within the laptop, or is it like typing on a Mac?
+
+    Keep up the good work!  :)
+- author: Carlos
+  date: "2008-09-08"
+  text: |
+    mrbiotech, thanks for the comment.
+    You have really good questions, I should have mentioned this in the post.
+
+    The Eee PC feels very sturdy and doesn't flex. I like the keyboard and it feels like it is really well integrated with the rest of the body (no bounciness). I never used a mac so I cannot say how similar or different it is.
+
+    I hope this helps
+- author: mDup
+  date: "2008-09-10"
+  text: |
+    Hi Carlos,
+
+    I bought a 1000H ans also want to install KDE-4.1. Did Kubuntu work without tweaks? There are so many references to Linux+EeePC and most of them tell you that you need to fix a few things (WiFi, Eth, micro, ,,,).
+
+    Thanks
+- author: Carlos
+  date: "2008-09-11"
+  text: |
+    In order to get wifi and wired LAN working I used the kernel modules from array.org/ubuntu/.
+
+    Adam McDaniel has made a great job in putting together these modules that work great. I suggest you follow the instructions posted in his forum for installing the kernel modules (basically, you need to download them from the website using another computer and put it in a USB key. Then you install them on your eeePC freshly blessed by kubuntu and you reboot. This will get your wifi and LAN working and you'll be able to add the array repos as any other repo).
+
+    You can find the forum post explaining this procedure here:http://forum.eeeuser.com/viewtopic.php?id=38030
+
+    BTW, I don't have any bluetooth devices so I have not tested it. Also, I have some troubles getting the sound form the mic but I have not fiddled a lot with it yet, so it might be an easy fix (or probably not).
+- author: Anonymous
+  date: "2008-09-17"
+  text: |
+    Hey, thanks for the great post. 
+
+    I just bought one of these and while Xandros has its charms... I was wondering whether there were better set ups out there. Now I know! 
+
+    But I have a question: 
+
+    How is the KDE 4 version running on it? Is it stable? 
+
+    I know I could just try this myself, but I make my living from my laptop and I need something steady. 
+
+    Thanks
+    F
+- author: Anonymous
+  date: "2008-09-17"
+  text: |
+    Also, did you install the Kubuntu Kde4 Remix or did you install the KDE 3 version and upgrade from there. 
+
+    Thanks again
+    F
+- author: Carlos
+  date: "2008-09-17"
+  text: |
+    F,
+
+    KDE 4.1 is running very stably (it is much more stable and polished than 4.0) and I use it everyday without problems.
+
+    If you want to test ubuntu you can use a live cd (with an external cd drive) or a live usb key. You'll be able to boot ubuntu without modifying your system
+
+    I used the KDE4 remix version in order to limit the amount of kde3 packages installed in my system in order to save space.
+
+    So far the things that don't work on my system are: the mic, the shortcut buttons (silver ones), the volume Fn keys, the screen off key, and the wireless en/disable key.
+
+    Finally, I can do many things with Ubuntu that were difficult with xandros since I can install all the programs I want and there is much more community support.
+
+    Happy hacking.
+- author: Nezzie
+  date: "2008-11-04"
+  text: |
+    I ordered my Eee 1000 on Saturday and just stumbled upon your blog after googling for Eee PC 1000. I am typing this from my old Eee 701 but I am dead excited about getting my 1000 series now. I a expecting a phone call from the computer shop either tomorrow or the day after and i'm glad you gave it such a cool review. Nice video by the way.
+
+    I have ordered a white one:same colour as my 701. I am using Hardy Heron too, but keen to get Ibex on my new Eee.I am a Gnome man myself, but KDE is pretty flashy too. Nice review man, I am so excited to take my 1000 series out of the box. They are iconic machines!
+- author: Anonymous
+  date: "2009-01-12"
+  text: |
+    Have you tried using Mandriva KDE4.1 it works pretty much flawlessly on my 900, everything seems to work, all short cuts, wireless, fn keys the lot.
+
+    Only issue I saw was the power off didn't completely shut down the little mite, but just do a system upgrade and select the new kernel at boot, this fixes the issue.
+
+    Mandriva has pretty much full blown support for eeepc, and unlike older releases, runs very quick indeed, I even have all the 3d gubbins going too, it looks awsome.
+
+    smiffy
+- author: Keller
+  date: "2009-02-25"
+  text: |
+    Hey Carlos,
+    Thanks for the blog and video.  Helped me decide to order one.  KDE makes the difference for me and it's great to see it running full steam on the Eee.  
+    Thanks again.

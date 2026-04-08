@@ -1,0 +1,16 @@
+- author: Z
+  date: "2009-12-02"
+  text: |
+    I'm using Linux for over a year now, and altogether I'm very pleased with it.
+    However, there are several flaws, and since you wrote about OpenOffice, I'll mention some of those.
+    As an university student I need to read .doc and .ppt files on a daily basis, and it's nearly a nightmare with OO. As you stated, the .doc compatibility is bad, but then you surely haven't seen any of those fancy graphics animated .ppt-s rendered by OOImpress. The frames are just standing still with the last phase of animation displayed only, and this effectively hides any text that is added to the slide at the beginning but written over by another text element.
+    Also longer pieces of text are often falling out of the slide's borders, making them unreadable too.
+    But the single worst point is the handling of MS Equations. Being an engineering student most of my lectures contain equations, often those huge ones with fractions of fractions or powers of powers or just plain greek characters.
+    Many of these would not render properly under Impress.
+
+    Writer is much more friendly IMO. It imports .doc files nearly verbatim, but exporting them is another failure. I was once even told by a teacher that my homework would not even load under MS Word.
+    And though it has a few very nice functions (like autocompletion) it still has major bugs. For example I had to work with plain text data acquired in the laboratory and just sketched down in a txt file, that consisted of numbers with decimal points and tabulators for keeping columns organised. I wanted to create a table inside Writer, so I copied the whole bunch of numbers and converted them to a table. Writer did exactly that, and a few other things. First, it took all numbers that had a fraction part smaller than 12 and converted them to DATES. (so 12.04 would become "April 2012"). Then it took the other numbers and rounded them to the nearest tenths.
+    All this without any prompt or even notice. And it was only possible to revert the whole operation in one piece, including the table conversion.
+    After this incident I looked through all the settings, but could not find any relevant items to modify.
+
+    Don't get me wrong, I'm still using OO, but only because it is free and not because it is so great.

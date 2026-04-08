@@ -1,0 +1,10 @@
+- author: Benoit
+  date: "2007-04-08"
+  text: >
+    What's a FPGA? It looks like a bomb.
+- author: Carlos
+  date: "2007-04-12"
+  text: |
+    A field programmable gate array (FPGA) is a device containing programmable logic components. They can be programmed to duplicate the functionality of combinational logic circuits. -Wikipedia
+
+    In short, it is a chip that can be programmed to quickly implement digital circuits.

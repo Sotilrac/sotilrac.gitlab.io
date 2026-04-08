@@ -1,0 +1,16 @@
+- author: Andrew
+  date: "2008-10-15"
+  text: |
+    I tried your method, but since i use gnome it did not work. however with a little probing i figured out two different way's to accomplish this in gnome.
+
+    One is to use this launcher command:
+
+    bash -c "cd /home/andrew/arduino-0012/; ./arduino"
+
+    and the other way was to create a script with the following code, rename it to "arduino", and copy it to /usr/local/bin
+
+    [code]#!/bin/sh
+
+    cd /home/andrew/arduino-0012
+    ./arduino 
+    [/code]

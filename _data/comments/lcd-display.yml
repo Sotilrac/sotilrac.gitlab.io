@@ -1,0 +1,9 @@
+- author: Logical guy
+  date: "2007-02-18"
+  text: >
+    It was nice that he was giving away those displays, and you got one.  If I was making a project using one of these, I'd start off simple, perhaps a clock with temperature (both current and min/max).
+- author: Carlos
+  date: "2007-02-18"
+  text: |
+    Nice having you back logical guy!
+    Yup, you're right, I'll start up easy (since I know near to nothing about controlling LCDs). I think I'll interface the LCD to my computer and get something running (like a clock or the computer stats). Then I'll move to a standalone display by using a PIC.

@@ -69,6 +69,15 @@ export default function (eleventyConfig) {
   });
 
   // --- Filters ---
+  eleventyConfig.addFilter("postSlug", (fileSlug) => {
+    return fileSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+  });
+
+  eleventyConfig.addFilter("nl2br", (str) => {
+    if (!str) return "";
+    return str.replace(/\n/g, "<br>");
+  });
+
   eleventyConfig.addFilter("dateFormat", (date, format) => {
     const d = new Date(date);
     const months = [

@@ -1,0 +1,13 @@
+- author: Pedro
+  date: "2009-11-30"
+  text: >
+    Did you installed it on your Linux machine? How did it work? I have to work with Xilinx FPGA in the near future, wich is the reason I stick with windows on my laptop.
+- author: Carlitos
+  date: "2009-11-30"
+  text: |
+    @Pedro  
+    Since Altium Designer works only on Windoze, I had to use the Windoze version of ISE. Nevertheless, I have tried the Linux version and I can say it is much worse (since it does not keep up to date with new kernels (as pretty much every close source application).
+
+    Anyways, I run Altium Designer and ISE in a virtual machine (virtualbox) with XP.
+
+    I hope this helps.

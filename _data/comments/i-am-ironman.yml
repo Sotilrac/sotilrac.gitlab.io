@@ -1,0 +1,219 @@
+- author: Elepski
+  date: "2008-06-29"
+  text: |
+    Hey there... I like the work.. but i must say that it seems a bit over complicated and a bit bulky... I did something similar...
+
+    I uses an IKEA Dioder under cabinet light, a 12 volt clicker battery, a cheap push button switch and some electrical tape.. all attached to a glove. The switch it placed so that it will close momentarily with a slight  flax back of the wrist or lack closed with a full snap of the wrist.. check out the pics
+
+    http://i277.photobucket.com/albums/kk46/elepski/photo2.jpg
+
+    http://i277.photobucket.com/albums/kk46/elepski/Picture005.jpg
+
+    http://i277.photobucket.com/albums/kk46/elepski/Picture002.jpg
+
+    http://i277.photobucket.com/albums/kk46/elepski/Picture003.jpg
+
+    http://i277.photobucket.com/albums/kk46/elepski/Picture004.jpg
+- author: Carlos
+  date: "2008-06-29"
+  text: |
+    Hi elepski,
+
+    Your design is indeed really simple. I guess the main difference between your design and min is that the use of a potentiometer to ramp up the light intensity.
+
+    Congrats.
+- author: Anonymous
+  date: "2008-06-29"
+  text: |
+    Hi there, nice prop ;-)
+    Have you thought about replacing the central LED with a more powerful SSC P7?
+
+    Tachikoma
+- author: Anonymous
+  date: "2008-06-29"
+  text: |
+    Check out these puck lights from IKEA... not as bright, but much thinner. 
+
+    http://www.ikea.com/ca/en/catalog/products/20119932
+- author: Carlos
+  date: "2008-06-30"
+  text: |
+    Thank you for the feedback.
+
+    SSC P7: that LED looks awesome. I did not put that much attention into choosing the LEDs. Now I know there are many other (much more powerful) choices. Any ideas on where to buy those SSC P7?
+
+    IKEA Dioder: those look very nice and compact.
+- author: Anonymous
+  date: "2008-06-30"
+  text: |
+    You can buy it (along with hundreds other electronics goodies) from DX, it has the lowest price and free shipping ;-)
+    http://www.dealextreme.com/details.dx/sku.11809
+
+    Btw, why don't you come and subscribe to Candlepowerforums.com?
+    Tachikoma
+- author: Mad Scientist
+  date: "2008-08-06"
+  text: |
+    Love the Project!  I can't wait to see what you are up to next.  I just started a blog about my project as well.  It's a laminar flow nozzle.  Check it out if you wish.
+
+    madlaboratory.blogspot.com
+- author: Carlos
+  date: "2008-08-07"
+  text: |
+    Mad Scientist,
+    Thank you for the comment. I saw your project and I have to say it looks very impressive.
+
+    Cheers
+- author: Anonymous
+  date: "2008-08-07"
+  text: >
+    hey dude can you give use instructions?
+- author: Anonymous
+  date: "2008-08-07"
+  text: >
+    can you give us pics of the parts.
+- author: Carlos
+  date: "2008-08-17"
+  text: |
+    I don' t have any more pics than the ones I posted. If you want more info about the build, please refer to the video on this post and on the one in the What am I building post.
+
+    The same goes for the instructions. As I said, I doubt anybody could have the same combination of materials I had (they were pretty random). If you have any specific questions, please feel free to email me.
+- author: Nicholas
+  date: "2008-08-26"
+  text: >
+    Hey have you given any thought to selling your prop? or making custom orders? if so please email me Solscud(a)gmail(dot)com
+- author: Anonymous
+  date: "2008-08-29"
+  text: |
+    Carlos,
+
+    What is the ohm-age of that sliding potentiomenter? I see some on ebay 50k Ohm jobbies. Would they work for this do you think?
+
+    Phillip
+- author: Carlos
+  date: "2008-09-01"
+  text: |
+    Nicholas,
+    Because of the nature of the materials I used, It would be hard to make many copies of this prop. That is why I don't think I could sell it.
+
+    Phillip,
+    I used a 100K Ohms potentiometer. Any pot could be used as long as it reduces the current enough for the LED not to light up.
+- author: Anonymous
+  date: "2008-09-04"
+  text: >
+    Hi, im new to these gadgets and whatnot, but I saw the video and I am amazed! I was just wondering if I need a resistor for each light? And what kind of switch would be good for this project? thanks
+- author: Anonymous
+  date: "2008-10-26"
+  text: >
+    Thats really cool! my bro and i ar trying to build the best ironman costume there is and we had difficulty figuring out how to make the blasters(resistors) thanks. peace out
+- author: Carlos
+  date: "2008-10-29"
+  text: |
+    You need to do a regular current limiting circuit for your LEDs (ie. a resistor in series with your LEDs) and if you want to have the fading effect, you simply add a potentiometer in series with your resistor.
+
+    I'll post an update soon with a more thorough explanation and some diagrams. Please don't hesitate in asking further questions  may you feel the need.
+- author: linuxnerd
+  date: "2008-11-15"
+  text: |
+    Que repulsor tan fantastico diseñastes! 
+
+    I grew up in L.A. but was born in a small town in Mexico so my Spanish is still there.
+
+    The best part is your use of increasing intensity as you move your hand!  And I always love metal in any project. 
+
+    If I had time, I would have used a lot more metal in my 5 year old son's suit he wore for Halloween.
+
+    You might check it out the slideshow for the Instructables Halloween Contest here:
+
+    http://www.instructables.com/id/Iron_Man_Suit_with_Tech/
+
+    Need to take a bit more video and editing needed in the next few days of suit in action here and more technical information too after that.
+    http://linuxnerd.wordpress.com/
+
+    Hasta luego,
+    -Enrique
+- author: James
+  date: "2009-04-03"
+  text: >
+    With “Iron Man 2” shooting set to begin on Monday, Robert Downey Jr. was rocking the Tony Stark look at the “Soloist” junket today, where he had an update for MTV News about the plot of the ol’ shellhead sequel.
+- author: Christian Zehntner
+  date: "2009-07-08"
+  text: |
+    Dear Carlos,
+      My name is christian. I am really not very tech savvy but was wondering if maybe there is a way you could make a set of those for me? I know that parts are not very available as you have mentioned, but i was hoping maybe you could come up with something? i would be more than willing to offer you $50.00 per each unit plus whatever the shipping is if you can manage to make another set. Please let me know as soon as you can. Thank you.
+- author: Carlitos
+  date: "2009-07-10"
+  text: |
+    Christian,
+
+    I'm afraid I cannot really build a new repulsor.
+
+    I would love to help you out and sell you the repulsors but the aluminum ring and back plate are very hard to find. They come in very old (and very large) hard drives.
+
+    As soon I I find a way of producing them I'll be very glad to let you know.
+
+    Cheers,
+    Carlos
+- author: christian zehntner
+  date: "2009-07-11"
+  text: |
+    @Carlitos  
+
+     Thank you for the reply. If you find any way of duplicating it i appreciate it for you letting me know. It doesn't have to look exactly like it does in your video, anything close will do as long as it still has the effect with the pentiometer and the lights. But thank you for keeping me in the loop!
+    Christian
+- author: frankie j
+  date: "2010-01-13"
+  text: >
+    can you use somthing else insted of the street sweeper bristle like a substitute
+- author: patman
+  date: "2010-01-27"
+  text: >
+    this is so cool.  please let me know if you can build one for me =)
+- author: tommy
+  date: "2010-02-03"
+  text: |
+    hi, sry to drag an old topic back up, but can you send a wiring diagram of some sort over? vietchico at yahoo
+    thank you
+- author: Carlitos
+  date: "2010-02-03"
+  text: |
+    @tommy  
+    I'm sorry but I did not draw any diagram for this project.
+
+    All LEDs are wired in parallel. The massive resulting LED is the in series with a battery, an appropriate resistor, and a linear potentiometer.
+
+    I know this is not a good approach but it works so far.
+- author: tommy
+  date: "2010-02-04"
+  text: |
+    no, no
+    sounds great, thank alot for that insight
+    thinking of outfitting it over with ironman forearm gauntlet 
+    so wanted to know the wiring series/parallel,
+    great job tho
+    noticed you put it as "prototype" are you still working on it?
+    or sumin you put aside now, just curious, thank goodluck with all your other works
+- author: Carlitos
+  date: "2010-02-05"
+  text: |
+    @tommy  
+    I would like to improve on it and make a new design that is more reproducible but I have been very busy so it will have to wait.
+
+    Thanks for the interest and good luck with your gauntlet.
+- author: Camille
+  date: "2010-02-19"
+  text: |
+    Hi Carlos. I am a mother of 2 young boys. Andrew is 9 and is now a fan of yours! He loves Iron Man and tech-y stuff so your video gave him great hope for his future engineering endeavors! Within 5 minutes of his seeing your video on the repulsor, he ran through the house looking for old cameras and computer and electrical gadgets to begin "building" his own! Ha!
+    Thanks for using your God-given abilities to use and igniting a passion for the same in a young boy!
+    Blessings to you.
+- author: Carlitos
+  date: "2010-02-19"
+  text: |
+    @Camille  
+    Wow! Thank you for that very kind comment. I am really really happy to see I could inspire someone into building things.
+
+    I'll be glad to answer any questions you or your son might have for your creations.
+- author: Alex
+  date: "2010-06-02"
+  text: >
+    Hi, im not so great with wires and stuff, so i was wondering..... exactly what parts do you need to make it work?

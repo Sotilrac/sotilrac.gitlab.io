@@ -1,0 +1,179 @@
+- author: Eko Setio
+  date: "2008-06-12"
+  text: |
+    Hi Carlitos.. 
+
+    Im a total embedded noob playing around with an empty atmega168 and arduino.
+
+    what program did you use to upload the bootloader? I cant upload sketch nor the bootloader to my Atmega168. I hope you have some tips for me, i've followed everything the site told me to do. Ive been hangin around the arduino forum for days with no result. 
+
+    Maybe you could also make a tutorial as well :D
+- author: Carlos
+  date: "2008-06-12"
+  text: |
+    Hi Eko,
+    The Arduino bootloader can be burnt to the Arduino board by using the Arduino software.
+
+    If you have no Arduino board whatsoever, Maybe you should have a look at this (if you haven't already): www.arduino.cc/playground/Learning/AtmegaStandalone
+
+    If you prefer to program in C and then compile it and upload it to the ATmega, you could use AVR-GCC and AVRDUDE.
+
+    I hope this helps. Good Luck
+- author: Bala C
+  date: "2008-11-02"
+  text: |
+    Hi Carlos,
+
+    I have wired up your parallel port programmer for use with an ATMEGA8 in the Arduino Diecimal board as an external programmer.
+
+    When I try to compile and upload my programs using Arduino and your parallel prot circuit, I get the error:
+    Can't find programmer id "null"
+
+    I added the statement upload.using= Parallel Programmer to the preferences.txt file.
+    I got the same error.
+    I changed this to upload.using = dapa
+    Same error
+    I even included statements:
+    Parallel.name=Parallel Programmer
+    Upload.using = avrdude.conf:658
+
+    same error.
+    Sorry for being naive. Can you help with the correct statements /advice.
+
+    regds
+    Bala
+- author: Carlos
+  date: "2008-11-02"
+  text: |
+    Bala,
+
+    I use the programmer only for burning the bootloader, and I am very far from anything remotely similar to an Arduino at the moment (and for a long time) so I cannot try and compile something to see how it works. I think your best chance is to look at the page where I got the programmer model (http://www.arduino.cc/en/Hacking/ParallelProgrammer) and the Arduino website in general.
+
+    Enjoy your Arduino hacking.
+- author: Eko Setio
+  date: "2008-11-02"
+  text: |
+    Maybe its a good idea that you first check your parallel port settings. Make sure that it is ECP. you can change it from bios. 
+
+    rgds,
+    eko
+- author: Bala C
+  date: "2008-11-02"
+  text: |
+    Hi Carlos and Setio,
+    Actually, Initially I wired the parallel port adapter ONLY for bootloading the ATMEGA8, as I anyhave the serial cable for laoding programs via the Diecimla to 'bootloaded' chip. I tried bootloading via diecimla and via a breadboarded version (as per arduino site). Using the Arduino software if I chose the diecimla board option and then try to bootload, I get a message avrdude: initialisation failed, rc=-1
+    invalid device signature. Expected signature for ATMEGA168 is 1E 94 06.
+    If I use the ArduinoNG or older w/parallel programmer option I get a simialr message with expected signature for ATMEGA8 is 1E 83 07
+
+    Your site says enter an id in preferences.txt at the upload.using line for the programmer from the programmers.txt file. Obviously my statements (ref earlier email) are wrong. Hence,which is the correct id for your parallel port programmer? Are any other lines to be added in this case? 
+
+    I need to be able to bootload the ATMEGA8, hence I'd very much appreciate your help.
+
+    Since giveio is installed the parallel port is recognised.
+    regds,
+    Bala
+- author: Eko Setio
+  date: "2008-11-03"
+  text: |
+    Bala,
+
+    I used UISP and AVRDUDE instead of the Arduino software. 
+
+    RC=-1 might indicate that ur parallel programmer is not working. 
+
+    Again, make sure that your parallel port is ECP. have u done this? otherwise this will not work at all. Check this via the device manager. Another thing was the interrupts. I cant remember which to use just make sure its ECP and try it with the three different option of interrupts. 
+
+    Btw, i used it as port1 and address is 0x378. 
+
+    I used the UISP to check if my parllel programmer is working or not, then i used AVRDUDE to upload my hex file. 
+
+    check out my questions at the arduino forum. they too have some info for Atmega8. 
+
+    http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1208859235/45
+
+    Regards,
+    eko
+- author: J
+  date: "2009-03-13"
+  text: |
+    Sweet article, thanks! :)
+
+    I built one of these purely to burn the boot loader to my ATMega168, but for several frustrated hours I kept getting:
+
+    avrdude: Device signature = 0x000102
+    avrdude: Expected signature for ATMEGA168 is 1E 94 06
+            Double check chip, or use -F to override this check.
+
+    Occasionally the device signature would be another random number, but mainly 0x000102.
+
+    I found that shortening the cable between the parallel port and chip solved the problem. I have also read that lower value resistors could have been a solution too.
+- author: Carlos
+  date: "2009-03-16"
+  text: |
+    Hello J,
+
+    I'm glad you liked the article.
+
+    The length of the wire can be a problem indeed. Thus is where twisting the wires together and using a ferrite core comes in handy.
+
+    I'm glad you got your programmer finally working.
+
+    Cheers
+- author: sajid
+  date: "2009-04-05"
+  text: |
+    Hi, carlitos
+    i think u can help me in my project coz im facing a problem which is related to prgramming atmega168 through USBASP programmer
+    i have avr dude with me, 
+    eroor showing is the device signature error and the same that expected signature is 1E94  06..etc
+    can u help to remove this error....
+- author: Carlos
+  date: "2009-04-06"
+  text: |
+    Sajid,
+
+    I'm afraid I cannot help you pout with that one since I have never tried to do that.
+
+    Sorry about that. Cheers
+- author: calfred
+  date: "2010-01-16"
+  text: |
+    hi Carlos, nice presentation on the parallel programmer. 
+    according to forum users at arduino.cc, the Atmega8 works fine, 
+    but Atmega168 does not. 
+    are you sure this can work on the 168???!
+- author: Carlitos
+  date: "2010-01-31"
+  text: |
+    @calfred  
+    I am pretty sure it works. I used it many times without any problems.
+
+    I hope this helps and sorry for the late response, I was out on a trip.
+- author: calfred
+  date: "2010-02-01"
+  text: |
+    I've built this avr serial programmer. 
+    http://electronics-diy.com/avr_programmer.php
+    in contrast to the parallel port programmer, it can act as an external programmer. 
+    no need bootloader whatsoever. 
+    but it doesn't work so far... might be due to the tedious wiring. 
+
+    1) after u burn the bootloader into Atmega8/168 using parallel port programmer, 
+    2) then u just connect it serially / usb to program like normally to load future project codes?
+
+    could you verify point 2) for me Carlitos
+- author: Carlitos
+  date: "2010-02-01"
+  text: |
+    @calfred  
+    You are right. After burning the bootloader, you should be able to program the device serially (thats the purpose of the bootloader).
+
+    The programming may fail some times, but it hapend to me only once or twice, in which case you can simply resend the program. Also, keep in mind that the length of the wires may affect the performance of your programmer.
+- author: calfred
+  date: "2010-02-10"
+  text: |
+    yo Carlitos. 
+    wassup. 
+    here's to show my working Arduino (homemade)
+    http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1265685755
+    Parallel Programmer works fine. :D. Wires are only 10inches long.

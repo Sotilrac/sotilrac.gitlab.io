@@ -1,0 +1,113 @@
+- author: Scott
+  date: "2007-11-14"
+  text: >
+    Not sure how I would use this, but can you use this to make an IR Repeater?  I purchsed a repeater from Radio Shack, but it is a peice o'crap.  I was thinking of making something that would transmit/send through CAT5.  Do you know how it wouldeb done?
+- author: Carlos
+  date: "2007-11-15"
+  text: |
+    if your idea is to have an IR detector at one end of a cable and an IR transmitter at the other, then this circuit could certainly work.
+
+    But this circuit is set so to have a very low range (so it doesn't pick up ambient noise). In order to adjust it to a decent range you need to tweak the resistors, specially the lKOms one.
+
+    Finally if you want to transmit IR, simply replace the yellow LED with an IR LED.
+
+    About the cable, I think you could use pretty much any cable, since the IR signals for remotes are usually in the kHz range so the frequency response of the cable is not an issue.
+- author: Stendall
+  date: "2007-12-02"
+  text: >
+    Have you thought about keep some cells of the 9V batery, and use the to provide energy to the circuit?
+- author: Carlos
+  date: "2007-12-02"
+  text: |
+    stendall, thats a very interesting idea! I never thought of that.
+
+    Doing so would require:
+    1- not using a dead battery (obviously).
+    2- modifying the bjt's biasing or maybe even replacing it altogether.
+    3- modifying the form factor of the circuit so it fits in the battery along with as many cells as possible.
+
+    Overall, it could be a bit difficult but definitely feasible.
+- author: Anonymous
+  date: "2007-12-10"
+  text: |
+    Using an LM567 Tone Decoder is a better idea. With a small handful of parts you can have a modulated signal. I've built a few of these (Jameco apparently sells a kit, which fortunately has the schematic online), and they work great:
+
+    http://www.robotstore.com/download/3-337.pdf
+- author: Anonymous
+  date: "2008-03-03"
+  text: >
+    I'm a little confused. In the picture of the bread board circuit, the Clear LED appears to be indicating led and the Blue the IR, because of the way they are in the circuit. However in the last picture you show the blue led facing out as if it is the indicating LED. What am I missing here?
+- author: Carlos
+  date: "2008-03-03"
+  text: |
+    I see why you're confused Anonymous. The blue LED is used to detect the IR light and the clear LED is a standard yellow LED.
+
+    However, in the last picture the LED sticking out from the top of the battery case seems to be blue. This is caused (I guess) by something blue on the environment reflecting on the clear LED.
+
+    In short, the LED coming out from the top of the battery case is the clear one but it looks blue for some strange reason.
+- author: Phil Winder
+  date: "2008-03-07"
+  text: |
+    I often find it easier to just use a TSOP variety of IR demodulators.  This is the one I use in the UK:
+     Here
+
+    All it does it receive a 38kHz IR signal in, like that from a remote, and produce a a logic one output.  Obviously much more noise resistant than a simple photodiode that react's to all sorts!  (There are other frequencies available)
+
+    Cheers,
+    Phil
+
+    P.s. On a simple robot I i did a while ago, I did exactly the same thing you are about to.  Take a look
+- author: Carlos
+  date: "2008-03-07"
+  text: >
+    Thanks for the tip Phill. Now I finally know how those three-legged "IR diodes" work. I think I have some of those laying around so I'll give that a try for sure.
+- author: Anonymous
+  date: "2008-03-12"
+  text: >
+    I was curious about the first picture, the one with the remote. What are the two prongs sticking out of the sides of the project battery?
+- author: Carlos
+  date: "2008-03-12"
+  text: >
+    Anonymous, on the fist picture, I placed one of the AAAA batteries underneath the detector so it would be at the same height as the remote (which is thicker than most remotes)
+- author: Anonymous
+  date: "2008-03-12"
+  text: >
+    Thankyou very much. Early today I started this project, I have my project battery ready. After a trip to Radio Shack tomorrow I'll be ready to finish it up. It's a very neat project.
+- author: Falcon
+  date: "2008-07-18"
+  text: >
+    dude i want to know.....wat will happen if i use a forward biased ir diode....cn u just explain me why not we use the forward biased case...sorry for the trouble
+- author: Carlos
+  date: "2008-07-18"
+  text: >
+    The IR diode is basically an IR light. If you forward bias it, it will light up (of course you won't be able to see the light with the naked eye)
+- author: Falcon
+  date: "2008-07-18"
+  text: >
+    hey if that is so....then cn an ir diode detect ir rays too?????i mean u r using it for detecting ir rays right....but a diode cn only emit right not detect....i mean is ir diode and ir sensor the same????
+- author: Falcon
+  date: "2008-07-19"
+  text: >
+    hey dude help me here...i think i've lost my basics here...i just wanna ask howcome an led meant to emit rays absorbs them to generate electric signals....pls reply ...cn i get ur yahoo or orkut id..maybe we cn chat sumtime
+- author: Carlos
+  date: "2008-07-20"
+  text: >
+    LED emit light when a current passes trough them in a certain way. Similarly, they allow current to pass trough them when when an appropriate light is shined to them.
+- author: rbarberian
+  date: "2008-08-27"
+  text: >
+    Hi there.  I'm interested in using this ciruit to power a small hobby motor (1.5-3v) in addition to the L.E.D.  Due to the nature of the project, I also need to power the circuit with 3 volts only instead of 9.  Can you tell me what I'd need to do for these modifications?  Thanks!
+- author: Carlos
+  date: "2008-08-29"
+  text: |
+    rbarberian,
+    You will have to build a similar circuit (that is, one that uses a transistor as a switch) but you need to use a transistor that will work under your voltage requirements and you'll have to figure the correct biasing for your circuit to work.
+
+    Here you can find a simple guide about using a transistor as a switch.
+
+    Good luck with your project.
+- author: udafreezy
+  date: "2008-12-23"
+  text: |
+    hi there,
+    do u have a circuit or project ( IR photo detector circuit that can function when the dark)using 24 VAC?do u have any idea?thank you..

@@ -18,6 +18,23 @@ layout: layouts/base.njk
         {{ content | safe }}
     </div>
 
+    {% set slug = page.fileSlug | postSlug %}
+    {% set postComments = comments[slug] %}
+    {% if postComments %}
+    <section class="post-comments">
+        <h2>Comments from the original blog</h2>
+        {% for c in postComments %}
+        <div class="comment">
+            <div class="comment-meta">
+                <strong class="comment-author">{{ c.author }}</strong>
+                <time class="comment-date">{{ c.date }}</time>
+            </div>
+            <div class="comment-text">{{ c.text | nl2br | safe }}</div>
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
     {% set nav = collections.publicPosts | postNavigation(page.url) %}
     {% if nav.prev or nav.next %}
     <nav class="post-nav">

@@ -1,0 +1,140 @@
+- author: Carlos
+  date: "2007-08-20"
+  text: |
+    For those wondering how to measure the rotation speed, one easy ways of doing it is by trial and error.
+
+    First, make a drawing and tweak the timers until it remains stationary on the display (i.e. the picture is drawn every time in the same place). Then simply calculate the time it takes for the drawing to be displayed in order to get the rotation period.
+
+    Let's perform this calculation for the "Alan" pattern (my most steady pattern) and get the period T:
+
+    T = 2*(timer1 * frame_len * frame_num + timer2 * frame_num + timer3)
+    T = 2*(3*4*4 + 15*4 + 13) = 242 ms
+
+    This means the speed S can be expressed by:
+    S = 1000/242 * 60 = 248 RPM
+- author: MikMo
+  date: "2007-09-12"
+  text: >
+    Would it be possible (if the POV is used in a bicycle wheel of course) to use a magnet mounted on the bike fork and a reed relay on the POV board to let the Arduino board calculate the RPM of the wheel and adjust the timervalues accordingly ?
+- author: Carlos
+  date: "2007-09-12"
+  text: |
+    I'm not totally familiar with relays, but I see two issues with that approach: making a high enough current with the magnet so the relay closes and the switching speed (the latter is not that much of an issue though, I believe).
+
+    Besides that, yes it could work fine.
+
+    Anyways I'm working an improver version or the POV display so I'll give more details about measuring the speed.
+
+    By the way thanks to everybody for all the comments and interest. I'm very flattered to actually have people reading my stuff. :)
+- author: Oscar G.
+  date: "2007-10-14"
+  text: |
+    Hello Carlos,
+    I have recently discovered your site an i think is realy fun and have usefull documentation about POV. You have inspired me to do my own POV with the same breadboard (Arduino clone) that i have here. Well, he work fine in only one day of work ;) I have used your arrow example to run with and works well. Now i have to calibrate the timers to get correct display and this is the main problem...
+
+    As you say, is basicaly test and error but i think it takes too much time (program, turn motor ON, see result, fail... stop motor and wait for end rotation, reprogram an so on...). I think is not practical. What kind of method have you used to calibrate the device? any trick? I think seriously to insert a phototransistor to detect the cicle and auto-calibrate the code with. What do you think?
+
+    Thank you Carlos,
+
+    Regards from spain ;)
+- author: Carlos
+  date: "2007-10-14"
+  text: |
+    Hi Oscar,
+    I'm very glad to hear that I my little Arduino project was useful to someone.
+
+    I know, the timing is problematic and many people ask questions about it. I'm currently working on it whenever I can but I have been a bit busy (and lazy) lately.
+    I think using a phototrasistor is the best (simplest) solution and thats mainly why I built a IR detector (I wanted to experiment before actually getting a binary signal from a transistor).
+
+    When I did the timing, I measured the rotation period by trial and error using the formula I posted in a previous comment. Then I calibrated the other drawings according to the period I calculated. I know it can get a bit frustrating but I got lucky and I got the timing right fairly quickly.
+
+    I'll post a new code with self speed calibration as soon as I can. Right now I have some difficulties using interrupts and making an elegant program.
+- author: Anonymous
+  date: "2007-10-31"
+  text: |
+    Hello from spain Carlos,
+    I write here to show you my progress of my own Arduino Wireless POV based on your previous work.
+    Here is a cool proyect featuring Arduino POV and 433Mhz Wireless modules.
+    This proyect includes a IR sensor to auto-calibrate display timing on each complete loop. This allow a very acurate precision and stability when drawing on the air! This Arduino POV is based on a old floppy disk enclosure and a old CD-ROM drive, even a old car-radio for the main DC motor. Cheap and fun granted!
+
+    Im improving the wireless code to control text from PC to the board remotely conecting together to a USB port.
+
+    Also here is a cool edited video that you can see the making of and a final video example when running device:
+    Arduino Wireless POV on YouTUBE - BricoGeek.com
+
+    Here is the post link in my site (in spanish):
+    Arduino Wireless POV - BricoGeek.com
+
+    I hope you enjoy and post them if you whant, algo many thanks for you help! As you can see on some pictures of the video, your arrow is running perfectly, then im drawing a "A" on air with speed control over the IR LED ;)
+
+    Regards,
+    Oscar 
+    www.BricoGeek.com
+- author: Carlos
+  date: "2007-10-31"
+  text: |
+    Wow Oscar, thats really impressive!
+    Thank you for keeping me up to date with your progress. I really appreciate it.
+
+    I'll be updating my POV soon (I know I keep saying that) and I'll surely use an IR LED speed measurement.
+- author: Anonymous
+  date: "2007-11-09"
+  text: |
+    Hello Carlos,
+    I have allmost finished my Arduino Wireless POV and i have some nice video to show you in plain work.
+
+    You can see it here:
+    Arduino Wireless POV (Part 2 of 2)
+
+    As you can see, the IR tachometer works very well an keep the text very stable on the air.
+
+    I hope you enjoy it and thank you for your previous work on Arduino POV!
+
+    Kind regards from Spain,
+    Oscar
+- author: Henry
+  date: "2008-03-02"
+  text: |
+    Hi Carlos, you have some nice projects... one tip I have found with POVs is that it is really worth adding a few more LEDs, perhaps surface-mount ones, so that you get a higher vertical resolution.  10 or 12 pixels are much better than 8, and 16 gives a really fantastic picture.  You can use fonts and it looks a lot better.
+
+    Best,
+    Henry
+- author: Carlos
+  date: "2008-03-02"
+  text: |
+    Thank you very much for the advice Henry.
+    I was working on a 8-LEDs POV but I think now I'll make a 16-LEDs one, since it is trivial to add LEDs when driving them with a shift registe.
+- author: Dave
+  date: "2008-06-08"
+  text: >
+    The reed switch approach does not use any current. It uses a permanent magnet, like a bicycle speedo.
+- author: Charlie
+  date: "2009-01-13"
+  text: |
+    This was pretty helpful. I used it to get my RGB matrix up and going. 
+
+    Thanks,
+    -fs
+
+    http://foolstr.com
+- author: Darren
+  date: "2009-01-25"
+  text: |
+    Hi Carlos,
+
+    Many thanks for these instructions - hugely helpful. I've just prototyped my first POV, intended for a bicycle wheel. Now I just need to work out how to stop it from frying at the first splash of rain!
+
+    I'm also hoping to add a hall effect sensor to automate the timing, and a centrifugal switch so it only works when the wheel is turning. Not sure whether to switch off power to the whole board, or just disconnect the outputs...
+
+    I had a question though. I noticed you mentioned using a shift register. Did you ever try this? I don't have one to experiment with, but I am thinking that the frequency that the LED array is driven at might not be sufficient for a POV device - it seems like having 2 separate layers of POV. I'd like to give it a go, but not sure I want to go to the trouble of ordering one if it's not going to work.
+
+    Anyway, if you read this then thanks again for the code and advice, and I'll look forward to seeing more contraptions.
+- author: Carlos
+  date: "2009-01-25"
+  text: |
+    Darren,
+    I'm very glad my instructions were helpful to you. I actually tried to use a shift register and it works well (but I have never tested it on a bicycle wheel). The key is to make sure you can update the LEDs fast enough. By using the fact that you are shifting 8 bits at 20 MHz (the arduino clock frequency), the maximum speed of your bike wheel (<50 Km/h I would say) the number of updates you need to do in one turn and the wheel diameter, you can compute the update frequency.
+
+    Also, shift registers are hugely useful in pretty much every project so even if you don't end up using them, they won't be wasted.
+
+    I use this shift register just in case you are wondering. Good luck with your project.

@@ -1,0 +1,20 @@
+- author: nolebotic
+  date: "2008-02-12"
+  text: >
+    He makes a good point.  Batteries can be a blessing and a curse.  I did a similar modification to my battery powered dremel tool, so it can be both wired and wireless:  http://nolebotic.blogspot.com/2007/12/workshop-modify-your-wireless-drill-for.html
+- author: Anonymous
+  date: "2009-03-09"
+  text: >
+    Just a quick question on the power supply, just by looking at your pics I believe that my helicopter is the same model you have. I have a found a power supply that is 9 volts and 1 Amp.  Will the Amps be ok or is that too much for the electronis in the toy?
+- author: Carlos
+  date: "2009-03-09"
+  text: |
+    Hello,
+
+    When you read the ratings of a power supply, the amps mean how much current it can give at its max. So, although 1 amp is a lot of current for a toy, the toy will only use as much current as it needs. So you should not have any problems.
+
+    A problem could arise if you use it for something that consumes more than 1 amp. In that case (when the power supply is asked for more than what it can give), your power supply could burn, melt, shut down, or provide less voltage than it should. In short, it will fail in some way or another.
+
+    Also, make sure your power supply provides DC current (it may sound silly, but I've done that mistake before).
+
+    Cheers and good luck.

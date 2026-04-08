@@ -853,6 +853,50 @@ figure.post-fig figcaption {
   border-radius: 1rem;
 }
 
+/* --- Comments (archived from original blog) --- */
+.post-comments {
+  margin-top: 3em;
+  border-top: 2px solid var(--silver);
+  padding-top: 1.5em;
+}
+
+.post-comments h2 {
+  font-size: 1.2em;
+  color: var(--slate);
+  margin-bottom: 1.5em;
+}
+
+.comment {
+  margin-bottom: 1.5em;
+  padding: 1em 1.2em;
+  background: var(--pearl);
+  border-radius: 6px;
+  border-left: 3px solid var(--silver);
+}
+
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5em;
+  font-size: 0.85em;
+}
+
+.comment-author {
+  color: var(--deep-sea);
+}
+
+.comment-date {
+  color: var(--slate);
+  font-size: 0.85em;
+}
+
+.comment-text {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+
 /* --- Print --- */
 @media print {
   .no-print,

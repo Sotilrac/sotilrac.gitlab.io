@@ -1,0 +1,62 @@
+- author: Anonymous
+  date: "2007-12-26"
+  text: |
+    I must congratulate you on your design.  I have always had trouble with these sort of devices - small, fiddly and likely to come apart or look bad because the pieces don't mate well due to small errors in my design.
+
+    I am of the opinion that children's hearing damage is repairable, anyone going to the local swimming pool on a Saturday afternoon will agree, as eventually some 14 year old girl is likely to scream in their ear.  This must happen to children as well, they don't seem to be the worst off because of it when entering adult life.
+- author: Carlos
+  date: "2007-12-26"
+  text: |
+    Thanks, I'm happy you like my design.
+
+    I know that children ears (and the rest of their bodies) are very resilient. Nevertheless, listening to very loud music for extended periods of time can cause unrepairable ear damage at least on adults and it is always best to prevent this from happening.
+- author: Chris
+  date: "2008-03-06"
+  text: |
+    An easy way to make it smaller and perhaps even more sturdy is to make it on a board as small as possible and then just cover it in epoxy. Can even be shaped into a funnylooking figure the kids might enjoy having attached to their soundsource.
+
+    Chris....
+- author: Chris
+  date: "2008-03-06"
+  text: >
+    On second thought: When I looked on a 3.5mm jack similar to the one you have used I think there is actually room to fit the two resistors inside the plug. Especially if you are able to use SMD kind resistors.
+- author: DanMan
+  date: "2008-10-29"
+  text: >
+    how did u cleanly cut your pcb?
+- author: Carlos
+  date: "2008-10-29"
+  text: >
+    I used a hacksaw and some sand paper to cut the circuit board.
+- author: Anonymous
+  date: "2008-11-05"
+  text: |
+    Another option, that;s not wasteful of power:
+
+    a pair of  low voltage zener diode placed in parallel with the load: wired between the shield of the head phones and each signal line, independently. (With the pointy end toward the signal line)
+
+    When the headphone volume is adjusted above the zener's breakdown voltage, it clips the signal above that voltage. The rest of the time, it behaves as a reverse biased diode (minimal current)
+
+    In practical terms, this means that if you turn the volume up too loud, your music sounds distorted, since a good portion of the signal is being clipped. This would make a hard volume limiter.
+
+    Might have to experiment a bit with the zener values...
+- author: Peesh Awerk
+  date: "2009-09-14"
+  text: >
+    I'd like to see a variance limiting process, so that dialog and other vocals are loud enough, without detonations and such being deafening. Boost the low amplitude signals and attenuate the high amplitude signals. Seems to me that should be doable.
+- author: Peesh Awerk
+  date: "2009-09-14"
+  text: >
+    Why does this site put a goofy pic I didn't choose above my bogus name?
+- author: Carlitos
+  date: "2009-09-15"
+  text: |
+    @Peesh Awerk 
+    Peesh, this site is all about goofy pictures! The avatars are automatically generated for those who do not already have one.
+
+    As for the advanced signal processing you describe, let's just say that it would take many more components than two resistors.
+- author: Carlitos
+  date: "2009-09-17"
+  text: |
+    @DanMan 
+    Dan Man, I cut it with a hacksaw and filed it. Sorry for the late answer, I think I had not seen you r comment before.

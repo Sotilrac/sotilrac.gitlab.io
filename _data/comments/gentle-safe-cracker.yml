@@ -1,0 +1,282 @@
+- author: Eric
+  date: "2009-07-21"
+  text: |
+    But...What was in safe then ?
+    ;-)
+- author: anon
+  date: "2009-07-21"
+  text: >
+    I have done this manually and legally. Its by touch, you feel the resistance change as the pin drops. Spin left a lot to reset to zero, then ever so slowly and gently right to click/left to click/right etc. It does click.  Stethascope helps or in a pinch a wine glass, base firmly to the metal near the dial.  They sanded fingers so they could feel the tumbler drop. And be patient and quiet and listen. I opened one and inside was the combination.
+- author: Andre
+  date: "2009-07-21"
+  text: |
+    why not rip a servo apart, tap off the motor and feed the drive to a larger drive chip to drive a second motor. that should work :)
+
+    alternatively use the existing pcb and sub in any old multiturn pot, a small gearbox and suitably power (koff vcr eject mechanism /koff) motor, this works well for small robots.
+
+    if this doesen't work, a simple stepper driver hooked up to any old dead scanner's stepper motor will work, even a pic is enough.
+    you could even reuse the existing pcb and kludge in your own pre-driver :)
+
+
+    regards, -A
+- author: Donnie Barnes
+  date: "2009-07-21"
+  text: |
+    Uh, your idea for having it open like that may not work.  Often with safes like that the last "code" number twist is when a "catch" will move the latch.  Problem is you've preloaded the latch with a lot of weight.  So the torque required to turn the knob once you get the right combo found out is going to be HUGE if that thing weighs very much.
+
+    That said, I'd suggest a method in your controller to detect when/if the motor sticks.  If you get to that point, you've probably found the combo and just need to detach it from your hanging mechanism and turn it by hand.
+- author: clckwrk
+  date: "2009-07-21"
+  text: |
+    Mathematically isn't this going to take a long time anyway?  I don't know how many numbers on the lock, but isn't it something like numbers on the dial factorial?  If it's 20 numbers on the dial that's something like
+    2432902008176640000 even if you could do a hundred a second....that's pretty large.
+- author: Hue Mann
+  date: "2009-07-21"
+  text: |
+    Lubing the safe:  Try using Silicon Oil (http://en.wikipedia.org/wiki/Silicone_oil)as its properties permit it to penetrate deeply.  
+
+    I picked up some from the Photocopier repair guy.
+
+    Would also consider rotating the safe after applying it to allow gravity to get it to where it needs to be.  
+
+    Kudos to your sage use of gravity as the final step in the process.
+- author: christopher
+  date: "2009-07-21"
+  text: >
+    @mathematically challenged: 50*50*50 or 125000 possibilities.  Assuming he knows the order of operation, i.e. what turn directions he needs for each number
+- author: shreksbrother
+  date: "2009-07-21"
+  text: >
+    @christopher, the TRULY mathematically challenged person, clckwrk is correct.  If there were 20 numbers, the calculation would be 20! (The exclamation point represents 20*19*18*17*16, etc, down to 1).  Think I first learned that in 9th grade.  where did your 50*50*50 come from??
+- author: Mythgarr
+  date: "2009-07-21"
+  text: |
+    @shreksbrother This isn't a problem of permutations. Think back to a combination lock - you turn right 2 times to the first number, left once past the first number to the second, then right to the third (in some cases - masterlock I believe). Thus, there are 20 possibilities for the first number, 20 for the second (20*20), and 20 for the third (20*20*20).
+
+    You are thinking of a situation where you have 20 items and you need to know how many ways to order them there are - say, a pushbutton style lock where the question is the order in which you push each button.
+- author: blackhamma
+  date: "2009-07-21"
+  text: >
+    @shreksbrother, i think you are incorrect.  think about it, there are 50 tries for the first number(assuming 50 numbers).  50 possibilities for the second number.  and 50 possibilities for the third number.  20! is used to find how many combinations there are for a 20 number set of non repeating numbers.
+- author: devin
+  date: "2009-07-21"
+  text: |
+    Actually, 50x50x50 is correct, I think.
+
+    50 factorial would be for orderings of 50 unique objects, but we're looking at 3-item permutations with replacement.... actually, I think it's be 50x50x49, since one of the numbers has to be different, doesn't it?
+- author: Skitchin
+  date: "2009-07-21"
+  text: |
+    @shreksbrother 
+
+    There's something like 50 numbers on that lock, 3 digits to the combo, so you do 50 to the power of 3, or, 50*50*50 = 125000 possible combinations. Say you could try 5 calculations a minute, 125,000 / 5 = 25000 minutes / 60 minutes = ~416.5 hours / 24 hours = ~17 days.
+- author: Cybergibbons
+  date: "2009-07-21"
+  text: |
+    @shreksbrother, @clkwrk, you are both wrong. It seems odd to be so confident when you've not got the knowledge to work it out.
+
+    20! would be correct in the event that you were arranging 20 distinct objects in a given order i.e. not this situation.
+
+    An ideal 3 wheel combination lock will have 100x100x100 combinations - you can pick any number for any of the 3 wheels. However, there are a few restrictions and tolerances that reduce this. First, the mechanism is not so precise as to differentiate between 49 and 51, especially on cheaper locks. Also, due to the mechanism, the last wheel cannot have a number in the last 20% of so of the range. So you are normally down to 50x50x40 at best. Though, if you aren't sure of which direction it turns, double that.
+
+    The dial on this lock only goes to 50, which is often found on cheaper locks. 
+
+    Most combination locks on boxes that don't have a handle to operate the door locking mechanism. That means that the dial needs to operate the locking bolt. Putting a lot of force on the door might make it impossible to turn the dial when the combination is right.
+- author: Carlitos
+  date: "2009-07-21"
+  text: |
+    Hello Everybody,
+
+    I'm glad to see so much interest on this project. Thank you very much for all the good suggestions, I'll be putting them into practise for the next attempt at opening the safe.
+
+    As for the mathematical intrigue, the dial has 50 numbers. If there are three numbers in the combination and my assumption about the way to turn the dial, there are 50^3 = 125 000 combinations as many of you suggested.
+
+    It is safe to assume that one combination can be dialled in 2 seconds, this means it will take 250 000 seconds or around 70 hours (or around three days).
+
+    As for the contents of the safe, they remain unknown, but hopefully not for long.
+- author: Skitchin
+  date: "2009-07-21"
+  text: |
+    @Carlitos 
+
+    Btw, http://hackaday.com/2009/07/21/gentle-safe-cracker
+- author: tyco
+  date: "2009-07-21"
+  text: |
+    Also, I would suggest trying only even numbers at first, and if that fails, then try the rest of the set of combinations (all combinations that are not all even numbers).
+
+    The reason for this is that the rotating discs in the lock are usually sloppy enough that you can be a number or two off in either direction of the correct combination, on all 3 items. I know my own safe at home, i can miss each number by a step or two (out of 100) and it will still throw the bolt and open.
+- author: some guy
+  date: "2009-07-21"
+  text: |
+    To get more torque to the dial why don't you reverse the gears. Connect the little one to the servo, and the big one to the dial. 
+
+    The upsides are that you get A. More power, and B. Greater resolution. 
+
+    The downside is that you'll have to translate the dial coordinates into # of servo rotations and servo location etc.
+
+    Good luck.
+- author: Jose
+  date: "2009-07-21"
+  text: |
+    Hello everybody. 
+
+    I know this is a totally different approach, but it would be faster if you tried another way. Like "anonymous" said before, trying to mimic the manual method would save lots of time I think. 
+
+    If you add a "click detector" to the inputs, and then slowly turn the dial in the apropriate direction, the numbers must become evident. 
+
+    Even if you don´t listen to the clicks as you said, maybe by recording the sounds and analysing the recording it is possible to find them.
+
+    Good luck, and keep us informed.
+
+    PS: Did you shake the safe? Did it make any noise? :P
+- author: Morgan
+  date: "2009-07-21"
+  text: |
+    Combination locks by there design don't have the 50*50*50 possible combinations that yall keep coming up with. There's something with the gearing that prohibits the ablity to use all 64k solutions. 
+
+    http://www.wonderhowto.com/how-to/video/how-to-crack-a-combination-lock-with-100-possible-combos-267338/
+
+    I give security presentations and if I recall this gives a pretty good explanation. I'm too lazy to watch all of it but yo get the jist. Some people might pick apart becuase this is a safe not a padlock but the theory, fundamnetals are the same.
+- author: jon
+  date: "2009-07-21"
+  text: |
+    Great concept.  One comment that bothered me a bit though is, "Never do we read about scientits proving their original hypothesis wrong."  I was under the assumption that any scientist worth their salt would jump at a chance to make a new discovery even if it proved their earlier ideas wrong.  While a bit informal, Stephen Hawking made news when he conceded a wager he made after rethinking the problem.
+
+    http://en.wikipedia.org/wiki/Thorne-Hawking-Preskill_bet
+- author: Tetrafluoroethane
+  date: "2009-07-22"
+  text: |
+    I believe it was HOPE 2008 where I was listening to TOOOL talk about brute-forcing rotary combination locks.  The specific piece of information which remained with me is that due to the natural mechanical tolerances in locks (which makes most lock picking possible) you could leave out every other number or so.  So here on a 50 number dial, you could reduce it to only 25 numbers and still successfully open the lock.
+
+    I am by no means an authority on the subject, but if you wish to reduce the number of combinations you need to try (and the accuracy with which you need to turn the dial) this might be something worth researching. After all, 15265 sounds a lot faster than 125K. :)
+- author: Ronald_55
+  date: "2009-07-22"
+  text: |
+    Carlitos
+
+    So what type of motor do you need to re-try this? We might be able to make short work of you finding one if we know what you need. Feel free to email me directly.
+
+
+    BTW have you looked at http://tgimboej.org/ ? Sounds like you might love to be in on it. 
+
+    Ronald
+- author: clckwrk
+  date: "2009-07-22"
+  text: |
+    @Carlitos 
+
+    Thank for clearing that up with proper decorum, unlike some of the other comments.
+
+    Good luck with it!  Still think it's a neat project.
+- author: Alex
+  date: "2009-07-23"
+  text: |
+    Hi, That looks like a Mk4 Manifoil lock that are used here in the UK primerially by the MOD / Army. This : http://www.codesmiths.com/shed/locks/manifoil.htm
+    gives you some idea. Indeed the last turn to the left pulls the catch back and by hanging the safe you are preloading it and your motor will stall. Many a day sat at a desk staring at these made me think of similar things to what you are doing. You can simplify matters by knowing the ground rules for the lock, I.E no numbers within 2 or 3 digits of each other, first number must be below 75 (or something) and so on...
+    I suggest a stepper or a servo with positional feedback. look into CNC programs, something that gives you degrees control (turboCNC for instance) and code a g code program as used on a CNC machine to brute force it bit by bit...
+    good luck!
+- author: Piero Giorgi
+  date: "2009-07-23"
+  text: |
+    Problem is the lack of torque due to the gearing, right?
+
+    Remove the lock on the servo, and you WILL have a VERY powerful and rather precise motor. I suggest Futaba or JR servos, though, given that the Hitec have a tendency to lose the "zeroing" capacity rather quickly.
+    (I've been a modeler for over 30 years)
+
+    Also... look into the RC sail winches.
+
+    Good luck (And let me know, please)
+- author: Z
+  date: "2009-07-23"
+  text: >
+    make sure to put some sort of switch so you can get teh combo after you are done :)
+- author: Kyle Vogt
+  date: "2009-07-23"
+  text: |
+    Awesome project!  Great use of simple tools to get the job done.
+
+    Reminds me of the safe cracker I made at MIT a few years back:  http://web.mit.edu/kvogt/www/safecracker.html
+- author: Jarkman
+  date: "2009-07-24"
+  text: |
+    @Alex 
+    No, I don't think that's a Manifoil. For a start, the dial only goes to 50.
+
+    The Manifoil is a reasonably fancy lock, and doesn't have any kind of a click to indicate when each number is reached. Nothing touches the wheels (to test if they are in the right position) until the very end of the unlocking sequence. Here's a nice set of internal pics of one:
+    http://www.timwarriner.com/manifoil/page2.html
+
+    I believe that good combination locks are actually defended against these brute-force attacks - they are built to wear out more quickly than they can be brute-forced. But I don't think Carlito's lock is one of those! :-)
+- author: AM
+  date: "2009-07-24"
+  text: >
+    Just a thought. Did you make sure the locking mechanism actually works? If it doesn't click at all when you turn it, the dial may be broken off from the rest of the mechanism.
+- author: RudyDanielle
+  date: "2009-07-26"
+  text: >
+    Just a thought, have you considered contacting the manufacturer  or even a code source program like this one ....... http://www.hpcworld.com/Software/w_cscd.htm
+- author: creid
+  date: "2009-07-27"
+  text: |
+    For the mechanicals can i make a couple suggestions? Those look like cheap printer etc gears. You're going to get tons of back(and forward!)lash. Try a gear/belt/gear system. Even with those it might work. You can buy a good system ( few bucks per gear plus a same for the belts) pretty cheap. Cant think of the company but its stpi or something that has what you need.
+
+    Use steppers. Bipolar if you can.
+- author: Carlitos
+  date: "2009-07-27"
+  text: |
+    Thanks again for all the comments and suggestions.
+
+    As suggested by a few of you, I plan on trying even (or maybe multiples of 3) combinations first and hope for it to work. Since this lock doesn't look particularly sophisticated, it should allow some play.
+
+    As for the gearing, The backlash should not have that much effect (because of the play the lock may allow) but as soon as I get a stepper motor, I won't need any gears whatsoever.
+
+    Also, I was planing to put a switch on the lid aligned with the gap between the body and the lid. The This would allow to stop the operations as soon as the safe opens and to retrieve the combination.
+
+    BTW, I really appreciate all the comments about safes and tumblers and preloading the  lock. I am not particularly knowledgeable in those areas so I feel I'm learning a lot.
+
+    Finally, for the record, I tried to listen to the clicks. I could hear some but most of the time I miss them. I tried hooking up a microphone (since I don't know any hot nurses with stethoscopes) and to crank the volume to the max but it did not work. That is why I decided a robot was the way to go.
+- author: oysters
+  date: "2009-08-04"
+  text: |
+    I need to get into a safe.  It's a fairly large safe.  It's about four feet in height,  probably weighs a lot. haha.  
+    And there are cameras about.  It would be dark though...possibly the cameras do not have night vision.  Not for sure though.  
+    How should I go about this?
+- author: Carlitos
+  date: "2009-08-04"
+  text: |
+    @oysters 
+    Oysters,
+    I have no clue. But crime and stealthy things are very interesting so I'll hypothesize an answer. First, you get a sample video feed form the cameras on a normal day. Than, the day you want to have a go at the safe you cut the cameras and feed back the recorded signal. Then, you put a little safe cracker on the safe and wait for it to do the job. You might also want to disguise the cracker by giving it a distracted expression to his eyes. That way, people wont notice it is cracking the safe for many days on a row ;)
+- author: Hoborg
+  date: "2009-08-08"
+  text: >
+    What a nice project you have started here! I will look forward to read about your next attempt to crack it.. Will you post the rest of the story here or will you do that another place? I can’t wait to see where this is going… :0)
+- author: Carlitos
+  date: "2009-08-09"
+  text: |
+    @Hoborg 
+    Hoborg,
+
+    Thanks for the kind words. I will certainly post the update in here.
+- author: CB
+  date: "2009-08-11"
+  text: |
+    From Wikipedia:
+    "Additionally, if testing the mechanism to open the lock does not modify the state of the lock, multiple combinations can be tried sequentially, drastically reducing the brute force search time. The first two digits are entered normally once, then, starting from the second digit, the dial is rotated sequentially through the digits, testing the lock on each. If it takes three seconds to input the first digit, two seconds for the second digit, and one second for the third digit, then the normal search time for a 60-number dial with three cams would be (3 + 2 + 1) × 60³. The reduced search time would be (3 + 2 + 60) × 60², a reduction of nearly 82% from 360 hours to 65 hours. This strategy can be extended to the second digit as well, slightly reducing the search time further." (http://en.wikipedia.org/wiki/Combination_lock)
+    All of the time estimates you've made and in the comments are fairly overestimated. You don't need to run a sequence for 10R-30L-40R AND 10R-30L-20R. You will only need to run the first two digits (assuming you are right in your assumptions about a 3 number code), and then you can just step through the last 50 digits. Like the wiki article says, this reduces your time dramatically. Assuming ~2 second per digit with your cracker on the first two digits and maybe ~10 seconds on the last digit, you are looking at ~14 seconds to try 50 codes. This leaves you with 50x50x50 = (125,000 * 14) / 50 = 35,000 seconds = ~9.72 hours.
+    Cheers! You've inspired me to take a crack at an automated safe cracker! There are also several great articles out there on the algorithms to determine the codes for combination locks.
+- author: "Bruce J Tarbet, CML, CPS"
+  date: "2009-10-06"
+  text: |
+    @clckwrk 
+    This lock has 3 wheels with 0-99 or 1-100 on each wheel.  That is 100 x 100 x 100 = 1,000,000 possible combinations.( 100³ ) Also someone sugested using some oil product on the lock...well just DON'T, it will gum up the fly's in the wheels of the lock.  A vital part of the wheel.
+    Bruce
+- author: Oooli
+  date: "2009-11-10"
+  text: |
+    Hi ,i have hotel safe box around 50 pc's and all of them locked and need to open so we can put them in the hotel rooms we buy it second hand can any body help(Elsafe) the name of the manfacture.
+    thanks
+- author: Tux
+  date: "2010-03-12"
+  text: >
+    Did you ever get the safe open? The question of what was inside burns!

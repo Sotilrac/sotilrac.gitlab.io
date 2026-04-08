@@ -1,0 +1,10 @@
+- author: cibomahto
+  date: "2008-02-11"
+  text: |
+    Wow, thanks for sharing, that is pretty eye opening.  I also assumed that they would be more complicated!  Of course, if they are watching for the diode drop then you can't just short out the connection at the wire base.  If thats the case, then it is probably still a good deterrent; I would imagine that glue tape is hard to remove (of course, with the proper solvent...)
+
+    However, if all they were designed to do was to make it so someone needs to take an extra 30 seconds to remove a device, then maybe they are an adequate design.
+- author: Carlos
+  date: "2008-02-12"
+  text: >
+    The sensors are connected to a base with many connections. When not all connections are used, the empty ports (RJ-14) are filled with connectors containing only a loop of wire (that closes the circuit presumably). So I don't think they are actually monitoring for voltage drop across the LED. Rather, the circuit must be perfectly closed (all ports are closed) in order for the alarm not to be triggered.

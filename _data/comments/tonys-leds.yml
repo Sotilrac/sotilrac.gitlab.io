@@ -1,0 +1,16 @@
+- author: Tim
+  date: "2008-12-06"
+  text: |
+    Hi Carlos..
+    Your circuit showing several LEDs current limited with one resistor will cause the LEDs to fail. The voltage drop will vary on each LED. So, they will draw different current amounts. Eventually one will draw too much current and fail, then others in turn. You have to have a current limiting resistor on each LED. You could use one common potentiometer to dim the whole array.
+    Cheers..
+- author: Carlos
+  date: "2008-12-06"
+  text: |
+    Hello Tim,
+
+    Your comment is very interesting. It is true that if one LED fails all the other will fail too. I would have thought that even though the voltage drop across LEDs varies, it would settle for a single value (since they are all between the same two nodes). and as long as this value is reasonable it would be OK for the LEDs (but of course some diodes would pass more current than others).
+
+    I'll give some more tough to this problem and post an update. for now, I'll just post a warning.
+
+    Thank you again for reading and commenting.

@@ -1,0 +1,21 @@
+- author: "dsfd@asd.com"
+  date: "2009-11-21"
+  text: |
+    More suggestion: Use Classic Compact + Classic Compact options, it ends up being smaller.
+    Instead of TinyMenu, use Compact Menu 2. Instead of the word "Menu" it's a button which looks nicer and saves space. 
+    And, you can get rid of the statusbar entirely if you use fission and tell it to put website loading info in the adress bar like Safari.
+- author: Carlitos
+  date: "2009-11-22"
+  text: |
+    Thank you for your suggestions. I'll certainly have a look at those extensions.
+
+    [WORDPRESS HASHCASH] The poster sent us '0 which is not a hashcash value.
+- author: ScottyMac
+  date: "2010-05-07"
+  text: >
+    Stumbled across this old post...Is there a reason that F11 doesn't work on EeePC?  Hides everything but content.  Clicking it again brings it back.  Maybe it's too much trouble when you're trying to surf?
+- author: Carlitos
+  date: "2010-05-09"
+  text: |
+    @ScottyMac  
+    Going into full screen makes it more difficult to switch among windows. Also, auto-hiding menus or toolbars can be slow to respond (something which really bothers me).

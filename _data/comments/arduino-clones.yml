@@ -1,0 +1,27 @@
+- author: Roland Latour
+  date: "2008-03-10"
+  text: |
+    I thought you'd be interested in my
+    project. Like most linux users, I installed Simple Message System on my
+    Diecimila and became frustrated with instructions to use stty and screen.
+    So I wrote some shell scripts.
+
+    My package gives full IO and PWM control. AD is scaled to milliVolts and
+    formatted for import to most spreadsheets. I attach the tarfile, also
+    available via 'wget http://207.14.167.161/SMS1.tgz' (not 24/7,only works
+    when my PC is booted).
+
+    Thanks. Pls give it a try.
+- author: Carlos
+  date: "2008-03-10"
+  text: |
+    Wow Roland, thank you very much for sharing your code. I'll certainly try it as soon as I can get it (i.e. when your pc will be online).
+
+    It is very pleasant to see that there is other people out there tinkering with the Arduinos on Linux.
+
+    Thanks again. I'm eager to try your code. :D
+- author: Roland
+  date: "2008-12-29"
+  text: |
+    Get the above-mentioned code 24.7 from http://user.cavenet.com/rolandl
+    Now with a GUI via the xdialog command.
