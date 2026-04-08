@@ -2,9 +2,15 @@
   "folders": [
     {
       "path": ".",
-      "folder_exclude_patterns": ["node_modules", "_site", ".git", ".claude", "public"],
-      "file_exclude_patterns": ["*.tar.gz"]
-    }
+      "folder_exclude_patterns": [
+        "node_modules",
+        "_site",
+        ".git",
+        ".claude",
+        "public",
+      ],
+      "file_exclude_patterns": ["*.tar.gz"],
+    },
   ],
   "settings": {
     "tab_size": 2,
@@ -12,23 +18,23 @@
     "trim_trailing_white_space_on_save": "all",
     "ensure_newline_at_eof": true,
     "default_line_ending": "unix",
-    "rulers": [100]
+    "rulers": [100],
   },
   "build_systems": [
     {
       "name": "Eleventy Dev",
       "cmd": ["npm", "run", "dev"],
-      "working_dir": "$project_path"
+      "working_dir": "$project_path",
     },
     {
       "name": "Eleventy Build",
       "cmd": ["npm", "run", "build"],
-      "working_dir": "$project_path"
+      "working_dir": "$project_path",
     },
     {
       "name": "Lint",
       "cmd": ["npm", "run", "lint"],
-      "working_dir": "$project_path"
-    }
-  ]
+      "working_dir": "$project_path",
+    },
+  ],
 }
