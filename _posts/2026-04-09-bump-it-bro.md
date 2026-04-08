@@ -7,7 +7,8 @@ date: 2026-04-09T12:00:00-04:00
 categories:
   - Info
 tags:
-  - story time
+  - lore
+  - vignette
   - robotics
   - NAO
   - Pepper
