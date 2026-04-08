@@ -853,6 +853,27 @@ figure.post-fig figcaption {
   border-radius: 1rem;
 }
 
+/* --- Drafts page --- */
+.draft-list {
+  list-style: none;
+  padding: 0;
+}
+
+.draft-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--pearl);
+}
+
+.draft-list time {
+  color: var(--slate);
+  font-size: 0.85em;
+  white-space: nowrap;
+  margin-left: 1em;
+}
+
 /* --- Comments (archived from original blog) --- */
 .post-comments {
   margin-top: 3em;

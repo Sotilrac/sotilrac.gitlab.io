@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Drafts
+permalink: /drafts/
+eleventyExcludeFromCollections: true
+---
+<div class="col-content">
+    <h1>Drafts</h1>
+    {% if collections.draftPosts | length %}
+    <ul class="draft-list">
+        {% for post in collections.draftPosts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+            <time>{{ post.date | dateFormat('isodate') }}</time>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No drafts.</p>
+    {% endif %}
+</div>

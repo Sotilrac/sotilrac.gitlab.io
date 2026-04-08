@@ -32,6 +32,13 @@ export default function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection("draftPosts", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("posts")
+      .filter((post) => post.data.status === "draft")
+      .sort((a, b) => b.date - a.date);
+  });
+
   // --- Shortcodes (for blog posts, when ported) ---
   eleventyConfig.addShortcode("fig", (img, caption) => {
     const alt = caption || "";
