@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-status: draft
+status: public
 author: Carlos
 title: "Bump it, Bro: Embrace the Limitations"
 date: 2026-04-09T12:00:00-04:00

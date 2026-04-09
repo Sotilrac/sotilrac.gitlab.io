@@ -691,7 +691,7 @@ footer span {
   background: var(--amber);
 }
 .cat-dot[data-cat="news"] {
-  background: var(--pewter);
+  background: var(--navy);
 }
 .cat-dot[data-cat="work in progress"] {
   background: var(--silver);
@@ -703,7 +703,7 @@ footer span {
   background: var(--orange);
 }
 .cat-dot[data-cat="til"] {
-  background: var(--navy);
+  background: var(--pewter);
 }
 
 @media (max-width: 40em) {
