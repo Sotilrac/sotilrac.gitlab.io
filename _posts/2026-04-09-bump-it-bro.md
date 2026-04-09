@@ -108,3 +108,4 @@ Aldebaran is gone, at least in the form I knew it. The office in Boston closed. 
 - [Aldebaran placed into receivership](https://www.therobotreport.com/aldebaran-pepper-nao-robots-receivership/)
 - [NAOqi developer guide](http://doc.aldebaran.com/2-5/index_dev_guide.html)
 - [WSJD Live photos, October 2015](https://www.gettyimages.com/photos/wsjd-live?page=2)
+- [Pepper demo video](https://www.youtube.com/watch?v=SchCBiUH1ZI)
