@@ -24,12 +24,12 @@ layout: layouts/base.njk
     <section class="post-comments">
         <h2>Comments from the original blog</h2>
         {% for c in postComments %}
-        <div class="comment">
-            <div class="comment-meta">
-                <strong class="comment-author">{{ c.author }}</strong>
-                <time class="comment-date">{{ c.date }}</time>
+        <div class="blog-comment">
+            <div class="blog-comment-meta">
+                <strong class="blog-comment-author">{{ c.author }}</strong>
+                <time class="blog-comment-date">{{ c.date }}</time>
             </div>
-            <div class="comment-text">{{ c.text | nl2br | safe }}</div>
+            <div class="blog-comment-text">{{ c.text | nl2br | safe }}</div>
         </div>
         {% endfor %}
     </section>

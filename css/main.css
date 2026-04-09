@@ -889,7 +889,7 @@ figure.post-fig figcaption {
   margin-bottom: 1.5em;
 }
 
-.comment {
+.blog-comment {
   margin-bottom: 1.5em;
   padding: 1em 1.2em;
   background: var(--pearl);
@@ -897,7 +897,7 @@ figure.post-fig figcaption {
   border-left: 3px solid var(--silver);
 }
 
-.comment-meta {
+.blog-comment-meta {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -905,16 +905,16 @@ figure.post-fig figcaption {
   font-size: 0.85em;
 }
 
-.comment-author {
+.blog-comment-author {
   color: var(--deep-sea);
 }
 
-.comment-date {
+.blog-comment-date {
   color: var(--slate);
   font-size: 0.85em;
 }
 
-.comment-text {
+.blog-comment-text {
   font-size: 0.95em;
   line-height: 1.6;
   color: var(--charcoal);
