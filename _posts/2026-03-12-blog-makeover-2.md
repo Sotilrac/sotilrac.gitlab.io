@@ -14,7 +14,7 @@ After yet another five-year hiatus, the blog is back... again.
 
 Last time around, I migrated from a spam-infested WordPress to Jekyll and called it a day. This time, Jekyll itself started feeling like the old guard. Ruby dependencies, slow builds, and an ecosystem that hadn't quite kept up. So I did what any reasonable engineer would do: I ignored it for half a decade and then rewrote it in something else.
 
-The site now runs on [Eleventy](https://www.11ty.dev/), a simpler and faster static site generator. No more Ruby, no more Gemfiles, no more SCSS compilation step. Just Node.js, Nunjucks templates, and plain CSS. The build takes about 0.67 seconds for all 148 files, which, coincidentally, is roughly how much time I get to invest in this blog per month.
+The site now runs on [Eleventy](https://www.11ty.dev/), a simpler and faster static site generator. Every push to master triggers a GitLab CI/CD pipeline that builds and deploys to GitLab Pages. If you're curious about how it all fits together, the [source is on GitLab](https://gitlab.com/sotilrac/sotilrac.gitlab.io). Gone is Ruby, Gemfiles, and the SCSS compilation step. Just Node.js, Nunjucks templates, and plain CSS. The build takes about 0.67 seconds for all 148 files, which, coincidentally, is roughly how much time I get to invest in this blog per month.
 
 A key design goal this time: the site should survive neglect. Minimal dependencies, plain CSS instead of preprocessors, no frameworks that will be obsolete next year. When I inevitably ignore this blog for another half decade, I want it to still build and deploy without having to debug a graveyard of abandoned packages.
 

@@ -11,7 +11,9 @@ tags:
   - raspberry-pi
 ---
 
-You can run a Raspberry Pi's Raspbian from a `chroot` on a regular Linux machine. Mount the Pi's SD card, then:
+You can run a Raspberry Pi's Raspbian from a `chroot` on a regular Linux machine. This lets you install packages, configure services, and test programs directly on the Pi's filesystem from the convenience of your workstation, then pop the SD card into the real device and have everything ready to go.
+
+To achieve this, mount the Pi's SD card, then:
 
 ```bash
 sudo apt install qemu-user proot -y

@@ -62,3 +62,64 @@ sudo dpkg-reconfigure -plow unattended-upgrades
 ```bash
 sudo snap refresh
 ```
+
+## Shell Navigation Shortcuts
+
+From [Shell Tricks That Actually Make Life Easier](https://blog.hofstede.it/shell-tricks-that-actually-make-life-easier-and-save-your-sanity/):
+
+| Shortcut            | Action                            |
+| ------------------- | --------------------------------- |
+| `Ctrl+R`            | Reverse search through history    |
+| `Ctrl+W`            | Delete word before cursor         |
+| `Ctrl+U`            | Cut from cursor to line start     |
+| `Ctrl+K`            | Cut from cursor to line end       |
+| `Ctrl+Y`            | Paste previously cut text         |
+| `Ctrl+A` / `Ctrl+E` | Jump to start / end of line       |
+| `Alt+B` / `Alt+F`   | Move back / forward one word      |
+| `Ctrl+X, Ctrl+E`    | Edit current command in `$EDITOR` |
+
+## Quick Tricks
+
+`cd -` switches to the previous directory.
+
+`!!` expands to the previous command. Most common use:
+
+```bash
+sudo !!
+```
+
+`!$` expands to the last argument of the previous command:
+
+```bash
+mkdir my-new-dir
+cd !$
+```
+
+Brace expansion for quick copies:
+
+```bash
+cp config.yml{,.bak}   # copies config.yml to config.yml.bak
+```
+
+Empty a file without removing it (preserves permissions):
+
+```bash
+> file.txt
+```
+
+## Background and Detach a Running Process
+
+Accidentally started a long process in the foreground? `Ctrl+Z` suspends it, then:
+
+```bash
+bg       # resume it in the background
+disown   # detach it from the shell so it survives logout
+```
+
+## Fix a Garbled Terminal
+
+If binary output corrupts your terminal:
+
+```bash
+reset
+```
