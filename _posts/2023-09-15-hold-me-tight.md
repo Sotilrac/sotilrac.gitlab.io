@@ -81,7 +81,7 @@ I biked to the restaurant, dropped off the ring, went home and pretended to have
 
 She said _yes_!
 
-{% model "/img/blog/hold-me-tight/hmt-ring.glb", "Hold Me Tight — Engagement Ring", "38em", "38em", "150deg 90deg auto" %}
+{% model "/img/blog/hold-me-tight/hmt-ring.glb", "Hold Me Tight — Engagement Ring", "150deg 90deg auto" %}
 
 ## Downloads
 

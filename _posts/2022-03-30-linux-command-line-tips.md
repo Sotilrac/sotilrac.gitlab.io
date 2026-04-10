@@ -9,6 +9,7 @@ categories:
 tags:
   - linux
   - bash
+  - ssh
 ---
 
 A growing collection of command line tricks.
@@ -123,3 +124,22 @@ If binary output corrupts your terminal:
 ```bash
 reset
 ```
+
+## Unfreeze a Stuck SSH Terminal
+
+When an SSH session hangs (network drop, server reboot), the terminal appears frozen. To kill it, type this escape sequence:
+
+`Enter`, `~`, `.`
+
+Other useful SSH escape sequences:
+
+| Sequence | Action                              |
+| -------- | ----------------------------------- |
+| `~.`     | Terminate connection                |
+| `~B`     | Send a BREAK to the remote system   |
+| `~C`     | Open a command line                 |
+| `~R`     | Request rekey (SSH protocol 2 only) |
+| `~^Z`    | Suspend ssh                         |
+| `~#`     | List forwarded connections          |
+| `~&`     | Background ssh                      |
+| `~~`     | Send the escape character literally |
