@@ -141,7 +141,7 @@ The smallest target viewport is **360px** wide (standard Android phones). The mo
 
 ## Deployment
 
-The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` trigger a production build (Node 20, Eleventy v3).
+The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` trigger a production build (Node 22, Eleventy v3).
 
 ## GitHub Mirror & Comments
 
