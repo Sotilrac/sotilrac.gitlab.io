@@ -537,6 +537,7 @@ footer span {
   display: inline-block;
   padding: 0.1em 0.5em;
   margin-left: 0.75em;
+  margin-top: 0.4em;
   font-size: 0.85em;
   color: var(--deep-sea);
   background: var(--amber);
