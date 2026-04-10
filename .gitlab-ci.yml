@@ -34,6 +34,7 @@ test:
   artifacts:
     paths:
       - test
+    expire_in: 1 week
   except:
     - master
 
@@ -45,5 +46,6 @@ pages:
   artifacts:
     paths:
       - public
+    expire_in: 1 week
   only:
     - master
