@@ -524,6 +524,12 @@ h3 .location {
   border-color: var(--deep-sea);
 }
 
+@media (max-width: 30em) {
+  .print-btn {
+    display: none;
+  }
+}
+
 /* --- Site: Footer --- */
 footer {
   background-color: var(--black);
