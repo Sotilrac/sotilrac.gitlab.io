@@ -142,6 +142,10 @@ The smallest target viewport is **360px** wide (standard Android phones). The mo
 
 The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` trigger a production build (Node 20, Eleventy v3).
 
+## GitHub Mirror & Comments
+
+The GitLab repo is mirrored to [GitHub](https://github.com/Sotilrac/sotilrac.gitlab.io) via GitLab's push mirroring (Settings > Repository > Mirroring repositories), authenticated with a GitHub personal access token. The mirror exists to support [Giscus](https://giscus.app/), a comment system backed by GitHub Discussions. The Giscus script is loaded in `_includes/layouts/post.njk` and maps discussions to pages by pathname. Archived comments from the original WordPress blog are stored as YAML files in `_data/comments/` and rendered automatically by the post layout.
+
 ## Useful Tools
 
 - [Turndown](https://domchristie.github.io/turndown/) — HTML to Markdown converter (used during the WordPress migration)

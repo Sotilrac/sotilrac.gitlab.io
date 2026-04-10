@@ -786,6 +786,18 @@ figure.post-fig img {
   border-radius: 2px;
 }
 
+figure.model-fig {
+  width: 100%;
+  max-width: 38em;
+}
+
+figure.model-fig model-viewer {
+  width: 100%;
+  min-height: 35em;
+  max-height: 25vh;
+  display: block;
+}
+
 figure.post-fig figcaption {
   width: 0;
   min-width: 100%;
