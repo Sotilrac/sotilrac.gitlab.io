@@ -1,5 +1,6 @@
 {% from "icon.njk" import icon %}
-<div class="col-content">
+<div class="col-content" style="position:relative">
+    <button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
     <div class="row d-none d-print-flex">
         <div class="col">
             <h1>{{ resume.first_name }} {{ resume.last_name }}</h1>

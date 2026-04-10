@@ -502,6 +502,28 @@ h3 .location {
   display: none;
 }
 
+.print-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0;
+  background: none;
+  border: 1px solid var(--silver);
+  border-radius: 4px;
+  padding: 0.3em 0.8em;
+  font-family: var(--font-base);
+  font-size: 0.8em;
+  color: var(--slate);
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.print-btn:hover {
+  color: var(--deep-sea);
+  border-color: var(--deep-sea);
+}
+
 /* --- Site: Footer --- */
 footer {
   background-color: var(--black);
