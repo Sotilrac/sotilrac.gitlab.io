@@ -505,6 +505,7 @@ footer {
   padding: calc(var(--gutter) / 2);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 footer span {
