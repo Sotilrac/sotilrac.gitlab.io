@@ -20,7 +20,9 @@ A key design goal this time: the site should survive neglect. Minimal dependenci
 
 All these upgrades are mainly possible thanks to the advancements of CSS and JS in the last decade or so. However, there's one feature that is back from the 2010s: RSS! The blog now contains 100% more RSS, which should make it easier for my (most likely imaginary) readers to receive the content.
 
-While I was at it, I finally cleaned up all the old posts. The typos from my early days of writing in English have been (mostly) corrected, though I kept the original voice intact for historical authenticity. Or laziness. Either way.
+While I was at it, I finally cleaned up all the old posts. The typos from my early days of writing in English have been (mostly) corrected, though I kept the original voice intact for historical authenticity... or laziness. Either way.
+
+Also, no cookie banners, no subscribe popups, no autoplay videos. I am so tired of the mOdErN web making every visit feel like an obstacle course. This site loads the content and gets out of your way.
 
 The resume still renders from a YAML file, the contact info is still encrypted with AES because I thought that was clever in 2018, and I'm not about to admit otherwise. The blog still has the same grand ambitions of regular updates that it had last time.
 
