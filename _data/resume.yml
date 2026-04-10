@@ -19,7 +19,7 @@ links:
     url: https://youtube.com/c/CarlosAsmat
     icon: fa-youtube
 phone: '{"iv":"bvxHNGo4Ibwx16IfdY7cCQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"SOsRUJJzNoTOsu7uG+phkqqY5KXijw=="}'
-email: '{"iv":"205IpwCXbNCmLrWfJ/W4cQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"sKFccCvjqYU=","ct":"tAwrTZLNnGqHQb/mu1ygs3YjITxX"}'
+email: '{"iv":"Iyi9lt8kMOtvApj/AUbVnw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"Vs+e3NUkZEs=","ct":"HQMnlDaqlGrd/QbNXQnLhvQqj4yOy8OOwXM+hQyL"}'
 picture: /img/carlos-asmat.jpg
 summary:
   - I'm an engineering leader specializing in robotics, embedded systems, and connected devices. My work spans humanoid robots, autonomous consumer robots, and wearable robotic platforms, always with a focus on delivering across the full product lifecycle, from early concept through commercial deployment.
