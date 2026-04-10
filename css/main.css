@@ -453,6 +453,7 @@ th {
 /* --- Site: Resume --- */
 .pic {
   height: 200px;
+  margin-top: 0.3em;
   margin-right: calc(var(--gutter) / 2);
   border-radius: 0.4em;
 }

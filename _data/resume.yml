@@ -199,10 +199,10 @@ projects:
     start_date: 12 / 2019
     description:
       - Developed a pair of IoT lanterns using Amazon AWS and ESP32. When one lantern is touched, the other lights up, aiming to bridge the gap in long-distance relationships.
-  - name: Portfolio Builder
+  - name: asmat.ca
     start_date: 01 / 2018
     description:
-      - Crafted a static site generator using Ruby, HTML, CSS, and JS. This tool arranges the content of this resume and populates my personal website, asmat.ca.
+      - Personal site and technical blog built with Eleventy, Nunjucks, CSS, and JavaScript. CI/CD pipeline on GitLab with automated linting and deployment. Includes a data-driven resume, client-side AES decryption for contact info, structured data for SEO, and a comment system backed by GitHub Discussions.
   - name: Nao Mind Control
     start_date: 09 / 2012
     description:
