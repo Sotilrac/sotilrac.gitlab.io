@@ -1,6 +1,6 @@
 # asmat.ca
 
-Personal site, resume, and blog — built with [Eleventy](https://www.11ty.dev/) v3.
+Personal site, resume, and blog. Built with [Eleventy](https://www.11ty.dev/) v3.
 
 ## Quick Start
 
@@ -16,7 +16,8 @@ npm run build    # production build to _site/
 ├── eleventy.config.mjs   # Eleventy configuration
 ├── _data/
 │   ├── site.json         # Site metadata (title, URLs, socials)
-│   └── resume.yml        # Resume data (experience, skills, education, projects)
+│   ├── resume.yml        # Resume data (experience, skills, education, projects)
+│   └── comments/         # Archived blog comments (YAML, per post slug)
 ├── _includes/
 │   ├── layouts/          # Page layouts (base, home, post, page, plain)
 │   ├── head.njk          # HTML <head> (includes Umami analytics)
@@ -26,11 +27,12 @@ npm run build    # production build to _site/
 │   └── archive-banner.njk # "Dusting off the archives" banner for old posts
 ├── _posts/               # Blog posts (Markdown + Nunjucks)
 ├── css/main.css          # Custom stylesheet (no frameworks)
-├── font/                 # Custom fonts (Hack, Open Sans variable, Telegrama)
+├── font/                 # Custom fonts (Hack, Inter variable, Telegrama)
 ├── img/                  # Favicons + blog post images (img/blog/<slug>/)
-├── _tools/               # Helper scripts (e.g. lowercase-files.sh)
+├── _tools/               # Helper scripts (new-post.sh, redate-post.sh, etc.)
 ├── index.njk             # Home page (hero with typing animation)
 ├── blog.njk              # Blog archive (recent posts + Carlitos' Contraptions archive)
+├── drafts.njk            # Draft posts listing (not linked from nav, blocked by robots.txt)
 ├── feed.njk              # RSS feed
 ├── robots.txt            # Crawler rules (blocks AI training, allows citation bots)
 └── llms.txt              # LLM-readable site summary and license
@@ -45,17 +47,11 @@ npm run lint       # check formatting (CI runs this)
 npm run lint:fix   # auto-fix formatting
 ```
 
-Pre-commit hooks are installed automatically via `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook will:
-
-- Run Prettier on `md, json, yml, yaml, css, mjs, js` files
-- Trim trailing whitespace in `njk, txt, sh` files
-- Ensure all files end with a newline
-
-An `.editorconfig` is included so most editors enforce the same rules (LF line endings, 2-space indent, trim trailing whitespace, final newline).
+Pre-commit hooks are installed automatically via `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files.
 
 ## Resume
 
-The resume is rendered from `_data/resume.yml`. Edit that file to update experience, skills, education, or projects — the site rebuilds automatically.
+The resume is rendered from `_data/resume.yml`. Edit that file to update experience, skills, education, or projects.
 
 CSS custom properties are defined in `css/main.css` under `:root` for colors and fonts.
 
@@ -75,16 +71,21 @@ tags:
   - robotics
 ```
 
-Only posts with `status: public` appear on the blog page and RSS feed.
+Only posts with `status: public` appear on the blog page and RSS feed. Draft posts are accessible at `/drafts/` (not linked from navigation, blocked by `robots.txt`).
+
+To create a new post: `./_tools/new-post.sh "Post Title" [YYYY-MM-DD]`
 
 ### Shortcodes
 
-Use these in post content:
+Available in post content:
 
 ```
-{% fig "image-url.jpg", "Caption text" %}
-{% gallery 3, "img1.jpg", "img2.jpg", "img3.jpg" %}
+{% fig "/img/blog/slug/photo.jpg", "Caption text" %}
+{% gallery 3, "/img/blog/slug/a.jpg", "/img/blog/slug/b.jpg", "/img/blog/slug/c.jpg" %}
 {% youtube "video-id" %}
+{% spotify "track-id" %}
+{% wayback "https://web.archive.org/web/...", "link text" %}
+{% model "/img/blog/slug/model.glb", "Caption", "0deg 75deg auto" %}
 ```
 
 Post images go in `img/blog/<post-slug>/`. For archived posts (pre-2014), include the archive banner manually:
@@ -113,7 +114,7 @@ https://asmat.ca?key=YOUR_SECRET_KEY
    https://asmat.ca?key=YOUR_SECRET_KEY&msg=your-phone-number
    ```
 
-2. Open the browser console — the encrypted JSON object will be logged.
+2. Open the browser console, the encrypted JSON object will be logged.
 
 3. Copy the JSON object and paste it into `_data/resume.yml` as the `phone` or `email` value.
 
@@ -144,9 +145,13 @@ The site is deployed to GitLab Pages via `.gitlab-ci.yml`. Pushes to `master` tr
 
 ## GitHub Mirror & Comments
 
-The GitLab repo is mirrored to [GitHub](https://github.com/Sotilrac/sotilrac.gitlab.io) via GitLab's push mirroring (Settings > Repository > Mirroring repositories), authenticated with a GitHub personal access token. The mirror exists to support [Giscus](https://giscus.app/), a comment system backed by GitHub Discussions. The Giscus script is loaded in `_includes/layouts/post.njk` and maps discussions to pages by pathname. Archived comments from the original WordPress blog are stored as YAML files in `_data/comments/` and rendered automatically by the post layout.
+The GitLab repo is mirrored to [GitHub](https://github.com/Sotilrac/sotilrac.gitlab.io) via GitLab's push mirroring (Settings > Repository > Mirroring repositories), authenticated with a GitHub personal access token. The mirror exists to support [Giscus](https://giscus.app/), a comment system backed by GitHub Discussions. The Giscus script is loaded in `_includes/layouts/post.njk` and maps discussions to pages by pathname.
+
+Archived comments from the original WordPress blog are stored as YAML files in `_data/comments/` and rendered automatically by the post layout.
 
 ## Useful Tools
 
-- [Turndown](https://domchristie.github.io/turndown/) — HTML to Markdown converter (used during the WordPress migration)
-- `_tools/lowercase-files.sh` — lowercase all filenames in a directory
+- [Turndown](https://domchristie.github.io/turndown/), HTML to Markdown converter (used during the WordPress migration)
+- `_tools/new-post.sh`, create a new blog post with frontmatter and media folder
+- `_tools/redate-post.sh`, rename a post file with a new date
+- `_tools/lowercase-files.sh`, lowercase all filenames in a directory
