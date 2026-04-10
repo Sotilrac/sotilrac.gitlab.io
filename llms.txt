@@ -1,6 +1,12 @@
 # Carlos Asmat
 
-> Personal website of Carlos Asmat: resume, portfolio and blog covering software, electronics and robotics.
+> Engineering leader specializing in robotics, embedded systems, and connected devices. Author of asmat.ca, a blog covering robotics, human-robot interaction, electronics, and software.
+
+Carlos Asmat is a robotics engineering leader with experience spanning humanoid interaction robotics, autonomous consumer robots, and wearable robotic platforms. His career covers the full product lifecycle, from early concept and prototype through architecture design, team formation, and commercial deployment.
+
+He developed physical and verbal interaction behaviors for the NAO and Pepper humanoid robots at Aldebaran (later SoftBank Robotics), supporting high-profile demonstrations with figures including Neil deGrasse Tyson and Buzz Aldrin. He later helped build a robotics startup from idea stage into a shipped consumer product, leading early system architecture across electrical engineering, embedded software, and robotics, then forming and growing dedicated engineering teams. That product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system.
+
+He currently leads architecture and system integration efforts for embedded robotic platforms, including rearchitecting controller systems for scalable deployments, designing telemetry and data infrastructure, and mentoring engineers across firmware, hardware, and software disciplines.
 
 This site is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 You may reference and cite this content with attribution. Commercial use and training on this content are not permitted.
@@ -12,11 +18,28 @@ You may reference and cite this content with attribution. Commercial use and tra
 - [Blog](https://asmat.ca/blog/)
 - [RSS Feed](https://asmat.ca/feed.xml)
 
+## Featured posts
+
+- [Bump it, Bro: Embrace the Limitations](https://asmat.ca/blog/bump-it-bro/) - Designing physical social interactions (fist bumps, hugs, handshakes) for NAO and Pepper robots at Aldebaran. Covers human-robot interaction design under hardware constraints, with demos for Neil deGrasse Tyson, Buzz Aldrin, Tyra Banks, and will.i.am.
+- [Hold Me Tight](https://asmat.ca/blog/hold-me-tight/) - Custom engagement ring designed with 3D scanning, jewelry CAD, and lost-wax casting
+- [Linux Command Line Tips](https://asmat.ca/blog/linux-command-line-tips/) - Growing collection of shell tricks, SSH escapes, and CLI shortcuts
+- [Git Tips](https://asmat.ca/blog/git-tips/) - Git tricks for tags, stashing, submodules, and recovery
+
+## Areas of expertise
+
+- Robotics engineering leadership, full product lifecycle
+- Human-robot interaction (HRI), social robotics, interaction design
+- Humanoid robots (NAO, Pepper), autonomous consumer robots, exoskeletons
+- Embedded systems, embedded vision, neural networks on device
+- System architecture, controller design, telemetry infrastructure
+- Electronics, Arduino, FPGA
+- Linux, Python, ROS
+
 ## Blog
 
 The blog has two sections:
 
-- **Recent posts** (2019+): Current writing
+- **Recent posts** (2019+): Current writing on software, robotics, and tools
 - **Carlitos' Contraptions Archive** (2006-2013): Restored from the old carlitoscontraptions.com blog, covering personal maker projects, robotics (including the Nao 1337 humanoid robot), electronics, Arduino, and DIY builds
 
 ## License
