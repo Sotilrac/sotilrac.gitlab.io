@@ -498,6 +498,10 @@ h3 .location {
   font-weight: 300;
 }
 
+.dates-print {
+  display: none;
+}
+
 /* --- Site: Footer --- */
 footer {
   background-color: var(--black);
@@ -973,6 +977,31 @@ hr.comments-separator {
 
   .no-page-break {
     page-break-inside: avoid;
+  }
+
+  .education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2em;
+  }
+
+  .education-entry .col-aside {
+    display: none;
+  }
+
+  .dates {
+    color: var(--slate) !important;
+  }
+
+  .education-entry .dates-print {
+    display: block;
+    font-size: 0.85em;
+    color: var(--slate);
+  }
+
+  .col-skill {
+    flex: 1 0 calc(25% - var(--gutter));
+    max-width: calc(25% - var(--gutter) / 2);
   }
 
   *,

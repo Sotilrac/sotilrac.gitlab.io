@@ -85,21 +85,26 @@
     </section>
     <section class="no-page-break">
         <h2>Education</h2>
+        <div class="education-grid">
         {% for ed in resume.education %}
-        <div class="row">
-            <div class="col-aside date_col">
-                <span class="dates">{{ ed.start_date }} - {{ ed.end_date }}</span>
+            <div class="education-entry">
+                <div class="row">
+                    <div class="col-aside date_col">
+                        <span class="dates">{{ ed.start_date }} - {{ ed.end_date }}</span>
+                    </div>
+                    <div class="col col-job educ_col">
+                        <h3 class="institution">{{ ed.institution }}</h3>
+                        <span class="dates-print">{{ ed.start_date }} - {{ ed.end_date }}</span>
+                        <ul class="degrees">
+                            {% for degree in ed.degree %}
+                            <li>{{ degree.item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col educ_col">
-                <h3 class="institution">{{ ed.institution }}</h3>
-                <ul class="degrees">
-                    {% for degree in ed.degree %}
-                    <li>{{ degree.item }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
         {% endfor %}
+        </div>
     </section>
     <section class="no-page-break">
         <h2>Personal Projects</h2>
@@ -109,7 +114,7 @@
             <div class="col-aside date_col">
                 <p class="dates">{{ project.start_date }}</p>
             </div>
-            <div class="col proj_col">
+            <div class="col col-job proj_col">
                 <h3>
                     <span class="project_name">{{ project.name }}</span>
                 </h3>
