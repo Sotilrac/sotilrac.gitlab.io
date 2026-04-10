@@ -876,6 +876,12 @@ figure.post-fig figcaption {
   margin-left: 1em;
 }
 
+hr.comments-separator {
+  margin: 2.5em 0 1.5em;
+  border: none;
+  border-top: 2px solid var(--silver);
+}
+
 /* --- Comments (archived from original blog) --- */
 .post-comments {
   margin-top: 3em;
