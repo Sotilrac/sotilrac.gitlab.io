@@ -680,10 +680,10 @@ footer span {
   background: var(--royal-blue);
 }
 .cat-dot[data-cat="tools"] {
-  background: var(--violet);
+  background: var(--teal);
 }
 .cat-dot[data-cat="software"] {
-  background: var(--teal);
+  background: var(--navy);
 }
 .cat-dot[data-cat="robotics"] {
   background: var(--magenta);
@@ -692,7 +692,7 @@ footer span {
   background: var(--amber);
 }
 .cat-dot[data-cat="news"] {
-  background: var(--navy);
+  background: var(--violet);
 }
 .cat-dot[data-cat="work in progress"] {
   background: var(--silver);
