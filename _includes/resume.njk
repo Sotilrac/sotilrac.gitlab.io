@@ -1,6 +1,6 @@
 {% from "icon.njk" import icon %}
 <div class="col-content" style="position:relative">
-    <button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+    <button class="print-btn no-print" onclick="var t=document.title;document.title='carlos_asmat_resume_'+new Date().toISOString().slice(0,10);window.print();document.title=t;">Print / Save PDF</button>
     <div class="row d-none d-print-flex">
         <div class="col">
             <h1>{{ resume.first_name }} {{ resume.last_name }}</h1>
