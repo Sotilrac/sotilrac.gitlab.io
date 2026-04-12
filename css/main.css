@@ -498,6 +498,12 @@ h3 .location {
   font-weight: 300;
 }
 
+.patent-meta {
+  font-size: 0.9em;
+  color: var(--slate);
+  margin-top: 0.2em;
+}
+
 .dates-print {
   display: none;
 }
@@ -1043,6 +1049,7 @@ hr.comments-separator {
   a,
   a:visited {
     text-decoration: none;
+    color: var(--black);
   }
 
   a[href^="#"]::after,

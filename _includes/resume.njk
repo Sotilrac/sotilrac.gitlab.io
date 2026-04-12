@@ -108,6 +108,20 @@
         </div>
     </section>
     <section class="no-page-break">
+        <h2>Patents</h2>
+        {% for patent in resume.patents %}
+        <div class="row">
+            <div class="col-aside date_col">
+                <span class="dates">{{ patent.date }}</span>
+            </div>
+            <div class="col col-job">
+                <h3><a href="{{ patent.url }}" target="_blank">{{ patent.title }}</a></h3>
+                <p class="patent-meta">{{ patent.number }} · {{ patent.assignee }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="no-page-break">
         <h2>Personal Projects</h2>
         <p class="no-print" style="color:var(--slate);font-size:0.9em">See the <a href="/blog/">blog</a> for latest projects.</p>
         {% for project in resume.projects %}

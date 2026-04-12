@@ -194,6 +194,12 @@ education:
     end_date: "2008"
     degree:
       - item: Bachelor's degree in Electrical  Engineering - Control & Automation / Power
+patents:
+  - title: Two-Wheeled Vehicle Having Linear Stabilization System
+    number: US 11,613,325
+    date: 03 / 2023
+    assignee: Piaggio Fast Forward Inc.
+    url: https://patents.google.com/patent/US11613325B2
 projects:
   - name: Love Lantern
     start_date: 12 / 2019
