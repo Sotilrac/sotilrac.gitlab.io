@@ -154,23 +154,25 @@ skills:
     - French
     - Spanish
   tools:
-    - Git · SSH · Bash/Fish
-    - Linux · Android
+    - Git · Docker · CI/CD
+    - Linux · Android · AWS
     - Gimp · Inkscape
     - Blender · OnShape · Solidworks
     - KiCAD · Altium
-    - Mathematica · Matlab
-  programming:
+    - Jupyter · Matlab
+  technical:
     - C/C++ · Python
-    - Qt · Flutter
-    - ROS · OpenCV
-    - ARM · Arduino · RPi · Beaglebone
     - HTML · CSS · JavaScript
+    - React · Qt · Flutter
+    - ROS · FreeRTOS · OpenCV
+    - STM32 · TI · ARM · RPi · Arduino
+    - UART · SPI · I2C · CAN
   soft:
-    - Hiring · Mentoring
-    - Leading · Managing
+    - Hiring · Team Formation
+    - Mentoring · Code Review
+    - System Architecture · Roadmapping
     - Presenting · Communication
-    - Strategy · Planning · Scheduling
+    - Live Demos · Public Speaking
     - Cross-functional Collaboration
 education:
   - institution: Udacity
