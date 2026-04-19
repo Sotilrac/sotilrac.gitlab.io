@@ -14,8 +14,6 @@ tags:
 
 A colleague worries their code isn't _**perfect**_ while it covers all the requirements. My wife worries she's not _**perfect**_ enough for no apparent reason. This roast didn't come out _**perfect**_, but it tasted good. Every time I am confronted with the concept of _perfection_, something feels wrong about it, but it's hard to pinpoint in the moment. I'd like to wrestle this concept to the ground and see how to think about _perfection_ in a more honest and useful way.
 
-{% fig "/img/blog/perfection/perfection.gif", "Perfection!" %}
-
 ## Two Words in a Trench Coat
 
 In everyday speech, _**perfect**_ oscillates mostly between two meanings that have almost nothing to do with each other: one is ancient and practical; the other is more modern and, I think, quite problematic.
@@ -34,7 +32,9 @@ And yet, the banana bread is undeniably perfect. So is a specific song in a spec
 
 I think it is a third sense of _**perfect**_ that the first two obscure, and it is the one we reach for with the people and things we love. It is not completion, and it is not flawlessness. It is dynamic harmony. The banana bread is perfect not because it hits some objective target, but because the ingredients, the moisture, the occasion, and the hands that made it line up into a coherent whole right now. Change any one element and the feeling goes with it. The perfection lives in the relationships between the parts, and between the thing and me, in this moment.
 
-This is why perfection in this sense cannot be held still. It is tuned to a time and a perceiver. The flawlessness frame borrows from this felt harmony and then demands, in vain, that it be made permanent, objective, and defensible.
+This is why _**perfection**_ in this sense cannot be held still. It is tuned to a time and a perceiver. The flawlessness frame borrows from this felt harmony and then demands, in vain, that it be made permanent, objective, and defensible.
+
+{% fig "/img/blog/perfection/perfection.gif", "Perfection!" %}
 
 ## Uncertainty Avoidance With Good PR
 
