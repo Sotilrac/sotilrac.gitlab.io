@@ -1,9 +1,20 @@
 import yaml from "js-yaml";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import katex from "katex";
+import texmath from "markdown-it-texmath";
 
 export default function (eleventyConfig) {
   // --- Plugins ---
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // --- Math (KaTeX, server-side) ---
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    mdLib.use(texmath, {
+      engine: katex,
+      delimiters: "dollars",
+      katexOptions: { output: "html", throwOnError: false },
+    });
+  });
   // --- YAML data file support (removed in 11ty v3) ---
   eleventyConfig.addDataExtension("yml,yaml", (contents) =>
     yaml.load(contents),
@@ -20,6 +31,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/katex/dist/katex.min.css": "css/vendor/katex.min.css",
+    "node_modules/katex/dist/fonts": "css/vendor/fonts",
+  });
 
   // --- Ignores ---
   eleventyConfig.ignores.add("README.md");
@@ -71,6 +86,14 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addShortcode("spotify", (id) => {
     return `<iframe style="border-radius:12px;margin:2em 0" width="100%" height="152" src="https://open.spotify.com/embed/track/${id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+  });
+
+  eleventyConfig.addPairedShortcode("math", (content, mode = "block") => {
+    return katex.renderToString(content.trim(), {
+      displayMode: mode !== "inline",
+      throwOnError: false,
+      output: "html",
+    });
   });
 
   // --- Filters ---

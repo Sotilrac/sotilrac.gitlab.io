@@ -94,6 +94,24 @@ Post images go in `img/blog/<post-slug>/`. For archived posts (pre-2014), includ
 {% include "archive-banner.njk" %}
 ```
 
+### Math
+
+[KaTeX](https://katex.org/) is rendered server-side at build time. Use dollar delimiters directly in Markdown:
+
+```
+Inline: $E = mc^2$
+Block:  $$\int_0^\infty e^{-x^2}\,dx = \tfrac{\sqrt{\pi}}{2}$$
+```
+
+A `{% math %}...{% endmath %}` paired shortcode is also available for cases where you need to bypass Markdown (e.g. literal dollar signs nearby). Add `"inline"` as an argument to render inline instead of block:
+
+```
+{% math %}P_A = T_A(R){% endmath %}
+{% math "inline" %}x + y{% endmath %}
+```
+
+Supported functions, symbols, and environments: [KaTeX Supported Functions](https://katex.org/docs/supported.html).
+
 ## Encrypted Contact Info
 
 Phone and email are stored as AES-encrypted JSON in `_data/resume.yml`. They are decrypted client-side using [SJCL](https://bitwiseshiftleft.github.io/sjcl/) when a visitor provides the correct key via URL parameter.
