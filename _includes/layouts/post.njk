@@ -23,7 +23,7 @@ layout: layouts/base.njk
     }
     </script>
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ title }}</h1>
+        <h1 class="post-title" itemprop="name headline">{{ title }}{% if status == "draft" %} <span class="post-draft-badge">draft</span>{% endif %}</h1>
         <p class="post-meta">
             <time datetime="{{ date | dateFormat('iso') }}" itemprop="datePublished">
                 {{ date | dateFormat('isodate') }}
