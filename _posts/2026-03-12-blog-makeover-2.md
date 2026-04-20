@@ -24,6 +24,8 @@ While I was at it, I finally cleaned up all the old posts. The typos from my ear
 
 Also, no cookie banners, no subscribe popups, no autoplay videos. I am so tired of the mOdErN web making every visit feel like an obstacle course. This site loads the content and gets out of your way.
 
+Another conscious choice: every post shows its publication date. Hiding dates has become a common move in the last decade to keep content looking fresh indefinitely, but I think that is backwards. Knowing when something was written is good context for judging it, and more information is always more better. Same goes with articles that you have to click to read aftrthe fold. Those techniques are meant to trap people into spending more time in your site.
+
 The resume still renders from a YAML file, the contact info is still encrypted with AES because I thought that was clever in 2018, and I'm not about to admit otherwise. The blog still has the same grand ambitions of regular updates that it had last time.
 
 See you in 2031!
