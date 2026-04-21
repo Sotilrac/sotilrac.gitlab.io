@@ -40,17 +40,30 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
 
   // --- Collections ---
+  // Public posts: in _posts/ with status missing or "public".
   eleventyConfig.addCollection("publicPosts", (collectionApi) => {
     return collectionApi
       .getFilteredByTag("posts")
-      .filter((post) => post.data.status === "public")
+      .filter((post) => {
+        const s = post.data.status;
+        return !s || s === "public";
+      })
       .sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("draftPosts", (collectionApi) => {
+  // Archived posts: in _posts/ with status "archive". Rendered but hidden
+  // from listings and feed.
+  eleventyConfig.addCollection("archivedPosts", (collectionApi) => {
     return collectionApi
       .getFilteredByTag("posts")
-      .filter((post) => post.data.status === "draft")
+      .filter((post) => post.data.status === "archive")
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // Drafts: anything in _drafts/.
+  eleventyConfig.addCollection("drafts", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("drafts")
       .sort((a, b) => b.date - a.date);
   });
 
@@ -107,7 +120,9 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("dateFormat", (date, format) => {
+    if (!date) return "";
     const d = new Date(date);
+    if (isNaN(d.getTime())) return "";
     const months = [
       "Jan",
       "Feb",

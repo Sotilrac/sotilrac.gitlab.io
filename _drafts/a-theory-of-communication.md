@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: draft
 author: Carlos
 title: A Theory of Communication
-date: 2026-04-26T12:00:00-04:00
 categories:
   - Info
 tags:

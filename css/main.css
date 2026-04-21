@@ -564,7 +564,7 @@ footer > span {
   font-size: 2rem;
 }
 
-.post-draft-badge {
+.post-status-badge {
   display: inline-block;
   padding: 0.1em 0.5em;
   margin-left: 0.4em;
@@ -572,11 +572,18 @@ footer > span {
   font-size: 0.5em;
   font-weight: normal;
   color: var(--snow);
-  background: var(--crimson);
   border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   vertical-align: middle;
+}
+
+.post-status-draft {
+  background: var(--crimson);
+}
+
+.post-status-archive {
+  background: var(--pewter);
 }
 
 .post-meta {
