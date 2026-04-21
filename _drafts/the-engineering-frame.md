@@ -50,6 +50,14 @@ Two reasons.
 
 There is also a less flattering reason: most of the time, the thing that is right technically is _also_ the thing that wins on constraints. If your taste is any good, you don't need to argue from taste; you can just name the constraints and let the right answer fall out. The taste frame is often a shortcut that papers over analysis you should have done.
 
+## Assume Information Asymmetry
+
+The engineering frame depends on a practice that's easy to skip: when you hit a real disagreement, pause and assume information asymmetry before anything else. In my experience, the underlying cause of most technical disputes is not diverging taste or bad judgement. It's that one of us knows something the other doesn't. They've tried my preferred approach in a past project and it blew up in a way I haven't heard about. I know about a failure mode they haven't hit yet. We're optimizing for different constraints and neither of us has named them out loud.
+
+So the first move when a disagreement surfaces is not to counter-argue. It's to ask. What's driving your preference? What have you seen with this approach before? What's the constraint I might be missing? Most "irreducible" disagreements dissolve once both parties finish sharing what they were each implicitly assuming the other already knew.
+
+This is free alignment, and it has a useful side effect: asking signals that you think the other person might be right, which is itself part of the good-faith move the engineering frame is making.
+
 ## When the Engineering Frame Isn't Enough
 
 It isn't a universal solvent. Some cases need more:
@@ -63,6 +71,16 @@ It isn't a universal solvent. Some cases need more:
 The meta-skill is noticing which frame you're in and choosing it on purpose. Artist frame for your own work when the decision is genuinely yours. Engineering frame for anything you're negotiating with someone else. Hold-the-line frame for the rare cases where you actually can't compromise.
 
 I used to reach for artist frame by default because it's how I was trained to think about craft. Code as a personal expression. The switch to engineering frame has not made me care less about craft. It has made the craft easier to deliver, because the people I work with are no longer defending themselves from my opinions.
+
+## Further Reading
+
+The engineering frame is essentially principled negotiation applied to technical work. None of this is new; the references below are the ones I've found most directly useful.
+
+- [Roger Fisher, William Ury, and Bruce Patton, _Getting to Yes_ (1981, rev. 2011)](https://en.wikipedia.org/wiki/Getting_to_Yes): the foundational text of principled negotiation, built on four rules: separate people from problem, focus on interests not positions, invent options for mutual gain, and insist on objective criteria. The engineering frame is the fourth rule applied to technical decisions; constraints _are_ the objective criteria.
+- [Terrence Ryan, _Driving Technical Change_ (2010)](https://pragprog.com/titles/trevan/driving-technical-change/): specifically about advocating for technical decisions among colleagues and stakeholders. Enumerates seven patterns of resistance ("The Uninformed," "The Herd," "The Cynic," "The Burned," "The Time Crunched," "The Boss," "The Irrational") and matching approaches. Pragmatic, short, directly relevant.
+- [Patterson, Grenny, McMillan, and Switzler, _Crucial Conversations_ (2002)](https://en.wikipedia.org/wiki/Crucial_Conversations): how to hold high-stakes conversations where stakes, opinions, and emotions are strong. The central move, creating a shared pool of meaning before trying to resolve anything, is upstream of what the engineering frame is doing on a smaller scale.
+- [Will Larson, _An Elegant Puzzle_ (2019) and _Staff Engineer_ (2021)](https://lethain.com/): writings on navigating technical disagreement at scale, including how senior engineers advocate for decisions without relying on authority or taste. Good on the sociology of how technical decisions actually get made.
+- [Peter Naur, "Programming as Theory Building" (1985)](https://en.wikipedia.org/wiki/Peter_Naur): classic essay reframing software as a shared theory held collaboratively by a team. Relevant because it clarifies _why_ taste arguments fail in practice: your taste is a private theory no-one else can audit, whereas constraints are legible to everyone at the table.
 
 <!-- Working notes:
 - Consider a concrete example from past work (anonymized) where taste frame failed and engineering frame unlocked things. Too personal?
