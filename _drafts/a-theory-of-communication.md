@@ -10,19 +10,19 @@ tags:
   - philosophy
 ---
 
-Two people watch the same event and describe it differently. Neither is lying. They are running the same input through different machinery. I want to sketch what I think that machinery is, because once I have the picture in my head, a surprising number of communication failures stop feeling like failures and start looking like predictable consequences of geometry.
+Two people watch the same event and describe it differently, and neither is lying; they are running the same input through different machinery. I want to sketch what I think that machinery is, because once I have the picture in my head, a surprising number of communication failures stop feeling like failures and start looking like predictable consequences of geometry.
 
 <!-- TODO: interactive visualization goes here once built -->
 
 ## An Old Story
 
-This is one of those ideas that an ancient parable already nailed. The [blind men and the elephant](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant), found in Buddhist, Jain, and Hindu texts from at least the first millennium BCE, tells of several blind men each touching a different part of an elephant and concluding, with equal conviction, that it is a pillar, a rope, a fan, a tree. Each describes what they actually touched. Each is right about their sample and wrong about the whole.
+This is one of those ideas that an ancient parable already nailed. The [blind men and the elephant](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant), found in Buddhist, Jain, and Hindu texts from at least the first millennium BCE, tells of several blind men each touching a different part of an elephant and concluding, with equal conviction, that it is a pillar, a rope, a fan, a tree. Each describes what they actually touched; each is right about their sample and wrong about the whole.
 
 That is the basic shape I want to formalize. Every perceiver samples a low-dimensional slice of something much bigger, and reports their slice faithfully. Disagreement is not usually a failure of honesty; it is the predictable outcome of differently-sampled projections. The rest of this post is an attempt to give that intuition enough structure that it stops being a cute parable and starts being a model you can draw, poke, and compute with.
 
 ## The Pipeline
 
-Reality is high-dimensional. Call it _N_ dimensions, where _N_ is whatever number you need to fully specify what is happening. Every particle, every relation, every timeline, every observable. _N_ is huge and for practical purposes effectively unbounded.
+Reality is high-dimensional. Call it _N_ dimensions, where _N_ is whatever number you need to fully specify what is happening: every particle, every relation, every timeline, every observable. _N_ is huge, and for practical purposes effectively unbounded.
 
 Our perception is lower-dimensional. Each person receives reality through a personal transform $T$ that maps the _N_-dimensional reality $R$ into an _m_-dimensional perception $P$, where $m \ll N$.
 
@@ -30,7 +30,7 @@ $$P_A = T_A(R)$$
 
 $T$ is shaped by sensory apparatus, attention, language, culture, mood, prior experience, and current internal state. It is not shared between two people, and it isn't even stable across time for the same person. My $T$ at 9am on a good day is not my $T$ at midnight after a bad one.
 
-Now person A wants to communicate their perception. Language is _another_ dimensional reduction, call it $L$. A sentence is a small number of discrete tokens; even a long paragraph is vastly lower-dimensional than the perception it gestures at.
+Now, person A wants to communicate their perception. Language is _another_ dimensional reduction, call it $L$. A sentence is a small number of discrete tokens; even a long paragraph is vastly lower-dimensional than the perception it gestures at.
 
 $$M_A = L_A(P_A) = L_A(T_A(R))$$
 
@@ -40,11 +40,11 @@ Person B has to invert both steps. They apply their own $L_B^{-1}$ to get a reco
 
 $$P'_B = L_B^{-1}(M_A) \quad\text{and}\quad R'_B = T_B^{-1}(P'_B)$$
 
-The catch is that $L_B^{-1} \neq L_A$ and $T_B^{-1} \neq T_A$. They cannot be. B is doing the inverse using _their own_ transforms. What B ends up with is a perception A might have had if A were B. Which A isn't.
+The catch is that $L_B^{-1} \neq L_A$ and $T_B^{-1} \neq T_A$, and they cannot be, because B is doing the inverse using _their own_ transforms. What B ends up with is a perception A might have had if A were B, which A isn't.
 
 ## What This Implies
 
-Communication is never recovery of reality. It is reconstruction of a reconstruction, through a pipeline where every stage is a lossy, personal projection. Two people can hear identical words and walk away with very different pictures because their inverse transforms differ. This isn't failure of the speakers or the listeners. It is what the geometry forces.
+Communication is never recovery of reality; it is reconstruction of a reconstruction, through a pipeline where every stage is a lossy, personal projection. Two people can hear identical words and walk away with very different pictures, because their inverse transforms differ. This isn't a failure of the speakers or the listeners; it is what the geometry forces.
 
 A few consequences drop out of this framing:
 
@@ -54,11 +54,11 @@ A few consequences drop out of this framing:
 
 ## Learning Someone's Transform
 
-You cannot measure another person's $T$ directly. But you can triangulate.
+You cannot measure another person's $T$ directly, but you can triangulate.
 
-If I observe the same event as my wife and she describes it, I can compare her description to my own perception. The delta between what I saw and what she said is a noisy estimate of $T_\text{me} - T_\text{her}$ projected through $L$. Over many samples, across many kinds of events, the estimate sharpens.
+If I observe the same event as my wife and she describes it, I can compare her description to my own perception; the delta between what I saw and what she said is a noisy estimate of $T_\text{me} - T_\text{her}$ projected through $L$, and over many samples, across many kinds of events, that estimate sharpens.
 
-This is what intimacy is, mechanically. Accumulated estimates of another person's transform. After enough joint experience you can predict what someone will notice, what they will ignore, how they will phrase it, and what they will leave out. You start decoding their messages with a model of their $L$ and $T$ instead of only your own.
+This is what intimacy is, mechanically: accumulated estimates of another person's transform. After enough joint experience, you can predict what someone will notice, what they will ignore, how they will phrase it, and what they will leave out; you start decoding their messages with a model of their $L$ and $T$ instead of only your own.
 
 It also explains some patterns:
 
@@ -71,20 +71,20 @@ It also explains some patterns:
 ## When Communication Is Easier
 
 - **Prior overlap in $T$.** Shared language, culture, history, domain expertise.
-- **Higher-bandwidth channel.** In-person beats video beats phone beats text beats async. More bandwidth means less aggressive $L$-compression.
+- **Higher-bandwidth channel.** In-person beats video beats phone beats text beats async, because more bandwidth means less aggressive $L$-compression.
 - **Shared context.** If we both just witnessed the same event, our $T$s are aligned at least on that event's dimensions.
-- **Iterated exchange.** Each round of clarification is a calibration pass. Real-time dialogue outperforms one-shot messaging not because of speed but because it samples faster.
+- **Iterated exchange.** Each round of clarification is a calibration pass, and real-time dialogue outperforms one-shot messaging not because of speed but because it samples faster.
 
 ## When It Fails
 
-- **Unacknowledged transform mismatch.** Both parties think they agree because the words match. They don't realize they're reconstructing different $P$s.
-- **Low-bandwidth channel forcing severe $L$-compression.** Text strips tone; tone is load-bearing in spoken $L$.
+- **Unacknowledged transform mismatch.** Both parties think they agree because the words match, without realizing that they are reconstructing different $P$s.
+- **Low-bandwidth channel forcing severe $L$-compression.** Text strips tone, and tone carries a lot of the signal in spoken $L$.
 - **Mismatched priors.** Specialist jargon carries high-density $L$; outsiders' $L^{-1}$ doesn't recover the intended $P$.
 - **Adversarial transforms.** If one party's $T$ is deliberately distorted (motivated reasoning, self-deception), calibration from their side becomes noise.
 
 ## Related Work
 
-I didn't invent this. The model I'm describing is mostly a re-assembly of things other people have said, from different angles and with different vocabularies. The references below are the ones I find most directly load-bearing.
+I didn't invent this. The model I'm describing is mostly a re-assembly of things other people have said, from different angles and with different vocabularies. The references below are the ones I find most directly useful.
 
 **Perception as species-specific world:**
 
@@ -119,7 +119,7 @@ I didn't invent this. The model I'm describing is mostly a re-assembly of things
 
 ## The Elephant Game
 
-Static prose is the wrong medium for this. I want something close to a game: you play for ninety seconds, and the geometry of the post becomes obvious in a way no equation can deliver.
+Static prose is the wrong medium for this, so I want something close to a game: you play for ninety seconds, and the geometry of the post becomes obvious in a way no equation can deliver.
 
 **The setup:**
 
@@ -127,11 +127,11 @@ A 3D elephant stands in the middle of the canvas, slowly animated: trunk swaying
 
 **Your job:**
 
-You have a camera. The camera is bad on purpose. Its lens is skewed, its color response is warped (maybe you only see blues and oranges; maybe everything comes through a kaleidoscope), its resolution is pitiful, and some features it flat-out refuses to capture (no motion; or only silhouette; or shape but not color; or audio only). You move along a circular orbit around the elephant, adjust your aim within that orbit, wait for the right moment of the idle animation (trunk swaying, ears flapping, feet shifting), and click. You get a photograph. That photograph is your $L(T(R))$, and it looks every bit as ugly as the theory promises.
+You have a camera, and it is bad on purpose. Its lens is skewed, its color response is warped (maybe you only see blues and oranges, or everything comes through a kaleidoscope), its resolution is pitiful, and some features it flat-out refuses to capture (no motion, or only silhouette, or shape but not color, or audio only). You move along a circular orbit around the elephant, adjust your aim within that orbit, wait for the right moment of the idle animation (trunk swaying, ears flapping, feet shifting), and click. You get a photograph, which is your $L(T(R))$, and it looks every bit as ugly as the theory promises.
 
 **The interlocutor:**
 
-On the other side of the channel is a partner. They never see the elephant. They only see your photos, and they reconstruct what they think the elephant looks like, rendered as a 3D scene beside the ground truth. The reconstruction is shaped by the partner's own fixed transform and priors: maybe they assume volume from outline, maybe they fill in motion from texture, maybe they default to a cow when evidence is ambiguous.
+On the other side of the channel is a partner who never sees the elephant; they only see your photos, from which they reconstruct what they think the elephant looks like, rendered as a 3D scene beside the ground truth. The reconstruction is shaped by the partner's own fixed transform and priors: maybe they assume volume from outline, maybe they fill in motion from texture, maybe they default to a cow when evidence is ambiguous.
 
 **The play loop (three shots, one partner):**
 
@@ -142,7 +142,7 @@ On the other side of the channel is a partner. They never see the elephant. They
 5. **Shot 3, precision.** Last chance. By now you have a working model of your partner's blind spots. Pick the single shot that closes the biggest remaining gap.
 6. **Final score.** Structural similarity between their reconstruction and the ground truth, broken out by shape, color, motion, and texture.
 
-The whole theory is in this loop. Shot 1 is communication without calibration. Watching the reconstruction is triangulation. Each adjustment is an update to your model of your partner's $T$. The score goes up when you stop trying to describe reality and start trying to compensate for one specific mind. After you finish a round, you can switch partners and discover that everything you just learned is now useless.
+The whole theory lives in this loop: shot 1 is communication without calibration, watching the reconstruction is triangulation, and each adjustment is an update to your model of your partner's $T$. The score goes up when you stop trying to describe reality and start trying to compensate for one specific mind. After you finish a round, you can switch partners and discover that everything you just learned is now useless.
 
 **Partner presets (each is a fixed $T^{-1}, L^{-1}$ pair):**
 
@@ -150,7 +150,7 @@ The whole theory is in this loop. Shot 1 is communication without calibration. W
 - The **foreigner**: different cultural priors and default object classes. Same photo, different reconstruction.
 - The **specialist**: only cares about certain features (a zoologist fixated on tusks; a color theorist fixated on hue; a kinematicist fixated on gait).
 - The **child**: higher noise floor, stronger generative priors, less calibrated.
-- The **bat**: Umwelt-shifted. Reconstructs in echolocation-space, not vision-space. Your photo of a silent elephant is not useful data. A recording of its footsteps is.
+- The **bat**: Umwelt-shifted, reconstructs in echolocation-space rather than vision-space. Your photo of a silent elephant is not useful data; a recording of its footsteps is.
 - The **blind men**: an ensemble of three partners with non-overlapping attention windows, as in the opening parable. Your job: compose photos that let all three reconstruct something plausible together.
 - The **adversary**: a partner whose transform is deliberately mis-aligned or motivated. Same photos, distorted reconstruction on purpose. The model for bad-faith communication.
 
