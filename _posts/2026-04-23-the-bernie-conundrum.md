@@ -7,6 +7,7 @@ tags:
   - psychology
   - relationships
   - philosophy
+date: 2026-04-23T12:00:00-04:00
 ---
 
 When asked about marriage advice, my very wise colleague posited the following:
@@ -32,7 +33,7 @@ I call this the **Bernie Conundrum**, and it can be understood through these und
 
 - **Availability:** We remember our own contributions more vividly because we were there for all of them.
 - **Attentional asymmetry:** We notice our costs and others' outputs.
-- **Construal:** We judge ourselves by intent and effort (_I tried_), others by outcome (_did the thing get done_).
+- **Construal:** We judge ourselves by intent and effort (_I tried_), others by outcome (_did the thing get done to our very specific standard_).
 - **Self-protection:** Believing we are contributing fairly is a cheaper mental state than believing we are the free-rider.
 
 None of these require malice, or even selfishness; they only require us to be human, with all the limitations that entails. After all, aren't we all above average?
@@ -44,7 +45,7 @@ The first-order move is to notice it in ourselves. If our instinct is _I am doin
 When this happens, we can:
 
 - **Lower the confidence of our estimate:** not to zero, since we probably _are_ also doing something, but enough to treat our own summary with suspicion.
-- **Increase visibility:** a shared list, a shared schedule, an explicit ledger for the mental-load items (birthdays, appointments, running low on X), not to litigate but to start calibrating our estimates.
+- **Increase visibility:** a shared list, a shared schedule, an explicit ledger for the mental-load items (Jira tickets, appointments, running low on X), not to litigate but to start calibrating our estimates.
 - **Reverse-audit:** ask ourselves, "what have they done this week that I only partly noticed?" It takes a bit of mental effort, and often results in a list longer than expected.
 - **Don't try to win the tally:** the whole game of "I did more this week" is a trap, because the bias guarantees we can always find evidence to further our claim. Instead, redirect the conversation to _What's hard right now?_
 
