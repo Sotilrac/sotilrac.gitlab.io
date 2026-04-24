@@ -1,4 +1,5 @@
 ---
+layout: layouts/post.njk
 author: Carlos
 title: A Theory of Communication
 categories:
