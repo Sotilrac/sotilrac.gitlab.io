@@ -547,12 +547,18 @@ footer {
   align-items: center;
 }
 
-footer > span {
-  flex: 0 0 5em;
+footer p {
+  margin: 0;
 }
 
 .cc-icon {
   color: var(--snow);
+  white-space: nowrap;
+}
+
+.cc-icon .icon {
+  margin-right: 0.25em;
+  vertical-align: -0.15em;
 }
 
 /* --- Site: Blog --- */

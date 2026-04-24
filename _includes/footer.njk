@@ -1,9 +1,16 @@
 {% from "icon.njk" import icon %}
 <footer class="no-print">
-  <a class="cc-icon" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons BY-NC-SA 4.0" target="blank">
-    <span class="icon">{{ icon("fa-creative-commons") }}</span>
-  </a>
-  <span>{{ buildDate | dateFormat("year") }}</span>
+  <p>
+    &copy; 2006&ndash;{{ buildDate | dateFormat("year") }} Carlos Asmat.
+    Content licensed under
+    <a class="cc-icon"
+       href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+       rel="license noopener noreferrer"
+       target="_blank">
+      <span class="icon" aria-hidden="true">{{ icon("fa-creative-commons") }}</span>
+      CC BY-NC-SA 4.0
+    </a>.
+  </p>
 </footer>
 
 <!-- JS -->
