@@ -83,6 +83,14 @@ export default function (eleventyConfig) {
     return `<div class="gallery" style="--gallery-cols: ${columns}">${items}</div>`;
   });
 
+  eleventyConfig.addShortcode("compare", (beforeImg, afterImg, caption) => {
+    const cap = caption || "";
+    const altBefore = cap ? `Before: ${cap}` : "Before";
+    const altAfter = cap ? `After: ${cap}` : "After";
+    const expandIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M3 3h7v2H5v5H3V3zm11 0h7v7h-2V5h-5V3zm7 11v7h-7v-2h5v-5h2zm-11 7H3v-7h2v5h5v2z"/></svg>`;
+    return `<figure class="post-fig compare-fig" style="--pos:50%"><div class="compare-stage" role="slider" aria-label="Drag to compare before and after" tabindex="0"><img class="compare-img compare-after" src="${afterImg}" alt="${altAfter}" loading="lazy" draggable="false" /><img class="compare-img compare-before" src="${beforeImg}" alt="${altBefore}" loading="lazy" draggable="false" /><div class="compare-divider" aria-hidden="true"></div><a class="compare-zoom compare-zoom-before" href="${beforeImg}" data-fancybox data-caption="${altBefore}" aria-label="Expand before image">${expandIcon}</a><a class="compare-zoom compare-zoom-after" href="${afterImg}" data-fancybox data-caption="${altAfter}" aria-label="Expand after image">${expandIcon}</a></div><figcaption>${cap}</figcaption></figure><script src="/js/compare.js" defer></script>`;
+  });
+
   eleventyConfig.addShortcode("wayback", (url, text) => {
     return `<a href="${url}" class="wayback-link" title="Archived page">${text}<svg class="wayback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/><path d="M3 12h1M20 12h1"/></svg></a>`;
   });
