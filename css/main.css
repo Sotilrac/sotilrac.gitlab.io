@@ -450,6 +450,37 @@ th {
   }
 }
 
+.hero-cursor {
+  display: inline-block;
+  margin-left: 0.4ch;
+  line-height: 1;
+  animation: hero-cursor-blink 1s step-end infinite;
+}
+
+.hero-cursor-inline {
+  margin-left: 0;
+}
+
+.hero-cursor-hidden {
+  visibility: hidden;
+}
+
+.hero-cursor-inline.hero-cursor-hidden {
+  display: none;
+}
+
+@keyframes hero-cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cursor {
+    animation: none;
+  }
+}
+
 /* --- Site: Resume --- */
 .pic {
   height: 200px;
