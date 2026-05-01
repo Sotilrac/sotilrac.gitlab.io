@@ -36,6 +36,7 @@
       ];
       var speed = 40;
       var pause = 200;
+      var rest = 5500;
 
       function pick(arr, current) {
         var next;
@@ -79,12 +80,13 @@
           type(slot, w, function() {
             inline.classList.add('hero-cursor-hidden');
             endCursor.classList.remove('hero-cursor-hidden');
+            turn++;
+            setTimeout(cycle, rest);
           });
         });
-        turn++;
       }
 
-      setInterval(cycle, 7000);
+      setTimeout(cycle, rest);
     })();
     </script>
 
