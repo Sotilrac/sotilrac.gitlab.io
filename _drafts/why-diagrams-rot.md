@@ -64,7 +64,9 @@ The layout engines, parsers, routers, and interactive canvas libraries all alrea
 
 ## Daedalus
 
-So I built it. [Daedalus](https://gitlab.com/sotilrac/daedalus) takes D2 as the source of truth and ELK for the initial layout pass. From there, you modify the layout by dragging and dropping nodes, scaling them, and assigning connections per side. The edges get autorouted to avoid collisions, and everything saves to a `.daedalus.json` file next to the source.
+So I built it. [Daedalus](https://gitlab.com/sotilrac/daedalus) takes D2 as the source of truth and ELK for the initial layout pass. D2 specifically, because it has the readability of Mermaid and adds something Mermaid lacks: classes that apply cleanly to edges. That's what makes a real visual grammar (dotted = wireless, red = power) work in practice rather than just on nodes.
+
+From there, you modify the layout by dragging and dropping nodes, scaling them, and assigning connections per side. The edges get autorouted to avoid collisions, and everything saves to a `.daedalus.json` file next to the source.
 
 Saving changes to the D2 file automatically refreshes the diagram but keeps your layout intact. New nodes appear in available spaces for you to place.
 
