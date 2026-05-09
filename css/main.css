@@ -23,6 +23,7 @@
   --cyan: #17a2b8;
   --deep-sea: #29527a;
   --page-bg: var(--snow);
+  --page-edge: rgba(0, 0, 0, 0.06);
   --gutter: 1rem;
   --col-min: 100%;
   --col-skill: 15em;
@@ -586,6 +587,24 @@ footer p {
 .cc-icon .icon {
   margin-right: 0.25em;
   vertical-align: -0.15em;
+}
+
+/* --- Page edge indicator (wide viewports) --- */
+@media (min-width: 86em) {
+  .col-content {
+    position: relative;
+    padding-right: var(--gutter);
+  }
+  .col-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--page-edge);
+    pointer-events: none;
+  }
 }
 
 /* --- Site: Blog --- */
@@ -1178,6 +1197,7 @@ hr.comments-separator {
 @media (prefers-color-scheme: dark) {
   :root {
     --page-bg: #14171a;
+    --page-edge: rgba(255, 255, 255, 0.06);
     --charcoal: #e6e7e9;
     --pearl: #1f2226;
     --silver: #2c3036;
