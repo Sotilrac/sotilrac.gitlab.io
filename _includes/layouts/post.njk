@@ -29,10 +29,10 @@ layout: layouts/base.njk
             <time datetime="{{ date | dateFormat('iso') }}" itemprop="datePublished">
                 {{ date | dateFormat('isodate') }}
             </time>
-            {% if tags | length %}
-            <span class="post-tags">{% for tag in tags %}{% if tag != "posts" and tag != "drafts" %}<a class="post-tag" href="/tags/?tag={{ tag }}">{{ tag }}</a>{% endif %}{% endfor %}</span>
-            {% endif %}
-            <a class="post-sponsor" href="https://github.com/sponsors/Sotilrac" target="_blank" rel="noopener noreferrer" title="Sponsor on GitHub"><span class="icon">{{ icon("fa-heart") }}</span> Sponsor</a>
+            <span class="post-meta-actions">
+                {% for tag in tags %}{% if tag != "posts" and tag != "drafts" %}<a class="post-tag" href="/tags/?tag={{ tag }}">{{ tag }}</a>{% endif %}{% endfor %}
+                <a class="post-sponsor" href="https://github.com/sponsors/Sotilrac" target="_blank" rel="noopener noreferrer" title="Sponsor on GitHub"><span class="icon">{{ icon("fa-heart") }}</span> Sponsor</a>
+            </span>
         </p>
     </header>
 

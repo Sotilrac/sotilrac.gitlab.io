@@ -623,13 +623,22 @@ footer p {
   color: var(--slate);
   font-size: 0.9em;
   font-family: var(--font-mono);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4em 0.75em;
+}
+
+.post-meta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em;
 }
 
 .post-tag {
   display: inline-block;
   padding: 0.1em 0.5em;
-  margin-left: 0.75em;
-  margin-top: 0.4em;
   font-size: 0.85em;
   color: var(--deep-sea);
   background: var(--amber);
@@ -645,8 +654,6 @@ footer p {
 .post-sponsor {
   display: inline-block;
   padding: 0.1em 0.5em;
-  margin-left: 0.75em;
-  margin-top: 0.4em;
   font-size: 0.85em;
   color: white;
   background: var(--magenta);
