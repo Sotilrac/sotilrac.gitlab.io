@@ -23,7 +23,10 @@
   --cyan: #17a2b8;
   --deep-sea: #29527a;
   --page-bg: var(--snow);
-  --page-edge: rgba(0, 0, 0, 0.06);
+  --page-edge: rgba(0, 0, 0, 0.035);
+  --header-height: 4rem;
+  --footer-height: 6rem;
+  --edge-fade: 1.5rem;
   --gutter: 1rem;
   --col-min: 100%;
   --col-skill: 15em;
@@ -589,20 +592,41 @@ footer p {
   vertical-align: -0.15em;
 }
 
-/* --- Page edge indicator (wide viewports) --- */
+/* --- Page edge indicator (wide viewports)
+ * Architecture: a 1px line is fixed to the viewport at the column corresponding
+ * to col-content's right edge. It sits at z-index -1 so opaque in-flow elements
+ * (hero, sticky header, footer) cover it in their regions; the result is a line
+ * that visually spans only the content zone, with fade zones permanently anchored
+ * to viewport top and bottom regardless of scroll position. */
 @media (min-width: 86em) {
   .col-content {
-    position: relative;
     padding-right: var(--gutter);
   }
-  .col-content::after {
+  .print-btn {
+    right: var(--gutter);
+  }
+  body::after {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
     bottom: 0;
+    left: calc(var(--gutter) + var(--col-content-max));
     width: 1px;
-    background: var(--page-edge);
+    z-index: -1;
+    background: linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent var(--edge-top-offset, var(--header-height)),
+      var(--page-edge)
+        calc(var(--edge-top-offset, var(--header-height)) + var(--edge-fade)),
+      var(--page-edge)
+        calc(
+          100% - var(--edge-bottom-offset, var(--footer-height)) -
+            var(--edge-fade)
+        ),
+      transparent calc(100% - var(--edge-bottom-offset, var(--footer-height))),
+      transparent 100%
+    );
     pointer-events: none;
   }
 }
@@ -1197,7 +1221,7 @@ hr.comments-separator {
 @media (prefers-color-scheme: dark) {
   :root {
     --page-bg: #14171a;
-    --page-edge: rgba(255, 255, 255, 0.06);
+    --page-edge: rgba(255, 255, 255, 0.04);
     --charcoal: #e6e7e9;
     --pearl: #1f2226;
     --silver: #2c3036;

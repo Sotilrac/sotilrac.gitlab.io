@@ -4,14 +4,8 @@
   {% include "head.njk" %}
 
   <body>
-    <div class="name-header no-print">
-      <div class="row row-center">
-        <div>
-          <h1 class="hero-header">Carlos Asmat</h1>
-          <p>I make <mark><span id="slot1">robots</span><span class="hero-cursor hero-cursor-inline hero-cursor-hidden" id="cursor1" aria-hidden="true">▁</span></mark> that</br>work <mark><span id="slot2">in the real world</span><span class="hero-cursor hero-cursor-inline hero-cursor-hidden" id="cursor2" aria-hidden="true">▁</span></mark><span class="hero-cursor" id="hero-cursor" aria-hidden="true">▁</span></p>
-        </div>
-      </div>
-    </div>
+
+    {% include "hero.njk" %}
 
     {% include "header.njk" %}
 
@@ -20,75 +14,6 @@
     </div>
 
     {% include "footer.njk" %}
-
-    <script>
-    (function() {
-      var slot1 = document.getElementById('slot1');
-      var slot2 = document.getElementById('slot2');
-      var cursor1 = document.getElementById('cursor1');
-      var cursor2 = document.getElementById('cursor2');
-      var endCursor = document.getElementById('hero-cursor');
-      var slots = [slot1, slot2];
-      var inlineCursors = [cursor1, cursor2];
-      var wordSets = [
-        ['robots', 'wearable devices', 'embedded systems', 'exoskeletons', 'connected devices'],
-        ['in the real world', 'with real people', 'outside the lab', 'on real humans', 'out and about']
-      ];
-      var speed = 40;
-      var pause = 200;
-      var rest = 5500;
-
-      function pick(arr, current) {
-        var next;
-        do { next = arr[Math.floor(Math.random() * arr.length)]; } while (next === current && arr.length > 1);
-        return next;
-      }
-
-      function erase(el, cb) {
-        var text = el.textContent;
-        if (text.length === 0) { cb(); return; }
-        function step() {
-          text = text.slice(0, -1);
-          el.textContent = text;
-          if (text.length > 0) setTimeout(step, speed);
-          else setTimeout(cb, pause);
-        }
-        step();
-      }
-
-      function type(el, text, cb) {
-        var i = 0;
-        function step() {
-          i++;
-          el.textContent = text.slice(0, i);
-          if (i < text.length) setTimeout(step, speed);
-          else if (cb) cb();
-        }
-        step();
-      }
-
-      var turn = 0;
-
-      function cycle() {
-        var slot = slots[turn % 2];
-        var inline = inlineCursors[turn % 2];
-        var words = wordSets[turn % 2];
-        endCursor.classList.add('hero-cursor-hidden');
-        inline.classList.remove('hero-cursor-hidden');
-        var w = pick(words, slot.textContent);
-        erase(slot, function() {
-          type(slot, w, function() {
-            inline.classList.add('hero-cursor-hidden');
-            endCursor.classList.remove('hero-cursor-hidden');
-            turn++;
-            setTimeout(cycle, rest);
-          });
-        });
-      }
-
-      setTimeout(cycle, rest);
-    })();
-    </script>
 
   </body>
 

@@ -5,6 +5,8 @@
 
   <body>
 
+    {% if hero %}{% include "hero.njk" %}{% endif %}
+
     {% include "header.njk" %}
 
     <div id="page-content" class="page-wrapper">
