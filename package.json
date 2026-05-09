@@ -18,6 +18,7 @@
     "build": "npx @11ty/eleventy",
     "lint": "prettier --check . && echo 'All files formatted correctly'",
     "lint:fix": "prettier --write .",
+    "check:links": "node _tools/check-internal-links.mjs",
     "prepare": "lefthook install"
   },
   "dependencies": {
