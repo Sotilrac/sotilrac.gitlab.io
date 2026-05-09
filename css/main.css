@@ -649,6 +649,27 @@ footer p {
   opacity: 100%;
 }
 
+.post-sponsor {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  margin-left: 0.75em;
+  margin-top: 0.4em;
+  font-size: 0.85em;
+  color: white;
+  background: var(--magenta);
+  border-radius: 3px;
+  opacity: 85%;
+  text-decoration: none;
+}
+
+.post-sponsor:hover {
+  opacity: 100%;
+}
+
+.post-sponsor .icon {
+  margin-right: 0.15em;
+}
+
 .tag-cloud {
   margin-bottom: 1.5em;
 }

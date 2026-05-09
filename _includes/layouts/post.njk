@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
+{% from "icon.njk" import icon %}
 <article class="post col-content" itemscope itemtype="http://schema.org/BlogPosting">
     <script type="application/ld+json">
     {
@@ -31,6 +32,7 @@ layout: layouts/base.njk
             {% if tags | length %}
             <span class="post-tags">{% for tag in tags %}{% if tag != "posts" and tag != "drafts" %}<a class="post-tag" href="/tags/?tag={{ tag }}">{{ tag }}</a>{% endif %}{% endfor %}</span>
             {% endif %}
+            <a class="post-sponsor" href="https://github.com/sponsors/Sotilrac" target="_blank" rel="noopener noreferrer" title="Sponsor on GitHub"><span class="icon">{{ icon("fa-heart") }}</span> Sponsor</a>
         </p>
     </header>
 
