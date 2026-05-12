@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="880" height="360"
+     preserveAspectRatio="xMidYMid meet"
+     role="img" aria-label="GitHub incidents per month, March 2022 to May 2026, stacked by severity">
+  <style>
+  .bg { fill: transparent; }
+  .axis { font: 11px ui-sans-serif, system-ui, sans-serif; fill: #6c757d; }
+  .legend { font: 12px ui-sans-serif, system-ui, sans-serif; fill: #212529; }
+  .grid { stroke: #ddd; stroke-width: 1; }
+  .frame { stroke: #828282; stroke-width: 1; fill: none; }
+  .bar-critical { fill: #c7254e; }
+  .bar-major    { fill: #fd7e14; }
+  .bar-minor    { fill: #ffc107; }
+  @media (prefers-color-scheme: dark) {
+    .axis { fill: #aab2bd; }
+    .legend { fill: #e6e7e9; }
+    .grid  { stroke: #2c3036; }
+    .frame { stroke: #6c757d; }
+    .bar-critical { fill: #ff6b8a; }
+    .bar-major    { fill: #ffa14a; }
+    .bar-minor    { fill: #ffd24a; }
+  }
+</style>
+  <rect class="bg" width="880" height="360"/>
+  <line class="grid" x1="48" x2="864" y1="235.00" y2="235.00"/>
+<line class="grid" x1="48" x2="864" y1="166.00" y2="166.00"/>
+<line class="grid" x1="48" x2="864" y1="97.00" y2="97.00"/>
+<line class="grid" x1="48" x2="864" y1="28.00" y2="28.00"/>
+  <rect class="bar bar-minor" x="48.00" y="283.30" width="14.04" height="20.70"><title>2022-03: 3 minor</title></rect>
+<rect class="bar bar-major" x="48.00" y="276.40" width="14.04" height="6.90"><title>2022-03: 1 major</title></rect>
+<rect class="bar bar-minor" x="64.04" y="269.50" width="14.04" height="34.50"><title>2022-04: 5 minor</title></rect>
+<rect class="bar bar-major" x="64.04" y="262.60" width="14.04" height="6.90"><title>2022-04: 1 major</title></rect>
+<rect class="bar bar-minor" x="80.08" y="276.40" width="14.04" height="27.60"><title>2022-05: 4 minor</title></rect>
+<rect class="bar bar-major" x="80.08" y="255.70" width="14.04" height="20.70"><title>2022-05: 3 major</title></rect>
+<rect class="bar bar-minor" x="96.12" y="248.80" width="14.04" height="55.20"><title>2022-06: 8 minor</title></rect>
+<rect class="bar bar-major" x="96.12" y="221.20" width="14.04" height="27.60"><title>2022-06: 4 major</title></rect>
+<rect class="bar bar-minor" x="112.16" y="283.30" width="14.04" height="20.70"><title>2022-07: 3 minor</title></rect>
+<rect class="bar bar-minor" x="128.20" y="235.00" width="14.04" height="69.00"><title>2022-08: 10 minor</title></rect>
+<rect class="bar bar-major" x="128.20" y="228.10" width="14.04" height="6.90"><title>2022-08: 1 major</title></rect>
+<rect class="bar bar-minor" x="144.24" y="228.10" width="14.04" height="75.90"><title>2022-09: 11 minor</title></rect>
+<rect class="bar bar-major" x="144.24" y="221.20" width="14.04" height="6.90"><title>2022-09: 1 major</title></rect>
+<rect class="bar bar-minor" x="160.27" y="228.10" width="14.04" height="75.90"><title>2022-10: 11 minor</title></rect>
+<rect class="bar bar-major" x="160.27" y="200.50" width="14.04" height="27.60"><title>2022-10: 4 major</title></rect>
+<rect class="bar bar-minor" x="176.31" y="207.40" width="14.04" height="96.60"><title>2022-11: 14 minor</title></rect>
+<rect class="bar bar-major" x="176.31" y="193.60" width="14.04" height="13.80"><title>2022-11: 2 major</title></rect>
+<rect class="bar bar-minor" x="192.35" y="248.80" width="14.04" height="55.20"><title>2022-12: 8 minor</title></rect>
+<rect class="bar bar-minor" x="208.39" y="193.60" width="14.04" height="110.40"><title>2023-01: 16 minor</title></rect>
+<rect class="bar bar-major" x="208.39" y="186.70" width="14.04" height="6.90"><title>2023-01: 1 major</title></rect>
+<rect class="bar bar-minor" x="224.43" y="207.40" width="14.04" height="96.60"><title>2023-02: 14 minor</title></rect>
+<rect class="bar bar-major" x="224.43" y="193.60" width="14.04" height="13.80"><title>2023-02: 2 major</title></rect>
+<rect class="bar bar-minor" x="240.47" y="207.40" width="14.04" height="96.60"><title>2023-03: 14 minor</title></rect>
+<rect class="bar bar-major" x="240.47" y="172.90" width="14.04" height="34.50"><title>2023-03: 5 major</title></rect>
+<rect class="bar bar-minor" x="256.51" y="248.80" width="14.04" height="55.20"><title>2023-04: 8 minor</title></rect>
+<rect class="bar bar-major" x="256.51" y="221.20" width="14.04" height="27.60"><title>2023-04: 4 major</title></rect>
+<rect class="bar bar-minor" x="272.55" y="255.70" width="14.04" height="48.30"><title>2023-05: 7 minor</title></rect>
+<rect class="bar bar-major" x="272.55" y="235.00" width="14.04" height="20.70"><title>2023-05: 3 major</title></rect>
+<rect class="bar bar-minor" x="288.59" y="235.00" width="14.04" height="69.00"><title>2023-06: 10 minor</title></rect>
+<rect class="bar bar-major" x="288.59" y="228.10" width="14.04" height="6.90"><title>2023-06: 1 major</title></rect>
+<rect class="bar bar-critical" x="288.59" y="221.20" width="14.04" height="6.90"><title>2023-06: 1 critical</title></rect>
+<rect class="bar bar-minor" x="304.63" y="235.00" width="14.04" height="69.00"><title>2023-07: 10 minor</title></rect>
+<rect class="bar bar-minor" x="320.67" y="186.70" width="14.04" height="117.30"><title>2023-08: 17 minor</title></rect>
+<rect class="bar bar-minor" x="336.71" y="179.80" width="14.04" height="124.20"><title>2023-09: 18 minor</title></rect>
+<rect class="bar bar-major" x="336.71" y="166.00" width="14.04" height="13.80"><title>2023-09: 2 major</title></rect>
+<rect class="bar bar-minor" x="352.75" y="262.60" width="14.04" height="41.40"><title>2023-10: 6 minor</title></rect>
+<rect class="bar bar-major" x="352.75" y="255.70" width="14.04" height="6.90"><title>2023-10: 1 major</title></rect>
+<rect class="bar bar-minor" x="368.78" y="248.80" width="14.04" height="55.20"><title>2023-11: 8 minor</title></rect>
+<rect class="bar bar-major" x="368.78" y="241.90" width="14.04" height="6.90"><title>2023-11: 1 major</title></rect>
+<rect class="bar bar-minor" x="384.82" y="248.80" width="14.04" height="55.20"><title>2023-12: 8 minor</title></rect>
+<rect class="bar bar-major" x="384.82" y="235.00" width="14.04" height="13.80"><title>2023-12: 2 major</title></rect>
+<rect class="bar bar-minor" x="400.86" y="269.50" width="14.04" height="34.50"><title>2024-01: 5 minor</title></rect>
+<rect class="bar bar-major" x="400.86" y="241.90" width="14.04" height="27.60"><title>2024-01: 4 major</title></rect>
+<rect class="bar bar-minor" x="416.90" y="255.70" width="14.04" height="48.30"><title>2024-02: 7 minor</title></rect>
+<rect class="bar bar-major" x="416.90" y="241.90" width="14.04" height="13.80"><title>2024-02: 2 major</title></rect>
+<rect class="bar bar-minor" x="432.94" y="262.60" width="14.04" height="41.40"><title>2024-03: 6 minor</title></rect>
+<rect class="bar bar-major" x="432.94" y="248.80" width="14.04" height="13.80"><title>2024-03: 2 major</title></rect>
+<rect class="bar bar-minor" x="448.98" y="214.30" width="14.04" height="89.70"><title>2024-04: 13 minor</title></rect>
+<rect class="bar bar-major" x="448.98" y="179.80" width="14.04" height="34.50"><title>2024-04: 5 major</title></rect>
+<rect class="bar bar-minor" x="465.02" y="228.10" width="14.04" height="75.90"><title>2024-05: 11 minor</title></rect>
+<rect class="bar bar-minor" x="481.06" y="262.60" width="14.04" height="41.40"><title>2024-06: 6 minor</title></rect>
+<rect class="bar bar-major" x="481.06" y="248.80" width="14.04" height="13.80"><title>2024-06: 2 major</title></rect>
+<rect class="bar bar-minor" x="497.10" y="186.70" width="14.04" height="117.30"><title>2024-07: 17 minor</title></rect>
+<rect class="bar bar-major" x="497.10" y="166.00" width="14.04" height="20.70"><title>2024-07: 3 major</title></rect>
+<rect class="bar bar-minor" x="513.14" y="235.00" width="14.04" height="69.00"><title>2024-08: 10 minor</title></rect>
+<rect class="bar bar-major" x="513.14" y="228.10" width="14.04" height="6.90"><title>2024-08: 1 major</title></rect>
+<rect class="bar bar-minor" x="529.18" y="255.70" width="14.04" height="48.30"><title>2024-09: 7 minor</title></rect>
+<rect class="bar bar-major" x="529.18" y="235.00" width="14.04" height="20.70"><title>2024-09: 3 major</title></rect>
+<rect class="bar bar-minor" x="545.22" y="283.30" width="14.04" height="20.70"><title>2024-10: 3 minor</title></rect>
+<rect class="bar bar-major" x="545.22" y="276.40" width="14.04" height="6.90"><title>2024-10: 1 major</title></rect>
+<rect class="bar bar-minor" x="561.25" y="262.60" width="14.04" height="41.40"><title>2024-11: 6 minor</title></rect>
+<rect class="bar bar-major" x="561.25" y="255.70" width="14.04" height="6.90"><title>2024-11: 1 major</title></rect>
+<rect class="bar bar-minor" x="577.29" y="262.60" width="14.04" height="41.40"><title>2024-12: 6 minor</title></rect>
+<rect class="bar bar-major" x="577.29" y="248.80" width="14.04" height="13.80"><title>2024-12: 2 major</title></rect>
+<rect class="bar bar-minor" x="593.33" y="241.90" width="14.04" height="62.10"><title>2025-01: 9 minor</title></rect>
+<rect class="bar bar-major" x="593.33" y="221.20" width="14.04" height="20.70"><title>2025-01: 3 major</title></rect>
+<rect class="bar bar-minor" x="609.37" y="207.40" width="14.04" height="96.60"><title>2025-02: 14 minor</title></rect>
+<rect class="bar bar-major" x="609.37" y="193.60" width="14.04" height="13.80"><title>2025-02: 2 major</title></rect>
+<rect class="bar bar-minor" x="625.41" y="207.40" width="14.04" height="96.60"><title>2025-03: 14 minor</title></rect>
+<rect class="bar bar-major" x="625.41" y="193.60" width="14.04" height="13.80"><title>2025-03: 2 major</title></rect>
+<rect class="bar bar-minor" x="641.45" y="214.30" width="14.04" height="89.70"><title>2025-04: 13 minor</title></rect>
+<rect class="bar bar-major" x="641.45" y="186.70" width="14.04" height="27.60"><title>2025-04: 4 major</title></rect>
+<rect class="bar bar-minor" x="657.49" y="207.40" width="14.04" height="96.60"><title>2025-05: 14 minor</title></rect>
+<rect class="bar bar-major" x="657.49" y="186.70" width="14.04" height="20.70"><title>2025-05: 3 major</title></rect>
+<rect class="bar bar-minor" x="673.53" y="207.40" width="14.04" height="96.60"><title>2025-06: 14 minor</title></rect>
+<rect class="bar bar-major" x="673.53" y="186.70" width="14.04" height="20.70"><title>2025-06: 3 major</title></rect>
+<rect class="bar bar-minor" x="689.57" y="200.50" width="14.04" height="103.50"><title>2025-07: 15 minor</title></rect>
+<rect class="bar bar-major" x="689.57" y="193.60" width="14.04" height="6.90"><title>2025-07: 1 major</title></rect>
+<rect class="bar bar-minor" x="705.61" y="241.90" width="14.04" height="62.10"><title>2025-08: 9 minor</title></rect>
+<rect class="bar bar-major" x="705.61" y="221.20" width="14.04" height="20.70"><title>2025-08: 3 major</title></rect>
+<rect class="bar bar-minor" x="721.65" y="214.30" width="14.04" height="89.70"><title>2025-09: 13 minor</title></rect>
+<rect class="bar bar-major" x="721.65" y="193.60" width="14.04" height="20.70"><title>2025-09: 3 major</title></rect>
+<rect class="bar bar-minor" x="737.69" y="186.70" width="14.04" height="117.30"><title>2025-10: 17 minor</title></rect>
+<rect class="bar bar-major" x="737.69" y="159.10" width="14.04" height="27.60"><title>2025-10: 4 major</title></rect>
+<rect class="bar bar-minor" x="753.73" y="214.30" width="14.04" height="89.70"><title>2025-11: 13 minor</title></rect>
+<rect class="bar bar-major" x="753.73" y="193.60" width="14.04" height="20.70"><title>2025-11: 3 major</title></rect>
+<rect class="bar bar-minor" x="769.76" y="248.80" width="14.04" height="55.20"><title>2025-12: 8 minor</title></rect>
+<rect class="bar bar-major" x="769.76" y="214.30" width="14.04" height="34.50"><title>2025-12: 5 major</title></rect>
+<rect class="bar bar-critical" x="769.76" y="207.40" width="14.04" height="6.90"><title>2025-12: 1 critical</title></rect>
+<rect class="bar bar-minor" x="785.80" y="152.20" width="14.04" height="151.80"><title>2026-01: 22 minor</title></rect>
+<rect class="bar bar-major" x="785.80" y="131.50" width="14.04" height="20.70"><title>2026-01: 3 major</title></rect>
+<rect class="bar bar-minor" x="801.84" y="97.00" width="14.04" height="207.00"><title>2026-02: 30 minor</title></rect>
+<rect class="bar bar-major" x="801.84" y="48.70" width="14.04" height="48.30"><title>2026-02: 7 major</title></rect>
+<rect class="bar bar-minor" x="817.88" y="138.40" width="14.04" height="165.60"><title>2026-03: 24 minor</title></rect>
+<rect class="bar bar-major" x="817.88" y="97.00" width="14.04" height="41.40"><title>2026-03: 6 major</title></rect>
+<rect class="bar bar-minor" x="833.92" y="186.70" width="14.04" height="117.30"><title>2026-04: 17 minor</title></rect>
+<rect class="bar bar-major" x="833.92" y="138.40" width="14.04" height="48.30"><title>2026-04: 7 major</title></rect>
+<rect class="bar bar-critical" x="833.92" y="117.70" width="14.04" height="20.70"><title>2026-04: 3 critical</title></rect>
+<rect class="bar bar-minor" x="849.96" y="297.10" width="14.04" height="6.90"><title>2026-05: 1 minor</title></rect>
+<rect class="bar bar-major" x="849.96" y="290.20" width="14.04" height="6.90"><title>2026-05: 1 major</title></rect>
+<rect class="bar bar-critical" x="849.96" y="255.70" width="14.04" height="34.50"><title>2026-05: 5 critical</title></rect>
+  <line class="frame" x1="48" y1="28" x2="48" y2="304"/>
+  <line class="frame" x1="48" y1="304" x2="864" y2="304"/>
+  <text class="axis" x="40" y="308.00" text-anchor="end">0</text>
+<text class="axis" x="40" y="239.00" text-anchor="end">10</text>
+<text class="axis" x="40" y="170.00" text-anchor="end">20</text>
+<text class="axis" x="40" y="101.00" text-anchor="end">30</text>
+<text class="axis" x="40" y="32.00" text-anchor="end">40</text>
+  <text class="axis" x="55.02" y="322" text-anchor="middle">2022-03</text>
+<text class="axis" x="215.41" y="322" text-anchor="middle">2023</text>
+<text class="axis" x="407.88" y="322" text-anchor="middle">2024</text>
+<text class="axis" x="600.35" y="322" text-anchor="middle">2025</text>
+<text class="axis" x="792.82" y="322" text-anchor="middle">2026</text>
+<text class="axis" x="856.98" y="322" text-anchor="middle">2026-05</text>
+  <rect class="bar bar-minor" x="800" y="7" width="10" height="10"/>
+<text class="legend" x="814" y="16">Minor</text>
+<rect class="bar bar-major" x="736" y="7" width="10" height="10"/>
+<text class="legend" x="750" y="16">Major</text>
+<rect class="bar bar-critical" x="672" y="7" width="10" height="10"/>
+<text class="legend" x="686" y="16">Critical</text>
+</svg>
