@@ -10,8 +10,8 @@ date_gmt: 2012-06-01T23:44:22-04:00
 categories:
   - News
 tags:
-  - Cloud Robotics
-  - Hackathon
+  - cloud robotics
+  - hackathon
   - robotics
 ---
 
