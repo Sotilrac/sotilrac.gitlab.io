@@ -13,7 +13,7 @@ categories:
 tags:
   - robotics
   - cracking
-  - mechanics
+  - mechanical
 ---
 
 {% include "archive-banner.njk" %}
