@@ -561,9 +561,20 @@ h3 .location {
   border-color: var(--deep-sea);
 }
 
+.print-btn .icon {
+  margin-right: 0.4em;
+}
+
 @media (max-width: 30em) {
-  .print-btn {
+  .print-btn-label {
     display: none;
+  }
+  .print-btn .icon {
+    margin-right: 0;
+  }
+  .print-btn {
+    padding: 0.4em 0.6em;
+    font-size: 1em;
   }
 }
 
