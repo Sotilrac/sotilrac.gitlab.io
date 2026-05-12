@@ -3,6 +3,9 @@
   <a class="site-nav-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
   <ul class="site-nav-links">
     <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+    {% if eleventy.env.runMode != "build" %}
+    <li><a href="{{ site.baseurl }}/drafts/">Drafts</a></li>
+    {% endif %}
     <li><a href="{{ site.gitlab }}" title="GitLab"><span class="icon">{{ icon("fa-gitlab") }}</span></a></li>
     <li><a href="{{ site.github }}" title="GitHub"><span class="icon">{{ icon("fa-github") }}</span></a></li>
     <li><a href="{{ site.linkedin }}" title="LinkedIn"><span class="icon">{{ icon("fa-linkedin") }}</span></a></li>
