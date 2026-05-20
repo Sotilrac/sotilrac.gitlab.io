@@ -3,7 +3,7 @@ layout: layouts/post.njk
 author: Carlos
 title: The Bernie Conundrum
 categories:
-  - Info
+  - Working Theory
 tags:
   - psychology
   - relationships

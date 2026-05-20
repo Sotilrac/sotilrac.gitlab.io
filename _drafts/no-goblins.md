@@ -3,7 +3,7 @@ layout: layouts/post.njk
 author: Carlos
 title: No Goblins
 categories:
-  - Software
+  - Working Theory
 tags:
   - engineering
   - llm

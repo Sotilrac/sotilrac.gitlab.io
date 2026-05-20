@@ -863,10 +863,13 @@ footer p {
   background: var(--magenta);
 }
 .cat-dot[data-cat="info"] {
-  background: var(--amber);
+  background: var(--violet);
 }
 .cat-dot[data-cat="news"] {
   background: var(--violet);
+}
+.cat-dot[data-cat="working theory"] {
+  background: var(--amber);
 }
 .cat-dot[data-cat="work in progress"] {
   background: var(--silver);

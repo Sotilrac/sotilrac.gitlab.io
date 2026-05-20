@@ -3,7 +3,7 @@ layout: layouts/post.njk
 author: Carlos
 title: What Makes Good Diagrams?
 categories:
-  - Info
+  - Software
 tags:
   - engineering
   - communication

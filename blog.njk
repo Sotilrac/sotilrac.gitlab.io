@@ -10,7 +10,7 @@ hero: true
   <p class="archive-blurb">Musings, projects, and learnings by a robotics engineer.</p>
 
   <ul class="cat-legend">
-    <li><span class="cat-dot" data-cat="info"></span>Field Notes</li>
+    <li><span class="cat-dot" data-cat="working theory"></span>Working Theory</li>
     <li><span class="cat-dot" data-cat="projects"></span>Projects</li>
     <li><span class="cat-dot" data-cat="robotics"></span>Robotics</li>
     <li><span class="cat-dot" data-cat="tools"></span>Tools</li>
@@ -28,7 +28,7 @@ hero: true
           {% if post.date.getFullYear() == year %}
           <li>
             <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-            {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | lower }}"></span>{% endif %}
+            {% if post.data.categories %}{% set rawcat = post.data.categories[0] | lower %}<span class="cat-dot" data-cat="{{ 'news' if rawcat == 'info' else rawcat }}"></span>{% endif %}
             <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
           </li>
           {% endif %}
@@ -51,7 +51,7 @@ hero: true
           {% if post.date.getFullYear() == year %}
           <li>
             <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-            {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | lower }}"></span>{% endif %}
+            {% if post.data.categories %}{% set rawcat = post.data.categories[0] | lower %}<span class="cat-dot" data-cat="{{ 'news' if rawcat == 'info' else rawcat }}"></span>{% endif %}
             <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
           </li>
           {% endif %}
