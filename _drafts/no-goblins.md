@@ -71,3 +71,21 @@ Read another way, the document is a sketch of what the model does on its own. Ev
 The Codex prompt is OpenAI's junior engineer in subscription form. You go past it with your real presence and uniqueness of thought. New and interesting innovations come from people combining and learning in different directions. This is what resourcefulness in 2026 looks like.
 
 And, by no means, bring up the goblins.
+
+<!-- Notes:
+
+the solution, as always, to, me, is open source software. So, what can we learn about it
+
+Emphasize the prompt is written by humans
+
+Summertime and graduation. booing AI
+
+
+AI is a calculator for words. How you can use it depends on your skills.
+
+2026 or 2008 feels a lot like the same, learn new tools, create, shit economy, easier to get hired if you have connections. Empashise the difference of being present as an edge.
+
+Add advice for seniors hiring. If you can affor to, hire and grow the next generation of engineers.
+
+
+ -->
