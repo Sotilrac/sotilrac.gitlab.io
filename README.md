@@ -5,10 +5,14 @@ Personal site, resume, and blog. Built with [Eleventy](https://www.11ty.dev/) v3
 ## Quick Start
 
 ```bash
-npm install
-npm run dev      # local dev server at http://localhost:8080
-npm run build    # production build to _site/
+make install     # install dependencies
+make dev         # local dev server at http://localhost:8080
+make build       # production build to _site/
+make check       # mirror CI locally: lint + build + link check
+make             # list all targets
 ```
+
+The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts (`npm run dev`, `npm run build`, `npm run lint`, etc.) still work.
 
 ## Project Structure
 
@@ -40,14 +44,14 @@ npm run build    # production build to _site/
 
 ## Linting & Formatting
 
-[Prettier](https://prettier.io/) handles autoformatting for Markdown, JSON, YAML, CSS, and JS. [Lefthook](https://lefthook.dev/) runs checks automatically as a pre-commit hook.
+[Prettier](https://prettier.io/) handles autoformatting for Markdown, JSON, YAML, CSS, and JS. [Lefthook](https://lefthook.dev/) wires it into git hooks.
 
 ```bash
-npm run lint       # check formatting (CI runs this)
-npm run lint:fix   # auto-fix formatting
+make lint          # check formatting (CI runs this)
+make lint-fix      # auto-fix formatting
 ```
 
-Pre-commit hooks are installed automatically via `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files.
+Git hooks are installed automatically via `make install` / `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files. On each push, it runs `make check` (lint + build + internal link check), mirroring the CI pipeline.
 
 ## Resume
 
