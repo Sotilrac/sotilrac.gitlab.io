@@ -23,10 +23,10 @@ email: '{"iv":"Iyi9lt8kMOtvApj/AUbVnw==","v":1,"iter":10000,"ks":128,"ts":64,"mo
 picture: /img/carlos-asmat.jpg
 summary:
   - Engineering leader specializing in robotics, embedded systems, and connected devices. My work spans humanoid robots, autonomous consumer robots, and wearable robotic platforms, always with a focus on delivering across the full product lifecycle, from early concept through commercial deployment.
-  - I developed physical and verbal interactions for humanoid robots at Softbank Robotics, supporting high-profile public demonstrations that demanded robust real-world performance and intuitive human-robot interaction. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea stage into a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, then formed and grew the dedicated EE, software, and robotics teams. The product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system, evolving from an initial ROS-based prototype into a custom production platform.
+  - I developed physical and verbal interactions for humanoid robots at SoftBank Robotics, supporting high-profile public demonstrations that demanded robust real-world performance and intuitive human-robot interaction. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea stage into a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, then formed and grew the dedicated EE, software, and robotics teams. The product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system, evolving from an initial ROS-based prototype into a custom production platform.
   - Currently, I lead architecture and system integration for wearable robotic platforms at Dephy, where our exoskeleton product is now available to consumers. I've re-architected controller systems to enable scalable deployments, and designed telemetry and data infrastructure. I'm now working on the next generation platform in collaboration with Nike. I mentor engineers across firmware, hardware, and software, combining hands-on technical depth with structured system thinking, strong documentation practices, and translating complex robotics challenges into reliable, maintainable products.
 experience:
-  - title: Connected Systems Engineering Manager
+  - title: Connected Systems Engineering Leader
     start_date: 01 / 2022
     end_date: Present
     location: Boxborough, MA
@@ -81,7 +81,7 @@ experience:
     start_date: 12 / 2013
     end_date: 06 / 2016
     location: Boston, MA
-    company: Aldebaran - Softbank Group
+    company: Aldebaran - SoftBank Group
     description:
       - item: Crafted natural and engaging interactions for Pepper and NAO robots.
       - item: Mentored and trained new team members.
@@ -118,13 +118,13 @@ experience:
     start_date: 08 / 2009
     end_date: 12 / 2009
     location: Montreal, QC
-    company: CanSat International Inc
+    company: CanSat International Inc.
     description:
       - item: Designed and executed digital signal processing systems and modems using FPGA technology.
       - item: Ensured systems met performance specifications.
   - title: Project Engineer
     start_date: 04 / 2009
-    end_date: "04 / 2009 "
+    end_date: "04 / 2009"
     location: Montreal, QC
     company: Panaxion
     description:
@@ -138,7 +138,7 @@ experience:
     description:
       - item: Adjusted aerial images for accuracy and appropriateness.
       - item: Orchestrated aerial photographic and LiDAR topographical surveys.
-      - item: Operated Vexcel camera, Optec LiDAR, and high-precision GPS units across Quebec and in Lagos, Nigeria.
+      - item: Operated Vexcel camera, Optech LiDAR, and high-precision GPS units across Quebec and in Lagos, Nigeria.
       - item: Led a month-long survey mission in Nigeria.
   - title: Digital System Design Teaching Assistant
     start_date: 07 / 2007
@@ -157,7 +157,7 @@ skills:
     - Git · Docker · CI/CD
     - Linux · Android · AWS
     - Gimp · Inkscape
-    - Blender · OnShape · Solidworks
+    - Blender · Onshape · Solidworks
     - KiCAD · Altium
     - Jupyter · Matlab
   technical:
@@ -195,7 +195,7 @@ education:
     start_date: "2004"
     end_date: "2008"
     degree:
-      - item: Bachelor's degree in Electrical  Engineering - Control & Automation / Power
+      - item: Bachelor's degree in Electrical Engineering - Control & Automation / Power
 patents:
   - title: Two-Wheeled Vehicle Having Linear Stabilization System
     number: US 11,613,325
@@ -210,15 +210,15 @@ projects:
   - name: asmat.ca
     start_date: 01 / 2018
     description:
-      - Personal site and technical blog built with Eleventy, Nunjucks, CSS, and JavaScript. CI/CD pipeline on GitLab with automated linting and deployment. Includes a data-driven resume, client-side AES decryption for contact info, structured data for SEO, and a comment system backed by GitHub Discussions.
-  - name: Nao Mind Control
+      - Personal site and technical blog built with Eleventy, CSS, and JavaScript. CI/CD pipeline on GitLab. Includes a data-driven resume, custom shortcodes, client-side AES decryption for contact info, SEO, and a comment system backed by GitHub Discussions.
+  - name: NAO Mind Control
     start_date: 09 / 2012
     description:
-      - Designed a behavior for the Nao robot that interfaces with the Neurosky MindWave Sensor, enabling users to control the robot using their thoughts. Showcased at New York Maker Faire 2012.
-  - name: Nao Rock Paper Scissors Lizard Spock
+      - Designed a behavior for the NAO robot that interfaces with the NeuroSky MindWave Sensor, enabling users to control the robot using their thoughts. Showcased at New York Maker Faire 2012.
+  - name: NAO Rock Paper Scissors Lizard Spock
     start_date: 08 / 2011
     description:
-      - Programmed Nao to play the expanded version of Rock Paper Scissors. The robot interacted with both children and adults at Maker Faire NY 2011, requiring minimal human intervention.
+      - Programmed NAO to play the expanded version of Rock Paper Scissors. The robot interacted with both children and adults at Maker Faire NY 2011, requiring minimal human intervention.
   - name: International Cooperation Trip to Ecuador
     start_date: 01 / 2010
     description:
