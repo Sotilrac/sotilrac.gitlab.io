@@ -7,7 +7,22 @@
   <link rel="icon" href="{{ site.baseurl }}/img/favicon-64.png">
 
   <title>{% if title %}Carlos Asmat - {{ title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if excerpt %}{{ excerpt | striptags }}{% else %}{{ site.description }}{% endif %}">
+
+  <meta name="description" content="{% if page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] }}{% elif excerpt %}{{ excerpt | striptags }}{% else %}{{ site.description }}{% endif %}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ (resume.first_name + " " + resume.last_name) | dump | safe }},
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}{{ resume.picture }}",
+    "description": {{ resume.summary[0] | dump | safe }},
+    "jobTitle": {{ resume.experience[0].title | dump | safe }},
+    "worksFor": { "@type": "Organization", "name": {{ resume.experience[0].company | dump | safe }} },
+    "sameAs": [{% for link in resume.links %}{{ link.url | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}]
+  }
+  </script>
 
   <script defer src="https://cloud.umami.is/script.js" data-website-id="55179db8-c15f-4659-8430-1ef4e05d3ffb"></script>
   <script defer src="{{ site.baseurl }}/js/edge-tracker.js"></script>
