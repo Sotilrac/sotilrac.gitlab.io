@@ -16,13 +16,13 @@ I remember being a junior engineer after graduating in 2008 and [looking for a j
 
 Some of it feels the same. Hiring has [slowed to levels last seen in 2010](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start), [unemployment for recent grads is running roughly twice the general rate](https://www.clevelandfed.org/publications/economic-commentary/2025/ec-202514-are-young-college-graduates-losing-their-edge-in-the-job-market), and connections still matter more than they should. The instinct to make yourself visible is the same one I had then, and it works again.
 
-In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_? General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same window. Most of those cuts spared the seniors who already know the ropes.
+In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_?. General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same window. Most of those cuts spared the seniors who already know the ropes.
 
 An LLM is a calculator for words: It accelerates work you already know how to evaluate, and cannot do quality work you do not understand. What it brings is leverage; engineers bring the judgment about where to apply it.
 
-As always, in dire situations, I turn to Open Source Software for answers. As it tunrs out, last month, OpenAI shipped a [system prompt for Codex](https://github.com/openai/codex/commit/c10f95ddac7b35095d334dece2ebcf69bcde61fc#diff-537a79bc56f24a25ec0326f0b2edd3b4c5ac4080a4476d22bad292cda43988b8), the GPT-5.5 release, that runs to nearly twenty-two thousand characters. This novella of instructions, written line by line by humans at OpenAI, loads into the context of every Codex session to tell the model how to behave at work.
+As always, in dire situations, I turn to Open Source Software for answers. As it turns out, last month, OpenAI shipped a [system prompt for Codex](https://github.com/openai/codex/commit/c10f95ddac7b35095d334dece2ebcf69bcde61fc#diff-537a79bc56f24a25ec0326f0b2edd3b4c5ac4080a4476d22bad292cda43988b8), the GPT-5.5 release, that runs to nearly twenty-two thousand characters. This novella of instructions, written line by line by humans at OpenAI, loads into the context of every Codex session to tell the model how to behave at work.
 
-If you don't like deciphering JSON strings, I rendered a more readable version [here](/img/blog/no-goblins/gpt-5.5.md). The five thousand tokens worth of OpenAI's opinion of how a thoughtful engineer ought to behave reads at times like a job desciption I've written.
+If you don't like deciphering JSON strings, I rendered a more readable version [here](/img/blog/no-goblins/gpt-5.5.md). The five thousand tokens worth of OpenAI's opinion of how a thoughtful engineer ought to behave reads at times like a job description I've written.
 
 ## Read before acting
 
@@ -78,12 +78,12 @@ Read another way, the document is a sketch of what the model does on its own. Ev
 
 ## Resourcefulness in 2026
 
-The Codex prompt is OpenAI's junior engineer in subscription form. As a junior engineer, go past it with your real presence and uniqueness of thought. New and interesting innovations come from people combining and learning in different directions. our growth and undertanding of the business reality of the company is what gives you an edge.
+The Codex prompt is OpenAI's junior engineer in subscription form. As a junior engineer, go past it with your real presence and uniqueness of thought. New and interesting innovations come from people combining and learning in different directions. Your growth and understanding of the business reality of the company is what gives you an edge.
 
 ## For those hiring
 
 If you are on the other side of the table, the math is grim. You are not getting another generation of engineers unless you hire one, but it is a hard sell since you can opt to augment your current workforce with LLMs.
 
-If you can afford it, hire for judgment, follow-through, and a unique personality. This is how you build a resilient team that is capable of innovate and stay nible in the face of change.
+If you can afford it, hire for judgment, follow-through, and a unique personality. This is how you build a resilient team, capable of innovating and staying nimble in the face of change.
 
 And, by no means, bring up the goblins.
