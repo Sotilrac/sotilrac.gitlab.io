@@ -18,12 +18,19 @@ if (!existsSync(root)) {
   process.exit(1);
 }
 
-function walkHtml(dir) {
+const SKIP_DIRS = new Set(["drafts"]);
+
+function walkHtml(dir, base = dir) {
   const out = [];
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const p = join(dir, entry.name);
-    if (entry.isDirectory()) out.push(...walkHtml(p));
-    else if (entry.name.endsWith(".html")) out.push(p);
+    if (entry.isDirectory()) {
+      const rel = p.slice(base.length).replace(/^[/\\]/, "");
+      if (SKIP_DIRS.has(rel)) continue;
+      out.push(...walkHtml(p, base));
+    } else if (entry.name.endsWith(".html")) {
+      out.push(p);
+    }
   }
   return out;
 }
