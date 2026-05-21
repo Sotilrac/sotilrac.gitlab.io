@@ -1,3 +1,7 @@
+{% set pageTitle %}{% if title %}Carlos Asmat - {{ title }}{% else %}{{ site.title }}{% endif %}{% endset %}
+{% set pageDescription %}{% if page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] }}{% elif excerpt %}{{ excerpt | striptags }}{% else %}{{ site.description }}{% endif %}{% endset %}
+{% set pageImage = site.url + (image or "/img/carlos-asmat.jpg") %}
+{% set ogType = "article" if "posts" in (tags or []) else "website" %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,9 +10,28 @@
 
   <link rel="icon" href="{{ site.baseurl }}/img/favicon-64.png">
 
-  <title>{% if title %}Carlos Asmat - {{ title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
 
-  <meta name="description" content="{% if page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] }}{% elif excerpt %}{{ excerpt | striptags }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{{ ogType }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ pageImage }}">
+  {% if ogType == "article" %}
+  <meta property="article:author" content="Carlos Asmat">
+  {% if date %}<meta property="article:published_time" content="{{ date | dateFormat('iso') }}">{% endif %}
+  {% for category in (categories or []) %}<meta property="article:section" content="{{ category }}">
+  {% endfor %}{% for tag in (tags or []) %}{% if tag != "posts" and tag != "drafts" %}<meta property="article:tag" content="{{ tag }}">
+  {% endif %}{% endfor %}
+  {% endif %}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ pageImage }}">
 
   <script type="application/ld+json">
   {
@@ -23,6 +46,20 @@
     "sameAs": [{% for link in resume.links %}{{ link.url | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}]
   }
   </script>
+
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | dump | safe }},
+    "url": "{{ site.url }}",
+    "description": {{ site.description | dump | safe }},
+    "inLanguage": "en",
+    "publisher": { "@type": "Person", "name": "Carlos Asmat", "url": "{{ site.url }}" }
+  }
+  </script>
+  {% endif %}
 
   <script defer src="https://cloud.umami.is/script.js" data-website-id="55179db8-c15f-4659-8430-1ef4e05d3ffb"></script>
   <script defer src="{{ site.baseurl }}/js/edge-tracker.js"></script>
