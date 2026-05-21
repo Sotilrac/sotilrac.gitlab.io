@@ -38,6 +38,7 @@ export default function (eleventyConfig) {
 
   // --- Ignores ---
   eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add("img/**/*.md");
 
   // --- Collections ---
   // Public posts: in _posts/ with status missing or "public".
