@@ -68,16 +68,27 @@ export default function (eleventyConfig) {
   });
 
   // --- Shortcodes (for blog posts, when ported) ---
+  const altFromPath = (img) => {
+    if (!img) return "";
+    const cleanPath = img.split(/[?#]/)[0];
+    const filename = (cleanPath.split("/").pop() || "").replace(/\.[^.]+$/, "");
+    const slugMatch = cleanPath.match(/\/img\/blog\/([^/]+)\//);
+    const slug = slugMatch ? slugMatch[1] : "";
+    return (slug + " " + filename).replace(/[-_]+/g, " ").trim();
+  };
+
   eleventyConfig.addShortcode("fig", (img, caption) => {
-    const alt = caption || "";
-    return `<figure class="post-fig"><a href="${img}" data-fancybox data-caption="${alt}"><img src="${img}" alt="${alt}" /></a><figcaption>${alt}</figcaption></figure>`;
+    const alt = caption || altFromPath(img);
+    const fc = caption ? `<figcaption>${caption}</figcaption>` : "";
+    const dc = caption ? ` data-caption="${caption}"` : "";
+    return `<figure class="post-fig"><a href="${img}" data-fancybox${dc}><img src="${img}" alt="${alt}" /></a>${fc}</figure>`;
   });
 
   eleventyConfig.addShortcode("gallery", (columns, ...imgs) => {
     const items = imgs
       .map(
         (img) =>
-          `<a href="${img}" data-fancybox="gallery"><img src="${img}" alt="" /></a>`,
+          `<a href="${img}" data-fancybox="gallery"><img src="${img}" alt="${altFromPath(img)}" /></a>`,
       )
       .join("");
     return `<div class="gallery" style="--gallery-cols: ${columns}">${items}</div>`;
