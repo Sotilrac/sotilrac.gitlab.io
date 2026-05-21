@@ -1,7 +1,8 @@
+{% set isPost = "posts" in (tags or []) %}
 {% set pageTitle %}{% if title %}Carlos Asmat - {{ title }}{% else %}{{ site.title }}{% endif %}{% endset %}
-{% set pageDescription %}{% if page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] }}{% elif excerpt %}{{ excerpt | striptags }}{% else %}{{ site.description }}{% endif %}{% endset %}
+{% set pageDescription %}{% if description %}{{ description | safe }}{% elif excerpt %}{{ excerpt | striptags | safe }}{% elif page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] | safe }}{% elif isPost and content %}{{ content | excerpt | safe }}{% else %}{{ site.description | safe }}{% endif %}{% endset %}
 {% set pageImage = site.url + (image or "/img/carlos-asmat.jpg") %}
-{% set ogType = "article" if "posts" in (tags or []) else "website" %}
+{% set ogType = "article" if isPost else "website" %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

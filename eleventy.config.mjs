@@ -152,6 +152,42 @@ export default function (eleventyConfig) {
     return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
   });
 
+  eleventyConfig.addFilter("excerpt", (html, maxChars = 160) => {
+    if (!html) return "";
+    let text = html;
+    const startMatch = text.match(/class="post-content"[^>]*>/);
+    if (startMatch) {
+      text = text.slice(startMatch.index + startMatch[0].length);
+      const endMatch = text.match(
+        /<(hr class="comments-separator"|section class="post-comments"|nav class="post-nav")/,
+      );
+      if (endMatch) text = text.slice(0, endMatch.index);
+    }
+    text = text.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, "");
+    text = text.replace(/<[^>]+>/g, " ");
+    const decode = (s) =>
+      s
+        .replace(/&nbsp;/g, " ")
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&hellip;/g, "…")
+        .replace(/&mdash;/g, "—")
+        .replace(/&ndash;/g, "–");
+    let prev;
+    do {
+      prev = text;
+      text = decode(text);
+    } while (text !== prev);
+    text = text.replace(/\s+/g, " ").trim();
+    if (text.length <= maxChars) return text;
+    const cut = text.slice(0, maxChars);
+    const lastSpace = cut.lastIndexOf(" ");
+    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "…";
+  });
+
   eleventyConfig.addFilter("xmlEscape", (str) => {
     if (!str) return "";
     return str
