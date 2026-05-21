@@ -41,7 +41,7 @@ None of these require malice, or even selfishness; they only require us to be hu
 
 ## What To Do About It?
 
-The first-order move is to notice it in ourselves. If our instinct is _I am doing more than my share_, this is most likely partially an artifact of the asymmetry explained above. It does not mean we are doing an equal share, but it does mean our estimate is biased upward by some amount.
+The first-order move is to notice it in ourselves. If our instinct is _I am doing more than my share_, this is partly an artifact of the asymmetry explained above. It does not mean we are doing an equal share, but it does mean our estimate is biased upward by some amount.
 
 When this happens, we can:
 

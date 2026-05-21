@@ -14,7 +14,7 @@ date: 2026-05-08T12:00:00-04:00
 
 New phone day! I keep choosing OnePlus because the hardware is powerful, the macro camera is the best I have used on a phone, and out of the box ColorOS feels closer to stock Android than what Samsung ships. Of the mainstream Android options, it is one of the cleaner experiences. Oh, and it doesn't cost $1M.
 
-That said, "relatively clean" still leaves a lot of room for improvement. My new OnePlus 15 ships with ColorOS V16 on Android 16, and ColorOS arrives sporting a thick coat of preinstalled ~~crap~~ telemetry, AI assistants, behavioural-prediction services, HeyTap account plumbing (yes, they really called it "Tap"... like "wire tap"... at least they're honest), a silent Facebook stack, and a Microsoft cross-device broker for good measure. None of that needs to be running, and only a few of these _features_ can be uninstalled through the launcher.
+"Relatively clean" still leaves a lot of room for improvement. My new OnePlus 15 ships with ColorOS V16 on Android 16, and ColorOS arrives sporting a thick coat of preinstalled ~~crap~~ telemetry, AI assistants, behavioural-prediction services, HeyTap account plumbing (yes, they really called it "Tap"... like "wire tap"... at least they're honest), a silent Facebook stack, and a Microsoft cross-device broker for good measure. None of that needs to be running, and only a few of these _features_ can be uninstalled through the launcher.
 
 What you can do, without rooting or unlocking the bootloader (either of which would lock you out of every banking app), is this:
 
@@ -96,7 +96,7 @@ done
 
 ## What it does on a (semi) fresh OnePlus 15
 
-The list below is, without a doubt, the proverbial _junk_ that will.i.am was asking Fergie about. At any rate, this is the junk I found inside my trunk.
+The list below is the proverbial _junk_ that will.i.am was asking Fergie about. This is the junk I found inside my trunk.
 
 ```text
 List of devices attached
@@ -188,4 +188,4 @@ Disabling these has some minor caveats:
 - `com.google.android.youtube` removes the YouTube app. When I need YouTube, I open [Firefox](https://www.mozilla.org/firefox/) behind [uBlock Origin](https://ublockorigin.com/); the only viable way to watch YouTube since they decided they mostly want you to watch ads between a few videos.
 - The Google APEX entries (`adservices.api`, `federatedcompute`, `ondevicepersonalization.services`) are kernel-managed and probably don't actually end up disabled.
 
-I hope that one day we can buy useful mobile devices that serve a utilitarian purpose for the user: not addictive tracking machines that exploit our very human vulnerabilities, and that we sadly need for everyday life.
+I hope that one day we can buy useful mobile devices that serve a utilitarian purpose for the user: not addictive tracking machines that exploit our human vulnerabilities, and that we sadly need for everyday life.

@@ -20,7 +20,7 @@ Two decades on, the future I imagined back then has finally arrived. Before I ge
 
 A good diagram is almost a language. Dotted lines mean wireless, red lines mean power, rounded boxes are processes, square boxes are hardware. A consistent visual grammar lets a reader derive meaning fast, without legend-checking every connection.
 
-Four properties have to hold at once. **Visual language** gives the reader a grammar of shapes, colors, and line styles to learn once and apply across every diagram you produce. **Accuracy** means the diagram matches the system as it is, not as it was. **Consistency** keeps that grammar steady across the project's diagrams, so a reader who has parsed one already knows how to parse the next. **Maintainability** is what holds the rest together over time, by surviving the system changes that would otherwise turn a careful artifact into a misleading one.
+Four properties have to hold at once. **Visual language** gives the reader a grammar of shapes, colors, and line styles to learn once and apply across every diagram you produce. **Accuracy** means the diagram matches the system as it is, not as it was. **Consistency** keeps that grammar steady across the project's diagrams, so a reader who has parsed one already knows how to parse the next. **Maintainability** holds the rest together over time, surviving the system changes that would otherwise turn a careful artifact into a misleading one.
 
 When all four hold, a diagram becomes a teaching tool for new hires, a debugging surface for the team, and a contract with stakeholders about what the system actually is. When even one slips, the diagram stops being trusted, readers stop relying on it, and there's no point making more.
 
@@ -64,7 +64,7 @@ The layout engines, parsers, routers, and interactive canvas libraries all alrea
 
 ## Daedalus
 
-So I built it. [Daedalus](https://gitlab.com/sotilrac/daedalus) takes D2 as the source of truth and ELK for the initial layout pass. D2 specifically, because it has the readability of Mermaid and adds something Mermaid lacks: classes that apply cleanly to edges. That's what makes a real visual grammar (dotted = wireless, red = power) work in practice rather than just on nodes.
+So I built it. [Daedalus](https://gitlab.com/sotilrac/daedalus) takes D2 as the source of truth and ELK for the initial layout pass. D2 specifically, because it has the readability of Mermaid and adds something Mermaid lacks: classes that apply cleanly to edges. That's what makes a real visual grammar (dotted = wireless, red = power) work in practice rather than on nodes alone.
 
 From there, you modify the layout by dragging and dropping nodes, scaling them, and assigning connections per side. The edges get autorouted to avoid collisions, and everything saves to a `.daedalus.json` file next to the source.
 
@@ -76,4 +76,4 @@ Edges are the part most tools punt on, so they got the most work. Routing is ort
 
 It's a Tauri desktop app, MPL-2.0-licensed, and runs against a folder of `.d2` files. If the friction in this post is yours too, [download a release](https://github.com/Sotilrac/daedalus/releases/) and give it a try.
 
-{% compare "/img/blog/why-diagrams-rot/example_ELK.png", "/img/blog/why-diagrams-rot/example.png", "ELK v.s. Daedalus" %}
+{% compare "/img/blog/why-diagrams-rot/example_ELK.png", "/img/blog/why-diagrams-rot/example.png", "ELK vs. Daedalus" %}

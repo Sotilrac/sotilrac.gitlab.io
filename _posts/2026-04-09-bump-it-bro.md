@@ -21,7 +21,7 @@ From late 2011 through mid-2016, I worked at Aldebaran, the French robotics comp
 
 The company has been acquired, rebranded, sold, and placed into receivership. The name changed four times and the Paris headquarters emptied out. But roughly 20,000 NAO and 27,000 Pepper units were sold in 70 countries, and many of the behaviours I helped develop are still running on them. The robots outlasted the company that made them, which is either a testament to good engineering or a quiet indictment of the business models built around them.
 
-My job in Boston was to make these robots engaging to interact with. This was quite intimidating since it was my first job in software. I felt I was tossed into the deep end working alongside _real_ software engineers. As a result, and somewhat expectedly, I ended up learning a lot about software development for humanoid robots; more unexpectedly, I ended up learning even more about the complexity of our everyday human interactions.
+My job in Boston was to make these robots engaging to interact with. This was intimidating since it was my first job in software. I felt I was tossed into the deep end working alongside _real_ software engineers. As a result, and somewhat expectedly, I ended up learning a lot about software development for humanoid robots; more unexpectedly, I ended up learning even more about the complexity of our everyday human interactions.
 
 NAO and Pepper were capable machines, especially for their time, but, like all robots, constrained by the energy and size limitations that result from needing to move and exist in the physical world. The processor was an Intel Atom, roughly comparable to what you would find in a budget netbook circa 2013. For context, the phone in your pocket today has perhaps ten times the processing power, dedicated neural accelerators, and multiple high-resolution cameras with hardware-accelerated depth sensing. The robots had a single camera (Pepper later added a depth sensor roughly equivalent to a first-generation Kinect). The tactile sensors in the hands were unreliable on a good day. The motors could not command much torque given thermal and power limitations. The whole system ran on Gentoo Linux (pared down to the bare minimum), with a middleware called NAOqi, and we wrote behaviours in Python 2.7 on top of that stack.
 
@@ -49,11 +49,11 @@ The natural instinct is to try to overcome these constraints by building more ef
 
 One of my main projects was developing a suite of physical social interactions: fist bumps, handshakes, high (and low) fives, and hugs. We called it _Daps_, [which turns out to be a real word](https://open.spotify.com/track/3chDozhup5tVqpL2I7yuHA).
 
-These are gestures so deeply ingrained in us that everyone has very specific, very high expectations for how they should feel. A limp handshake from a person is off-putting; likewise for a weak handshake from a robot.
+These are gestures so deeply ingrained in us that everyone has specific, high expectations for how they should feel. A limp handshake from a person is off-putting; likewise for a weak handshake from a robot.
 
-Why had I never stopped to think what my body actually does during a fist bump?
+Why had I never stopped to think what my body does during a fist bump?
 
-When someone extends a fist toward you, your visual cortex identifies the gesture and its social meaning in a fraction of a second. Your binocular vision triangulates the position of the fist in three-dimensional space. Your proprioceptive system knows where your own hand is without looking at it. Your motor cortex plans a trajectory, your shoulder and elbow and wrist execute it in a smooth coordinated motion, while real-time feedback allows you to adjust mid-flight as the target shifts. You modulate force on contact through haptic feedback loops running below your conscious awareness. You do all of this while, simultaneously, maintaining eye contact, reading the other person's expression, and generating an appropriate verbal response. The whole sequence takes about a second.
+When someone extends a fist toward you, your visual cortex identifies the gesture and its social meaning in a fraction of a second. Your binocular vision triangulates the position of the fist in three-dimensional space. Your proprioceptive system knows where your own hand is without looking at it. Your motor cortex plans a trajectory, your shoulder and elbow and wrist execute it in a smooth coordinated motion, while real-time feedback allows you to adjust mid-flight as the target shifts. You modulate force on contact through haptic feedback loops running below your conscious awareness. You do all of this while maintaining eye contact, reading the other person's expression, and generating an appropriate verbal response. The whole sequence takes about a second.
 
 Now all we need to do is replicate all this on the robot... Or, the robot could put out its fist and say, _"Bump it, bro."_
 
@@ -71,7 +71,7 @@ I ran most of the high-profile demos in that period. At WSJD Live in Laguna Beac
 
 {% gallery 4, "/img/blog/bump-it-bro/giphy.gif", "/img/blog/bump-it-bro/IMG_20151019_140015.jpg", "/img/blog/bump-it-bro/D41_DSC_2669.jpg", "/img/blog/bump-it-bro/D41_DSC_4815-ANIMATION(1).gif" %}
 
-Working on the hug behaviour taught me things about human physical interaction that I had never consciously considered. Are you an over-arm hugger or an under-arm hugger? Do you go crisscross, one arm over and one under? Do you pat or squeeze? When is the hug done? These are choices people make instantaneously and unconsciously, but a robot has to have a very specific opinion about them.
+Working on the hug behaviour taught me things about human physical interaction that I had never consciously considered. Are you an over-arm hugger or an under-arm hugger? Do you go crisscross, one arm over and one under? Do you pat or squeeze? When is the hug done? These are choices people make instantaneously and unconsciously, but a robot has to have a specific opinion about them.
 
 We settled on a wide-open posture that let the human choose their preferred style. The robot presented an invitation, arms wide, and when it sensed the person leaning in, it responded with a gentle press. That was enough. The human filled in the rest with their own muscle memory, their own expectations of what a hug should feel like.
 
@@ -83,7 +83,7 @@ Daps was about greeting. Would the same trick work for the much harder problem o
 
 Walking alongside another person is something you do without thinking, but the underlying computation is staggering. You continuously estimate the other person's velocity and heading from peripheral vision. You predict their trajectory several steps ahead. You adjust your own gait, pace, and stride length in real time. You negotiate doorways, corners, and crowds through subtle body language cues that neither of you could articulate if asked. Two people walking together are running a real-time distributed control system, and they do it while carrying on a conversation about lunch.
 
-Getting a robot to participate in this is deeply complex, and it is equally hard to design a natural interface for a person to instruct a robot where to go: joysticks feel clinical, voice commands are imprecise, and waypoint systems require too much setup.
+Getting a robot to participate in this is complex, and it is equally hard to design a natural interface for a person to instruct a robot where to go: joysticks feel clinical, voice commands are imprecise, and waypoint systems require too much setup.
 
 But everyone already knows how to guide someone through a space: you hold their hand.
 

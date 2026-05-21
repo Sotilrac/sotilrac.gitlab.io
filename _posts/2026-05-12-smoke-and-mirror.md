@@ -33,15 +33,15 @@ Here's a trillion-dollar campaign idea: **_GitLab — The reliable one_**
 
 Notice how I included the signature em dash to signify commitment to AI. _But we need more AI_, you say. I gotchu fam: have Duo translate GitHub Actions workflows to `.gitlab-ci.yml`. Boom, migration cost to GitLab is now $0! You'd be losing money if you don't migrate.
 
-I know what you're thinking: _Wow, genius!_ Shucks, thanks! It's quite impressive indeed. On the other hand, competing with every other AI company is quite tempting, but focusing on providing an actual service customers need right now is more desirable.
+I know what you're thinking: _Wow, genius!_ Shucks, thanks! It's quite impressive indeed. Competing with every other AI company is tempting, but focusing on providing an actual service customers need right now is more desirable.
 
 _Sincerely, literally everyone_
 
 ## Where There's Smoke, There Are Mirrors
 
-Since I'm very much into reliability, I mirrored every one of my GitLab repos to GitHub... Touché, GitHub isn't exactly a great destination. But it's free, and I can still pull my data back between outages.
+Since I'm into reliability, I mirrored every one of my GitLab repos to GitHub... Touché, GitHub isn't exactly a great destination. But it's free, and I can still pull my data back between outages.
 
-This can be quite laborious, so I made [forge-mirror](https://gitlab.com/sotilrac/forge-mirror). It drives GitLab's native push-mirror API to keep a one-way copy of every project under a GitLab namespace on GitHub. GitLab stays the source of truth; GitHub is a cold standby in case GitLab goes away.
+This can be laborious, so I made [forge-mirror](https://gitlab.com/sotilrac/forge-mirror). It drives GitLab's native push-mirror API to keep a one-way copy of every project under a GitLab namespace on GitHub. GitLab stays the source of truth; GitHub is a cold standby in case GitLab goes away.
 
 Under the hood it's a small Python script that wraps `glab` (the GitLab CLI) and `gh` (the GitHub CLI). For each project in a configured GitLab namespace it creates the matching GitHub repo via `gh`, then registers a push mirror on the GitLab side via `glab`. GitLab handles the actual replication, refreshing every five minutes (or on push) on the Free tier, so there's no cron job, no Action: nothing for me to babysit.
 

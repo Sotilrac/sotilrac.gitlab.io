@@ -20,7 +20,7 @@ In everyday speech, _**perfect**_ oscillates mostly between two meanings that ha
 
 The Latin _perficere_ means [to complete or to finish](https://www.etymonline.com/word/perfect). Something is _**perfect**_ when it is done, when it meets the original intention, and nothing more should be added or, most importantly, subtracted. A task is perfect when it's delivered. A system is perfect when it satisfies the requirements. Perfection here is a property of closure, not of correctness in some cosmic sense.
 
-On the other hand, we often say _"that's perfect"_, and usually mean _flawless_: no defects, rough edges, or room for improvement anywhere in any dimension. That is a much wider claim. It only really holds up in conceptual domains: a perfect circle exists because we defined it into existence. A [perfect number](https://en.wikipedia.org/wiki/Perfect_number) is perfect because we decided what "equal to the sum of its proper divisors" means. Closed systems, governed by rules we made up. Testable flawlessness in the confines of our imagination.
+We often say _"that's perfect"_, and usually mean _flawless_: no defects, rough edges, or room for improvement anywhere in any dimension. That is a much wider claim. It only really holds up in conceptual domains: a perfect circle exists because we defined it into existence. A [perfect number](https://en.wikipedia.org/wiki/Perfect_number) is perfect because we decided what "equal to the sum of its proper divisors" means. Closed systems, governed by rules we made up. Testable flawlessness in the confines of our imagination.
 
 The real world is not a closed system. A _**perfect performance**_ depends on who is watching. A _**perfect relationship**_ has no fixed criteria. A _**perfect design**_ changes every time the constraints do. Reality is severely multi-dimensional, context-dependent, and always in flux. There is no axis on which flawlessness can even be measured, let alone achieved.
 
@@ -40,11 +40,11 @@ This is why _**perfection**_ in this sense cannot be held still. It is tuned to 
 
 So why does the word stick around in its _flawless_ sense, if it fails so obviously in practice? My suspicion is that it survives because it is cognitively cheap.
 
-Human cognition runs on simplification. Categories, binary distinctions, simplified models (e.g., symmetric or smooth). The brain, per [predictive processing](https://en.wikipedia.org/wiki/Predictive_coding) accounts, acts as an error-minimization engine that trades accuracy for tractability: it smears continuous reality into discrete models so it can actually get on with the day. Flawlessness is one of those models: a discrete target imposed on a gradient world.
+Human cognition runs on simplification. Categories, binary distinctions, simplified models (e.g., symmetric or smooth). The brain, per [predictive processing](https://en.wikipedia.org/wiki/Predictive_coding) accounts, acts as an error-minimization engine that trades accuracy for tractability: it smears continuous reality into discrete models so it can get on with the day. Flawlessness is one of those models: a discrete target imposed on a gradient world.
 
 This is reinforced by how expensive uncertainty feels. Ambiguity triggers [aversion](https://en.wikipedia.org/wiki/Ellsberg_paradox). Holding multiple possibilities open causes [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue). There is a whole psychological construct called [need for closure](https://en.wikipedia.org/wiki/Need_for_closure) that measures how badly a person wants the world to settle into a clean answer. Collapsing a messy multi-variate problem into "_**perfect or not**_" is the cheap way out.
 
-Once you see it this way, perfectionism (the clinical kind, not "I like well-formatted C++") starts to look less like high standards and more like a coping strategy. If you convince yourself there is one correct outcome and you just have to reach it, you collapse the world into two options: unattainable standards or abject failure. You no longer have to sit with the discomfort of not knowing whether you are doing well. Ambiguity is gone, and evaluation becomes trivial: you're failing.
+Once you see it this way, perfectionism (the clinical kind, not "I like well-formatted C++") starts to look less like high standards and more like a coping strategy. If you convince yourself there is one correct outcome and you have to reach it, you collapse the world into two options: unattainable standards or abject failure. You no longer have to sit with the discomfort of not knowing whether you are doing well. Ambiguity is gone, and evaluation becomes trivial: you're failing.
 
 The research lines up with this: Intolerance of uncertainty [mediates the link](https://doi.org/10.1016/j.jad.2024.08.056) between perfectionism and OCD symptoms, and shows up as a [transdiagnostic factor](https://doi.org/10.1016/j.beth.2025.11.002) across anxiety disorders. Perfectionism in youth [predicts anxiety and depression](https://doi.org/10.1177/2167696823118875). In eating disorders, uncertainty intolerance [moderates the effect](https://doi.org/10.1016/j.eatbeh.2023.101769) of perfectionism on symptoms.
 
@@ -60,11 +60,11 @@ When I catch myself about to call something _**perfect**_, or hear someone else 
 
 Those are meaningful questions with real answers, whereas _"Is it flawless?"_ is not.
 
-It helps to just pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready, fit for purpose**, or my favorite, **good enough**. None of them carry the cosmic overreach of _**perfect**_.
+It helps to pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready, fit for purpose**, or my favorite, **good enough**. None of them carry the cosmic overreach of _**perfect**_.
 
 If I mean the modern sense, the honest choices are **flawless, ideal, pristine, faultless, immaculate**. Said out loud, the absurdity of demanding them outside a math textbook gives the game away: a flawless apartment? An immaculate partner? A faultless hire?
 
-And what if I encounter the third version of _**perfection**_? In that case, I just savour it; I gave up trying to stuff it into words.
+And what if I encounter the third version of _**perfection**_? In that case, I savour it; I gave up trying to stuff it into words.
 
 NGL, publishing this article feels bad, because it's not _**perfect**_ yet. But, oh well, I guess it's _good enough_.
 
