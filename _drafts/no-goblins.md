@@ -10,11 +10,19 @@ tags:
   - work
 ---
 
+Across commencement stages this May, graduates have been [booing AI off the podium](https://www.axios.com/2026/05/19/college-graduates-ai-commencement-speech). Eric Schmidt got it loudest at the University of Arizona. The same scene played out wherever a speaker reached for the "next industrial revolution" speech. This makes a lot of sense given the current job climate.
+
 I remember being a junior engineer after graduating in 2008 and [looking for a job](/blog/im-looking-for-a-job). It was a tough market and I had to be resourceful. Back then, it meant creating content and learning the new tools. So what does it look like to be resourceful in 2026?
 
-Last month, OpenAI shipped a [system prompt for Codex](https://github.com/openai/codex/commit/c10f95ddac7b35095d334dece2ebcf69bcde61fc#diff-537a79bc56f24a25ec0326f0b2edd3b4c5ac4080a4476d22bad292cda43988b8), the GPT-5.5 release, that runs to nearly twenty-two thousand characters. This novella of instructions loads into the context of every Codex session to tell the model how to behave at work.
+Some of it feels the same. Hiring has [slowed to levels last seen in 2010](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start), [unemployment for recent grads is running roughly twice the general rate](https://www.clevelandfed.org/publications/economic-commentary/2025/ec-202514-are-young-college-graduates-losing-their-edge-in-the-job-market), and connections still matter more than they should. The instinct to make yourself visible is the same one I had then, and it works again.
 
-If you don't like deciphering JSON strings, I rendered a more readable version [here](/img/blog/no-goblins/gpt-5.5.md). It reads, at times, like job descriptions I've written: five thousand tokens of OpenAI's opinion of how a thoughtful engineer ought to behave.
+In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_? General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same window. Most of those cuts spared the seniors who already know the ropes.
+
+An LLM is a calculator for words: It accelerates work you already know how to evaluate, and cannot do quality work you do not understand. What it brings is leverage; engineers bring the judgment about where to apply it.
+
+As always, in dire situations, I turn to Open Source Software for answers. As it tunrs out, last month, OpenAI shipped a [system prompt for Codex](https://github.com/openai/codex/commit/c10f95ddac7b35095d334dece2ebcf69bcde61fc#diff-537a79bc56f24a25ec0326f0b2edd3b4c5ac4080a4476d22bad292cda43988b8), the GPT-5.5 release, that runs to nearly twenty-two thousand characters. This novella of instructions, written line by line by humans at OpenAI, loads into the context of every Codex session to tell the model how to behave at work.
+
+If you don't like deciphering JSON strings, I rendered a more readable version [here](/img/blog/no-goblins/gpt-5.5.md). The five thousand tokens worth of OpenAI's opinion of how a thoughtful engineer ought to behave reads at times like a job desciption I've written.
 
 ## Read before acting
 
@@ -22,7 +30,7 @@ If you don't like deciphering JSON strings, I rendered a more readable version [
   bring a senior engineer's judgment to the work [...] let it arrive through attention rather than premature certainty. You read the codebase first, resist easy assumptions, and let the shape of the existing system teach you
 </blockquote>
 
-Although you may have theoretical knowledge, avoiding premature assumptions and approaching a problem with humility goes a long way. When you take the time to understand, your co-workers will appreciate your thoughtfulness and you'll avoid wasting work on the wrong issue.
+Although you have theoretical knowledge, avoiding premature assumptions and approaching a problem with humility goes a long way. When you take the time to understand, your co-workers will appreciate your thoughtfulness and you'll avoid wasting work on the wrong issue.
 
 ## Stay in scope
 
@@ -64,28 +72,18 @@ You do not have to manufacture a temperament; you grew it and will keep evolving
   Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant to the user's query.
 </blockquote>
 
-Inside one of the best-funded AI labs, a senior engineer judged this line important enough to include in a production prompt, twice. Without the rule, the model, presumably, raised goblins often enough to become a problem.
+Inside one of the best-funded AI labs, a senior engineer judged this line important enough to include in a production prompt. Without it, the model, presumably, raised goblins often enough to become a problem.
 
 Read another way, the document is a sketch of what the model does on its own. Every paragraph in the prompt fences off a default behavior that OpenAI would rather it did not have.
 
-The Codex prompt is OpenAI's junior engineer in subscription form. You go past it with your real presence and uniqueness of thought. New and interesting innovations come from people combining and learning in different directions. This is what resourcefulness in 2026 looks like.
+## Resourcefulness in 2026
+
+The Codex prompt is OpenAI's junior engineer in subscription form. As a junior engineer, go past it with your real presence and uniqueness of thought. New and interesting innovations come from people combining and learning in different directions. our growth and undertanding of the business reality of the company is what gives you an edge.
+
+## For those hiring
+
+If you are on the other side of the table, the math is grim. You are not getting another generation of engineers unless you hire one, but it is a hard sell since you can opt to augment your current workforce with LLMs.
+
+If you can afford it, hire for judgment, follow-through, and a unique personality. This is how you build a resilient team that is capable of innovate and stay nible in the face of change.
 
 And, by no means, bring up the goblins.
-
-<!-- Notes:
-
-the solution, as always, to, me, is open source software. So, what can we learn about it
-
-Emphasize the prompt is written by humans
-
-Summertime and graduation. booing AI
-
-
-AI is a calculator for words. How you can use it depends on your skills.
-
-2026 or 2008 feels a lot like the same, learn new tools, create, shit economy, easier to get hired if you have connections. Empashise the difference of being present as an edge.
-
-Add advice for seniors hiring. If you can affor to, hire and grow the next generation of engineers.
-
-
- -->
