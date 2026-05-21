@@ -23,6 +23,17 @@ layout: layouts/base.njk
         "articleSection": {{ categories[0] | dump | safe }}{% endif %}
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" },
+            { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": "{{ site.url }}{{ page.url }}" }
+        ]
+    }
+    </script>
     <header class="post-header">
         <h1 class="post-title" itemprop="name headline">{{ title }}{% if "drafts" in tags %} <span class="post-status-badge post-status-draft">draft</span>{% elif status == "archive" %} <span class="post-status-badge post-status-archive">archive</span>{% endif %}</h1>
         <p class="post-meta">
