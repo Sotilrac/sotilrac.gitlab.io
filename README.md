@@ -153,6 +153,18 @@ Page views are tracked with [Umami](https://umami.is/) (privacy-friendly, no coo
 
 `robots.txt` blocks AI training crawlers (GPTBot, ClaudeBot, CCBot, etc.) while allowing citation/search crawlers (ChatGPT-User, PerplexityBot, etc.). `llms.txt` provides a machine-readable site summary and declares the CC BY-NC-SA 4.0 license.
 
+## SEO & Structured Data
+
+All meta tags and JSON-LD blocks are emitted from `_includes/head.njk` (site-wide) and `_includes/layouts/post.njk` (post-specific).
+
+- **Meta description**: homepage and `/blog/` use the first paragraph of `resume.summary`; posts use an auto-generated excerpt from the article body (stripping the title, post-meta, comments, and post-nav, via the `excerpt` filter in `eleventy.config.mjs`); other pages fall back to `site.description`. Any page can override with a `description:` frontmatter field.
+- **Open Graph + Twitter Card** meta tags on every page (`og:title`, `og:description`, `og:url`, `og:image`, `og:type`, plus `twitter:card=summary_large_image`). Posts also emit `article:author`, `article:published_time`, `article:section`, and `article:tag`. Default `og:image` is `/img/carlos-asmat.jpg`; posts can override via `image:` frontmatter.
+- **JSON-LD**:
+  - `Person` schema on every page, populated from `_data/resume.yml` (name, jobTitle, worksFor, image, sameAs)
+  - `WebSite` schema on the homepage
+  - `BlogPosting` and `BreadcrumbList` schemas on post pages
+- **Image alts**: the `fig` and `gallery` shortcodes auto-derive alt text from `<post-slug> <filename>` when no caption is provided. Decorative icon SVGs use `aria-hidden="true"`.
+
 ## Responsive Design
 
 The smallest target viewport is **360px** wide (standard Android phones). The mobile breakpoint is `30em` (480px). Test at 360px to ensure nothing overflows.
@@ -169,7 +181,35 @@ Archived comments from the original WordPress blog are stored as YAML files in `
 
 ## Useful Tools
 
+Helper scripts in `_tools/`. External tools used during migrations are listed at the bottom.
+
+**Authoring**
+
+- `new-post.sh "Title" [YYYY-MM-DD]`, create a new blog post with frontmatter and media folder
+- `publish.sh slug [YYYY-MM-DD]`, promote a draft from `_drafts/` to `_posts/`, adding a `date:` field and the date prefix to the filename
+- `redate-post.sh`, rename a post file with a new date
+- `lowercase-files.sh`, lowercase all filenames in a directory
+
+**Build verification**
+
+- `check-internal-links.mjs [output-dir]`, verifies every internal `href`/`src` in the built HTML resolves to a real file. Defaults to `_site/`. Exits 1 on any broken reference.
+
+**Specialty**
+
+- `extract-codex-prompts.mjs [path/to/models.json]`, extracts each model's `base_instructions` from a models.json dump into sibling `<slug>.md` files (used by the no-goblins post)
+
+**Historical migration scripts (Blogspot/WordPress port, kept for reference)**
+
+- `check-links.mjs`, checks external links in old posts for liveness and looks up Wayback Machine snapshots; writes `link-report.json`
+- `apply-wayback-links.mjs`, replaces dead external links with `{% wayback %}` shortcodes using `link-report.json`
+- `fix-internal-links.mjs`, rewrites old carlitoscontraptions.com and Blogspot internal links to the new `/blog/<slug>/` format
+- `fetch-blogspot-images.mjs`, downloads images from the old Blogspot blog and writes a JSON report
+- `retry-failed-images.mjs`, retries failed image downloads with alternative URL patterns
+- `generate-post-updates.mjs`, generates a JSON plan describing image references that need updating per post
+- `update-post-images.mjs`, applies the plan: converts bare filenames to full paths and maps old filenames to sanitized downloaded names
+- `comment-lost-images.mjs`, comments out `{% fig %}` references where the image file no longer exists
+- Migration data: `blogspot-html-cache.json`, `blogspot-image-report.json`, `link-report.json`, `post-update-plan.json`
+
+**External**
+
 - [Turndown](https://domchristie.github.io/turndown/), HTML to Markdown converter (used during the WordPress migration)
-- `_tools/new-post.sh`, create a new blog post with frontmatter and media folder
-- `_tools/redate-post.sh`, rename a post file with a new date
-- `_tools/lowercase-files.sh`, lowercase all filenames in a directory
