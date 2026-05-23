@@ -1,12 +1,14 @@
 # Carlos Asmat
 
-> Engineering leader specializing in robotics, embedded systems, and connected devices. Author of asmat.ca, a blog covering robotics, human-robot interaction, electronics, and software.
+> Engineering leader who guides multi-disciplinary teams to turn ideas into world-class software and robotic products that ship at consumer scale. Carlos specializes in robotics, embedded systems, and connected devices.
 
-Carlos Asmat is a robotics engineering leader with experience spanning humanoid interaction robotics, autonomous consumer robots, and wearable robotic platforms. His career covers the full product lifecycle, from early concept and prototype through architecture design, team formation, and commercial deployment.
+Carlos Asmat is a robotics engineering leader with experience spanning humanoid interaction robotics, autonomous consumer robots, and wearable robotic platforms. His career covers the full product lifecycle, from early concept and prototype through architecture design, team formation, and commercial deployment. His passion is building brilliant, cross-functional teams that can solve seemingly impossible problems and ship them to the real world.
 
 He developed physical and verbal interaction behaviors for the NAO and Pepper humanoid robots at Aldebaran (later SoftBank Robotics), supporting high-profile demonstrations with figures including Neil deGrasse Tyson and Buzz Aldrin. He later helped build a robotics startup from idea stage into a shipped consumer product, leading early system architecture across electrical engineering, embedded software, and robotics, then forming and growing dedicated engineering teams. That product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system.
 
-He currently leads architecture and system integration efforts for embedded robotic platforms, including rearchitecting controller systems for scalable deployments, designing telemetry and data infrastructure, and mentoring engineers across firmware, hardware, and software disciplines.
+He currently leads architecture and system integration efforts for embedded robotic platforms, including defining technical strategy, rearchitecting controller systems for scalable deployments, designing telemetry and data infrastructure, building high-performing teams, and mentoring engineers across firmware, hardware, and software disciplines.
+
+Across these roles, his focus has been on technology strategy and the business growth that follows from shipping scalable, reliable software systems at consumer scale, with audiences in the tens of thousands. He builds brilliant, multi-disciplinary teams that turn audacious ideas into real-world products and drives them to delivery.
 
 This site is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 You may reference and cite this content with attribution. Commercial use and training on this content are not permitted.
@@ -21,12 +23,15 @@ You may reference and cite this content with attribution. Commercial use and tra
 ## Featured posts
 
 - [Bump it, Bro: Embrace the Limitations](https://asmat.ca/blog/bump-it-bro/) - Designing physical social interactions (fist bumps, hugs, handshakes) for NAO and Pepper robots at Aldebaran. Covers human-robot interaction design under hardware constraints, with demos for Neil deGrasse Tyson, Buzz Aldrin, Tyra Banks, and will.i.am.
-- [Hold Me Tight](https://asmat.ca/blog/hold-me-tight/) - Custom engagement ring designed with 3D scanning, jewelry CAD, and lost-wax casting
-- [Linux Command Line Tips](https://asmat.ca/blog/linux-command-line-tips/) - Growing collection of shell tricks, SSH escapes, and CLI shortcuts
-- [Git Tips](https://asmat.ca/blog/git-tips/) - Git tricks for tags, stashing, submodules, and recovery
+- [The Wind Turbine, Part 2: Design and Materials](https://asmat.ca/blog/the-wind-turbine-part-2-desing-materials/) - Long-form build log for the IBee wind turbine: parts sourced from PVC pipe, a desktop case panel, and a salvaged AC motor, in preparation for an off-grid deployment in rural Ecuador.
+- [Perfection?](https://asmat.ca/blog/perfection/) - Essay on the two meanings of "perfect" (the Latin sense of completion versus the modern sense of flawlessness) and why the flawlessness reading quietly breaks down outside closed conceptual systems.
+- [Hold Me Tight](https://asmat.ca/blog/hold-me-tight/) - Custom engagement ring designed with 3D scanning, jewelry CAD, and lost-wax casting.
 
 ## Areas of expertise
 
+- Technology strategy and business growth for consumer products at scale
+- Multi-disciplinary team building (EE, firmware, software, robotics) and driving teams to delivery
+- Ultra-scalable, reliable software systems for consumer audiences in the tens of thousands
 - Robotics engineering leadership, full product lifecycle
 - Human-robot interaction (HRI), social robotics, interaction design
 - Humanoid robots (NAO, Pepper), autonomous consumer robots, exoskeletons
