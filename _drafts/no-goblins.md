@@ -32,6 +32,8 @@ If you don't like deciphering JSON strings, I rendered a more readable version [
 
 Although you have theoretical knowledge, avoiding premature assumptions and approaching a problem with humility goes a long way. When you take the time to understand, your co-workers will appreciate your thoughtfulness and you'll avoid wasting work on the wrong issue.
 
+The most interesting line in this passage is _let the shape of the existing system teach you_. A codebase is a record of decisions other engineers made under pressure you do not yet see. Reading carefully is how you listen to the colleagues who came before, including the ones who have left. Skipping that reading risks more than being wrong. It tells everyone else their work did not matter.
+
 ## Stay in scope
 
 <blockquote>
@@ -39,6 +41,8 @@ Although you have theoretical knowledge, avoiding premature assumptions and appr
 </blockquote>
 
 Resist the classic urge to fix things "while I was in there". I have, more than once, shipped 800-line PRs that should have been forty. The result is either a multi-week review backlog or, worse, a fast merge because nobody wanted to read it.
+
+Scope is a contract with your reviewers. When the PR sprawls, you trade their attention for your convenience. Tight scope is also a form of documentation: it tells the next reader what the goal of the change was. The "while I was in there" instinct is individualist by default; the team move is to open a ticket and let the right person take it.
 
 ## Be careful with abstractions
 
@@ -48,6 +52,8 @@ Resist the classic urge to fix things "while I was in there". I have, more than 
 
 This is a junior trap. It's tempting to do things in a clever or _clean_ way. A bit of repetition is fine. No one wants to follow an abstraction that interrupts the flow of the code. Keep the code readable and simple.
 
+Every abstraction is a decision your teammates will have to live with, and the author almost never pays the maintenance tax on it. The senior move is to write for the next reader's benefit. Premature abstraction is a small egocentrism: your aesthetic preference, charged to everyone else's attention budget.
+
 ## See things through
 
 <blockquote>
@@ -55,6 +61,8 @@ This is a junior trap. It's tempting to do things in a clever or _clean_ way. A 
 </blockquote>
 
 This rule reaches farthest beyond what an LLM can do. See the task through. There will be setbacks and questions; read the intent and deliver. Keep your manager informed: striking a balance between checking in and autonomy is the hard part.
+
+Easy tasks reveal nothing about you. The test is the work that gets ugly halfway through, when you have a choice between escalating, abandoning, or pushing through. Reliability is the habit of closing loops; communication is the multiplier on competence. Your manager is tracking a dozen other threads, and if yours is going to slip, they want to know in time to adjust.
 
 ## Personality
 
@@ -66,6 +74,8 @@ Before any engineering rule, the prompt assigns the model a personality:
 
 You do not have to manufacture a temperament; you grew it and will keep evolving it. Use it by asking the awkward question, disagreeing with the room, and staying curious about things that have nothing to do with tickets. The variety of human temperaments powers the work that ages well, and, it turns out, is expensive to replicate.
 
+Teams thrive on disagreement. The person who notices something off when everyone else is nodding, who pushes on the awkward edge case, who asks _why are we doing it this way?_ in a tone that does not sound rhetorical: that person is how teams catch the failure mode that does not show up in the test suite. Codex is being instructed at length to imitate that variance; you bring it for free.
+
 ## Trolling
 
 <blockquote>
@@ -75,6 +85,8 @@ You do not have to manufacture a temperament; you grew it and will keep evolving
 Inside one of the best-funded AI labs, a senior engineer judged this line important enough to include in a production prompt. Without it, the model, presumably, raised goblins often enough to become a problem.
 
 Read another way, the document is a sketch of what the model does on its own. Every paragraph in the prompt fences off a default behavior that OpenAI would rather it did not have.
+
+Every correction in this prompt is also a small act of mentorship: a senior engineer noticed a pattern and wrote it down. The catch is that the model never internalizes the correction; the rule has to be re-applied every session, in every context, forever. A junior who gets the same correction once tends to remember. That difference compounds over a career, and no system prompt can purchase it.
 
 ## Resourcefulness in 2026
 

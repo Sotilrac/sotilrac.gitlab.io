@@ -9,7 +9,7 @@ wordpress_url: http://carlitoscontraptions.com/?p=519
 date: 2010-02-23T21:48:56-05:00
 date_gmt: 2010-02-24T01:48:56-05:00
 categories:
-  - Projects
+  - Press
 tags:
   - international cooperation
   - wind

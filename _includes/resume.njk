@@ -121,6 +121,30 @@
         </div>
         {% endfor %}
     </section>
+    <section>
+        <h2>Press & Media</h2>
+        <p class="no-print" style="color:var(--slate);font-size:0.9em">Browse with screenshots in the <a href="/blog/#press-heading">press carousel on the blog</a>.</p>
+        {% for entry in press | sort(true, false, 'date') %}{% if entry.status != "draft" %}
+        <div class="row press-resume-row">
+            <div class="col-aside date_col">
+                <span class="dates">{{ entry.date | dateFormat("isodate") }}</span>
+            </div>
+            <div class="col col-job">
+                <h3>
+                    <span class="press-outlet">{{ entry.outlet }}:</span>
+                    <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+                </h3>
+                <p class="press-meta">
+                    {% if entry.author %}{{ entry.author }}{% endif %}
+                    {% if entry.author and entry.kind %} · {% endif %}
+                    {% if entry.kind %}{{ entry.kind }}{% endif %}
+                    {% if entry.archive %} · {% wayback entry.archive, "archive" %}{% endif %}
+                    {% if entry.post %} · <a href="{{ entry.post }}">blog</a>{% endif %}
+                </p>
+            </div>
+        </div>
+        {% endif %}{% endfor %}
+    </section>
     <section class="no-page-break">
         <h2>Personal Projects</h2>
         <p class="no-print" style="color:var(--slate);font-size:0.9em">See the <a href="/blog/">blog</a> for latest projects.</p>

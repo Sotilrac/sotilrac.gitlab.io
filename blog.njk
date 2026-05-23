@@ -15,6 +15,7 @@ hero: true
     <li><span class="cat-dot" data-cat="robotics"></span>Robotics</li>
     <li><span class="cat-dot" data-cat="tools"></span>Tools</li>
     <li><span class="cat-dot" data-cat="software"></span>Software</li>
+    <li><span class="cat-dot" data-cat="press"></span>Press</li>
     <li><span class="cat-dot" data-cat="news"></span>News</li>
     <li><span class="cat-dot" data-cat="til"></span>TIL</li>
   </ul>
@@ -37,6 +38,45 @@ hero: true
     </section>
     {% endfor %}
   </div>
+
+  <section class="press-section" aria-labelledby="press-heading">
+    <h2 id="press-heading" class="page-heading">In the Press</h2>
+    <p class="archive-blurb">Interviews, articles, podcasts, and other mentions over the years. Click a card to expand.</p>
+    <div class="press-carousel-wrap">
+      <button class="press-scroll prev" type="button" aria-label="Scroll press cards left" hidden>&larr;</button>
+      <ul class="press-carousel" tabindex="0" aria-label="Press mentions, scrollable">
+        {% for entry in press | sort(true, false, 'date') %}{% if entry.status != "draft" %}
+        <li class="press-card" data-kind="{{ entry.kind }}">
+          <button class="press-card-toggle" type="button" aria-expanded="false">
+            <span class="press-thumb{% if entry.thumb_mode == 'logo' %} is-logo{% endif %}">
+              {% if entry.screenshot %}
+              <img src="{{ entry.screenshot }}" alt="{{ entry.outlet }} thumbnail" loading="lazy" />
+              {% else %}
+              <span class="press-thumb-fallback">{{ entry.outlet }}</span>
+              {% endif %}
+              {% if entry.kind == "video" and entry.thumb_mode != "logo" %}<span class="press-play" aria-hidden="true">▶</span>{% endif %}
+            </span>
+            <span class="press-card-footer">
+              <span class="press-outlet">{{ entry.outlet }}</span>
+              <span class="press-date">{{ entry.date | dateFormat("isodate") }}</span>
+            </span>
+          </button>
+          <div class="press-card-detail" hidden>
+            <h3 class="press-title">{{ entry.title }}</h3>
+            {% if entry.author %}<p class="press-author">by {{ entry.author }}</p>{% endif %}
+            {% if entry.blurb %}<p class="press-blurb">{{ entry.blurb }}</p>{% endif %}
+            <p class="press-actions">
+              <a class="press-action-btn" href="{{ entry.url }}" target="_blank" rel="noopener">Visit ↗</a>
+              {% if entry.archive %}{% wayback entry.archive, "Archive" %}{% endif %}
+              {% if entry.post %}<a class="press-action-btn ghost" href="{{ entry.post }}">Blog post →</a>{% endif %}
+            </p>
+          </div>
+        </li>
+        {% endif %}{% endfor %}
+      </ul>
+      <button class="press-scroll next" type="button" aria-label="Scroll press cards right">&rarr;</button>
+    </div>
+  </section>
 
   <h2 class="page-heading archive-heading">Carlitos' Contraptions Archive</h2>
   <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
@@ -108,5 +148,51 @@ hero: true
 
   var param = new URLSearchParams(window.location.search).get("cat");
   if (param) filterCat(param.toLowerCase());
+})();
+
+(function () {
+  var carousel = document.querySelector(".press-carousel");
+  if (!carousel) return;
+  var wrap = carousel.parentElement;
+  var prev = wrap.querySelector(".press-scroll.prev");
+  var next = wrap.querySelector(".press-scroll.next");
+  var cards = carousel.querySelectorAll(".press-card");
+
+  cards.forEach(function (card) {
+    var toggle = card.querySelector(".press-card-toggle");
+    var detail = card.querySelector(".press-card-detail");
+    if (!toggle || !detail) return;
+    toggle.addEventListener("click", function () {
+      var isOpen = card.classList.contains("is-open");
+      cards.forEach(function (c) {
+        c.classList.remove("is-open");
+        var t = c.querySelector(".press-card-toggle");
+        var d = c.querySelector(".press-card-detail");
+        if (t) t.setAttribute("aria-expanded", "false");
+        if (d) d.hidden = true;
+      });
+      if (!isOpen) {
+        card.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        detail.hidden = false;
+        card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    });
+  });
+
+  function updateArrows() {
+    var max = carousel.scrollWidth - carousel.clientWidth;
+    if (prev) prev.hidden = carousel.scrollLeft <= 4;
+    if (next) next.hidden = carousel.scrollLeft >= max - 4;
+  }
+  function scrollBy(dir) {
+    var step = Math.max(240, carousel.clientWidth * 0.7);
+    carousel.scrollBy({ left: dir * step, behavior: "smooth" });
+  }
+  if (prev) prev.addEventListener("click", function () { scrollBy(-1); });
+  if (next) next.addEventListener("click", function () { scrollBy(1); });
+  carousel.addEventListener("scroll", updateArrows, { passive: true });
+  window.addEventListener("resize", updateArrows);
+  updateArrows();
 })();
 </script>

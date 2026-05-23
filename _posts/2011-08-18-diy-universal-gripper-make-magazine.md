@@ -9,7 +9,7 @@ wordpress_url: http://carlitoscontraptions.com/?p=1085
 date: 2011-08-18T22:09:13-04:00
 date_gmt: 2011-08-19T02:09:13-04:00
 categories:
-  - News
+  - Press
 tags:
   - press
   - Make

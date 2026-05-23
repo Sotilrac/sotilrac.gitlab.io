@@ -9,7 +9,7 @@ wordpress_url: http://carlitoscontraptions.com/?p=1175
 date: 2012-06-08T00:38:16-04:00
 date_gmt: 2012-06-08T04:38:16-04:00
 categories:
-  - News
+  - Press
 tags:
   - CBC
   - Spark

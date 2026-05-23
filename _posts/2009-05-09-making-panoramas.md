@@ -41,10 +41,12 @@ Now you can use the {% wayback "https://web.archive.org/web/20080112100545/http:
 
 Here you can enjoy a few examples I made (click on the title to view them in full screen).
 
+<!--
 \[pageview http://files.carlitoscontraptions.com/panorama/sf\_downtown\_from\_twin\_peak.html "Downtown San Francisco" A panorama shot from the Twin Peaks Park.\]
 
 \[pageview http://files.carlitoscontraptions.com/panorama/SF\_from\_twin_peak.html "Downtown and East San Francisco" A larger panorama shot from the Twin Peaks Park.\]
 
 \[pageview http://files.carlitoscontraptions.com/panorama/SF\_from\_peak_2.html "South San Francisco" Another panorama shot from the Twin Peaks Park.\]
+ -->
 
 Keep in mind that Hugin is very powerful and can do much more than simply stitching a few images together. Also, there might be a few issues with the file writing routine when trying to run the Google Maps Image Cutter in Linux.
