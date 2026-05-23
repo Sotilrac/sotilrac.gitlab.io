@@ -14,13 +14,13 @@
 #   post       (optional) — companion blog post URL on this site
 #   status     (optional) — "public" (default) or "draft" (hidden from carousel/resume)
 
-- outlet: "TVOKids — Finding Stuff Out"
+- outlet: "Finding Stuff Out — TVOKids"
   date: "2014-01-01"
   title: "S3E09 Robots: Harrison vs. Nao 1337"
   url: "https://www.youtube.com/watch?v=fB0bnmhJDWU"
   archive: ~
   screenshot: "/img/press/tvokids-finding-stuff-out.jpg"
-  blurb: "Guest on the TVOKids children's show with Nao 1337 (date approximate, needs confirmation)."
+  blurb: "Guest on the TVOKids children's show with Nao 1337."
   kind: video
   status: public
 
