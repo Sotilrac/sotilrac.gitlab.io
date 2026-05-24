@@ -1,14 +1,14 @@
 # Carlos Asmat
 
-> Engineering leader who builds multi-disciplinary teams to turn ideas into robotic and software products that ship at consumer scale. Carlos specializes in robotics, embedded systems, and connected devices.
+> Engineering leader who builds multi-disciplinary teams to turn ideas into world-class robotic and software products that ship at consumer scale. Carlos specializes in robotics, embedded systems, and connected devices.
 
-Carlos Asmat is a robotics engineering leader whose work spans humanoid interaction robots, autonomous consumer robots, and wearable platforms. His career covers the full product lifecycle, from concept and prototype through architecture, team formation, and commercial deployment. He likes building teams that solve hard problems and ship the results.
+Carlos Asmat is a robotics engineering leader whose work spans humanoid interaction robots, autonomous consumer robots, and wearable platforms. His career covers the full product lifecycle, from concept and prototype through architecture, team formation, and commercial deployment. His passion is building brilliant, cross-functional teams that can solve seemingly impossible problems and ship them to the real world.
 
 At Aldebaran (later SoftBank Robotics) he wrote the physical and verbal interaction behaviors for the NAO and Pepper humanoid robots, including the demos for Neil deGrasse Tyson and Buzz Aldrin. He then helped take a robotics startup from idea to a shipped consumer product, leading early system architecture across electrical hardware, embedded software, and robotics, and growing the engineering teams that delivered it. That product paired an embedded vision neural network for user-following with a patented self-balancing two-wheel drive.
 
 Today he leads architecture and system integration for embedded robotic platforms: setting technical strategy, rearchitecting controller systems for larger deployments, designing the telemetry and data infrastructure, growing the teams, and mentoring engineers across firmware, hardware, and software.
 
-Across these roles the through-line has been technology strategy paired with the business growth that follows from shipping reliable systems at consumer scale, to audiences in the tens of thousands.
+Across these roles the through-line has been technology strategy paired with the business growth that follows from shipping reliable systems at consumer scale, to audiences in the tens of thousands. He builds brilliant, multi-disciplinary teams that turn audacious ideas into real-world products and drives them to delivery.
 
 ## Site structure
 
@@ -34,7 +34,7 @@ Across these roles the through-line has been technology strategy paired with the
 - Embedded systems, embedded vision, neural networks on device
 - System architecture, controller design, telemetry infrastructure
 - Electronics, Arduino, FPGA
-- Linux, Python, ROS
+- Linux, C++/Python, ROS
 
 ## Blog
 
