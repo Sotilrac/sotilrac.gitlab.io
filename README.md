@@ -139,6 +139,12 @@ node _tools/encrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text 'your@email.tld'
 
 Each invocation prints a base64 string; assign it to `phone:` or `email:` in `_data/resume.yml` as a plain quoted scalar.
 
+To verify a payload matches a given key without firing up the browser:
+
+```
+node _tools/decrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text '<base64-payload>'
+```
+
 ## Blog Archive
 
 The blog has two sections:

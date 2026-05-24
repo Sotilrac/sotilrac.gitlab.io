@@ -28,7 +28,7 @@
     const wrap = document.getElementById(wrapId);
     const content = document.getElementById(contentId);
     if (content) content.textContent = value;
-    if (wrap) wrap.style.display = "";
+    if (wrap) wrap.classList.add("is-revealed");
   }
 
   async function decryptField(payload, password) {

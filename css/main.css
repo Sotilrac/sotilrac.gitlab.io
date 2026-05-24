@@ -521,6 +521,11 @@ th {
   display: none;
 }
 
+#phone.is-revealed,
+#email.is-revealed {
+  display: list-item;
+}
+
 h3 .company {
   font-weight: bold;
 }
