@@ -1115,9 +1115,27 @@ input:focus, select:focus { border-color: var(--accent); }
   font-size: 1em;
   margin-top: 0.5em;
 }
-.result-row { display: flex; justify-content: space-between; gap: 0.75em; padding: 0.1em 0; }
+.result-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75em;
+  align-items: center;
+  padding: 0.1em 0;
+}
+.btn-copy {
+  font-family: inherit;
+  font-size: 0.7em;
+  padding: 0.15em 0.55em;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.btn-copy:hover { border-color: var(--accent); color: var(--accent); }
+.btn-copy.copied { color: var(--ok); border-color: var(--ok); }
 .result-label { color: var(--text-dim); font-size: 0.85em; }
-.result-value { color: var(--text); font-weight: 600; }
+.result-value { color: var(--text); font-weight: 600; justify-self: end; text-align: right; }
 .result-value.accent { color: var(--accent); }
 .result-value.ok { color: var(--ok); }
 .result-value.warn { color: var(--warn); }
@@ -1268,14 +1286,14 @@ input:focus, select:focus { border-color: var(--accent); }
 .std-list { display: flex; flex-direction: column; gap: 0.15em; }
 .std-row {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 0.5em;
   align-items: center;
   padding: 0.15em 0;
   font-family: var(--mono);
 }
 .std-rank { color: var(--text-dim); font-size: 0.85em; }
-.std-value { color: var(--accent); font-weight: 600; }
+.std-value { color: var(--accent); font-weight: 600; justify-self: end; text-align: right; }
 .std-error { color: var(--text-dim); font-size: 0.85em; }
 .std-error.zero { color: var(--ok); }
 
@@ -1397,6 +1415,31 @@ class EECalculator extends HTMLElement {
   connectedCallback() {
     this._build();
     this._render();
+    this._decorateResults();
+    this._observer = new MutationObserver(() => this._decorateResults());
+    this._observer.observe(this._wrap, { childList: true, subtree: true });
+  }
+
+  disconnectedCallback() {
+    this._observer?.disconnect();
+  }
+
+  // Walk every result line and add a copy button if it doesn't already have
+  // one. Called by a MutationObserver so result tables that update outside
+  // _render() (the per-tool go() functions writing innerHTML) get decorated
+  // automatically.
+  _decorateResults() {
+    this._wrap.querySelectorAll(".result-row, .std-row").forEach((row) => {
+      if (row.querySelector(".btn-copy")) return;
+      const val = row.querySelector(".result-value, .std-value");
+      if (!val) return;
+      const btn = document.createElement("button");
+      btn.className = "btn-copy";
+      btn.type = "button";
+      btn.textContent = "copy";
+      btn.title = "Copy value";
+      row.appendChild(btn);
+    });
   }
 
   _build() {
@@ -1407,6 +1450,24 @@ class EECalculator extends HTMLElement {
 
     const wrap = document.createElement("div");
     wrap.className = "calc";
+
+    // Click delegation: any .btn-copy in any result row copies the row's value.
+    wrap.addEventListener("click", (e) => {
+      const btn = e.target.closest(".btn-copy");
+      if (!btn) return;
+      const row = btn.closest(".result-row, .std-row");
+      if (!row) return;
+      const val = row.querySelector(".result-value, .std-value");
+      if (!val) return;
+      navigator.clipboard.writeText(val.textContent.trim()).then(() => {
+        btn.textContent = "ok!";
+        btn.classList.add("copied");
+        setTimeout(() => {
+          btn.textContent = "copy";
+          btn.classList.remove("copied");
+        }, 1000);
+      });
+    });
 
     // Tabs
     const tabs = document.createElement("div");
