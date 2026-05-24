@@ -210,7 +210,8 @@ projects:
   - name: asmat.ca
     start_date: 01 / 2018
     description:
-      - Personal site and technical blog built with Eleventy, CSS, and JavaScript. CI/CD pipeline on GitLab. Includes a data-driven resume, custom shortcodes, client-side AES decryption for contact info, SEO, and a comment system backed by GitHub Discussions.
+      - Personal site and technical blog built with Eleventy, CSS, and JavaScript. CI/CD pipeline on GitLab.
+      - Data-driven resume, custom shortcodes, client-side AES decryption for contact info, SEO, and a comment system backed by GitHub Discussions.
   - name: NAO Mind Control
     start_date: 09 / 2012
     description:
