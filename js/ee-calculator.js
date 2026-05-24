@@ -226,12 +226,11 @@ const RESISTOR_SVG = `
       <stop offset="1" stop-color="#5a5a5a"/>
     </linearGradient>
   </defs>
-  <line x1="0" y1="35" x2="50" y2="35" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
-  <line x1="270" y1="35" x2="320" y2="35" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M50,35 C50,16 65,10 85,10 L235,10 C255,10 270,16 270,35 C270,54 255,60 235,60 L85,60 C65,60 50,54 50,35 Z"
+  <line x1="0" y1="35" x2="62" y2="35" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="258" y1="35" x2="320" y2="35" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 85,11 C 70,11 60,22 60,35 C 60,48 70,59 85,59 C 96,59 104,55 110,50 L 210,50 C 216,55 224,59 235,59 C 250,59 260,48 260,35 C 260,22 250,11 235,11 C 224,11 216,15 210,20 L 110,20 C 104,15 96,11 85,11 Z"
         fill="url(#bodyGrad)" stroke="#8b6a3a" stroke-width="1.2"/>
   <g class="bands"></g>
-  <path d="M60,18 C70,13 90,12 100,14" fill="none" stroke="#fff5e0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
 </svg>`;
 
 // 8-pin DIP for the 555. Labels on pins.
@@ -290,12 +289,17 @@ class Circuit {
     this.W = cols * CIRCUIT.GRID;
     this.H = rows * CIRCUIT.GRID;
     this.parts = [];
+    this.overlay = []; // drawn last so terminals/junctions sit on top of wires
   }
   _p(x) {
     return x * CIRCUIT.GRID;
   }
   _push(s) {
     this.parts.push(s);
+    return this;
+  }
+  _pushOverlay(s) {
+    this.overlay.push(s);
     return this;
   }
   // Wire: polyline through any number of grid points: wire(x1,y1,x2,y2,x3,y3,...).
@@ -310,7 +314,7 @@ class Circuit {
     );
   }
   junction(x, y) {
-    return this._push(
+    return this._pushOverlay(
       `<circle cx="${this._p(x)}" cy="${this._p(y)}" r="3" fill="${CIRCUIT.STROKE}"/>`,
     );
   }
@@ -433,14 +437,17 @@ class Circuit {
     this._push(
       `<line x1="${bx}" y1="${cy}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
     );
-    // Two emission arrows pointing up-right from the lens.
+    // Two emission arrows pointing up-right from the lens, offset
+    // perpendicular to their direction so they look parallel (not colinear).
     const a1x = cx + (tri / 2) * dir + 1,
       a1y = cy - tri / 2 - 1;
     this._push(
       `<path d="M ${a1x} ${a1y} L ${a1x + 8 * dir} ${a1y - 8} M ${a1x + 5 * dir} ${a1y - 8} L ${a1x + 8 * dir} ${a1y - 8} L ${a1x + 8 * dir} ${a1y - 5}" fill="none" stroke="${CIRCUIT.STROKE}" stroke-width="1" stroke-linecap="round"/>`,
     );
+    const a2x = a1x + 4 * dir,
+      a2y = a1y + 4;
     this._push(
-      `<path d="M ${a1x - 3} ${a1y + 3} L ${a1x + 5 * dir} ${a1y - 5} M ${a1x + 2 * dir} ${a1y - 5} L ${a1x + 5 * dir} ${a1y - 5} L ${a1x + 5 * dir} ${a1y - 2}" fill="none" stroke="${CIRCUIT.STROKE}" stroke-width="1" stroke-linecap="round"/>`,
+      `<path d="M ${a2x} ${a2y} L ${a2x + 5 * dir} ${a2y - 5} M ${a2x + 3 * dir} ${a2y - 5} L ${a2x + 5 * dir} ${a2y - 5} L ${a2x + 5 * dir} ${a2y - 3}" fill="none" stroke="${CIRCUIT.STROKE}" stroke-width="1" stroke-linecap="round"/>`,
     );
     return this;
   }
@@ -466,7 +473,7 @@ class Circuit {
   terminal(x, y, label, side = "left") {
     const px = this._p(x),
       py = this._p(y);
-    this._push(
+    this._pushOverlay(
       `<circle cx="${px}" cy="${py}" r="3.5" fill="${CIRCUIT.BG}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}"/>`,
     );
     let lx, ly, anchor;
@@ -487,7 +494,7 @@ class Circuit {
       ly = py + 16;
       anchor = "middle";
     }
-    this._push(
+    this._pushOverlay(
       `<text x="${lx}" y="${ly}" text-anchor="${anchor}" font-family="${CIRCUIT.FONT}" font-size="13" fill="${CIRCUIT.STROKE}" font-weight="600">${label}</text>`,
     );
     return this;
@@ -501,7 +508,10 @@ class Circuit {
     return this;
   }
   render() {
-    return `<svg viewBox="0 0 ${this.W} ${this.H}" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">${this.parts.join("")}</svg>`;
+    // Pad the viewBox so terminal labels at the edges don't get clipped.
+    const padX = 28,
+      padY = 4;
+    return `<svg viewBox="${-padX} ${-padY} ${this.W + 2 * padX} ${this.H + 2 * padY}" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">${this.parts.join("")}${this.overlay.join("")}</svg>`;
   }
 }
 
@@ -1068,6 +1078,40 @@ input[type="text"], input[type="number"], select {
 }
 input:focus, select:focus { border-color: var(--accent); }
 
+.input-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.input-wrap input[type="text"] { padding-right: 1.6em; }
+.input-clear {
+  position: absolute;
+  right: 0.35em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 0.95em;
+  color: var(--text-dim);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.1s, background 0.1s, color 0.1s;
+}
+.input-wrap:not(.has-value) .input-clear {
+  opacity: 0;
+  pointer-events: none;
+}
+.input-clear:hover { opacity: 1; background: var(--surface2); color: var(--accent); }
+
 .btn {
   font-family: inherit;
   font-size: 0.85em;
@@ -1156,7 +1200,15 @@ input:focus, select:focus { border-color: var(--accent); }
   flex-wrap: wrap;
   justify-content: center;
 }
-.resistor-wrap { flex: 1 1 18em; min-width: 14em; max-width: 24em; }
+.resistor-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 18em;
+  min-width: 14em;
+  max-width: 24em;
+}
+.resistor-wrap { width: 100%; }
 .resistor-svg { width: 100%; height: auto; display: block; }
 .bands rect { cursor: pointer; transition: opacity 0.1s; }
 .bands rect:hover { opacity: 0.85; }
@@ -1196,17 +1248,24 @@ input:focus, select:focus { border-color: var(--accent); }
 
 .band-pickers {
   display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0.5em 0;
+  gap: 0.25em;
+  justify-content: space-between;
+  margin: 0.4em 0 0;
 }
-.band-picker { display: flex; flex-direction: column; align-items: center; gap: 0.2em; }
-.band-picker label { font-size: 0.7em; }
+.band-picker {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15em;
+}
+.band-picker label { font-size: 0.65em; }
 .band-picker select {
-  font-size: 0.85em;
-  padding: 0.25em 0.4em;
-  width: 6em;
+  font-size: 0.75em;
+  padding: 0.2em 0.3em;
+  width: 100%;
+  min-width: 0;
 }
 
 .swatch-grid {
@@ -1404,6 +1463,7 @@ class EECalculator extends HTMLElement {
       // Net
       netKind: "resistor",
       netTopo: "parallel",
+      netVals: "",
       // AWG
       awgHighlight: "",
       awgLength: "",
@@ -1416,7 +1476,11 @@ class EECalculator extends HTMLElement {
     this._build();
     this._render();
     this._decorateResults();
-    this._observer = new MutationObserver(() => this._decorateResults());
+    this._decorateInputs();
+    this._observer = new MutationObserver(() => {
+      this._decorateResults();
+      this._decorateInputs();
+    });
     this._observer.observe(this._wrap, { childList: true, subtree: true });
   }
 
@@ -1439,6 +1503,29 @@ class EECalculator extends HTMLElement {
       btn.textContent = "copy";
       btn.title = "Copy value";
       row.appendChild(btn);
+    });
+  }
+
+  // Wrap every text input in a container with a clear (×) button.
+  _decorateInputs() {
+    this._wrap.querySelectorAll('input[type="text"]').forEach((inp) => {
+      const parent = inp.parentElement;
+      if (!parent || parent.classList.contains("input-wrap")) return;
+      const wrap = document.createElement("span");
+      wrap.className = "input-wrap";
+      if (inp.value !== "") wrap.classList.add("has-value");
+      parent.insertBefore(wrap, inp);
+      wrap.appendChild(inp);
+      const btn = document.createElement("button");
+      btn.className = "input-clear";
+      btn.type = "button";
+      btn.tabIndex = -1;
+      btn.setAttribute("aria-label", "Clear");
+      btn.textContent = "×";
+      wrap.appendChild(btn);
+      inp.addEventListener("input", () => {
+        wrap.classList.toggle("has-value", inp.value !== "");
+      });
     });
   }
 
@@ -1467,6 +1554,18 @@ class EECalculator extends HTMLElement {
           btn.classList.remove("copied");
         }, 1000);
       });
+    });
+
+    // Click delegation: an input-clear (×) button empties its sibling input
+    // and fires an "input" event so live-compute tools re-run.
+    wrap.addEventListener("click", (e) => {
+      const btn = e.target.closest(".input-clear");
+      if (!btn) return;
+      const inp = btn.parentElement?.querySelector("input");
+      if (!inp) return;
+      inp.value = "";
+      inp.dispatchEvent(new Event("input", { bubbles: true }));
+      inp.focus();
     });
 
     // Tabs
@@ -1563,40 +1662,40 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="resistor-display">
-        <div class="resistor-wrap">${RESISTOR_SVG}</div>
+        <div class="resistor-column">
+          <div class="resistor-wrap">${RESISTOR_SVG}</div>
+          <div class="band-pickers" data-pickers></div>
+        </div>
         <div class="resistor-eq">=</div>
         <div class="resistor-readout" data-readout></div>
       </div>
-
-      <div class="band-pickers" data-pickers></div>
 
       <div class="row" style="margin-top:0.85em">
         <div class="field field-grow">
           <label>Or enter a value</label>
           <input type="text" data-value-input placeholder="e.g. 4.7k, 220, 1M">
         </div>
-        <button class="btn primary" data-value-go>Show bands</button>
       </div>
     `;
 
-    // Resize SVG bands.
+    // Render band rects across the dog-bone's narrow middle (x=115..205, y=20..50).
     const svg = el.querySelector(".resistor-svg");
     const bandsG = svg.querySelector(".bands");
-    // Render band rects: place them across the body (x=70..250).
-    const x0 = 70,
-      x1 = 250;
+    const x0 = 115,
+      x1 = 205;
     const usable = x1 - x0;
     const slot = usable / (bandMode + 1);
+    const bw = bandMode <= 4 ? 10 : 8;
     bandsG.innerHTML = "";
     for (let i = 0; i < bandMode; i++) {
-      const x = x0 + slot * (i + 0.5) - 6;
+      const x = x0 + slot * (i + 0.5) - bw / 2;
       const colorIdx = bands[i] ?? 0;
       const color = BAND_COLORS[colorIdx]?.hex || "#888";
       const r = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       r.setAttribute("x", x);
-      r.setAttribute("y", 11);
-      r.setAttribute("width", 12);
-      r.setAttribute("height", 48);
+      r.setAttribute("y", 20);
+      r.setAttribute("width", bw);
+      r.setAttribute("height", 30);
       r.setAttribute("fill", color);
       r.setAttribute("data-band", i);
       r.addEventListener("click", () => this._pickBandForIndex(i));
@@ -1606,12 +1705,36 @@ class EECalculator extends HTMLElement {
     // Band pickers.
     const pickers = el.querySelector("[data-pickers]");
     const labels = this._bandLabels(bandMode);
+    const sigCount = bandMode === 4 ? 2 : 3;
+    const bandKind = (i) => {
+      if (i < sigCount) return "digit";
+      if (i === sigCount) return "mult";
+      if (i === sigCount + 1) return "tol";
+      return "ppm";
+    };
+    const fmtMult = (m) => {
+      if (m >= 1e9) return `×${m / 1e9}G`;
+      if (m >= 1e6) return `×${m / 1e6}M`;
+      if (m >= 1e3) return `×${m / 1e3}k`;
+      return `×${m}`;
+    };
+    const annotate = (c, kind) => {
+      if (kind === "digit") return c.digit != null ? c.digit : "";
+      if (kind === "mult")
+        return c.multiplier != null ? fmtMult(c.multiplier) : "";
+      if (kind === "tol") return c.tolerance != null ? `±${c.tolerance}%` : "";
+      if (kind === "ppm") return c.ppm != null ? `${c.ppm} ppm` : "";
+      return "";
+    };
     pickers.innerHTML = "";
     for (let i = 0; i < bandMode; i++) {
+      const kind = bandKind(i);
       const opts = this._bandOptionsFor(bandMode, i)
         .map((idx) => {
           const c = BAND_COLORS[idx];
-          return `<option value="${idx}" ${bands[i] === idx ? "selected" : ""}>${c.name}</option>`;
+          const ann = annotate(c, kind);
+          const text = ann !== "" ? `${ann}. ${c.name}` : c.name;
+          return `<option value="${idx}" ${bands[i] === idx ? "selected" : ""}>${text}</option>`;
         })
         .join("");
       const div = document.createElement("div");
@@ -1662,15 +1785,14 @@ class EECalculator extends HTMLElement {
       });
     });
 
-    // Value → bands.
-    el.querySelector("[data-value-go]").addEventListener("click", () => {
+    // Value → bands, live on input.
+    el.querySelector("[data-value-input]").addEventListener("input", () => {
       const input = el.querySelector("[data-value-input]");
       const v = parseSI(input.value);
       if (!isFinite(v) || v <= 0) return;
       const sc = bandMode === 4 ? 2 : 3;
       const res = valueToBands(v, sc);
       if (!res.ok) return;
-      // Map digit indices into BAND_COLORS indices (digit → first color matching).
       const digitToIdx = (d) => BAND_COLORS.findIndex((c) => c.digit === d);
       const newBands = res.digits.map(digitToIdx);
       newBands.push(res.multiplier);
@@ -1682,9 +1804,6 @@ class EECalculator extends HTMLElement {
       }
       this.state.bands = newBands;
       this._renderTool("color");
-    });
-    el.querySelector("[data-value-input]").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") el.querySelector("[data-value-go]").click();
     });
 
     // Render result.
@@ -1786,7 +1905,6 @@ class EECalculator extends HTMLElement {
             ${eSeriesOptions(this.state.eSeriesSeries)}
           </select>
         </div>
-        <button class="btn primary" data-go>Find</button>
       </div>
 
       <div class="result" data-result><div class="std-list" data-list></div></div>
@@ -1817,10 +1935,7 @@ class EECalculator extends HTMLElement {
         })
         .join("");
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
-    el.querySelector("[data-target]").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") go();
-    });
+    el.querySelector("[data-target]").addEventListener("input", go);
     el.querySelector("[data-series]").addEventListener("change", go);
   }
 
@@ -1852,7 +1967,6 @@ class EECalculator extends HTMLElement {
             : `<div class="field"><label>V_out target</label><input type="text" data-vout value="3.3"></div>
              <div class="field"><label>Series</label><select data-series>${eSeriesOptions(this.state.vdivSeries)}</select></div>`
         }
-        <button class="btn primary" data-go>Compute</button>
       </div>
 
       <div class="result" data-result></div>
@@ -1865,9 +1979,9 @@ class EECalculator extends HTMLElement {
       c.junction(6, 4);
       c.wire(6, 4, 11, 4);
       c.terminal(11, 4, "V_out", "right");
-      c.resistor(6, 4, 6, 6.5, r2Label || "R₂");
-      c.wire(6, 6.5, 6, 7.4);
-      c.ground(6, 7.4);
+      c.resistor(6, 4, 6, 6, r2Label || "R₂");
+      c.wire(6, 6, 6, 6.8);
+      c.ground(6, 6.8);
       el.querySelector("[data-schematic]").innerHTML = c.render();
     };
     drawSchematic();
@@ -1913,11 +2027,11 @@ class EECalculator extends HTMLElement {
         `;
       }
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
     el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") go();
-      }),
+      inp.addEventListener("input", go),
+    );
+    el.querySelectorAll("select").forEach((sel) =>
+      sel.addEventListener("change", go),
     );
     go();
   }
@@ -1937,7 +2051,6 @@ class EECalculator extends HTMLElement {
         <div class="field"><label># LEDs</label><input type="number" data-n value="1" min="1" max="20" step="1"></div>
         <div class="field"><label>I_f (mA)</label><input type="text" data-if value="20"></div>
         <div class="field"><label>Series</label><select data-series>${eSeriesOptions(this.state.ledSeries)}</select></div>
-        <button class="btn primary" data-go>Compute</button>
       </div>
 
       <div class="schematic" data-schematic></div>
@@ -1984,13 +2097,12 @@ class EECalculator extends HTMLElement {
         <div class="result-row"><span class="result-label">Suggested rating</span><span class="result-value ok">${formatWattage(r.wattage)}</span></div>
       `;
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
-    el.querySelectorAll("input, select").forEach((inp) => {
-      inp.addEventListener("change", go);
-      inp.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") go();
-      });
-    });
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
+    el.querySelectorAll("select").forEach((sel) =>
+      sel.addEventListener("change", go),
+    );
     go();
   }
 
@@ -2008,7 +2120,6 @@ class EECalculator extends HTMLElement {
         <div class="field"><label>I (A)</label><input type="text" data-i placeholder="e.g. 10m"></div>
         <div class="field"><label>R (Ω)</label><input type="text" data-r placeholder="e.g. 500"></div>
         <div class="field"><label>P (W)</label><input type="text" data-p placeholder="e.g. 50m"></div>
-        <button class="btn primary" data-go>Solve</button>
       </div>
 
       <div class="result" data-result></div>
@@ -2039,13 +2150,9 @@ class EECalculator extends HTMLElement {
         <div class="result-row"><span class="result-label">Power</span><span class="result-value ${known.p == null ? "accent" : ""}">${formatSI(r.p, "W")}</span></div>
       `;
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
-    el.querySelectorAll("input").forEach((inp) => {
-      inp.addEventListener("input", go);
-      inp.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") go();
-      });
-    });
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
   }
 
   // ============================================================
@@ -2066,7 +2173,6 @@ class EECalculator extends HTMLElement {
         <div class="field"><label>R</label><input type="text" data-r placeholder="e.g. 10k"></div>
         <div class="field"><label>C</label><input type="text" data-c placeholder="e.g. 100n"></div>
         <div class="field"><label>f_c (Hz)</label><input type="text" data-fc placeholder="e.g. 1k"></div>
-        <button class="btn primary" data-go>Solve</button>
       </div>
 
       <div class="result" data-result></div>
@@ -2130,13 +2236,9 @@ class EECalculator extends HTMLElement {
         <div class="note">f_c = 1 / (2π R C). τ = R C. At f_c the output is 70.7% of input (-3 dB) and lags/leads by 45°.</div>
       `;
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
-    el.querySelectorAll("input").forEach((inp) => {
-      inp.addEventListener("input", go);
-      inp.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") go();
-      });
-    });
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
   }
 
   // ============================================================
@@ -2189,7 +2291,6 @@ class EECalculator extends HTMLElement {
           <div class="field"><label>R₁</label><input type="text" data-r1 value="10k"></div>
           <div class="field"><label>R₂</label><input type="text" data-r2 value="10k"></div>
           <div class="field"><label>C</label><input type="text" data-c value="100n"></div>
-          <button class="btn primary" data-go>Compute</button>
         </div>`;
       const go = () => {
         const r1 = parseSI(body.querySelector("[data-r1]").value);
@@ -2205,12 +2306,9 @@ class EECalculator extends HTMLElement {
           <div class="note">f = 1.44 / ((R₁ + 2R₂) C). Duty is always > 50% in classic astable.</div>
         `;
       };
-      body.querySelector("[data-go]").addEventListener("click", go);
-      body.querySelectorAll("input").forEach((inp) =>
-        inp.addEventListener("keydown", (e) => {
-          if (e.key === "Enter") go();
-        }),
-      );
+      body
+        .querySelectorAll("input")
+        .forEach((inp) => inp.addEventListener("input", go));
       go();
     } else if (mode === "astable" && dir === "rev") {
       body.innerHTML = `
@@ -2218,7 +2316,6 @@ class EECalculator extends HTMLElement {
           <div class="field"><label>Target f</label><input type="text" data-f value="1k"></div>
           <div class="field"><label>Duty (0.5–1)</label><input type="text" data-duty value="0.75"></div>
           <div class="field"><label>Pick C</label><input type="text" data-c value="100n"></div>
-          <button class="btn primary" data-go>Suggest R₁, R₂</button>
         </div>`;
       const go = () => {
         const f = parseSI(body.querySelector("[data-f]").value);
@@ -2242,19 +2339,15 @@ class EECalculator extends HTMLElement {
           <div class="result-row"><span class="result-label">Actual duty</span><span class="result-value">${(s.verify.duty * 100).toFixed(2)}%</span></div>
         `;
       };
-      body.querySelector("[data-go]").addEventListener("click", go);
-      body.querySelectorAll("input").forEach((inp) =>
-        inp.addEventListener("keydown", (e) => {
-          if (e.key === "Enter") go();
-        }),
-      );
+      body
+        .querySelectorAll("input")
+        .forEach((inp) => inp.addEventListener("input", go));
       go();
     } else if (mode === "monostable" && dir === "fwd") {
       body.innerHTML = `
         <div class="row">
           <div class="field"><label>R</label><input type="text" data-r value="100k"></div>
           <div class="field"><label>C</label><input type="text" data-c value="10u"></div>
-          <button class="btn primary" data-go>Compute</button>
         </div>`;
       const go = () => {
         const r = parseSI(body.querySelector("[data-r]").value);
@@ -2264,19 +2357,15 @@ class EECalculator extends HTMLElement {
           <div class="result-row"><span class="result-label">Pulse width</span><span class="result-value accent">${formatSI(res.t, "s")}</span></div>
           <div class="note">t = 1.1 · R · C</div>`;
       };
-      body.querySelector("[data-go]").addEventListener("click", go);
-      body.querySelectorAll("input").forEach((inp) =>
-        inp.addEventListener("keydown", (e) => {
-          if (e.key === "Enter") go();
-        }),
-      );
+      body
+        .querySelectorAll("input")
+        .forEach((inp) => inp.addEventListener("input", go));
       go();
     } else {
       body.innerHTML = `
         <div class="row">
           <div class="field"><label>Target pulse</label><input type="text" data-t value="100m"></div>
           <div class="field"><label>Pick C</label><input type="text" data-c value="10u"></div>
-          <button class="btn primary" data-go>Suggest R</button>
         </div>`;
       const go = () => {
         const t = parseSI(body.querySelector("[data-t]").value);
@@ -2287,12 +2376,9 @@ class EECalculator extends HTMLElement {
           <div class="result-row"><span class="result-label">R (E24)</span><span class="result-value accent">${formatSI(res.rStd, "Ω")}</span></div>
           <div class="result-row"><span class="result-label">Actual pulse</span><span class="result-value">${formatSI(res.verifyT, "s")}</span></div>`;
       };
-      body.querySelector("[data-go]").addEventListener("click", go);
-      body.querySelectorAll("input").forEach((inp) =>
-        inp.addEventListener("keydown", (e) => {
-          if (e.key === "Enter") go();
-        }),
-      );
+      body
+        .querySelectorAll("input")
+        .forEach((inp) => inp.addEventListener("input", go));
       go();
     }
   }
@@ -2324,9 +2410,8 @@ class EECalculator extends HTMLElement {
       <div class="row">
         <div class="field field-grow">
           <label>Values (comma-separated)</label>
-          <input type="text" data-vals placeholder="e.g. 10k, 4.7k, 2.2k">
+          <input type="text" data-vals placeholder="e.g. 10k, 4.7k, 2.2k" value="${this.state.netVals || ""}">
         </div>
-        <button class="btn primary" data-go>Compute</button>
       </div>
 
       <div class="result" data-result></div>
@@ -2410,11 +2495,11 @@ class EECalculator extends HTMLElement {
         <div class="result-row"><span class="result-label">Individual</span><span class="result-value" style="font-size:0.85em">${values.map((v) => formatSI(v, unit)).join(" • ")}</span></div>
       `;
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
-    el.querySelector("[data-vals]").addEventListener("input", go);
-    el.querySelector("[data-vals]").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") go();
+    el.querySelector("[data-vals]").addEventListener("input", () => {
+      this.state.netVals = el.querySelector("[data-vals]").value;
+      go();
     });
+    if (this.state.netVals) go();
   }
 
   // ============================================================
@@ -2578,7 +2663,6 @@ class EECalculator extends HTMLElement {
           <option value="external">external</option>
           <option value="internal">internal</option>
         </select></div>
-        <button class="btn primary" data-go>Compute</button>
       </div>
 
       <div class="result" data-result></div>
@@ -2601,13 +2685,12 @@ class EECalculator extends HTMLElement {
         <div class="note">IPC-2221A: I = k · ΔT^0.44 · A^0.725, k = 0.048 (external) / 0.024 (internal). Add margin for vias, bends, and ambient. The newer IPC-2152 typically allows narrower traces; this estimate is conservative.</div>
       `;
     };
-    el.querySelector("[data-go]").addEventListener("click", go);
-    el.querySelectorAll("input, select").forEach((inp) => {
-      inp.addEventListener("input", go);
-      inp.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") go();
-      });
-    });
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
+    el.querySelectorAll("select").forEach((sel) =>
+      sel.addEventListener("change", go),
+    );
     go();
   }
 }
