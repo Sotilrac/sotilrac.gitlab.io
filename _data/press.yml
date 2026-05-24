@@ -10,39 +10,39 @@
 #   thumb_mode (optional) — "cover" (default, image fills) or "logo" (centered, contained, for favicons)
 #   blurb      (required) — one short sentence
 #   author     (optional) — byline
-#   kind       (required) — article | podcast | video | photo | interview
+#   kind       (required) — article | print | podcast | tv | video | photo | interview
 #   post       (optional) — companion blog post URL on this site
 #   status     (optional) — "public" (default) or "draft" (hidden from carousel/resume)
 
-- outlet: "Finding Stuff Out — TVOKids"
+- outlet: "Finding Stuff Out"
   date: "2014-01-01"
   title: "S3E09 Robots: Harrison vs. Nao 1337"
   url: "https://www.youtube.com/watch?v=fB0bnmhJDWU"
   archive: ~
   screenshot: "/img/press/tvokids-finding-stuff-out.jpg"
   blurb: "Guest on the TVOKids children's show with Nao 1337."
-  kind: video
+  kind: tv
   status: public
 
 - outlet: "M.Net"
   date: "2013-04-02"
-  title: "Cloud Robotics Hackathon on M. Net"
+  title: "Cloud Robotics Hackathon à M. Net"
   url: "http://www.musiqueplus.com/emissions/m-net-1.950689"
   archive: ~
   screenshot: "/img/blog/cloud-robotics-hackathon-m-net/mnet-hackathon.png.jpg"
   blurb: "Second appearance on the Quebec tech show M. Net, presenting the Cloud Robotics Hackathon."
-  kind: video
+  kind: tv
   post: "/blog/cloud-robotics-hackathon-m-net/"
   status: public
 
 - outlet: "M.Net"
   date: "2012-09-14"
-  title: "Nao 1337 on M. Net (14 septembre 2012)"
+  title: "Nao 1337 à M. Net"
   url: "https://www.youtube.com/watch?v=-CcvBxzTFIQ"
   archive: ~
   screenshot: "/img/blog/nao-at-m-net-finaly-online/Nao1337_Carlitos_mnet.png"
   blurb: "First appearance on the Quebec tech show M. Net, presenting Nao 1337 with host Denis Talbot."
-  kind: video
+  kind: tv
   post: "/blog/nao-at-m-net-finaly-online/"
   status: public
 
@@ -129,7 +129,7 @@
   screenshot: "/img/press/new-scientist.webp"
   blurb: "Quoted alongside leading roboticists in a January 2012 feature."
   author: "Celeste Biever"
-  kind: article
+  kind: print
   post: "/blog/im-on-new-scientist/"
   status: public
 
@@ -140,7 +140,7 @@
   archive: ~
   screenshot: "/img/blog/diy-universal-gripper-make-magazine/Make-Vol27-p78.png"
   blurb: "The DIY universal jamming gripper project featured on page 78."
-  kind: article
+  kind: print
   post: "/blog/diy-universal-gripper-make-magazine/"
   status: public
 
@@ -175,17 +175,17 @@
   archive: ~
   screenshot: "/img/blog/we-are-slightly-popular/img_4382.jpg"
   blurb: "Article on the Ecuadorian Makecation international cooperation project."
-  kind: article
+  kind: print
   post: "/blog/we-are-slightly-popular/"
   status: public
 
 - outlet: "Popular Science"
   date: "2008-08-01"
-  title: "Compact Keychain (August edition)"
+  title: "Compact Keychain"
   url: "https://www.popsci.com/"
   archive: ~
   screenshot: "/img/blog/im-popular-science/pop_sci.png"
   blurb: "The Compact Keychain project featured in the August 2008 issue."
-  kind: article
+  kind: print
   post: "/blog/im-popular-science/"
   status: public

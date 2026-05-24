@@ -40,8 +40,7 @@ hero: true
   </div>
 
   <section class="press-section" aria-labelledby="press-heading">
-    <h2 id="press-heading" class="page-heading">In the Press</h2>
-    <p class="archive-blurb">Interviews, articles, podcasts, and other mentions over the years. Click a card to expand.</p>
+    <h2 id="press-heading" class="page-heading">Press</h2>
     <div class="press-carousel-wrap">
       <button class="press-scroll prev" type="button" aria-label="Scroll press cards left" hidden>&larr;</button>
       <ul class="press-carousel" tabindex="0" aria-label="Press mentions, scrollable">
@@ -54,7 +53,7 @@ hero: true
               {% else %}
               <span class="press-thumb-fallback">{{ entry.outlet }}</span>
               {% endif %}
-              {% if entry.kind == "video" and entry.thumb_mode != "logo" %}<span class="press-play" aria-hidden="true">▶</span>{% endif %}
+              {% if (entry.kind == "video" or entry.kind == "tv") and entry.thumb_mode != "logo" %}<span class="press-play" aria-hidden="true">▶</span>{% endif %}
             </span>
             <span class="press-card-footer">
               <span class="press-outlet">{{ entry.outlet }}</span>
@@ -78,7 +77,7 @@ hero: true
     </div>
   </section>
 
-  <h2 class="page-heading archive-heading">Carlitos' Contraptions Archive</h2>
+  <h2 class="page-heading archive-heading">Carlitos' Contraptions</h2>
   <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
   Dug out from the sands of WordPress at the old <em>carlitoscontraptions.com</em> domain.</p>
 
@@ -175,7 +174,10 @@ hero: true
         card.classList.add("is-open");
         toggle.setAttribute("aria-expanded", "true");
         detail.hidden = false;
-        card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        requestAnimationFrame(function () {
+          var target = card.offsetLeft - (carousel.clientWidth - card.offsetWidth) / 2;
+          carousel.scrollTo({ left: target, behavior: "smooth" });
+        });
       }
     });
   });

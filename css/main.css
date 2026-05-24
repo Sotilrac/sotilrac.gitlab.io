@@ -964,6 +964,7 @@ footer p {
 }
 
 .press-carousel {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0.5em 0.25em 1em;
@@ -971,8 +972,6 @@ footer p {
   align-items: flex-start;
   gap: 1em;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0.5em;
   scrollbar-width: thin;
   scrollbar-color: var(--silver) transparent;
 }
@@ -996,8 +995,8 @@ footer p {
   padding: 0;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 1px 3px var(--silver);
   transition:
-    flex-basis 0.25s ease,
     box-shadow 0.15s ease,
     transform 0.15s ease;
 }
@@ -1047,7 +1046,8 @@ footer p {
   display: block;
 }
 
-.press-card[data-kind="video"] .press-thumb img {
+.press-card[data-kind="video"] .press-thumb img,
+.press-card[data-kind="tv"] .press-thumb img {
   object-position: center;
 }
 
@@ -1222,23 +1222,61 @@ footer p {
     flex-basis: 13em;
   }
   .press-card.is-open {
-    flex-basis: 22em;
+    flex-basis: calc(100vw - 2 * var(--gutter));
   }
   .press-scroll {
     display: none;
   }
 }
 
-/* --- Resume Press & Media row tweaks --- */
-.press-resume-row .press-outlet {
+/* --- Resume Press & Media (two-column, Projects-style) --- */
+.press-resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6em 1.5em;
+  margin-top: 0.5em;
+}
+
+.press-resume-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  display: grid;
+  grid-template-columns: 6.5em 1fr;
+  column-gap: 0.8em;
+  align-items: start;
+}
+
+.press-resume-item h3 {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.press-resume-outlet {
   font-weight: 500;
 }
 
-.press-resume-row .press-meta {
+.press-resume-title {
+  font-weight: 300;
+}
+
+.press-resume-meta {
   font-size: 0.85em;
-  color: var(--slate);
-  display: block;
-  margin: 0.1em 0 0.4em;
+  margin: 0 0 0.15em;
+  list-style: none;
+}
+
+.press-resume-item ul,
+.press-resume-item li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 40em) {
+  .press-resume-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- Blog post figures --- */

@@ -123,27 +123,20 @@
     </section>
     <section>
         <h2>Press & Media</h2>
-        <p class="no-print" style="color:var(--slate);font-size:0.9em">Browse with screenshots in the <a href="/blog/#press-heading">press carousel on the blog</a>.</p>
+        <div class="press-resume-grid">
         {% for entry in press | sort(true, false, 'date') %}{% if entry.status != "draft" %}
-        <div class="row press-resume-row">
-            <div class="col-aside date_col">
+            <div class="press-resume-item">
                 <span class="dates">{{ entry.date | dateFormat("isodate") }}</span>
+                <div class="press-resume-body">
+                    <p class="press-resume-meta">{{ entry.kind }}</p>
+                    <h3>
+                        <span class="press-resume-outlet">{{ entry.outlet }}:</span>
+                        <span class="press-resume-title">{{ entry.title }}</span>
+                    </h3>
+                </div>
             </div>
-            <div class="col col-job">
-                <h3>
-                    <span class="press-outlet">{{ entry.outlet }}:</span>
-                    <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
-                </h3>
-                <p class="press-meta">
-                    {% if entry.author %}{{ entry.author }}{% endif %}
-                    {% if entry.author and entry.kind %} · {% endif %}
-                    {% if entry.kind %}{{ entry.kind }}{% endif %}
-                    {% if entry.archive %} · {% wayback entry.archive, "archive" %}{% endif %}
-                    {% if entry.post %} · <a href="{{ entry.post }}">blog</a>{% endif %}
-                </p>
-            </div>
-        </div>
         {% endif %}{% endfor %}
+        </div>
     </section>
     <section class="no-page-break">
         <h2>Personal Projects</h2>
