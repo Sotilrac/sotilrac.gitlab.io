@@ -83,7 +83,7 @@ To create a new post: `./_tools/new-post.sh "Post Title" [YYYY-MM-DD]`
 
 Available in post content:
 
-```
+```md
 {% fig "/img/blog/slug/photo.jpg", "Caption text" %}
 {% gallery 3, "/img/blog/slug/a.jpg", "/img/blog/slug/b.jpg", "/img/blog/slug/c.jpg" %}
 {% youtube "video-id" %}
@@ -132,16 +132,15 @@ https://asmat.ca?key=YOUR_SECRET_KEY
 
 Run the helper and paste the output into `_data/resume.yml`:
 
-```
-node _tools/encrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text 'your-phone-number'
-node _tools/encrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text 'your@email.tld'
+```bash
+node _tools/encrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text 'your-secet'
 ```
 
 Each invocation prints a base64 string; assign it to `phone:` or `email:` in `_data/resume.yml` as a plain quoted scalar.
 
 To verify a payload matches a given key without firing up the browser:
 
-```
+```bash
 node _tools/decrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text '<base64-payload>'
 ```
 
