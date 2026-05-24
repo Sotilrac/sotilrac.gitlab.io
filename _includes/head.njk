@@ -44,6 +44,15 @@
     "description": {{ resume.summary[0] | dump | safe }},
     "jobTitle": {{ resume.experience[0].title | dump | safe }},
     "worksFor": { "@type": "Organization", "name": {{ resume.experience[0].company | dump | safe }} },
+    "homeLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boston",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      }
+    },
     "sameAs": [{% for link in resume.links %}{{ link.url | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}]
   }
   </script>
