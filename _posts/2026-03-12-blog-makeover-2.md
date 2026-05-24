@@ -18,7 +18,7 @@ The site now runs on [Eleventy](https://www.11ty.dev/), a simpler and faster sta
 
 A key design goal this time: the site should survive neglect. Minimal dependencies, plain CSS instead of preprocessors, no frameworks that will be obsolete next year. When I inevitably ignore this blog for another half decade, I want it to still build and deploy without having to debug a graveyard of abandoned packages.
 
-All these upgrades are mainly possible thanks to the advancements of CSS and JS in the last decade or so. However, there's one feature that is back from the 2010s: RSS! The blog now contains 100% more RSS, which should make it easier for my (most likely imaginary) readers to receive the content.
+All these upgrades are mainly possible thanks to the advancements of CSS and JS in the last decade or so. However, there's one feature that is back from the 2010s: RSS! The blog now contains 100% more RSS, which should make it easier for my (most likely imaginary) readers to receive the content. Comments are back too, via [Giscus](https://giscus.app/), which sits on top of GitHub Discussions, so I never have to run a database, and anyone with a GitHub account can chime in.
 
 While I was at it, I finally cleaned up all the old posts. The typos from my early days of writing in English have been (mostly) corrected, though I kept the original voice intact for historical authenticity... or laziness. Either way.
 
