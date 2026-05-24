@@ -1,0 +1,18 @@
+<svg viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg" class="resistor-svg" aria-label="Resistor">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0d6a8"/>
+      <stop offset="0.5" stop-color="#e5c386"/>
+      <stop offset="1" stop-color="#c8a368"/>
+    </linearGradient>
+    <linearGradient id="wireGrad" x1="0" y1="33" x2="0" y2="37" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+      <stop offset="0" stop-color="#bcbcbc"/>
+      <stop offset="0.5" stop-color="#7a7a7a"/>
+      <stop offset="1" stop-color="#2c2c2c"/>
+    </linearGradient>
+  </defs>
+  <path d="M 2,35 H 318" fill="none" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 79.28,12.19 C 71.28,12.19 60,22.92 60,28.92 V 40 c 0,6 11.28,17.95 19.28,17.95 l 19.93,0 c 2,0 3,-1 4,-4 h 112.91 c 1,3 2,4 4,4 l 20.01,0 C 248.12,57.95 260,46 260,40 V 28.92 c 0,-6 -11.88,-16.73 -19.88,-16.73 l -20.01,0 c -2,0 -3,1 -4,4 H 103.21 c -1,-3 -2,-4 -4,-4 z"
+        fill="url(#bodyGrad)" stroke="#8b6a3a" stroke-width="1.2"/>
+  <g class="bands"></g>
+</svg>

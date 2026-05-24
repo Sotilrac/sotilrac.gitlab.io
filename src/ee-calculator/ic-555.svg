@@ -1,0 +1,27 @@
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" class="ic555-svg" aria-label="555 timer 8-pin DIP">
+  <g>
+    <g fill="#bdbdbd" stroke="#5a5a5a" stroke-width="0.6">
+      <rect x="20" y="10" width="10" height="14"/>
+      <rect x="20" y="42" width="10" height="14"/>
+      <rect x="20" y="74" width="10" height="14"/>
+      <rect x="20" y="106" width="10" height="14"/>
+      <rect x="170" y="10" width="10" height="14"/>
+      <rect x="170" y="42" width="10" height="14"/>
+      <rect x="170" y="74" width="10" height="14"/>
+      <rect x="170" y="106" width="10" height="14"/>
+    </g>
+    <rect x="30" y="5" width="140" height="120" rx="3" fill="#222" stroke="#000" stroke-width="1.2"/>
+    <path d="M85,5 A15,8 0 0,0 115,5 Z" fill="#111"/>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#ddd">
+      <text x="38" y="22">GND</text>
+      <text x="38" y="54">TRIG</text>
+      <text x="38" y="86">OUT</text>
+      <text x="38" y="118">RST</text>
+      <text x="162" y="22" text-anchor="end">VCC</text>
+      <text x="162" y="54" text-anchor="end">DIS</text>
+      <text x="162" y="86" text-anchor="end">THR</text>
+      <text x="162" y="118" text-anchor="end">CTL</text>
+      <text x="100" y="75" text-anchor="middle" font-size="14" fill="#f5e09c">NE555</text>
+    </g>
+  </g>
+</svg>

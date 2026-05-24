@@ -1,4 +1,7 @@
-.PHONY: help install dev build lint lint-fix check-links check ci clean
+.PHONY: help install dev build lint lint-fix check-links check ci clean ee-calc
+
+EE_CALC_SRC := $(wildcard src/ee-calculator/*)
+EE_CALC_OUT := js/ee-calculator.js
 
 help:  ## Show this help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -6,16 +9,21 @@ help:  ## Show this help
 install:  ## Install dependencies (npm ci)
 	npm ci --prefer-offline --no-audit --fund=false
 
-dev:  ## Run dev server with live reload at localhost:8080
+ee-calc: $(EE_CALC_OUT)  ## Bundle src/ee-calculator/ into js/ee-calculator.js
+
+$(EE_CALC_OUT): $(EE_CALC_SRC) _tools/build-ee-calculator.mjs
+	node _tools/build-ee-calculator.mjs
+
+dev: ee-calc  ## Run dev server with live reload at localhost:8080
 	npx @11ty/eleventy --serve
 
-build:  ## Production build to _site/
+build: ee-calc  ## Production build to _site/
 	npx @11ty/eleventy
 
-lint:  ## Check formatting (Prettier)
+lint: ee-calc  ## Check formatting (Prettier)
 	npx prettier --check .
 
-lint-fix:  ## Auto-fix formatting
+lint-fix: ee-calc  ## Auto-fix formatting
 	npx prettier --write .
 
 check-links:  ## Verify internal links resolve in _site/
