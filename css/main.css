@@ -1694,7 +1694,19 @@ hr.comments-separator {
   h2,
   h3 {
     margin-top: 0.5em;
+    break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .press-resume-grid,
+  .education-grid {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  .press-resume-grid > .press-resume-item:first-child {
+    break-before: avoid;
+    page-break-before: avoid;
   }
 }
 
