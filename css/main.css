@@ -597,16 +597,6 @@ footer p {
   margin: 0;
 }
 
-.cc-icon {
-  color: var(--snow);
-  white-space: nowrap;
-}
-
-.cc-icon .icon {
-  margin-right: 0.25em;
-  vertical-align: -0.15em;
-}
-
 /* --- Page edge indicator (wide viewports)
  * Architecture: a 1px line is fixed to the viewport at the column corresponding
  * to col-content's right edge. It sits at z-index -1 so opaque in-flow elements
@@ -776,11 +766,6 @@ footer p {
 
 .post-link {
   font-weight: bold;
-}
-
-.post-categories {
-  color: var(--slate);
-  font-size: 0.85em;
 }
 
 .page-heading {
