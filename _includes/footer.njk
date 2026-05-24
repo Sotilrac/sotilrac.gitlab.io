@@ -9,43 +9,50 @@
 <!-- JS -->
 
 <script src="{{ site.baseurl }}/js/lightbox.js" defer></script>
-<script src="/js/vendor/sjcl.js"></script>
-<script type="text/javascript">
-    // Get URL parameters by name
-    function get_url_parameter(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-        return results == null ? '' : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-    var phone = {{ resume.phone | safe }};
-    var email = {{ resume.email | safe }};
-    // Get key to decrypt phone number and email
-    var key = get_url_parameter('key');
-    // Get msg to be encrypted for convenience
-    var msg = get_url_parameter('msg');
-    if (msg != "") {
-        console.log('Encrypting "' + msg + '" :');
-        console.log(sjcl.encrypt(key, msg));
-    }
-    try {
-        if (key != "") {
-            try {
-                phone = sjcl.decrypt(key, JSON.stringify(phone));
-                email = sjcl.decrypt(key, JSON.stringify(email));
-                $("#phoneContent").html(phone);
-                $("#emailContent").html(email);
-                $("#phone").show();
-                $("#email").show();
-            } catch (err) {
-                throw 'Ah ah ah. You didn\'t say the magic word';
-            }
-        } else {
-            throw "";
-        }
-    } catch (err) {
-        if (err != "") {
-            alert(err);
-        }
-    }
+<script>
+(async function () {
+  const key = new URLSearchParams(location.search).get("key");
+  if (!key) return;
+  const phoneEnc = {{ resume.phone | dump | safe }};
+  const emailEnc = {{ resume.email | dump | safe }};
+  try {
+    const phone = await decryptField(phoneEnc, key);
+    const email = await decryptField(emailEnc, key);
+    setField("phone", "phoneContent", phone);
+    setField("email", "emailContent", email);
+  } catch (err) {
+    alert("Ah ah ah. You didn't say the magic word.");
+  }
+
+  function setField(wrapId, contentId, value) {
+    const wrap = document.getElementById(wrapId);
+    const content = document.getElementById(contentId);
+    if (content) content.textContent = value;
+    if (wrap) wrap.style.display = "";
+  }
+
+  async function decryptField(payload, password) {
+    const data = Uint8Array.from(atob(payload), (c) => c.charCodeAt(0));
+    if (data.length < 28) throw new Error("payload too short");
+    const salt = data.slice(0, 16);
+    const iv = data.slice(16, 28);
+    const ct = data.slice(28);
+    const baseKey = await crypto.subtle.importKey(
+      "raw",
+      new TextEncoder().encode(password),
+      "PBKDF2",
+      false,
+      ["deriveKey"],
+    );
+    const aesKey = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt, iterations: 200000, hash: "SHA-256" },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"],
+    );
+    const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, aesKey, ct);
+    return new TextDecoder().decode(pt);
+  }
+})();
 </script>

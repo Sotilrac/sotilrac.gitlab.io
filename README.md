@@ -118,7 +118,7 @@ Supported functions, symbols, and environments: [KaTeX Supported Functions](http
 
 ## Encrypted Contact Info
 
-Phone and email are stored as AES-encrypted JSON in `_data/resume.yml`. They are decrypted client-side using [SJCL](https://bitwiseshiftleft.github.io/sjcl/) when a visitor provides the correct key via URL parameter.
+Phone and email are stored as AES-GCM ciphertext (base64) in `_data/resume.yml`. They are decrypted client-side using the Web Crypto API in `_includes/footer.njk` when a visitor provides the correct key via URL parameter. The key is derived from the password using PBKDF2-SHA256 with 200,000 iterations; the payload layout is `salt[16] || iv[12] || ciphertext+tag`.
 
 ### Viewing encrypted contact info
 
@@ -130,15 +130,14 @@ https://asmat.ca?key=YOUR_SECRET_KEY
 
 ### Encrypting new contact info
 
-1. Visit the site with both your key and the message to encrypt:
+Run the helper and paste the output into `_data/resume.yml`:
 
-   ```
-   https://asmat.ca?key=YOUR_SECRET_KEY&msg=your-phone-number
-   ```
+```
+node _tools/encrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text 'your-phone-number'
+node _tools/encrypt-contact.mjs --key 'YOUR_SECRET_KEY' --text 'your@email.tld'
+```
 
-2. Open the browser console, the encrypted JSON object will be logged.
-
-3. Copy the JSON object and paste it into `_data/resume.yml` as the `phone` or `email` value.
+Each invocation prints a base64 string; assign it to `phone:` or `email:` in `_data/resume.yml` as a plain quoted scalar.
 
 ## Blog Archive
 
