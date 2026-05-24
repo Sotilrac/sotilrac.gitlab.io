@@ -10,8 +10,8 @@ He currently leads architecture and system integration efforts for embedded robo
 
 Across these roles, his focus has been on technology strategy and the business growth that follows from shipping scalable, reliable software systems at consumer scale, with audiences in the tens of thousands. He builds brilliant, multi-disciplinary teams that turn audacious ideas into real-world products and drives them to delivery.
 
-This site is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-You may reference and cite this content with attribution. Commercial use and training on this content are not permitted.
+Copyright (c) 2006-2026 Carlos Asmat. All rights reserved.
+Brief quotations with attribution are permitted for criticism, commentary, news reporting, or scholarly analysis. Reproduction, redistribution, and use for machine-learning training are not permitted without prior written permission. Contact: https://linkedin.com/in/casmat.
 
 ## Site structure
 
@@ -49,9 +49,9 @@ The blog has two sections:
 
 ## License
 
-All content on this site is published under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license.
+Copyright (c) 2006-2026 Carlos Asmat. All rights reserved. This includes all blog posts, photographs, illustrations, and code published on asmat.ca.
 
-- You must give appropriate credit and link back to the source
-- You may not use the material for commercial purposes
-- If you remix or build upon the material, you must distribute under the same license
-- Training AI models on this content is considered commercial use and is not permitted
+- Brief quotations with attribution are permitted for criticism, commentary, news reporting, or scholarly analysis
+- Reproduction, redistribution, and republication require prior written permission
+- Use of any content for machine-learning training is not permitted under any circumstances
+- For permission requests, contact the author via https://linkedin.com/in/casmat

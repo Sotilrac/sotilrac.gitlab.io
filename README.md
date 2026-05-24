@@ -155,7 +155,7 @@ Page views are tracked with [Umami](https://umami.is/) (privacy-friendly, no coo
 
 ## AI Crawlers
 
-`robots.txt` blocks AI training crawlers (GPTBot, ClaudeBot, CCBot, etc.) while allowing citation/search crawlers (ChatGPT-User, PerplexityBot, etc.). `llms.txt` provides a machine-readable site summary and declares the CC BY-NC-SA 4.0 license.
+`robots.txt` blocks AI training crawlers (GPTBot, ClaudeBot, CCBot, etc.) while allowing citation/search crawlers (ChatGPT-User, PerplexityBot, etc.). `llms.txt` provides a machine-readable site summary and declares the All Rights Reserved copyright (see `LICENSE`).
 
 ## SEO & Structured Data
 
