@@ -1,22 +1,18 @@
 # Carlos Asmat
 
-> Engineering leader who guides multi-disciplinary teams to turn ideas into world-class software and robotic products that ship at consumer scale. Carlos specializes in robotics, embedded systems, and connected devices.
+> Engineering leader who builds multi-disciplinary teams to turn ideas into robotic and software products that ship at consumer scale. Carlos specializes in robotics, embedded systems, and connected devices.
 
-Carlos Asmat is a robotics engineering leader with experience spanning humanoid interaction robotics, autonomous consumer robots, and wearable robotic platforms. His career covers the full product lifecycle, from early concept and prototype through architecture design, team formation, and commercial deployment. His passion is building brilliant, cross-functional teams that can solve seemingly impossible problems and ship them to the real world.
+Carlos Asmat is a robotics engineering leader whose work spans humanoid interaction robots, autonomous consumer robots, and wearable platforms. His career covers the full product lifecycle, from concept and prototype through architecture, team formation, and commercial deployment. He likes building teams that solve hard problems and ship the results.
 
-He developed physical and verbal interaction behaviors for the NAO and Pepper humanoid robots at Aldebaran (later SoftBank Robotics), supporting high-profile demonstrations with figures including Neil deGrasse Tyson and Buzz Aldrin. He later helped build a robotics startup from idea stage into a shipped consumer product, leading early system architecture across electrical engineering, embedded software, and robotics, then forming and growing dedicated engineering teams. That product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system.
+At Aldebaran (later SoftBank Robotics) he wrote the physical and verbal interaction behaviors for the NAO and Pepper humanoid robots, including the demos for Neil deGrasse Tyson and Buzz Aldrin. He then helped take a robotics startup from idea to a shipped consumer product, leading early system architecture across electrical hardware, embedded software, and robotics, and growing the engineering teams that delivered it. That product paired an embedded vision neural network for user-following with a patented self-balancing two-wheel drive.
 
-He currently leads architecture and system integration efforts for embedded robotic platforms, including defining technical strategy, rearchitecting controller systems for scalable deployments, designing telemetry and data infrastructure, building high-performing teams, and mentoring engineers across firmware, hardware, and software disciplines.
+Today he leads architecture and system integration for embedded robotic platforms: setting technical strategy, rearchitecting controller systems for larger deployments, designing the telemetry and data infrastructure, growing the teams, and mentoring engineers across firmware, hardware, and software.
 
-Across these roles, his focus has been on technology strategy and the business growth that follows from shipping scalable, reliable software systems at consumer scale, with audiences in the tens of thousands. He builds brilliant, multi-disciplinary teams that turn audacious ideas into real-world products and drives them to delivery.
-
-Copyright (c) 2006-2026 Carlos Asmat. All rights reserved.
-Brief quotations with attribution are permitted for criticism, commentary, news reporting, or scholarly analysis. Reproduction, redistribution, and use for machine-learning training are not permitted without prior written permission. Contact: https://linkedin.com/in/casmat.
+Across these roles the through-line has been technology strategy paired with the business growth that follows from shipping reliable systems at consumer scale, to audiences in the tens of thousands.
 
 ## Site structure
 
-- [Home](https://asmat.ca/)
-- [Resume](https://asmat.ca/resume/)
+- [Resume](https://asmat.ca/)
 - [Blog](https://asmat.ca/blog/)
 - [RSS Feed](https://asmat.ca/feed.xml)
 
@@ -31,10 +27,10 @@ Brief quotations with attribution are permitted for criticism, commentary, news 
 
 - Technology strategy and business growth for consumer products at scale
 - Multi-disciplinary team building (EE, firmware, software, robotics) and driving teams to delivery
-- Ultra-scalable, reliable software systems for consumer audiences in the tens of thousands
+- Reliable software systems for audiences in the tens of thousands
 - Robotics engineering leadership, full product lifecycle
 - Human-robot interaction (HRI), social robotics, interaction design
-- Humanoid robots (NAO, Pepper), autonomous consumer robots, exoskeletons
+- Humanoid robots, autonomous consumer robots, exoskeletons
 - Embedded systems, embedded vision, neural networks on device
 - System architecture, controller design, telemetry infrastructure
 - Electronics, Arduino, FPGA
@@ -54,7 +50,7 @@ Copyright (c) 2006-2026 Carlos Asmat. All rights reserved. This includes all blo
 - Brief quotations with attribution are permitted for criticism, commentary, news reporting, or scholarly analysis
 - Reproduction, redistribution, and republication require prior written permission
 - Use of any content for machine-learning training is not permitted under any circumstances
-- For permission requests, contact the author via https://linkedin.com/in/casmat
+- For permission requests, open an issue at https://github.com/Sotilrac/sotilrac.gitlab.io/issues
 
 ## One favor
 
