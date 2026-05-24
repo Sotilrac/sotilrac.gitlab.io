@@ -220,18 +220,33 @@ const RESISTOR_SVG = `
       <stop offset="0.5" stop-color="#e5c386"/>
       <stop offset="1" stop-color="#c8a368"/>
     </linearGradient>
-    <linearGradient id="wireGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#dadada"/>
-      <stop offset="0.5" stop-color="#9a9a9a"/>
-      <stop offset="1" stop-color="#5a5a5a"/>
+    <linearGradient id="wireGrad" x1="0" y1="33" x2="0" y2="37" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+      <stop offset="0" stop-color="#bcbcbc"/>
+      <stop offset="0.5" stop-color="#7a7a7a"/>
+      <stop offset="1" stop-color="#2c2c2c"/>
     </linearGradient>
   </defs>
-  <line x1="0" y1="35" x2="62" y2="35" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
-  <line x1="258" y1="35" x2="320" y2="35" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M 85,11 C 70,11 60,22 60,35 C 60,48 70,59 85,59 C 96,59 104,55 110,50 L 210,50 C 216,55 224,59 235,59 C 250,59 260,48 260,35 C 260,22 250,11 235,11 C 224,11 216,15 210,20 L 110,20 C 104,15 96,11 85,11 Z"
+  <path d="M 2,35 H 318" fill="none" stroke="url(#wireGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 79.28,12.19 C 71.28,12.19 60,22.92 60,28.92 V 40 c 0,6 11.28,17.95 19.28,17.95 l 19.93,0 c 2,0 3,-1 4,-4 h 112.91 c 1,3 2,4 4,4 l 20.01,0 C 248.12,57.95 260,46 260,40 V 28.92 c 0,-6 -11.88,-16.73 -19.88,-16.73 l -20.01,0 c -2,0 -3,1 -4,4 H 103.21 c -1,-3 -2,-4 -4,-4 z"
         fill="url(#bodyGrad)" stroke="#8b6a3a" stroke-width="1.2"/>
   <g class="bands"></g>
 </svg>`;
+
+// Fixed band slots A..F in the resistor SVG. The 4/5/6-band modes pick a
+// subset of slots (slot indices are 0=A, 1=B, 2=C, 3=D, 4=E, 5=F).
+const BAND_SLOTS = [
+  { x: 82.61, y: 12.19, w: 10.02, h: 45.75 }, // A (left end, tall)
+  { x: 111.94, y: 16.19, w: 10.5, h: 37.15 }, // B (inner)
+  { x: 134.25, y: 16.19, w: 10.12, h: 37.75 }, // C (inner)
+  { x: 155.78, y: 16.19, w: 10.5, h: 37.75 }, // D (inner)
+  { x: 194.6, y: 16.19, w: 10.12, h: 37.75 }, // E (inner)
+  { x: 229.65, y: 12.19, w: 9.86, h: 45.75 }, // F (right end, tall)
+];
+const BAND_SLOT_MAP = {
+  4: [1, 2, 3, 5], // B, C, D, F
+  5: [0, 1, 2, 3, 5], // A, B, C, D, F
+  6: [0, 1, 2, 3, 4, 5], // all
+};
 
 // 8-pin DIP for the 555. Labels on pins.
 const IC_555_SVG = `
@@ -1193,23 +1208,36 @@ input:focus, select:focus { border-color: var(--accent); }
 
 /* Resistor / color code */
 .resistor-display {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(22em, 42em) auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1em;
   align-items: center;
-  gap: 1em;
   margin: 0.75em 0 0.5em;
-  flex-wrap: wrap;
-  justify-content: center;
 }
-.resistor-column {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  flex: 1 1 18em;
-  min-width: 14em;
-  max-width: 24em;
+.resistor-wrap {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 28em;
+  margin: 0 auto;
 }
-.resistor-wrap { width: 100%; }
+.band-pickers { grid-column: 1; grid-row: 2; }
+.resistor-eq { grid-column: 2; grid-row: 1; }
+.resistor-readout { grid-column: 3; grid-row: 1; }
 .resistor-svg { width: 100%; height: auto; display: block; }
+@media (max-width: 32em) {
+  .resistor-display {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    row-gap: 0.5em;
+  }
+  .resistor-wrap, .band-pickers, .resistor-eq, .resistor-readout {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
 .bands rect { cursor: pointer; transition: opacity 0.1s; }
 .bands rect:hover { opacity: 0.85; }
 .resistor-eq {
@@ -1220,14 +1248,19 @@ input:focus, select:focus { border-color: var(--accent); }
 }
 .resistor-readout {
   font-family: var(--mono);
-  display: flex;
-  flex-direction: column;
-  gap: 0.15em;
+  position: relative;
 }
 .readout-line {
   display: flex;
   align-items: baseline;
   gap: 0.4em;
+}
+.readout-ppm {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.15em;
+  white-space: nowrap;
 }
 .readout-value {
   font-size: 1.9em;
@@ -1248,22 +1281,22 @@ input:focus, select:focus { border-color: var(--accent); }
 
 .band-pickers {
   display: flex;
-  gap: 0.25em;
-  justify-content: space-between;
-  margin: 0.4em 0 0;
+  gap: 0.35em;
+  flex-wrap: wrap;
+  margin: 0.5em 0 0;
 }
 .band-picker {
-  flex: 1 1 0;
-  min-width: 0;
+  width: 6.5em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 0.15em;
 }
-.band-picker label { font-size: 0.65em; }
+.band-picker.wide { width: 7em; }
+.band-picker label { font-size: 0.7em; text-align: center; }
 .band-picker select {
-  font-size: 0.75em;
-  padding: 0.2em 0.3em;
+  font-size: 0.85em;
+  padding: 0.25em 0.4em;
   width: 100%;
   min-width: 0;
 }
@@ -1662,12 +1695,10 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="resistor-display">
-        <div class="resistor-column">
-          <div class="resistor-wrap">${RESISTOR_SVG}</div>
-          <div class="band-pickers" data-pickers></div>
-        </div>
+        <div class="resistor-wrap">${RESISTOR_SVG}</div>
         <div class="resistor-eq">=</div>
         <div class="resistor-readout" data-readout></div>
+        <div class="band-pickers" data-pickers></div>
       </div>
 
       <div class="row" style="margin-top:0.85em">
@@ -1678,25 +1709,24 @@ class EECalculator extends HTMLElement {
       </div>
     `;
 
-    // Render band rects across the dog-bone's narrow middle (x=115..205, y=20..50).
+    // Fill the appropriate band slots for this band mode. Slot positions are
+    // fixed in the SVG; BAND_SLOT_MAP picks which slots are used per mode.
     const svg = el.querySelector(".resistor-svg");
     const bandsG = svg.querySelector(".bands");
-    const x0 = 115,
-      x1 = 205;
-    const usable = x1 - x0;
-    const slot = usable / (bandMode + 1);
-    const bw = bandMode <= 4 ? 10 : 8;
     bandsG.innerHTML = "";
+    const slots = BAND_SLOT_MAP[bandMode] || BAND_SLOT_MAP[4];
     for (let i = 0; i < bandMode; i++) {
-      const x = x0 + slot * (i + 0.5) - bw / 2;
+      const slot = BAND_SLOTS[slots[i]];
       const colorIdx = bands[i] ?? 0;
       const color = BAND_COLORS[colorIdx]?.hex || "#888";
       const r = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-      r.setAttribute("x", x);
-      r.setAttribute("y", 20);
-      r.setAttribute("width", bw);
-      r.setAttribute("height", 30);
+      r.setAttribute("x", slot.x);
+      r.setAttribute("y", slot.y);
+      r.setAttribute("width", slot.w);
+      r.setAttribute("height", slot.h);
       r.setAttribute("fill", color);
+      r.setAttribute("stroke", "#8b6a3a");
+      r.setAttribute("stroke-width", "1.2");
       r.setAttribute("data-band", i);
       r.addEventListener("click", () => this._pickBandForIndex(i));
       bandsG.appendChild(r);
@@ -1713,17 +1743,17 @@ class EECalculator extends HTMLElement {
       return "ppm";
     };
     const fmtMult = (m) => {
-      if (m >= 1e9) return `×${m / 1e9}G`;
-      if (m >= 1e6) return `×${m / 1e6}M`;
-      if (m >= 1e3) return `×${m / 1e3}k`;
-      return `×${m}`;
+      if (m >= 1e9) return `${m / 1e9}G`;
+      if (m >= 1e6) return `${m / 1e6}M`;
+      if (m >= 1e3) return `${m / 1e3}k`;
+      return `${m}`;
     };
     const annotate = (c, kind) => {
       if (kind === "digit") return c.digit != null ? c.digit : "";
       if (kind === "mult")
         return c.multiplier != null ? fmtMult(c.multiplier) : "";
-      if (kind === "tol") return c.tolerance != null ? `±${c.tolerance}%` : "";
-      if (kind === "ppm") return c.ppm != null ? `${c.ppm} ppm` : "";
+      if (kind === "tol") return c.tolerance != null ? `${c.tolerance}` : "";
+      if (kind === "ppm") return c.ppm != null ? `${c.ppm}` : "";
       return "";
     };
     pickers.innerHTML = "";
@@ -1738,7 +1768,7 @@ class EECalculator extends HTMLElement {
         })
         .join("");
       const div = document.createElement("div");
-      div.className = "band-picker";
+      div.className = kind === "digit" ? "band-picker" : "band-picker wide";
       div.innerHTML = `<label>${labels[i]}</label><select data-band-select="${i}">${opts}</select>`;
       pickers.appendChild(div);
     }
@@ -1843,9 +1873,10 @@ class EECalculator extends HTMLElement {
   }
 
   _bandLabels(mode) {
-    if (mode === 4) return ["digit 1", "digit 2", "mult", "tol"];
-    if (mode === 5) return ["digit 1", "digit 2", "digit 3", "mult", "tol"];
-    return ["digit 1", "digit 2", "digit 3", "mult", "tol", "ppm"];
+    if (mode === 4) return ["digit 1", "digit 2", "mult (×)", "tol (%)"];
+    if (mode === 5)
+      return ["digit 1", "digit 2", "digit 3", "mult (×)", "tol (%)"];
+    return ["digit 1", "digit 2", "digit 3", "mult (×)", "tol (%)", "ppm/°C"];
   }
 
   _bandOptionsFor(mode, i) {
