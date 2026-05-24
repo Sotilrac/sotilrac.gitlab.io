@@ -503,8 +503,14 @@ th {
 
 .contact-print {
   display: flex;
-  gap: 1em;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15em;
+  padding: 0;
+}
+
+.contact-print li {
+  padding: 0;
 }
 
 .contact ul li span {
@@ -1689,10 +1695,6 @@ hr.comments-separator {
   h3 {
     margin-top: 0.5em;
     page-break-after: avoid;
-  }
-
-  h2 {
-    border-bottom: 1px solid gray;
   }
 }
 

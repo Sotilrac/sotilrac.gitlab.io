@@ -10,7 +10,7 @@
                 <li id="phone"><span class="icon">{{ icon("fa-phone") }}</span><span id="phoneContent"></span></li>
                 <li id="email"><span class="icon">{{ icon("fa-envelope") }}</span><span id="emailContent"></span></li>
                 {% for link in resume.links %}
-                  {% if link.icon == "fa-globe" %}
+                  {% if link.icon != "fa-youtube" %}
                 <li><span class="icon">{{ icon(link.icon) }}</span><span><a href="{{ link.url }}">{{ link.title }}</a></span></li>
                   {% endif %}
                 {% endfor %}
