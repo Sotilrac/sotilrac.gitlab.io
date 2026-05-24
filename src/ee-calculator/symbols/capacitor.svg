@@ -1,0 +1,14 @@
+<!--
+  Capacitor symbol (non-polarized). Horizontal orientation.
+  viewBox: 0 0 40 20
+  Anchors: (0, 10) left lead, (40, 10) right lead.
+  Plates are drawn with stroke-width 2 to match the source.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 20" class="sym sym-c" aria-label="Capacitor">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 0,10 H 17" />
+    <path d="M 17,0 V 20" stroke-width="2" />
+    <path d="M 23,0 V 20" stroke-width="2" />
+    <path d="M 23,10 H 40" />
+  </g>
+</svg>

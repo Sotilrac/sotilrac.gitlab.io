@@ -1,0 +1,13 @@
+<!--
+  Ground symbol. Vertical orientation.
+  viewBox: 0 0 20 25
+  Anchor: (10, 0) top of lead. Three descending horizontal bars below.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 25" class="sym sym-gnd" aria-label="Ground">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 10,0 V 15" />
+    <path d="M 0,15 H 20" />
+    <path d="M 5,20 H 15" />
+    <path d="M 8,25 H 12" />
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<!--
+  LED symbol (anode on left, cathode on right). Horizontal orientation.
+  viewBox: 0 0 40 35
+  Anchors: (0, 25) anode lead, (40, 25) cathode lead.
+  Body sits at y=15..35; emission arrows above at y=0..14.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 35" class="sym sym-led" aria-label="LED">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Conducting wire through the diode body -->
+    <path d="M 0,25 H 40" />
+    <!-- Diode triangle (points toward cathode) -->
+    <path d="M 10,15 V 35 L 30,25 Z" />
+    <!-- Cathode bar -->
+    <path d="M 30,15 V 35" stroke-width="2" />
+    <!-- Light emission: two diagonal rays + arrowheads -->
+    <path d="M 15,10 l 7,-7" />
+    <path d="M 20,15 l 7,-7" />
+    <path d="m 19,3 6,-3 -3,6 z" fill="currentColor" />
+    <path d="m 24,8 6,-3 -3,6 z" fill="currentColor" />
+  </g>
+</svg>

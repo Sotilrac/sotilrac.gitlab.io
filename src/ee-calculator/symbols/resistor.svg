@@ -1,0 +1,13 @@
+<!--
+  Resistor symbol. Horizontal orientation.
+  viewBox: 0 0 40 10
+  Anchors: (0, 5) left lead, (40, 5) right lead.
+  Stroke uses currentColor for theming.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 10" class="sym sym-r" aria-label="Resistor">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 0,5 H 5" />
+    <rect x="5" y="0" width="30" height="10" />
+    <path d="M 35,5 H 40" />
+  </g>
+</svg>

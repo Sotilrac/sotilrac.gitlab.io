@@ -245,10 +245,40 @@ const CIRCUIT = {
   STROKE: "#2c2418",
   ACCENT: "#cc5500",
   BG: "#fffcf2",
-  SW: 1.6,
+  SW: 1, // matches the default stroke-width inside the symbol SVGs
   FONT: 'ui-monospace, "Courier New", monospace',
   GRID: 20,
 };
+
+// Inlined <symbol> definitions for R/C/LED/GND, built from src/ee-calculator/symbols/.
+const SYMBOL_DEFS = "__SYMBOL_DEFS__";
+
+// Natural dimensions of each symbol in its own viewBox, with the anchor offset
+// from its top-left corner. Used to position <use> references so the symbol's
+// anchor lands exactly on the requested grid endpoint.
+const SYM = {
+  r: { id: "sym-r", w: 40, h: 10, ax: 0, ay: 5 }, // left anchor
+  c: { id: "sym-c", w: 40, h: 20, ax: 0, ay: 10 },
+  led: { id: "sym-led", w: 40, h: 35, ax: 0, ay: 25 },
+  gnd: { id: "sym-gnd", w: 20, h: 25, ax: 10, ay: 0 }, // top anchor
+};
+
+// Replace `V_in` style underscore-suffix labels with proper SVG subscripts
+// using <tspan>. Leaves other characters untouched.
+function svgSubscript(label) {
+  if (label == null) return "";
+  return String(label).replace(
+    /_([A-Za-z][A-Za-z0-9]*)/g,
+    '<tspan baseline-shift="sub" font-size="0.72em">$1</tspan>',
+  );
+}
+
+// HTML version of the same: turns `V_in` into `V<sub>in</sub>`. Used for
+// form labels and result rows.
+function htmlSubscript(label) {
+  if (label == null) return "";
+  return String(label).replace(/_([A-Za-z][A-Za-z0-9]*)/g, "<sub>$1</sub>");
+}
 
 class Circuit {
   constructor(cols, rows) {
@@ -284,154 +314,87 @@ class Circuit {
       `<circle cx="${this._p(x)}" cy="${this._p(y)}" r="3" fill="${CIRCUIT.STROKE}"/>`,
     );
   }
+  // Place a two-terminal horizontal/vertical symbol between (x1,y1) and
+  // (x2,y2). Draws lead extensions when the requested span exceeds the
+  // symbol's natural length. Label is positioned perpendicular to the symbol.
+  _placeSymbol(sym, x1, y1, x2, y2, label) {
+    const px1 = this._p(x1),
+      py1 = this._p(y1),
+      px2 = this._p(x2),
+      py2 = this._p(y2);
+    const horiz = Math.abs(px2 - px1) >= Math.abs(py2 - py1);
+    if (horiz) {
+      const cx = (px1 + px2) / 2;
+      const cy = py1;
+      const useX = cx - sym.w / 2;
+      const useY = cy - sym.ay;
+      this._push(
+        `<use href="#${sym.id}" x="${useX}" y="${useY}" width="${sym.w}" height="${sym.h}"/>`,
+      );
+      const sign = Math.sign(px2 - px1) || 1;
+      const leftEdge = cx - (sym.w / 2) * sign;
+      const rightEdge = cx + (sym.w / 2) * sign;
+      this._push(
+        `<line x1="${px1}" y1="${py1}" x2="${leftEdge}" y2="${cy}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
+      );
+      this._push(
+        `<line x1="${rightEdge}" y1="${cy}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
+      );
+      if (label) {
+        const ly = cy - sym.ay - 6;
+        this._push(
+          `<text x="${cx}" y="${ly}" text-anchor="middle" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${svgSubscript(label)}</text>`,
+        );
+      }
+    } else {
+      // Vertical orientation. Place the symbol so its anchor midpoint lands at
+      // (cx, cy), then rotate 90° around that midpoint.
+      const cx = px1;
+      const cy = (py1 + py2) / 2;
+      const useX = cx - sym.w / 2;
+      const useY = cy - sym.ay;
+      this._push(
+        `<use href="#${sym.id}" x="${useX}" y="${useY}" width="${sym.w}" height="${sym.h}" transform="rotate(90 ${cx} ${cy})"/>`,
+      );
+      const sign = Math.sign(py2 - py1) || 1;
+      const endA = cy - (sym.w / 2) * sign;
+      const endB = cy + (sym.w / 2) * sign;
+      this._push(
+        `<line x1="${px1}" y1="${py1}" x2="${cx}" y2="${endA}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
+      );
+      this._push(
+        `<line x1="${cx}" y1="${endB}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
+      );
+      if (label) {
+        // After rotation, the symbol's body extends ±(sym.h - sym.ay) from cx
+        // perpendicular to the lead axis. Place the label just past that.
+        const lx = cx + (sym.h - sym.ay) + 6;
+        this._push(
+          `<text x="${lx}" y="${cy + 4}" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${svgSubscript(label)}</text>`,
+        );
+      }
+    }
+    return this;
+  }
   // Resistor between (x1,y1) and (x2,y2). Horizontal or vertical only.
   resistor(x1, y1, x2, y2, label) {
-    const px1 = this._p(x1),
-      py1 = this._p(y1),
-      px2 = this._p(x2),
-      py2 = this._p(y2);
-    const cx = (px1 + px2) / 2,
-      cy = (py1 + py2) / 2;
-    const horiz = Math.abs(px2 - px1) > Math.abs(py2 - py1);
-    const length = horiz ? Math.abs(px2 - px1) : Math.abs(py2 - py1);
-    const w = 14;
-    const bodyLen = Math.min(length * 0.62, 38);
-    const stubLen = (length - bodyLen) / 2;
-    if (horiz) {
-      const sign = Math.sign(px2 - px1);
-      this._push(
-        `<line x1="${px1}" y1="${py1}" x2="${px1 + stubLen * sign}" y2="${py1}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${px2 - stubLen * sign}" y1="${py2}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<rect x="${cx - bodyLen / 2}" y="${cy - w / 2}" width="${bodyLen}" height="${w}" fill="${CIRCUIT.BG}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}"/>`,
-      );
-      if (label)
-        this._push(
-          `<text x="${cx}" y="${cy - w / 2 - 6}" text-anchor="middle" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${label}</text>`,
-        );
-    } else {
-      const sign = Math.sign(py2 - py1);
-      this._push(
-        `<line x1="${px1}" y1="${py1}" x2="${px1}" y2="${py1 + stubLen * sign}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${px2}" y1="${py2 - stubLen * sign}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<rect x="${cx - w / 2}" y="${cy - bodyLen / 2}" width="${w}" height="${bodyLen}" fill="${CIRCUIT.BG}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}"/>`,
-      );
-      if (label)
-        this._push(
-          `<text x="${cx + w / 2 + 6}" y="${cy + 4}" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${label}</text>`,
-        );
-    }
-    return this;
+    return this._placeSymbol(SYM.r, x1, y1, x2, y2, label);
   }
-  // Capacitor (non-polarized): two short parallel plates with leads.
+  // Capacitor (non-polarized) between (x1,y1) and (x2,y2).
   capacitor(x1, y1, x2, y2, label) {
-    const px1 = this._p(x1),
-      py1 = this._p(y1),
-      px2 = this._p(x2),
-      py2 = this._p(y2);
-    const cx = (px1 + px2) / 2,
-      cy = (py1 + py2) / 2;
-    const horiz = Math.abs(px2 - px1) > Math.abs(py2 - py1);
-    const gap = 6,
-      plate = 18;
-    if (horiz) {
-      this._push(
-        `<line x1="${px1}" y1="${py1}" x2="${cx - gap / 2}" y2="${cy}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${cx + gap / 2}" y1="${cy}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${cx - gap / 2}" y1="${cy - plate / 2}" x2="${cx - gap / 2}" y2="${cy + plate / 2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW + 0.6}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${cx + gap / 2}" y1="${cy - plate / 2}" x2="${cx + gap / 2}" y2="${cy + plate / 2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW + 0.6}" stroke-linecap="round"/>`,
-      );
-      if (label)
-        this._push(
-          `<text x="${cx}" y="${cy - plate / 2 - 6}" text-anchor="middle" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${label}</text>`,
-        );
-    } else {
-      this._push(
-        `<line x1="${px1}" y1="${py1}" x2="${cx}" y2="${cy - gap / 2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${cx}" y1="${cy + gap / 2}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${cx - plate / 2}" y1="${cy - gap / 2}" x2="${cx + plate / 2}" y2="${cy - gap / 2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW + 0.6}" stroke-linecap="round"/>`,
-      );
-      this._push(
-        `<line x1="${cx - plate / 2}" y1="${cy + gap / 2}" x2="${cx + plate / 2}" y2="${cy + gap / 2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW + 0.6}" stroke-linecap="round"/>`,
-      );
-      if (label)
-        this._push(
-          `<text x="${cx + plate / 2 + 6}" y="${cy + 4}" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${label}</text>`,
-        );
-    }
-    return this;
+    return this._placeSymbol(SYM.c, x1, y1, x2, y2, label);
   }
-  // LED: triangle pointing in current direction, cathode bar, two emission arrows.
-  // Horizontal only. (x1,y1) is anode side, (x2,y2) is cathode side.
+  // LED. (x1,y1) is anode side, (x2,y2) is cathode side. Horizontal only.
   led(x1, y1, x2, y2) {
-    const px1 = this._p(x1),
-      py1 = this._p(y1),
-      px2 = this._p(x2),
-      py2 = this._p(y2);
-    const cx = (px1 + px2) / 2,
-      cy = (py1 + py2) / 2;
-    const dir = Math.sign(px2 - px1);
-    const tri = 14;
-    const ax = cx - (tri / 2) * dir;
-    const bx = cx + (tri / 2) * dir;
-    this._push(
-      `<line x1="${px1}" y1="${py1}" x2="${ax}" y2="${cy}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-    );
-    this._push(
-      `<path d="M ${ax} ${cy - tri / 2} L ${ax} ${cy + tri / 2} L ${bx} ${cy} Z" fill="${CIRCUIT.BG}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linejoin="round"/>`,
-    );
-    this._push(
-      `<line x1="${bx}" y1="${cy - tri / 2}" x2="${bx}" y2="${cy + tri / 2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW + 0.4}" stroke-linecap="round"/>`,
-    );
-    this._push(
-      `<line x1="${bx}" y1="${cy}" x2="${px2}" y2="${py2}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-    );
-    // Two emission arrows pointing up-right from the lens, offset
-    // perpendicular to their direction so they look parallel (not colinear).
-    const a1x = cx + (tri / 2) * dir + 1,
-      a1y = cy - tri / 2 - 1;
-    this._push(
-      `<path d="M ${a1x} ${a1y} L ${a1x + 8 * dir} ${a1y - 8} M ${a1x + 5 * dir} ${a1y - 8} L ${a1x + 8 * dir} ${a1y - 8} L ${a1x + 8 * dir} ${a1y - 5}" fill="none" stroke="${CIRCUIT.STROKE}" stroke-width="1" stroke-linecap="round"/>`,
-    );
-    const a2x = a1x + 4 * dir,
-      a2y = a1y + 4;
-    this._push(
-      `<path d="M ${a2x} ${a2y} L ${a2x + 5 * dir} ${a2y - 5} M ${a2x + 3 * dir} ${a2y - 5} L ${a2x + 5 * dir} ${a2y - 5} L ${a2x + 5 * dir} ${a2y - 3}" fill="none" stroke="${CIRCUIT.STROKE}" stroke-width="1" stroke-linecap="round"/>`,
-    );
-    return this;
+    return this._placeSymbol(SYM.led, x1, y1, x2, y2, null);
   }
-  // Ground symbol pointing downward from (x,y).
+  // Ground symbol with its top lead anchored at (x, y).
   ground(x, y) {
-    const px = this._p(x),
-      py = this._p(y);
+    const px = this._p(x);
+    const py = this._p(y);
+    const sym = SYM.gnd;
     this._push(
-      `<line x1="${px}" y1="${py}" x2="${px}" y2="${py + 6}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-    );
-    this._push(
-      `<line x1="${px - 12}" y1="${py + 6}" x2="${px + 12}" y2="${py + 6}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW + 0.6}" stroke-linecap="round"/>`,
-    );
-    this._push(
-      `<line x1="${px - 8}" y1="${py + 10}" x2="${px + 8}" y2="${py + 10}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
-    );
-    this._push(
-      `<line x1="${px - 4}" y1="${py + 14}" x2="${px + 4}" y2="${py + 14}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`,
+      `<use href="#${sym.id}" x="${px - sym.ax}" y="${py - sym.ay}" width="${sym.w}" height="${sym.h}"/>`,
     );
     return this;
   }
@@ -461,7 +424,7 @@ class Circuit {
       anchor = "middle";
     }
     this._pushOverlay(
-      `<text x="${lx}" y="${ly}" text-anchor="${anchor}" font-family="${CIRCUIT.FONT}" font-size="13" fill="${CIRCUIT.STROKE}" font-weight="600">${label}</text>`,
+      `<text x="${lx}" y="${ly}" text-anchor="${anchor}" font-family="${CIRCUIT.FONT}" font-size="13" fill="${CIRCUIT.STROKE}" font-weight="600">${svgSubscript(label)}</text>`,
     );
     return this;
   }
@@ -476,8 +439,8 @@ class Circuit {
   render() {
     // Pad the viewBox so terminal labels at the edges don't get clipped.
     const padX = 28,
-      padY = 4;
-    return `<svg viewBox="${-padX} ${-padY} ${this.W + 2 * padX} ${this.H + 2 * padY}" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">${this.parts.join("")}${this.overlay.join("")}</svg>`;
+      padY = 8;
+    return `<svg viewBox="${-padX} ${-padY} ${this.W + 2 * padX} ${this.H + 2 * padY}" xmlns="http://www.w3.org/2000/svg" class="circuit-svg"><defs>${SYMBOL_DEFS}</defs>${this.parts.join("")}${this.overlay.join("")}</svg>`;
   }
 }
 
@@ -988,9 +951,13 @@ class EECalculator extends HTMLElement {
     this._render();
     this._decorateResults();
     this._decorateInputs();
+    this._decorateNumberInputs();
+    this._decorateLabels();
     this._observer = new MutationObserver(() => {
       this._decorateResults();
       this._decorateInputs();
+      this._decorateNumberInputs();
+      this._decorateLabels();
     });
     this._observer.observe(this._wrap, { childList: true, subtree: true });
   }
@@ -1014,6 +981,47 @@ class EECalculator extends HTMLElement {
       btn.textContent = "copy";
       btn.title = "Copy value";
       row.appendChild(btn);
+    });
+  }
+
+  // Replace `V_in`-style labels with HTML subscripts inside labels, result
+  // row labels, tool subtitles, and notes. Idempotent: once the underscore is
+  // consumed into a <sub> tag, the textContent no longer matches.
+  _decorateLabels() {
+    this._wrap
+      .querySelectorAll("label, .tool-sub, .result-label, .note")
+      .forEach((el) => {
+        if (!/_[A-Za-z]/.test(el.textContent)) return;
+        el.innerHTML = el.textContent.replace(
+          /_([A-Za-z][A-Za-z0-9]*)/g,
+          "<sub>$1</sub>",
+        );
+      });
+  }
+
+  // Replace the native number-input spinner with custom themed up/down arrows.
+  _decorateNumberInputs() {
+    this._wrap.querySelectorAll('input[type="number"]').forEach((inp) => {
+      const parent = inp.parentElement;
+      if (!parent || parent.classList.contains("number-wrap")) return;
+      const wrap = document.createElement("span");
+      wrap.className = "number-wrap";
+      parent.insertBefore(wrap, inp);
+      wrap.appendChild(inp);
+      const up = document.createElement("button");
+      up.className = "number-step up";
+      up.type = "button";
+      up.tabIndex = -1;
+      up.setAttribute("aria-label", "Increment");
+      up.textContent = "▴";
+      const down = document.createElement("button");
+      down.className = "number-step down";
+      down.type = "button";
+      down.tabIndex = -1;
+      down.setAttribute("aria-label", "Decrement");
+      down.textContent = "▾";
+      wrap.appendChild(up);
+      wrap.appendChild(down);
     });
   }
 
@@ -1077,6 +1085,17 @@ class EECalculator extends HTMLElement {
       inp.value = "";
       inp.dispatchEvent(new Event("input", { bubbles: true }));
       inp.focus();
+    });
+
+    // Click delegation: themed number-input step buttons.
+    wrap.addEventListener("click", (e) => {
+      const btn = e.target.closest(".number-step");
+      if (!btn) return;
+      const inp = btn.parentElement?.querySelector('input[type="number"]');
+      if (!inp) return;
+      if (btn.classList.contains("up")) inp.stepUp();
+      else inp.stepDown();
+      inp.dispatchEvent(new Event("input", { bubbles: true }));
     });
 
     // Tabs
@@ -1162,7 +1181,7 @@ class EECalculator extends HTMLElement {
 
     el.innerHTML = `
       <div class="tool-title">Resistor color code</div>
-      <div class="tool-sub">Click a band, pick a color. Or type a value and get the band pattern.</div>
+      <div class="tool-sub">Click a band and pick a color, or type a value and get the band pattern.</div>
 
       <div class="row">
         <div class="seg" data-band-mode>
@@ -1185,6 +1204,7 @@ class EECalculator extends HTMLElement {
           <input type="text" data-value-input placeholder="e.g. 4.7k, 220, 1M">
         </div>
       </div>
+      <div class="note">Body color hints at construction: beige or tan for carbon-film (5%), blue or green for metal-film (1% or better), white ceramic for wirewound (high-power), and pink or salmon for fusible. The band code reads the same regardless.</div>
     `;
 
     // Fill the appropriate band slots for this band mode. Slot positions are
@@ -1443,6 +1463,7 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="result" data-result><div class="std-list" data-list></div></div>
+      <div class="note">Each E-series is spaced geometrically by 10^(1/N) per decade, chosen so the tolerance bands of adjacent values just touch and the whole decade is covered with no gaps. E12 (10%) needs 12 values per decade; E96 (1%) needs 96. Any "in-between" value falls inside the tolerance of one of the standards, so there's no reason to manufacture it.</div>
     `;
     const list = el.querySelector("[data-list]");
     const go = () => {
@@ -1581,20 +1602,20 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Pick supply voltage, forward voltage, count, target current. Get R, wattage, dissipation.</div>
 
       <div class="row">
-        <div class="field"><label>V_supply</label><input type="text" data-vsup value="5"></div>
+        <div class="field"><label>V_in</label><input type="text" data-vsup value="5"></div>
         <div class="field"><label>V_f per LED</label><input type="text" data-vf value="2.0"></div>
         <div class="field"><label># LEDs</label><input type="number" data-n value="1" min="1" max="20" step="1"></div>
         <div class="field"><label>I_f (mA)</label><input type="text" data-if value="20"></div>
         <div class="field"><label>Series</label><select data-series>${eSeriesOptions(this.state.ledSeries)}</select></div>
       </div>
 
-      <div class="schematic" data-schematic></div>
+      <div class="schematic grow" data-schematic></div>
       <div class="result" data-result></div>
     `;
     const drawSchematic = (n, rLabel) => {
       const cols = 7 + 2 * n;
-      const c = new Circuit(cols, 4);
-      c.terminal(1, 2, "V+", "left");
+      const c = new Circuit(cols, 5);
+      c.terminal(1, 2, "V_in", "left");
       c.wire(1, 2, 2, 2);
       c.resistor(2, 2, 5, 2, rLabel || "R");
       let x = 5;
@@ -1602,8 +1623,8 @@ class EECalculator extends HTMLElement {
         c.led(x, 2, x + 2, 2);
         x += 2;
       }
-      c.wire(x, 2, x + 1, 2);
-      c.terminal(x + 1, 2, "GND", "right");
+      c.wire(x, 2, x + 1, 2, x + 1, 3.5);
+      c.ground(x + 1, 3.5);
       el.querySelector("[data-schematic]").innerHTML = c.render();
     };
     const go = () => {
@@ -1697,7 +1718,7 @@ class EECalculator extends HTMLElement {
     const el = this._wrap.querySelector('[data-tool="rc"]');
     el.innerHTML = `
       <div class="tool-title">RC cutoff frequency</div>
-      <div class="tool-sub">Same math for both topologies. Output at -3 dB at f_c.</div>
+      <div class="tool-sub">Same math for both topologies. Output at -3 dB at F_c.</div>
 
       <div class="schematic-pair">
         <figure><figcaption>Low-pass</figcaption><div data-schematic-lp></div></figure>
@@ -1967,15 +1988,19 @@ class EECalculator extends HTMLElement {
       if (kind === "capacitor") c.capacitor(x1, y1, x2, y2, label);
       else c.resistor(x1, y1, x2, y2, label);
     };
+    const MAX_DIAGRAM = 8;
     const drawSchematic = (labels) => {
       const unit = kind === "resistor" ? "Ω" : "F";
       const sym = kind === "resistor" ? "R" : "C";
-      const N = Math.max(1, Math.min(8, labels.length || 2));
+      const total = labels.length || 2;
+      const N = Math.max(1, Math.min(MAX_DIAGRAM, total));
+      const truncated = total > MAX_DIAGRAM;
       const lbl = (i) =>
         labels[i] != null ? formatSI(labels[i], unit) : `${sym}${i + 1}`;
       let svg = "";
       if (topo === "series") {
-        const cols = 3 + 3 * N + 1;
+        // When truncated, draw a "..." stub before the right terminal.
+        const cols = 3 + 3 * N + (truncated ? 3 : 0) + 1;
         const c = new Circuit(cols, 4);
         c.terminal(1, 2, "A", "left");
         c.wire(1, 2, 2, 2);
@@ -1984,18 +2009,27 @@ class EECalculator extends HTMLElement {
           placeComponent(c, x, 2, x + 3, 2, kind, lbl(i));
           x += 3;
         }
+        if (truncated) {
+          c.wire(x, 2, x + 3, 2);
+          c.text(x + 1.5, 1.4, `… +${total - N}`, {
+            anchor: "middle",
+            size: 11,
+          });
+          x += 3;
+        }
         c.wire(x, 2, x + 1, 2);
         c.terminal(x + 1, 2, "B", "right");
         svg = c.render();
       } else {
-        const rows = 2 + 2 * N;
+        const rows = 2 + 2 * N + (truncated ? 2 : 0);
         const c = new Circuit(12, rows);
         c.terminal(1, 2, "A", "left");
         c.wire(1, 2, 3, 2);
         c.wire(9, 2, 11, 2);
         c.terminal(11, 2, "B", "right");
-        c.wire(3, 2, 3, 2 + 2 * (N - 1));
-        c.wire(9, 2, 9, 2 + 2 * (N - 1));
+        const lastBranchY = 2 + 2 * (N - 1);
+        c.wire(3, 2, 3, lastBranchY);
+        c.wire(9, 2, 9, lastBranchY);
         for (let i = 0; i < N; i++) {
           const y = 2 + 2 * i;
           placeComponent(c, 3, y, 9, y, kind, lbl(i));
@@ -2003,6 +2037,17 @@ class EECalculator extends HTMLElement {
             c.junction(3, y);
             c.junction(9, y);
           }
+        }
+        if (truncated) {
+          // Extend both rails one more step and annotate with "+K more".
+          const dotsY = lastBranchY + 2;
+          c.wire(3, lastBranchY, 3, dotsY);
+          c.wire(9, lastBranchY, 9, dotsY);
+          c.text(6, dotsY - 0.1, "⋮", { anchor: "middle", size: 18 });
+          c.text(11, dotsY + 0.2, `+${total - N} more`, {
+            anchor: "start",
+            size: 11,
+          });
         }
         svg = c.render();
       }

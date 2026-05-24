@@ -23,21 +23,43 @@ const OUT = path.join(ROOT, "js/ee-calculator.js");
 const read = (rel) => fs.readFileSync(path.join(SRC, rel), "utf-8");
 const main = read("main.js");
 
+// Build the <symbol> defs blob from each component SVG. The Circuit class
+// references these via <use href="#sym-X" /> inside the schematic SVG.
+const symbolFiles = {
+  "sym-r": "symbols/resistor.svg",
+  "sym-c": "symbols/capacitor.svg",
+  "sym-led": "symbols/led.svg",
+  "sym-gnd": "symbols/ground.svg",
+};
+const symbolDefs = Object.entries(symbolFiles)
+  .map(([id, file]) => {
+    const svg = read(file);
+    const vb = svg.match(/<svg[^>]*\bviewBox="([^"]+)"/);
+    const inner = svg.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
+    if (!vb || !inner) {
+      console.error(`build-ee-calculator: ${file} is not a parseable SVG`);
+      process.exit(1);
+    }
+    return `<symbol id="${id}" viewBox="${vb[1]}" overflow="visible">${inner[1].trim()}</symbol>`;
+  })
+  .join("");
+
 const replacements = [
-  { token: '"__STYLE_CSS__"', file: "style.css" },
-  { token: '"__RESISTOR_SVG__"', file: "resistor.svg" },
-  { token: '"__IC_555_SVG__"', file: "ic-555.svg" },
+  { token: '"__STYLE_CSS__"', value: read("style.css") },
+  { token: '"__RESISTOR_SVG__"', value: read("resistor.svg") },
+  { token: '"__IC_555_SVG__"', value: read("ic-555.svg") },
+  { token: '"__SYMBOL_DEFS__"', value: symbolDefs },
 ];
 
 let out = main;
-for (const { token, file } of replacements) {
+for (const { token, value } of replacements) {
   if (!out.includes(token)) {
     console.error(
       `build-ee-calculator: placeholder ${token} not found in main.js`,
     );
     process.exit(1);
   }
-  out = out.replace(token, JSON.stringify(read(file)));
+  out = out.replace(token, JSON.stringify(value));
 }
 
 const header = `// AUTO-GENERATED from src/ee-calculator/. Do not edit directly.\n// To make changes, edit src/ee-calculator/*.{js,css,svg} and rebuild.\n//   make ee-calc   (or just \`make build\`, which depends on it)\n\n`;
