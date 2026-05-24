@@ -509,8 +509,17 @@ function parseSI(input) {
 
 // Format a number into a value with the nearest SI prefix.
 function formatSI(value, unit = "", precision = 3) {
-  if (value == null || !isFinite(value)) return "—";
-  if (value === 0) return "0 " + unit;
+  const p = formatSIParts(value, unit, precision);
+  if (p.number === "—") return "—";
+  return `${p.number} ${p.prefix}${p.unit}`.trim();
+}
+
+// Same as formatSI but returns the number, prefix, and unit separately so
+// callers can lay them out in fixed-width columns.
+function formatSIParts(value, unit = "", precision = 3) {
+  if (value == null || !isFinite(value))
+    return { number: "—", prefix: "", unit: "" };
+  if (value === 0) return { number: "0", prefix: "", unit };
   const abs = Math.abs(value);
   let chosen = SI_PREFIXES.find((p) => p.exp === 0);
   for (const p of SI_PREFIXES) {
@@ -522,11 +531,10 @@ function formatSI(value, unit = "", precision = 3) {
   }
   const scaled = value / Math.pow(10, chosen.exp);
   let str = scaled.toPrecision(precision);
-  // Trim trailing zeros from decimal portion.
   if (str.includes(".") && !str.includes("e")) {
     str = str.replace(/\.?0+$/, "");
   }
-  return `${str} ${chosen.sym}${unit}`.trim();
+  return { number: str, prefix: chosen.sym, unit };
 }
 
 // E-series helpers.
@@ -954,7 +962,7 @@ class EECalculator extends HTMLElement {
       bandMode: 4,
       bands: [1, 0, 2, 10], // brown black red gold (1kΩ 5%) - default
       // E-series state
-      eSeriesSeries: "E96",
+      eSeriesSeries: "E24",
       // Vdiv
       vdivSeries: "E96",
       vdivDir: "fwd",
@@ -1238,7 +1246,7 @@ class EECalculator extends HTMLElement {
         })
         .join("");
       const div = document.createElement("div");
-      div.className = kind === "digit" ? "band-picker" : "band-picker wide";
+      div.className = "band-picker";
       div.innerHTML = `<label>${labels[i]}</label><select data-band-select="${i}">${opts}</select>`;
       pickers.appendChild(div);
     }
@@ -1285,7 +1293,8 @@ class EECalculator extends HTMLElement {
       });
     });
 
-    // Value → bands, live on input.
+    // Value → bands, live on input. Use a partial repaint so the text input
+    // keeps focus while the user is typing.
     el.querySelector("[data-value-input]").addEventListener("input", () => {
       const input = el.querySelector("[data-value-input]");
       const v = parseSI(input.value);
@@ -1303,10 +1312,35 @@ class EECalculator extends HTMLElement {
         newBands.push(this.state.bands[5] ?? 1);
       }
       this.state.bands = newBands;
-      this._renderTool("color");
+      this._repaintColor();
     });
 
-    // Render result.
+    this._renderColorReadout();
+  }
+
+  // Repaint bands + pickers + readout without re-rendering the whole tool.
+  // Used by the live value-input handler so the text input doesn't get
+  // destroyed (and focus lost) on every keystroke.
+  _repaintColor() {
+    const el = this._wrap.querySelector('[data-tool="color"]');
+    if (!el) return;
+    const bands = this.state.bands;
+    el.querySelectorAll(".bands rect[data-band]").forEach((r) => {
+      const i = parseInt(r.dataset.band);
+      const colorIdx = bands[i] ?? 0;
+      r.setAttribute("fill", BAND_COLORS[colorIdx]?.hex || "#888");
+    });
+    el.querySelectorAll("[data-band-select]").forEach((sel) => {
+      const i = parseInt(sel.dataset.bandSelect);
+      sel.value = String(bands[i] ?? 0);
+    });
+    this._renderColorReadout();
+  }
+
+  _renderColorReadout() {
+    const el = this._wrap.querySelector('[data-tool="color"]');
+    if (!el) return;
+    const { bandMode, bands } = this.state;
     let digitBands, multBand, tolBand, ppmBand;
     if (bandMode === 4) {
       digitBands = bands.slice(0, 2);
@@ -1325,21 +1359,21 @@ class EECalculator extends HTMLElement {
     const r = bandsToValue(digitBands, multBand, tolBand, ppmBand);
     const readout = el.querySelector("[data-readout]");
     if (r.value == null) {
-      readout.innerHTML = `<span class="readout-value warn">invalid</span>`;
-    } else {
-      const tol = r.tolerance != null ? `±${r.tolerance}%` : "";
-      const ppmLine =
-        bandMode === 6 && r.ppm != null
-          ? `<div class="readout-ppm">${r.ppm} ppm/°C</div>`
-          : "";
-      readout.innerHTML = `
-        <div class="readout-line">
-          <span class="readout-value">${formatSI(r.value, "Ω")}</span>
-          ${tol ? `<span class="readout-tol">${tol}</span>` : ""}
-        </div>
-        ${ppmLine}
-      `;
+      readout.innerHTML = `<span class="readout-num warn">invalid</span>`;
+      return;
     }
+    const parts = formatSIParts(r.value, "Ω");
+    const tol = r.tolerance != null ? `±${r.tolerance}%` : "";
+    const ppm =
+      bandMode === 6 && r.ppm != null
+        ? `<span class="readout-ppm">${r.ppm} ppm/°C</span>`
+        : "";
+    readout.innerHTML = `
+      <span class="readout-num">${parts.number}</span>
+      <span class="readout-unit">${parts.prefix}${parts.unit}</span>
+      <span class="readout-tol">${tol}</span>
+      ${ppm}
+    `;
   }
 
   _bandLabels(mode) {

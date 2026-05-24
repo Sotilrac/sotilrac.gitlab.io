@@ -319,22 +319,19 @@ select:focus {
 /* -- Resistor / color code -- */
 .resistor-display {
   display: grid;
-  grid-template-columns: minmax(22em, 42em) auto 1fr;
+  grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  column-gap: 1em;
+  column-gap: 2.5em;
+  row-gap: 0.75em;
   align-items: center;
-  margin: 0.75em 0 0.5em;
+  justify-content: center;
+  margin: 0.75em auto 0.5em;
 }
 .resistor-wrap {
   grid-column: 1;
   grid-row: 1;
-  width: 100%;
-  max-width: 28em;
-  margin: 0 auto;
-}
-.band-pickers {
-  grid-column: 1;
-  grid-row: 2;
+  width: 22em;
+  max-width: 100%;
 }
 .resistor-eq {
   grid-column: 2;
@@ -343,6 +340,11 @@ select:focus {
 .resistor-readout {
   grid-column: 3;
   grid-row: 1;
+}
+.band-pickers {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-content: center;
 }
 .resistor-svg {
   width: 100%;
@@ -378,38 +380,51 @@ select:focus {
   font-weight: 300;
 }
 .resistor-readout {
-  font-family: var(--mono);
-  position: relative;
-}
-.readout-line {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 0.4em;
+  row-gap: 0.1em;
   align-items: baseline;
-  gap: 0.4em;
-}
-.readout-ppm {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 0.15em;
+  font-family: var(--mono);
   white-space: nowrap;
-  font-size: 0.85em;
-  color: var(--text-dim);
 }
-.readout-value {
+.readout-num {
+  grid-column: 1;
+  grid-row: 1;
+  width: 4.5ch;
+  text-align: right;
   font-size: 1.9em;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.01em;
 }
-.readout-value.warn {
+.readout-num.warn {
   color: var(--warn);
 }
+.readout-unit {
+  grid-column: 2;
+  grid-row: 1;
+  width: 2.5ch;
+  text-align: left;
+  font-size: 1.5em;
+  color: var(--text);
+  font-weight: 600;
+}
 .readout-tol {
+  grid-column: 3;
+  grid-row: 1;
+  width: 6ch;
+  text-align: left;
   font-size: 1.1em;
   color: var(--text);
   font-weight: 500;
 }
-
+.readout-ppm {
+  grid-column: 3;
+  grid-row: 2;
+  font-size: 0.85em;
+  color: var(--text-dim);
+}
 .band-pickers {
   display: flex;
   gap: 0.35em;
@@ -417,14 +432,11 @@ select:focus {
   margin: 0.5em 0 0;
 }
 .band-picker {
-  width: 6.5em;
+  width: 7em;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 0.15em;
-}
-.band-picker.wide {
-  width: 8em;
 }
 .band-picker label {
   font-size: 0.7em;
