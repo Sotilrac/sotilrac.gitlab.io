@@ -22,7 +22,7 @@ All these upgrades are mainly possible thanks to the advancements of CSS and JS 
 
 While I was at it, I finally cleaned up all the old posts. The typos from my early days of writing in English have been (mostly) corrected, though I kept the original voice intact for historical authenticity... or laziness. Either way.
 
-Also, no cookie banners, no subscribe popups, no autoplay videos. I am so tired of the mOdErN web making every visit feel like an obstacle course. This site loads the content and gets out of your way.
+Also, no cookie banners, no subscribe popups, no autoplay videos. I am so tired of the mOdErN web making every visit feel like an obstacle course. This site loads the content and gets out of your way. Visit counts run through [Umami](https://umami.is/), which is privacy-conscious by design: no cookies, no personal identifiers, no cross-site tracking, just a count of which pages people actually read.
 
 Another conscious choice: every post shows its publication date. Hiding dates has become a common move in the last decade to keep content looking fresh indefinitely, but I think that is backwards. Knowing when something was written is good context for judging it, and more information is always more better. Same goes with articles that you have to click to read aftrthe fold. Those techniques are meant to trap people into spending more time in your site.
 
