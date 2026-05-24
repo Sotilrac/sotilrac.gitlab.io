@@ -6,5 +6,11 @@
   "linkedin": "https://linkedin.com/in/casmat",
   "github": "https://github.com/Sotilrac",
   "gitlab": "https://gitlab.com/sotilrac",
-  "youtube": "https://youtube.com/c/CarlosAsmat"
+  "youtube": "https://youtube.com/c/CarlosAsmat",
+  "giscus": {
+    "repo": "Sotilrac/sotilrac.gitlab.io",
+    "repoId": "R_kgDOR-lK-g",
+    "category": "Comments",
+    "categoryId": "DIC_kwDOR-lK-s4C6f0S"
+  }
 }

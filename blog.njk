@@ -5,6 +5,27 @@ permalink: /blog/
 hero: true
 ---
 
+{% macro archiveGrid(years, posts) %}
+<div class="archive-grid">
+  {% for year in years %}
+  <section class="archive-year">
+    <h3>{{ year }}</h3>
+    <ul class="post-list">
+      {% for post in posts %}
+        {% if post.date.getFullYear() == year %}
+        <li>
+          <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
+          {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | categoryIcon }}"></span>{% endif %}
+          <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+{% endmacro %}
+
 <div class="posts col-content">
 
   <p class="archive-blurb">Musings, projects, and learnings by a robotics engineer.</p>
@@ -20,24 +41,7 @@ hero: true
     <li><span class="cat-dot" data-cat="til"></span>TIL</li>
   </ul>
 
-  <div class="archive-grid">
-    {% for year in [2026, 2023, 2022, 2021, 2019] %}
-    <section class="archive-year">
-      <h3>{{ year }}</h3>
-      <ul class="post-list">
-        {% for post in collections.publicPosts %}
-          {% if post.date.getFullYear() == year %}
-          <li>
-            <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-            {% if post.data.categories %}{% set rawcat = post.data.categories[0] | lower %}<span class="cat-dot" data-cat="{{ 'news' if rawcat == 'info' else rawcat }}"></span>{% endif %}
-            <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-    {% endfor %}
-  </div>
+  {{ archiveGrid([2026, 2023, 2022, 2021, 2019], collections.publicPosts) }}
 
   <section class="press-section" aria-labelledby="press-heading">
     <h2 id="press-heading" class="page-heading">Press</h2>
@@ -81,24 +85,7 @@ hero: true
   <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
   Dug out from the sands of WordPress at the old <em>carlitoscontraptions.com</em> domain.</p>
 
-  <div class="archive-grid">
-    {% for year in [2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006] %}
-    <section class="archive-year">
-      <h3>{{ year }}</h3>
-      <ul class="post-list">
-        {% for post in collections.publicPosts %}
-          {% if post.date.getFullYear() == year %}
-          <li>
-            <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-            {% if post.data.categories %}{% set rawcat = post.data.categories[0] | lower %}<span class="cat-dot" data-cat="{{ 'news' if rawcat == 'info' else rawcat }}"></span>{% endif %}
-            <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-    {% endfor %}
-  </div>
+  {{ archiveGrid([2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006], collections.publicPosts) }}
 
   {% if collections.publicPosts.length == 0 %}
   <p>Blog posts are being migrated. Check back soon.</p>

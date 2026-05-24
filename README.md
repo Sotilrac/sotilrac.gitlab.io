@@ -23,7 +23,7 @@ The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts
 │   ├── resume.yml        # Resume data (experience, skills, education, projects)
 │   └── comments/         # Archived blog comments (YAML, per post slug)
 ├── _includes/
-│   ├── layouts/          # Page layouts (base, home, post, page, plain)
+│   ├── layouts/          # Page layouts (base, home, post, page)
 │   ├── head.njk          # HTML <head> (includes Umami analytics)
 │   ├── header.njk        # Navigation bar
 │   ├── footer.njk        # Footer + contact decryption JS

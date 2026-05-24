@@ -218,6 +218,14 @@ export default function (eleventyConfig) {
     };
   });
 
+  // Maps a raw category name to the slug used by .cat-dot[data-cat].
+  // The "info" category renders under the "news" dot.
+  eleventyConfig.addFilter("categoryIcon", (raw) => {
+    if (!raw) return "";
+    const c = String(raw).toLowerCase();
+    return c === "info" ? "news" : c;
+  });
+
   // --- Config ---
   return {
     dir: {
