@@ -358,6 +358,23 @@ input[type="number"] {
   color: var(--ok);
   border-color: var(--ok);
 }
+.btn-vendor {
+  font-family: inherit;
+  font-size: 0.7em;
+  padding: 0.15em 0.55em;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-dim);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-vendor:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
 .result-label {
   color: var(--text-dim);
   font-size: 0.85em;
@@ -596,7 +613,7 @@ input[type="number"] {
 }
 .std-row {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto auto;
   gap: 0.5em;
   align-items: center;
   padding: 0.15em 0;

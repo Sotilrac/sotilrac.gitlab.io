@@ -753,6 +753,11 @@ footer p {
   margin-bottom: 2rem;
 }
 
+.post-content strong,
+.post-content b {
+  font-weight: 700;
+}
+
 .post-list {
   list-style: none;
   padding-left: 0;

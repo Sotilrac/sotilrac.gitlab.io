@@ -1513,6 +1513,7 @@ class EECalculator extends HTMLElement {
         list.innerHTML = "";
         return;
       }
+      const tol = E_SERIES_TOL[series];
       list.innerHTML = matches
         .map((m, i) => {
           const err = m.error * 100;
@@ -1520,11 +1521,20 @@ class EECalculator extends HTMLElement {
             Math.abs(err) < 0.005
               ? "exact"
               : `${err >= 0 ? "+" : ""}${err.toFixed(2)}%`;
+          const parts = formatSIParts(m.value, "");
+          // Build a vendor-friendly search string: e.g., "4.7k 1% resistor".
+          const q = encodeURIComponent(
+            `${parts.number}${parts.prefix} ${tol}% resistor`,
+          );
+          const mouserUrl = `https://www.mouser.com/c/passive-components/resistors/?q=${q}`;
+          const digikeyUrl = `https://www.digikey.com/en/products/keyword-search?keywords=${q}`;
           return `
           <div class="std-row">
             <span class="std-rank">#${i + 1}</span>
             <span class="std-value">${formatSI(m.value, "Ω")}</span>
             <span class="std-error ${Math.abs(err) < 0.005 ? "zero" : ""}">${errStr}</span>
+            <a class="btn-vendor" href="${mouserUrl}" target="_blank" rel="noopener">Mouser</a>
+            <a class="btn-vendor" href="${digikeyUrl}" target="_blank" rel="noopener">DigiKey</a>
           </div>`;
         })
         .join("");
