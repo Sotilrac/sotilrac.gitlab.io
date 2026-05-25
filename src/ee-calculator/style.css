@@ -116,6 +116,17 @@
   color: var(--text-dim);
   margin-bottom: 0.85em;
 }
+.tool-sub a,
+.note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 0.15em;
+}
+.tool-sub a:hover,
+.note a:hover {
+  text-decoration-color: var(--accent);
+}
 
 /* -- Form layout -- */
 .row {
@@ -141,11 +152,20 @@
 .tab-group[data-tab="circuits"] .field-grow {
   max-width: none;
 }
+.tab-group[data-tab="ac"] .field {
+  min-width: 4.5em;
+  max-width: 9em;
+}
 label {
   font-size: 0.75em;
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+/* Preserve casing inside a label (for mixed-case units like Hz, mA, rad/s) */
+label .unit {
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 input[type="text"],
@@ -164,6 +184,8 @@ select {
 input:focus,
 select:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+  outline: none;
 }
 
 .input-wrap {
@@ -415,10 +437,17 @@ input[type="number"] {
 }
 .bands rect {
   cursor: pointer;
-  transition: opacity 0.1s;
+  transition:
+    opacity 0.1s,
+    stroke 0.1s,
+    stroke-width 0.1s;
 }
 .bands rect:hover {
   opacity: 0.85;
+}
+.bands rect.active {
+  stroke: var(--accent);
+  stroke-width: 2.5;
 }
 .resistor-eq {
   font-family: var(--mono);
@@ -479,7 +508,7 @@ input[type="number"] {
   margin: 0.5em 0 0;
 }
 .band-picker {
-  width: 7em;
+  width: 8.5em;
   display: flex;
   flex-direction: column;
   align-items: stretch;

@@ -899,6 +899,11 @@ const TABS = [
     tools: ["ohms", "vdiv", "led"],
   },
   {
+    id: "ac",
+    label: "AC signals",
+    tools: ["acamp", "acfreq", "acdbm"],
+  },
+  {
     id: "timing",
     label: "Filters & timing",
     tools: ["rc", "t555"],
@@ -942,6 +947,8 @@ class EECalculator extends HTMLElement {
       awgHighlight: "",
       awgLength: "",
       awgLengthUnit: "m",
+      // AC tool state
+      acZ: "50",
       // Trace
     };
   }
@@ -1255,13 +1262,32 @@ class EECalculator extends HTMLElement {
       return "";
     };
     pickers.innerHTML = "";
+    // Use emoji color circles for the dot. Native <option> color styling
+    // isn't honored consistently across browsers; emoji are font-rendered
+    // by the OS and always show in their proper colors.
+    const COLOR_DOT = {
+      black: "⚫",
+      brown: "🟤",
+      red: "🔴",
+      orange: "🟠",
+      yellow: "🟡",
+      green: "🟢",
+      blue: "🔵",
+      violet: "🟣",
+      grey: "🔘",
+      white: "⚪",
+      gold: "🪙",
+      silver: "💿",
+    };
     for (let i = 0; i < bandMode; i++) {
       const kind = bandKind(i);
       const opts = this._bandOptionsFor(bandMode, i)
         .map((idx) => {
           const c = BAND_COLORS[idx];
           const ann = annotate(c, kind);
-          const text = ann !== "" ? `${ann}. ${c.name}` : c.name;
+          const dot = COLOR_DOT[c.name] || "●";
+          const text =
+            ann !== "" ? `${ann} ${dot} ${c.name}` : `${dot} ${c.name}`;
           return `<option value="${idx}" ${bands[i] === idx ? "selected" : ""}>${text}</option>`;
         })
         .join("");
@@ -1275,6 +1301,18 @@ class EECalculator extends HTMLElement {
         const i = parseInt(sel.dataset.bandSelect);
         this.state.bands[i] = parseInt(sel.value);
         this._renderTool("color");
+      });
+      // Highlight the band rect that this picker controls when focused.
+      sel.addEventListener("focus", () => {
+        const i = sel.dataset.bandSelect;
+        el.querySelectorAll(".bands rect").forEach((r) => {
+          r.classList.toggle("active", r.dataset.band === i);
+        });
+      });
+      sel.addEventListener("blur", () => {
+        el.querySelectorAll(".bands rect").forEach((r) =>
+          r.classList.remove("active"),
+        );
       });
     });
 
@@ -1605,7 +1643,7 @@ class EECalculator extends HTMLElement {
         <div class="field"><label>V_in</label><input type="text" data-vsup value="5"></div>
         <div class="field"><label>V_f per LED</label><input type="text" data-vf value="2.0"></div>
         <div class="field"><label># LEDs</label><input type="number" data-n value="1" min="1" max="20" step="1"></div>
-        <div class="field"><label>I_f (mA)</label><input type="text" data-if value="20"></div>
+        <div class="field"><label>I_f <span class="unit">(mA)</span></label><input type="text" data-if value="20"></div>
         <div class="field"><label>Series</label><select data-series>${eSeriesOptions(this.state.ledSeries)}</select></div>
       </div>
 
@@ -1660,6 +1698,200 @@ class EECalculator extends HTMLElement {
       sel.addEventListener("change", go),
     );
     go();
+  }
+
+  // ============================================================
+  // Tool: AC sine amplitudes
+  // ============================================================
+  _render_acamp() {
+    const el = this._wrap.querySelector('[data-tool="acamp"]');
+    el.innerHTML = `
+      <div class="tool-title">Sine amplitudes</div>
+      <div class="tool-sub">Enter any one of V_peak, V_pk-pk, V_rms, V_avg. The others are derived assuming a pure sine wave.</div>
+
+      <div class="row">
+        <div class="field"><label>V_peak</label><input type="text" data-vp placeholder="e.g. 5"></div>
+        <div class="field"><label>V_pk-pk</label><input type="text" data-vpp placeholder="e.g. 10"></div>
+        <div class="field"><label>V_rms</label><input type="text" data-vrms placeholder="e.g. 3.54"></div>
+        <div class="field"><label>V_avg</label><input type="text" data-vavg placeholder="e.g. 3.18"></div>
+      </div>
+
+      <div class="result" data-result></div>
+    `;
+    const go = () => {
+      const get = (sel) => {
+        const v = el.querySelector(sel).value.trim();
+        if (v === "") return null;
+        const n = parseSI(v);
+        return isFinite(n) ? n : null;
+      };
+      const known = {
+        vp: get("[data-vp]"),
+        vpp: get("[data-vpp]"),
+        vrms: get("[data-vrms]"),
+        vavg: get("[data-vavg]"),
+      };
+      let vp = null;
+      if (known.vp != null) vp = known.vp;
+      else if (known.vpp != null) vp = known.vpp / 2;
+      else if (known.vrms != null) vp = known.vrms * Math.SQRT2;
+      else if (known.vavg != null) vp = (known.vavg * Math.PI) / 2;
+      const result = el.querySelector("[data-result]");
+      if (vp == null || !isFinite(vp)) {
+        result.innerHTML = `<span class="result-value warn">enter one value</span>`;
+        return;
+      }
+      const vpp = 2 * vp;
+      const vrms = vp / Math.SQRT2;
+      const vavg = (2 * vp) / Math.PI;
+      const cls = (k) => (known[k] == null ? "accent" : "");
+      result.innerHTML = `
+        <div class="result-row"><span class="result-label">V_peak</span><span class="result-value ${cls("vp")}">${formatSI(vp, "V")}</span></div>
+        <div class="result-row"><span class="result-label">V_pk-pk</span><span class="result-value ${cls("vpp")}">${formatSI(vpp, "V")}</span></div>
+        <div class="result-row"><span class="result-label">V_rms</span><span class="result-value ${cls("vrms")}">${formatSI(vrms, "V")}</span></div>
+        <div class="result-row"><span class="result-label">V_avg</span><span class="result-value ${cls("vavg")}">${formatSI(vavg, "V")}</span></div>
+        <div class="note">V_rms = V_p / √2 ≈ 0.707·V_p. V_avg is the full-wave rectified mean = 2·V_p/π ≈ 0.637·V_p. The formulas apply only to pure sine waves; square or triangle waves use different factors.</div>
+      `;
+    };
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
+  }
+
+  // ============================================================
+  // Tool: AC frequency / period / ω
+  // ============================================================
+  _render_acfreq() {
+    const el = this._wrap.querySelector('[data-tool="acfreq"]');
+    el.innerHTML = `
+      <div class="tool-title">Frequency, period, ω</div>
+      <div class="tool-sub">Enter any one of f, T, ω. The other two are computed.</div>
+
+      <div class="row">
+        <div class="field"><label>f <span class="unit">(Hz)</span></label><input type="text" data-f placeholder="e.g. 1k"></div>
+        <div class="field"><label>T <span class="unit">(s)</span></label><input type="text" data-t placeholder="e.g. 1m"></div>
+        <div class="field"><label>ω <span class="unit">(rad/s)</span></label><input type="text" data-w placeholder="e.g. 6.28k"></div>
+      </div>
+
+      <div class="result" data-result></div>
+    `;
+    const go = () => {
+      const get = (sel) => {
+        const v = el.querySelector(sel).value.trim();
+        if (v === "") return null;
+        const n = parseSI(v);
+        return isFinite(n) && n > 0 ? n : null;
+      };
+      const known = {
+        f: get("[data-f]"),
+        t: get("[data-t]"),
+        w: get("[data-w]"),
+      };
+      let f = null;
+      if (known.f != null) f = known.f;
+      else if (known.t != null) f = 1 / known.t;
+      else if (known.w != null) f = known.w / (2 * Math.PI);
+      const result = el.querySelector("[data-result]");
+      if (f == null || !isFinite(f)) {
+        result.innerHTML = `<span class="result-value warn">enter one value</span>`;
+        return;
+      }
+      const t = 1 / f;
+      const w = 2 * Math.PI * f;
+      const cls = (k) => (known[k] == null ? "accent" : "");
+      result.innerHTML = `
+        <div class="result-row"><span class="result-label">Frequency</span><span class="result-value ${cls("f")}">${formatSI(f, "Hz")}</span></div>
+        <div class="result-row"><span class="result-label">Period</span><span class="result-value ${cls("t")}">${formatSI(t, "s")}</span></div>
+        <div class="result-row"><span class="result-label">ω (angular)</span><span class="result-value ${cls("w")}">${formatSI(w, "rad/s")}</span></div>
+      `;
+    };
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
+  }
+
+  // ============================================================
+  // Tool: dBm / power / V_rms at a load impedance
+  // ============================================================
+  _render_acdbm() {
+    const el = this._wrap.querySelector('[data-tool="acdbm"]');
+    el.innerHTML = `
+      <div class="tool-title">dBm, power, V_rms</div>
+      <div class="tool-sub">Convert between dBm, absolute power, and V_rms across a load impedance.</div>
+
+      <div class="row">
+        <div class="field"><label><span class="unit">dBm</span></label><input type="text" data-dbm placeholder="e.g. 10"></div>
+        <div class="field"><label>Power (W)</label><input type="text" data-p placeholder="e.g. 10m"></div>
+        <div class="field"><label>V_rms</label><input type="text" data-vrms placeholder="e.g. 707m"></div>
+        <div class="field"><label>Load Z (Ω)</label><select data-z>
+          <option value="50" ${this.state.acZ === "50" ? "selected" : ""}>50 (RF)</option>
+          <option value="75" ${this.state.acZ === "75" ? "selected" : ""}>75 (video)</option>
+          <option value="600" ${this.state.acZ === "600" ? "selected" : ""}>600 (audio)</option>
+          <option value="custom" ${this.state.acZ === "custom" ? "selected" : ""}>custom</option>
+        </select></div>
+        <div class="field" data-z-custom-wrap><label>Custom Z (Ω)</label><input type="text" data-z-custom placeholder="e.g. 100"></div>
+      </div>
+
+      <div class="result" data-result></div>
+    `;
+    const customWrap = el.querySelector("[data-z-custom-wrap]");
+    const syncCustomVisibility = () => {
+      customWrap.style.display =
+        el.querySelector("[data-z]").value === "custom" ? "" : "none";
+    };
+    syncCustomVisibility();
+    const getZ = () => {
+      const sel = el.querySelector("[data-z]").value;
+      if (sel === "custom") {
+        const v = parseSI(el.querySelector("[data-z-custom]").value);
+        return isFinite(v) && v > 0 ? v : NaN;
+      }
+      return parseFloat(sel);
+    };
+    const go = () => {
+      const get = (sel) => {
+        const v = el.querySelector(sel).value.trim();
+        if (v === "") return null;
+        const n = parseSI(v);
+        return isFinite(n) ? n : null;
+      };
+      const z = getZ();
+      const known = {
+        dbm: get("[data-dbm]"),
+        p: get("[data-p]"),
+        vrms: get("[data-vrms]"),
+      };
+      let pW = null;
+      if (known.dbm != null) pW = Math.pow(10, known.dbm / 10) / 1000;
+      else if (known.p != null && known.p > 0) pW = known.p;
+      else if (known.vrms != null && known.vrms > 0 && isFinite(z) && z > 0)
+        pW = (known.vrms * known.vrms) / z;
+      const result = el.querySelector("[data-result]");
+      if (pW == null || !isFinite(pW) || pW <= 0) {
+        result.innerHTML = `<span class="result-value warn">enter dBm, power, or V_rms</span>`;
+        return;
+      }
+      const dbm = 10 * Math.log10(pW * 1000);
+      const vrms = isFinite(z) && z > 0 ? Math.sqrt(pW * z) : null;
+      const vp = vrms != null ? vrms * Math.SQRT2 : null;
+      const vpp = vp != null ? 2 * vp : null;
+      const cls = (k) => (known[k] == null ? "accent" : "");
+      result.innerHTML = `
+        <div class="result-row"><span class="result-label">dBm</span><span class="result-value ${cls("dbm")}">${dbm.toFixed(2)} dBm</span></div>
+        <div class="result-row"><span class="result-label">Power</span><span class="result-value ${cls("p")}">${formatSI(pW, "W")}</span></div>
+        <div class="result-row"><span class="result-label">V_rms @ ${isFinite(z) ? formatSI(z, "Ω") : "?"}</span><span class="result-value ${cls("vrms")}">${vrms != null ? formatSI(vrms, "V") : "—"}</span></div>
+        <div class="result-row"><span class="result-label">V_peak</span><span class="result-value">${vp != null ? formatSI(vp, "V") : "—"}</span></div>
+        <div class="result-row"><span class="result-label">V_pk-pk</span><span class="result-value">${vpp != null ? formatSI(vpp, "V") : "—"}</span></div>
+      `;
+    };
+    el.querySelector("[data-z]").addEventListener("change", () => {
+      this.state.acZ = el.querySelector("[data-z]").value;
+      syncCustomVisibility();
+      go();
+    });
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
   }
 
   // ============================================================
@@ -1728,7 +1960,7 @@ class EECalculator extends HTMLElement {
       <div class="row">
         <div class="field"><label>R</label><input type="text" data-r placeholder="e.g. 10k"></div>
         <div class="field"><label>C</label><input type="text" data-c placeholder="e.g. 100n"></div>
-        <div class="field"><label>f_c (Hz)</label><input type="text" data-fc placeholder="e.g. 1k"></div>
+        <div class="field"><label>f_c <span class="unit">(Hz)</span></label><input type="text" data-fc placeholder="e.g. 1k"></div>
       </div>
 
       <div class="result" data-result></div>
@@ -1806,7 +2038,7 @@ class EECalculator extends HTMLElement {
     const dir = this.state.t555Dir;
     el.innerHTML = `
       <div class="tool-title">555 timer</div>
-      <div class="tool-sub">Astable: free-running oscillator. Monostable: one-shot pulse.</div>
+      <div class="tool-sub">Astable: free-running oscillator. Monostable: one-shot pulse. See the <a href="https://en.wikipedia.org/wiki/555_timer_IC" target="_blank" rel="noopener">Wikipedia article on the 555</a> for the canonical application circuits and the internal block diagram.</div>
 
       ${IC_555_SVG}
 
