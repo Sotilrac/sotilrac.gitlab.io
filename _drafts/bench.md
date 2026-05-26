@@ -9,17 +9,13 @@ tags:
   - electronics
 ---
 
-Two decades ago, when I was a teenager soldering my way through hobby projects, I kept Alan Parekh's [LED resistor calculator](http://www.alan-parekh.com/led_resistor_calculator.html) bookmarked. It's a simple computation but i dind't want to get it wrong. I didn;t realize how lucky I was back then to be able o access this simple tool without a login, popups, cookies, analytics, adds. You typed in the supply voltage, the LED's forward voltage, the desired current, and out came a resistor value. I used it a hundred times. Thanks Alan!
+Two decades ago, when I was a teenager soldering my way through hobby projects, I kept Alan Parekh's [LED resistor calculator](http://www.alan-parekh.com/led_resistor_calculator.html) bookmarked. It's a simple computation but i dind't want to get it wrong. Little did I know how lucky I was to be able o access this simple tool without a login, popups, cookies, analytics, or adds. I typed in the supply voltage, the LED's forward voltage, the desired current, and out came a resistor value. I used it a hundred times. Thanks Alan! The site is still up, frozen in amber behing the obligatory http-only warning.
 
-The site is still up, frozen in amber behing the obligatory http-only warning.
+Today's options are sadder. Sarching for "LED resistor calculator" and you get a dozen near-identical SEO farms wrapped in cookie banners, demand your email for the E96 series, or try to upsell you a course.
 
-Today's options are sadder. Search "LED resistor calculator" and you get a dozen near-identical SEO farms, each loading three megabytes of JavaScript to do one division. Most are wrapped in cookie banners, demand your email for the E96 series, or try to upsell you a course. The ones that aren't are usually broken on mobile, or display ads where the answer should be, or require an account to "save" your calculation that you'll never look at again. The whole genre rotted.
+I wanted to give back and suplement Alan's calculator with other computations that I do on daly basis. I hope professionals and hobbyists can find this useful. So I built the EE Calculator below.
 
-So I built the EE Calculator.
-
-<ee-calculator></ee-calculator>
-
-<script src="/js/ee-calculator.js"></script>
+{% calc "ee" %}
 
 ## What's inside
 

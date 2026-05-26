@@ -121,6 +121,21 @@ export default function (eleventyConfig) {
     return `<iframe style="border-radius:12px;margin:2em 0" width="100%" height="152" src="https://open.spotify.com/embed/track/${id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
   });
 
+  // Embed one of the in-house web-component calculators by short name.
+  // Usage: {% calc "ee" %} or {% calc "deadbeef" %}
+  const CALCS = {
+    ee: { tag: "ee-calculator", script: "/js/ee-calculator.js" },
+    deadbeef: {
+      tag: "programmer-calculator",
+      script: "/js/programmer-calculator.js",
+    },
+  };
+  eleventyConfig.addShortcode("calc", (name) => {
+    const c = CALCS[name];
+    if (!c) return `<!-- unknown calc: ${name} -->`;
+    return `<${c.tag}></${c.tag}><script src="${c.script}" defer></script>`;
+  });
+
   eleventyConfig.addPairedShortcode("math", (content, mode = "block") => {
     return katex.renderToString(content.trim(), {
       displayMode: mode !== "inline",

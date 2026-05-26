@@ -23,9 +23,7 @@ So, I made one.
 
 If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Debug_value>)
 
-<programmer-calculator></programmer-calculator>
-
-<script src="/js/programmer-calculator.js"></script>
+{% calc "deadbeef" %}
 
 ## How to Use It
 
