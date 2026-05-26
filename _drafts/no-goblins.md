@@ -99,3 +99,30 @@ If you are on the other side of the table, the math is grim. You are not getting
 If you can afford it, hire for judgment, follow-through, and a unique personality. This is how you build a resilient team, capable of innovating and staying nimble in the face of change.
 
 And, by no means, bring up the goblins.
+
+<!--
+This is becomine more about thougs on AI and how to work effectively with it. from the junior perspective, from the company perspective and from the senior perspective.
+
+AI for programming feels a bit like cad or spreadsheets. its a calculator for words, noone would do hard drfting today, becuase cad is much mor precise, modifiable, reproducible, sharable, Noone would do spreadsheets bu hand. in eitehr case a hand made dimensional drawing or spreadsheets is a liability, the ability to have these tools rigorously output correct figures is crucial and innexpensive. If you do it by hands, you're fired at best.
+
+Similarly, LLMS make you faster at the things you;re already an expert at. If you never multiplied and make multimiplations in excell, you are not going to have a clue if the output is correct.
+
+Similarly with llms, they excell when you have the hability to guide and correct the output.
+
+(this is especially true for visual things)
+
+On the otehr hands LLMs produce a lot of outputs and the tooling has minimal guardrails. The rigor and correctness of cad, although possible to achieve, is not present in the llms output. perhaps this is what some ofthese prompts are atemoting to do.
+
+As with juniors, LLMs benefit from having test suites, definions of done, and quality and coding standards.
+
+perhaps like design evlving into computer-aided design, programming will evolve into computer-aided programming. i just hope it;s not all CAP.
+
+On open source: LLMs are amazing at python and web (html,css,js,ts). This is no coincidence, all web pages are essentialy open source, so LLMs had the entire internet worh of data to learn from. Similarly, Python is famously used by academia and profusely by OSS enthousiats.
+
+I don't think we have a good mental model right now of how to think abouot LLMs and predirt our future. However, if the past is of any refeence we need to:
+
+no silver bullet:
+* keep using open source
+* keep creating and putting things out there par amour a l'art
+* keep learning as much as possible
+ -->
