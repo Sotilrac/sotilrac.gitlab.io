@@ -9,6 +9,7 @@ tags:
   - javascript
   - web-components
   - electronics
+date: 2026-05-25T12:00:00-04:00
 ---
 
 Two decades ago, when I was a teenager soldering my way through hobby projects, I kept Alan Parekh's [LED resistor calculator](http://www.alan-parekh.com/led_resistor_calculator.html) bookmarked. It's a simple computation but I didn't want to get it wrong. Little did I know how lucky I was to access a simple tool without a login, popups, cookies, analytics, or ads. I typed in the supply voltage, the LED's forward voltage, the desired current, and out came a resistor value. I used it a hundred times. Thanks Alan! The site is still up, frozen in amber behind the now obligatory HTTP-only warning.
