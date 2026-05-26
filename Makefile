@@ -1,4 +1,4 @@
-.PHONY: help install dev build lint lint-fix check-links check ci clean ee-calc
+.PHONY: help install dev build lint lint-fix check-links check ci clean ee-calc spell
 
 EE_CALC_SRC := $(wildcard src/ee-calculator/*)
 EE_CALC_OUT := js/ee-calculator.js
@@ -33,6 +33,12 @@ check: lint build  ## Mirror CI: lint + build + link check
 	node _tools/check-internal-links.mjs _site
 
 ci: install check  ## Full CI pipeline locally
+
+spell:  ## Spell + grammar check a Markdown file (usage: make spell FILE=_drafts/foo.md)
+	@if [ -z "$(FILE)" ]; then \
+		echo "Usage: make spell FILE=path/to/post.md"; exit 1; \
+	fi
+	node _tools/spell.mjs $(FILE)
 
 clean:  ## Remove build outputs
 	rm -rf _site public test
