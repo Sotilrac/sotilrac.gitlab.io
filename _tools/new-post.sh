@@ -25,6 +25,7 @@ fi
 
 cat > "$file" << EOF
 ---
+layout: layouts/post.njk
 author: Carlos
 title: ${title}
 categories:
