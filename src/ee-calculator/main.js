@@ -1527,14 +1527,12 @@ class EECalculator extends HTMLElement {
             `${parts.number}${parts.prefix} ${tol}% resistor`,
           );
           const mouserUrl = `https://www.mouser.com/c/passive-components/resistors/?q=${q}`;
-          const digikeyUrl = `https://www.digikey.com/en/products/keyword-search?keywords=${q}`;
           return `
           <div class="std-row">
             <span class="std-rank">#${i + 1}</span>
             <span class="std-value">${formatSI(m.value, "Ω")}</span>
             <span class="std-error ${Math.abs(err) < 0.005 ? "zero" : ""}">${errStr}</span>
             <a class="btn-vendor" href="${mouserUrl}" target="_blank" rel="noopener">Mouser</a>
-            <a class="btn-vendor" href="${digikeyUrl}" target="_blank" rel="noopener">DigiKey</a>
           </div>`;
         })
         .join("");

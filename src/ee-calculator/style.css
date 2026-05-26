@@ -613,7 +613,7 @@ input[type="number"] {
 }
 .std-row {
   display: grid;
-  grid-template-columns: auto 1fr auto auto auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   gap: 0.5em;
   align-items: center;
   padding: 0.15em 0;
