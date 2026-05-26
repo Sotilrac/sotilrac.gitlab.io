@@ -13,7 +13,7 @@ tags:
 
 Two decades ago, when I was a teenager soldering my way through hobby projects, I kept Alan Parekh's [LED resistor calculator](http://www.alan-parekh.com/led_resistor_calculator.html) bookmarked. It's a simple computation but I didn't want to get it wrong. Little did I know how lucky I was to access a simple tool without a login, popups, cookies, analytics, or ads. I typed in the supply voltage, the LED's forward voltage, the desired current, and out came a resistor value. I used it a hundred times. Thanks Alan! The site is still up, frozen in amber behind the now obligatory HTTP-only warning.
 
-I wanted to give back and supplement Alan's calculator with the other computations I run on a daily basis.
+I wanted to give back and couldn't resist the temptation to supplement Alan's calculator with the other computations I run on a daily basis.
 
 {% calc "ee" %}
 
@@ -66,7 +66,7 @@ Surface-mount resistors are too small for stripes, so they carry printed codes i
 
 ### Series/Parallel Reducer
 
-The calculator can compute the equivalent series or parallel resistance, or the equivalent series or parallel capacitance. Type comma-separated values, out comes the equivalent.
+The calculator can compute the equivalent series or parallel resistance, or the equivalent series or parallel capacitance. Type comma-separated values, and out comes the equivalent.
 
 #### Resistors
 
@@ -142,7 +142,7 @@ At 600 Ω the same +10 dBm gives $V_\text{rms} \approx 2.45 \, \text{V}$.
 
 ### RC Cutoff
 
-RC filters appear everywhere you need to bandwidth-limit a signal: anti-aliasing in front of an ADC, blocking DC out of an AC-coupled audio stage, smoothing PWM into something approaching a steady voltage, debouncing a logic edge, rolling off high-frequency noise on a sensor line. They're the simplest filter you can build, and they're often "good enough".
+RC filters appear everywhere you need to bandwidth-limit a signal: antialiasing in front of an ADC, blocking DC out of an AC-coupled audio stage, smoothing PWM into something approaching a steady voltage, debouncing a logic edge, rolling off high-frequency noise on a sensor line. They're the simplest filter you can build, and they're often "good enough".
 
 Give the calculator any two of R, C, $f_c$ and it returns the third plus the time constant. The math is the same for low-pass and high-pass; only the topology differs, so both schematics sit side by side.
 
@@ -160,7 +160,7 @@ The 555 is one of the most-produced ICs ever made, still in production fifty yea
 
 #### Astable (free-running oscillator)
 
-This is the circuit every EE in training yearns to make, the mythical "make this LED blink" project. The same topology also powers simple tone generators, clock sources for small digital projects, and PWM for dimming or motor speed control. Anywhere you want a square-ish wave at a fixed (or knob-tunable) rate without writing firmware.
+This is the circuit every EE in training yearns to make, the mythical "make this LED blink" project. The same topology also powers simple tone generators, clock sources for small digital projects, and PWM for dimming or motor speed control. Anywhere you want a squarish wave at a fixed (or knob-tunable) rate without writing firmware.
 
 {% fig "/img/blog/resistance-is-futile/555-astable.svg", "555 astable application circuit" %}
 
@@ -174,7 +174,7 @@ The capacitor charges through $R_1 + R_2$ from $\frac{1}{3} V_\text{cc}$ to $\fr
 
 #### Monostable (one-shot pulse)
 
-One pulse of a defined width every time the trigger fires. Useful for debouncing a noisy pushbutton, generating a turn-on delay, stretching a short input pulse into something a slower part can latch, or driving a relay that should stay on for exactly _N_ seconds after you press a button.
+One pulse of a defined width every time the trigger fires. Useful for debouncing a noisy push button, generating a turn-on delay, stretching a short input pulse into something a slower part can latch, or driving a relay that should stay on for exactly _N_ seconds after you press a button.
 
 {% fig "/img/blog/resistance-is-futile/555-monostable.svg", "555 monostable application circuit" %}
 
