@@ -57,7 +57,6 @@ RMS
 SWG
 
 # --- Web stack / project ---
-Anthropic
 BigInt
 bitfield
 bitfields
@@ -85,6 +84,57 @@ TypeScript
 UART
 UI
 Wikimedia
+viewport
+Vite
+frontmatter
+localStorage
+pnpm
+HTML
+WebGL
+
+# --- Software ---
+Anthropic
+OpenAI
+codebase
+LLM
+LLMs
+GPT
+PR
+PRs
+JSON
+repo
+README
+dagre
+symlinks
+arXiv
+async
+shader
+shaders
+Visio
+Graphviz
+UML
+Lucidchart
+MPL
+PNG
+Tauri
+ColorOS
+GitLab
+HeyTap
+KDE
+OnePlus
+OTA
+OxygenOS
+uBlock
+bootloader
+CPH
+
+
+# --- Science ---
+corvids
+lossy
+
+# --- Business ---
+ROI
 
 # --- Names ---
 Asmat
@@ -93,6 +143,12 @@ Parekh
 PETA
 Sotilrac
 jjbeard
+Whorf
+von
+Dephy
+Reddit
+Substack
+Fergie
 
 # --- Units / formats ---
 dB
