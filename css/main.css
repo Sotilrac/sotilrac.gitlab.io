@@ -1291,7 +1291,7 @@ footer p {
 figure.post-fig {
   display: block;
   width: fit-content;
-  max-width: 38em;
+  max-width: var(--fig-width, 38em);
   margin: 1em auto;
   background: var(--pearl);
   border: 1px solid var(--silver);
