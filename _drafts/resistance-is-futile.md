@@ -1,6 +1,8 @@
 ---
+layout: layouts/post.njk
 author: Carlos
 title: Resistance is Futile
+figWidth: 24em
 categories:
   - Tools
 tags:
@@ -9,9 +11,7 @@ tags:
   - electronics
 ---
 
-Two decades ago, when I was a teenager soldering my way through hobby projects, I kept Alan Parekh's [LED resistor calculator](http://www.alan-parekh.com/led_resistor_calculator.html) bookmarked. It's a simple computation but I didn't want to get it wrong. Little did I know how lucky I was to access a simple tool without a login, popups, cookies, analytics, or ads. I typed in the supply voltage, the LED's forward voltage, the desired current, and out came a resistor value. I used it a hundred times. Thanks Alan! The site is still up, frozen in amber behind the obligatory HTTP-only warning.
-
-Today's options are sadder. Search "LED resistor calculator" and you get a dozen near-identical SEO farms wrapped in cookie banners, asking for your email to unlock the E96 series, or trying to upsell you a course.
+Two decades ago, when I was a teenager soldering my way through hobby projects, I kept Alan Parekh's [LED resistor calculator](http://www.alan-parekh.com/led_resistor_calculator.html) bookmarked. It's a simple computation but I didn't want to get it wrong. Little did I know how lucky I was to access a simple tool without a login, popups, cookies, analytics, or ads. I typed in the supply voltage, the LED's forward voltage, the desired current, and out came a resistor value. I used it a hundred times. Thanks Alan! The site is still up, frozen in amber behind the now obligatory HTTP-only warning.
 
 I wanted to give back and supplement Alan's calculator with the other computations I run on a daily basis.
 
@@ -21,9 +21,11 @@ I wanted to give back and supplement Alan's calculator with the other computatio
 
 ### Standard Resistor Finder
 
-When you go to buy a resistor, not every value is made. If the math says you need a 43.5 Ω resistor, you won't find one. You pick the closest available. In the calculator, type a target value, pick a tolerance series (E6 through E96), and it returns the nearest standard values with the percent error.
+When you go to buy a resistor, not every value is available. If the math says you need 43.5 Ω, no manufacturer makes that. You pick the closest available value instead. In the calculator, type a target value, pick a tolerance series (E6 through E96), and it returns the nearest standard values with the percent error.
 
-Why? As always, math. E-series values are spaced geometrically. Series $E_N$ has $N$ values per decade at
+{% fig "/img/blog/resistance-is-futile/but_why.gif" %}
+
+But why? As always, math. E-series values are spaced geometrically. Series $E_N$ has $N$ values per decade at
 
 $$V_n = 10^{n/N}, \quad n = 0, 1, \dots, N-1$$
 
@@ -49,7 +51,7 @@ The digit bands $d_i$ use black=0 through white=9. The multiplier band $M$ is al
 
 #### Surface-Mount Resistors
 
-Surface-mount resistors are too small for stripes, so they carry printed codes instead. The common three-digit code is two significant figures followed by a power-of-ten multiplier: `472` is 47 × 10² = 4.7 kΩ. Four-digit codes (used on E48/E96 precision parts) add a third significant figure: `4701` is 470 × 10¹ = 4.7 kΩ. An `R` stands in for a decimal point when the value is below 10 Ω, so `4R7` is 4.7 Ω. The tiniest 0402 and 0201 packages, where even three digits won't fit, use the [EIA-96 code](https://en.wikipedia.org/wiki/EIA-96): two digits plus a letter that indexes into an E96 lookup table.
+Surface-mount resistors are too small for stripes, so they carry printed codes instead. The common three-digit code is two significant figures followed by a power-of-ten multiplier: `472` is $47 \times 10^2 = 4.7 \, \text{kΩ}$. Four-digit codes (used on E48/E96 precision parts) add a third significant figure: `4701` is $470 \times 10^1 = 4.7 \, \text{kΩ}$. An `R` stands in for a decimal point when the value is below 10 Ω, so `4R7` is $4.7 \, \text{Ω}$. The tiniest 0402 and 0201 packages, where even three digits won't fit, use the [EIA-96 code](https://en.wikipedia.org/wiki/EIA-96): two digits plus a letter that indexes into an E96 lookup table.
 
 ### Series/Parallel Reducer
 
@@ -69,7 +71,7 @@ The calculator wouldn't be complete without the classic Ohm's law. Fill any two 
 
 $$V = I \cdot R$$
 
-$$\qquad P = V \cdot I = \frac{V^2}{R} = I^2 \cdot R$$
+$$P = V \cdot I = \frac{V^2}{R} = I^2 \cdot R$$
 
 ### Voltage Divider
 
@@ -77,15 +79,17 @@ Sooner or later you'll need a voltage that's different from your supply. A volta
 
 $$V_\text{out} = V_\text{in} \cdot \frac{R_2}{R_1 + R_2}$$
 
-The formula assumes the load draws zero current (infinite input impedance). For real loads, keep R₂ at least ten times smaller than the load impedance to keep the divider error under ~10%. The current through the divider is $I = V_\text{in} / (R_1 + R_2)$; the power burnt by both resistors together is $V_\text{in} \cdot I$.
+The formula assumes the load draws zero current (infinite input impedance). For real loads, keep $R_2$ at least ten times smaller than the load impedance to keep the divider error under ~10%. The current through the divider is $I = V_\text{in} / (R_1 + R_2)$; the power burnt by both resistors together is $V_\text{in} \cdot I$.
 
 ### LED Current-Limiting Resistor
+
+{% fig "/img/blog/resistance-is-futile/patrick_stewart_borg.gif" %}
 
 Light-emitting diodes are, well, diodes. Past their forward voltage they want to conduct unlimited current, which in practice means burning out. Instead of wiring them straight to a supply, you add a series resistor. The resistor sets the current, which sets the brightness. Every LED has a preferred forward voltage and forward current listed on its datasheet (or you can find them experimentally, ramping the current slowly using a bench supply or a multimeter's diode-test mode).
 
 $$V_R = V_\text{supply} - N \cdot V_f, \qquad R = \frac{V_R}{I_f}$$
 
-$N$ is the number of LEDs in series, $V_f$ is the forward voltage per LED, and $I_f$ is the target current. The voltage left over after the LED chain drops across the resistor.
+$N$ is the number of LEDs in series, $V_f$ is the forward voltage per LED, and $I_f$ is the target current. The voltage left over after the LED chain is what the resistor drops.
 
 #### Power Dissipated in R
 
@@ -99,7 +103,7 @@ AC signals are often modeled as pure sine waves. Amplitude can be quoted four wa
 
 $$V_\text{pp} = 2 V_p, \qquad V_\text{rms} = \frac{V_p}{\sqrt{2}} \approx 0.707 \, V_p, \qquad V_\text{avg} = \frac{2 V_p}{\pi} \approx 0.637 \, V_p$$
 
-$V_\text{avg}$ here is the full-wave rectified mean (the average value of the wave's absolute value). Square waves and triangle waves use different factors; the calculator notes the assumption.
+Square waves and triangle waves use different factors; the calculator notes the assumption.
 
 ### Frequency, Period, ω
 
@@ -109,7 +113,9 @@ The angular frequency $\omega$ shows up everywhere reactance, phase, or complex 
 
 ### dBm, Power, V_rms
 
-Decibels show up everywhere a signal passes through a chain of stages that multiply or divide its power. An amplifier triples the power, a cable loses 30%, an attenuator drops it to a tenth. Tracking all of that as multiplications gets ugly fast. On a log scale, multiplications become simpler additions: +5 dB amp, −1.5 dB cable, −10 dB attenuator. dBm anchors the log scale to 1 mW, so the units stay absolute (a dBm number maps to a power) instead of being just a ratio. For absolute power referenced to 1 mW:
+{% fig "/img/blog/resistance-is-futile/up_to_eleven.gif" %}
+
+Decibels show up everywhere a signal passes through a chain of stages that multiply or divide its power. An amplifier triples the power, a cable loses 30%, an attenuator drops it to a tenth. Tracking all of that as multiplications gets ugly fast. On a log scale, multiplications become additions: +5 dB amp, −1.5 dB cable, −10 dB attenuator. dBm anchors the log scale to 1 mW, so the units stay absolute (a dBm number maps to a power) instead of being just a ratio. For absolute power referenced to 1 mW:
 
 $$\text{dBm} = 10 \log_{10}\!\left(\frac{P}{1 \text{ mW}}\right), \qquad P = 10^{\text{dBm}/10} \text{ mW}$$
 
@@ -117,7 +123,11 @@ Combined with a load impedance, voltage falls out:
 
 $$V_\text{rms} = \sqrt{P \cdot Z}$$
 
-At 50 Ω, +10 dBm = 10 mW = 707 mV_rms = 1 V_peak. At 600 Ω, the same +10 dBm gives 2.45 V_rms.
+Worked example at 50 Ω:
+
+$$+10 \, \text{dBm} = 10 \, \text{mW} \implies V_\text{rms} = 707 \, \text{mV}, \quad V_p \approx 1 \, \text{V}$$
+
+At 600 Ω the same +10 dBm gives $V_\text{rms} \approx 2.45 \, \text{V}$.
 
 ### RC Cutoff
 
@@ -127,17 +137,21 @@ Give the calculator any two of R, C, $f_c$ and it returns the third plus the tim
 
 $$f_c = \frac{1}{2 \pi R C}, \qquad \tau = R C$$
 
-At the -3 dB cutoff frequency, $|H(f_c)| = 1/\sqrt{2}$ ≈ 0.707 and the phase shift is ±45° (lagging for low-pass, leading for high-pass). The transfer functions:
+At the -3 dB cutoff frequency, $|H(f_c)| = 1/\sqrt{2} \approx 0.707$ and the phase shift is $\pm 45°$ (lagging for low-pass, leading for high-pass). The transfer functions:
 
 $$H_\text{LP}(j\omega) = \frac{1}{1 + j \omega R C}, \qquad H_\text{HP}(j\omega) = \frac{j \omega R C}{1 + j \omega R C}$$
 
 ### 555 Timer
 
-The 555 is one of the most-produced ICs ever made, still in production fifty years after its design because it solves a common problem cheaply and without any firmware. When you need a clock signal, a delay, or a one-shot pulse on a board that doesn't have a microcontroller, the 555 (or its CMOS sibling, the 7555) is the first part to reach for. The calculator handles both modes, both directions: give it R₁, R₂, and C and it returns frequency and duty; give it a target frequency and duty and it picks E24 components.
+The 555 is one of the most-produced ICs ever made, still in production fifty years after its design because it solves a common problem cheaply and without any firmware. When you need a clock signal, a delay, or a one-shot pulse on a board that doesn't have a microcontroller, the 555 (or its CMOS sibling, the 7555) is the first part to reach for. The calculator handles both modes, both directions: give it $R_1$, $R_2$, and $C$ and it returns frequency and duty; give it a target frequency and duty and it picks E24 components.
 
-**Astable** (free-running oscillator). This is the circuit every EE in training yearns to make, the mythical "make this LED blink" project. The same topology also powers simple tone generators, clock sources for small digital projects, and PWM for dimming or motor speed control. Anywhere you want a square-ish wave at a fixed (or knob-tunable) rate without writing firmware.
+{% fig "/img/blog/resistance-is-futile/kitt_scanner_light.gif" %}
 
-{% fig "/img/blog/bench/555-astable.svg", "555 astable application circuit" %}
+#### Astable (free-running oscillator)
+
+This is the circuit every EE in training yearns to make, the mythical "make this LED blink" project. The same topology also powers simple tone generators, clock sources for small digital projects, and PWM for dimming or motor speed control. Anywhere you want a square-ish wave at a fixed (or knob-tunable) rate without writing firmware.
+
+{% fig "/img/blog/resistance-is-futile/555-astable.svg", "555 astable application circuit" %}
 
 $$t_\text{high} = \ln 2 \cdot (R_1 + R_2) \cdot C \approx 0.693 (R_1 + R_2) C$$
 
@@ -147,17 +161,21 @@ $$f = \frac{1}{t_\text{high} + t_\text{low}} = \frac{1.44}{(R_1 + 2 R_2) \cdot C
 
 The capacitor charges through $R_1 + R_2$ from $\frac{1}{3} V_\text{cc}$ to $\frac{2}{3} V_\text{cc}$, then discharges through $R_2$ alone from $\frac{2}{3} V_\text{cc}$ back to $\frac{1}{3} V_\text{cc}$. Each phase takes $\ln 2 \cdot \tau$ because of the exponential charge/discharge. Duty is always above 50% in the classic topology because the high phase uses both resistors and the low phase uses only $R_2$. Symmetric duty needs a diode trick.
 
-**Monostable** (one-shot pulse). One pulse of a defined width every time the trigger fires. Useful for debouncing a noisy pushbutton, generating a turn-on delay, stretching a short input pulse into something a slower part can latch, or driving a relay that should stay on for exactly _N_ seconds after you press a button.
+#### Monostable (one-shot pulse)
 
-{% fig "/img/blog/bench/555-monostable.svg", "555 monostable application circuit" %}
+One pulse of a defined width every time the trigger fires. Useful for debouncing a noisy pushbutton, generating a turn-on delay, stretching a short input pulse into something a slower part can latch, or driving a relay that should stay on for exactly _N_ seconds after you press a button.
+
+{% fig "/img/blog/resistance-is-futile/555-monostable.svg", "555 monostable application circuit" %}
 
 $$t = \ln 3 \cdot R \cdot C \approx 1.1 R C$$
 
 Pin 2 (TRIG) is held high until you pull it momentarily below $\frac{1}{3} V_\text{cc}$. The capacitor then charges through $R$ from 0 V; when it reaches $\frac{2}{3} V_\text{cc}$ the output goes low again. The charge from 0 to $\frac{2}{3} V_\text{cc}$ on an exponential takes $\ln 3 \cdot \tau$.
 
-For both modes the math assumes pin 4 (RESET) is tied to V_cc and pin 5 (CTRL) has a small bypass cap (typically 10 nF) to ground for noise rejection. See the [Wikipedia article on the 555](https://en.wikipedia.org/wiki/555_timer_IC) for the internal block diagram and a deeper history. (Schematics above are public-domain SVGs sourced from Wikimedia Commons: [astable](https://commons.wikimedia.org/wiki/File:555_Astable_Diagram.svg), [monostable](https://commons.wikimedia.org/wiki/File:555_Monostable.svg).)
+For both modes the math assumes pin 4 (RESET) is tied to $V_\text{cc}$ and pin 5 (CTRL) has a small bypass cap (typically 10 nF) to ground for noise rejection. See the [Wikipedia article on the 555](https://en.wikipedia.org/wiki/555_timer_IC) for the internal block diagram and a deeper history. (Schematics above are public-domain SVGs sourced from Wikimedia Commons: [astable](https://commons.wikimedia.org/wiki/File:555_Astable_Diagram.svg), [monostable](https://commons.wikimedia.org/wiki/File:555_Monostable.svg).)
 
-### AWG Wire Gauge
+### AWG
+
+American Wire Gauge, standardized in 1857 at Brown & Sharpe Manufacturing in Providence, Rhode Island. The counterintuitive bigger-number-means-thinner-wire convention comes from the wire-drawing process: a freshly cast rod was pulled through successively smaller dies, and the "gauge" was originally the number of draw operations the wire had been through. More draws yield a thinner wire.
 
 Wire gauge matters whenever current matters. Pick too thin and the wire overheats or drops noticeable voltage along its length. Pick too thick and it's expensive, stiff, and a pain to route. Hobby jumpers are 22-24 AWG, chassis power wiring 14-18, battery interconnects on RC cars or e-bikes 8-12.
 
@@ -177,10 +195,10 @@ $$\frac{R}{\ell} = \frac{\rho_\text{Cu}}{A}$$
 
 Ampacity is the steady-state current a conductor can carry before its insulation overheats. It's a heat-dissipation limit, not a "the wire will vaporize" limit. Exceed it and the insulation cooks, the surrounding parts get hot, and over time the wire fails. Ampacity depends on the wire's gauge, insulation type, ambient temperature, and how easily heat can escape (a single wire in open air sheds heat much better than the same wire bundled with eleven others inside a conduit).
 
-Two rules of thumb the calculator uses:
+Two rules the calculator uses:
 
 - **Chassis wiring** (short runs in air, point-to-point inside an enclosure): about 92 cmil per amp. 22 AWG ≈ 7 A.
-- **Power transmission** (long runs in conduit, derated for heat): NEC 310.16, around 700 cmil per amp. 22 AWG ≈ 0.9 A.
+- **Power transmission** (long runs in conduit, derated for heat): NEC 310.16 (the US National Electrical Code), around 700 cmil per amp. 22 AWG ≈ 0.9 A.
 
 ### PCB Trace Width
 
@@ -196,7 +214,7 @@ $A$ is the cross-section in mil², $\Delta T$ is the allowable temperature rise 
 
 $$A = \left( \frac{I}{k \cdot \Delta T^{0.44}} \right)^{1/0.725}$$
 
-Then width = $A$ / thickness, where 1 oz copper ≈ 1.378 mil thick.
+Then $\text{width} = \dfrac{A}{\text{thickness}}$, where 1 oz copper is about 1.378 mil thick.
 
 IPC-2221A is the conservative legacy standard. The newer IPC-2152 allows narrower traces for the same current with a richer model, but it's paywalled. Add margin for vias, bends, and ambient heat regardless of which standard you use.
 
@@ -222,4 +240,4 @@ Shadow DOM keeps the styles isolated so it won't fight your site's CSS.
 
 ## How It's Built
 
-The sources live in `src/ee-calculator/` (CSS, JS, and four SVG symbol files). A small Node script bundles them into a single `js/ee-calculator.js` at build time. No framework or dependencies to break. It should work as long as browsers do.
+The sources live in [`src/ee-calculator/`](https://gitlab.com/sotilrac/sotilrac.gitlab.io/-/tree/master/src/ee-calculator) (CSS, JS, and four SVG symbol files). A small Node script bundles them into a single `js/ee-calculator.js` at build time. No framework or dependencies to break. It should work as long as browsers do.
