@@ -17,6 +17,17 @@ I wanted to give back and supplement Alan's calculator with the other computatio
 
 {% calc "ee" %}
 
+## Embed It
+
+The EE Calculator is a single-file Web Component with no dependencies. Drop it in any HTML page:
+
+```html
+<script src="https://asmat.ca/js/ee-calculator.js"></script>
+<ee-calculator></ee-calculator>
+```
+
+Shadow DOM keeps the styles isolated so it won't fight your site's CSS.
+
 ## The Math
 
 ### Standard Resistor Finder
@@ -226,17 +237,6 @@ A few UI niceties not covered by the math:
 - **SI prefix parsing** on every numeric input: `4.7k`, `100m`, `2.2µ` (or `2.2u`), `1M`, `100n`, `1p`, with an optional unit suffix that gets ignored.
 - **Copy button** on every result to bring it into the next tool without retyping.
 - **Inline schematics** rendered dynamically.
-
-## Embed It
-
-The EE Calculator is a single-file Web Component with no dependencies. Drop it in any HTML page:
-
-```html
-<script src="https://asmat.ca/js/ee-calculator.js"></script>
-<ee-calculator></ee-calculator>
-```
-
-Shadow DOM keeps the styles isolated so it won't fight your site's CSS.
 
 ## How It's Built
 
