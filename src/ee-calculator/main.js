@@ -877,6 +877,43 @@ function traceWidth(current, ozCopper, deltaT, layer = "external") {
   return { width_mil, width_mm, area_mil2: A_mil2, thickness_mil };
 }
 
+// ---- Controlled impedance & differential pairs (IPC-2141A) ----
+
+// Closed-form approximations from IPC-2141A / Wadell. Geometry is unit-agnostic
+// (only ratios matter) as long as W, H/B, T, S share one unit. eeff drives the
+// propagation delay: surface microstrip sits partly in air, so its effective
+// permittivity is lower than the bulk er; symmetric stripline is fully buried,
+// so eeff = er. Accurate to ~5-10%; ignores copper thickness in the coupling
+// term, solder mask, glass-weave, and surface roughness.
+function impedance({ structure, er, w, h, t, s }) {
+  let z0, eeff, kdiff;
+  if (structure === "stripline") {
+    // h = B, the plane-to-plane separation.
+    z0 =
+      (60 / Math.sqrt(er)) *
+      Math.log((4 * h) / (0.67 * Math.PI * (0.8 * w + t)));
+    eeff = er;
+    kdiff = 1 - 0.347 * Math.exp((-2.9 * s) / h);
+  } else {
+    // microstrip: h = dielectric height to the single reference plane.
+    z0 = (87 / Math.sqrt(er + 1.41)) * Math.log((5.98 * h) / (0.8 * w + t));
+    eeff = 0.475 * er + 0.67;
+    kdiff = 1 - 0.48 * Math.exp((-0.96 * s) / h);
+  }
+  const zdiff = 2 * z0 * kdiff;
+  // tpd: signals travel at c/sqrt(eeff). 1/c = 3.3356 ns/m, and 1 ns/m = 1 ps/mm.
+  const tpd_ns_per_m = 3.3356 * Math.sqrt(eeff);
+  const tpd_ps_per_in = tpd_ns_per_m * 25.4;
+  return { z0, zdiff, eeff, tpd_ns_per_m, tpd_ps_per_in };
+}
+
+// Common differential-impedance targets, for a self-checking hint.
+const ZDIFF_TARGETS = [
+  { z: 90, name: "USB 2.0" },
+  { z: 85, name: "PCIe / SATA / DDR" },
+  { z: 100, name: "Ethernet / HDMI / LVDS" },
+];
+
 // ----------------------------------------------------------------
 // Section 4: Styles
 // ----------------------------------------------------------------
@@ -915,8 +952,8 @@ const TABS = [
   },
   {
     id: "pcb",
-    label: "PCB trace",
-    tools: ["trace"],
+    label: "PCB",
+    tools: ["trace", "imp"],
   },
 ];
 
@@ -2503,6 +2540,92 @@ class EECalculator extends HTMLElement {
         <div class="result-row"><span class="result-label">Cross-section</span><span class="result-value">${r.area_mil2.toFixed(2)} mil²</span></div>
         <div class="result-row"><span class="result-label">Copper thickness</span><span class="result-value">${r.thickness_mil.toFixed(3)} mil</span></div>
         <div class="note">IPC-2221A: I = k · ΔT^0.44 · A^0.725, k = 0.048 (external) / 0.024 (internal). Add margin for vias, bends, and ambient. The newer IPC-2152 typically allows narrower traces; this estimate is conservative.</div>
+      `;
+    };
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
+    el.querySelectorAll("select").forEach((sel) =>
+      sel.addEventListener("change", go),
+    );
+    go();
+  }
+
+  // ============================================================
+  // Tool: Controlled impedance & differential pairs
+  // ============================================================
+  _render_imp() {
+    const el = this._wrap.querySelector('[data-tool="imp"]');
+    el.innerHTML = `
+      <div class="tool-title">Impedance & differential pairs (IPC-2141A)</div>
+      <div class="tool-sub">Characteristic and differential impedance, propagation delay, and length-matching tolerance from trace geometry.</div>
+
+      <div class="row">
+        <div class="field"><label>Structure</label><select data-struct>
+          <option value="microstrip" selected>microstrip (outer)</option>
+          <option value="stripline">stripline (inner)</option>
+        </select></div>
+        <div class="field"><label>Dielectric εr</label><input type="text" data-er value="4.3"></div>
+        <div class="field"><label>Copper</label><select data-oz>
+          <option value="0.5">0.5 oz</option>
+          <option value="1" selected>1 oz</option>
+          <option value="2">2 oz</option>
+        </select></div>
+      </div>
+
+      <div class="row">
+        <div class="field"><label>Trace width W (mil)</label><input type="text" data-w value="6"></div>
+        <div class="field"><label data-hlabel>Height H (mil)</label><input type="text" data-h value="5"></div>
+        <div class="field"><label>Spacing S (mil)</label><input type="text" data-s value="6"></div>
+        <div class="field"><label>Skew budget (ps)</label><input type="text" data-skew value="10"></div>
+      </div>
+
+      <div class="result" data-result></div>
+    `;
+    const result = el.querySelector("[data-result]");
+    const hlabel = el.querySelector("[data-hlabel]");
+    const go = () => {
+      const structure = el.querySelector("[data-struct]").value;
+      const er = parseSI(el.querySelector("[data-er]").value);
+      const oz = parseFloat(el.querySelector("[data-oz]").value);
+      const w = parseSI(el.querySelector("[data-w]").value);
+      const h = parseSI(el.querySelector("[data-h]").value);
+      const s = parseSI(el.querySelector("[data-s]").value);
+      const skew = parseSI(el.querySelector("[data-skew]").value);
+      hlabel.textContent =
+        structure === "stripline" ? "Plane gap B (mil)" : "Height H (mil)";
+      const t = 1.378 * oz; // copper thickness in mil
+      if (![er, w, h, s].every((v) => isFinite(v) && v > 0) || er < 1) {
+        result.innerHTML = `<span class="result-value warn">enter positive values (εr ≥ 1)</span>`;
+        return;
+      }
+      const r = impedance({ structure, er, w, h, t, s });
+      // Range-of-validity check for the closed-form fits.
+      let validity = "";
+      if (structure === "microstrip" && (w / h < 0.1 || w / h > 2)) {
+        validity = `<div class="note warn">W/H = ${(w / h).toFixed(2)} is outside the 0.1–2.0 range where the microstrip fit holds.</div>`;
+      } else if (structure === "stripline" && w / h >= 0.35) {
+        validity = `<div class="note warn">W/B = ${(w / h).toFixed(2)} ≥ 0.35; the stripline fit assumes a narrow trace.</div>`;
+      }
+      // Nearest common differential target.
+      const near = ZDIFF_TARGETS.reduce((a, b) =>
+        Math.abs(b.z - r.zdiff) < Math.abs(a.z - r.zdiff) ? b : a,
+      );
+      // Length mismatch that burns the whole skew budget. tpd_ns_per_m == ps/mm.
+      const dL_mm = isFinite(skew) && skew > 0 ? skew / r.tpd_ns_per_m : null;
+      const skewRow =
+        dL_mm == null
+          ? ""
+          : `<div class="result-row"><span class="result-label">Max length mismatch (${skew} ps)</span><span class="result-value">${dL_mm.toFixed(2)} mm (${(dL_mm / 0.0254).toFixed(0)} mil)</span></div>`;
+      result.innerHTML = `
+        <div class="result-row"><span class="result-label">Single-ended Z₀</span><span class="result-value accent">${r.z0.toFixed(1)} Ω</span></div>
+        <div class="result-row"><span class="result-label">Differential Z_diff</span><span class="result-value accent">${r.zdiff.toFixed(1)} Ω</span></div>
+        <div class="result-row"><span class="result-label">Nearest target</span><span class="result-value">${near.z} Ω (${near.name})</span></div>
+        <div class="result-row"><span class="result-label">Effective εr</span><span class="result-value">${r.eeff.toFixed(2)}</span></div>
+        <div class="result-row"><span class="result-label">Propagation delay</span><span class="result-value">${r.tpd_ps_per_in.toFixed(1)} ps/in (${r.tpd_ns_per_m.toFixed(2)} ns/m)</span></div>
+        ${skewRow}
+        ${validity}
+        <div class="note">IPC-2141A closed-form: microstrip Z₀ = 87/√(εr+1.41)·ln(5.98H/(0.8W+T)); stripline Z₀ = 60/√εr·ln(4B/(0.67π(0.8W+T))). Z_diff = 2·Z₀·(1−k·e^(−c·S/H)). Estimate is ±5–10%; ignores copper thickness in coupling, solder mask, glass-weave, and roughness. For a tight target, confirm with your fab's stackup tool.</div>
       `;
     };
     el.querySelectorAll("input").forEach((inp) =>

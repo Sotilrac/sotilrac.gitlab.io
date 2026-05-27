@@ -230,6 +230,28 @@ Then $\text{width} = \dfrac{A}{\text{thickness}}$, where 1 oz copper is about 1.
 
 IPC-2221A is the conservative legacy standard. The newer IPC-2152 allows narrower traces for the same current with a richer model, but it's paywalled. Add margin for vias, bends, and ambient heat regardless of which standard you use.
 
+### Controlled Impedance & Differential Pairs
+
+Trace width keeps a power rail cool; once a signal gets fast enough, a different property of the trace starts to matter: its characteristic impedance. A 100 MHz clock with sub-nanosecond edges treats your copper as a transmission line, and any mismatch between the trace impedance and the driver or receiver bounces energy back as reflections, ringing, and overshoot. USB, HDMI, Ethernet, PCIe, and DDR all specify a differential impedance the board must hit, usually within ten percent, so this stopped being an RF-only concern a long time ago.
+
+A trace's impedance is set by its geometry and the laminate around it: the width $W$, the height $H$ to the nearest reference plane, the copper thickness $T$, and the dielectric constant $\varepsilon_r$ of the substrate. The calculator handles the two common structures, microstrip (a trace on an outer layer with one ground plane beneath it) and symmetric stripline (a trace buried between two planes), using the IPC-2141A closed-form approximations:
+
+$$Z_0^{\text{micro}} = \frac{87}{\sqrt{\varepsilon_r + 1.41}} \ln\!\left( \frac{5.98\,H}{0.8\,W + T} \right) \qquad Z_0^{\text{strip}} = \frac{60}{\sqrt{\varepsilon_r}} \ln\!\left( \frac{4\,B}{0.67\pi\,(0.8\,W + T)} \right)$$
+
+where $B$ is the plane-to-plane separation for stripline. A differential pair is two such traces routed side by side, and bringing them closer couples them: each trace's field interacts with its neighbor, which lowers the differential impedance below the $2 Z_0$ you would get from two isolated traces. The coupling falls off exponentially with the edge-to-edge spacing $S$:
+
+$$Z_{\text{diff}} = 2\,Z_0\left(1 - k\,e^{-c\,S/H}\right)$$
+
+with $k = 0.48,\ c = 0.96$ for microstrip and $k = 0.347,\ c = 2.9$ for stripline. Wide spacing drives the exponential to zero and $Z_{\text{diff}}$ toward $2 Z_0$; tight spacing pulls it down, which is the knob you turn to land on 90 or 100 Ω.
+
+The same geometry sets how fast the signal travels, which is what makes length matching possible. A signal moves at $c/\sqrt{\varepsilon_{\text{eff}}}$, where the effective permittivity is the bulk $\varepsilon_r$ for fully buried stripline but lower for microstrip, since part of its field rides through the air above the board:
+
+$$t_{pd} = \frac{\sqrt{\varepsilon_{\text{eff}}}}{c}, \qquad \varepsilon_{\text{eff}}^{\text{micro}} \approx 0.475\,\varepsilon_r + 0.67$$
+
+On FR-4 that works out to roughly 140 ps per inch for microstrip and 180 for stripline. The two halves of a differential pair must arrive together, so the calculator inverts this: give it a skew budget in picoseconds, and it returns the maximum length mismatch in millimeters before that budget is blown, which is exactly the number the serpentine length-tuning on a real layout is chasing.
+
+These are closed-form fits, accurate to five or ten percent, and they ignore copper thickness in the coupling term, solder mask, glass-weave, and surface roughness. That's plenty to size a stackup and sanity-check a layout, but for a tight target you confirm the final numbers against your fab's field-solver stackup tool.
+
 ## Other Features
 
 A few UI niceties not covered by the math:
