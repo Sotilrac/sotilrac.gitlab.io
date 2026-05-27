@@ -123,16 +123,22 @@ export default function (eleventyConfig) {
 
   // Embed one of the in-house web-component calculators by short name.
   // Usage: {% calc "ee" %} or {% calc "deadbeef" %}
+  // w/h are the popup's initial size in px; the standalone page then resizes
+  // itself to fit the rendered calculator exactly (see standalone.njk).
   const CALCS = {
     ee: {
       tag: "ee-calculator",
       script: "/js/ee-calculator.js",
       title: "EE Calculator",
+      w: 832,
+      h: 900,
     },
     deadbeef: {
       tag: "programmer-calculator",
       script: "/js/programmer-calculator.js",
       title: "Programmer's Calculator",
+      w: 776,
+      h: 620,
     },
   };
   // Expose the same map (as a list, with the key folded in) so calc.njk can
@@ -149,8 +155,9 @@ export default function (eleventyConfig) {
     // a sized popup window when allowed. window.open returns null if blocked,
     // so `return !window.open(...)` lets the anchor navigate normally instead.
     const detachIcon = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>`;
-    return `<div class="calc-embed">
-  <div class="calc-toolbar"><a class="calc-detach" href="${url}" target="${c.tag}-window" rel="noopener" onclick="return !window.open(this.href, this.target, 'popup,width=620,height=860')">${detachIcon}<span>Open in window</span></a></div>
+    const features = `popup,resizable=no,scrollbars=yes,width=${c.w},height=${c.h}`;
+    return `<div class="calc-embed" data-calc="${name}">
+  <div class="calc-toolbar"><a class="calc-detach" href="${url}" target="${c.tag}-window" rel="noopener" onclick="return !window.open(this.href, this.target, '${features}')">${detachIcon}<span>Open in window</span></a></div>
   <${c.tag}></${c.tag}>
   <script src="${c.script}" defer></script>
 </div>`;
