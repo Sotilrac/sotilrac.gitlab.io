@@ -9,6 +9,7 @@ make install     # install dependencies
 make dev         # local dev server at http://localhost:8080
 make build       # production build to _site/
 make check       # mirror CI locally: lint + build + link check
+make spell       # spellchecking
 make             # list all targets
 ```
 
