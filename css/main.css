@@ -1799,6 +1799,8 @@ body.lb-locked {
 .calc-toolbar {
   display: flex;
   justify-content: flex-end;
+  /* match the calculator card's max-width so the button sits at its right edge */
+  max-width: 56em;
   margin-bottom: 0.5rem;
 }
 .calc-detach {
