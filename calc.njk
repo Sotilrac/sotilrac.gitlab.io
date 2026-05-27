@@ -1,0 +1,13 @@
+---
+layout: layouts/standalone.njk
+pagination:
+  data: calcList
+  size: 1
+  alias: calc
+permalink: "/calc/{{ calc.name }}/"
+eleventyComputed:
+  title: "{{ calc.title }}"
+---
+
+<{{ calc.tag }}></{{ calc.tag }}>
+<script src="{{ calc.script }}" defer></script>

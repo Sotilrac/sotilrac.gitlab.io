@@ -124,16 +124,35 @@ export default function (eleventyConfig) {
   // Embed one of the in-house web-component calculators by short name.
   // Usage: {% calc "ee" %} or {% calc "deadbeef" %}
   const CALCS = {
-    ee: { tag: "ee-calculator", script: "/js/ee-calculator.js" },
+    ee: {
+      tag: "ee-calculator",
+      script: "/js/ee-calculator.js",
+      title: "EE Calculator",
+    },
     deadbeef: {
       tag: "programmer-calculator",
       script: "/js/programmer-calculator.js",
+      title: "Programmer's Calculator",
     },
   };
+  // Expose the same map (as a list, with the key folded in) so calc.njk can
+  // paginate one bare-chrome standalone page per calculator at /calc/<name>/.
+  eleventyConfig.addGlobalData(
+    "calcList",
+    Object.entries(CALCS).map(([name, c]) => ({ name, ...c })),
+  );
   eleventyConfig.addShortcode("calc", (name) => {
     const c = CALCS[name];
     if (!c) return `<!-- unknown calc: ${name} -->`;
-    return `<${c.tag}></${c.tag}><script src="${c.script}" defer></script>`;
+    const url = `/calc/${name}/`;
+    // The anchor degrades to a normal new-tab link; the onclick upgrades it to
+    // a sized popup window when allowed. window.open returns null if blocked,
+    // so `return !window.open(...)` lets the anchor navigate normally instead.
+    return `<div class="calc-embed">
+  <div class="calc-toolbar"><a class="calc-detach" href="${url}" target="${c.tag}-window" rel="noopener" onclick="return !window.open(this.href, this.target, 'popup,width=620,height=860')">⧉ Open in window</a></div>
+  <${c.tag}></${c.tag}>
+  <script src="${c.script}" defer></script>
+</div>`;
   });
 
   eleventyConfig.addPairedShortcode("math", (content, mode = "block") => {

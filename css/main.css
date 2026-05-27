@@ -1791,3 +1791,40 @@ hr.comments-separator {
 body.lb-locked {
   overflow: hidden;
 }
+
+/* In-post calculator embeds + standalone tool windows */
+.calc-embed {
+  margin: 1.5rem 0;
+}
+.calc-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+.calc-detach {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--royal-blue);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--slate);
+  border-radius: 6px;
+}
+.calc-detach:hover,
+.calc-detach:focus-visible {
+  color: var(--navy);
+  border-color: var(--royal-blue);
+  outline: none;
+}
+body.standalone {
+  margin: 0;
+}
+.standalone-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
