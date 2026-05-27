@@ -23,6 +23,7 @@ test:
   stage: test
   script:
     - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
+    - node _tools/build-ee-calculator.mjs
     - npx @11ty/eleventy --output=test
     - node _tools/check-internal-links.mjs test
   artifacts:
@@ -36,6 +37,7 @@ pages:
   stage: deploy
   script:
     - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
+    - node _tools/build-ee-calculator.mjs
     - npx @11ty/eleventy --output=public
   artifacts:
     paths:
