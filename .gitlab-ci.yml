@@ -1,26 +1,35 @@
 image: node:22-alpine
 
+variables:
+  # Point npm at the cached dir below so --prefer-offline actually hits it.
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+
 stages:
-  - lint
-  - test
+  - verify
   - deploy
 
+# Cache only npm's download cache. node_modules is intentionally not cached:
+# `npm ci` wipes it every run, so caching it just shuffles ~50 MB for nothing.
 cache:
   key:
     files:
       - package-lock.json
   paths:
-    - node_modules/
     - .npm/
 
+default:
+  interruptible: true
+
 lint:
-  stage: lint
+  stage: verify
+  needs: []
   script:
     - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
     - npx prettier --check .
 
 test:
-  stage: test
+  stage: verify
+  needs: []
   script:
     - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
     - node _tools/build-ee-calculator.mjs
@@ -35,6 +44,8 @@ test:
 
 pages:
   stage: deploy
+  needs:
+    - lint
   script:
     - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
     - node _tools/build-ee-calculator.mjs
