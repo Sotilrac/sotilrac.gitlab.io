@@ -7,6 +7,8 @@ pagination:
 permalink: "/calc/{{ calc.name }}/"
 eleventyComputed:
   title: "{{ calc.title }}"
+  manifest: "/calc/{{ calc.name }}/manifest.webmanifest"
+  themeColor: "{{ calc.theme }}"
 ---
 
 <{{ calc.tag }}></{{ calc.tag }}>

@@ -132,6 +132,8 @@ export default function (eleventyConfig) {
       title: "EE Calculator",
       w: 832,
       h: 900,
+      bg: "#f5efe3",
+      theme: "#cc5500",
     },
     deadbeef: {
       tag: "programmer-calculator",
@@ -139,6 +141,8 @@ export default function (eleventyConfig) {
       title: "Programmer's Calculator",
       w: 776,
       h: 620,
+      bg: "#0f1923",
+      theme: "#0f1923",
     },
   };
   // Expose the same map (as a list, with the key folded in) so calc.njk can

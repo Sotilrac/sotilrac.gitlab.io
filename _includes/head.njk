@@ -10,6 +10,13 @@
   <meta name="color-scheme" content="light dark">
 
   <link rel="icon" href="{{ site.baseurl }}/img/favicon-64.png">
+  {% if manifest %}
+  <link rel="manifest" href="{{ manifest }}">
+  <meta name="theme-color" content="{{ themeColor }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ title }}">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/favicon-256.png">
+  {% endif %}
 
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDescription }}">

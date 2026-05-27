@@ -1,0 +1,32 @@
+---
+permalink: "/calc/sw.js"
+eleventyExcludeFromCollections: true
+---
+{% raw %}// Offline support for the installable /calc/<name>/ apps.
+// Stale-while-revalidate: serve from cache instantly, refresh in the
+// background so the next launch picks up a new deploy.
+const CACHE = "calc-v1";
+
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", (e) => e.waitUntil(self.clients.claim()));
+
+self.addEventListener("fetch", (e) => {
+  const req = e.request;
+  if (req.method !== "GET") return;
+  e.respondWith(
+    caches.open(CACHE).then((cache) =>
+      cache.match(req).then((hit) => {
+        const net = fetch(req)
+          .then((res) => {
+            if (res.ok && new URL(req.url).origin === location.origin) {
+              cache.put(req, res.clone());
+            }
+            return res;
+          })
+          .catch(() => hit);
+        return hit || net;
+      }),
+    ),
+  );
+});
+{% endraw %}

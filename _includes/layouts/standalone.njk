@@ -31,6 +31,14 @@
           requestAnimationFrame(fit);
         });
       })();
+
+      // Offline support for the installed app. Scope defaults to /calc/, which
+      // covers every /calc/<name>/ page.
+      if ("serviceWorker" in navigator) {
+        addEventListener("load", function () {
+          navigator.serviceWorker.register("/calc/sw.js").catch(function () {});
+        });
+      }
     </script>
   </body>
 </html>
