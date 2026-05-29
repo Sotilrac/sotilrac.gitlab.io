@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 author: Carlos
-title: No Goblins
+title: On Goblins
 categories:
   - Working Theory
 tags:
@@ -115,6 +115,8 @@ The goblin line is the whole document in miniature: every paragraph fences off s
 As a junior, the math is grim and the move is the same as it was in 2008: be visible, be useful, follow through. The Codex prompt is OpenAI's idea of what your junior year used to look like, except it is one model running in subscription form on every team that can pay for it. The way past it is real presence and uniqueness of thought, the things the prompt is trying to manufacture and the things you have for free. New and interesting work tends to come from people combining and learning in directions nobody wrote a system prompt for. Your growth, and your grasp of the business reality of the company, is what gives you the edge.
 
 As a senior, the work that used to be optional is now the price of entry. Definition of done, test scaffolding, coding standards, code review with teeth: this is the work that makes a piece of code legible to a junior, a stranger, or a model, and the model raises the cost of skipping any of it. The Codex prompt is OpenAI doing this work for their own model in their own product; the equivalent on your team is the repository's READMEs, the CONTRIBUTING file, the test conventions, and the standards you enforce in review. Build the scaffolding once, and you spend the rest of your career applying it; skip it, and you spend the rest of your career re-explaining the same thing.
+
+There is an upside that lands hardest at this level. Because the tool collapses the time a task takes, the half-hour between two meetings, which was never enough to load a problem into your head and make real progress, is now enough to finish a change. For a senior or a busy lead whose calendar is shredded into fragments, that is the difference between shipping something and shipping nothing: the work that used to require a protected afternoon now fits in the gaps, so the calendar stops being a wall between you and the code.
 
 As a hiring manager, the math is also grim. You are not getting another generation of engineers unless you hire one, and it is a hard sell when you can augment your current workforce with LLMs instead. If you can afford it, hire for judgment, follow-through, and a unique personality. That is how you build a resilient team, capable of innovating and staying nimble when the next wave of tools arrives.
 

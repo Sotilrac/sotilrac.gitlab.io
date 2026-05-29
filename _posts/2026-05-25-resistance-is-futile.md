@@ -157,7 +157,9 @@ At resonance $X_L = X_C = Z_0$, the tank's characteristic impedance, which is th
 
 $$Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}, \qquad \Delta f_{-3\text{dB}} = \frac{f_0}{Q}$$
 
-High Q means low loss and narrow bandwidth, which is great for selectivity but unforgiving of detuning: a wireless-power coil with $Q = 300$ rolls off in tens of kilohertz, so a stray finger near the coil that nudges the inductance a percent or two can move the resonance right out of band. Hobbyists usually meet LC resonance in three places: ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, where Qi and the newer Qi2 (the standard behind Apple's MagSafe) have decisively won the consumer market on inductive coupling at 87 to 205 kHz. The other band that comes up in hobbyist and research wireless-power work is 6.78 MHz, a globally harmonized ISM frequency that Part 18 leaves without an in-band power cap, which is why it remains attractive for experimental resonant links. The calculator's preset buttons jump to all four frequencies.
+High Q means low loss and narrow bandwidth, which is great for selectivity but unforgiving of detuning: a wireless-power coil with $Q = 300$ rolls off in tens of kilohertz, so a stray finger near the coil that nudges the inductance a percent or two can move the resonance right out of band.
+
+Hobbyists usually meet LC resonance in three places: ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, where Qi and the newer Qi2 (the standard behind Apple's MagSafe) have decisively won the consumer market on inductive coupling at 87 to 205 kHz. The other band that comes up in hobbyist and research wireless-power work is 6.78 MHz, a globally harmonized ISM frequency that Part 18 leaves without an in-band power cap, which is why it remains attractive for experimental resonant links. The calculator's preset buttons jump to all four frequencies.
 
 ### RC Cutoff
 
