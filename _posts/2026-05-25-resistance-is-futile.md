@@ -145,13 +145,19 @@ At 600 Ω the same +10 dBm gives $V_\text{rms} \approx 2.45 \, \text{V}$.
 
 An inductor and a capacitor wired together form a tank, an LC resonator that sloshes energy back and forth between the magnetic field of the coil and the electric field of the cap. At one specific frequency, called the resonant frequency $f_0$, the two reactances cancel exactly and the tank looks pure-resistive from the outside. That single equation runs an enormous amount of RF and power electronics: it sets the channel of every superhet radio, the carrier of every wireless charger, the operating point of every Class-E amplifier, and the trap frequency of every notch filter. Given any two of $f$, $L$, $C$ (and an optional series resistance for quality factor), the calculator returns the rest.
 
+{% fig "/img/blog/resistance-is-futile/lc-series.svg", "Series LC tank." %}
+
+{% fig "/img/blog/resistance-is-futile/lc-parallel.svg", "Parallel LC tank." %}
+
+_Series and parallel LC schematics by [First Harmonic / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Series_LC_Circuit.svg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)._
+
 $$f_0 = \frac{1}{2 \pi \sqrt{L C}}, \qquad X_L = \omega_0 L, \qquad X_C = \frac{1}{\omega_0 C}, \qquad Z_0 = \sqrt{\frac{L}{C}}$$
 
 At resonance $X_L = X_C = Z_0$, the tank's characteristic impedance, which is the natural impedance the driver sees and the number you match against when feeding a coil from a 50 Ω source. The losses in real components show up as an equivalent series resistance $R$ (coil DCR, capacitor ESR, plus the reflected losses from any load coupled to the coil), and they set the tank's quality factor and bandwidth:
 
 $$Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}, \qquad \Delta f_{-3\text{dB}} = \frac{f_0}{Q}$$
 
-High Q means low loss and narrow bandwidth, which is great for selectivity but unforgiving of detuning: a wireless-power coil with $Q = 300$ rolls off in tens of kilohertz, so a stray finger near the coil that nudges the inductance a percent or two can move the resonance right out of band. Hobbyists usually meet LC resonance in three places: ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, which currently lives in two camps: the inductive Qi standard at 87 to 205 kHz with cousins at 360 kHz, and the resonant AirFuel system at 6.78 MHz on the ISM band, designed for looser coil alignment. The calculator's preset buttons jump straight to those frequencies.
+High Q means low loss and narrow bandwidth, which is great for selectivity but unforgiving of detuning: a wireless-power coil with $Q = 300$ rolls off in tens of kilohertz, so a stray finger near the coil that nudges the inductance a percent or two can move the resonance right out of band. Hobbyists usually meet LC resonance in three places: ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, where Qi and the newer Qi2 (the standard behind Apple's MagSafe) have decisively won the consumer market on inductive coupling at 87 to 205 kHz. The other band that comes up in hobbyist and research wireless-power work is 6.78 MHz, a globally harmonized ISM frequency that Part 18 leaves without an in-band power cap, which is why it remains attractive for experimental resonant links. The calculator's preset buttons jump to all four frequencies.
 
 ### RC Cutoff
 

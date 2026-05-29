@@ -1994,7 +1994,7 @@ class EECalculator extends HTMLElement {
         <div class="seg" data-presets>
           <button class="btn" type="button" data-preset="125k">RFID LF 125k</button>
           <button class="btn" type="button" data-preset="200k">Qi inductive 200k</button>
-          <button class="btn" type="button" data-preset="6.78M">AirFuel 6.78M</button>
+          <button class="btn" type="button" data-preset="6.78M">ISM 6.78M</button>
           <button class="btn" type="button" data-preset="13.56M">NFC 13.56M</button>
         </div>
       </div>
@@ -2033,7 +2033,7 @@ class EECalculator extends HTMLElement {
         <div class="result-row"><span class="result-label">X_L = X_C at f₀</span><span class="result-value">${formatSI(out.xL, "Ω")}</span></div>
         <div class="result-row"><span class="result-label">Z₀ = √(L/C)</span><span class="result-value">${formatSI(out.z0, "Ω")}</span></div>
         ${qRow}
-        <div class="note">f₀ = 1/(2π·√(LC)). At resonance the reactances cancel, so a series RLC tank looks purely resistive (=R) and a parallel tank looks like a high impedance (≈Q·Z₀). For wireless-power coils, R is the total series loss (coil DCR + cap ESR + reflected secondary), and a high Q means narrow bandwidth: small detuning kills coupling. Common bands: Qi inductive 87–205 kHz, Qi MPP ~360 kHz, AirFuel Resonant 6.78 MHz, NFC/HF RFID 13.56 MHz, LF RFID 125 kHz.</div>
+        <div class="note">f₀ = 1/(2π·√(LC)). At resonance the reactances cancel, so a series RLC tank looks purely resistive (=R) and a parallel tank looks like a high impedance (≈Q·Z₀). For wireless-power coils, R is the total series loss (coil DCR + cap ESR + reflected secondary), and a high Q means narrow bandwidth: small detuning kills coupling.</div>
       `;
     };
     el.querySelectorAll("input").forEach((inp) =>
