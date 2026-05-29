@@ -1991,14 +1991,11 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="row" style="margin-top:0.4em">
-        <div class="field field-grow">
-          <label>Presets</label>
-          <div class="seg" data-presets>
-            <button class="btn" type="button" data-preset="125k">RFID LF 125k</button>
-            <button class="btn" type="button" data-preset="200k">Qi inductive 200k</button>
-            <button class="btn" type="button" data-preset="6.78M">AirFuel 6.78M</button>
-            <button class="btn" type="button" data-preset="13.56M">NFC 13.56M</button>
-          </div>
+        <div class="seg" data-presets>
+          <button class="btn" type="button" data-preset="125k">RFID LF 125k</button>
+          <button class="btn" type="button" data-preset="200k">Qi inductive 200k</button>
+          <button class="btn" type="button" data-preset="6.78M">AirFuel 6.78M</button>
+          <button class="btn" type="button" data-preset="13.56M">NFC 13.56M</button>
         </div>
       </div>
 
