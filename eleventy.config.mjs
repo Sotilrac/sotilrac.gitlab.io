@@ -22,6 +22,14 @@ export default function (eleventyConfig) {
 
   // --- Global data ---
   eleventyConfig.addGlobalData("buildDate", new Date());
+  // Stable per-build cache key for the /calc/ service worker. Format
+  // YYYYMMDDHHMMSS in UTC; every CI run produces a new value, so installed PWAs
+  // pick up the new bundle on next launch and the old cache is evicted by the
+  // SW's activate handler.
+  eleventyConfig.addGlobalData(
+    "buildId",
+    new Date().toISOString().slice(0, 19).replace(/[-:T]/g, ""),
+  );
 
   // --- Passthrough copy ---
   eleventyConfig.addPassthroughCopy("js");
@@ -130,6 +138,9 @@ export default function (eleventyConfig) {
       tag: "ee-calculator",
       script: "/js/ee-calculator.js",
       title: "EE Calculator",
+      description:
+        "Hobbyist electrical-engineering calculator: resistor color code, E-series finder, voltage divider, LED resistor, Ohm's law, AC math, RC filter, 555 timer, AWG, PCB trace width, controlled impedance, LC resonance.",
+      categories: ["utilities", "education", "productivity"],
       w: 832,
       h: 900,
       bg: "#f5efe3",
@@ -139,6 +150,9 @@ export default function (eleventyConfig) {
       tag: "programmer-calculator",
       script: "/js/programmer-calculator.js",
       title: "Programmer's Calculator",
+      description:
+        "Programmer's calculator: bitwise operations, base conversion (hex, decimal, binary, octal), and click-to-flip bit-field editing.",
+      categories: ["utilities", "developer", "productivity"],
       w: 776,
       h: 620,
       bg: "#0f1923",

@@ -53,6 +53,26 @@
           navigator.serviceWorker.register("/calc/sw.js").catch(function () {});
         });
       }
+
+      // Umami: one event per page load identifying how the calc was opened.
+      // mode = 'pwa' (installed), 'popup' (detach button from a post),
+      // 'browser' (direct visit to /calc/<name>/). Fires after window load so
+      // the deferred umami.js has had time to attach.
+      addEventListener("load", function () {
+        setTimeout(function () {
+          if (!window.umami || !window.umami.track) return;
+          var mode = "browser";
+          if (
+            window.matchMedia &&
+            window.matchMedia("(display-mode: standalone)").matches
+          ) {
+            mode = "pwa";
+          } else if (window.opener) {
+            mode = "popup";
+          }
+          window.umami.track("calc-open", { calc: {{ calc.name | dump | safe }}, mode: mode });
+        }, 0);
+      });
     </script>
   </body>
 </html>

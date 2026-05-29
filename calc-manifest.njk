@@ -10,6 +10,8 @@ eleventyExcludeFromCollections: true
   "id": "/calc/{{ calc.name }}/",
   "name": {{ calc.title | dump | safe }},
   "short_name": {{ calc.title | dump | safe }},
+  "description": {{ calc.description | dump | safe }},
+  "categories": {{ calc.categories | dump | safe }},
   "start_url": "/calc/{{ calc.name }}/",
   "scope": "/calc/{{ calc.name }}/",
   "display": "standalone",
