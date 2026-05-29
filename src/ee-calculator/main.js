@@ -716,6 +716,41 @@ function rcSolve(r, c, fc) {
   return { ok: true, r, c, fc, tau };
 }
 
+// ---- LC resonance ----
+
+// Series/parallel LC tank: f₀ = 1 / (2π·√(LC)). Given any two of {L, C, f}, the
+// third falls out. R is optional and turns on Q (=ω₀L/R = √(L/C)/R) and the
+// -3 dB bandwidth (=f₀/Q). Z₀ = √(L/C) is the characteristic impedance of the
+// tank (equal to X_L and X_C at resonance) — useful for matching wireless-
+// power coils to the driver.
+function resonance({ L, C, f, r }) {
+  const have = [L, C, f].filter((x) => x != null && isFinite(x) && x > 0);
+  if (have.length < 2) return { ok: false, reason: "enter any two of L, C, f" };
+  let L_ = L,
+    C_ = C,
+    f_ = f;
+  if (L_ != null && C_ != null) {
+    f_ = 1 / (2 * Math.PI * Math.sqrt(L_ * C_));
+  } else if (L_ != null && f_ != null) {
+    const w = 2 * Math.PI * f_;
+    C_ = 1 / (w * w * L_);
+  } else {
+    const w = 2 * Math.PI * f_;
+    L_ = 1 / (w * w * C_);
+  }
+  const w = 2 * Math.PI * f_;
+  const xL = w * L_;
+  const xC = 1 / (w * C_);
+  const z0 = Math.sqrt(L_ / C_);
+  let Q = null,
+    bw = null;
+  if (r != null && isFinite(r) && r > 0) {
+    Q = xL / r;
+    bw = f_ / Q;
+  }
+  return { ok: true, L: L_, C: C_, f: f_, w, xL, xC, z0, Q, bw };
+}
+
 // ---- 555 timer ----
 
 // Astable: f = 1.44 / ((R1 + 2*R2) * C); duty = (R1+R2)/(R1+2*R2)
@@ -938,7 +973,7 @@ const TABS = [
   {
     id: "ac",
     label: "AC signals",
-    tools: ["acamp", "acfreq", "acdbm"],
+    tools: ["acamp", "acfreq", "acdbm", "acres"],
   },
   {
     id: "timing",
@@ -1937,6 +1972,85 @@ class EECalculator extends HTMLElement {
     el.querySelectorAll("input").forEach((inp) =>
       inp.addEventListener("input", go),
     );
+  }
+
+  // ============================================================
+  // Tool: LC resonance (tank circuits, wireless power coils)
+  // ============================================================
+  _render_acres() {
+    const el = this._wrap.querySelector('[data-tool="acres"]');
+    el.innerHTML = `
+      <div class="tool-title">LC resonance</div>
+      <div class="tool-sub">Fill in any two of f, L, C. The third, the reactance, and the tank's characteristic impedance appear. Add R for Q and bandwidth.</div>
+
+      <div class="row">
+        <div class="field"><label>f <span class="unit">(Hz)</span></label><input type="text" data-f placeholder="e.g. 6.78M"></div>
+        <div class="field"><label>L <span class="unit">(H)</span></label><input type="text" data-l placeholder="e.g. 10u"></div>
+        <div class="field"><label>C <span class="unit">(F)</span></label><input type="text" data-c placeholder="e.g. 55p"></div>
+        <div class="field"><label>R <span class="unit">(Ω, optional)</span></label><input type="text" data-r placeholder="e.g. 1.5"></div>
+      </div>
+
+      <div class="row" style="margin-top:0.4em">
+        <div class="field field-grow">
+          <label>Presets</label>
+          <div class="seg" data-presets>
+            <button class="btn" type="button" data-preset="125k">RFID LF 125k</button>
+            <button class="btn" type="button" data-preset="200k">Qi inductive 200k</button>
+            <button class="btn" type="button" data-preset="6.78M">AirFuel 6.78M</button>
+            <button class="btn" type="button" data-preset="13.56M">NFC 13.56M</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="result" data-result></div>
+    `;
+    const result = el.querySelector("[data-result]");
+    const go = () => {
+      const get = (sel) => {
+        const v = el.querySelector(sel).value.trim();
+        if (v === "") return null;
+        const n = parseSI(v);
+        return isFinite(n) ? n : null;
+      };
+      const known = {
+        f: get("[data-f]"),
+        L: get("[data-l]"),
+        C: get("[data-c]"),
+      };
+      const r = get("[data-r]");
+      const out = resonance({ ...known, r });
+      if (!out.ok) {
+        result.innerHTML = `<span class="result-value warn">${out.reason}</span>`;
+        return;
+      }
+      const cls = (k) => (known[k] == null ? "accent" : "");
+      const qRow =
+        out.Q == null
+          ? ""
+          : `<div class="result-row"><span class="result-label">Q (unloaded, from R)</span><span class="result-value">${out.Q.toFixed(1)}</span></div>
+             <div class="result-row"><span class="result-label">−3 dB bandwidth</span><span class="result-value">${formatSI(out.bw, "Hz")}</span></div>`;
+      result.innerHTML = `
+        <div class="result-row"><span class="result-label">Frequency f₀</span><span class="result-value ${cls("f")}">${formatSI(out.f, "Hz")}</span></div>
+        <div class="result-row"><span class="result-label">Inductance L</span><span class="result-value ${cls("L")}">${formatSI(out.L, "H")}</span></div>
+        <div class="result-row"><span class="result-label">Capacitance C</span><span class="result-value ${cls("C")}">${formatSI(out.C, "F")}</span></div>
+        <div class="result-row"><span class="result-label">X_L = X_C at f₀</span><span class="result-value">${formatSI(out.xL, "Ω")}</span></div>
+        <div class="result-row"><span class="result-label">Z₀ = √(L/C)</span><span class="result-value">${formatSI(out.z0, "Ω")}</span></div>
+        ${qRow}
+        <div class="note">f₀ = 1/(2π·√(LC)). At resonance the reactances cancel, so a series RLC tank looks purely resistive (=R) and a parallel tank looks like a high impedance (≈Q·Z₀). For wireless-power coils, R is the total series loss (coil DCR + cap ESR + reflected secondary), and a high Q means narrow bandwidth: small detuning kills coupling. Common bands: Qi inductive 87–205 kHz, Qi MPP ~360 kHz, AirFuel Resonant 6.78 MHz, NFC/HF RFID 13.56 MHz, LF RFID 125 kHz.</div>
+      `;
+    };
+    el.querySelectorAll("input").forEach((inp) =>
+      inp.addEventListener("input", go),
+    );
+    el.querySelectorAll("[data-preset]").forEach((btn) =>
+      btn.addEventListener("click", () => {
+        el.querySelector("[data-f]").value = btn.dataset.preset;
+        el.querySelector("[data-f]").dispatchEvent(
+          new Event("input", { bubbles: true }),
+        );
+      }),
+    );
+    go();
   }
 
   // ============================================================

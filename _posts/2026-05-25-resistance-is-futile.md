@@ -141,6 +141,18 @@ $$+10 \, \text{dBm} = 10 \, \text{mW} \implies V_\text{rms} = 707 \, \text{mV}, 
 
 At 600 Ω the same +10 dBm gives $V_\text{rms} \approx 2.45 \, \text{V}$.
 
+### LC Resonance
+
+An inductor and a capacitor wired together form a tank, an LC resonator that sloshes energy back and forth between the magnetic field of the coil and the electric field of the cap. At one specific frequency, called the resonant frequency $f_0$, the two reactances cancel exactly and the tank looks pure-resistive from the outside. That single equation runs an enormous amount of RF and power electronics: it sets the channel of every superhet radio, the carrier of every wireless charger, the operating point of every Class-E amplifier, and the trap frequency of every notch filter. Given any two of $f$, $L$, $C$ (and an optional series resistance for quality factor), the calculator returns the rest.
+
+$$f_0 = \frac{1}{2 \pi \sqrt{L C}}, \qquad X_L = \omega_0 L, \qquad X_C = \frac{1}{\omega_0 C}, \qquad Z_0 = \sqrt{\frac{L}{C}}$$
+
+At resonance $X_L = X_C = Z_0$, the tank's characteristic impedance, which is the natural impedance the driver sees and the number you match against when feeding a coil from a 50 Ω source. The losses in real components show up as an equivalent series resistance $R$ (coil DCR, capacitor ESR, plus the reflected losses from any load coupled to the coil), and they set the tank's quality factor and bandwidth:
+
+$$Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}, \qquad \Delta f_{-3\text{dB}} = \frac{f_0}{Q}$$
+
+High Q means low loss and narrow bandwidth, which is great for selectivity but unforgiving of detuning: a wireless-power coil with $Q = 300$ rolls off in tens of kilohertz, so a stray finger near the coil that nudges the inductance a percent or two can move the resonance right out of band. Hobbyists usually meet LC resonance in three places: ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, which currently lives in two camps: the inductive Qi standard at 87 to 205 kHz with cousins at 360 kHz, and the resonant AirFuel system at 6.78 MHz on the ISM band, designed for looser coil alignment. The calculator's preset buttons jump straight to those frequencies.
+
 ### RC Cutoff
 
 RC filters appear everywhere you need to bandwidth-limit a signal: antialiasing in front of an ADC, blocking DC out of an AC-coupled audio stage, smoothing PWM into something approaching a steady voltage, debouncing a logic edge, rolling off high-frequency noise on a sensor line. They're the simplest filter you can build, and they're often "good enough".
