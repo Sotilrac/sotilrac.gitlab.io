@@ -1300,6 +1300,18 @@ figure.post-fig {
   box-shadow: 0 1px 3px var(--silver);
 }
 
+/* Schematic SVGs with different aspect ratios (the Wikimedia LC pair is
+   240x360 vs 360x360, for example) would otherwise render at the figure's
+   fit-content widths and look uneven. Pin them to the post's figWidth so a
+   series + parallel pair sits at the same width regardless of source size. */
+figure.post-fig:has(img[src*="/lc-"]) {
+  width: var(--fig-width, 38em);
+}
+figure.post-fig:has(img[src*="/lc-"]) img {
+  width: 100%;
+  height: auto;
+}
+
 figure.post-fig img {
   border-radius: 2px;
 }
