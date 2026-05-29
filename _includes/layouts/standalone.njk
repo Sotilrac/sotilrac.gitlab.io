@@ -6,30 +6,37 @@
     <main class="standalone-wrap">{{ content | safe }}</main>
 
     <script>
-      // When opened as a popup (the detach button), shrink the window to fit
+      // When opened as a popup (the detach button), resize the window to fit
       // the rendered calculator. No-op in a normal tab, where resizeTo is
-      // ignored. The custom element upgrades asynchronously, so poll briefly
-      // until it reports a size.
+      // ignored. The custom element upgrades asynchronously, and its height
+      // changes when the user switches tabs, so we watch with ResizeObserver
+      // and re-fit. Width is clamped so a stray flex shrink can't shrink the
+      // popup; height is capped to the screen so a tall tab can't push the
+      // titlebar off-screen.
       (function () {
+        var calc = document.querySelector(".standalone-wrap").firstElementChild;
+        if (!calc) return;
+        var padX = 32; // .standalone-wrap horizontal padding (1rem each side)
+        var padY = 48; // vertical padding (1.5rem each side)
         function fit() {
-          var calc = document.querySelector(".standalone-wrap").firstElementChild;
-          if (!calc) return;
           var r = calc.getBoundingClientRect();
-          if (!r.width || !r.height) return setTimeout(fit, 50);
-          var padX = 32; // .standalone-wrap horizontal padding (1rem each side)
-          var padY = 48; // vertical padding (1.5rem each side)
+          if (!r.width || !r.height) return;
           var chromeX = window.outerWidth - window.innerWidth;
           var chromeY = window.outerHeight - window.innerHeight;
+          var maxH = (screen.availHeight || window.outerHeight) - 40;
           try {
             window.resizeTo(
               Math.ceil(r.width + padX + chromeX),
-              Math.ceil(r.height + padY + chromeY),
+              Math.min(maxH, Math.ceil(r.height + padY + chromeY)),
             );
           } catch (e) {}
         }
         addEventListener("load", function () {
           requestAnimationFrame(fit);
         });
+        if (typeof ResizeObserver !== "undefined") {
+          new ResizeObserver(fit).observe(calc);
+        }
       })();
 
       // Offline support for the installed app. Scope defaults to /calc/, which

@@ -26,6 +26,10 @@
   padding: 0;
 }
 
+/* width:56em + max-width:100% pins the card to a constant width across tabs.
+   The shadow root sits inside a flex parent on the standalone page, so without
+   an explicit width the host would shrink-to-fit and tabs with narrower
+   content would render the whole card narrower. */
 .calc {
   background: var(--bg);
   background-image: radial-gradient(
@@ -37,7 +41,8 @@
   border: 1px solid var(--border-strong);
   border-radius: 8px;
   padding: 1em;
-  max-width: 56em;
+  width: 56em;
+  max-width: 100%;
   box-shadow: 0em 0.25em 0.3em rgba(0, 0, 0, 0.3);
 }
 

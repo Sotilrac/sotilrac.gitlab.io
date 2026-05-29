@@ -1838,3 +1838,10 @@ body.standalone {
   padding: 1.5rem 1rem;
   box-sizing: border-box;
 }
+/* Cap the host element to the viewport. Flex items default to min-content,
+   so the shadow's intrinsic width would otherwise push the host past the
+   viewport on narrow screens. */
+.standalone-wrap > * {
+  min-width: 0;
+  max-width: 100%;
+}
