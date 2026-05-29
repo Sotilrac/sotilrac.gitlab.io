@@ -10,25 +10,32 @@
       // the rendered calculator. No-op in a normal tab, where resizeTo is
       // ignored. The custom element upgrades asynchronously, and its height
       // changes when the user switches tabs, so we watch with ResizeObserver
-      // and re-fit. Width is clamped so a stray flex shrink can't shrink the
-      // popup; height is capped to the screen so a tall tab can't push the
-      // titlebar off-screen.
+      // and re-fit. The width is sized only on the first pass and never
+      // touched again: a height change can introduce a transient scrollbar
+      // that shrinks the calc, and reading that shrunken bounding rect would
+      // lock the popup at a smaller width on every tab switch (feedback loop).
+      // Height is capped to the screen so a tab taller than the display
+      // can't push the title bar off-screen.
       (function () {
         var calc = document.querySelector(".standalone-wrap").firstElementChild;
         if (!calc) return;
         var padX = 32; // .standalone-wrap horizontal padding (1rem each side)
         var padY = 48; // vertical padding (1.5rem each side)
+        var sizedWidth = false;
         function fit() {
           var r = calc.getBoundingClientRect();
           if (!r.width || !r.height) return;
-          var chromeX = window.outerWidth - window.innerWidth;
           var chromeY = window.outerHeight - window.innerHeight;
           var maxH = (screen.availHeight || window.outerHeight) - 40;
+          var newH = Math.min(maxH, Math.ceil(r.height + padY + chromeY));
           try {
-            window.resizeTo(
-              Math.ceil(r.width + padX + chromeX),
-              Math.min(maxH, Math.ceil(r.height + padY + chromeY)),
-            );
+            if (!sizedWidth) {
+              var chromeX = window.outerWidth - window.innerWidth;
+              window.resizeTo(Math.ceil(r.width + padX + chromeX), newH);
+              sizedWidth = true;
+            } else {
+              window.resizeTo(window.outerWidth, newH);
+            }
           } catch (e) {}
         }
         addEventListener("load", function () {
