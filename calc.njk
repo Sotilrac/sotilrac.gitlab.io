@@ -6,7 +6,7 @@ pagination:
   alias: calc
 permalink: "/calc/{{ calc.name }}/"
 eleventyComputed:
-  title: "{{ calc.title }}"
+  title: "{{ calc.title | safe }}"
   manifest: "/calc/{{ calc.name }}/manifest.webmanifest"
   themeColor: "{{ calc.theme }}"
 ---

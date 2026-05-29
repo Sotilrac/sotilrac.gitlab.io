@@ -8,8 +8,8 @@ eleventyExcludeFromCollections: true
 ---
 {
   "id": "/calc/{{ calc.name }}/",
-  "name": "{{ calc.title }}",
-  "short_name": "{{ calc.title }}",
+  "name": {{ calc.title | dump | safe }},
+  "short_name": {{ calc.title | dump | safe }},
   "start_url": "/calc/{{ calc.name }}/",
   "scope": "/calc/{{ calc.name }}/",
   "display": "standalone",
