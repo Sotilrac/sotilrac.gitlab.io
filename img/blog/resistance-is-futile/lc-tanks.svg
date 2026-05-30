@@ -1,0 +1,86 @@
+<!--
+  Series and parallel LC tank schematics, combined.
+  Adapted from First Harmonic / Wikimedia Commons:
+    https://commons.wikimedia.org/wiki/File:Series_LC_Circuit.svg
+    https://commons.wikimedia.org/wiki/File:Parallel_LC_Circuit.svg
+  License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/).
+  This combined file inherits the same CC BY-SA 3.0 license.
+-->
+<svg viewBox="0 0 680 410" preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <rect width="680" height="410" fill="white"/>
+
+    <style type="text/css">
+        <![CDATA[
+            .wire { fill: none; stroke: black; stroke-width: 2; }
+            .label { font-family: Verdana; font-size: 22px; fill: black; }
+            text { font-family: Verdana; fill: black; }
+        ]]>
+    </style>
+
+    <text x="120" y="35" text-anchor="middle" class="label">Series</text>
+    <text x="460" y="35" text-anchor="middle" class="label">Parallel</text>
+
+    <!-- ===== Series LC (translated down by 50) ===== -->
+    <g transform="translate(0,50)">
+        <polyline points="20,50 150,50 150,90" class="wire"/>
+        <polyline points="150,170 150,210" class="wire"/>
+        <polyline points="20,330 150,330 150,290" class="wire"/>
+
+        <circle cx="20" cy="50" r="3" style="fill:white; stroke:black"/>
+        <circle cx="20" cy="330" r="3" style="fill:white; stroke:black"/>
+
+        <text x="10" y="110" font-size="18">+</text>
+        <text x="10" y="200" font-size="18" font-style="italic">v</text>
+        <text x="10" y="290" font-size="18">-</text>
+
+        <polygon points="55,50 45,45 45,55" style="fill:black;stroke:black;stroke-width:1"/>
+        <text x="50" y="35" font-size="18" font-style="italic">i</text>
+
+        <path d="M 150 90 l 0 15 q -40 5 0 10 q -40 5 0 10 q -40 5 0 10 q -40 5 0 10 q -40 5 0 10 l 0 15"
+              stroke="black" stroke-width="2" fill="none"/>
+        <text x="180" y="140" font-size="24">L</text>
+        <text x="105" y="100" font-size="12">+</text>
+        <text x="105" y="130" font-size="18" font-style="italic">v</text>
+        <text x="115" y="140" font-size="12" font-style="italic">L</text>
+        <text x="105" y="170" font-size="12">-</text>
+
+        <path d="M 150 210 l 0 35 m -20 0 l 40 0 m 0 10 l -40 0 m 20 0 l 0 35"
+              stroke="black" stroke-width="2" fill="none"/>
+        <text x="180" y="260" font-size="24">C</text>
+        <text x="105" y="220" font-size="12">+</text>
+        <text x="105" y="250" font-size="18" font-style="italic">v</text>
+        <text x="115" y="260" font-size="12" font-style="italic">C</text>
+        <text x="105" y="290" font-size="12">-</text>
+    </g>
+
+    <!-- ===== Parallel LC (translated to x=280, down by 50) ===== -->
+    <g transform="translate(280,50)">
+        <polyline points="20,50 200,50 200,110" class="wire"/>
+        <polyline points="120,150 120,110 280,110 280,150" class="wire"/>
+        <polyline points="120,230 120,270 280,270 280,230" class="wire"/>
+        <polyline points="20,330 200,330 200,270" class="wire"/>
+
+        <circle cx="200" cy="110" r="3"/>
+        <circle cx="200" cy="270" r="3"/>
+        <circle cx="20" cy="50" r="3" style="fill:white; stroke:black"/>
+        <circle cx="20" cy="330" r="3" style="fill:white; stroke:black"/>
+
+        <text x="10" y="130" font-size="18">+</text>
+        <text x="10" y="200" font-size="18" font-style="italic">v(t)</text>
+        <text x="10" y="270" font-size="18">-</text>
+
+        <polygon points="55,50 45,45 45,55" style="fill:black;stroke:black;stroke-width:1"/>
+        <text x="50" y="35" font-size="18" font-style="italic">i(t)</text>
+
+        <path d="M 120 150 l 0 15 q -40 5 0 10 q -40 5 0 10 q -40 5 0 10 q -40 5 0 10 q -40 5 0 10 l 0 15"
+              stroke="black" stroke-width="2" fill="none"/>
+        <text x="70" y="200" font-size="24">L</text>
+
+        <path d="M 280 150 l 0 35 m -20 0 l 40 0 m 0 10 l -40 0 m 20 0 l 0 35"
+              stroke="black" stroke-width="2" fill="none"/>
+        <text x="310" y="200" font-size="24">C</text>
+    </g>
+
+</svg>
