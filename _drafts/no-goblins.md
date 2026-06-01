@@ -10,23 +10,25 @@ tags:
   - work
 ---
 
-Across commencement stages this May, graduates have been [booing AI off the podium](https://www.axios.com/2026/05/19/college-graduates-ai-commencement-speech). Eric Schmidt got it loudest at the University of Arizona. The same scene played out wherever a speaker reached for the "next industrial revolution" speech. This makes a lot of sense given the current job climate.
+Across commencement stages this May, graduates have been [booing AI off the podium](https://www.axios.com/2026/05/19/college-graduates-ai-commencement-speech). Eric Schmidt got it loudest at the University of Arizona. The same scene played out wherever a speaker very creatively brought up the "next industrial revolution".
 
-I remember being a junior engineer after graduating in 2008 and [looking for a job](/blog/im-looking-for-a-job). It was a tough market and I had to be resourceful. Back then, it meant creating content and learning the new tools. So what does it look like to be resourceful in 2026?
+I remember being a junior engineer after graduating in 2008 and [looking for a job](/blog/im-looking-for-a-job). It was a tough market and I had to be resourceful. Back then, it meant creating content and learning the tools of the day. So what does it look like to be resourceful in 2026?
 
 Some of it feels the same. Hiring has [slowed to levels last seen in 2010](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start), [unemployment for recent grads is running roughly twice the general rate](https://www.clevelandfed.org/publications/economic-commentary/2025/ec-202514-are-young-college-graduates-losing-their-edge-in-the-job-market), and connections still matter more than they should. The instinct to make yourself visible is the same one I had then, and it works again.
 
-In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_?. General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same window. Most of those cuts spared the seniors who already know the ropes.
+In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_?. General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same time window. Most of those cuts spared the seniors who already know the ropes.
 
 ## A calculator for words
 
-A large language model is a calculator for words. It speeds up work you already know how to evaluate, and it cannot do quality work you do not understand. The tool brings speed; you bring the judgment.
+I view large language models as calculators for words. It speeds up work you already know how to evaluate, and it cannot do quality work if you do not understand; They brings speed and require judgment.
 
-We have built tools like this before. Engineering drafting used to be done by hand on paper, and a generation of draftsmen earned their keep drawing dimensioned views in pencil with steady hands. No engineer drafts by hand today. CAD is more precise, more reproducible, easier to share, and easier to change. A hand-drawn dimensioned view is now a liability: slower to make, harder to revise, impossible to version. Spreadsheets did the same thing to arithmetic. Nobody runs the payroll on paper anymore, and if you tried, you would be fired before you got to row twelve.
+We have built tools like this before. Engineering drafting used to be done by hand on paper, and a generation of draftsmen earned their keep drawing dimensioned views in pencil with steady hands. No engineer drafts by hand today. CAD is more precise, more reproducible, easier to share, and easier to change. A hand-drawn dimensioned view is now a liability: slower to make, harder to revise, and cumbersome to version. Spreadsheets did the same thing to arithmetic. Nobody runs the payroll on paper anymore, and if you tried, you'd be fired with alacrity. Knowing how to use Excell, however doesn't make you an accountant.
 
-The pattern is consistent: the tool amplifies the person who already knows what the answer should look like, and it ruins the person who does not. The first time you used a spreadsheet to sum a column, you could still check the total in your head. The hundredth time, you trusted the cell. If you had never multiplied two numbers by hand, you would not catch the day a stray decimal turned a six-figure forecast into a seven-figure one.
+The pattern is consistent: the tool amplifies the person who already knows what the answer should look like, and it bewilders the person who does not. If you had never multiplied two numbers by hand, you'd lack the inuition for the order of magnitude of the result.
 
-LLMs sit in the same lineage. They make experts faster at things they already understand, and they leave novices with output they cannot evaluate. (This is true twice over for visual work, where the tool fluently produces things that look right and are not.) The gains are real, and so is the cliff.
+LLMs sit in the same lineage. They make experts faster at things they already understand, while enabling novices to create output they cannot evaluate.
+
+<!-- Not sure sbout this, was was the intension? (This is true twice over for visual work, where the tool fluently produces things that look right and are not.) The gains are real, and so is the cliff. -->
 
 One side note worth holding onto: LLMs are best, by a long way, at Python and at web work. This is no accident. The web is open by default; every page ships its own source. Python has been the lingua franca of academia and open source for two decades. The training corpus for those stacks is, effectively, everything anyone ever wrote. For everything else, the model is working from whatever happened to leak out. The competence of the tool is shaped by what people gave away.
 
@@ -125,3 +127,20 @@ As a hiring manager, the math is also grim. You are not getting another generati
 There is no silver bullet here. The honest advice for a junior engineer in 2026 is the same advice that worked in 2008, with the volume turned up: keep using open source, because the corpus that built the tools was given away and it has to keep being given away to stay alive; keep creating things _par amour de l'art_, because the work that ages well rarely started as a deliverable; keep learning, because the only edge that compounds is what you carry in your own head.
 
 And, by no means, bring up the goblins.
+
+<!-- Outr job is automation, Ive been automating my work away my entire career. the goal is always to ccreate a suystem that automates or simplifies a tas. as in a software system, but also an organization, such as a team or company that can execute a complex set of instructions, ideally with minimal intervention. lebveraging every reosurce efficienty. -->
+
+<!-- Plan (do not delete):
+
+1. opening: bad sentiment about ai fuled by bad job market
+2. the central question is how to deal with LLMs. from a recent graduate and a senior perspective
+3. understanding llms. calculator for words, similar to otehr tools. rigor distinction
+4. how we got here? It's becuase of open source
+5. So what are llms actually replacing? analysis of prompt and quotes
+6. senior perspective
+7. back to junior: how to make your boss' life easier
+8. back to the essence of open source. Open source is a work of passion that inspired and powers a large part of our daily lives and that is essential in any company. Embrace this type of work. Now that our powers of automation are amplified, we get to decide what we automate away and what we pour our souls over.
+
+ -->
+
+ <!-- Cease the means of computation -corry doctorow -->

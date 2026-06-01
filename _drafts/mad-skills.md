@@ -1,15 +1,42 @@
 ---
+layout: layouts/post.njk
 author: Carlos
 title: Mad Skills
 categories:
-  - Info
+  - Software
 tags:
   - claude-code
   - tools
   - automation
 ---
 
-I've been playing with Claude Code and ended up making a couple web apps. THis was an area that I hand't got to develop and it seems LLMs excell at it since there's somuch relevant material redilly available.
+ <!--
+
+ I've been playing with Claude Code and ended up making a couple web apps. THis was an area that I hand't got to develop and it seems LLMs excell at it since there's somuch relevant material redilly available. For those unfamiliar, Claude code is a tool to run a more coding oriented version of the LLM in the command line (and i think now also in teh browser, but I haven;t use that version). This allows it to use your local computing resources, to create and edit files, build and run programs, and red the output such programs generate. This is quite powerful, especially when running in in a linux terminal becuase you can control almost every aspect of the computer formthe command line.
+
+ Coding with the LLM feels like wearing an exoskeleton that makes you faster and stronger. Much like iron man, the OG vibe coder, it feels like you can have something that can translate your thoughts into concrete code.
+
+ For this to work well there are two things that are needed: the LLM needs to be competent enough, and you need to ahve clear and realizable ideas. There's a third thing: you need to have a good enough metal model of the LLM in order to communicate the ideas in a way that makes thme actionable.
+
+ So, to recap, in order to bring an idea to fruition, you need to have a clear plan and express it in a way that can be implented by something otehr than you. You need to make sure that whatever is implementing it, has the apropriate skill level to actually acomplish it.
+
+ This is starting to sound a lot like delegation. For team leads and senior engineers, this is nothing new. We've been doing this for ages. So working with LLMs feels a lot like working with junior engineers. They needs explicit direction, can be trusted with some technical decicions, but ultimately they need to be provided with a clear map of how to complete the work. Provideing the early judgement calls early on in a project can help claude avoid painting itself into a corner and shurning tokens.
+
+ Another similar aspect is that CLaude code perfroms much better when provided with mechanisms for validating its performance as it dgoes, unit tests, linting, building, code standards. This quick feedback enables it to iterate quickly and mure independently. Much like a juniour would benefit from the same tools.
+
+ I feels particularly blessed in this case becuase I have been fortunate enough to gather a lot of such experience: both with hands-on code development and leading teams.
+
+ Otehr useful skills:
+ * bash and the linux command line in general. As Claude code uses a lof of linux command line tools and it is quite helpful to know at a glance what to dis/allow or how to gte it unstuck
+
+ One substantial difference with working with otehr enginneers is that Claude doens't learn. At least not in the way a person does. It can save prefernces and you can give it permission to run certain types of commands, but it doens't learn the preferences, and idiosincracies of teh code, especially across different repos.
+
+ This is one of the mian caveats when adopting LLMs, especially if you're considering replacing jun
+
+
+  -->
+
+I've been playing with Claude Code and ended up making a couple web apps. This was an area that I hand't got to develop and it seems LLMs excell at it since there's somuch relevant material redilly available.
 
 Claude Code added a feature called "skills" a while back, and I ignored it for a long time. The pitch sounded fine: drop a folder with a markdown file in `~/.claude/skills/`, Claude picks it up when relevant. I had a lifetime supply of half-formed automation ideas that hadn't survived earlier rounds, though, and I wasn't excited about trying again.
 
