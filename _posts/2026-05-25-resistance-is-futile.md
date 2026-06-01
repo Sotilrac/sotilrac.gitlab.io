@@ -143,7 +143,11 @@ At 600 Ω the same +10 dBm gives $V_\text{rms} \approx 2.45 \, \text{V}$.
 
 ### LC Resonance
 
-An inductor and a capacitor wired together form a tank, an LC resonator that sloshes energy back and forth between the coil's magnetic field and the cap's electric field. At the resonant frequency $f_0$, the two reactances cancel and the tank looks pure-resistive from the outside. That cancellation is the trick behind powering a load through a small coil. A bare coil is mostly an inductor, which an AC source sees as a large reactive impedance: most of the source's energy reflects back instead of crossing into the magnetic field, and the rest heats the wire instead of reaching the load. Add a series capacitor sized so $X_C = X_L$ at the operating frequency and the reactances cancel; what remains in the loop is the ohmic loss of the wire, so the source pushes real current, the coil's field builds up, and a second coil tuned to the same frequency on the receiver side picks up enough flux to feed its load. Both sides have to land on the same $f_0$, which is what the calculator does: give it any two of $f$, $L$, $C$, plus an optional series resistance for the quality factor, and the rest falls out.
+An inductor and a capacitor wired together form a tank, an LC resonator that sloshes energy back and forth between the coil's magnetic field and the cap's electric field. At the resonant frequency $f_0$, the two reactances cancel and the tank looks pure-resistive from the outside.
+
+That cancellation is the trick behind powering a load through a small coil. A bare coil is mostly an inductor, which an AC source sees as a large reactive impedance: most of the source's energy reflects back instead of crossing into the magnetic field, and the rest heats the wire instead of reaching the load. Add a series capacitor sized so $X_C = X_L$ at the operating frequency and the reactances cancel; what remains in the loop is the ohmic loss of the wire, so the source pushes real current, the coil's field builds up, and a second coil tuned to the same frequency on the receiver side picks up enough flux to feed its load.
+
+The Calculator comes in since both sides must have the same $f_0$. Feed it any two of $f$, $L$, $C$, plus an optional series resistance for the quality factor, other quantities follow.
 
 {% fig "/img/blog/resistance-is-futile/lc-tanks.svg", "Series and parallel LC tank topologies." %}
 
