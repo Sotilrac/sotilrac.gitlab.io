@@ -10,9 +10,14 @@ tags:
   - automation
 ---
 
+<!--
+  goal: to show how it feels to code with ai as a senior. provide caveats and insight. expand into how this translaets in teams and organizations
+
+ -->
+
  <!--
 
- I've been playing with Claude Code and ended up making a couple web apps. THis was an area that I hand't got to develop and it seems LLMs excell at it since there's somuch relevant material redilly available. For those unfamiliar, Claude code is a tool to run a more coding oriented version of the LLM in the command line (and i think now also in teh browser, but I haven;t use that version). This allows it to use your local computing resources, to create and edit files, build and run programs, and red the output such programs generate. This is quite powerful, especially when running in in a linux terminal becuase you can control almost every aspect of the computer formthe command line.
+ I've been playing with Claude Code and ended up making a couple web apps. This was an area that I hand't got to develop and it seems LLMs excell at it since there's somuch relevant material redilly available. For those unfamiliar, Claude code is a tool to run a more coding oriented version of the LLM in the command line (and i think now also in teh browser, but I haven;t use that version). This allows it to use your local computing resources, to create and edit files, build and run programs, and red the output such programs generate. This is quite powerful, especially when running in in a linux terminal becuase you can control almost every aspect of the computer formthe command line.
 
  Coding with the LLM feels like wearing an exoskeleton that makes you faster and stronger. Much like iron man, the OG vibe coder, it feels like you can have something that can translate your thoughts into concrete code.
 
@@ -29,9 +34,15 @@ tags:
  Otehr useful skills:
  * bash and the linux command line in general. As Claude code uses a lof of linux command line tools and it is quite helpful to know at a glance what to dis/allow or how to gte it unstuck
 
- One substantial difference with working with otehr enginneers is that Claude doens't learn. At least not in the way a person does. It can save prefernces and you can give it permission to run certain types of commands, but it doens't learn the preferences, and idiosincracies of teh code, especially across different repos.
+ One substantial difference with working with otehr enginneers is that Claude doens't learn. At least not in the way a person does. It can save prefernces and you can give it permission to run certain types of commands, but it doens't learn the preferences, and idiosincracies of the code, especially across different repos.
 
- This is one of the mian caveats when adopting LLMs, especially if you're considering replacing jun
+ This is one of the main caveats when adopting LLMs, especially if you're considering replacing juniors.
+
+ This means i find myself reprompting a lot of teh same things.
+
+ THis in when skills come ine hansy: https://gitlab.com/sotilrac/skills
+
+ Very much like how Claude is very good at html and react, becuase of the abondance of material it sucks at D2 (a newer diagraming laguage) and rutinely halucinates of insists on wrong paradigms and features. This is what dot me started with writing skills.
 
 
   -->
@@ -54,7 +65,7 @@ That property is the one that converted me. I had assumed adding more context me
 
 Three skills so far, all things I was already doing manually.
 
-**d2** is a reference for the D2 diagram language. It records what works in ELK vs. dagre, what affects layout and what does not, and the gotchas I keep rediscovering. It auto-loads on any `*.d2` file, so a D2 file in a conversation flips the skill on without me asking. This is the one that started everything.
+**d2-diagram** is a reference for the D2 diagram language. It records what works in ELK vs. dagre, what affects layout and what does not, and the gotchas I keep rediscovering. It auto-loads on any `*.d2` file, so a D2 file in a conversation flips the skill on without me asking. This is the one that started everything.
 
 **html-deck** is for authoring single-file HTML decks with a small custom element I wrote, `<deck-stage>`. It handles keyboard navigation, auto-scaling to the viewport, one-page-per-slide print to PDF, speaker notes, and resume-where-you-left-off via localStorage. The skill ships the runtime, a template, and a worked example. I use this instead of Keynote or Google Slides for any deck I want to version-control or share as a URL.
 
