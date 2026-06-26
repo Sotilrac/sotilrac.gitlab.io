@@ -8,7 +8,7 @@ tags:
   -
 ---
 
-There's a distinction in programming robots that doesn't show up in most other kinds of code, and it's one I learned early on, back when I first started writing software that actuates in the physical world. It surfaces in the most ordinary place imaginable: a use of `if` that, once you see the problem, becomes quietly preposterous, the threshold check. It looks something like this:
+There's a distinction in programming robots that doesn't show up in most other kinds of code, and it's one I learned early on, back when I first started writing software that actuates in the physical world. It surfaces in the most ordinary place imaginable: a use of `if` that, once you see the problem, becomes preposterous, the threshold check. It looks something like this:
 
 ```python
 def command(value):
@@ -30,10 +30,10 @@ def command(value):
   <text x="190" y="100" fill="#e53e3e" font-size="13" font-family="sans-serif">infinite slope</text>
   <text x="150" y="196" fill="#888" font-size="12" font-family="sans-serif">threshold</text>
 </svg>
-<figcaption>What the <code>if</code> quietly asks for: an instant jump, which is an infinite slope, which is an infinite amount of energy.</figcaption>
+<figcaption>What the <code>if</code> asks for: an instant jump, which is an infinite slope, which is an infinite amount of energy.</figcaption>
 </figure>
 
-So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity quietly asks for something impossible: an infinite amount of energy.
+So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity asks for something impossible: an infinite amount of energy.
 
 Nothing at the macro scale of nature transitions instantaneously between two discrete states. Command a motor to spin at 1000 RPM and then ask it for 0, and it will slow down gradually no matter how much torque you throw at it; gradually might mean 30 milliseconds, but 30 milliseconds is still not zero.
 
