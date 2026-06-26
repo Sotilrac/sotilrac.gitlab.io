@@ -135,4 +135,14 @@ double sigmoid(double x, double x0 = 0.0, double y0 = 0.0,
 }
 ```
 
+Going back to the `command` we started with, the sigmoid becomes a gate that fades the output off around the threshold instead of dropping it off a cliff:
+
+```python
+def command(value):
+    gate = sigmoid(value, x0=0.5, y0=1.0, y1=0.0, k=20.0)
+    return 2 * value * gate
+```
+
+Below the threshold the gate sits near 1 and you get the original `2 * value`; above it the gate slides to 0 and the output bleeds away. The `k` sets how abrupt that shoulder is.
+
 Swap the threshold `if` for one of these and the hardware stops fighting your code. The motor eases into its setpoint, the battery keeps its charge, and you spend a finite amount of energy getting there.
