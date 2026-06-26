@@ -73,7 +73,7 @@ Drag the sliders and watch what each one does to the curve:
     <label><span class="sig-name">final y<sub>1</sub></span><input type="range" min="0" max="1" step="0.01" value="1" data-k="y1"><span class="sig-val" data-v="y1">1.00</span></label>
   </div>
 </div>
-<figcaption>The same transition the <code>if</code> wanted, now with a slope you can afford.</figcaption>
+<figcaption>The same transition with a realizable slope.</figcaption>
 </figure>
 
 <style>
