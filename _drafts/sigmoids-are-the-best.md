@@ -21,8 +21,8 @@ def command(value):
 
 ## Infinite Energy
 
-<figure class="post-fig">
-<svg viewBox="0 0 340 200" role="img" aria-label="A step function jumping instantly from low to high at the threshold" style="max-width:840px;width:100%;height:auto;background:#fff;border-radius:6px">
+<figure class="post-fig" style="--fig-width: 76em">
+<svg viewBox="0 0 340 200" role="img" aria-label="A step function jumping instantly from low to high at the threshold" style="width:100%;height:auto;background:#fff;border-radius:6px">
   <line x1="40" y1="40" x2="40" y2="180" stroke="#bbb" stroke-width="1" />
   <line x1="40" y1="180" x2="320" y2="180" stroke="#bbb" stroke-width="1" />
   <polyline points="40,170 180,170 180,40 320,40" fill="none" stroke="#2b6cb0" stroke-width="3" />
@@ -56,7 +56,7 @@ The shape has four knobs, and between them they cover every case I've ever neede
 
 Drag the sliders and watch what each one does to the curve:
 
-<figure class="post-fig">
+<figure class="post-fig" style="--fig-width: 76em">
 <div class="sig-widget" id="sigDemo">
   <svg class="sig-plot" viewBox="0 0 340 210" role="img" aria-label="Interactive sigmoid plot"></svg>
   <div class="sig-controls">
