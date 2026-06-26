@@ -13,6 +13,12 @@ tags:
 <!--
   goal: to show how it feels to code with ai as a senior. provide caveats and insight. expand into how this translaets in teams and organizations
 
+  The moral of the story is that skills only go so far in automating fairly mechanical things. But in the long run we still benefit from hiring and training the next generation of engineers who will bring their experience and ideas.
+
+  The insight is that when we work, a part og teh product is the actual outpur or artifact: the function, library, app or robot behaviour. There's anothe very important part of the work which is the development of our own skills. The judgement calls we make given what worked and where we got burned.
+
+  LLMs are teh capable models that they are today beciause of the free (although not alwasy willing) contribution of all OSS, public domain and open content. It is very easy to create variatiosn of things that have already been done (especially if they were done 1000 times). Creating new things still requires imagination, ingenuity and mad skills
+
  -->
 
  <!--
@@ -111,8 +117,8 @@ Two pieces of advice from doing this. First, the descriptions are the contract: 
 
 Second, keep the bodies short. Once a skill loads, every token competes with the actual conversation. I have cut every skill at least once after it loaded but contributed nothing useful. Long-form references and templates go in sibling files, referenced from the body so Claude reads them only when it needs to.
 
-## Install
+## The skills you can't install
 
-`./install.sh` from the repo root copies each skill into `~/.claude/skills/`, or pass names to pick specific ones. The `--list` flag shows what is available and what is already installed; `--project` installs into the current repo's `.claude/skills/` instead of the home directory; `--link` symlinks instead of copying, which I use while iterating, so edits in the repo go live without reinstalling. Changes apply mid-session, no restart.
+There's a limit to all this, and it's worth naming: skills only go so far, automating the fairly mechanical things, the lecture I was tired of retyping, the checklist I'd otherwise paste in. When we work, part of the product is the artifact itself: the function, the library, the app, the robot behaviour. The other part, the one nobody ships, is the development of our own skills, the judgment calls we accumulate from what worked and where we got burned. A `SKILL.md` captures the first kind of knowledge; the second kind only grows in people.
 
-If you have been on the fence about skills, my read is this: pick the prompt you are sick of typing, paste it into a `SKILL.md`, write a one-line description that names the trigger, and you are done. The first one is the hardest; after that, they accumulate.
+It also helps to remember why LLMs are as capable as they are: the free, although not always willing, contribution of all the open source, public domain, and open content ever published. That diet makes them superb at producing variations of things that have been done before, especially things that have been done a thousand times, and it is why, in the long run, we still come out ahead hiring and training the next generation of engineers, who will bring their own experience and ideas. Creating something new still takes imagination, ingenuity, and mad skills.

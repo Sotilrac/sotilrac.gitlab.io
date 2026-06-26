@@ -143,4 +143,9 @@ And, by no means, bring up the goblins.
 
  -->
 
- <!-- Cease the means of computation -corry doctorow -->
+ <!-- Cease the means of computation -corry doctorow
+
+
+ppl in the future will need much more discipline to learn, becuase the results are more easilly available.
+
+ -->
