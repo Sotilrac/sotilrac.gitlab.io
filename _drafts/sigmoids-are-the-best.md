@@ -8,7 +8,7 @@ tags:
   -
 ---
 
-Programming robots taught me to distrust a line of code most programmers never think twice about: the threshold check. It looks like this:
+There's a distinction in programming robots that doesn't show up in most other kinds of code, and it's one I learned early on, back when I first started writing software that actuates in the physical world. It surfaces in the most ordinary place imaginable: a use of `if` that, once you see the problem, becomes quietly preposterous, the threshold check. It looks something like this:
 
 ```python
 def command(value):
@@ -30,31 +30,31 @@ def command(value):
   <text x="190" y="100" fill="#e53e3e" font-size="13" font-family="sans-serif">infinite slope</text>
   <text x="150" y="196" fill="#888" font-size="12" font-family="sans-serif">threshold</text>
 </svg>
-<figcaption>The step an <code>if</code> asks for: an instant jump, which means infinite slope and infinite energy.</figcaption>
+<figcaption>What the <code>if</code> quietly asks for: an instant jump, which is an infinite slope, which is an infinite amount of energy.</figcaption>
 </figure>
 
-What's wrong with it? The syntax is legal and the logic is sound. But in any system with physical consequences, motion, sound, heating and cooling, lights, the sharp jump from one branch to the other implies something impossible: infinite energy.
+So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity quietly asks for something impossible: an infinite amount of energy.
 
-Nothing at human scale changes state instantly. Command a motor to drop from 1000 RPM to a dead stop, and it coasts down no matter how much torque you throw at it. The coast might last only 30ms, but 30ms is not zero.
+Nothing at the macro scale of nature transitions instantaneously between two discrete states. Command a motor to spin at 1000 RPM and then ask it for 0, and it will slow down gradually no matter how much torque you throw at it; gradually might mean 30 milliseconds, but 30 milliseconds is still not zero.
 
-In the best case, the hardware softens your step through its own response. If the rest of your code assumes the jump happened on command, you get clashing setpoints, stuttering motors, and the occasional shorted battery.
+In the best case, the physical system softens your commanded step all on its own, through its own step response. But if your code assumes the discontinuity actually happened the way you wrote it, you end up with clashing commands, stuttering motors, and the occasional shorted battery.
 
 ## Smooth Operator
 
-A sigmoid fixes this. It smooths the transition for a handful of arithmetic operations, cheap enough to run in any control loop.
+This is where sigmoids earn their keep. A sigmoid gives you a simple, computationally cheap way to smooth that transition, so the commanded signal already respects the physics before the hardware ever has to.
 
 $$
 f(x) = y_0 + (y_1 - y_0)\,\frac{1}{1 + e^{-k\,(x - x_0)}}
 $$
 
-Four knobs cover every case you need:
+The shape has four knobs, and between them they cover every case I've ever needed:
 
-- $x_0$, the **threshold**: the value of $x$ where the curve sits halfway between its ends, the spot the old `if` switched at.
-- $y_0$, the **initial value**: where the output starts, far below the threshold.
-- $y_1$, the **final value**: where the output settles, far above the threshold.
-- $k$, the **weight**: how sharp the transition is. Small $k$ gives a lazy ramp, large $k$ tightens it toward a wall, and $k \to \infty$ hands you back the original step. The sigmoid is the `if` with a dial for how much energy you are willing to spend.
+- **Threshold, $x_0$:** the value of $x$ where the curve sits halfway between its ends, the spot where the old `if` used to switch.
+- **Initial value, $y_0$:** where the output starts, far below the threshold.
+- **Final value, $y_1$:** where the output settles, far above it.
+- **Weight, $k$:** how sharp the transition is. A small $k$ gives a lazy ramp, a large $k$ tightens it toward a wall, and $k \to \infty$ hands you back the original step. In other words, the sigmoid is just the `if` with a dial for how much energy you're willing to spend.
 
-Drag the sliders to feel how each one moves the curve:
+Drag the sliders and watch what each one does to the curve:
 
 <figure class="post-fig">
 <div class="sig-widget" id="sigDemo">
@@ -113,7 +113,7 @@ Drag the sliders to feel how each one moves the curve:
 })();
 </script>
 
-The implementation is a single expression in any language. Python:
+The whole thing is a single expression in any language you like. In Python:
 
 ```python
 import math
@@ -124,7 +124,7 @@ def sigmoid(x, x0=0.0, y0=0.0, y1=1.0, k=1.0):
     return y0 + (y1 - y0) / (1.0 + math.exp(-k * (x - x0)))
 ```
 
-And C++:
+And the same in C++:
 
 ```cpp
 #include <cmath>
@@ -143,6 +143,6 @@ def command(value):
     return 2 * value * gate
 ```
 
-Below the threshold the gate sits near 1 and you get the original `2 * value`; above it the gate slides to 0 and the output bleeds away. The `k` sets how abrupt that shoulder is.
+Below the threshold the gate sits near 1 and you get the original `2 * value`; above it the gate slides to 0 and the output bleeds away, and `k` decides how abrupt that shoulder is.
 
-Swap the threshold `if` for one of these and the hardware stops fighting your code. The motor eases into its setpoint, the battery keeps its charge, and you spend a finite amount of energy getting there.
+Swap the threshold `if` for a sigmoid and the hardware stops fighting your code: the motor eases into its setpoint, the battery keeps its charge, and the energy bill stays finite. Sigmoids, as the title promised, are the best.
