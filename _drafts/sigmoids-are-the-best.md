@@ -11,13 +11,12 @@ tags:
 Programming robots taught me to distrust a line of code most programmers never think twice about: the threshold check. It looks like this:
 
 ```python
-
-my_threshold = 0.5
-
-if value < my_threshold:
-  return 2*value
-else:
-  return 0
+def command(value):
+    my_threshold = 0.5
+    if value < my_threshold:
+        return 2 * value
+    else:
+        return 0
 ```
 
 ## Infinite Energy
