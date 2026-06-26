@@ -22,7 +22,7 @@ def command(value):
 ## Infinite Energy
 
 <figure class="post-fig">
-<svg viewBox="0 0 340 200" role="img" aria-label="A step function jumping instantly from low to high at the threshold" style="max-width:420px;width:100%;height:auto;background:#fff;border-radius:6px">
+<svg viewBox="0 0 340 200" role="img" aria-label="A step function jumping instantly from low to high at the threshold" style="max-width:840px;width:100%;height:auto;background:#fff;border-radius:6px">
   <line x1="40" y1="40" x2="40" y2="180" stroke="#bbb" stroke-width="1" />
   <line x1="40" y1="180" x2="320" y2="180" stroke="#bbb" stroke-width="1" />
   <polyline points="40,170 180,170 180,40 320,40" fill="none" stroke="#2b6cb0" stroke-width="3" />
@@ -30,10 +30,10 @@ def command(value):
   <text x="190" y="100" fill="#e53e3e" font-size="13" font-family="sans-serif">infinite slope</text>
   <text x="150" y="196" fill="#888" font-size="12" font-family="sans-serif">threshold</text>
 </svg>
-<figcaption>What the <code>if</code> asks for: an instant jump, which is an infinite slope, which is an infinite amount of energy.</figcaption>
+<figcaption>An instant jump, with an infinite slope.</figcaption>
 </figure>
 
-So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity asks for something impossible: an infinite amount of energy.
+So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity requires for something impossible: an infinite amount of energy.
 
 Nothing at the macro scale of nature transitions instantaneously between two discrete states. Command a motor to spin at 1000 RPM and then ask it for 0, and it will slow down gradually no matter how much torque you throw at it; gradually might mean 30 milliseconds, but 30 milliseconds is still not zero.
 
@@ -71,7 +71,7 @@ Drag the sliders and watch what each one does to the curve:
 
 <style>
 .sig-widget { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center; }
-.sig-plot { background: #fff; border-radius: 6px; width: 340px; max-width: 100%; height: auto; }
+.sig-plot { background: #fff; border-radius: 6px; width: 680px; max-width: 100%; height: auto; }
 .sig-controls { display: flex; flex-direction: column; gap: 0.4rem; font-family: sans-serif; font-size: 0.85rem; min-width: 220px; }
 .sig-controls label { display: grid; grid-template-columns: 5.5rem 1fr 2.5rem; align-items: center; gap: 0.4rem; }
 .sig-controls span { text-align: right; font-variant-numeric: tabular-nums; }
