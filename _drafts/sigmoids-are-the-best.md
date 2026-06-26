@@ -8,7 +8,7 @@ tags:
   -
 ---
 
-There's an important distinction when programming robotics systems that may not apply to other types of programs. This is an insight I learned early on when working on systems that actuate in the physical world. In robotics, there's a use of `if` that is quite preposterous: checking thresholds.
+Programming robots taught me to distrust a line of code most programmers never think twice about: the threshold check. It looks like this:
 
 ```python
 
@@ -24,15 +24,15 @@ else:
 
 <!-- Insert image of sharp step -->
 
-What is so bad about it? you may ask. It's perfectly legal syntax and a legitimate use case. In robotics, however, or in any application that deals with real world physical consequences, such as motion, sound, heating and cooling, and lights, this sharp discontinuity implies something impossible: an infinite amount of energy.
+What's wrong with it? The syntax is legal and the logic is sound. But in any system with physical consequences, motion, sound, heating and cooling, lights, the sharp jump from one branch to the other implies something impossible: infinite energy.
 
-Nothing in the macro scale of nature can transition instantaneously between two discrete states. For instance, commanding a motor to spin at 1000 RPM and then 0 RPM will cause the motor to slow down gradually, no matter how strong the motor torque you apply. Gradually may mean 30ms but it is still not instantaneous.
+Nothing at human scale changes state instantly. Command a motor to drop from 1000 RPM to a dead stop, and it coasts down no matter how much torque you throw at it. The coast might last only 30ms, but 30ms is not zero.
 
-So, in the best case the physical system itself will soften the commanded step with its own step response. However, if your code expects the discontinuity to be honored, you may have clashing commands, stuttering motors, or shorted batteries.
+In the best case, the hardware softens your step through its own response. If the rest of your code assumes the jump happened on command, you get clashing setpoints, stuttering motors, and the occasional shorted battery.
 
 ## Smooth Operator
 
-This is where sigmoids come in. They provide a simple way of smoothing a transition in a computationally inexpensive way.
+A sigmoid fixes this. It smooths the transition for a handful of arithmetic operations, cheap enough to run in any control loop.
 
 <!-- Insert sigmoid formula. Params should be threshold, initial and final value, weight -->
 
