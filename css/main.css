@@ -1326,16 +1326,21 @@ figure.post-fig figcaption {
 }
 
 /* --- Interactive function plots (<function-plot>) --- */
+/* Fixed width (not fit-content) so every plot renders at the same size. */
+figure.post-fig.plot-fig {
+  width: 100%;
+  max-width: var(--fig-width, 44em);
+}
+
 .plot-widget {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
 }
 
 .plot-chart {
-  flex: 1 1 320px;
+  width: 100%;
   min-width: 0;
 }
 
@@ -1343,8 +1348,7 @@ figure.post-fig figcaption {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 16rem;
-  max-width: 100%;
+  width: 100%;
   font-size: 0.85rem;
   color: var(--charcoal);
 }
@@ -1367,6 +1371,21 @@ figure.post-fig figcaption {
   text-align: right;
   font-variant-numeric: tabular-nums;
   color: var(--slate);
+}
+
+.plot-tip {
+  position: absolute;
+  transform: translate(-50%, -150%);
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--silver);
+  border-radius: 4px;
+  background: var(--page-bg);
+  color: var(--charcoal);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* --- Post navigation (prev/next) --- */

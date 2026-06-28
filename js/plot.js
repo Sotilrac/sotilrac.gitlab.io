@@ -199,11 +199,45 @@
               self.drawMarkers(u, pal, pr);
             },
           ],
+          setCursor: [
+            function (u) {
+              self.updateTip(u);
+            },
+          ],
         },
       };
 
       this.pal = pal;
       this.chart = new window.uPlot(opts, this.computeData(), this.chartEl);
+
+      // Floating (x, y) readout pinned to the hovered point.
+      this.tip = document.createElement("div");
+      this.tip.className = "plot-tip";
+      this.tip.style.display = "none";
+      this.chart.over.appendChild(this.tip);
+    }
+
+    updateTip(u) {
+      var tip = this.tip;
+      if (!tip) return;
+      var idx = u.cursor.idx;
+      if (idx == null) {
+        tip.style.display = "none";
+        return;
+      }
+      var xv = u.data[0][idx];
+      var yv = u.data[1][idx];
+      if (yv == null) {
+        tip.style.display = "none";
+        return;
+      }
+      var fmt = function (v) {
+        return String(+v.toFixed(2));
+      };
+      tip.textContent = "(" + fmt(xv) + ", " + fmt(yv) + ")";
+      tip.style.left = u.valToPos(xv, "x") + "px";
+      tip.style.top = u.valToPos(yv, "y") + "px";
+      tip.style.display = "";
     }
 
     drawMarkers(u, pal, pr) {
