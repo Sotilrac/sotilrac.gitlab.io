@@ -100,6 +100,7 @@
       if (sliders.length) {
         var controls = document.createElement("div");
         controls.className = "plot-controls";
+        this.controlsEl = controls;
         sliders.forEach(function (s) {
           var dec = decimalsOf(s.step != null ? s.step : 0.1);
           var label = document.createElement("label");
@@ -215,6 +216,20 @@
       this.tip.className = "plot-tip";
       this.tip.style.display = "none";
       this.chart.over.appendChild(this.tip);
+
+      this.alignControls();
+    }
+
+    // Inset the slider row so it spans only the plot area (y-axis to right edge).
+    alignControls() {
+      var u = this.chart;
+      var el = this.controlsEl;
+      if (!u || !el) return;
+      var pr = window.uPlot.pxRatio || 1;
+      var left = u.bbox.left / pr;
+      var rightInset = u.width - (u.bbox.left + u.bbox.width) / pr;
+      el.style.marginLeft = left + "px";
+      el.style.marginRight = Math.max(0, rightInset) + "px";
     }
 
     updateTip(u) {
@@ -273,6 +288,7 @@
     resize() {
       if (!this.chart) return;
       this.chart.setSize({ width: this.chartWidth(), height: this.height });
+      this.alignControls();
     }
 
     rebuild() {

@@ -1348,7 +1348,7 @@ figure.post-fig.plot-fig {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
+  width: auto;
   font-size: 0.85rem;
   color: var(--charcoal);
 }
