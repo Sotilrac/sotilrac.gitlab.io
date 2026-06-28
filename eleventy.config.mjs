@@ -121,6 +121,12 @@ export default function (eleventyConfig) {
     return `<figure class="post-fig model-fig"><model-viewer src="${src}" alt="${a}" camera-controls touch-action="pan-y" camera-orbit="${o}"></model-viewer><figcaption>${a}</figcaption></figure><script type="module" src="/js/model-viewer.min.js"></script>`;
   });
 
+  // Interactive function plot (uPlot). Config is JSON in the paired body; see js/plot.js.
+  eleventyConfig.addPairedShortcode("plot", (config, caption) => {
+    const fc = caption ? `<figcaption>${caption}</figcaption>` : "";
+    return `<figure class="post-fig plot-fig"><function-plot><script type="application/json">${config}</script></function-plot>${fc}</figure><link rel="stylesheet" href="/css/uplot.min.css"><script src="/js/uplot.iife.min.js" defer></script><script src="/js/plot.js" defer></script>`;
+  });
+
   eleventyConfig.addShortcode("youtube", (id) => {
     return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
   });

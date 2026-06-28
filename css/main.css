@@ -1325,6 +1325,50 @@ figure.post-fig figcaption {
   text-align: center;
 }
 
+/* --- Interactive function plots (<function-plot>) --- */
+.plot-widget {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.plot-chart {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.plot-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 16rem;
+  max-width: 100%;
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+.plot-controls label {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plot-controls input[type="range"] {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  accent-color: var(--royal-blue);
+}
+
+.plot-controls .plot-val {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--slate);
+}
+
 /* --- Post navigation (prev/next) --- */
 .post-nav {
   display: flex;
