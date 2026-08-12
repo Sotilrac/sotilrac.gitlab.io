@@ -11,9 +11,9 @@ tags:
 date: 2026-06-12T12:00:00-04:00
 ---
 
-Twenty years ago, in college, I learned about UML and its promise of well organized information and software architectures. Back in college, I assumed tools existed to draw this mythical UML. They do; they are abysmal.
+Twenty years ago, in college, I learned about UML and its promise of well organized information and software architectures. I assumed tools existed to draw this mythical UML. They do; they are abysmal.
 
-Good diagrams are hard to come by, especially in engineering. Some concepts or systems are better represented in graphical form and creating such a representation is an art. Drawing a _pretty_ diagram that is inaccurate or incomplete takes far less effort. Inaccurate here can mean misleading, but I am not covering deceptive diagrams, only the ones drawn in good faith with too little skill or the wrong tool.
+Good diagrams are hard to come by, especially in engineering. Some concepts or systems are better represented in graphical form, and creating such a representation is an art. Drawing a _pretty_ diagram that is inaccurate or incomplete takes far less effort. Inaccurate here can mean misleading, but I am not covering deceptive diagrams, only the ones drawn in good faith with too little skill or the wrong tool.
 
 Am I being opinionated about these tools? Absolutely, and with good reason: I had to make a lot of diagrams for the various robotic systems I designed and worked on. Were they good diagrams, you may ask? They tried to be for some time, and eventually failed.
 
@@ -23,7 +23,7 @@ So I developed some rules, and ultimately a tool, to make diagramming manageable
 
 A good diagram speaks a visual language, and holds it consistent (e.g. dotted lines mean wireless, rounded boxes are processes). This consistent visual grammar lets the viewer internalize the information quickly and effectively.
 
-Good diagrams also flow, and they hold up at a reasonable scale, ideally fitting on one screen or one large printout with fonts that stay readable even when viewed in it's entirety.
+Good diagrams also flow, and they hold up at a reasonable scale, ideally fitting on one screen or one large printout with fonts that stay readable even when viewed in their entirety.
 
 Beyond consistency and readability comes accuracy: the diagram has to faithfully represent the reality it attempts to convey. Abstractions and simplifications are fine, provided they are intentional and stated.
 
@@ -43,15 +43,15 @@ These tools do let you decide the general layout, and with enough hours and a bi
 
 {% fig "/img/blog/what-makes-good-diagrams/aint-nobody-got-time-for-that.gif", "Ain't nobody got time for that!" %}
 
-These diagrams fierecly resist maintenance, and they are impossible to collaborate on (even when the tool claims otherwise). They go stale fast, and unwittingly deceiving.
+These diagrams fiercely resist maintenance, and they are impossible to collaborate on (even when the tool claims otherwise). They go stale fast, and deceive unwittingly.
 
-Call it diagram debt: part of a broader documentation debt, and it compounds like technical debt, except without failing unit test.
+Call it diagram debt: part of a broader documentation debt, and it compounds like technical debt, except without a failing unit test.
 
 ### Code-Based
 
 The other camp writes code and renders it as a diagram, which sounds like a great idea: consistent styles, automation, spell and syntax checks, linting, syntax highlighting, and best of all, version control and diffs!
 
-Mermaid excited me when I first found it, and later D2 (for its consistent styling of edges). Then the automatic layout renders, and every one of those advantages vanish. If the layout gods rule against you, no amount of tricking the parser will produce the layout you need. In the rare case where you can massage the code into a passable layout, the code stops being readable, having mutated into a hacky, confusing mess.
+Mermaid excited me when I first found it, and later D2 (for its consistent styling of edges). Then the automatic layout renders, and every one of those advantages vanishes. If the layout gods rule against you, no amount of tricking the parser will produce the layout you need. In the rare case where you can massage the code into a passable layout, the code stops being readable, having mutated into a hacky, confusing mess.
 
 No wonder these tools are used in automated code documentation, where determinism and rough readability are the whole requirement (Graphviz and PlantUML come to mind).
 
@@ -69,9 +69,9 @@ The current tools force an impossible choice: (noisy) correctness or visual appe
 
 Tool builders solve for their own users. Graphviz serves researchers who need reproducible layouts in papers, Mermaid serves developers embedding diagrams in markdown, and draw.io serves business users assembling something for a Tuesday slide deck. Documentation teams don't need interactivity, designers don't need git. And then there's me, the robotics systems engineer, who is obviously not a large enough market.
 
-At this point we can give up and accept that good diagrams should be very onerous and prone to rotting in a Google drive folder for years.
+At this point, we can give up and accept that good diagrams should be very onerous and prone to rotting in a Google Drive folder for years.
 
-## How To Solve It?
+## How to Solve It?
 
 {% fig "/img/blog/what-makes-good-diagrams/por-que-no-los-dos.gif", "¿Por qué no los dos?" %}
 
