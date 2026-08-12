@@ -44,7 +44,7 @@ For instance, in block diagrams, they make it very difficult to apply styles acr
 
 One thing these tools do well is allowing the user to decide the general layout. With enough hours and a bit of carpal tunnel you can make a decent diagram. But what if the company color is green instead of orange, or a new subsystem was added? More hours and carpal tunnel await.
 
-{% fig "/img/blog/why-diagrams-rot/aint-nobody-got-time-for-that.gif", "Ain't nobody got time for that!" %}
+{% fig "/img/blog/what-makes-good-diagrams/aint-nobody-got-time-for-that.gif", "Ain't nobody got time for that!" %}
 
 These diagrams become very difficult to maintain. And they are impossible to collaborate on even if the tool says it supports it. Very quickly, they become stale and unwittingly deceiving.
 
@@ -60,7 +60,7 @@ It makes sense that these types of diagrams are used for simple automated use ca
 
 ## Are People Just Dumb?
 
-{% fig "/img/blog/why-diagrams-rot/well_yes_but_no.jpg", "Well yes, but actually no" %}
+{% fig "/img/blog/what-makes-good-diagrams/well_yes_but_no.jpg", "Well yes, but actually no" %}
 
 It's common to blame yourself. I certainly do. Maybe if I mastered the tools better, or learned some obscure syntactic incantation I could get the diagram I want and quickly at that. But alas, many more engineers are in a similar rut.
 
@@ -76,7 +76,7 @@ At this point we can give up and accept that good diagrams should be very onerou
 
 ## What Would Solve It
 
-{% fig "/img/blog/why-diagrams-rot/por-que-no-los-dos.gif", "¿Por qué no los dos?" %}
+{% fig "/img/blog/what-makes-good-diagrams/por-que-no-los-dos.gif", "¿Por qué no los dos?" %}
 
 What if both camps got fused? The graph's structure comes from code, is semantically styled, and is easy to keep up-to-date with the system. On the other hand, the layout is intentional and hand-crafted. Changes to the structure don't destroy the entire layout; changes to the layout can't disagree with the source. Correctness gets automated, and communication can be designed.
 
@@ -90,10 +90,10 @@ From there, you can modify the layout by dragging and dropping nodes, scaling th
 
 Saving changes to the D2 file automatically refreshes the diagram but keeps your layout intact. New nodes appear in available spaces for you to place.
 
-{% compare "/img/blog/why-diagrams-rot/daedalus_diagram_light.png", "/img/blog/why-diagrams-rot/daedalus_diagram_dark.png", "Editing in Daedalus (Light vs Dark)" %}
+{% compare "/img/blog/what-makes-good-diagrams/daedalus_diagram_light.png", "/img/blog/what-makes-good-diagrams/daedalus_diagram_dark.png", "Editing in Daedalus (Light vs Dark)" %}
 
 Edges are often overlooked, so they got the most work. Routing is orthogonal via libavoid (the same engine as Inkscape), every node side holds an ordered list of edge slots that you can drag endpoints between, and labels can be dragged along the edge or centered by default. The layout can be exported to SVG or PNG.
 
 It's a Tauri desktop app, MPL-2.0-licensed, and runs against a folder of `.d2` files. If you have to make good diagrams, [download a release](https://github.com/Sotilrac/daedalus/releases/) and give it a try.
 
-{% compare "/img/blog/why-diagrams-rot/example_ELK.png", "/img/blog/why-diagrams-rot/example.png", "ELK vs. Daedalus" %}
+{% compare "/img/blog/what-makes-good-diagrams/example_ELK.png", "/img/blog/what-makes-good-diagrams/example.png", "ELK vs. Daedalus" %}
