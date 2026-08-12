@@ -15,7 +15,7 @@ Twenty years ago I learned about UML and its promise of well organized informati
 
 Good diagrams are hard to come by, especially in engineering. Some concepts and systems live better in graphical form, and drawing them well is an art. Drawing a _pretty_ diagram that is inaccurate or incomplete takes far less effort. Inaccurate here can mean misleading, but I am not covering deceptive diagrams, only the ones drawn in good faith with too little skill or the wrong tool.
 
-Am I being opinionated about these tools? Absolutely, and with good reason: I drew diagrams for every robotic system I designed and worked on. Were they good diagrams, you may ask? They tried to be, and eventually failed.
+Am I being opinionated about these tools? Absolutely, and with good reason: I drew diagrams for every robotic system I designed and worked on. Were they good diagrams, you may ask? They tried to be for some time, and eventually failed.
 
 So I developed some rules, and ultimately a tool, to make diagramming manageable and pleasant.
 
@@ -27,7 +27,7 @@ Good diagrams also flow, and they hold up at a reasonable scale, ideally fitting
 
 Beyond consistency and readability comes accuracy: the diagram has to faithfully represent the reality it describes. Abstractions and simplifications are fine, provided they are intentional and stated.
 
-Accuracy also decays, so the diagram should be up to date, or failing that, stamped with the date when it last was.
+Accuracy also decays, so the diagram should be up to date, or failing that, dated to when it was.
 
 ## What Makes It Hard
 
@@ -45,7 +45,7 @@ These tools do let you decide the general layout, and with enough hours and a bi
 
 These diagrams resist maintenance, and they are impossible to collaborate on even when the tool claims otherwise. They go stale fast, and deceive without meaning to.
 
-Call it diagram debt: part of a broader documentation debt, and it compounds like technical debt, except no failing test tells you the diagram broke.
+Call it diagram debt: part of a broader documentation debt, and it compounds like technical debt, except without failing test.
 
 ### Code-Based
 
@@ -53,7 +53,7 @@ The other camp writes code and renders it as a diagram, which sounds like a grea
 
 Mermaid excited me when I first found it, and D2 later did the same with its styling for edges. Then the automatic layout renders, and every one of those advantages evaporates. If the layout gods rule against you, no amount of tricking the parser will produce the layout you need, and in the rare case where you can massage the code into a passable layout, the code stops being readable: it becomes a hacky, confusing mess.
 
-No wonder these tools land in automated code documentation, where determinism and rough readability are the whole requirement (Graphviz and PlantUML come to mind).
+No wonder these tools are used in automated code documentation, where determinism and rough readability are the whole requirement (Graphviz and PlantUML come to mind).
 
 ## Are People Just Dumb?
 
@@ -63,13 +63,13 @@ Blaming yourself comes easy, and I certainly do: maybe if I mastered the tools, 
 
 On a [Reddit thread](https://www.reddit.com/r/devops/comments/1neyjf1/why_people_dont_document_honest_answers_only/) about documenting system architectures, one answer concludes: "I tried at first, really. But after a year in this I just don't care any more." One [Substack architect](https://livinginsoftware.substack.com/p/why-are-architecture-diagrams-never) recommends triage instead, given the cost of maintenance: "if the architecture diagram will help solve important questions which have to do with compliance, regulators and strategic direction, then it needs to be maintained." And a [dev.to piece](https://dev.to/erajasekar/the-real-reason-architecture-diagrams-go-stale-35ok) names the problem outright: "the artifact is too expensive to keep close to reality."
 
-The current tools force an impossible choice: correctness or visual appeal. Pick appeal, and the diagram becomes a confident lie.
+The current tools force an impossible choice: (noisy) correctness or visual appeal (that will devolve into a confident lie).
 
 ## Why Is This Still a Problem in 2026?
 
 Tool builders solve for their own users. Graphviz serves researchers who need reproducible layouts in papers, Mermaid serves developers embedding diagrams in markdown, and draw.io serves business users assembling something for a Tuesday presentation. Documentation teams don't need interactivity, designers don't need git, and then there's me, the robotics systems engineer, apparently not a large enough market.
 
-So the accepted state of the art is a PNG in a Google Drive folder, accurate as of some year nobody remembers, which everyone keeps opening anyway.
+So the accepted state of the art is a PNG in a Google Drive folder roting away for many years to come.
 
 ## What Would Solve It
 
