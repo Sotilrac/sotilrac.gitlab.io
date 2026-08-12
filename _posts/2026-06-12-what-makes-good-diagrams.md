@@ -21,7 +21,7 @@ So I developed some rules, and ultimately a tool, to make diagramming manageable
 
 ## What Good Diagrams Do
 
-A good diagram speaks a visual language, and it holds that language consistent: dotted lines mean wireless, rounded boxes are processes. A consistent visual grammar lets the viewer internalize the information quickly.
+A good diagram speaks a visual language, and it holds that language consistent (e.g. dotted lines mean wireless, rounded boxes are processes). A consistent visual grammar lets the viewer internalize the information quickly.
 
 Good diagrams also flow, and they hold up at a reasonable scale, ideally fitting on one screen or one large printout with fonts that stay readable even when you take in the whole thing at once.
 
@@ -51,7 +51,7 @@ Call it diagram debt: part of a broader documentation debt, and it compounds lik
 
 The other camp writes code and renders it as a diagram, which sounds like a great idea: consistent styles, automation, spell and syntax checks, linting, syntax highlighting, and best of all, version control and diffs.
 
-Mermaid excited me when I first found it, and D2 later did the same with its styling for edges. Then the automatic layout renders, and every one of those advantages evaporates. If the layout gods rule against you, no amount of tricking the parser will produce the layout you need, and in the rare case where you can massage the code into a passable layout, the code stops being readable: it becomes a hacky, confusing mess.
+Mermaid excited me when I first found it, and later D2 (for consistent styling of edges as well). Then the automatic layout renders, and every one of those advantages evaporates. If the layout gods rule against you, no amount of tricking the parser will produce the layout you need, and in the rare case where you can massage the code into a passable layout, the code stops being readable: it becomes a hacky, confusing mess.
 
 No wonder these tools are used in automated code documentation, where determinism and rough readability are the whole requirement (Graphviz and PlantUML come to mind).
 
@@ -89,7 +89,7 @@ Save the D2 file and the diagram refreshes without disturbing your layout. New n
 
 {% compare "/img/blog/what-makes-good-diagrams/daedalus_diagram_light.png", "/img/blog/what-makes-good-diagrams/daedalus_diagram_dark.png", "Editing in Daedalus (Light vs Dark)" %}
 
-Most tools neglect edges, so edges got the most work. libavoid routes them orthogonally (the same engine Inkscape uses), every node side holds an ordered list of slots you can drag endpoints between, and labels slide along the edge or sit centered by default. Export the result to SVG or PNG.
+Most tools neglect edges, so edges got the most work. libavoid routes them orthogonally (the same engine as Inkscape), every node side holds an ordered list of slots you can drag endpoints between, and labels slide along the edge or sit centered by default. Export the result to SVG or PNG.
 
 It's a Tauri desktop app, MPL-2.0 licensed, and it runs against a folder of `.d2` files. If you have to make good diagrams, [download a release](https://github.com/Sotilrac/daedalus/releases/) and give it a try.
 
