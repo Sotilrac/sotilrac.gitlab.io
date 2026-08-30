@@ -2,7 +2,7 @@
 // 0xDEADBEEF: A Calculator for Programmers
 // A browser-based calculator for engineers working with
 // binary, octal, decimal, and hexadecimal numbers.
-// Zero dependencies, single file, works forever.
+// No dependencies, single file, works forever.
 // Author: Carlos Asmat, https://asmat.ca
 // ============================================================
 

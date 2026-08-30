@@ -16,7 +16,7 @@ A colleague worries their code isn't _**perfect**_ while it covers all the requi
 
 ## Two Words in a Trench Coat
 
-In everyday speech, _**perfect**_ oscillates mostly between two meanings that have almost nothing to do with each other: one is ancient and practical; the other is more modern and, I think, quite problematic.
+In everyday speech, _**perfect**_ oscillates mostly between two separate meanings: one is ancient and practical; the other is more modern and, I think, quite problematic.
 
 The Latin _perficere_ means [to complete or to finish](https://www.etymonline.com/word/perfect). Something is _**perfect**_ when it is done, when it meets the original intention, and nothing more should be added or, most importantly, subtracted. A task is perfect when it's delivered. A system is perfect when it satisfies the requirements. Perfection here is a property of closure, not of correctness in some cosmic sense.
 
@@ -28,15 +28,15 @@ If flawlessness only has meaning inside closed systems, how do we even know what
 
 ## Dynamic Harmony
 
-And yet, the banana bread is undeniably perfect. So is a specific song in a specific moment, a sunset, or a dance. That feeling is real, and it does not go away just because I cannot write down its criteria. So what is it?
+And yet, the banana bread is undeniably perfect. So is a specific song in a specific moment, a sunset, or a dance. That feeling does not go away just because I cannot express its criteria. So what is it?
 
-I think it is a third sense of _**perfect**_ that the first two obscure, a dynamic harmony, and it is the one we reach for with the people and things we love. The banana bread is perfect not because it hits some objective target, but because the ingredients, the moisture, the occasion, and the hands that made it line up into a coherent whole right now. Change any one element and the feeling goes with it. The perfection comes out of the relationships between the parts, and between the thing and me, in this moment.
+There is a third sense of _**perfect**_: the dynamic harmony we reach with the people and things we love. The banana bread is perfect not because it hits some static target, but because the ingredients, the moisture, the occasion, and the hands that made it line up into a coherent whole right now. The perfection comes out of the relationships between the parts and me in this moment.
 
-This is why _**perfection**_ in this sense cannot be held still. It is tuned to a time and a perceiver. The flawlessness frame borrows from this felt harmony and then demands, in vain, that it be made permanent, objective, and defensible.
+This is why _**perfection**_ in this sense cannot be held still. It is tuned to a time and a perceiver. The flawlessness frame borrows from this felt harmony and wrongly suggests it should be made permanent, objective, and defensible.
 
 {% fig "/img/blog/perfection/perfection.gif", "Perfection!" %}
 
-## Uncertainty Avoidance With Good PR
+## Uncertainty Avoidance
 
 So why does the word stick around in its _flawless_ sense, if it fails so obviously in practice? My suspicion is that it survives because it is cognitively cheap.
 
@@ -44,15 +44,15 @@ Human cognition runs on simplification. Categories, binary distinctions, simplif
 
 This is reinforced by how expensive uncertainty feels. Ambiguity triggers [aversion](https://en.wikipedia.org/wiki/Ellsberg_paradox). Holding multiple possibilities open causes [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue). There is a whole psychological construct called [need for closure](https://en.wikipedia.org/wiki/Need_for_closure) that measures how badly a person wants the world to settle into a clean answer. Collapsing a messy multi-variate problem into "_**perfect or not**_" is the cheap way out.
 
-Once you see it this way, perfectionism (the clinical kind, not "I like well-formatted C++") starts to look like a coping strategy dressed up as high standards. If you convince yourself there is one correct outcome and you have to reach it, you collapse the world into two options: unattainable standards or abject failure. You no longer have to sit with the discomfort of not knowing whether you are doing well. Ambiguity is gone, and evaluation becomes trivial: you're failing.
+Once you see it this way, perfectionism (the clinical kind, not "I like well-formatted C++") starts to look like a coping strategy posing as high standards. If you convince yourself there is one correct outcome and you have to reach it, you get two options: unattainable standards or abject failure. You no longer have to sit with the discomfort of not knowing whether you are doing well. Ambiguity is gone: you're failing.
 
 The research lines up with this: Intolerance of uncertainty [mediates the link](https://doi.org/10.1016/j.jad.2024.08.056) between perfectionism and OCD symptoms, and shows up as a [transdiagnostic factor](https://doi.org/10.1016/j.beth.2025.11.002) across anxiety disorders. Perfectionism in youth [predicts anxiety and depression](https://doi.org/10.1177/2167696823118875). In eating disorders, uncertainty intolerance [moderates the effect](https://doi.org/10.1016/j.eatbeh.2023.101769) of perfectionism on symptoms.
 
-Note that the field distinguishes [perfectionistic strivings from perfectionistic concerns](https://pmc.ncbi.nlm.nih.gov/articles/PMC5303723/); the first is associated with positive outcomes, the second with negative ones. Striving for self-driven excellence is fine; demanding that the universe collapse into a clean pass/fail is not. The flawlessness frame results in chronic dissatisfaction, avoidance, paralysis, and distorted evaluation. The move that was supposed to cut the cost of uncertainty ends up amplifying it.
+Note that the field distinguishes [perfectionistic strivings from perfectionistic concerns](https://pmc.ncbi.nlm.nih.gov/articles/PMC5303723/); the first is associated with positive outcomes, the second with negative ones. Striving for self-driven excellence is fine; demanding that the universe collapse into a clean pass/fail is not. The flawlessness frame results in chronic dissatisfaction, avoidance, paralysis, and distorted evaluation.
 
 ## A More Honest Word
 
-When I catch myself about to call something _**perfect**_, or hear someone else reach for the word, I try to ask what it actually means:
+When I catch myself about to call something _**perfect**_, or hear someone else use the word, I try to ask what it actually means:
 
 - Is it _complete_ for its purpose?
 - Does it _fit_ the needs?
@@ -60,13 +60,13 @@ When I catch myself about to call something _**perfect**_, or hear someone else 
 
 Those are meaningful questions with real answers, whereas _"Is it flawless?"_ is not.
 
-It helps to pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready, fit for purpose**, or my favorite, **good enough**. None of them carry the cosmic overreach of _**perfect**_.
+It helps to pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready**, or my favorite, **good enough**. They all avoid the cosmic overreach of _**perfect**_.
 
-If I mean the modern sense, the honest choices are **flawless, ideal, pristine, faultless, immaculate**. Said out loud, the absurdity of demanding them outside a math textbook gives the game away: a flawless apartment? An immaculate partner? A faultless hire?
+If I mean the modern sense, the honest choices are **flawless, ideal, pristine, faultless, immaculate**. The absurdity of demanding them outside of a math textbook gives the game away: a flawless apartment? An immaculate partner? A faultless hire?
 
-And what if I encounter the third version of _**perfection**_? In that case, I savour it; I gave up trying to stuff it into words.
+And what if I encounter the third version of _**perfection**_? In that case, I savour it; I gave up trying to box it into words.
 
-NGL, publishing this article feels bad, because it's not _**perfect**_ yet. But, oh well, I guess it's _good enough_.
+NGL, publishing this article feels bad, because it's not _**perfect**_ yet. But, oh well, I hope it's _good enough_.
 
 ## Further Reading
 

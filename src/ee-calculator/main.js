@@ -4,7 +4,7 @@
 // engineers: resistor color code, E-series, voltage divider,
 // LED resistor, Ohm's law, RC cutoff, 555 timer, series/
 // parallel reducer, AWG, PCB trace width.
-// Zero dependencies, single file, works forever.
+// No dependencies, single file, works forever.
 // Author: Carlos Asmat, https://asmat.ca
 // ============================================================
 

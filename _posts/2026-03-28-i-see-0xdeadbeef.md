@@ -64,7 +64,7 @@ If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikip
 - Bitmask generator
 - Copy to clipboard with format prefixes
 - Expression history
-- Zero dependencies, runs entirely in the browser
+- No dependencies, runs entirely in the browser
 - Works offline
 
 ## Embed It
