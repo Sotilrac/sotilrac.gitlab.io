@@ -1,11 +1,13 @@
 ---
 layout: layouts/post.njk
 author: Carlos
-title: Sigmoids are the best
+title: Sigmoids are the Best!
 categories:
-  -
+  - Robotics
 tags:
-  -
+  - robotics
+  - python
+  - control
 ---
 
 There's a distinction in programming robots that doesn't show up in most other kinds of code, and it's one I learned early on, back when I first started writing software that actuates in the physical world. It surfaces in the most ordinary place imaginable: a use of `if` that, once you see the problem, becomes preposterous, the threshold check. It looks something like this:
@@ -32,7 +34,7 @@ def command(value):
 }
 {% endplot %}
 
-So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity requires for something impossible: an infinite amount of energy.
+So what's so bad about it? Nothing, syntactically; it's perfectly legal and a legitimate thing to write. But in robotics, or in any program whose outputs have physical consequences (motion, sound, heating and cooling, lights), that sharp discontinuity requires something impossible: an infinite amount of energy.
 
 Nothing at the macro scale of nature transitions instantaneously between two discrete states. Command a motor to spin at 1000 RPM and then ask it for 0, and it will slow down gradually no matter how much torque you throw at it; gradually might mean 30 milliseconds, but 30 milliseconds is still not zero.
 
@@ -51,7 +53,7 @@ The shape has four knobs, and between them they cover every case I've ever neede
 - **Threshold, $x_0$:** the value of $x$ where the curve sits halfway between its ends, the spot where the old `if` used to switch.
 - **Initial value, $y_0$:** where the output starts, far below the threshold.
 - **Final value, $y_1$:** where the output settles, far above it.
-- **Weight, $k$:** how sharp the transition is. A small $k$ gives a lazy ramp, a large $k$ tightens it toward a wall, and $k \to \infty$ hands you back the original step. In other words, the sigmoid is just the `if` with a dial for how much energy you're willing to spend.
+- **Weight, $k$:** how sharp the transition is. A small $k$ gives a lazy ramp, a large $k$ tightens it toward a wall, and $k \to \infty$ hands you back the original step. The sigmoid is the `if` with a dial for how much energy you're willing to spend.
 
 Drag the sliders and watch what each one does to the curve:
 
@@ -105,4 +107,4 @@ Below the threshold the gate sits near 1 and you get the original `2 * value`; a
 
 There's a second, subtler win here. With a hard threshold, an input that hovers right at the boundary is a disaster: a little sensor noise nudges it back and forth across the line, and the output flaps between the two branches on every reading. That's the chatter you hear as a buzzing relay or feel as a dithering motor, and the usual remedy is to bolt on hysteresis or a deadband to keep the comparison from twitching. The sigmoid never has the problem in the first place, because it's continuous: an input sitting on the threshold maps to a value halfway between the two ends, and a small wiggle in the input produces only a small wiggle in the output. There's no line to cross, so there's nothing to flap.
 
-Swap the threshold `if` for a sigmoid and the hardware stops fighting your code: the motor eases into its setpoint, the battery keeps its charge, and the energy bill stays finite. Sigmoids, as the title promised, are the best.
+Swap the threshold `if` for a sigmoid and the hardware stops fighting your code: the motor eases into its setpoint instead of slamming into it, and the energy bill stays finite. Sigmoids, as the title promised, are the best.

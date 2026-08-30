@@ -11,7 +11,7 @@ tags:
   - craft
 ---
 
-For most of my career, I tried to win design arguments on taste, with assertions like "the code would be cleaner this way," "that interface is ugly," or "this architecture is correct." It mostly didn't work, and when it did work, it left a bad taste. Over the last couple of years, I've stopped framing things that way, and the results are dramatically better; the change is small, and almost entirely about framing.
+For most of my career, I tried to win design arguments on taste, with assertions like "the code would be cleaner this way," "that interface is ugly," or "this architecture is correct." It mostly didn't work, and when it did work, it left a bad taste. Over the last couple of years, I've stopped framing things that way, and the results are much better; the change is small, and almost entirely about framing.
 
 ## The Old Frame (Taste, Rightness, Artistry)
 
@@ -39,15 +39,13 @@ The engineering frame reframes the same disagreement in terms neither party can 
 
 Note what changed. I'm not telling anyone their idea is bad; I'm describing the constraints the idea has to live inside, and letting them decide what trade-offs they want to accept. The criterion becomes shared and visible to both of us: time, cost, effort, maintainability, risk.
 
-The key move is that the engineer stops being a judge of taste and becomes a navigator of constraints. The client gets to keep their agency: they are the one making the call, armed with information they wouldn't otherwise have.
+The key move is that you stop arbitrating taste and start laying out constraints. The client gets to keep their agency: they are the one making the call, armed with information they wouldn't otherwise have.
 
 ## Why This Works
 
-There are two reasons.
+The frame signals "I am here to help you find what works for your situation" rather than "I am here to be right," and people respond to that: you stop being an obstacle and become an ally with domain knowledge.
 
-**Good faith is legible.** The engineering frame signals "I am here to help you find what works for your situation" rather than "I am here to be right," and people respond to that. The conversation's emotional weather changes, so you stop being an obstacle and become an ally with domain knowledge.
-
-**The frame is inherently collaborative.** Constraints are a shared map of the terrain, which you and the client are both looking at, pointing at trade-offs and picking a path. In the taste frame, you were standing on opposite sides of a fence; in the engineering frame, you are standing next to each other.
+It is also collaborative by construction. Constraints are a shared map of the terrain, which you and the client are both looking at, pointing at trade-offs and picking a path. In the taste frame you are negotiating whose judgement wins; in the engineering frame you are both reading the same numbers.
 
 There is also a less flattering reason: most of the time, the technically right answer is _also_ the one that wins on constraints, which means that if your taste is any good, you don't need to argue from taste; you can just name the constraints and let the right answer fall out. The taste frame is often a shortcut that papers over analysis you should have done.
 
@@ -57,11 +55,11 @@ The engineering frame depends on a practice that is easy to skip: when you hit a
 
 So, the first move when a disagreement surfaces is not to counter-argue; it is to ask: what is driving your preference, what have you seen with this approach before, what is the constraint I might be missing? Most "irreducible" disagreements dissolve once both parties finish sharing what they were each implicitly assuming the other already knew.
 
-This is free alignment, and it has a useful side effect: asking signals that you think the other person might be right, which is itself part of the good-faith move the engineering frame is making.
+The alignment is free, and asking has a useful side effect: it signals that you think the other person might be right, which is itself part of the good-faith move the engineering frame is making.
 
 ## When the Engineering Frame Isn't Enough
 
-It isn't a universal solvent, since some cases need more:
+It doesn't cover everything, and some cases need more:
 
 - **Irreducible aesthetic disagreement.** Sometimes two paths are genuinely equivalent on all measurable constraints, and preference is all that's left. Here, own the taste frame honestly: "both work, I'd lean here because I find it cleaner, but it's your call."
 - **Values conflicts.** "This design is unsafe" or "this pattern is going to hurt users" isn't a trade-off to discuss, it's a line to hold. Don't engineering-frame yourself out of necessary pushback.
@@ -69,7 +67,7 @@ It isn't a universal solvent, since some cases need more:
 
 ## Moving Between Frames Deliberately
 
-The meta-skill is noticing which frame you are in and choosing it on purpose: the artist frame for your own work when the decision is genuinely yours, the engineering frame for anything you are negotiating with someone else, and the hold-the-line frame for the rare cases where you actually can't compromise.
+The skill worth building is noticing which frame you are in and choosing it on purpose: the artist frame for your own work when the decision is genuinely yours, the engineering frame for anything you are negotiating with someone else, and the hold-the-line frame for the rare cases where you actually can't compromise.
 
 I used to reach for the artist frame by default because it is how I was trained to think about craft: code as personal expression. The switch to the engineering frame has not made me care less about craft; it has made the craft easier to deliver, because the people I work with are no longer defending themselves from my opinions.
 

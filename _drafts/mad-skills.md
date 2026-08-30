@@ -53,7 +53,7 @@ tags:
 
   -->
 
-I've been playing with Claude Code and ended up making a couple of web apps. Web development was a corner of the trade I had never got around to, and LLMs turn out to excel at it, presumably because so much relevant material sits readily available online. Along the way I formed some opinions about what makes the experience work, hit one caveat that anyone planning to replace their junior engineers should hear first, and built a workaround I liked enough to publish.
+I've been playing with Claude Code and ended up making a couple of web apps. Web development was a corner of the trade I had never got around to, and LLMs turn out to excel at it, presumably because so much relevant material sits readily available online.
 
 For those unfamiliar, Claude Code is a tool that runs a coding-oriented version of the LLM in the command line (there's a browser version now too, which I haven't used). The command line is the point: it lets the model use your local computing resources to create and edit files, build and run programs, and read whatever output those programs produce. On a Linux machine this amounts to near-total control, since almost every aspect of the computer is reachable from a terminal.
 
@@ -75,7 +75,7 @@ I feel particularly blessed here, because I've been fortunate enough to gather b
 
 ## The catch
 
-One substantial difference from working with other engineers is that Claude doesn't learn. At least not the way a person does. It can save preferences, and you can grant it standing permission to run certain kinds of commands, but it never absorbs the idiosyncrasies of your code, especially across repos. Every session starts from scratch. This is one of the main caveats when adopting LLMs in a team or an organization, and the one to sit with if you're considering replacing juniors: the junior you invest in compounds, while the LLM resets.
+One substantial difference from working with other engineers is that Claude doesn't learn. At least not the way a person does. It can save preferences, and you can grant it standing permission to run certain kinds of commands, but it never absorbs the idiosyncrasies of your code, especially across repos. Every session starts from scratch. This is one of the main caveats when adopting LLMs in a team or an organization, and the one to sit with if you're considering replacing juniors: what you teach a junior stays taught.
 
 In practice, it meant I kept reprompting the same things over and over. Which brings us to skills.
 
@@ -93,7 +93,7 @@ That property is the one that converted me. I had assumed adding more context me
 
 ## What's in the repo
 
-Six skills so far, all things I was already doing manually.
+All of them are things I was already doing manually.
 
 **d2-diagrams** is a reference for the D2 diagram language. It records what works in ELK vs. dagre, what affects layout and what does not, and the gotchas I keep rediscovering. It auto-loads on any `*.d2` file, so a D2 file in a conversation flips the skill on without me asking. This is the one that started everything.
 
@@ -113,9 +113,9 @@ Each skill is short, between 60 and 200 lines. The repo's README has the index, 
 
 The thing I underestimated is how much of "prompt engineering" is just the same context I was retyping. A skill is the version of that context I edit once and Claude reads forever. It is documentation aimed at Claude, written like documentation aimed at a colleague: terse, specific, gotchas in front, trivia in back. It is also the closest Claude gets to learning on the job; I do the remembering once, in a file, and every future session inherits it.
 
-Two pieces of advice from doing this. First, the descriptions are the contract: Claude picks skills by matching the user's request against the description string, so the description has to lead with trigger keywords and then say what the skill does, in that order. "D2 diagram language reference" earns the load; "Carlos's notes on stuff" does not.
+The descriptions do most of the work: Claude picks skills by matching the user's request against the description string, so the description has to lead with trigger keywords and then say what the skill does, in that order. "D2 diagram language reference" earns the load; "Carlos's notes on stuff" does not.
 
-Second, keep the bodies short. Once a skill loads, every token competes with the actual conversation. I have cut every skill at least once after it loaded but contributed nothing useful. Long-form references and templates go in sibling files, referenced from the body so Claude reads them only when it needs to.
+Keep the bodies short, too. Once a skill loads, every token competes with the actual conversation. I have cut every skill at least once after it loaded but contributed nothing useful. Long-form references and templates go in sibling files, referenced from the body so Claude reads them only when it needs to.
 
 ## The skills you can't install
 

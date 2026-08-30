@@ -16,29 +16,29 @@ I remember being a junior engineer after graduating in 2008 and [looking for a j
 
 Some of it feels the same. Hiring has [slowed to levels last seen in 2010](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start), [unemployment for recent grads is running roughly twice the general rate](https://www.clevelandfed.org/publications/economic-commentary/2025/ec-202514-are-young-college-graduates-losing-their-edge-in-the-job-market), and connections still matter more than they should. The instinct to make yourself visible is the same one I had then, and it works again.
 
-In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_?. General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same time window. Most of those cuts spared the seniors who already know the ropes.
+In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_? General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same time window. Most of those cuts spared the seniors who already know the ropes.
 
 ## A calculator for words
 
-I view large language models as calculators for words. It speeds up work you already know how to evaluate, and it cannot do quality work if you do not understand; They brings speed and require judgment.
+I view large language models as calculators for words. They speed up work you already know how to evaluate, and they cannot do good work on a problem you do not understand.
 
-We have built tools like this before. Engineering drafting used to be done by hand on paper, and a generation of draftsmen earned their keep drawing dimensioned views in pencil with steady hands. No engineer drafts by hand today. CAD is more precise, more reproducible, easier to share, and easier to change. A hand-drawn dimensioned view is now a liability: slower to make, harder to revise, and cumbersome to version. Spreadsheets did the same thing to arithmetic. Nobody runs the payroll on paper anymore, and if you tried, you'd be fired with alacrity. Knowing how to use Excell, however doesn't make you an accountant.
+We have built tools like this before. Engineering drafting used to be done by hand on paper, and a generation of draftsmen earned their keep drawing dimensioned views in pencil with steady hands. No engineer drafts by hand today. CAD is more precise, more reproducible, easier to share, and easier to change. A hand-drawn dimensioned view is now a liability: slower to make, harder to revise, and cumbersome to version. Spreadsheets did the same thing to arithmetic. Nobody runs the payroll on paper anymore, and if you tried, you'd be fired with alacrity. Knowing how to use Excel, however, doesn't make you an accountant.
 
-The pattern is consistent: the tool amplifies the person who already knows what the answer should look like, and it bewilders the person who does not. If you had never multiplied two numbers by hand, you'd lack the inuition for the order of magnitude of the result.
+In both cases the tool amplified whoever already knew what the answer should look like, and bewildered whoever did not. If you had never multiplied two numbers by hand, you'd lack the intuition for the order of magnitude of the result.
 
 LLMs sit in the same lineage. They make experts faster at things they already understand, while enabling novices to create output they cannot evaluate.
 
 <!-- Not sure sbout this, was was the intension? (This is true twice over for visual work, where the tool fluently produces things that look right and are not.) The gains are real, and so is the cliff. -->
 
-One side note worth holding onto: LLMs are best, by a long way, at Python and at web work. This is no accident. The web is open by default; every page ships its own source. Python has been the lingua franca of academia and open source for two decades. The training corpus for those stacks is, effectively, everything anyone ever wrote. For everything else, the model is working from whatever happened to leak out. The competence of the tool is shaped by what people gave away.
+One side note worth holding onto: LLMs are best, by a long way, at Python and at web work, and the reason is mundane. The web is open by default; every page ships its own source. Python has been the lingua franca of academia and open source for two decades. The training corpus for those stacks is, effectively, everything anyone ever wrote. For everything else, the model is working from whatever happened to leak out.
 
 ## Without the rigor
 
-CAD has rigor built into the tool. Geometry that does not close raises a warning. Dimensions that contradict each other raise a warning. A spreadsheet that divides by zero tells you. The tool, by construction, refuses to silently emit wrong output for a wide class of mistakes.
+CAD has rigor built into the tool: geometry that does not close raises a warning, and so do dimensions that contradict each other. A spreadsheet that divides by zero tells you. The tool, by construction, refuses to silently emit wrong output for a wide class of mistakes.
 
 LLMs do not work like this. They produce a great deal of plausible output, quickly, with minimal guardrails. The output is fluent whether or not it is correct. Ship what the model gives you without review, and you ship whatever was statistically likely, which is a different thing from what was right.
 
-As I often do in dire situations, I turned to open source for answers. As it turns out, last month, OpenAI shipped a [system prompt for Codex](https://github.com/openai/codex/commit/c10f95ddac7b35095d334dece2ebcf69bcde61fc#diff-537a79bc56f24a25ec0326f0b2edd3b4c5ac4080a4476d22bad292cda43988b8), its GPT-5.5 release, that runs to nearly twenty-two thousand characters. This novella of instructions, written line by line by humans at OpenAI, loads into the context of every Codex session to tell the model how to behave at work. Read one way, it is an attempt to bolt rigor onto the tool from the outside, in plain English.
+As I often do in dire situations, I turned to open source for answers. As it turns out, last month, OpenAI shipped a [system prompt for Codex](https://github.com/openai/codex/commit/c10f95ddac7b35095d334dece2ebcf69bcde61fc#diff-537a79bc56f24a25ec0326f0b2edd3b4c5ac4080a4476d22bad292cda43988b8), its GPT-5.5 release, that runs to nearly twenty-two thousand characters. This novella of instructions, written line by line by humans at OpenAI, loads into the context of every Codex session to tell the model how to behave at work. Read charitably, it is an attempt to bolt rigor onto the tool from the outside, in plain English.
 
 If you don't like deciphering JSON strings, I rendered a more readable version [here](/img/blog/no-goblins/gpt-5.5.md). The five thousand tokens worth of OpenAI's opinion of how a thoughtful engineer ought to behave reads, at times, like a job description I've written.
 
@@ -60,7 +60,7 @@ The most interesting line in this passage is _let the shape of the existing syst
 
 Resist the classic urge to fix things "while I was in there". I have, more than once, shipped 800-line PRs that should have been forty. The result is either a multi-week review backlog or, worse, a fast merge because nobody wanted to read it.
 
-Scope is a contract with your reviewers. When the PR sprawls, you trade their attention for your convenience. Tight scope is also a form of documentation: it tells the next reader what the goal of the change was. The "while I was in there" instinct is individualist by default; the team move is to open a ticket and let the right person take it.
+Scope is a contract with your reviewers. When the PR sprawls, you trade their attention for your convenience, and you throw away the one thing a tight diff tells the next reader: what the change was for. The "while I was in there" instinct is individualist by default; the team move is to open a ticket and let the right person take it.
 
 ## Be careful with abstractions
 
@@ -70,7 +70,7 @@ Scope is a contract with your reviewers. When the PR sprawls, you trade their at
 
 This is a junior trap. It's tempting to do things in a clever or _clean_ way. A bit of repetition is fine. No one wants to follow an abstraction that interrupts the flow of the code. Keep the code readable and simple.
 
-Every abstraction is a decision your teammates will have to live with, and the author almost never pays the maintenance tax on it. The senior move is to write for the next reader's benefit. Premature abstraction is a small egocentrism: your aesthetic preference, charged to everyone else's attention budget.
+Every abstraction is a decision your teammates will have to live with, and the author almost never pays the maintenance tax on it. Write for the next reader rather than for your own aesthetic preference, since they are the one who pays for it.
 
 ## See things through
 
@@ -80,7 +80,7 @@ Every abstraction is a decision your teammates will have to live with, and the a
 
 This rule reaches farthest beyond what an LLM can do. See the task through. There will be setbacks and questions; read the intent and deliver. Keep your manager informed: striking a balance between checking in and autonomy is the hard part.
 
-Easy tasks reveal nothing about you. The test is the work that gets ugly halfway through, when you have a choice between escalating, abandoning, or pushing through. Reliability is the habit of closing loops; communication is the multiplier on competence. Your manager is tracking a dozen other threads, and if yours is going to slip, they want to know in time to adjust.
+Easy tasks reveal nothing about you. The test is the work that gets ugly halfway through, when you have a choice between escalating, abandoning, or pushing through. Closing the loop is the part people remember: your manager is tracking a dozen other threads, and if yours is going to slip, they want to know in time to adjust.
 
 ## A junior who never internalizes
 
@@ -110,13 +110,13 @@ Teams thrive on disagreement. The person who notices something off when everyone
 
 Inside one of the best-funded AI labs, a senior engineer judged this line important enough to include in a production prompt. Without it, the model, presumably, raised goblins often enough to become a problem. Whatever the corpus was that taught the model its taste in fauna, somebody had to write the rule in plain English to make it stop.
 
-The goblin line is the whole document in miniature: every paragraph fences off something the model does on its own, and this is just the funniest example.
+Every paragraph in that prompt fences off something the model does on its own; the goblins are just the funniest example.
 
 ## Three desks
 
 As a junior, the math is grim and the move is the same as it was in 2008: be visible, be useful, follow through. The Codex prompt is OpenAI's idea of what your junior year used to look like, except it is one model running in subscription form on every team that can pay for it. The way past it is real presence and uniqueness of thought, the things the prompt is trying to manufacture and the things you have for free. New and interesting work tends to come from people combining and learning in directions nobody wrote a system prompt for. Your growth, and your grasp of the business reality of the company, is what gives you the edge.
 
-As a senior, the work that used to be optional is now the price of entry. Definition of done, test scaffolding, coding standards, code review with teeth: this is the work that makes a piece of code legible to a junior, a stranger, or a model, and the model raises the cost of skipping any of it. The Codex prompt is OpenAI doing this work for their own model in their own product; the equivalent on your team is the repository's READMEs, the CONTRIBUTING file, the test conventions, and the standards you enforce in review. Build the scaffolding once, and you spend the rest of your career applying it; skip it, and you spend the rest of your career re-explaining the same thing.
+As a senior, the work that used to be optional is now the price of entry. Definition of done, test scaffolding, coding standards, code review with teeth: this is the work that makes a piece of code legible to a junior, a stranger, or a model, and the model raises the cost of skipping any of it. The Codex prompt is OpenAI doing this work for their own model in their own product; the equivalent on your team is the repository's READMEs, the CONTRIBUTING file, the test conventions, and the standards you enforce in review. You either build that scaffolding once or re-explain it forever.
 
 There is an upside that lands hardest at this level. Because the tool collapses the time a task takes, the half-hour between two meetings, which was never enough to load a problem into your head and make real progress, is now enough to finish a change. For a senior or a busy lead whose calendar is shredded into fragments, that is the difference between shipping something and shipping nothing: the work that used to require a protected afternoon now fits in the gaps, so the calendar stops being a wall between you and the code.
 
@@ -124,7 +124,7 @@ As a hiring manager, the math is also grim. You are not getting another generati
 
 ## No silver bullet
 
-There is no silver bullet here. The honest advice for a junior engineer in 2026 is the same advice that worked in 2008, with the volume turned up: keep using open source, because the corpus that built the tools was given away and it has to keep being given away to stay alive; keep creating things _par amour de l'art_, because the work that ages well rarely started as a deliverable; keep learning, because the only edge that compounds is what you carry in your own head.
+There is no silver bullet here. The honest advice for a junior engineer in 2026 is the same advice that worked in 2008, with the volume turned up: keep using open source, because the corpus that built these tools was given away and has to keep being given away to stay alive, and keep creating things _par amour de l'art_, since the work that ages well rarely started as a deliverable. The only edge that compounds is what you carry in your own head.
 
 And, by no means, bring up the goblins.
 

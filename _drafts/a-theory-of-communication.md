@@ -19,7 +19,7 @@ Two people watch the same event and describe it differently, and neither is lyin
 
 This is one of those ideas that an ancient parable already nailed. The [blind men and the elephant](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant), found in Buddhist, Jain, and Hindu texts from at least the first millennium BCE, tells of several blind men each touching a different part of an elephant and concluding, with equal conviction, that it is a pillar, a rope, a fan, a tree. Each describes what they actually touched; each is right about their sample and wrong about the whole.
 
-That is the basic shape I want to formalize. Every perceiver samples a low-dimensional slice of something much bigger, and reports their slice faithfully. Disagreement is not usually a failure of honesty; it is the predictable outcome of differently-sampled projections. The rest of this post is an attempt to give that intuition enough structure that it stops being a cute parable and starts being a model you can draw, poke, and compute with.
+That is the basic shape I want to formalize. Every perceiver samples a low-dimensional slice of something much bigger, and reports their slice faithfully. That makes most disagreement a predictable outcome of differently-sampled projections, arrived at honestly on both sides. The rest of this post is an attempt to give that intuition enough structure that it stops being a cute parable and starts being a model you can draw, poke, and compute with.
 
 ## The Pipeline
 
@@ -45,11 +45,11 @@ The catch is that $L_B^{-1} \neq L_A$ and $T_B^{-1} \neq T_A$, and they cannot b
 
 ## What This Implies
 
-Communication is never recovery of reality; it is reconstruction of a reconstruction, through a pipeline where every stage is a lossy, personal projection. Two people can hear identical words and walk away with very different pictures, because their inverse transforms differ. This isn't a failure of the speakers or the listeners; it is what the geometry forces.
+Communication is never recovery of reality; it is reconstruction of a reconstruction, through a pipeline where every stage is a lossy, personal projection. Two people can hear identical words and walk away with very different pictures, because their inverse transforms differ. The geometry forces that, however careful both parties are.
 
 A few consequences drop out of this framing:
 
-- **Lossiness is the default, not the exception.** The interesting question isn't "why does miscommunication happen" but "why does communication ever succeed."
+- **Lossiness is the default.** The interesting question is why communication ever succeeds at all.
 - **Agreement is not the same as shared understanding.** Two people can nod at the same sentence while holding incompatible reconstructions.
 - **Silence is high-bandwidth, sometimes.** If two people have well-aligned transforms, very little $M$ is needed to convey a lot of $P$. If their transforms diverge, no amount of $M$ is enough.
 
@@ -63,11 +63,11 @@ This is what intimacy is, mechanically: accumulated estimates of another person'
 
 It also explains some patterns:
 
-- **Old friends can shorthand because their transform models of each other are dense.**
-- **Couples argue over "stupid things" because the surface dispute is almost never the real issue. The real issue is an un-calibrated corner of the transform space, suddenly exposed.**
-- **Cross-cultural communication is harder because culture partially sets $T$, and divergent cultures mean divergent $T$s.**
-- **Translation is never complete: translator applies $T_\text{source}^{-1} \circ L_\text{source}^{-1}$ then $L_\text{target} \circ T_\text{target}$, and each hop is lossy.**
-- **Art often communicates better than prose because it deliberately under-specifies $M$, letting the receiver's $T$ fill in. Paradoxically, this reduces transform-mismatch collisions: the receiver reconstructs from their own model rather than colliding with a precise description that conflicts with it.**
+- **Old friends can shorthand** because their transform models of each other are dense.
+- **Couples argue over "stupid things"** because the surface dispute is almost never the real issue: an un-calibrated corner of the transform space, suddenly exposed.
+- **Cross-cultural communication is harder** because culture partially sets $T$, and divergent cultures mean divergent $T$s.
+- **Translation is never complete:** the translator applies $T_\text{source}^{-1} \circ L_\text{source}^{-1}$ then $L_\text{target} \circ T_\text{target}$, and each hop is lossy.
+- **Art often communicates better than prose** because it deliberately under-specifies $M$, letting the receiver's $T$ fill in. Paradoxically, this reduces transform-mismatch collisions: the receiver reconstructs from their own model rather than colliding with a precise description that conflicts with it.
 
 ## When Communication Is Easier
 
@@ -143,7 +143,7 @@ On the other side of the channel is a partner who never sees the elephant; they 
 5. **Shot 3, precision.** Last chance. By now you have a working model of your partner's blind spots. Pick the single shot that closes the biggest remaining gap.
 6. **Final score.** Structural similarity between their reconstruction and the ground truth, broken out by shape, color, motion, and texture.
 
-The whole theory lives in this loop: shot 1 is communication without calibration, watching the reconstruction is triangulation, and each adjustment is an update to your model of your partner's $T$. The score goes up when you stop trying to describe reality and start trying to compensate for one specific mind. After you finish a round, you can switch partners and discover that everything you just learned is now useless.
+Every piece of the theory shows up in this loop: shot 1 is communication without calibration, watching the reconstruction is triangulation, and each adjustment is an update to your model of your partner's $T$. The score goes up once you aim at compensating for one specific mind instead of describing reality. After you finish a round, you can switch partners and discover that everything you just learned is now useless.
 
 **Partner presets (each is a fixed $T^{-1}, L^{-1}$ pair):**
 
