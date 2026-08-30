@@ -19,7 +19,7 @@ tags:
 
 From late 2011 through mid-2016, I worked at Aldebaran, the French robotics company behind NAO and Pepper, two of the most widely deployed humanoid robots in history. I started as an external developer in Montréal building autonomous behaviours for NAO, and eventually joined the Boston Studio as a robot software engineer. The company's evolution has been turbulent in a way that may resonate with other people in the industry.
 
-The company has been acquired, rebranded, sold, and placed into receivership. The name changed four times and the Paris headquarters emptied out. But roughly 20,000 NAO and 27,000 Pepper units were sold in 70 countries, and many of the behaviours I helped develop are still running on them. The robots outlasted the company that made them, which is either a testament to good engineering or a quiet indictment of the business models built around them.
+The company has been acquired, rebranded, sold, and placed into receivership. The name changed four times and the Paris headquarters emptied out. But roughly 20,000 NAO and 27,000 Pepper units were sold in 70 countries, and many of the behaviours I helped develop are still running on them. The robots outlasted the company that made them, which is either a testament to good engineering or an indictment of the business models built around them.
 
 My job in Boston was to make these robots engaging to interact with. This was intimidating since it was my first job in software. I felt I was tossed into the deep end working alongside _real_ software engineers. As a result, and somewhat expectedly, I ended up learning a lot about software development for humanoid robots; more unexpectedly, I ended up learning even more about the complexity of our everyday human interactions.
 

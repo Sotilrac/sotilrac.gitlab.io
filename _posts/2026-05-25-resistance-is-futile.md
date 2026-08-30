@@ -163,7 +163,7 @@ $$Q = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}, \qquad \Delta f_{-3\
 
 High Q means low loss and narrow bandwidth, the central trade-off of every wireless-power link: a high-Q coil moves a larger fraction of the source's energy to the load, but a stray finger or a one-percent component shift detunes it right out of band; a low-Q coil tolerates sloppy alignment and component drift, at the cost of burning more of the source's energy as heat in the windings.
 
-Hobbyists meet LC resonance in three places: ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, where Qi and the newer Qi2 (the standard behind Apple's MagSafe) own the consumer market on inductive coupling at 87 to 205 kHz. The other band that turns up in hobbyist and research wireless-power work is 6.78 MHz, a globally harmonized ISM frequency with no Part 18 in-band power cap, which is why it keeps showing up in experimental resonant links. The calculator's preset buttons jump to all four.
+Hobbyists meet LC resonance in ISM radio carriers (433 MHz, 915 MHz, 2.4 GHz), RFID and NFC tags (125 kHz LF, 13.56 MHz HF), and wireless power, where Qi and the newer Qi2 (the standard behind Apple's MagSafe) own the consumer market on inductive coupling at 87 to 205 kHz. The other band that turns up in hobbyist and research wireless-power work is 6.78 MHz, a globally harmonized ISM frequency with no Part 18 in-band power cap, which is why it keeps showing up in experimental resonant links. The calculator's preset buttons jump straight to 125 kHz, 200 kHz, 6.78 MHz, and 13.56 MHz.
 
 ### RC Cutoff
 
@@ -287,4 +287,4 @@ A few UI niceties not covered by the math:
 
 ## How It's Built
 
-The sources live in [`src/ee-calculator/`](https://gitlab.com/sotilrac/sotilrac.gitlab.io/-/tree/master/src/ee-calculator) (CSS, JS, and four SVG symbol files). A small Node script bundles them into a single `js/ee-calculator.js` at build time. No framework or dependencies to break. It should work as long as browsers do.
+The sources live in [`src/ee-calculator/`](https://gitlab.com/sotilrac/sotilrac.gitlab.io/-/tree/master/src/ee-calculator) (CSS, JS, and four SVG symbol files). A small Node script bundles them into a single `js/ee-calculator.js` at build time. No framework or dependencies to break. Nothing in it can go stale, so it should keep working for as long as the browser does.

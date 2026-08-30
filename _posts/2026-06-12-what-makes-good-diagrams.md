@@ -45,7 +45,7 @@ These tools do let you decide the general layout, and with enough hours and a bi
 
 These diagrams fiercely resist maintenance, and they are impossible to collaborate on (even when the tool claims otherwise). They go stale fast, and deceive unwittingly.
 
-Call it diagram debt: part of a broader documentation debt, and it compounds like technical debt, except without a failing unit test.
+Let's call it diagram debt, a corner of the wider documentation debt, and it compounds like technical debt, except without a failing unit test.
 
 ### Code-Based
 
