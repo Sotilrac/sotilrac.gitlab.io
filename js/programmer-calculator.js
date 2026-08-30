@@ -2,7 +2,7 @@
 // 0xDEADBEEF: A Calculator for Programmers
 // A browser-based calculator for engineers working with
 // binary, octal, decimal, and hexadecimal numbers.
-// Zero dependencies. Single file. Works forever.
+// Zero dependencies, single file, works forever.
 // Author: Carlos Asmat, https://asmat.ca
 // ============================================================
 
@@ -909,15 +909,15 @@ class ProgrammerCalculator extends HTMLElement {
             <button class="btn-op" data-op="xor">XOR</button>
             <button class="btn-op" data-op="not">NOT</button>
             <div class="ops-group-label">Shift / Rotate</div>
-            <button class="btn-op" data-op="lsh" title="Left Shift — shifts all bits left, fills with 0 (value << n)">Lsh</button>
-            <button class="btn-op" data-op="rsh" title="Logical Right Shift — shifts bits right, fills with 0 (value >>> n)">Rsh</button>
-            <button class="btn-op" data-op="ashr" title="Arithmetic Right Shift — shifts bits right, preserves sign bit (value >> n)">AShr</button>
-            <button class="btn-op" data-op="rol" title="Rotate Left — bits shifted out the left wrap to the right">RoL</button>
-            <button class="btn-op" data-op="ror" title="Rotate Right — bits shifted out the right wrap to the left">RoR</button>
+            <button class="btn-op" data-op="lsh" title="Left shift: shifts all bits left, fills with 0 (value << n)">Lsh</button>
+            <button class="btn-op" data-op="rsh" title="Logical right shift: shifts bits right, fills with 0 (value >>> n)">Rsh</button>
+            <button class="btn-op" data-op="ashr" title="Arithmetic right shift: shifts bits right, preserves sign bit (value >> n)">AShr</button>
+            <button class="btn-op" data-op="rol" title="Rotate left: bits shifted out the left wrap to the right">RoL</button>
+            <button class="btn-op" data-op="ror" title="Rotate right: bits shifted out the right wrap to the left">RoR</button>
             <div class="ops-group-label">Byte</div>
-            <button class="btn-op" data-op="byteswap" title="Byte Swap — reverses byte order (e.g. 0xAABBCCDD → 0xDDCCBBAA)">ByteSwap</button>
-            <button class="btn-op" data-op="bitrev" title="Bit Reverse — reverses all bit positions">BitRev</button>
-            <button class="btn-op" data-op="nibswap" title="Nibble Swap — swaps high and low nibble within each byte (e.g. 0xAB → 0xBA)">NibSwap</button>
+            <button class="btn-op" data-op="byteswap" title="Byte swap: reverses byte order (e.g. 0xAABBCCDD → 0xDDCCBBAA)">ByteSwap</button>
+            <button class="btn-op" data-op="bitrev" title="Bit reverse: reverses all bit positions">BitRev</button>
+            <button class="btn-op" data-op="nibswap" title="Nibble swap: swaps high and low nibble within each byte (e.g. 0xAB → 0xBA)">NibSwap</button>
           </div>
         </div>
       </div>

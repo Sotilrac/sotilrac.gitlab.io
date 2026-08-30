@@ -77,7 +77,7 @@ for (const entry of plan) {
     (match, prefix, imgPath, suffix) => {
       const fullPathPrefix = `/img/blog/${entry.postSlug}/`;
 
-      // Already a full path — check if the file exists
+      // Already a full path. Check if the file exists.
       if (imgPath.startsWith("/img/blog/")) {
         const localPath = imgPath.substring(1); // remove leading /
         if (existsSync(localPath)) return match; // Already good
@@ -94,7 +94,7 @@ for (const entry of plan) {
         return match;
       }
 
-      // Bare filename — find match and add full path
+      // Bare filename. Find match and add full path.
       const found = findMatch(imgPath, available);
       if (found) {
         totalFixed++;
@@ -102,7 +102,7 @@ for (const entry of plan) {
         return `${prefix}${fullPathPrefix}${found}${suffix}`;
       }
 
-      // Couldn't match — still add the path prefix with sanitized name
+      // Couldn't match. Still add the path prefix with sanitized name
       // so at least the path structure is correct
       const sanitized = sanitize(imgPath);
       if (available.includes(sanitized)) {

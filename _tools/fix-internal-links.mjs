@@ -99,13 +99,13 @@ for (const file of repoFiles) {
 
   // Pattern 3: http://carlitoscontraptions.com/tag/tag-name/
   // These are tag index pages that don't exist in the new site.
-  // Leave them — they'll be dead links but changing to what?
+  // Leave them: they'll be dead links, but changing to what?
 
   // Pattern 4: http://carlitoscontraptions.com/category/cat/
-  // Same as tags — no equivalent in new site.
+  // Same as tags, no equivalent in new site.
 
   // Pattern 5: http://carlitoscontraptions.com/project/name/
-  // Same — no equivalent.
+  // Same, no equivalent.
 
   if (changed) {
     content = frontmatter + body;
