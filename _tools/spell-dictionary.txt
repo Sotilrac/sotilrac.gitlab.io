@@ -14,6 +14,7 @@ cmils
 counterintuitive
 datasheet
 datasheets
+deadband
 debouncing
 derated
 derating
@@ -34,7 +35,13 @@ paywalled
 ppm
 pushbutton
 PWM
+quantized
+quintic
 schmitt
+setpoint
+sigmoid
+sigmoids
+smoothstep
 SMD
 SMT
 transistor
@@ -163,6 +170,7 @@ pF
 uF
 
 # --- File extensions / common code tokens ---
+fn
 gif
 js
 mjs
