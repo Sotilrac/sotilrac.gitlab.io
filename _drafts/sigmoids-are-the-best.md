@@ -155,21 +155,33 @@ There's a radar speed sign on the path I ride most weekends. It reads YOUR SPEED
 
 That's the `if` from the top of this post wired to an LED panel. The radar estimate carries a few tenths of a km/h of noise, the comparison against the limit is a hard threshold, and every update lands on whichever side the noise picked.
 
-Both of the sign's outputs are continuous quantities pretending to be binary: the color is a point on a line from green to yellow, and the mouth is an arc that can bend either way. One sigmoid drives both.
+The face itself should stay binary, since a lime face with a flat mouth tells a rider nothing. What needs smoothing is the decision behind it, and in particular how fast the sign is allowed to change its mind. Run the measured speed through a sigmoid to get a number between 0 and 1, let that number charge a first-order filter, and commit to a face only once the filtered value has settled near one end:
 
 ```python
 LIMIT = 20.0  # km/h
+DT = 0.05  # s between radar readings
+TAU = 0.5  # s of smoothing
 
 
-def face(speed):
-    s = sigmoid(speed, x0=LIMIT, k=1.2)  # 0 well under the limit, 1 well over
-    red, green = s, 1.0                  # (0,1,0) green fading to (1,1,0) yellow
-    mouth = 1.0 - 2.0 * s                # +1 smiling, 0 flat, -1 frowning
-    return (red, green, 0.0), mouth
+class Sign:
+    def __init__(self):
+        self.level = 0.0  # filtered: 0 = under the limit, 1 = over
+        self.happy = True
+
+    def update(self, speed):
+        s = sigmoid(speed, x0=LIMIT, k=1.2)  # 0 well under, 1 well over
+        self.level += (s - self.level) * (DT / TAU)
+        if self.level > 0.9:
+            self.happy = False
+        elif self.level < 0.1:
+            self.happy = True
+        return self.happy
 ```
 
-At exactly the limit you get a lime face with a flat mouth, which is an honest picture of riding at exactly the limit, and a tenth of a km/h of noise moves the mouth by a hair instead of flipping the entire panel. The weight $k$ decides how wide the ambiguous band is: at $k = 1.2$ the face is unambiguously green below about 18 km/h and unambiguously yellow above about 22, and everything in between is a mix. That's a design decision the hard threshold never let anyone make.
+At exactly the limit the sigmoid returns 0.5, the filter settles at 0.5, and neither trigger is ever reached, so the face holds whatever it was already showing and holds it cleanly. A few tenths of a km/h of radar noise move the sigmoid by a couple of percent and move the filtered level by less than that, so there is nothing left to strobe.
 
-If the panel really is two fixed bitmaps with nothing available in between, the sigmoid still earns its keep. Take the speeds where it crosses 0.1 and 0.9, 18.2 and 21.8 km/h, and use those as the two edges of a hysteresis band: the face turns yellow at 21.8 and doesn't go green again until you drop below 18.2. Same curve, quantized at the last step instead of the first.
+The two knobs buy you two separate things. The weight $k$ decides how far past the limit counts as past it: at $k = 1.2$ the sigmoid reaches 0.9 at about 21.8 km/h and drops to 0.1 at 18.2, which is a hysteresis band you chose deliberately rather than one you bolted on afterwards. The time constant $\tau$ decides how long you have to stay there, roughly a second of sustained speeding before the face turns. Riding the boundary now does nothing at all, which is the correct response to riding the boundary.
+
+If the panel can fade at all, the swap between faces is worth running through a smoothstep over a couple hundred milliseconds, so the change reads as the sign making a decision instead of a bulb failing.
 
 Swap the threshold `if` for a sigmoid and the hardware stops fighting your code: the motor eases into its setpoint instead of slamming into it, and the energy bill stays finite. Sigmoids, as the title promised, are the best.
