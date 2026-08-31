@@ -24,7 +24,7 @@ We often say _"that's perfect"_, and usually mean _flawless_: no defects, rough 
 
 The real world is not a closed system. A _**perfect performance**_ depends on who is watching. A _**perfect relationship**_ has no fixed criteria. A _**perfect design**_ changes every time the constraints do. Reality is severely multi-dimensional, context-dependent, and always in flux. There is no axis on which flawlessness can even be measured, let alone achieved.
 
-If flawlessness only has meaning inside closed systems, how do we even know what we are chasing outside of them? I can picture a perfect circle. I cannot picture any of the things I do as _**perfect**_, but it is quite easy to see how my wife's banana bread recipe is exquisitely _**perfect**_. However, the moment I try to specify what _**perfect**_ actually is, the criteria contradict each other, their weights shift, new axes appear that I had not considered; there's only a fuzzy yet certain feeling of what it is. Plus, the axes of meaning themselves are culturally loaded: what passes for a perfect greeting in Boston would be rude in Paris. We reach for the word as if we had a reference in mind, but under interrogation it crumbles.
+If flawlessness only has meaning inside closed systems, how do we even know what we are chasing outside of them? I can picture a perfect circle. I cannot picture any of the things I do as _**perfect**_, but it is quite easy to see how my wife's banana bread recipe is exquisitely _**perfect**_. However, the moment I try to specify what _**perfect**_ actually is, the criteria contradict each other, their weights shift, new dimensions appear that I had not considered; there's only a fuzzy yet certain feeling of what it is. Plus, the axes of meaning themselves are culturally loaded: what passes for a perfect greeting in Boston would be rude in Paris. We use the word as if we had a concrete idea in mind, which crumbles under interrogation.
 
 ## Dynamic Harmony
 
@@ -42,7 +42,7 @@ So why does the word stick around in its _flawless_ sense, if it fails so obviou
 
 Human cognition runs on simplification. Categories, binary distinctions, simplified models (e.g., symmetric or smooth). The brain, per [predictive processing](https://en.wikipedia.org/wiki/Predictive_coding) accounts, acts as an error-minimization engine that trades accuracy for tractability: it smears continuous reality into discrete models so it can get on with the day. Flawlessness is one of those models: a discrete target imposed on a gradient world.
 
-This is reinforced by how expensive uncertainty feels. Ambiguity triggers [aversion](https://en.wikipedia.org/wiki/Ellsberg_paradox). Holding multiple possibilities open causes [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue). There is a whole psychological construct called [need for closure](https://en.wikipedia.org/wiki/Need_for_closure) that measures how badly a person wants the world to settle into a clean answer. Collapsing a messy multi-variate problem into "_**perfect or not**_" is the cheap way out.
+This is reinforced by how expensive uncertainty feels. Ambiguity triggers [aversion](https://en.wikipedia.org/wiki/Ellsberg_paradox). Holding multiple possibilities open causes [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue). There is a whole psychological construct called [need for closure](https://en.wikipedia.org/wiki/Need_for_closure) that measures how badly a person wants the world to settle into a clean answer.
 
 Once you see it this way, perfectionism (the clinical kind, not "I like well-formatted C++") starts to look like a coping strategy posing as high standards. If you convince yourself there is one correct outcome and you have to reach it, you get two options: unattainable standards or abject failure. You no longer have to sit with the discomfort of not knowing whether you are doing well. Ambiguity is gone: you're failing.
 
@@ -52,7 +52,7 @@ Note that the field distinguishes [perfectionistic strivings from perfectionisti
 
 ## A More Honest Word
 
-When I catch myself about to call something _**perfect**_, or hear someone else use the word, I try to ask what it actually means:
+When I catch myself calling something _**perfect**_, I try to ask what it actually means:
 
 - Is it _complete_ for its purpose?
 - Does it _fit_ the needs?
@@ -62,7 +62,7 @@ Those are meaningful questions with real answers, whereas _"Is it flawless?"_ is
 
 It helps to pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready**, or my favorite, **good enough**. They all avoid the cosmic overreach of _**perfect**_.
 
-If I mean the modern sense, the honest choices are **flawless, ideal, pristine, faultless, immaculate**. The absurdity of demanding them outside of a math textbook gives the game away: a flawless apartment? An immaculate partner? A faultless hire?
+If I mean the modern sense, the choices are **flawless, ideal, pristine, faultless, immaculate**. The absurdity of demanding them outside of a mathematical theorem gives the game away: an pristine apartment? A flawless partner? A faultless hire?
 
 And what if I encounter the third version of _**perfection**_? In that case, I savour it; I gave up trying to box it into words.
 
