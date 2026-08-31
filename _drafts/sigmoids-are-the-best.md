@@ -123,13 +123,11 @@ And the same in C++:
 #include <algorithm>
 #include <cmath>
 
-double sigmoid(double x, double x0 = 0.0, double y0 = 0.0,
-               double y1 = 1.0, double k = 1.0) {
+double sigmoid(double x, double x0 = 0.0, double y0 = 0.0, double y1 = 1.0, double k = 1.0) {
   return y0 + (y1 - y0) / (1.0 + std::exp(-k * (x - x0)));
 }
 
-double smoothstep(double x, double x0 = 0.0, double w = 1.0,
-                  double y0 = 0.0, double y1 = 1.0) {
+double smoothstep(double x, double x0 = 0.0, double w = 1.0, double y0 = 0.0, double y1 = 1.0) {
   double t = std::clamp((x - x0) / w + 0.5, 0.0, 1.0);
   return y0 + (y1 - y0) * t * t * (3.0 - 2.0 * t);
 }
