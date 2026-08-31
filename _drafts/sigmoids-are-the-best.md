@@ -149,7 +149,7 @@ There's a second, subtler win here. With a hard threshold, an input that hovers 
 
 ## The Sign on the Bike Path
 
-There's a radar speed sign on the path I ride most weekends: it flashes YOUR SPEED, the number in km/h, and a face, green and smiling if you're under the limit, yellow and frowning if you're over. At 15 it's cheerful and at 30 it's disappointed, both of which are useful. Ride at exactly the limit, though, and the sign comes apart: the face strobes between green and yellow several times a second, and what was supposed to be feedback turns into a novelty light show. I have, for research purposes, held that speed for an embarrassing length of time.
+There's a radar speed sign on the path I ride most weekends. It reads YOUR SPEED across the top, but it never tells you what your speed is: the whole display is a face, green and smiling if you're under the limit, yellow and frowning if you're over. At 15 it's cheerful and at 30 it's disappointed, which is about as much as it can say. Ride at exactly the limit, though, and the sign comes apart: the face strobes between green and yellow several times a second, and what was supposed to be feedback turns into a novelty light show. I have, for research purposes, held that speed for an embarrassing length of time.
 
 {% fig "/img/blog/sigmoids-are-the-best/speed_sign.png", "The genre, if not my particular offender." %}
 
