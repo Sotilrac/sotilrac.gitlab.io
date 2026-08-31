@@ -151,6 +151,8 @@ There's a second, subtler win here. With a hard threshold, an input that hovers 
 
 There's a radar speed sign on the path I ride most weekends: it flashes YOUR SPEED, the number in km/h, and a face, green and smiling if you're under the limit, yellow and frowning if you're over. At 15 it's cheerful and at 30 it's disappointed, both of which are useful. Ride at exactly the limit, though, and the sign comes apart: the face strobes between green and yellow several times a second, and what was supposed to be feedback turns into a novelty light show. I have, for research purposes, held that speed for an embarrassing length of time.
 
+{% fig "/img/blog/sigmoids-are-the-best/speed_sign.png", "The genre, if not my particular offender." %}
+
 That's the `if` from the top of this post wired to an LED panel. The radar estimate carries a few tenths of a km/h of noise, the comparison against the limit is a hard threshold, and every update lands on whichever side the noise picked.
 
 Both of the sign's outputs are continuous quantities pretending to be binary: the color is a point on a line from green to yellow, and the mouth is an arc that can bend either way. One sigmoid drives both.
