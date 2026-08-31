@@ -75,7 +75,7 @@ Drag the sliders and watch what each one does to the curve:
 
 ## Other S-Curves
 
-The logistic is the one I reach for first, but it isn't the only S you can bolt in, and it has one annoyance: it never quite arrives. The output only reaches $y_0$ and $y_1$ at $\pm\infty$, so at any finite distance from the threshold there's a sliver of the other value left over. Usually that sliver is far below the resolution of whatever you're driving and nobody cares, but if you need the output to be exactly zero at a known input, you want a curve with a finite window.
+The logistic is the one I use first, but it isn't the only S you can bolt in, and it has one annoyance: it never quite arrives. The output only reaches $y_0$ and $y_1$ at $\pm\infty$, so at any finite distance from the threshold there's a sliver of the other value left over. Usually that sliver is far below the resolution of whatever you're driving and nobody cares, but if you need the output to be exactly zero at a known input, you want a curve with a finite window.
 
 Smoothstep is the classic. It's a cubic on a window of width $w$ centered on the threshold, clamped flat outside it:
 
