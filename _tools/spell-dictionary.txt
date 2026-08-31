@@ -20,6 +20,7 @@ derated
 derating
 diode
 diodes
+jitter
 IC
 ICs
 LDO
@@ -118,6 +119,7 @@ async
 shader
 shaders
 Visio
+GLSL
 Graphviz
 UML
 Lucidchart

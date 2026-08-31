@@ -75,9 +75,9 @@ Drag the sliders and watch what each one does to the curve:
 
 ## Other S-Curves
 
-The logistic is the one I use first, but it isn't the only S you can bolt in, and it has one annoyance: it never quite arrives. The output only reaches $y_0$ and $y_1$ at $\pm\infty$, so at any finite distance from the threshold there's a sliver of the other value left over. Usually that sliver is far below the resolution of whatever you're driving and nobody cares, but if you need the output to be exactly zero at a known input, you want a curve with a finite window.
+The logistic is the one I use first, but it isn't the only S you can bolt in, and it has one annoyance: it never arrives. The output only reaches $y_0$ and $y_1$ at $\pm\infty$, so at any finite distance from the threshold there's a sliver of the other value left over. Usually that sliver is far below the resolution of whatever you're driving and nobody cares, but if you need the output to be exactly zero at a known input, you want a curve with a finite window.
 
-Smoothstep is the classic. It's a cubic on a window of width $w$ centered on the threshold, clamped flat outside it:
+Smoothstep, the curve GLSL ships as a builtin, is a cubic on a window of width $w$ centered on the threshold, clamped flat outside it:
 
 $$
 t = \mathrm{clamp}\!\left(\frac{x - x_0}{w} + \frac{1}{2},\, 0,\, 1\right), \qquad f(x) = y_0 + (y_1 - y_0)\,t^2\,(3 - 2t)
@@ -145,43 +145,8 @@ def command(value):
 
 Below the threshold the gate sits near 1 and you get the original `2 * value`; above it the gate slides to 0 and the output bleeds away, and `k` decides how abrupt that shoulder is.
 
-There's a second, subtler win here. With a hard threshold, an input that hovers right at the boundary is a disaster: a little sensor noise nudges it back and forth across the line, and the output flaps between the two branches on every reading. That's the chatter you hear as a buzzing relay or feel as a dithering motor, and the usual remedy is to bolt on hysteresis or a deadband to keep the comparison from twitching. The sigmoid never has the problem in the first place, because it's continuous: an input sitting on the threshold maps to a value halfway between the two ends, and a small wiggle in the input produces only a small wiggle in the output. There's no line to cross, so there's nothing to flap.
+A hard threshold also punishes an input that hovers right at the boundary: a little sensor noise nudges it back and forth across the line, and the output flaps between the two branches on every reading. That's the chatter you hear as a buzzing relay or feel as a dithering motor, and the usual remedy is to bolt on hysteresis or a deadband to keep the comparison from twitching. The sigmoid never has the problem in the first place, because it's continuous: an input sitting on the threshold maps to a value halfway between the two ends, and a small wiggle in the input produces only a small wiggle in the output. There's no line to cross, so there's nothing to flap.
 
-## The Sign on the Bike Path
-
-There's a radar speed sign on the path I ride most weekends. It reads YOUR SPEED across the top, but it never tells you what your speed is: the whole display is a face, green and smiling if you're under the limit, yellow and frowning if you're over. At 15 it's cheerful and at 30 it's disappointed, which is about as much as it can say. Ride at exactly the limit, though, and the sign comes apart: the face strobes between green and yellow several times a second, and what was supposed to be feedback turns into a novelty light show. I have, for research purposes, held that speed for an embarrassing length of time.
-
-{% fig "/img/blog/sigmoids-are-the-best/speed_sign.png", "The genre, if not my particular offender." %}
-
-That's the `if` from the top of this post wired to an LED panel. The radar estimate carries a few tenths of a km/h of noise, the comparison against the limit is a hard threshold, and every update lands on whichever side the noise picked.
-
-The face itself should stay binary, since a lime face with a flat mouth tells a rider nothing. What needs smoothing is the decision behind it, and in particular how fast the sign is allowed to change its mind. Run the measured speed through a sigmoid to get a number between 0 and 1, let that number charge a first-order filter, and commit to a face only once the filtered value has settled near one end:
-
-```python
-LIMIT = 20.0  # km/h
-DT = 0.05  # s between radar readings
-TAU = 0.5  # s of smoothing
-
-
-class Sign:
-    def __init__(self):
-        self.level = 0.0  # filtered: 0 = under the limit, 1 = over
-        self.happy = True
-
-    def update(self, speed):
-        s = sigmoid(speed, x0=LIMIT, k=1.2)  # 0 well under, 1 well over
-        self.level += (s - self.level) * (DT / TAU)
-        if self.level > 0.9:
-            self.happy = False
-        elif self.level < 0.1:
-            self.happy = True
-        return self.happy
-```
-
-At exactly the limit the sigmoid returns 0.5, the filter settles at 0.5, and neither trigger is ever reached, so the face holds whatever it was already showing and holds it cleanly. A few tenths of a km/h of radar noise move the sigmoid by a couple of percent and move the filtered level by less than that, so there is nothing left to strobe.
-
-The two knobs buy you two separate things. The weight $k$ decides how far past the limit counts as past it: at $k = 1.2$ the sigmoid reaches 0.9 at about 21.8 km/h and drops to 0.1 at 18.2, which is a hysteresis band you chose deliberately rather than one you bolted on afterwards. The time constant $\tau$ decides how long you have to stay there, roughly a second of sustained speeding before the face turns. Riding the boundary now does nothing at all, which is the correct response to riding the boundary.
-
-If the panel can fade at all, the swap between faces is worth running through a smoothstep over a couple hundred milliseconds, so the change reads as the sign making a decision instead of a bulb failing.
+<!-- TODO: link the bike path sign post here; the deadband story is the binary-output half of this -->
 
 Swap the threshold `if` for a sigmoid and the hardware stops fighting your code: the motor eases into its setpoint instead of slamming into it, and the energy bill stays finite. Sigmoids, as the title promised, are the best.
