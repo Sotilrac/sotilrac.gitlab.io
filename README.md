@@ -31,7 +31,11 @@ The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts
 │   ├── resume.njk        # Resume template
 │   └── archive-banner.njk # "Dusting off the archives" banner for old posts
 ├── _posts/               # Blog posts (Markdown + Nunjucks)
+├── _drafts/              # Unpublished posts, served at /drafts/<slug>/
 ├── css/main.css          # Custom stylesheet (no frameworks)
+├── js/                   # Client-side JS (plots, calculators, lightbox)
+├── src/ee-calculator/    # Source for the bundled js/ee-calculator.js
+├── media/                # Audio, video, and other large assets
 ├── font/                 # Custom fonts (Hack, Inter variable, Telegrama)
 ├── img/                  # Favicons + blog post images (img/blog/<slug>/)
 ├── _tools/               # Helper scripts (new-post.sh, redate-post.sh, etc.)
@@ -40,12 +44,25 @@ The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts
 ├── drafts.njk            # Draft posts listing (not linked from nav, blocked by robots.txt)
 ├── feed.njk              # RSS feed
 ├── robots.txt            # Crawler rules (blocks AI training, allows citation bots)
-└── llms.txt              # LLM-readable site summary and license
+├── llms.txt              # LLM-readable site summary and license
+├── STYLE.md              # Prose conventions for posts
+└── Makefile              # Task runner (run `make` for the list)
 ```
+
+## Architecture
+
+Eleventy v3 with no site framework. `eleventy.config.mjs` registers the shortcodes, filters, collections, and passthrough copies, restores YAML support for `_data/` (dropped in 11ty v3), and wires KaTeX into markdown-it.
+
+- **Templating**: Nunjucks for both `.njk` and `.md`. Layouts live in `_includes/layouts/` (base, home, post, page) and all extend `base.njk`.
+- **Permalinks**: `_posts/_posts.11tydata.mjs` tags everything in `_posts/` as `posts` and strips the date prefix to build `/blog/<slug>/`. `_drafts/_drafts.11tydata.mjs` does the same for `/drafts/<slug>/`.
+- **Collections**: `publicPosts` (status missing or `public`, newest first) feeds the blog page and the RSS feed, `archivedPosts` (status `archive`) renders but stays out of both, and `drafts` backs the drafts listing.
+- **Passthrough copy**: `css/`, `font/`, `img/`, `js/`, `media/`, `robots.txt`, `llms.txt`, plus KaTeX's stylesheet and fonts out of `node_modules/`.
+- **Generated assets**: `js/ee-calculator.js` is bundled from `src/ee-calculator/` by `_tools/build-ee-calculator.mjs` and is gitignored. Every `make` target and both CI jobs run the bundler before Eleventy.
+- **Output**: `_site/` locally, `public/` for the Pages deploy on `master`, `test/` for branch pipelines.
 
 ## Linting & Formatting
 
-[Prettier](https://prettier.io/) handles autoformatting for Markdown, JSON, YAML, CSS, and JS. [Lefthook](https://lefthook.dev/) wires it into git hooks.
+[Prettier](https://prettier.io/) handles autoformatting for Markdown, JSON, YAML, CSS, and JS, with two-space indent, LF line endings, and `proseWrap: preserve` (see `.prettierrc`). CI runs `npx prettier --check .` on every push. [Lefthook](https://lefthook.dev/) wires it into git hooks.
 
 ```bash
 make lint          # check formatting (CI runs this)
@@ -80,6 +97,8 @@ Only posts with `status: public` appear on the blog page and RSS feed. Draft pos
 
 To create a new post: `./_tools/new-post.sh "Post Title" [YYYY-MM-DD]`
 
+Prose conventions for posts (touchstone authors, sentence-level rules, patterns to avoid) live in `STYLE.md`.
+
 ### Shortcodes
 
 Available in post content:
@@ -87,10 +106,25 @@ Available in post content:
 ```md
 {% fig "/img/blog/slug/photo.jpg", "Caption text" %}
 {% gallery 3, "/img/blog/slug/a.jpg", "/img/blog/slug/b.jpg", "/img/blog/slug/c.jpg" %}
+{% compare "/img/blog/slug/before.jpg", "/img/blog/slug/after.jpg", "Caption text" %}
+{% calc "deadbeef" %}
 {% youtube "video-id" %}
 {% spotify "track-id" %}
 {% wayback "https://web.archive.org/web/...", "link text" %}
 {% model "/img/blog/slug/model.glb", "Caption", "0deg 75deg auto" %}
+```
+
+The `{% plot %}` paired shortcode renders an interactive uPlot graph from a JSON config in its body (see `js/plot.js` for the accepted keys). Prettier reformats that JSON and breaks the shortcode, so precede every block with `<!-- prettier-ignore -->`:
+
+```md
+<!-- prettier-ignore -->
+{% plot "Caption text" %}
+{
+  "fn": "sin(k*x)",
+  "x": { "min": -6, "max": 6, "label": "input x" },
+  "sliders": [{ "var": "k", "min": 0.5, "max": 5, "step": 0.1, "value": 1 }]
+}
+{% endplot %}
 ```
 
 Post images go in `img/blog/<post-slug>/`. For archived posts (pre-2014), include the archive banner manually:
@@ -197,6 +231,7 @@ Helper scripts in `_tools/`. External tools used during migrations are listed at
 - `new-post.sh "Title" [YYYY-MM-DD]`, create a new blog post with frontmatter and media folder
 - `publish.sh slug [YYYY-MM-DD]`, promote a draft from `_drafts/` to `_posts/`, adding a `date:` field and the date prefix to the filename
 - `redate-post.sh`, rename a post file with a new date
+- `spell.mjs FILE`, aspell spelling plus a grammar pass for doubled words, common typos, and double spaces, filtered through `_tools/spell-dictionary.txt` (`make spell FILE=...`)
 - `lowercase-files.sh`, lowercase all filenames in a directory
 
 **Build verification**
