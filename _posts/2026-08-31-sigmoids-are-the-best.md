@@ -76,7 +76,7 @@ Drag the sliders and watch what each one does to the curve:
 
 ## Other S-Curves
 
-The logistic is the one I use first, but it isn't the only S you can bolt in, and it has one annoyance: it never arrives. The output only reaches $y_0$ and $y_1$ at $\pm\infty$, so at any finite distance from the threshold there's a sliver of the other value left over. Usually that sliver is far below the resolution of whatever you're driving and nobody cares, but if you need the output to be exactly zero at a known input, you want a curve with a finite window.
+The logistic is the one I use first, but it isn't the only S you can bolt in, and it has one annoyance: it never arrives. The output only reaches $y_0$ and $y_1$ at $\pm\infty$, so at any finite distance from the threshold there's a sliver of the other value left over. Usually that sliver is far below the resolution of whatever you're driving, but if you need the output to be exactly zero at a known input, you want a curve with a finite window.
 
 Smoothstep, the curve GLSL ships as a builtin, is a cubic on a window of width $w$ centered on the threshold, clamped flat outside it:
 
@@ -84,7 +84,7 @@ $$
 t = \mathrm{clamp}\!\left(\frac{x - x_0}{w} + \frac{1}{2},\, 0,\, 1\right), \qquad f(x) = y_0 + (y_1 - y_0)\,t^2\,(3 - 2t)
 $$
 
-Its derivative is proportional to $t(1-t)$, which is zero at both $t = 0$ and $t = 1$: the curve leaves its starting value and settles into its final one with no corner at either end, and it does it over a window you pick rather than over the whole number line. If you also need the second derivative to vanish, say the output is a position and you want the acceleration to start and end at rest, the quintic version, $t^3(6t^2 - 15t + 10)$, buys you that at the cost of a steeper middle.
+Its derivative is proportional to $t(1-t)$, which is zero at both $t = 0$ and $t = 1$: the curve leaves its starting value and settles into its final one with no corner at either end, and it does it over a window you pick rather than over the whole number line. If you also need the second derivative to vanish, say the output is a position and you want the acceleration to start and end at rest, the quintic version, $t^3(6t^2 - 15t + 10)$, does that at the cost of a steeper middle.
 
 <!-- prettier-ignore -->
 {% plot "Smoothstep: flat on both sides of a window you choose." %}

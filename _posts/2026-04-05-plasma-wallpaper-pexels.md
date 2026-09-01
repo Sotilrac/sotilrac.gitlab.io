@@ -16,7 +16,7 @@ KDE Plasma used to ship a wallpaper plugin that pulled random photos from [Unspl
 
 ## What Happened to the Unsplash Plugin?
 
-Unsplash [deprecated](https://changelog.unsplash.com/deprecations/2021/11/25/source-deprecation.html) `source.unsplash.com` back in November 2021, but left the service running for a long transition period. It started returning 404s intermittently around June 2023, and wasn't fully shut down until June 2024. So if you noticed your wallpaper quietly stopped changing sometime in late 2023 or 2024, that's why. That's when I noticed too.
+Unsplash [deprecated](https://changelog.unsplash.com/deprecations/2021/11/25/source-deprecation.html) `source.unsplash.com` back in November 2021, but left the service running for a long transition period. It started returning 404s intermittently around June 2023, and wasn't fully shut down until June 2024. So if you noticed your wallpaper stopped changing sometime in late 2023 or 2024, that's why. That's when I noticed too.
 
 When KDE developers looked into migrating to the proper Unsplash API, they discovered that Unsplash's [API guidelines](https://help.unsplash.com/en/articles/2511257-guideline-replicating-unsplash) explicitly prohibit wallpaper applications. The Unsplash provider was [removed](https://bugs.kde.org/show_bug.cgi?id=471526) from Plasma 5.27.7 and was not carried forward to Plasma 6.
 

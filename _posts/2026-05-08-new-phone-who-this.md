@@ -182,7 +182,7 @@ For the keen observer, the three absent are legacy packages that were never inst
 Disabling these has some minor caveats:
 
 - `com.oplus.cell.map` removes cell-based location estimates, so first GPS fix can be a touch slower.
-- `com.heytap.accessory` can break OnePlus Buds seamless pairing; manual Bluetooth pairing still works.
+- `com.heytap.accessory` can break automatic pairing for OnePlus Buds; manual Bluetooth pairing still works.
 - `com.oneplus.oshare` kills O-Share. I use [KDE Connect](https://kdeconnect.kde.org/) anyway.
 - `com.heytap.mcs` cuts HeyTap push, which apparently matters for a handful of Chinese-market apps.
 - `com.google.android.youtube` removes the YouTube app. When I need YouTube, I open [Firefox](https://www.mozilla.org/firefox/) behind [uBlock Origin](https://ublockorigin.com/); the only viable way to watch YouTube since they decided they mostly want you to watch ads between a few videos.
