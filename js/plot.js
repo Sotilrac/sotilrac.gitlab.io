@@ -160,7 +160,9 @@
       var cfg = this.cfg;
       var pal = palette();
       var pr = window.uPlot.pxRatio || window.devicePixelRatio || 1;
-      var font = Math.round(11 * pr) + "px sans-serif";
+      // uPlot scales axis fonts by pxRatio itself, so these stay in CSS pixels.
+      // Scaling them here too gives giant labels on high-DPR phones.
+      var font = "11px sans-serif";
       var self = this;
 
       function axis(label) {
