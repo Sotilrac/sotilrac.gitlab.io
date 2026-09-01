@@ -210,7 +210,7 @@ All meta tags and JSON-LD blocks are emitted from `_includes/head.njk` (site-wid
 
 ## Responsive Design
 
-The smallest target viewport is **360px** wide (standard Android phones). The mobile breakpoint is `30em` (480px). Test at 360px to ensure nothing overflows.
+The smallest target viewport is **360px** wide (standard Android phones). The mobile breakpoint is `30em` (480px). Test at 360px to catch any element that overflows.
 
 ## Deployment
 

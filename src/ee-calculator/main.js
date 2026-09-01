@@ -531,7 +531,7 @@ function sigfig(value, digits = 4) {
   return Math.round(value * mag) / mag;
 }
 
-// Choose a wattage rating that comfortably holds the dissipation.
+// Choose a wattage rating comfortably above the dissipation.
 function pickWattage(p) {
   const ratings = [0.0625, 0.125, 0.25, 0.5, 1, 2, 5, 10, 25];
   for (const r of ratings) {
@@ -721,7 +721,7 @@ function rcSolve(r, c, fc) {
 // Series/parallel LC tank: f₀ = 1 / (2π·√(LC)). Given any two of {L, C, f}, the
 // third falls out. R is optional and turns on Q (=ω₀L/R = √(L/C)/R) and the
 // -3 dB bandwidth (=f₀/Q). Z₀ = √(L/C) is the characteristic impedance of the
-// tank (equal to X_L and X_C at resonance) — useful for matching wireless-
+// tank (equal to X_L and X_C at resonance), useful when matching wireless-
 // power coils to the driver.
 function resonance({ L, C, f, r }) {
   const have = [L, C, f].filter((x) => x != null && isFinite(x) && x > 0);
@@ -1193,7 +1193,7 @@ class EECalculator extends HTMLElement {
     }
     wrap.appendChild(tabs);
 
-    // Tab groups: each holds multiple stacked tool sections.
+    // Tab groups: each contains several stacked tool sections.
     const groups = document.createElement("div");
     groups.className = "tab-groups";
     for (const t of TABS) {
@@ -1423,7 +1423,7 @@ class EECalculator extends HTMLElement {
       });
     });
 
-    // Value → bands, live on input. Use a partial repaint so the text input
+    // Value to bands, live on input. Use a partial repaint so the text input
     // keeps focus while the user is typing.
     el.querySelector("[data-value-input]").addEventListener("input", () => {
       const input = el.querySelector("[data-value-input]");

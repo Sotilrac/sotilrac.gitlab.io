@@ -9,7 +9,7 @@ stages:
   - deploy
 
 # Cache only npm's download cache. node_modules is intentionally not cached:
-# `npm ci` wipes it every run, so caching it just shuffles ~50 MB for nothing.
+# `npm ci` wipes it every run, so caching it only moves ~50 MB per pipeline.
 cache:
   key:
     files:

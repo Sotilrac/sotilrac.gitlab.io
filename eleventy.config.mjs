@@ -165,8 +165,8 @@ export default function (eleventyConfig) {
       theme: "#0f1923",
     },
   };
-  // Expose the same map (as a list, with the key folded in) so calc.njk can
-  // paginate one bare-chrome standalone page per calculator at /calc/<name>/.
+  // Expose the same map as a list, with each key added as a `name` field, so
+  // calc.njk can paginate one bare-chrome page per calculator at /calc/<name>/.
   eleventyConfig.addGlobalData(
     "calcList",
     Object.entries(CALCS).map(([name, c]) => ({ name, ...c })),
