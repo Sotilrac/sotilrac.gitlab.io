@@ -16,7 +16,7 @@ I remember being a junior engineer after graduating in 2008 and [looking for a j
 
 Some of it feels the same. Hiring has [slowed to levels last seen in 2010](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start), [unemployment for recent grads is running roughly twice the general rate](https://www.clevelandfed.org/publications/economic-commentary/2025/ec-202514-are-young-college-graduates-losing-their-edge-in-the-job-market), and connections still matter more than they should. The instinct to make yourself visible is the same one I had then, and it works again.
 
-In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_? General unemployment sits near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same time window. Most of those cuts spared the seniors who already know the ropes.
+In 2008 the whole economy collapsed and the cure was waiting for it to come back. In 2026 the economy is _fine_? General unemployment is near historic lows. The pain is concentrated on the new cohorts. Companies have figured out that AI tools can cover the grunt work that used to onboard juniors, so they sawed the bottom rung off the training ladder. [Junior-developer postings are down about forty percent](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/) from their pre-2022 baseline, [employment for software developers aged 22 to 25 is down roughly twenty percent](https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start) since late 2022, and the tech sector [has shed close to half a million workers](https://layoffs.fyi/) over the same time window. Most of those cuts spared the seniors who already know the ropes.
 
 ## A calculator for words
 
@@ -34,7 +34,7 @@ One side note worth holding onto: LLMs are best, by a long way, at Python and at
 
 ## Without the rigor
 
-CAD has rigor built into the tool: geometry that does not close raises a warning, and so do dimensions that contradict each other. A spreadsheet that divides by zero tells you. The tool, by construction, refuses to silently emit wrong output for a wide class of mistakes.
+CAD has rigor built into the tool: geometry that does not close raises a warning, and so do dimensions that contradict each other. A spreadsheet that divides by zero tells you. The tool, by construction, does not silently emit wrong output for a wide class of mistakes.
 
 LLMs do not work like this. They produce a great deal of plausible output, quickly, with minimal guardrails. The output is fluent whether or not it is correct. Ship what the model gives you without review, and you ship whatever was statistically likely, which is a different thing from what was right.
 

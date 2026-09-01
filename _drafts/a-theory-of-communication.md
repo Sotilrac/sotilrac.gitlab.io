@@ -89,7 +89,7 @@ I didn't invent this. The model I'm describing is mostly a re-assembly of things
 
 **Perception as species-specific world:**
 
-- [Jakob von Uexküll's _Umwelt_ (1909-34)](https://en.wikipedia.org/wiki/Umwelt): every organism inhabits its own perceptual world, determined by its body, sensors, and behavioral repertoire. A tick's world is dominated by temperature and butyric acid; a bat's by echolocation; ours by color and language. Uexküll's "functional circle" (_Funktionskreis_) links perception (_Merkwelt_) to action (_Wirkwelt_) in a closed loop. This is the pre-cognitive-science version of $T$, and the clearest articulation that different organisms genuinely live in different realities, not just hold different opinions about one reality.
+- [Jakob von Uexküll's _Umwelt_ (1909-34)](https://en.wikipedia.org/wiki/Umwelt): every organism inhabits its own perceptual world, determined by its body, sensors, and behavioral repertoire. A tick's world is dominated by temperature and butyric acid; a bat's by echolocation; ours by color and language. Uexküll's "functional circle" (_Funktionskreis_) links perception (_Merkwelt_) to action (_Wirkwelt_) in a closed loop. This is the pre-cognitive-science version of $T$, and the clearest articulation that different organisms live in different realities, not just hold different opinions about one reality.
 - [Thomas Nagel, "What Is It Like to Be a Bat?" (1974)](https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F): an argument that the subjective character of another creature's experience is inaccessible from outside. In the framing here, that's the claim that $T^{-1}$ applied to someone else's $P$ never fully recovers their experience, not even in principle.
 - [Adrian Tchaikovsky's _Children of Time_ trilogy (2015-2022)](<https://en.wikipedia.org/wiki/Children_of_Time_(novel)>): three novels written at length from the point of view of uplifted spiders, octopuses, and corvids. Each species has a radically different $T$: spiders communicate through vibration and pheromone and think distributively across eight legs; octopuses think with their arms; corvids reason collectively across generations. It is the most sustained literary exercise I know of at the thing Nagel says cannot fully be done. Fiction cheats, because the reader is still a human reading English, but the books do the exercise anyway, and do it well.
 
@@ -137,7 +137,7 @@ On the other side of the channel is a partner who never sees the elephant; they 
 **The play loop (three shots, one partner):**
 
 1. **Shot 1, blind.** You orbit, frame, and take your best photograph. Send it. You do not yet know what your partner's $T^{-1}$ does to an image like this, so you are guessing.
-2. **See their reconstruction.** Their 3D render appears beside the ground truth. It is wrong in specific ways. That wrongness is _information_ about their transform: you now know which features they missed, which they hallucinated, which they quietly projected from priors.
+2. **See their reconstruction.** Their 3D render appears beside the ground truth. It is wrong in specific ways. That wrongness is _information_ about their transform: you now know which features they missed, which they hallucinated, which they projected from priors.
 3. **Shot 2, adjusting.** You reposition, maybe toggle a camera feature, and take another photo that compensates for the specific failure modes you just observed. Send.
 4. **Reconstruction updates.** The partner re-renders using both photos, fighting between your new evidence and their own priors.
 5. **Shot 3, precision.** Last chance. By now you have a working model of your partner's blind spots. Pick the single shot that closes the biggest remaining gap.
@@ -153,7 +153,7 @@ Every piece of the theory shows up in this loop: shot 1 is communication without
 - The **child**: higher noise floor, stronger generative priors, less calibrated.
 - The **bat**: Umwelt-shifted, reconstructs in echolocation-space rather than vision-space. Your photo of a silent elephant is not useful data; a recording of its footsteps is.
 - The **blind men**: an ensemble of three partners with non-overlapping attention windows, as in the opening parable. Your job: compose photos that let all three reconstruct something plausible together.
-- The **adversary**: a partner whose transform is deliberately mis-aligned or motivated. Same photos, distorted reconstruction on purpose. The model for bad-faith communication.
+- The **adversary**: a partner whose transform is mis-aligned or motivated. Same photos, distorted reconstruction on purpose. The model for bad-faith communication.
 
 **Camera presets (your $T + L$):**
 

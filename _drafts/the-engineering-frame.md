@@ -22,11 +22,11 @@ Taste arguments sound like this:
 - "Good engineers don't do it that way."
 - "I wouldn't ship this."
 
-These all implicitly rely on the listener accepting that _you_ have the taste and _they_ don't, which, even when true, is a confrontational move because it turns a technical conversation into a status conversation. You are telling the client, your PM, or your teammate that their judgement is wrong, and the defense it triggers is not an engineering defense; it is a personal one.
+These all implicitly rely on the listener accepting that _you_ have the taste and _they_ don't, which, even when true, is a confrontational move because it turns a technical conversation into a status conversation. You are telling the client, your PM, or your teammate that their judgement is wrong, and the defense it triggers is a personal one rather than an engineering one.
 
 I think of this as the **artist frame**, where the argument comes from interior conviction: "I just know this is better." It is a valid way to make things, and I respect it, but it is a terrible way to negotiate changes with someone who also has stakes in the outcome, because the client hears it as "you are trying to impose your preferences on my project."
 
-Worse, the taste frame is unfalsifiable, because there is no shared criterion. When someone disagrees, you can only escalate ("I've been doing this for X years") or capitulate; neither is a collaboration.
+The taste frame is also unfalsifiable, because there is no shared criterion. When someone disagrees, you can only escalate ("I've been doing this for X years") or capitulate; neither is a collaboration.
 
 ## The New Frame (Constraints, Trade-offs, What's Achievable)
 
@@ -39,7 +39,7 @@ The engineering frame reframes the same disagreement in terms neither party can 
 
 Note what changed. I'm not telling anyone their idea is bad; I'm describing the constraints the idea has to live inside, and letting them decide what trade-offs they want to accept. The criterion becomes shared and visible to both of us: time, cost, effort, maintainability, risk.
 
-The key move is that you stop arbitrating taste and start laying out constraints. The client gets to keep their agency: they are the one making the call, armed with information they wouldn't otherwise have.
+The key move is that you stop arbitrating taste and start laying out constraints. The client gets to keep their agency: they are the one making the call, with information they wouldn't otherwise have.
 
 ## Why This Works
 
@@ -51,9 +51,9 @@ There is also a less flattering reason: most of the time, the technically right 
 
 ## Assume Information Asymmetry
 
-The engineering frame depends on a practice that is easy to skip: when you hit a real disagreement, pause and assume information asymmetry before anything else. In my experience, the underlying cause of most technical disputes is not diverging taste or bad judgement; it is that one of us knows something the other doesn't. Maybe they have tried my preferred approach in a past project and watched it blow up in a way I never heard about, or I know about a failure mode they haven't hit yet, or we are optimizing for different constraints that neither of us has named out loud.
+The engineering frame depends on a practice that is easy to skip: when you hit a real disagreement, pause and assume information asymmetry before anything else. In my experience, the underlying cause of most technical disputes is that one of us knows something the other doesn't, rather than diverging taste or bad judgement. Maybe they have tried my preferred approach in a past project and watched it blow up in a way I never heard about, or I know about a failure mode they haven't hit yet, or we are optimizing for different constraints that neither of us has named out loud.
 
-So, the first move when a disagreement surfaces is not to counter-argue; it is to ask: what is driving your preference, what have you seen with this approach before, what is the constraint I might be missing? Most "irreducible" disagreements dissolve once both parties finish sharing what they were each implicitly assuming the other already knew.
+So, the first move when a disagreement surfaces is to ask instead of counter-arguing: what is driving your preference, what have you seen with this approach before, what is the constraint I might be missing? Most "irreducible" disagreements dissolve once both parties finish sharing what they were each implicitly assuming the other already knew.
 
 The alignment is free, and asking has a useful side effect: it signals that you think the other person might be right, which is itself part of the good-faith move the engineering frame is making.
 
@@ -61,13 +61,13 @@ The alignment is free, and asking has a useful side effect: it signals that you 
 
 It doesn't cover everything, and some cases need more:
 
-- **Irreducible aesthetic disagreement.** Sometimes two paths are genuinely equivalent on all measurable constraints, and preference is all that's left. Here, own the taste frame honestly: "both work, I'd lean here because I find it cleaner, but it's your call."
-- **Values conflicts.** "This design is unsafe" or "this pattern is going to hurt users" isn't a trade-off to discuss, it's a line to hold. Don't engineering-frame yourself out of necessary pushback.
+- **Irreducible aesthetic disagreement.** Sometimes two paths are equivalent on all measurable constraints, and preference is all that's left. Here, own the taste frame honestly: "both work, I'd lean here because I find it cleaner, but it's your call."
+- **Values conflicts.** "This design is unsafe" or "this pattern is going to hurt users" is a line to hold rather than a trade-off to discuss. Don't engineering-frame yourself out of necessary pushback.
 - **Client doesn't share the constraints.** If the stakeholder doesn't care about the constraint you're invoking (say, they don't care about maintainability, they'll ship this and never look back), the frame collapses. Then you need to either surface a constraint they _do_ care about, or accept their call.
 
 ## Moving Between Frames Deliberately
 
-The skill worth building is noticing which frame you are in and choosing it on purpose: the artist frame for your own work when the decision is genuinely yours, the engineering frame for anything you are negotiating with someone else, and the hold-the-line frame for the rare cases where you actually can't compromise.
+The skill worth building is noticing which frame you are in and choosing it on purpose: the artist frame for your own work when the decision is yours, the engineering frame for anything you are negotiating with someone else, and the hold-the-line frame for the rare cases where you actually can't compromise.
 
 I used to reach for the artist frame by default because it is how I was trained to think about craft: code as personal expression. The switch to the engineering frame has not made me care less about craft; it has made the craft easier to deliver, because the people I work with are no longer defending themselves from my opinions.
 

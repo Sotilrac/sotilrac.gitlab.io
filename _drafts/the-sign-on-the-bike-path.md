@@ -21,11 +21,11 @@ def face(speed):
     return HAPPY if speed < LIMIT else UNHAPPY
 ```
 
-There's nothing wrong with the line, except that the radar hands it an estimate. Every reading carries a few tenths of a km/h of noise, so when the true speed sits on the limit, every new reading lands on whichever side the noise picked. At twenty readings a second, that's twenty coin flips a second, and the face follows all of them.
+The line is fine until you look at `speed`, because the radar hands it an estimate. Each reading is off by a few tenths of a km/h, so when the true speed is at the limit, the noise decides which side of the comparison it falls on. At twenty readings a second, that's twenty coin flips a second, and the face follows all of them.
 
 ## Two Trip Points Instead of One
 
-The fix is as old as the Schmitt trigger: give the comparison two trip points and a memory of which side it's on. The sign turns yellow when you cross the upper point and doesn't turn green again until you drop below the lower one, which leaves a band in the middle where nothing happens at all.
+The fix is as old as the Schmitt trigger: give the comparison two trip points and a memory of which side it's on. The sign turns yellow when you cross the upper point and doesn't turn green again until you drop below the lower one, which leaves a band in the middle where the face doesn't change.
 
 ```python
 HI, LO = 21.8, 18.2  # km/h
@@ -71,10 +71,10 @@ The first-order filter means a reading has to persist for roughly a second befor
 
 ## One Bad Reading
 
-A deadband has memory, and memory can be poisoned. Ride at a comfortable 19 km/h and let a car pass through the beam once: the sign reads 60, sails over the upper trip point, latches to the yellow face, and stays there forever, because 19 km/h never drops below the lower one. In simulation, one 60 km/h outlier every two seconds leaves the sign scolding an innocent rider for 94% of the minute. Low-pass filtering makes that worse instead of better, since the outlier drags the average up and the filter holds it up there: 98%.
+A deadband has memory, and memory can be poisoned. Ride at a comfortable 19 km/h and let a car pass through the beam once: the sign reads 60, sails over the upper trip point, latches to the yellow face, and never comes back, because 19 km/h never drops below the lower one. In simulation, one 60 km/h outlier every two seconds leaves the sign scolding an innocent rider for 94% of the minute. Low-pass filtering pushes that to 98%, since the outlier drags the average up and the filter keeps it there.
 
-The remedy is to bound how far any single reading can move the decision. Clamp the input, take a median of the last few samples, or squash the speed through a [saturating curve](/blog/sigmoids-are-the-best/) before it reaches the filter, so that 60 km/h and 25 km/h both mean the same thing to the sign and a single spike can only nudge the filter by one step. A clamp, a five-sample median, and a saturating curve all leave the face green for the entire minute.
+Bound how far any single reading can move the decision: clamp the input, take a median of the last few samples, or squash the speed through a [saturating curve](/blog/sigmoids-are-the-best/) before it reaches the filter, so that 60 km/h and 25 km/h both mean the same thing to the sign and a single spike can only nudge the filter by one step. A clamp, a five-sample median, and a saturating curve all leave the face green for the entire minute.
 
 <!-- TODO: when this publishes, add a link back to it from the sigmoids post -->
 
-The whole sign has one bit of output, and getting that one bit to sit still takes two trip points, one bit of memory, a time constant, and a limiter on the input. The rest is remembering that the number arriving from the sensor is a guess at the speed rather than the speed itself.
+The whole sign has one bit of output, and getting that one bit to sit still takes two trip points, one bit of memory, a time constant, and a limiter on the input. The rest is remembering that the number from the sensor is a guess at the speed rather than the speed itself.
