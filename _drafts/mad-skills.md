@@ -31,7 +31,7 @@ One thing that separates the model from a junior is that it does not learn. It c
 
 So I moved those lectures into skills, short markdown files that the agent loads only when the request matches their description, and collected them in [a repo](https://gitlab.com/sotilrac/skills). They are mostly recipes for things I was already doing by hand:
 
-- [d2-diagrams](https://gitlab.com/sotilrac/skills/-/tree/main/d2-diagrams), a reference for the D2 diagram language with the layout gotchas I kept rediscovering. This is the one that started it all, because Claude is superb at HTML and dreadful at D2.
+- [d2-diagrams](https://gitlab.com/sotilrac/skills/-/tree/main/d2-diagrams), a reference for the D2 diagram language with the layout gotchas I kept rediscovering. This is the one that started it all, because LLMs are great at HTML and dreadful at D2.
 - [standalone-web-app](https://gitlab.com/sotilrac/skills/-/tree/main/standalone-web-app) and [nextcloud-web-app](https://gitlab.com/sotilrac/skills/-/tree/main/nextcloud-web-app), a playbook for local-first browser apps and a companion that ships the same engine to the Nextcloud App Store.
 - [html-deck](https://gitlab.com/sotilrac/skills/-/tree/main/html-deck), single-file HTML slide decks I can version-control instead of fighting Keynote.
 - [fdroid-publish](https://gitlab.com/sotilrac/skills/-/tree/main/fdroid-publish), how to get an Android app into F-Droid and past its reviewers.
