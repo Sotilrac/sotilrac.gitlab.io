@@ -7,118 +7,50 @@ categories:
 tags:
   - claude-code
   - tools
-  - automation
+  - leadership
+  - work
 ---
 
-<!--
-  goal: to show how it feels to code with ai as a senior. provide caveats and insight. expand into how this translaets in teams and organizations
+For most of the last decade, my job has been leading robotics teams, and code was something I reviewed far more often than I wrote. This past year, that flipped. I have been coding more than I have in a long time and, more to the point, finishing things: a couple of web apps, the calculators and plots on this blog, and a pile of small tools that had been waiting in a text file for years. I did not get more free time (I checked); LLMs got good enough to use, and the projects I had been meaning to build finally fit into the days I already had.
 
-  The moral of the story is that skills only go so far in automating fairly mechanical things. But in the long run we still benefit from hiring and training the next generation of engineers who will bring their experience and ideas.
+## Power Tools
 
-  The insight is that when we work, a part og teh product is the actual outpur or artifact: the function, library, app or robot behaviour. There's anothe very important part of the work which is the development of our own skills. The judgement calls we make given what worked and where we got burned.
+A table saw does not teach a carpenter joinery, but with one, a cabinet takes an afternoon instead of a week. That is what the LLM does for me: it lowers both the time a task takes and the activation energy to start it. A project that used to need a free weekend, and therefore never happened, now fits between two meetings. I could have built any of these things before; the difference is that now I get to them, while still doing the leadership work that pays the bills.
 
-  LLMs are teh capable models that they are today beciause of the free (although not alwasy willing) contribution of all OSS, public domain and open content. It is very easy to create variatiosn of things that have already been done (especially if they were done 1000 times). Creating new things still requires imagination, ingenuity and mad skills
+For instance, Claude Code, runs the model in a terminal, where it can create and edit files, build and run programs, and read whatever those programs print back. On a Linux machine that amounts to control of everything, which is what makes it useful and also what makes fluency with bash indispensable: you want to know at a glance what to allow, what to block, and how to get it unstuck.
 
- -->
+## You've Done This Before
 
- <!--
+What makes the tool work for me is that I already know how to use it, because I have been doing the same thing with people for years. I instruct the model the way I would instruct a junior member of my team: I envision the architecture, describe it clearly, make the judgment calls early so it doesn't paint itself into a corner, and hand over a map of how to get the work done. It can be trusted with some technical decisions and needs explicit direction on the rest. This is delegation, and any team lead or senior engineer has been practicing it for ages.
 
- I've been playing with Claude Code and ended up making a couple web apps. This was an area that I hand't got to develop and it seems LLMs excell at it since there's somuch relevant material redilly available. For those unfamiliar, Claude code is a tool to run a more coding oriented version of the LLM in the command line (and i think now also in teh browser, but I haven;t use that version). This allows it to use your local computing resources, to create and edit files, build and run programs, and red the output such programs generate. This is quite powerful, especially when running in in a linux terminal becuase you can control almost every aspect of the computer formthe command line.
+The other half of delegating well is making sure the person can check their own work without waiting on you. LLMs performs much better in a repo with unit tests, linting, a build that fails loudly, and pre-commit and pre-push hooks that run all of it, because every step gets immediate feedback and the model iterates on its own instead of asking me. The same tooling is exactly what a new hire needs on their first week, so a codebase set up for an LLM is a codebase set up for people, and I have started treating that tooling as the first deliverable of any project rather than the last.
 
- Coding with the LLM feels like wearing an exoskeleton that makes you faster and stronger. Much like iron man, the OG vibe coder, it feels like you can have something that can translate your thoughts into concrete code.
+## Recipes
 
- For this to work well there are two things that are needed: the LLM needs to be competent enough, and you need to ahve clear and realizable ideas. There's a third thing: you need to have a good enough metal model of the LLM in order to communicate the ideas in a way that makes thme actionable.
+One thing that separates the model from a junior is that it does not learn. It can save preferences and standing permissions, but every session starts from scratch, and it never absorbs the idiosyncrasies of your code or your taste. In practice, this meant I kept reprompting the same things: how to lay out a web app, how D2 diagrams actually work, what a Jira workflow looks like in my team.
 
- So, to recap, in order to bring an idea to fruition, you need to have a clear plan and express it in a way that can be implented by something otehr than you. You need to make sure that whatever is implementing it, has the apropriate skill level to actually acomplish it.
+So I moved those lectures into skills, short markdown files that the agent loads only when the request matches their description, and collected them in [a repo](https://gitlab.com/sotilrac/skills). They are mostly recipes for things I was already doing by hand:
 
- This is starting to sound a lot like delegation. For team leads and senior engineers, this is nothing new. We've been doing this for ages. So working with LLMs feels a lot like working with junior engineers. They needs explicit direction, can be trusted with some technical decicions, but ultimately they need to be provided with a clear map of how to complete the work. Provideing the early judgement calls early on in a project can help claude avoid painting itself into a corner and shurning tokens.
+- [d2-diagrams](https://gitlab.com/sotilrac/skills/-/tree/main/d2-diagrams), a reference for the D2 diagram language with the layout gotchas I kept rediscovering. This is the one that started it all, because Claude is superb at HTML and dreadful at D2.
+- [standalone-web-app](https://gitlab.com/sotilrac/skills/-/tree/main/standalone-web-app) and [nextcloud-web-app](https://gitlab.com/sotilrac/skills/-/tree/main/nextcloud-web-app), a playbook for local-first browser apps and a companion that ships the same engine to the Nextcloud App Store.
+- [html-deck](https://gitlab.com/sotilrac/skills/-/tree/main/html-deck), single-file HTML slide decks I can version-control instead of fighting Keynote.
+- [fdroid-publish](https://gitlab.com/sotilrac/skills/-/tree/main/fdroid-publish), how to get an Android app into F-Droid and past its reviewers.
+- [ticket](https://gitlab.com/sotilrac/skills/-/tree/main/ticket), a Jira ticket worked end to end, from fetch to PR, invoked by hand because I don't want the model deciding on its own to ship branches.
+- [translate](https://gitlab.com/sotilrac/skills/-/tree/main/translate), document translation that gathers native material in the target language first and builds a lexicon from it.
+- [avoid-ai-tropes](https://gitlab.com/sotilrac/skills/-/tree/main/avoid-ai-tropes), a catalogue of the patterns and vocabulary (Claudisms) that reek of AI slop, and a scanner.
 
- Another similar aspect is that CLaude code perfroms much better when provided with mechanisms for validating its performance as it dgoes, unit tests, linting, building, code standards. This quick feedback enables it to iterate quickly and mure independently. Much like a juniour would benefit from the same tools.
+Each one is a page or two, terse, gotchas in front. A skill is the closest the model gets to learning on the job: I do the remembering once, in a file, and every future session inherits it.
 
- I feels particularly blessed in this case becuase I have been fortunate enough to gather a lot of such experience: both with hands-on code development and leading teams.
+## Apprentices
 
- Otehr useful skills:
- * bash and the linux command line in general. As Claude code uses a lof of linux command line tools and it is quite helpful to know at a glance what to dis/allow or how to gte it unstuck
+All of the above works because I bring twenty-odd years of judgment to the prompt. For a junior engineer, the same tool is a problem, and I think we are handling it badly.
 
- One substantial difference with working with otehr enginneers is that Claude doens't learn. At least not in the way a person does. It can save prefernces and you can give it permission to run certain types of commands, but it doens't learn the preferences, and idiosincracies of the code, especially across different repos.
+The trades solved this a long time ago. An apprentice carpenter does not get the table saw on day one; they sweep, measure, cut by hand, learn what a good joint feels like, and earn the power tools as they develop the judgment to use them without losing a finger. Software needs the same structure now: juniors who write and debug code themselves before the model does it for them, reviews that ask why rather than whether it passes, and LLM access that widens as their judgment does. An engineer who has only pressed the button on the table saw cannot tell when the cut is wrong.
 
- This is one of the main caveats when adopting LLMs, especially if you're considering replacing juniors.
+This has to be a deliberate decision about how we lead teams, because the default runs the other way. A senior augmented with an LLM out-produces a junior with the same LLM, so the junior req is the one that gets cut, and the juniors who do get hired start with the model on day one and produce code they cannot explain. Run it forward three to five years: either we have a workforce of engineers who came up through an apprenticeship and can wield these tools with judgment, or we have no one to promote into the senior seats, because we stopped growing them. Not great now, and considerably worse later.
 
- This means i find myself reprompting a lot of teh same things.
+## The Skills You Can't Install
 
- THis in when skills come ine hansy: https://gitlab.com/sotilrac/skills
+When we work, part of the product is the artifact: the function, the library, the app, the robot behaviour. The other part, which never ships, is the skill we build doing it, the judgment accumulated from what worked and where we got burned. A `SKILL.md` captures the first kind of knowledge; the second kind only grows in people, and only if we let them do the work.
 
- Very much like how Claude is very good at html and react, becuase of the abondance of material it sucks at D2 (a newer diagraming laguage) and rutinely halucinates of insists on wrong paradigms and features. This is what dot me started with writing skills.
-
-
-  -->
-
-I've been playing with Claude Code and ended up making a couple of web apps. Web development was a corner of the trade I had never got around to, and LLMs turn out to excel at it, presumably because so much relevant material sits readily available online.
-
-For those unfamiliar, Claude Code is a tool that runs a coding-oriented version of the LLM in the command line (there's a browser version now too, which I haven't used). The command line is the point: it lets the model use your local computing resources to create and edit files, build and run programs, and read whatever output those programs produce. On a Linux machine this amounts to near-total control, since almost every aspect of the computer is reachable from a terminal.
-
-## The exoskeleton
-
-Coding with the LLM feels like wearing an exoskeleton that makes you faster and stronger. Much like Iron Man, the OG vibe coder, you get a suit that translates your thoughts into concrete code.
-
-For this to work well, two things are needed: the LLM has to be competent enough, and you have to have clear, realizable ideas. There's a third: you need a good enough mental model of the LLM to communicate those ideas in a way that makes them actionable.
-
-So, to recap, bringing an idea to fruition means having a clear plan, expressing it so something other than you can implement it, and making sure whatever is implementing it has the skill to pull it off. This is starting to sound a lot like delegation.
-
-## You've done this before
-
-For team leads and senior engineers, none of this is new; we've been doing it for ages. Working with the LLM feels a lot like working with a junior engineer: it needs explicit direction, it can be trusted with some technical decisions, but it ultimately needs a clear map of how to complete the work. Making the judgment calls early in a project keeps Claude from painting itself into a corner and churning tokens trying to get back out.
-
-The parallel extends to feedback. Claude Code performs much better when given mechanisms to validate its work as it goes: unit tests, linting, builds, code standards. Quick feedback lets it iterate rapidly and more independently, much like a junior benefits from the same tools.
-
-I feel particularly blessed here, because I've been fortunate enough to gather both halves of the required experience: years of hands-on code development and years of leading teams. Fluency in bash and the Linux command line helps too; Claude leans on command-line tools constantly, and it pays to know at a glance what to allow, what to block, and how to get it unstuck.
-
-## The catch
-
-One substantial difference from working with other engineers is that Claude doesn't learn. At least not the way a person does. It can save preferences, and you can grant it standing permission to run certain kinds of commands, but it never absorbs the idiosyncrasies of your code, especially across repos. Every session starts from scratch. This is one of the main caveats when adopting LLMs in a team or an organization, and the one to sit with if you're considering replacing juniors: what you teach a junior stays taught.
-
-In practice, it meant I kept reprompting the same things over and over. Which brings us to skills.
-
-## What a skill actually is
-
-Claude Code added a feature called "skills" a while back, and I ignored it for a long time. The pitch sounded fine: drop a folder with a markdown file in `~/.claude/skills/`, Claude picks it up when relevant.
-
-Then I got tired of pasting the same three paragraphs every time I asked for a D2 diagram. Claude is excellent at HTML and React thanks to the abundance of material, but it sucks at D2, a newer diagramming language, and routinely hallucinates features or insists on the wrong paradigm. Every conversation opened with the same lecture: ELK is the layout engine, dagre silently ignores per-container direction, here's what affects layout and what doesn't. I finally moved the lecture into a `SKILL.md`, and the next time I asked Claude to diagram a system, it just did the right thing.
-
-So I built a few more, packed them into [a repo](https://gitlab.com/sotilrac/skills), and now I have a small collection of what I'm calling mad skills: little markdown files that pound-for-pound carry more weight than any of my actual prompt engineering.
-
-A skill is a folder with a `SKILL.md` inside. The frontmatter declares a `name` and a `description`, and that's almost the whole interface. Claude reads the descriptions of all installed skills at the start of each turn, decides if any are relevant, and only then loads the body. If nothing matches, nothing loads. The cost of having ten installed is roughly the cost of having zero, until one triggers.
-
-That property is the one that converted me. I had assumed adding more context meant paying for it whether or not I needed it. Skills route on the description alone, so you can stack them without compounding the bill.
-
-## What's in the repo
-
-All of them are things I was already doing manually.
-
-**d2-diagrams** is a reference for the D2 diagram language. It records what works in ELK vs. dagre, what affects layout and what does not, and the gotchas I keep rediscovering. It auto-loads on any `*.d2` file, so a D2 file in a conversation flips the skill on without me asking. This is the one that started everything.
-
-**html-deck** is for authoring single-file HTML decks with a small custom element I wrote, `<deck-stage>`. It handles keyboard navigation, auto-scaling to the viewport, one-page-per-slide print to PDF, speaker notes, and resume-where-you-left-off via localStorage. The skill ships the runtime, a template, and a worked example. I use this instead of Keynote or Google Slides for any deck I want to version-control or share as a URL.
-
-**standalone-web-app** is a playbook for bootstrapping a local-first browser app: pnpm, Vite, React, TypeScript, with opinions on theming, component discipline, CI, and deploy targets. It is the stack I reach for when a tool needs to read user-owned data, compute something, and never talk to a server.
-
-**nextcloud-web-app** is the companion to standalone-web-app. It adds a Nextcloud app target to the same shared engine and walks through the signed release pipeline for the Nextcloud App Store, gotchas included.
-
-**ticket** works a Jira ticket end-to-end: fetch it over MCP, plan with me, branch, implement, commit incrementally, and open the PR. This one is invoked explicitly as `/ticket ABC-123`, since I don't want Claude deciding on its own to start shipping branches.
-
-**translate** handles document translation, with a twist: before translating anything, it gathers native material in the target language for the same domain and register, builds a style guide and lexicon from it, and confirms the region and dialect strength with me. Translation against evidence rather than vibes.
-
-Each skill is short, between 60 and 200 lines. The repo's README has the index, and everything is MPL-licensed.
-
-## Why it works
-
-The thing I underestimated is how much of "prompt engineering" is just the same context I was retyping. A skill is the version of that context I edit once and Claude reads forever. It is documentation aimed at Claude, written like documentation aimed at a colleague: terse, specific, gotchas in front, trivia in back. It is also the closest Claude gets to learning on the job; I do the remembering once, in a file, and every future session inherits it.
-
-The descriptions do most of the work: Claude picks skills by matching the user's request against the description string, so the description has to lead with trigger keywords and then say what the skill does, in that order. "D2 diagram language reference" earns the load; "Carlos's notes on stuff" does not.
-
-Keep the bodies short, too. Once a skill loads, every token competes with the actual conversation. I have cut every skill at least once after it loaded but contributed nothing useful. Long-form references and templates go in sibling files, referenced from the body so Claude reads them only when it needs to.
-
-## The skills you can't install
-
-There's a limit to all this, and it's worth naming: skills only go so far, automating the fairly mechanical things, the lecture I was tired of retyping, the checklist I'd otherwise paste in. When we work, part of the product is the artifact itself: the function, the library, the app, the robot behaviour. The other part, the one nobody ships, is the development of our own skills, the judgment calls we accumulate from what worked and where we got burned. A `SKILL.md` captures the first kind of knowledge; the second kind only grows in people.
-
-It also helps to remember why LLMs are as capable as they are: the free, although not always willing, contribution of all the open source, public domain, and open content ever published. That diet makes them superb at producing variations of things that have been done before, especially things that have been done a thousand times, and it is why, in the long run, we still come out ahead hiring and training the next generation of engineers, who will bring their own experience and ideas. Creating something new still takes imagination, ingenuity, and mad skills.
+It also helps to remember what the models are made of: all the open source, public domain, and open content published to date, contributed freely if not always willingly. That diet makes them superb at variations on things that have been done a thousand times. Creating something new still takes imagination, ingenuity, and mad skills, and someone has to be around to have them.
