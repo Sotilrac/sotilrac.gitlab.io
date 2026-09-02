@@ -15,7 +15,7 @@ For most of the last decade, my job has been leading robotics teams, and code wa
 
 ## Power Tools
 
-A table saw does not teach a carpenter joinery, but with one, a cabinet takes an afternoon instead of a week. That is what the LLM does for me: it lowers both the time a task takes and the activation energy to start it. A project that used to need a free weekend, and therefore never happened, now fits between two meetings. I could have built any of these things before; the difference is that now I get to them, while still doing the leadership work that pays the bills.
+A table saw does not teach a carpenter joinery, but with one, a cabinet takes an afternoon instead of a week. That is what the LLM does for me: it lowers both the time a task takes and the activation energy to start it. A project that used to need a free weekend, and therefore never happened, now fits in an evening, or in the hour before dinner. I could have built any of these things before; the difference is that now I get to them, while still doing the leadership work that pays the bills.
 
 For instance, Claude Code, runs the model in a terminal, where it can create and edit files, build and run programs, and read whatever those programs print back. On a Linux machine that amounts to control of everything, which is what makes it useful and also what makes fluency with bash indispensable: you want to know at a glance what to allow, what to block, and how to get it unstuck.
 
