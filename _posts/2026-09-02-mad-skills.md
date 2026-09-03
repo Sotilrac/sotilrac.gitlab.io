@@ -56,6 +56,6 @@ This has to be a deliberate decision about how we lead teams, because we are def
 
 {% fig "/img/blog/mad-skills/kung-fu.gif", "Download skills" %}
 
-When we work, part of the product is the artifact: a function, a library, an app, a robot behaviour. The other part, which we don't ship, is the skill we build doing it, the judgment accumulated from what worked and what burned us. A `SKILL.md` captures the first kind of knowledge; the second kind only grows in people, and only if we let them do the work.
+When we work, part of the product is the artifact: a function, a library, an app, a robot behaviour. The other part, which we don't ship, is the skill we build doing it, the judgment accumulated from what worked and what burned us. A `SKILL.md` captures the first kind of knowledge; the second kind only develops in people, and only if they get to do the work.
 
-It also helps to remember what the models are made of: all the open source, public domain, and open content published to date, contributed freely if not always willingly. That diet makes them superb at variations on things that have been done a thousand times. Creating something new still takes imagination, ingenuity, and mad skills, and someone has to be around to have them.
+It also helps to remember what the models are made of: all the open source, public domain, and open content published to date, contributed freely if not always willingly. That diet makes them superb at variations on things that have been done a thousand times. Creating something new still takes imagination, ingenuity, and mad skills.
