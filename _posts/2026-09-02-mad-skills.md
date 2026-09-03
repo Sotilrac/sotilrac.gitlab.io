@@ -22,7 +22,7 @@ A table saw does not teach a carpenter joinery, but with one, a cabinet takes an
 
 Claude Code runs in a terminal, where it can create and edit files, build and run programs, and read whatever those programs print back. On a Linux machine that amounts to controlling everything, which is what makes it useful and also what makes fluency with bash indispensable: you want to know at a glance what to allow, what to block, and how to get it unstuck.
 
-## I've Done This Before
+## Been There, Done That
 
 What makes the tool work for me is that I already know how to use it, because I have been doing the same thing with people for years. I instruct the model the way I would instruct a junior member of my team: I envision the architecture, describe it clearly, make the judgment calls early so it doesn't paint itself into a corner, and hand over a map of how to get the work done. It can be trusted with some technical decisions and needs explicit direction on the rest. This is delegation, and any team lead or senior engineer has been practicing it for ages.
 
