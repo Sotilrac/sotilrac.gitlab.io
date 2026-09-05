@@ -11,7 +11,7 @@ tags:
   - craft
 ---
 
-For most of my career, I tried to win design arguments on taste, with assertions like "the code would be cleaner this way," "that interface is ugly," or "this architecture is correct." It mostly didn't work, and when it did work, it left a bad taste. Over the last couple of years, I've stopped framing things that way, and the results are much better; the change is small, and almost entirely about framing.
+For longer than i care to admit, I tried to win design arguments on taste, with assertions like "the code would be cleaner this way," "that interface is ugly," or "this architecture is correct." It mostly didn't work, and when it did work, it left a bad taste. Over the last couple of years, I've stopped framing things that way, and the results are much better; the change is small, and almost entirely about framing.
 
 ## The Old Frame (Taste, Rightness, Artistry)
 
