@@ -49,7 +49,7 @@ lsblk --fs | grep crypto
 sudo cryptsetup luksDump /dev/nvme1n1p3
 ```
 
-6. Enroll the key:
+6. Enrol the key:
 
 ```bash
 sudo yubikey-luks-enroll -d /dev/nvme1n1p3 -s 2

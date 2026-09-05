@@ -49,7 +49,7 @@ The idea is to construct a robot that can move around and that will backup and c
 1.  Cut two diametrically opposite holes on the side of the caps so the motors fit in there. Choose one of the caps as your base cap (the one that goes on the bottom).
 2.  Pierce two small holes on the top of the base cap in order to tie the motors to the cap using the small cable ties.
 3.  Cut two more holes spaced by about 1.5 cm so the switches fit in tightly (seeing the pictures help visualizing this).
-4.  Drill a hole in the center of both caps with the same diameter as your screw.
+4.  Drill a hole in the centre of both caps with the same diameter as your screw.
 5.  Install the switch and the female audio jack on the top bottle cap.
     {% fig "/img/blog/la-cucaracha/cucaracha-back.1.jpg", "" %}
     {% fig "/img/blog/la-cucaracha/cucaracha-close.1.jpg", "" %}

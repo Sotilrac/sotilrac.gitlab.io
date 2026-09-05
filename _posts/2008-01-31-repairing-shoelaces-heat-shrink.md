@@ -19,7 +19,7 @@ I'm always very annoyed by shoelaces tips breaking and thus making them very dif
 
 Being acquainted with electronics supplies in general, I decided to try using [heat-shrink tubing](http://en.wikipedia.org/wiki/Heat-shrink_tubing) to repair my shoelaces tips.
 
-The result? Marvelous. It works like a charm and is really very easy to do and costs nothing (if you already own some tubing).
+The result? Marvellous. It works like a charm and is really very easy to do and costs nothing (if you already own some tubing).
 
 {% fig "/img/blog/repairing-shoelaces-heat-shrink/shoelaces.jpg", "" %}
 

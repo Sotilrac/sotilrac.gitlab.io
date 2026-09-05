@@ -55,7 +55,7 @@ Since the heat sinks and the other piece of metal I found were not flat (they ha
 I bent the metal with my hand and worked the bends with a heavy steel rod so they are round and smooth instead of straight edges.
 
 Linking the hand and wrist pieces:  
-The wrist and hand pieces are linked together by a street cleaner brush bristle. The bristle is bent in a "Z" shape and goes into a hole at center top of the hand piece. The other end of the bristle is slightly bent upwards (so it doesn't go into my arm when I move my hand) and goes through a wire tie loop on the top of the wrist. A paper clip is soldered into this end and is connected to the linear potentiometer. Then I heated and inserted the clip into the plastic potentiometer tab, this creates a nice and strong link. The paperclip provides flexibility and allows the hand to move beyond the range of motion of the potentiometer.
+The wrist and hand pieces are linked together by a street cleaner brush bristle. The bristle is bent in a "Z" shape and goes into a hole at centre top of the hand piece. The other end of the bristle is slightly bent upwards (so it doesn't go into my arm when I move my hand) and goes through a wire tie loop on the top of the wrist. A paper clip is soldered into this end and is connected to the linear potentiometer. Then I heated and inserted the clip into the plastic potentiometer tab, this creates a nice and strong link. The paperclip provides flexibility and allows the hand to move beyond the range of motion of the potentiometer.
 
 {% fig "/img/blog/i-am-ironman/ss851632.jpg", "" %}
 

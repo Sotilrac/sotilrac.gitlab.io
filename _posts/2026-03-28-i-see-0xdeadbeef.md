@@ -36,7 +36,7 @@ If you're puzzled by the name, read this Peta: [Magic Numbers](<https://en.wikip
 (0xDEAD << 16) | 0xBEEF
 ```
 
-**Float to bits**: type a decimal like `3.14` and it converts to IEEE 754 bit representation. The IEEE 754 panel shows the color-coded sign, exponent, and mantissa breakdown.
+**Float to bits**: type a decimal like `3.14` and it converts to IEEE 754 bit representation. The IEEE 754 panel shows the colour-coded sign, exponent, and mantissa breakdown.
 
 **Bit grid**: click any bit to toggle it. Bits are grouped by nibble and byte for readability.
 

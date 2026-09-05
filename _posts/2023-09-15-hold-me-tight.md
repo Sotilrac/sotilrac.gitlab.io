@@ -18,9 +18,9 @@ How I got engaged, or the most convoluted way of making an engagement ring.
 
 {% fig "/img/blog/hold-me-tight/ring_final.png", "The final ring render" %}
 
-As a robotics engineer, I knew nothing about jewelry, or engagements, for that matter. Around 2021 we agreed the proposal would happen in 2023. I figured, "How hard can it be?". After all, it's simply manufacturing something, and I have over a year to figure this out.
+As a robotics engineer, I knew nothing about jewellery, or engagements, for that matter. Around 2021 we agreed the proposal would happen in 2023. I figured, "How hard can it be?". After all, it's simply manufacturing something, and I have over a year to figure this out.
 
-Now I know how little I know about jewelry.
+Now I know how little I know about jewellery.
 
 ## The Requirements
 
@@ -48,9 +48,9 @@ I needed a precise 3D model of the actual sapphire I was going to use. The sapph
 
 So I wrote one: [srn-parser](https://pypi.org/project/srn-parser/), a Python library that parses SRN files and extracts the 3D model. I also wrote a [script to download the model](https://gitlab.com/sotilrac/srn-parser/-/blob/main/scripts/download_nsc.py) directly from the vendor's viewer. This gave me the exact stone geometry to hand off to the CAD designers for precise fitment.
 
-## Jewelry CAD
+## Jewellery CAD
 
-It turns out "Jewelry CAD Designer" is an actual job title. After spending too long trying to learn [Blender](https://www.blender.org/) subdivision modeling myself, I posted a job on Upwork and hired two separate jewelry CAD designers with different strengths: manufacturability and aesthetics. I combined their work by feeding inspiration from one into the other; mostly late at night after she would fall asleep.
+It turns out "Jewellery CAD Designer" is an actual job title. After spending too long trying to learn [Blender](https://www.blender.org/) subdivision modelling myself, I posted a job on Upwork and hired two separate jewellery CAD designers with different strengths: manufacturability and aesthetics. I combined their work by feeding inspiration from one into the other; mostly late at night after she would fall asleep.
 
 Five days later, the CAD was done.
 
@@ -64,16 +64,16 @@ I shopped various local jewellers but had few takers. One in particular shared t
 
 <blockquote>
 You had too much internet.
-<cite>— Old Asian Jeweler</cite>
+<cite>— Old Asian Jeweller</cite>
 </blockquote>
 
-I eventually found a different jeweler willing to take on the project for the final stone setting, engraving and polish.
+I eventually found a different jeweller willing to take on the project for the final stone setting, engraving and polish.
 
 ## The Proposal
 
 The ring was ready one day before her birthday. I called the restaurant and we came up with a plan: bring the ring inside a glass of champagne at the beginning of the meal; it would be a _birthday courtesy_. They were very excited. I was ~~extremely excited~~ panicking.
 
-The next day, I biked 40 minutes to pick up the ring. The jeweler wasn't available for another hour, so I parked by the seaport and spent an hour just sitting there, staring at the ocean. Breathing. Taking stock of everything that led to this moment.
+The next day, I biked 40 minutes to pick up the ring. The jeweller wasn't available for another hour, so I parked by the seaport and spent an hour just sitting there, staring at the ocean. Breathing. Taking stock of everything that led to this moment.
 
 The ring was much shinier than any of the renders. As a matter of fact, the rendered images would look fake if they were that shiny.
 

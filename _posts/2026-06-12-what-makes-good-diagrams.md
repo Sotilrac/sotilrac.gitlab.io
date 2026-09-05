@@ -35,11 +35,11 @@ Diagramming tools fall into two camps: WYSIWYG point-and-click, and code-based.
 
 ### What You Saw Is What You Get
 
-I have yet to find a point-and-click tool I like. Visio back in the day, then Lucidchart and draw.io: all of them non-free, artificially limited, or locking you into their format. A few FOSS ones exist, but they are similarly lackluster.
+I have yet to find a point-and-click tool I like. Visio back in the day, then Lucidchart and draw.io: all of them non-free, artificially limited, or locking you into their format. A few FOSS ones exist, but they are similarly lacklustre.
 
-Take block diagrams: applying a style across a set of edges or boxes fights you at every step. Some tools support styles (à la CSS), but they bury them in menus behind a pile of caveats (yes Lucidchart, I'm talking about you!). You align mostly by hand, the grid treats edges differently from boxes, text styling flunks the same way, and no tool bothers with a spell checker. Don't get me started on labeling edges, or god forbid keeping two boxes connected as you drag them around without spawning a spaghetti mess.
+Take block diagrams: applying a style across a set of edges or boxes fights you at every step. Some tools support styles (à la CSS), but they bury them in menus behind a pile of caveats (yes Lucidchart, I'm talking about you!). You align mostly by hand, the grid treats edges differently from boxes, text styling flunks the same way, and no tool bothers with a spell checker. Don't get me started on labelling edges, or god forbid keeping two boxes connected as you drag them around without spawning a spaghetti mess.
 
-These tools do let you decide the general layout, and with enough hours and a bit of carpal tunnel you can draw a decent diagram. But what if the company color turns green instead of orange, or someone adds a subsystem? More hours and carpal tunnel await.
+These tools do let you decide the general layout, and with enough hours and a bit of carpal tunnel you can draw a decent diagram. But what if the company colour turns green instead of orange, or someone adds a subsystem? More hours and carpal tunnel await.
 
 {% fig "/img/blog/what-makes-good-diagrams/aint-nobody-got-time-for-that.gif", "Ain't nobody got time for that!" %}
 
@@ -89,7 +89,7 @@ Save the D2 file and the diagram refreshes without disturbing your layout. New n
 
 {% compare "/img/blog/what-makes-good-diagrams/daedalus_diagram_light.png", "/img/blog/what-makes-good-diagrams/daedalus_diagram_dark.png", "Editing in Daedalus (Light vs Dark)" %}
 
-Most tools neglect edges, so edges got the most work. libavoid routes them orthogonally (the same engine as Inkscape), every node side holds an ordered list of slots you can drag endpoints between, and labels slide along the edge or sit centered by default. Export the result to SVG or PNG.
+Most tools neglect edges, so edges got the most work. libavoid routes them orthogonally (the same engine as Inkscape), every node side holds an ordered list of slots you can drag endpoints between, and labels slide along the edge or sit centred by default. Export the result to SVG or PNG.
 
 It's a Tauri desktop app, MPL-2.0 licensed, and it runs against a folder of `.d2` files. If you have to make good diagrams, [download a release](https://github.com/Sotilrac/daedalus/releases/) and give it a try.
 

@@ -15,7 +15,7 @@ tags:
 
 {% include "archive-banner.njk" %}
 
-Recently my girlfriend got rid of her cable television connection and moved to a cheaper (almost free) and fully featured media center solution (i.e. Xbox + Xbox Media Center).
+Recently my girlfriend got rid of her cable television connection and moved to a cheaper (almost free) and fully featured media centre solution (i.e. Xbox + Xbox Media Center).
 
 {% fig "/img/blog/fully-featured-media-center-on-a-budget/800px-xbox.jpg", "" %}
 
@@ -38,7 +38,7 @@ I know XBMC has been around for many years now, but I think is a good idea to wr
 
 ## How to do it
 
-First, get all the materials. My girlfriend and I got a second hand Xbox complete with a remote and a controller for 100$ at Comptant.com after searching around a lot for a good deal. Then, I got a Mechassault original (not the platinum edition) game disk for 9$ and an 8MB memory card for 10$ (all second hand). So we spent a total of 120$ (much cheaper than any commercial media center).
+First, get all the materials. My girlfriend and I got a second hand Xbox complete with a remote and a controller for 100$ at Comptant.com after searching around a lot for a good deal. Then, I got a Mechassault original (not the platinum edition) game disk for 9$ and an 8MB memory card for 10$ (all second hand). So we spent a total of 120$ (much cheaper than any commercial media centre).
 
 In order to get the Xbox to run homebrew software (i.e. software that is not signed by Microsoft such as XBMC) its security system must be disabled. This can be done by installing a softmod (witch doesn't require any hardware modification of the gaming system).
 
@@ -72,6 +72,6 @@ Now that you have XBMC up , running and connected to the internet you can:
 
 Don't forget to configure XBMC to adjust it to your needs (I recommend using the MC360 skin). For further information about using XBMC please consult the [user's manual](http://www.xboxmediacenter.com/wiki/index.php?title=Xbox_Media_Center_Online_Manual).
 
-You have now a very powerful media center that is far superior than any of the commercial alternatives I know. Enjoy.
+You have now a very powerful media centre that is far superior than any of the commercial alternatives I know. Enjoy.
 
 Besides, you may also want to install some other great application such as {% wayback "https://web.archive.org/web/20060103090228/http://dvd2xbox.xbox-scene.com:80/", "dvd2xbox," %} which allows to backup entire games to the Xbox hdd, and [boXplorer](http://www.xbox-hq.com/html/modules.php?name=Xbox_Homebrew&op=view&=288), an excellent file manager. You can get them from the {% wayback "https://web.archive.org/web/20060101031316/http://www.xbox-scene.com:80/articles/xbins.php", "usual places" %}.

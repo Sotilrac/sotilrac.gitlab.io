@@ -59,13 +59,13 @@ In this design (this is not my design), the wide rubber band is the belt, the so
 
 ## The base:
 
-The wood block will serve as a base. Drill a hole of the same diameter as the tube through the center of the wood block. Then sand it to make it nice and smooth. The tube should fit tight in the hole (see pictures).
+The wood block will serve as a base. Drill a hole of the same diameter as the tube through the centre of the wood block. Then sand it to make it nice and smooth. The tube should fit tight in the hole (see pictures).
 
 ## The sphere:
 
 Open the top of the soda can using a knife, tough scissors, a very powerful laser or a small nuclear explosion.
 Cut the Gatorade bottle at its horizontal indentation so the can fits tight in it (see pictures).
-Drill a hole of the same diameter as the tube at the center of the Gatorade bottle cap so it fits tight around the tube (see pictures).
+Drill a hole of the same diameter as the tube at the centre of the Gatorade bottle cap so it fits tight around the tube (see pictures).
 
 ## The tube:
 

@@ -59,7 +59,7 @@ The last step is to put everything together and close the case.
 
 The newly born power supply will turn off nicely when you short its outputs or when the load exceeds its maximum power output capacity (i.e. when you plug a big motor or a power tool to it). By combining the outputs (DC) you can get 5V (GND to 5V), 7V (5V to 12V), 10V (-5V to 5V), 12V (GND to 12V), 17V (-5V to 12V), and 24V (-12V to 12V).
 
-As a finishing touch I added rubber pads on the bottom so it doesn't scratch my desk and I labeled the outputs using a labeling machine (pretty fancy).
+As a finishing touch I added rubber pads on the bottom so it doesn't scratch my desk and I labelled the outputs using a labelling machine (pretty fancy).
 
 {% fig "/img/blog/bench-power-supply/power-supply4.jpg", "" %}
 

@@ -60,7 +60,7 @@ When I catch myself calling something _**perfect**_, I try to ask what it actual
 
 Those are meaningful questions with real answers, whereas _"Is it flawless?"_ is not.
 
-It helps to pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready**, or my favorite, **good enough**. They all avoid the cosmic overreach of _**perfect**_.
+It helps to pick a better word. If I mean the old sense, there are cleaner options: **complete, finished, ready**, or my favourite, **good enough**. They all avoid the cosmic overreach of _**perfect**_.
 
 If I mean the modern sense, the choices are **flawless, ideal, pristine, faultless, immaculate**. The absurdity of demanding them outside of a mathematical theorem gives the game away: an pristine apartment? A flawless partner? A faultless hire?
 

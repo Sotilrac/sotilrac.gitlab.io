@@ -32,7 +32,7 @@ The plugin fetches a random photo matching a search query, displays it as your w
 
 - Configurable search query (nature, mountains, architecture, puppies)
 - Auto-refresh interval (1 to 1440 minutes)
-- All Plasma fill modes (crop, stretch, fit, center, tile)
+- All Plasma fill modes (crop, stretch, fit, centre, tile)
 - Photograph details and attribution via overlay
 - Requires a free [Pexels API key](https://www.pexels.com/api/)
 

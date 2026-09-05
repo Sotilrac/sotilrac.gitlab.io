@@ -43,13 +43,13 @@ $$V_n = 10^{n/N}, \quad n = 0, 1, \dots, N-1$$
 
 The spacing is chosen so the tolerance bands of adjacent values just touch. For a series with tolerance $T$ percent, you need roughly $N \approx \frac{1}{\log_{10}(1 + 2T/100)}$ values per decade. That's why E12 (10%) needs 12 values per decade and E96 (1%) needs 96. Any value between two standards falls inside one of their tolerance bands, so there's no manufacturing reason to offer it.
 
-### Resistor Color Code
+### Resistor Colour Code
 
-The colored bands date to the 1920s, when resistors were tiny ceramic cylinders too small to fit a printed value on. The Radio Manufacturers Association picked a fixed digit-to-color map so the value could be read from any angle, in any orientation, even after the part had been kicked around a workbench for years. [IEC 60062](https://webstore.iec.ch/en/publication/25395) made the scheme official and it survives to this day.
+The coloured bands date to the 1920s, when resistors were tiny ceramic cylinders too small to fit a printed value on. The Radio Manufacturers Association picked a fixed digit-to-colour map so the value could be read from any angle, in any orientation, even after the part had been kicked around a workbench for years. [IEC 60062](https://webstore.iec.ch/en/publication/25395) made the scheme official and it survives to this day.
 
 Resistors come with 4, 5, or 6 bands. The original four were enough to encode the value: two significant digits, a multiplier, and a tolerance, which covered the looser 5–20% series (E6, E12, E24). Five bands added precision by carrying a third significant digit, needed once the tighter E48/E96/E192 series put values close enough together that the second digit alone wouldn't separate them. Six bands added a temperature-coefficient (ppm/°C) band, because resistance drifts with heat.
 
-In the calculator you can select the number of bands the resistor has, then either click the bands to set their colors or type the desired value.
+In the calculator you can select the number of bands the resistor has, then either click the bands to set their colours or type the desired value.
 
 #### 4-Band Resistor
 
@@ -59,7 +59,7 @@ $$R = (d_1 \cdot 10 + d_2) \cdot M, \quad \pm T\%$$
 
 $$R = (d_1 \cdot 100 + d_2 \cdot 10 + d_3) \cdot M, \quad \pm T\%$$
 
-The digit bands $d_i$ use black=0 through white=9. The multiplier band $M$ is also colored: black=1, brown=10, red=100, and so on up to white=10⁹ (plus gold=0.1, silver=0.01 for fractional values). The tolerance band uses gold=5%, brown=1%, blue=0.25%, etc. The optional 6th band gives the temperature coefficient in ppm/°C.
+The digit bands $d_i$ use black=0 through white=9. The multiplier band $M$ is also coloured: black=1, brown=10, red=100, and so on up to white=10⁹ (plus gold=0.1, silver=0.01 for fractional values). The tolerance band uses gold=5%, brown=1%, blue=0.25%, etc. The optional 6th band gives the temperature coefficient in ppm/°C.
 
 #### Surface-Mount Resistors
 
@@ -111,7 +111,7 @@ The tool picks a wattage rating with 50% derating, so a resistor that needs to d
 
 ### Sine Amplitudes
 
-AC signals are often modeled as pure sine waves. Amplitude can be quoted four ways: peak ($V_p$), peak-to-peak ($V_{pp}$, max minus min), root-mean-square ($V_{rms}$, the equivalent DC voltage for the same power), or full-wave rectified average ($V_{avg}$, the mean of the wave's absolute value). All four are tied to the peak:
+AC signals are often modelled as pure sine waves. Amplitude can be quoted four ways: peak ($V_p$), peak-to-peak ($V_{pp}$, max minus min), root-mean-square ($V_{rms}$, the equivalent DC voltage for the same power), or full-wave rectified average ($V_{avg}$, the mean of the wave's absolute value). All four are tied to the peak:
 
 $$V_\text{pp} = 2 V_p, \qquad V_\text{rms} = \frac{V_p}{\sqrt{2}} \approx 0.707 \, V_p, \qquad V_\text{avg} = \frac{2 V_p}{\pi} \approx 0.637 \, V_p$$
 
@@ -262,7 +262,7 @@ A trace's impedance is set by its geometry and the laminate around it: the width
 
 $$Z_0^{\text{micro}} = \frac{87}{\sqrt{\varepsilon_r + 1.41}} \ln\!\left( \frac{5.98\,H}{0.8\,W + T} \right) \qquad Z_0^{\text{strip}} = \frac{60}{\sqrt{\varepsilon_r}} \ln\!\left( \frac{4\,B}{0.67\pi\,(0.8\,W + T)} \right)$$
 
-where $B$ is the plane-to-plane separation for stripline. A differential pair is two such traces routed side by side, and bringing them closer couples them: each trace's field interacts with its neighbor, which lowers the differential impedance below the $2 Z_0$ you would get from two isolated traces. The coupling falls off exponentially with the edge-to-edge spacing $S$:
+where $B$ is the plane-to-plane separation for stripline. A differential pair is two such traces routed side by side, and bringing them closer couples them: each trace's field interacts with its neighbour, which lowers the differential impedance below the $2 Z_0$ you would get from two isolated traces. The coupling falls off exponentially with the edge-to-edge spacing $S$:
 
 $$Z_{\text{diff}} = 2\,Z_0\left(1 - k\,e^{-c\,S/H}\right)$$
 
@@ -272,7 +272,7 @@ The same geometry sets how fast the signal travels, which is what makes length m
 
 $$t_{pd} = \frac{\sqrt{\varepsilon_{\text{eff}}}}{c}, \qquad \varepsilon_{\text{eff}}^{\text{micro}} \approx 0.475\,\varepsilon_r + 0.67$$
 
-On FR-4 that works out to roughly 140 ps per inch for microstrip and 180 for stripline. The two halves of a differential pair must arrive together, so the calculator inverts this: give it a skew budget in picoseconds, and it returns the maximum length mismatch in millimeters before that budget is blown, which is the number the serpentine length-tuning on a real layout is chasing.
+On FR-4 that works out to roughly 140 ps per inch for microstrip and 180 for stripline. The two halves of a differential pair must arrive together, so the calculator inverts this: give it a skew budget in picoseconds, and it returns the maximum length mismatch in millimetres before that budget is blown, which is the number the serpentine length-tuning on a real layout is chasing.
 
 These are closed-form fits, accurate to five or ten percent, and they ignore copper thickness in the coupling term, solder mask, glass-weave, and surface roughness. That's plenty to size a stackup and sanity-check a layout, but for a tight target you confirm the final numbers against your fab's field-solver stackup tool.
 

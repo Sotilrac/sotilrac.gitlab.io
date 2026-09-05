@@ -33,6 +33,6 @@ I opted for a Dell Vostro 1320 and must say it is a beautiful machine. It is sma
 - 12 cell battery
 - Mono integrated speaker (this is its only weakness)
 
-I am running [Kubuntu 9.04](http://www.kubuntu.org/ "Kubuntu") with [KDE 4.3.1](http://kde.org/announcements/announce-4.3.1.php "KDE - the most awesome desktop") and it is absolutely marvelous. Everything works perfectly (except for the microphone). As a matter of fact, KDE is so absolutely mind blowing I'll make a post exclusively about it soon (hopefully).
+I am running [Kubuntu 9.04](http://www.kubuntu.org/ "Kubuntu") with [KDE 4.3.1](http://kde.org/announcements/announce-4.3.1.php "KDE - the most awesome desktop") and it is absolutely marvellous. Everything works perfectly (except for the microphone). As a matter of fact, KDE is so absolutely mind blowing I'll make a post exclusively about it soon (hopefully).
 
 I know I am running late with my posts and answering messages but I'll post some new projects very soon.
