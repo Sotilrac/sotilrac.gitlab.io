@@ -1,373 +1,2688 @@
 {
-  "auto_complete": {
-    "selected_items": [
-      ["ar", "archive-banner"],
-      ["--p", "--pewter"],
-      ["--", "--pearl"],
-      ["text", "text-align"],
-      ["bo", "bottom"],
-      ["padd", "padding-left"],
-      ["min", "min-width"],
-      ["font", "font-style"],
-      ["--bl", "--blue-dark"],
-      ["s", "absolute"],
-      ["--blue", "--blue-dark"],
-      ["u", "uppercase"],
-    ],
-  },
-  "buffers": [],
-  "build_system": "",
-  "build_system_choices": [],
-  "build_varint": "",
-  "command_palette": {
-    "height": 0.0,
-    "last_filter": "",
-    "selected_items": [
-      ["lowe", "Convert Case: Lower Case"],
-      ["git", "Git: Diff All Files"],
-      ["insta", "Package Control: Install Package"],
-      ["word", "Word Wrap: Toggle"],
-      ["bau", "HTMLBeautify"],
-      ["beauti", "HTMLBeautify"],
-      ["spaces", "Indentation: Convert to Spaces"],
-      ["upper", "Convert Case: Upper Case"],
-      ["uppe", "Convert Case: Upper Case"],
-      ["beau", "Javascript Beautify"],
-      ["install", "Package Control: Install Package"],
-      ["wrap", "Word Wrap: Toggle"],
-      ["lint", "SublimeLinter: Lint This View"],
-      ["spac", "Indentation: Convert to Spaces"],
-      ["space", "Indentation: Convert to Spaces"],
-      ["remove", "Package Control: Remove Package"],
-      ["saage", "Set Syntax: Git Attributes"],
-      ["chat", "ChatGPT"],
-      ["ins", "Package Control: Install Package"],
-    ],
-    "width": 0.0,
-  },
-  "console": {
-    "height": 256.0,
-    "history": [
-      "view.run_command(\"saage\")",
-      "view.run_command(\"example\")",
-      "view.run_command(\"ExampleCommand\")",
-      "view.run_command(\"Example\")",
-      "view.run_command(\"sample_plugin\")",
-      "view.run_command(\"saage_plugin\")",
-      "view.run_command(\"sample_plugin\")",
-      "view.run_command(\"saage_plugin\")",
-      "view.run_command(\"sample_plugin\")",
-      "view.run_command(\"saage_plugin\")",
-      "view.run_command(saage_plugin)",
-      "view.run_command(\"saage_plugin\")",
-      "view.run_command(saage_plugin)",
-      "view.run_command(\"saage_plugin\")",
-      "view.run_command(saage_plugin)",
-      "view.run_command(SaageCommand)",
-      "view.run_command(saage_plugin)",
-    ],
-  },
-  "distraction_free": {
-    "menu_visible": true,
-    "show_minimap": false,
-    "show_open_files": false,
-    "show_tabs": false,
-    "side_bar_visible": false,
-    "status_bar_visible": false,
-  },
-  "expanded_folders": ["/home/carlos/dev/sotilrac.gitlab.io"],
-  "file_history": [
-    "/home/carlos/dev/sotilrac.gitlab.io/sotilrac.sublime-project",
-    "/home/carlos/dev/take-it-back/text/ack.md",
-    "/home/carlos/dev/take-it-back/css/stylesheet-epub-indent.css",
-    "/home/carlos/dev/take-it-back/metadata.yaml",
-    "/home/carlos/.claude/CLAUDE.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-02-18-solitudes.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-24-cd-lamp.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-06-ecuadorian-makecation.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-27-big-buck-bunny.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/blog.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2013-03-25-zorro.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-16-the-wind-turbine-part-1-idea.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-23-we-are-slightly-popular.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-05-10-the-wind-turbine-part-2-desing-materials.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-05-18-the-wind-turbine-part-3-generator.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2023-09-15-hold-me-tight.md",
-    "/home/carlos/Downloads/transactions.csv",
-    "/home/carlos/dev/anniversary-cal/anniversaries.ics",
-    "/home/carlos/Downloads/Fermion _ MFG Battery Sync.txt",
-    "/home/carlos/dev/terminator/install-instructions.md",
-    "/home/carlos/dev/terminator/pr-description.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/js/programmer-calculator.js",
-    "/home/carlos/dev/sotilrac.gitlab.io/css/main.css",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-28-floppy-note-pad.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-03-28-i-see-0xdeadbeef.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_includes/head.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_includes/resume.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_includes/footer.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-03-wireless-am-receiver.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-03-11-opus-smart-card.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-02-opamp.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-05-09-making-panoramas.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-20-what-am-i-building.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/tools/programmer-calculator.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2007-06-23-speech-recognition-fpga.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-08-18-diy-universal-gripper-make-magazine.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-09-29-panoramic-camera-prototype.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-09-roscon-2012.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-08-interview-cbc-spark.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-05-31-imodela-mini-cnc-mill.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-07-01-nao-1337-super-star-robollywoode.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-23-nao-1337-is-famous.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-19-carlitos-contraptions-hacked.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-27-geekfest.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-01-18-omg-its-comming-nao.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-09-have-no-fear-nao-is-here.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-06-19-polymorph.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-09-07-tux-laptop-sleeve.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-07-17-gentle-safe-cracker.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-09-24-wireless-skype-phone.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_includes/archive-banner.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-11-30-montreal-hackers-wave.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/README.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-07-nao-humanoid-robot-unboxing.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/public/my projects/2010/02/16/the-wind-turbine-part-1-idea.html",
-    "/home/carlos/Downloads/BrightcovePlayer.swf",
-    "/home/carlos/dev/sotilrac.gitlab.io/.editorconfig",
-    "/home/carlos/dev/sotilrac.gitlab.io/lefthook.yml",
-    "/home/carlos/Documents/Status Change/JH Passport/make_pdf.py",
-    "/home/carlos/dev/sotilrac.gitlab.io/_data/resume.yml",
-    "/home/carlos/dev/sotilrac.gitlab.io/.gitignore",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-01-17-rgb-led-mood-cube.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-03-12-blog-makeover-2.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-07-im-on-new-scientist.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-07-myrobots-connect-my-first-pcb-design.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_includes/layouts/post.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/public/arduino/2011/03/13/speech-controlled-arduino-robot.html",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-13-speech-controlled-arduino-robot.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-10-08-nao-mind-control-ny-maker-faire-2012.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-09-02-montreal-mini-maker-faire-2012.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_includes/header.njk",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-11-18-i-am-the-luckiest-engineer-ever.md",
-    "/home/carlos/dev/sotilrac.gitlab.io/_posts/2019-01-08-blog-makeover.md",
-    "/home/carlos/dev/hack/adb/debloat-oneplus.sh",
-    "/home/carlos/lit.conf",
-    "/home/carlos/router-lit.conf",
-    "/home/carlos/Downloads/alan_cell.conf",
-    "/home/carlos/Downloads/alan_pc.conf",
-    "/home/carlos/Torrent/movies/Drunken Master (1978) [Jackie Chan] 1080p BluRay H264 DolbyD 5.1 + nickarad/Drunken Master (1978) 1080p BluRay H264 DolbyD 5.1 + nickarad.eng.srt",
-    "/home/carlos/.ssh/config",
-    "/home/carlos/dev/dephy/FlexSEA/build-Plan3-Desktop_Qt_6_3_2_GCC_64bit-Debug/app/UTTFiles/UttCsvLocation.txt",
-    "/home/carlos/Documents/Condo/3D/matterport-dl/matterport-dl.py",
-    "/home/carlos/dev/kscreenlocker_monitor/monitor_kscreenlocker.sh",
-    "/home/carlos/Documents/Condo/3D/matterport-dl/vzKfTuq28n9/index.html",
-    "/home/carlos/Downloads/usagedb.all_usages.csv",
-    "/home/carlos/dev/wedding-site/src/static/css/style.css",
-    "/home/carlos/dev/wedding-site/src/_includes/rsvp-form.html",
-    "/home/carlos/dev/wedding-site/src/_data/site.json",
-    "/home/carlos/dev/wedding-site/src/_includes/layout.njk",
-    "/home/carlos/dev/wedding-site/src/static/js/rsvp.js",
-    "/home/carlos/dev/wedding-site/src/index.md",
-    "/home/carlos/dev/wedding-site/src/_includes/gallery.njk",
-    "/home/carlos/dev/wedding-site/src/_includes/gallery_top.njk",
-    "/home/carlos/dev/wedding-site/src/_includes/gallery_top.md",
-    "/home/carlos/dev/wedding-site/.eleventy.js",
-    "/home/carlos/dev/wedding-site/src/_includes/gallery_bottom.njk",
-    "/home/carlos/dev/wedding-site/src/_includes/macros/gallery.njk",
-    "/home/carlos/dev/wedding-site/src/_includes/gallery.html",
-    "/home/carlos/.config/BambuStudio/BambuStudio.conf",
-    "/home/carlos/dev/wedding-site/_site/static/css/style.css",
-    "/home/carlos/dev/wedding-site/_site/style.css",
-    "/home/carlos/dev/wedding-site/src/style.css",
-    "/home/carlos/dev/wedding-site/src/_includes/base.html",
-    "/home/carlos/dev/wedding-site/src/index.njk",
-    "/home/carlos/dev/wedding-site/src/data/site.json",
-    "/home/carlos/dev/wedding-site/.gitlab-ci.yml",
-    "/home/carlos/dev/wedding-site/index.md",
-    "/home/carlos/dev/wedding-site/_includes/base.html",
-    "/home/carlos/dev/wedding-site/.gitignore",
-    "/home/carlos/dev/hack/deepseek/Modelfile",
-    "/home/carlos/Downloads/Release",
-    "/home/carlos/Downloads/minted-addressbook-template.csv",
-    "/home/carlos/Downloads/Wedding Info Form (Responses) - Sheet1.csv",
-    "/home/carlos/Documents/backup_codes/carta-backup-codes.txt",
-    "/media/carlos/bkp/carlos/carlos/Email/carlos.asmat@gmail.com/Takeout/Mail/All mail Including Spam and Trash.mbox",
-    "/home/carlos/dev/coaster_maps/prints/draw_maps.ipynb",
-    "/home/carlos/Documents/backup_codes/cloudamo.txt",
-    "/home/carlos/.local/share/Steam/steamapps/common/The Sims 3/Game/Bin/Sims3.ini",
-    "/home/carlos/.local/share/Steam/steamapps/common/The Sims 3/Game/Bin/Sims3LauncherW.exe.config",
-    "/home/carlos/dev/hack/invisalign/box.base64",
-    "/home/carlos/dev/dephy/FlexSEA/flexsea-build/PSoC/regulate_builder.sh",
-    "/home/carlos/Documents/backup_codes/gitlab-recovery-codes.txt",
-    "/home/carlos/dev/dephy/talaria/talaria-os/README.md",
-    "/home/carlos/dev/dephy/talaria/talaria-os/Dockerfile",
-    "/home/carlos/Downloads/vpn-09ad83cb6ebc3ff88.txt",
-  ],
-  "find": {
-    "height": 30.0,
-  },
-  "find_in_files": {
-    "height": 166.0,
-    "where_history": [],
-  },
-  "find_state": {
-    "case_sensitive": false,
-    "find_history": [],
-    "highlight": true,
-    "in_selection": false,
-    "preserve_case": false,
-    "regex": true,
-    "replace_history": [],
-    "reverse": false,
-    "scrollbar_highlights": true,
-    "show_context": true,
-    "use_buffer2": true,
-    "use_gitignore": true,
-    "whole_word": false,
-    "wrap": true,
-  },
-  "groups": [
-    {
-      "sheets": [],
-    },
-  ],
-  "incremental_find": {
-    "height": 30.0,
-  },
-  "input": {
-    "height": 58.0,
-  },
-  "layout": {
-    "cells": [[0, 0, 1, 1]],
-    "cols": [0.0, 1.0],
-    "rows": [0.0, 1.0],
-  },
-  "menu_visible": true,
-  "output.find_results": {
-    "height": 0.0,
-    "history": [],
-  },
-  "pinned_build_system": "",
-  "project": "sotilrac.sublime-project",
-  "replace": {
-    "height": 56.0,
-  },
-  "save_all_on_build": true,
-  "select_file": {
-    "height": 0.0,
-    "last_filter": "",
-    "selected_items": [
-      ["solitu.md", "_posts/2009-02-18-solitudes.md"],
-      ["cd.md", "_posts/2006-12-24-cd-lamp.md"],
-      ["big.md", "_posts/2008-05-27-big-buck-bunny.md"],
-      ["css/mai", "sotilrac.gitlab.io/css/main.css"],
-      ["maincss", "sotilrac.gitlab.io/css/main.css"],
-      [
-        "robotshop.md",
-        "sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md",
-      ],
-      ["floppy.md", "sotilrac.gitlab.io/_posts/2008-05-28-floppy-note-pad.md"],
-      [
-        "rock.md",
-        "sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md",
-      ],
-      ["zorromd", "sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"],
-      ["opus.md", "sotilrac.gitlab.io/_posts/2009-03-11-opus-smart-card.md"],
-      ["opamp.md", "sotilrac.gitlab.io/_posts/2006-12-02-opamp.md"],
-      [
-        "recei.md",
-        "sotilrac.gitlab.io/_posts/2006-12-03-wireless-am-receiver.md",
-      ],
-      ["isee.md", "sotilrac.gitlab.io/_posts/2026-03-28-i-see-0xdeadbeef.md"],
-      [
-        "js/programmer-calculator.js",
-        "sotilrac.gitlab.io/js/programmer-calculator.js",
-      ],
-      [
-        "ribotshopmd",
-        "sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md",
-      ],
-      [
-        "wavemd",
-        "sotilrac.gitlab.io/_posts/2009-11-30-montreal-hackers-wave.md",
-      ],
-      [
-        "unboxingmd",
-        "sotilrac.gitlab.io/_posts/2011-02-07-nao-humanoid-robot-unboxing.md",
-      ],
-      [
-        "geek2011md",
-        "sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md",
-      ],
-      [
-        "geek.md",
-        "sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md",
-      ],
-      [
-        "wind.md",
-        "sotilrac.gitlab.io/_posts/2010-02-16-the-wind-turbine-part-1-idea.md",
-      ],
-      [
-        "wind",
-        "public/my projects/2010/02/16/the-wind-turbine-part-1-idea.html",
-      ],
-      ["css", "sotilrac.gitlab.io/css/main.css"],
-      ["resume", "sotilrac.gitlab.io/_data/resume.yml"],
-      [
-        "rgb-led.md",
-        "sotilrac.gitlab.io/_posts/2011-01-17-rgb-led-mood-cube.md",
-      ],
-      ["zorro.md", "sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"],
-      [
-        "rock-paper",
-        "sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md",
-      ],
-      ["on-new", "sotilrac.gitlab.io/_posts/2012-06-07-im-on-new-scientist.md"],
-      [
-        "speechmd",
-        "sotilrac.gitlab.io/_posts/2011-03-13-speech-controlled-arduino-robot.md",
-      ],
-      [
-        "spee",
-        "public/arduino/2011/03/13/speech-controlled-arduino-robot.html",
-      ],
-      ["zorro", "sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"],
-      [
-        "luck",
-        "sotilrac.gitlab.io/_posts/2009-11-18-i-am-the-luckiest-engineer-ever.md",
-      ],
-      [
-        "hugo_source/themes/dephytheme/layouts/_default/list.html",
-        "hugo_source/themes/dephytheme/layouts/_default/list.html",
-      ],
-      ["FieldUpdate/version.py", "FieldUpdate/version.py"],
-      ["device_structs.py", "Device/device_structs.py"],
-      ["FieldUpdate/bootloader.py", "FieldUpdate/bootloader.py"],
-    ],
-    "width": 0.0,
-  },
-  "select_project": {
-    "height": 500.0,
-    "last_filter": "",
-    "selected_items": [],
-    "width": 380.0,
-  },
-  "select_symbol": {
-    "height": 0.0,
-    "last_filter": "",
-    "selected_items": [],
-    "width": 0.0,
-  },
-  "selected_group": 0,
-  "settings": {},
-  "show_minimap": true,
-  "show_open_files": false,
-  "show_tabs": true,
-  "side_bar_visible": true,
-  "side_bar_width": 299.0,
-  "status_bar_visible": true,
-  "template_settings": {},
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ar",
+				"archive-banner"
+			],
+			[
+				"--p",
+				"--pewter"
+			],
+			[
+				"--",
+				"--pearl"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"--bl",
+				"--blue-dark"
+			],
+			[
+				"s",
+				"absolute"
+			],
+			[
+				"--blue",
+				"--blue-dark"
+			],
+			[
+				"u",
+				"uppercase"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_posts/2026-09-02-mad-skills.md",
+			"settings":
+			{
+				"buffer_size": 7426,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					7,
+					1,
+					"left_delete",
+					null,
+					"AQAAALgAAAAAAAAAuAAAAAAAAAAIAAAAbW9zdCBvZiA",
+					"AQAAAAAAAAABAAAAwAAAAAAAAAC4AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"cut",
+					null,
+					"AQAAADEBAAAAAAAAMQEAAAAAAAAQAAAAaGlzIHBhc3QgeWVhciwgdA",
+					"AQAAAAAAAAABAAAAQQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAADwBAAAAAAAAPQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPAEAAAAAAAA8AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
+					1,
+					"paste",
+					null,
+					"AQAAAD0BAAAAAAAATQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPQEAAAAAAAA9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					3,
+					"left_delete",
+					null,
+					"AwAAAEwBAAAAAAAATAEAAAAAAAABAAAAdEsBAAAAAAAASwEAAAAAAAABAAAAIEoBAAAAAAAASgEAAAAAAAABAAAALA",
+					"AQAAAAAAAAABAAAATQEAAAAAAABNAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": "precisel"
+					},
+					"CAAAAGQKAAAAAAAAZQoAAAAAAAAHAAAAZXhhY3RseWUKAAAAAAAAZgoAAAAAAAAAAAAAZgoAAAAAAABnCgAAAAAAAAAAAABnCgAAAAAAAGgKAAAAAAAAAAAAAGgKAAAAAAAAaQoAAAAAAAAAAAAAaQoAAAAAAABqCgAAAAAAAAAAAABqCgAAAAAAAGsKAAAAAAAAAAAAAGsKAAAAAAAAbAoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawoAAAAAAABkCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": "y"
+					},
+					"AQAAAGwKAAAAAAAAbQoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAoAAAAAAABsCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					48,
+					2,
+					"left_delete",
+					null,
+					"AgAAACsLAAAAAAAAKwsAAAAAAAAUAAAAcmF0aGVyIHRoYW4gdGhlIGxhc3QqCwAAAAAAACoLAAAAAAAAAQAAACA",
+					"AQAAAAAAAAABAAAAPwsAAAAAAAArCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": " It's"
+					},
+					"BQAAACsLAAAAAAAALAsAAAAAAAAAAAAALAsAAAAAAAAtCwAAAAAAAAAAAAAtCwAAAAAAAC4LAAAAAAAAAAAAAC4LAAAAAAAALwsAAAAAAAAAAAAALwsAAAAAAAAwCwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwsAAAAAAAArCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAADALAAAAAAAAMQsAAAAAAAAAAAAAMQsAAAAAAAAyCwAAAAAAAAAAAAAyCwAAAAAAADMLAAAAAAAAAAAAADMLAAAAAAAANAsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMAsAAAAAAAAwCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"insert",
+					{
+						"characters": " mise"
+					},
+					"BQAAADQLAAAAAAAANQsAAAAAAAAAAAAANQsAAAAAAAA2CwAAAAAAAAAAAAA2CwAAAAAAADcLAAAAAAAAAAAAADcLAAAAAAAAOAsAAAAAAAAAAAAAOAsAAAAAAAA5CwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANAsAAAAAAAA0CwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": " en"
+					},
+					"AwAAADkLAAAAAAAAOgsAAAAAAAAAAAAAOgsAAAAAAAA7CwAAAAAAAAAAAAA7CwAAAAAAADwLAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOQsAAAAAAAA5CwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					1,
+					"insert",
+					{
+						"characters": " place"
+					},
+					"BgAAADwLAAAAAAAAPQsAAAAAAAAAAAAAPQsAAAAAAAA+CwAAAAAAAAAAAAA+CwAAAAAAAD8LAAAAAAAAAAAAAD8LAAAAAAAAQAsAAAAAAAAAAAAAQAsAAAAAAABBCwAAAAAAAAAAAABBCwAAAAAAAEILAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPAsAAAAAAAA8CwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					55,
+					1,
+					"insert",
+					{
+						"characters": " if"
+					},
+					"AwAAAEILAAAAAAAAQwsAAAAAAAAAAAAAQwsAAAAAAABECwAAAAAAAAAAAABECwAAAAAAAEULAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQgsAAAAAAABCCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					56,
+					1,
+					"insert",
+					{
+						"characters": " you"
+					},
+					"BAAAAEULAAAAAAAARgsAAAAAAAAAAAAARgsAAAAAAABHCwAAAAAAAAAAAABHCwAAAAAAAEgLAAAAAAAAAAAAAEgLAAAAAAAASQsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQsAAAAAAABFCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					57,
+					1,
+					"insert",
+					{
+						"characters": " will"
+					},
+					"BQAAAEkLAAAAAAAASgsAAAAAAAAAAAAASgsAAAAAAABLCwAAAAAAAAAAAABLCwAAAAAAAEwLAAAAAAAAAAAAAEwLAAAAAAAATQsAAAAAAAAAAAAATQsAAAAAAABOCwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQsAAAAAAABJCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"insert",
+					{
+						"characters": "_"
+					},
+					"AQAAADULAAAAAAAANgsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANQsAAAAAAAA1CwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"insert",
+					{
+						"characters": "_"
+					},
+					"AQAAAEMLAAAAAAAARAsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQwsAAAAAAABDCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					63,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEQLAAAAAAAARAsAAAAAAAAMAAAAIGlmIHlvdSB3aWxs",
+					"AQAAAAAAAAABAAAARAsAAAAAAABQCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAEQLAAAAAAAARQsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAsAAAAAAABECwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					74,
+					2,
+					"left_delete",
+					null,
+					"AgAAAOECAAAAAAAA4QIAAAAAAAADAAAATmV34AIAAAAAAADgAgAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAA5AIAAAAAAADhAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					86,
+					1,
+					"insert",
+					{
+						"characters": "using"
+					},
+					"BQAAAGcDAAAAAAAAaAMAAAAAAAAEAAAAd2l0aGgDAAAAAAAAaQMAAAAAAAAAAAAAaQMAAAAAAABqAwAAAAAAAAAAAABqAwAAAAAAAGsDAAAAAAAAAAAAAGsDAAAAAAAAbAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZwMAAAAAAABrAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					91,
+					4,
+					"left_delete",
+					null,
+					"BAAAAFADAAAAAAAAUAMAAAAAAAAJAAAAY2FycGVudGVyTwMAAAAAAABPAwAAAAAAAAEAAAAgTgMAAAAAAABOAwAAAAAAAAEAAABhTQMAAAAAAABNAwAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAAUAMAAAAAAABZAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					94,
+					1,
+					"insert",
+					{
+						"characters": "carpenter"
+					},
+					"CQAAAGcDAAAAAAAAaAMAAAAAAAAAAAAAaAMAAAAAAABpAwAAAAAAAAAAAABpAwAAAAAAAGoDAAAAAAAAAAAAAGoDAAAAAAAAawMAAAAAAAAAAAAAawMAAAAAAABsAwAAAAAAAAAAAABsAwAAAAAAAG0DAAAAAAAAAAAAAG0DAAAAAAAAbgMAAAAAAAAAAAAAbgMAAAAAAABvAwAAAAAAAAAAAABvAwAAAAAAAHADAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZwMAAAAAAABnAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					95,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAHADAAAAAAAAcQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAMAAAAAAABwAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					96,
+					1,
+					"insert",
+					{
+						"characters": "can"
+					},
+					"AwAAAHEDAAAAAAAAcgMAAAAAAAAAAAAAcgMAAAAAAABzAwAAAAAAAAAAAABzAwAAAAAAAHQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQMAAAAAAABxAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": " complete"
+					},
+					"CQAAAHQDAAAAAAAAdQMAAAAAAAAAAAAAdQMAAAAAAAB2AwAAAAAAAAAAAAB2AwAAAAAAAHcDAAAAAAAAAAAAAHcDAAAAAAAAeAMAAAAAAAAAAAAAeAMAAAAAAAB5AwAAAAAAAAAAAAB5AwAAAAAAAHoDAAAAAAAAAAAAAHoDAAAAAAAAewMAAAAAAAAAAAAAewMAAAAAAAB8AwAAAAAAAAAAAAB8AwAAAAAAAH0DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAMAAAAAAAB0AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"insert",
+					{
+						"characters": " a"
+					},
+					"AgAAAH0DAAAAAAAAfgMAAAAAAAAAAAAAfgMAAAAAAAB/AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfQMAAAAAAAB9AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					99,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAH8DAAAAAAAAgAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwMAAAAAAAB/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					100,
+					1,
+					"right_delete",
+					null,
+					"AQAAAIADAAAAAAAAgAMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAgAMAAAAAAACAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					1,
+					"insert",
+					{
+						"characters": "in"
+					},
+					"AgAAAIgDAAAAAAAAiQMAAAAAAAAFAAAAdGFrZXOJAwAAAAAAAIoDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQMAAAAAAACIAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAGcDAAAAAAAAaAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZwMAAAAAAABnAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					138,
+					1,
+					"insert",
+					{
+						"characters": " (make"
+					},
+					"BgAAAMcEAAAAAAAAyAQAAAAAAAAAAAAAyAQAAAAAAADJBAAAAAAAAAAAAADJBAAAAAAAAMoEAAAAAAAAAAAAAMoEAAAAAAAAywQAAAAAAAAAAAAAywQAAAAAAADMBAAAAAAAAAAAAADMBAAAAAAAAM0EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxwQAAAAAAADHBAAAAAAAAAAAAAAA+IRA"
+				],
+				[
+					139,
+					1,
+					"insert",
+					{
+						"characters": " it"
+					},
+					"AwAAAM0EAAAAAAAAzgQAAAAAAAAAAAAAzgQAAAAAAADPBAAAAAAAAAAAAADPBAAAAAAAANAEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzQQAAAAAAADNBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					140,
+					1,
+					"insert",
+					{
+						"characters": " alate"
+					},
+					"BgAAANAEAAAAAAAA0QQAAAAAAAAAAAAA0QQAAAAAAADSBAAAAAAAAAAAAADSBAAAAAAAANMEAAAAAAAAAAAAANMEAAAAAAAA1AQAAAAAAAAAAAAA1AQAAAAAAADVBAAAAAAAAAAAAADVBAAAAAAAANYEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0AQAAAAAAADQBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					141,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAANYEAAAAAAAA1wQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1gQAAAAAAADWBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					142,
+					5,
+					"left_delete",
+					null,
+					"BQAAANYEAAAAAAAA1gQAAAAAAAABAAAAINUEAAAAAAAA1QQAAAAAAAABAAAAZdQEAAAAAAAA1AQAAAAAAAABAAAAdNMEAAAAAAAA0wQAAAAAAAABAAAAYdIEAAAAAAAA0gQAAAAAAAABAAAAbA",
+					"AQAAAAAAAAABAAAA1wQAAAAAAADXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					143,
+					1,
+					"insert",
+					{
+						"characters": " late"
+					},
+					"BQAAANIEAAAAAAAA0wQAAAAAAAAAAAAA0wQAAAAAAADUBAAAAAAAAAAAAADUBAAAAAAAANUEAAAAAAAAAAAAANUEAAAAAAAA1gQAAAAAAAAAAAAA1gQAAAAAAADXBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0gQAAAAAAADSBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					144,
+					1,
+					"insert",
+					{
+						"characters": " night"
+					},
+					"BgAAANcEAAAAAAAA2AQAAAAAAAAAAAAA2AQAAAAAAADZBAAAAAAAAAAAAADZBAAAAAAAANoEAAAAAAAAAAAAANoEAAAAAAAA2wQAAAAAAAAAAAAA2wQAAAAAAADcBAAAAAAAAAAAAADcBAAAAAAAAN0EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wQAAAAAAADXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					145,
+					1,
+					"insert",
+					{
+						"characters": " actually)"
+					},
+					"CgAAAN0EAAAAAAAA3gQAAAAAAAAAAAAA3gQAAAAAAADfBAAAAAAAAAAAAADfBAAAAAAAAOAEAAAAAAAAAAAAAOAEAAAAAAAA4QQAAAAAAAAAAAAA4QQAAAAAAADiBAAAAAAAAAAAAADiBAAAAAAAAOMEAAAAAAAAAAAAAOMEAAAAAAAA5AQAAAAAAAAAAAAA5AQAAAAAAADlBAAAAAAAAAAAAADlBAAAAAAAAOYEAAAAAAAAAAAAAOYEAAAAAAAA5wQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3QQAAAAAAADdBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					160,
+					1,
+					"insert",
+					{
+						"characters": "what"
+					},
+					"BAAAAMUFAAAAAAAAxgUAAAAAAAAJAAAAd2hhdGV2ZXIgxgUAAAAAAADHBQAAAAAAAAAAAADHBQAAAAAAAMgFAAAAAAAAAAAAAMgFAAAAAAAAyQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzgUAAAAAAADFBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					161,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAMkFAAAAAAAAygUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyQUAAAAAAADJBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					173,
+					6,
+					"left_delete",
+					null,
+					"BgAAAKIGAAAAAAAAogYAAAAAAAABAAAAdKEGAAAAAAAAoQYAAAAAAAABAAAAYaAGAAAAAAAAoAYAAAAAAAABAAAAaJ8GAAAAAAAAnwYAAAAAAAABAAAAd54GAAAAAAAAngYAAAAAAAABAAAAIJ0GAAAAAAAAnQYAAAAAAAABAAAALA",
+					"AQAAAAAAAAABAAAAowYAAAAAAACjBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					174,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAAJ0GAAAAAAAAngYAAAAAAAAAAAAAngYAAAAAAACfBgAAAAAAAAAAAACfBgAAAAAAAKAGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnQYAAAAAAACdBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					203,
+					1,
+					"insert",
+					{
+						"characters": "should"
+					},
+					"BgAAAO8IAAAAAAAA8AgAAAAAAAADAAAAaGFz8AgAAAAAAADxCAAAAAAAAAAAAADxCAAAAAAAAPIIAAAAAAAAAAAAAPIIAAAAAAAA8wgAAAAAAAAAAAAA8wgAAAAAAAD0CAAAAAAAAAAAAAD0CAAAAAAAAPUIAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8ggAAAAAAADvCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					204,
+					1,
+					"insert",
+					{
+						"characters": " have"
+					},
+					"BQAAAPUIAAAAAAAA9ggAAAAAAAAAAAAA9ggAAAAAAAD3CAAAAAAAAAAAAAD3CAAAAAAAAPgIAAAAAAAAAAAAAPgIAAAAAAAA+QgAAAAAAAAAAAAA+QgAAAAAAAD6CAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9QgAAAAAAAD1CAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					217,
+					1,
+					"insert",
+					{
+						"characters": "with"
+					},
+					"BAAAAMwJAAAAAAAAzQkAAAAAAAARAAAAdGhhdCBmYWlscyBsb3VkbHnNCQAAAAAAAM4JAAAAAAAAAAAAAM4JAAAAAAAAzwkAAAAAAAAAAAAAzwkAAAAAAADQCQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3QkAAAAAAADMCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					218,
+					1,
+					"insert",
+					{
+						"characters": " clear"
+					},
+					"BgAAANAJAAAAAAAA0QkAAAAAAAAAAAAA0QkAAAAAAADSCQAAAAAAAAAAAADSCQAAAAAAANMJAAAAAAAAAAAAANMJAAAAAAAA1AkAAAAAAAAAAAAA1AkAAAAAAADVCQAAAAAAAAAAAADVCQAAAAAAANYJAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0AkAAAAAAADQCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					219,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAANYJAAAAAAAA1wkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1gkAAAAAAADWCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					220,
+					1,
+					"insert",
+					{
+						"characters": "erros"
+					},
+					"BQAAANcJAAAAAAAA2AkAAAAAAAAAAAAA2AkAAAAAAADZCQAAAAAAAAAAAADZCQAAAAAAANoJAAAAAAAAAAAAANoJAAAAAAAA2wkAAAAAAAAAAAAA2wkAAAAAAADcCQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wkAAAAAAADXCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					223,
+					1,
+					"insert",
+					{
+						"characters": "e"
+					},
+					"AQAAANsJAAAAAAAA3AkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2wkAAAAAAADbCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					224,
+					1,
+					"left_delete",
+					null,
+					"AQAAANsJAAAAAAAA2wkAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAA3AkAAAAAAADcCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					225,
+					1,
+					"insert",
+					{
+						"characters": "r"
+					},
+					"AQAAANsJAAAAAAAA3AkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2wkAAAAAAADbCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					240,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAAHYKAAAAAAAAdwoAAAAAAAAAAAAAdwoAAAAAAAB4CgAAAAAAAAAAAAB4CgAAAAAAAHkKAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgoAAAAAAAB2CgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					241,
+					1,
+					"insert",
+					{
+						"characters": " worse,"
+					},
+					"BwAAAHkKAAAAAAAAegoAAAAAAAAAAAAAegoAAAAAAAB7CgAAAAAAAAAAAAB7CgAAAAAAAHwKAAAAAAAAAAAAAHwKAAAAAAAAfQoAAAAAAAAAAAAAfQoAAAAAAAB+CgAAAAAAAAAAAAB+CgAAAAAAAH8KAAAAAAAAAAAAAH8KAAAAAAAAgAoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQoAAAAAAAB5CgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					242,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAIAKAAAAAAAAgQoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAoAAAAAAACACgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					248,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAHYKAAAAAAAAdwoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgoAAAAAAAB2CgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					251,
+					1,
+					"insert",
+					{
+						"characters": "con"
+					},
+					"AwAAAIIKAAAAAAAAgwoAAAAAAAAAAAAAgwoAAAAAAACECgAAAAAAAAAAAACECgAAAAAAAIUKAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggoAAAAAAACCCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					252,
+					2,
+					"left_delete",
+					null,
+					"AgAAAIQKAAAAAAAAhAoAAAAAAAABAAAAboMKAAAAAAAAgwoAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAAhQoAAAAAAACFCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					253,
+					1,
+					"insert",
+					{
+						"characters": "onfidently"
+					},
+					"CgAAAIMKAAAAAAAAhAoAAAAAAAAAAAAAhAoAAAAAAACFCgAAAAAAAAAAAACFCgAAAAAAAIYKAAAAAAAAAAAAAIYKAAAAAAAAhwoAAAAAAAAAAAAAhwoAAAAAAACICgAAAAAAAAAAAACICgAAAAAAAIkKAAAAAAAAAAAAAIkKAAAAAAAAigoAAAAAAAAAAAAAigoAAAAAAACLCgAAAAAAAAAAAACLCgAAAAAAAIwKAAAAAAAAAAAAAIwKAAAAAAAAjQoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwoAAAAAAACDCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					254,
+					1,
+					"insert",
+					{
+						"characters": " making"
+					},
+					"BwAAAI0KAAAAAAAAjgoAAAAAAAAAAAAAjgoAAAAAAACPCgAAAAAAAAAAAACPCgAAAAAAAJAKAAAAAAAAAAAAAJAKAAAAAAAAkQoAAAAAAAAAAAAAkQoAAAAAAACSCgAAAAAAAAAAAACSCgAAAAAAAJMKAAAAAAAAAAAAAJMKAAAAAAAAlAoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQoAAAAAAACNCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					255,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAJQKAAAAAAAAlQoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlAoAAAAAAACUCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					256,
+					14,
+					"left_delete",
+					null,
+					"DgAAAJQKAAAAAAAAlAoAAAAAAAABAAAAIJMKAAAAAAAAkwoAAAAAAAABAAAAZ5IKAAAAAAAAkgoAAAAAAAABAAAAbpEKAAAAAAAAkQoAAAAAAAABAAAAaZAKAAAAAAAAkAoAAAAAAAABAAAAa48KAAAAAAAAjwoAAAAAAAABAAAAYY4KAAAAAAAAjgoAAAAAAAABAAAAbY0KAAAAAAAAjQoAAAAAAAABAAAAIIwKAAAAAAAAjAoAAAAAAAABAAAAeYsKAAAAAAAAiwoAAAAAAAABAAAAbIoKAAAAAAAAigoAAAAAAAABAAAAdIkKAAAAAAAAiQoAAAAAAAABAAAAbogKAAAAAAAAiAoAAAAAAAABAAAAZYcKAAAAAAAAhwoAAAAAAAABAAAAZA",
+					"AQAAAAAAAAABAAAAlQoAAAAAAACVCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					257,
+					5,
+					"left_delete",
+					null,
+					"BQAAAIYKAAAAAAAAhgoAAAAAAAABAAAAaYUKAAAAAAAAhQoAAAAAAAABAAAAZoQKAAAAAAAAhAoAAAAAAAABAAAAboMKAAAAAAAAgwoAAAAAAAABAAAAb4IKAAAAAAAAggoAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAAhwoAAAAAAACHCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					258,
+					1,
+					"insert",
+					{
+						"characters": "burr"
+					},
+					"BAAAAIIKAAAAAAAAgwoAAAAAAAAAAAAAgwoAAAAAAACECgAAAAAAAAAAAACECgAAAAAAAIUKAAAAAAAAAAAAAIUKAAAAAAAAhgoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggoAAAAAAACCCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					259,
+					1,
+					"insert",
+					{
+						"characters": "iying"
+					},
+					"BQAAAIYKAAAAAAAAhwoAAAAAAAAAAAAAhwoAAAAAAACICgAAAAAAAAAAAACICgAAAAAAAIkKAAAAAAAAAAAAAIkKAAAAAAAAigoAAAAAAAAAAAAAigoAAAAAAACLCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhgoAAAAAAACGCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					260,
+					1,
+					"insert",
+					{
+						"characters": " mistakes"
+					},
+					"CQAAAIsKAAAAAAAAjAoAAAAAAAAAAAAAjAoAAAAAAACNCgAAAAAAAAAAAACNCgAAAAAAAI4KAAAAAAAAAAAAAI4KAAAAAAAAjwoAAAAAAAAAAAAAjwoAAAAAAACQCgAAAAAAAAAAAACQCgAAAAAAAJEKAAAAAAAAAAAAAJEKAAAAAAAAkgoAAAAAAAAAAAAAkgoAAAAAAACTCgAAAAAAAAAAAACTCgAAAAAAAJQKAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiwoAAAAAAACLCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					261,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAJQKAAAAAAAAlQoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlAoAAAAAAACUCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					262,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJQKAAAAAAAAlAoAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAlQoAAAAAAACVCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					292,
+					2,
+					"left_delete",
+					null,
+					"AgAAAB4MAAAAAAAAHgwAAAAAAAAIAAAAc3RhbmRpbmcdDAAAAAAAAB0MAAAAAAAAAQAAACA",
+					"AQAAAAAAAAABAAAAHgwAAAAAAAAmDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					304,
+					1,
+					"insert",
+					{
+						"characters": "_"
+					},
+					"AQAAAFcNAAAAAAAAWA0AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVw0AAAAAAABXDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					306,
+					1,
+					"insert",
+					{
+						"characters": "+"
+					},
+					"AQAAAF4NAAAAAAAAXw0AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXg0AAAAAAABeDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					307,
+					1,
+					"left_delete",
+					null,
+					"AQAAAF4NAAAAAAAAXg0AAAAAAAABAAAAKw",
+					"AQAAAAAAAAABAAAAXw0AAAAAAABfDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					308,
+					1,
+					"insert",
+					{
+						"characters": "_"
+					},
+					"AQAAAF4NAAAAAAAAXw0AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXg0AAAAAAABeDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					332,
+					2,
+					"left_delete",
+					null,
+					"AgAAACkOAAAAAAAAKQ4AAAAAAAAHAAAAYWxyZWFkeSgOAAAAAAAAKA4AAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAMA4AAAAAAAApDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					339,
+					3,
+					"left_delete",
+					null,
+					"AwAAAMYOAAAAAAAAxg4AAAAAAAAUAAAASSBrZXB0IHJlZGlzY292ZXJpbmfFDgAAAAAAAMUOAAAAAAAAAQAAACDEDgAAAAAAAMQOAAAAAAAAAQAAAHM",
+					"AQAAAAAAAAABAAAA2g4AAAAAAADGDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					340,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAMQOAAAAAAAAxQ4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxA4AAAAAAADEDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					343,
+					2,
+					"left_delete",
+					null,
+					"AgAAALMOAAAAAAAAsw4AAAAAAAAEAAAAdGhlILIOAAAAAAAAsg4AAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAtw4AAAAAAACzDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					344,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAALIOAAAAAAAAsw4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsg4AAAAAAACyDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					352,
+					1,
+					"insert",
+					{
+						"characters": "It"
+					},
+					"AgAAAMMOAAAAAAAAxA4AAAAAAAAtAAAAVGhpcyBpcyB0aGUgb25lIHRoYXQgc3RhcnRlZCBpdCBhbGwsIGJlY2F1c2UgxA4AAAAAAADFDgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAww4AAAAAAADwDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					353,
+					1,
+					"insert",
+					{
+						"characters": " turns"
+					},
+					"BgAAAMUOAAAAAAAAxg4AAAAAAAAAAAAAxg4AAAAAAADHDgAAAAAAAAAAAADHDgAAAAAAAMgOAAAAAAAAAAAAAMgOAAAAAAAAyQ4AAAAAAAAAAAAAyQ4AAAAAAADKDgAAAAAAAAAAAADKDgAAAAAAAMsOAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQ4AAAAAAADFDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					354,
+					1,
+					"insert",
+					{
+						"characters": " out"
+					},
+					"BAAAAMsOAAAAAAAAzA4AAAAAAAAAAAAAzA4AAAAAAADNDgAAAAAAAAAAAADNDgAAAAAAAM4OAAAAAAAAAAAAAM4OAAAAAAAAzw4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyw4AAAAAAADLDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					355,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAM8OAAAAAAAA0A4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzw4AAAAAAADPDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					362,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAOYOAAAAAAAA5w4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5g4AAAAAAADmDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					363,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAOcOAAAAAAAA6Q4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5w4AAAAAAADnDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					364,
+					1,
+					"insert",
+					{
+						"characters": "a"
+					},
+					"AQAAAOgOAAAAAAAA6Q4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6A4AAAAAAADoDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					365,
+					1,
+					"insert",
+					{
+						"characters": " well"
+					},
+					"BQAAAOkOAAAAAAAA6g4AAAAAAAAAAAAA6g4AAAAAAADrDgAAAAAAAAAAAADrDgAAAAAAAOwOAAAAAAAAAAAAAOwOAAAAAAAA7Q4AAAAAAAAAAAAA7Q4AAAAAAADuDgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6Q4AAAAAAADpDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					366,
+					1,
+					"insert",
+					{
+						"characters": " establish"
+					},
+					"CgAAAO4OAAAAAAAA7w4AAAAAAAAAAAAA7w4AAAAAAADwDgAAAAAAAAAAAADwDgAAAAAAAPEOAAAAAAAAAAAAAPEOAAAAAAAA8g4AAAAAAAAAAAAA8g4AAAAAAADzDgAAAAAAAAAAAADzDgAAAAAAAPQOAAAAAAAAAAAAAPQOAAAAAAAA9Q4AAAAAAAAAAAAA9Q4AAAAAAAD2DgAAAAAAAAAAAAD2DgAAAAAAAPcOAAAAAAAAAAAAAPcOAAAAAAAA+A4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7g4AAAAAAADuDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					367,
+					1,
+					"insert",
+					{
+						"characters": "ed"
+					},
+					"AgAAAPgOAAAAAAAA+Q4AAAAAAAAAAAAA+Q4AAAAAAAD6DgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+A4AAAAAAAD4DgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					368,
+					1,
+					"insert",
+					{
+						"characters": " stand"
+					},
+					"BgAAAPoOAAAAAAAA+w4AAAAAAAAAAAAA+w4AAAAAAAD8DgAAAAAAAAAAAAD8DgAAAAAAAP0OAAAAAAAAAAAAAP0OAAAAAAAA/g4AAAAAAAAAAAAA/g4AAAAAAAD/DgAAAAAAAAAAAAD/DgAAAAAAAAAPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+g4AAAAAAAD6DgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					369,
+					1,
+					"insert",
+					{
+						"characters": "ard"
+					},
+					"AwAAAAAPAAAAAAAAAQ8AAAAAAAAAAAAAAQ8AAAAAAAACDwAAAAAAAAAAAAACDwAAAAAAAAMPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAA8AAAAAAAAADwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					370,
+					1,
+					"insert",
+					{
+						"characters": " with"
+					},
+					"BQAAAAMPAAAAAAAABA8AAAAAAAAAAAAABA8AAAAAAAAFDwAAAAAAAAAAAAAFDwAAAAAAAAYPAAAAAAAAAAAAAAYPAAAAAAAABw8AAAAAAAAAAAAABw8AAAAAAAAIDwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAw8AAAAAAAADDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					371,
+					1,
+					"insert",
+					{
+						"characters": " missi"
+					},
+					"BgAAAAgPAAAAAAAACQ8AAAAAAAAAAAAACQ8AAAAAAAAKDwAAAAAAAAAAAAAKDwAAAAAAAAsPAAAAAAAAAAAAAAsPAAAAAAAADA8AAAAAAAAAAAAADA8AAAAAAAANDwAAAAAAAAAAAAANDwAAAAAAAA4PAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACA8AAAAAAAAIDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					372,
+					1,
+					"left_delete",
+					null,
+					"AQAAAA0PAAAAAAAADQ8AAAAAAAABAAAAaQ",
+					"AQAAAAAAAAABAAAADg8AAAAAAAAODwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					373,
+					1,
+					"insert",
+					{
+						"characters": "lions"
+					},
+					"BQAAAA0PAAAAAAAADg8AAAAAAAAAAAAADg8AAAAAAAAPDwAAAAAAAAAAAAAPDwAAAAAAABAPAAAAAAAAAAAAABAPAAAAAAAAEQ8AAAAAAAAAAAAAEQ8AAAAAAAASDwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADQ8AAAAAAAANDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					374,
+					1,
+					"insert",
+					{
+						"characters": " of"
+					},
+					"AwAAABIPAAAAAAAAEw8AAAAAAAAAAAAAEw8AAAAAAAAUDwAAAAAAAAAAAAAUDwAAAAAAABUPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEg8AAAAAAAASDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					375,
+					1,
+					"insert",
+					{
+						"characters": " rer"
+					},
+					"BAAAABUPAAAAAAAAFg8AAAAAAAAAAAAAFg8AAAAAAAAXDwAAAAAAAAAAAAAXDwAAAAAAABgPAAAAAAAAAAAAABgPAAAAAAAAGQ8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFQ8AAAAAAAAVDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					376,
+					1,
+					"left_delete",
+					null,
+					"AQAAABgPAAAAAAAAGA8AAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAGQ8AAAAAAAAZDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					377,
+					1,
+					"insert",
+					{
+						"characters": "fenrences"
+					},
+					"CQAAABgPAAAAAAAAGQ8AAAAAAAAAAAAAGQ8AAAAAAAAaDwAAAAAAAAAAAAAaDwAAAAAAABsPAAAAAAAAAAAAABsPAAAAAAAAHA8AAAAAAAAAAAAAHA8AAAAAAAAdDwAAAAAAAAAAAAAdDwAAAAAAAB4PAAAAAAAAAAAAAB4PAAAAAAAAHw8AAAAAAAAAAAAAHw8AAAAAAAAgDwAAAAAAAAAAAAAgDwAAAAAAACEPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGA8AAAAAAAAYDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					379,
+					1,
+					"insert",
+					{
+						"characters": " (a"
+					},
+					"AwAAADUPAAAAAAAANg8AAAAAAAAAAAAANg8AAAAAAAA3DwAAAAAAAAAAAAA3DwAAAAAAADgPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANQ8AAAAAAAA1DwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					380,
+					1,
+					"insert",
+					{
+						"characters": " new"
+					},
+					"BAAAADgPAAAAAAAAOQ8AAAAAAAAAAAAAOQ8AAAAAAAA6DwAAAAAAAAAAAAA6DwAAAAAAADsPAAAAAAAAAAAAADsPAAAAAAAAPA8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOA8AAAAAAAA4DwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					381,
+					1,
+					"insert",
+					{
+						"characters": " langu"
+					},
+					"BgAAADwPAAAAAAAAPQ8AAAAAAAAAAAAAPQ8AAAAAAAA+DwAAAAAAAAAAAAA+DwAAAAAAAD8PAAAAAAAAAAAAAD8PAAAAAAAAQA8AAAAAAAAAAAAAQA8AAAAAAABBDwAAAAAAAAAAAABBDwAAAAAAAEIPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPA8AAAAAAAA8DwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					382,
+					1,
+					"insert",
+					{
+						"characters": "age)"
+					},
+					"BAAAAEIPAAAAAAAAQw8AAAAAAAAAAAAAQw8AAAAAAABEDwAAAAAAAAAAAABEDwAAAAAAAEUPAAAAAAAAAAAAAEUPAAAAAAAARg8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQg8AAAAAAABCDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					384,
+					1,
+					"insert",
+					{
+						"characters": " a"
+					},
+					"AgAAAEUPAAAAAAAARg8AAAAAAAAAAAAARg8AAAAAAABHDwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQ8AAAAAAABFDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					385,
+					1,
+					"insert",
+					{
+						"characters": " few"
+					},
+					"BAAAAEcPAAAAAAAASA8AAAAAAAAAAAAASA8AAAAAAABJDwAAAAAAAAAAAABJDwAAAAAAAEoPAAAAAAAAAAAAAEoPAAAAAAAASw8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARw8AAAAAAABHDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					386,
+					1,
+					"insert",
+					{
+						"characters": " years"
+					},
+					"BgAAAEsPAAAAAAAATA8AAAAAAAAAAAAATA8AAAAAAABNDwAAAAAAAAAAAABNDwAAAAAAAE4PAAAAAAAAAAAAAE4PAAAAAAAATw8AAAAAAAAAAAAATw8AAAAAAABQDwAAAAAAAAAAAABQDwAAAAAAAFEPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASw8AAAAAAABLDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					387,
+					1,
+					"insert",
+					{
+						"characters": " old"
+					},
+					"BAAAAFEPAAAAAAAAUg8AAAAAAAAAAAAAUg8AAAAAAABTDwAAAAAAAAAAAABTDwAAAAAAAFQPAAAAAAAAAAAAAFQPAAAAAAAAVQ8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUQ8AAAAAAABRDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					395,
+					1,
+					"insert",
+					{
+						"characters": "recipe"
+					},
+					"BgAAAA8QAAAAAAAAEBAAAAAAAAAIAAAAcGxheWJvb2sQEAAAAAAAABEQAAAAAAAAAAAAABEQAAAAAAAAEhAAAAAAAAAAAAAAEhAAAAAAAAATEAAAAAAAAAAAAAATEAAAAAAAABQQAAAAAAAAAAAAABQQAAAAAAAAFRAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFxAAAAAAAAAPEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					421,
+					1,
+					"insert",
+					{
+						"characters": "submi"
+					},
+					"BQAAAGwRAAAAAAAAbREAAAAAAAAGAAAAZ2V0IGFubREAAAAAAABuEQAAAAAAAAAAAABuEQAAAAAAAG8RAAAAAAAAAAAAAG8RAAAAAAAAcBEAAAAAAAAAAAAAcBEAAAAAAABxEQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAchEAAAAAAABsEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					422,
+					1,
+					"insert",
+					{
+						"characters": " an"
+					},
+					"AwAAAHERAAAAAAAAchEAAAAAAAAAAAAAchEAAAAAAABzEQAAAAAAAAAAAABzEQAAAAAAAHQRAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcREAAAAAAABxEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					428,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAHERAAAAAAAAchEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcREAAAAAAABxEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					432,
+					1,
+					"insert",
+					{
+						"characters": "handle"
+					},
+					"BgAAAJMRAAAAAAAAlBEAAAAAAAASAAAAcGFzdCBpdHMgcmV2aWV3ZXJzlBEAAAAAAACVEQAAAAAAAAAAAACVEQAAAAAAAJYRAAAAAAAAAAAAAJYRAAAAAAAAlxEAAAAAAAAAAAAAlxEAAAAAAACYEQAAAAAAAAAAAACYEQAAAAAAAJkRAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkxEAAAAAAAClEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					433,
+					1,
+					"insert",
+					{
+						"characters": " reviews"
+					},
+					"CAAAAJkRAAAAAAAAmhEAAAAAAAAAAAAAmhEAAAAAAACbEQAAAAAAAAAAAACbEQAAAAAAAJwRAAAAAAAAAAAAAJwRAAAAAAAAnREAAAAAAAAAAAAAnREAAAAAAACeEQAAAAAAAAAAAACeEQAAAAAAAJ8RAAAAAAAAAAAAAJ8RAAAAAAAAoBEAAAAAAAAAAAAAoBEAAAAAAAChEQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmREAAAAAAACZEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					453,
+					1,
+					"insert",
+					{
+						"characters": "with"
+					},
+					"BAAAABkSAAAAAAAAGhIAAAAAAAAPAAAAaW52b2tlZCBieSBoYW5kGhIAAAAAAAAbEgAAAAAAAAAAAAAbEgAAAAAAABwSAAAAAAAAAAAAABwSAAAAAAAAHRIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKBIAAAAAAAAZEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					454,
+					1,
+					"insert",
+					{
+						"characters": " safeg"
+					},
+					"BgAAAB0SAAAAAAAAHhIAAAAAAAAAAAAAHhIAAAAAAAAfEgAAAAAAAAAAAAAfEgAAAAAAACASAAAAAAAAAAAAACASAAAAAAAAIRIAAAAAAAAAAAAAIRIAAAAAAAAiEgAAAAAAAAAAAAAiEgAAAAAAACMSAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHRIAAAAAAAAdEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					455,
+					1,
+					"insert",
+					{
+						"characters": "uards"
+					},
+					"BQAAACMSAAAAAAAAJBIAAAAAAAAAAAAAJBIAAAAAAAAlEgAAAAAAAAAAAAAlEgAAAAAAACYSAAAAAAAAAAAAACYSAAAAAAAAJxIAAAAAAAAAAAAAJxIAAAAAAAAoEgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIxIAAAAAAAAjEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					459,
+					1,
+					"left_delete",
+					null,
+					"AQAAABcSAAAAAAAAFxIAAAAAAAABAAAALA",
+					"AQAAAAAAAAABAAAAGBIAAAAAAAAYEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					480,
+					1,
+					"insert",
+					{
+						"characters": "a"
+					},
+					"AQAAAMkTAAAAAAAAyhMAAAAAAAAJAAAAYSBzY2FubmVy",
+					"AQAAAAAAAAABAAAA0hMAAAAAAADJEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					481,
+					1,
+					"insert",
+					{
+						"characters": " toool"
+					},
+					"BgAAAMoTAAAAAAAAyxMAAAAAAAAAAAAAyxMAAAAAAADMEwAAAAAAAAAAAADMEwAAAAAAAM0TAAAAAAAAAAAAAM0TAAAAAAAAzhMAAAAAAAAAAAAAzhMAAAAAAADPEwAAAAAAAAAAAADPEwAAAAAAANATAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyhMAAAAAAADKEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					482,
+					1,
+					"insert",
+					{
+						"characters": " to"
+					},
+					"AwAAANATAAAAAAAA0RMAAAAAAAAAAAAA0RMAAAAAAADSEwAAAAAAAAAAAADSEwAAAAAAANMTAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0BMAAAAAAADQEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					483,
+					1,
+					"insert",
+					{
+						"characters": " automatic"
+					},
+					"CgAAANMTAAAAAAAA1BMAAAAAAAAAAAAA1BMAAAAAAADVEwAAAAAAAAAAAADVEwAAAAAAANYTAAAAAAAAAAAAANYTAAAAAAAA1xMAAAAAAAAAAAAA1xMAAAAAAADYEwAAAAAAAAAAAADYEwAAAAAAANkTAAAAAAAAAAAAANkTAAAAAAAA2hMAAAAAAAAAAAAA2hMAAAAAAADbEwAAAAAAAAAAAADbEwAAAAAAANwTAAAAAAAAAAAAANwTAAAAAAAA3RMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0xMAAAAAAADTEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					484,
+					1,
+					"insert",
+					{
+						"characters": "ally"
+					},
+					"BAAAAN0TAAAAAAAA3hMAAAAAAAAAAAAA3hMAAAAAAADfEwAAAAAAAAAAAADfEwAAAAAAAOATAAAAAAAAAAAAAOATAAAAAAAA4RMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3RMAAAAAAADdEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					485,
+					1,
+					"insert",
+					{
+						"characters": " filter"
+					},
+					"BwAAAOETAAAAAAAA4hMAAAAAAAAAAAAA4hMAAAAAAADjEwAAAAAAAAAAAADjEwAAAAAAAOQTAAAAAAAAAAAAAOQTAAAAAAAA5RMAAAAAAAAAAAAA5RMAAAAAAADmEwAAAAAAAAAAAADmEwAAAAAAAOcTAAAAAAAAAAAAAOcTAAAAAAAA6BMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4RMAAAAAAADhEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					486,
+					1,
+					"insert",
+					{
+						"characters": " AI"
+					},
+					"AwAAAOgTAAAAAAAA6RMAAAAAAAAAAAAA6RMAAAAAAADqEwAAAAAAAAAAAADqEwAAAAAAAOsTAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6BMAAAAAAADoEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					487,
+					1,
+					"insert",
+					{
+						"characters": " cliches"
+					},
+					"CAAAAOsTAAAAAAAA7BMAAAAAAAAAAAAA7BMAAAAAAADtEwAAAAAAAAAAAADtEwAAAAAAAO4TAAAAAAAAAAAAAO4TAAAAAAAA7xMAAAAAAAAAAAAA7xMAAAAAAADwEwAAAAAAAAAAAADwEwAAAAAAAPETAAAAAAAAAAAAAPETAAAAAAAA8hMAAAAAAAAAAAAA8hMAAAAAAADzEwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6xMAAAAAAADrEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					489,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPETAAAAAAAA8RMAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAA8hMAAAAAAADyEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					490,
+					1,
+					"insert",
+					{
+						"characters": "è"
+					},
+					"AQAAAPETAAAAAAAA8hMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8RMAAAAAAADxEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					491,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPETAAAAAAAA8RMAAAAAAAACAAAAw6g",
+					"AQAAAAAAAAABAAAA8hMAAAAAAADyEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					492,
+					1,
+					"insert",
+					{
+						"characters": "ée"
+					},
+					"AgAAAPETAAAAAAAA8hMAAAAAAAAAAAAA8hMAAAAAAADzEwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8RMAAAAAAADxEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					493,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPITAAAAAAAA8hMAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAA8xMAAAAAAADzEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					499,
+					1,
+					"insert",
+					{
+						"characters": "along"
+					},
+					"BQAAAMUTAAAAAAAAxhMAAAAAAAADAAAAYW5kxhMAAAAAAADHEwAAAAAAAAAAAADHEwAAAAAAAMgTAAAAAAAAAAAAAMgTAAAAAAAAyRMAAAAAAAAAAAAAyRMAAAAAAADKEwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxRMAAAAAAADIEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					500,
+					1,
+					"insert",
+					{
+						"characters": " with"
+					},
+					"BQAAAMoTAAAAAAAAyxMAAAAAAAAAAAAAyxMAAAAAAADMEwAAAAAAAAAAAADMEwAAAAAAAM0TAAAAAAAAAAAAAM0TAAAAAAAAzhMAAAAAAAAAAAAAzhMAAAAAAADPEwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyhMAAAAAAADKEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					501,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAM8TAAAAAAAA0BMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzxMAAAAAAADPEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					502,
+					1,
+					"left_delete",
+					null,
+					"AQAAAM8TAAAAAAAAzxMAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAA0BMAAAAAAADQEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					514,
+					3,
+					"right_delete",
+					null,
+					"AwAAAAkUAAAAAAAACRQAAAAAAAANAAAAYSBwYWdlIG9yIHR3bwkUAAAAAAAACRQAAAAAAAABAAAALAkUAAAAAAAACRQAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAFhQAAAAAAAAJFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					519,
+					1,
+					"insert",
+					{
+						"characters": "and"
+					},
+					"AwAAABAUAAAAAAAAERQAAAAAAAAQAAAAZ290Y2hhcyBpbiBmcm9udBEUAAAAAAAAEhQAAAAAAAAAAAAAEhQAAAAAAAATFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIBQAAAAAAAAQFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					520,
+					1,
+					"insert",
+					{
+						"characters": " loads"
+					},
+					"BgAAABMUAAAAAAAAFBQAAAAAAAAAAAAAFBQAAAAAAAAVFAAAAAAAAAAAAAAVFAAAAAAAABYUAAAAAAAAAAAAABYUAAAAAAAAFxQAAAAAAAAAAAAAFxQAAAAAAAAYFAAAAAAAAAAAAAAYFAAAAAAAABkUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAExQAAAAAAAATFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					521,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAABkUAAAAAAAAGhQAAAAAAAAAAAAAGhQAAAAAAAAbFAAAAAAAAAAAAAAbFAAAAAAAABwUAAAAAAAAAAAAABwUAAAAAAAAHRQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGRQAAAAAAAAZFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					522,
+					1,
+					"insert",
+					{
+						"characters": " impor"
+					},
+					"BgAAAB0UAAAAAAAAHhQAAAAAAAAAAAAAHhQAAAAAAAAfFAAAAAAAAAAAAAAfFAAAAAAAACAUAAAAAAAAAAAAACAUAAAAAAAAIRQAAAAAAAAAAAAAIRQAAAAAAAAiFAAAAAAAAAAAAAAiFAAAAAAAACMUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHRQAAAAAAAAdFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					523,
+					1,
+					"insert",
+					{
+						"characters": "tant"
+					},
+					"BAAAACMUAAAAAAAAJBQAAAAAAAAAAAAAJBQAAAAAAAAlFAAAAAAAAAAAAAAlFAAAAAAAACYUAAAAAAAAAAAAACYUAAAAAAAAJxQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIxQAAAAAAAAjFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					524,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAACcUAAAAAAAAKBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJxQAAAAAAAAnFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					525,
+					3,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AwAAAB4UAAAAAAAAHhQAAAAAAAAKAAAAaW1wb3J0YW50IBoUAAAAAAAAGhQAAAAAAAAEAAAAdGhlIBQUAAAAAAAAFBQAAAAAAAAGAAAAbG9hZHMg",
+					"AQAAAAAAAAABAAAAKBQAAAAAAAAoFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					526,
+					1,
+					"insert",
+					{
+						"characters": "leads"
+					},
+					"BQAAABQUAAAAAAAAFRQAAAAAAAAAAAAAFRQAAAAAAAAWFAAAAAAAAAAAAAAWFAAAAAAAABcUAAAAAAAAAAAAABcUAAAAAAAAGBQAAAAAAAAAAAAAGBQAAAAAAAAZFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFBQAAAAAAAAUFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					527,
+					1,
+					"insert",
+					{
+						"characters": " with"
+					},
+					"BQAAABkUAAAAAAAAGhQAAAAAAAAAAAAAGhQAAAAAAAAbFAAAAAAAAAAAAAAbFAAAAAAAABwUAAAAAAAAAAAAABwUAAAAAAAAHRQAAAAAAAAAAAAAHRQAAAAAAAAeFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGRQAAAAAAAAZFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					528,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAB4UAAAAAAAAHxQAAAAAAAAAAAAAHxQAAAAAAAAgFAAAAAAAAAAAAAAgFAAAAAAAACEUAAAAAAAAAAAAACEUAAAAAAAAIhQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHhQAAAAAAAAeFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					529,
+					1,
+					"insert",
+					{
+						"characters": " impor"
+					},
+					"BgAAACIUAAAAAAAAIxQAAAAAAAAAAAAAIxQAAAAAAAAkFAAAAAAAAAAAAAAkFAAAAAAAACUUAAAAAAAAAAAAACUUAAAAAAAAJhQAAAAAAAAAAAAAJhQAAAAAAAAnFAAAAAAAAAAAAAAnFAAAAAAAACgUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIhQAAAAAAAAiFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					530,
+					1,
+					"insert",
+					{
+						"characters": "tant"
+					},
+					"BAAAACgUAAAAAAAAKRQAAAAAAAAAAAAAKRQAAAAAAAAqFAAAAAAAAAAAAAAqFAAAAAAAACsUAAAAAAAAAAAAACsUAAAAAAAALBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKBQAAAAAAAAoFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					531,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAACwUAAAAAAAALRQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALBQAAAAAAAAsFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					532,
+					1,
+					"insert",
+					{
+						"characters": "asp"
+					},
+					"AwAAAC0UAAAAAAAALhQAAAAAAAAAAAAALhQAAAAAAAAvFAAAAAAAAAAAAAAvFAAAAAAAADAUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALRQAAAAAAAAtFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					533,
+					1,
+					"insert",
+					{
+						"characters": "ects"
+					},
+					"BAAAADAUAAAAAAAAMRQAAAAAAAAAAAAAMRQAAAAAAAAyFAAAAAAAAAAAAAAyFAAAAAAAADMUAAAAAAAAAAAAADMUAAAAAAAANBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMBQAAAAAAAAwFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					534,
+					1,
+					"insert",
+					{
+						"characters": " first"
+					},
+					"BgAAADQUAAAAAAAANRQAAAAAAAAAAAAANRQAAAAAAAA2FAAAAAAAAAAAAAA2FAAAAAAAADcUAAAAAAAAAAAAADcUAAAAAAAAOBQAAAAAAAAAAAAAOBQAAAAAAAA5FAAAAAAAAAAAAAA5FAAAAAAAADoUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANBQAAAAAAAA0FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					537,
+					1,
+					"insert",
+					{
+						"characters": "frontloads"
+					},
+					"CgAAABQUAAAAAAAAFRQAAAAAAAAmAAAAbGVhZHMgd2l0aCB0aGUgaW1wb3J0YW50IGFzcGVjdHMgZmlyc3QVFAAAAAAAABYUAAAAAAAAAAAAABYUAAAAAAAAFxQAAAAAAAAAAAAAFxQAAAAAAAAYFAAAAAAAAAAAAAAYFAAAAAAAABkUAAAAAAAAAAAAABkUAAAAAAAAGhQAAAAAAAAAAAAAGhQAAAAAAAAbFAAAAAAAAAAAAAAbFAAAAAAAABwUAAAAAAAAAAAAABwUAAAAAAAAHRQAAAAAAAAAAAAAHRQAAAAAAAAeFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOhQAAAAAAAAUFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					538,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAB4UAAAAAAAAHxQAAAAAAAAAAAAAHxQAAAAAAAAgFAAAAAAAAAAAAAAgFAAAAAAAACEUAAAAAAAAAAAAACEUAAAAAAAAIhQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHhQAAAAAAAAeFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					539,
+					1,
+					"insert",
+					{
+						"characters": " important"
+					},
+					"CgAAACIUAAAAAAAAIxQAAAAAAAAAAAAAIxQAAAAAAAAkFAAAAAAAAAAAAAAkFAAAAAAAACUUAAAAAAAAAAAAACUUAAAAAAAAJhQAAAAAAAAAAAAAJhQAAAAAAAAnFAAAAAAAAAAAAAAnFAAAAAAAACgUAAAAAAAAAAAAACgUAAAAAAAAKRQAAAAAAAAAAAAAKRQAAAAAAAAqFAAAAAAAAAAAAAAqFAAAAAAAACsUAAAAAAAAAAAAACsUAAAAAAAALBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIhQAAAAAAAAiFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					540,
+					1,
+					"insert",
+					{
+						"characters": " context"
+					},
+					"CAAAACwUAAAAAAAALRQAAAAAAAAAAAAALRQAAAAAAAAuFAAAAAAAAAAAAAAuFAAAAAAAAC8UAAAAAAAAAAAAAC8UAAAAAAAAMBQAAAAAAAAAAAAAMBQAAAAAAAAxFAAAAAAAAAAAAAAxFAAAAAAAADIUAAAAAAAAAAAAADIUAAAAAAAAMxQAAAAAAAAAAAAAMxQAAAAAAAA0FAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALBQAAAAAAAAsFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					541,
+					1,
+					"insert",
+					{
+						"characters": " first"
+					},
+					"BgAAADQUAAAAAAAANRQAAAAAAAAAAAAANRQAAAAAAAA2FAAAAAAAAAAAAAA2FAAAAAAAADcUAAAAAAAAAAAAADcUAAAAAAAAOBQAAAAAAAAAAAAAOBQAAAAAAAA5FAAAAAAAAAAAAAA5FAAAAAAAADoUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANBQAAAAAAAA0FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					542,
+					1,
+					"insert",
+					{
+						"characters": " so"
+					},
+					"AwAAADoUAAAAAAAAOxQAAAAAAAAAAAAAOxQAAAAAAAA8FAAAAAAAAAAAAAA8FAAAAAAAAD0UAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOhQAAAAAAAA6FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					543,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAD0UAAAAAAAAPhQAAAAAAAAAAAAAPhQAAAAAAAA/FAAAAAAAAAAAAAA/FAAAAAAAAEAUAAAAAAAAAAAAAEAUAAAAAAAAQRQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPRQAAAAAAAA9FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					544,
+					3,
+					"left_delete",
+					null,
+					"AwAAAEAUAAAAAAAAQBQAAAAAAAABAAAAZT8UAAAAAAAAPxQAAAAAAAABAAAAaD4UAAAAAAAAPhQAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAQRQAAAAAAABBFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					545,
+					1,
+					"insert",
+					{
+						"characters": "to"
+					},
+					"AgAAAD4UAAAAAAAAPxQAAAAAAAAAAAAAPxQAAAAAAABAFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPhQAAAAAAAA+FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					546,
+					1,
+					"insert",
+					{
+						"characters": " optimize"
+					},
+					"CQAAAEAUAAAAAAAAQRQAAAAAAAAAAAAAQRQAAAAAAABCFAAAAAAAAAAAAABCFAAAAAAAAEMUAAAAAAAAAAAAAEMUAAAAAAAARBQAAAAAAAAAAAAARBQAAAAAAABFFAAAAAAAAAAAAABFFAAAAAAAAEYUAAAAAAAAAAAAAEYUAAAAAAAARxQAAAAAAAAAAAAARxQAAAAAAABIFAAAAAAAAAAAAABIFAAAAAAAAEkUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQBQAAAAAAABAFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					547,
+					1,
+					"insert",
+					{
+						"characters": " for"
+					},
+					"BAAAAEkUAAAAAAAAShQAAAAAAAAAAAAAShQAAAAAAABLFAAAAAAAAAAAAABLFAAAAAAAAEwUAAAAAAAAAAAAAEwUAAAAAAAATRQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASRQAAAAAAABJFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					548,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAE0UAAAAAAAAThQAAAAAAAAAAAAAThQAAAAAAABPFAAAAAAAAAAAAABPFAAAAAAAAFAUAAAAAAAAAAAAAFAUAAAAAAAAURQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATRQAAAAAAABNFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					549,
+					16,
+					"left_delete",
+					null,
+					"EAAAAFAUAAAAAAAAUBQAAAAAAAABAAAAZU8UAAAAAAAATxQAAAAAAAABAAAAaE4UAAAAAAAAThQAAAAAAAABAAAAdE0UAAAAAAAATRQAAAAAAAABAAAAIEwUAAAAAAAATBQAAAAAAAABAAAAcksUAAAAAAAASxQAAAAAAAABAAAAb0oUAAAAAAAAShQAAAAAAAABAAAAZkkUAAAAAAAASRQAAAAAAAABAAAAIEgUAAAAAAAASBQAAAAAAAABAAAAZUcUAAAAAAAARxQAAAAAAAABAAAAekYUAAAAAAAARhQAAAAAAAABAAAAaUUUAAAAAAAARRQAAAAAAAABAAAAbUQUAAAAAAAARBQAAAAAAAABAAAAaUMUAAAAAAAAQxQAAAAAAAABAAAAdEIUAAAAAAAAQhQAAAAAAAABAAAAcEEUAAAAAAAAQRQAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAAURQAAAAAAABRFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					550,
+					1,
+					"insert",
+					{
+						"characters": "minimu"
+					},
+					"BgAAAEEUAAAAAAAAQhQAAAAAAAAAAAAAQhQAAAAAAABDFAAAAAAAAAAAAABDFAAAAAAAAEQUAAAAAAAAAAAAAEQUAAAAAAAARRQAAAAAAAAAAAAARRQAAAAAAABGFAAAAAAAAAAAAABGFAAAAAAAAEcUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQRQAAAAAAABBFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					551,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEYUAAAAAAAARhQAAAAAAAABAAAAdQ",
+					"AQAAAAAAAAABAAAARxQAAAAAAABHFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					552,
+					1,
+					"insert",
+					{
+						"characters": "ize"
+					},
+					"AwAAAEYUAAAAAAAARxQAAAAAAAAAAAAARxQAAAAAAABIFAAAAAAAAAAAAABIFAAAAAAAAEkUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARhQAAAAAAABGFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					553,
+					1,
+					"insert",
+					{
+						"characters": " teh"
+					},
+					"BAAAAEkUAAAAAAAAShQAAAAAAAAAAAAAShQAAAAAAABLFAAAAAAAAAAAAABLFAAAAAAAAEwUAAAAAAAAAAAAAEwUAAAAAAAATRQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASRQAAAAAAABJFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					554,
+					1,
+					"insert",
+					{
+						"characters": " ti"
+					},
+					"AwAAAE0UAAAAAAAAThQAAAAAAAAAAAAAThQAAAAAAABPFAAAAAAAAAAAAABPFAAAAAAAAFAUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATRQAAAAAAABNFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					555,
+					1,
+					"left_delete",
+					null,
+					"AQAAAE8UAAAAAAAATxQAAAAAAAABAAAAaQ",
+					"AQAAAAAAAAABAAAAUBQAAAAAAABQFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					556,
+					1,
+					"insert",
+					{
+						"characters": "oken"
+					},
+					"BAAAAE8UAAAAAAAAUBQAAAAAAAAAAAAAUBQAAAAAAABRFAAAAAAAAAAAAABRFAAAAAAAAFIUAAAAAAAAAAAAAFIUAAAAAAAAUxQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATxQAAAAAAABPFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					557,
+					1,
+					"insert",
+					{
+						"characters": " overhead"
+					},
+					"CQAAAFMUAAAAAAAAVBQAAAAAAAAAAAAAVBQAAAAAAABVFAAAAAAAAAAAAABVFAAAAAAAAFYUAAAAAAAAAAAAAFYUAAAAAAAAVxQAAAAAAAAAAAAAVxQAAAAAAABYFAAAAAAAAAAAAABYFAAAAAAAAFkUAAAAAAAAAAAAAFkUAAAAAAAAWhQAAAAAAAAAAAAAWhQAAAAAAABbFAAAAAAAAAAAAABbFAAAAAAAAFwUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUxQAAAAAAABTFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					559,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAADsUAAAAAAAAOxQAAAAAAAADAAAAc28g",
+					"AQAAAAAAAAABAAAAPhQAAAAAAAA+FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					563,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEgUAAAAAAAASBQAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAASRQAAAAAAABJFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					565,
+					1,
+					"insert",
+					{
+						"characters": "e"
+					},
+					"AQAAAEkUAAAAAAAAShQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASRQAAAAAAABJFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					580,
+					2,
+					"left_delete",
+					null,
+					"AgAAAFsUAAAAAAAAWxQAAAAAAACJAAAAQSBza2lsbCBpcyB0aGUgY2xvc2VzdCB0aGUgbW9kZWwgZ2V0cyB0byBsZWFybmluZyBvbiB0aGUgam9iOiBJIGRvIHRoZSByZW1lbWJlcmluZyBvbmNlLCBpbiBhIGZpbGUsIGFuZCBldmVyeSBmdXR1cmUgc2Vzc2lvbiBpbmhlcml0cyBpdC5aFAAAAAAAAFoUAAAAAAAAAQAAACA",
+					"AQAAAAAAAAABAAAA5BQAAAAAAABbFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					595,
+					1,
+					"insert",
+					{
+						"characters": "may"
+					},
+					"AwAAAOcUAAAAAAAA6BQAAAAAAAAHAAAAZG9lc24ndOgUAAAAAAAA6RQAAAAAAAAAAAAA6RQAAAAAAADqFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5xQAAAAAAADuFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					596,
+					1,
+					"insert",
+					{
+						"characters": " not"
+					},
+					"BAAAAOoUAAAAAAAA6xQAAAAAAAAAAAAA6xQAAAAAAADsFAAAAAAAAAAAAADsFAAAAAAAAO0UAAAAAAAAAAAAAO0UAAAAAAAA7hQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6hQAAAAAAADqFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					602,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAHYVAAAAAAAAdxUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdhUAAAAAAAB2FQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					603,
+					1,
+					"insert",
+					{
+						"characters": " deliberately"
+					},
+					"DQAAAHcVAAAAAAAAeBUAAAAAAAAAAAAAeBUAAAAAAAB5FQAAAAAAAAAAAAB5FQAAAAAAAHoVAAAAAAAAAAAAAHoVAAAAAAAAexUAAAAAAAAAAAAAexUAAAAAAAB8FQAAAAAAAAAAAAB8FQAAAAAAAH0VAAAAAAAAAAAAAH0VAAAAAAAAfhUAAAAAAAAAAAAAfhUAAAAAAAB/FQAAAAAAAAAAAAB/FQAAAAAAAIAVAAAAAAAAAAAAAIAVAAAAAAAAgRUAAAAAAAAAAAAAgRUAAAAAAACCFQAAAAAAAAAAAACCFQAAAAAAAIMVAAAAAAAAAAAAAIMVAAAAAAAAhBUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdxUAAAAAAAB3FQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					622,
+					4,
+					"left_delete",
+					null,
+					"BAAAALMWAAAAAAAAsxYAAAAAAAABAAAAd7IWAAAAAAAAshYAAAAAAAABAAAAb7EWAAAAAAAAsRYAAAAAAAABAAAAbrAWAAAAAAAAsBYAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAtBYAAAAAAAC0FgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					629,
+					1,
+					"insert",
+					{
+						"characters": "code"
+					},
+					"BAAAAAEXAAAAAAAAAhcAAAAAAAAAAAAAAhcAAAAAAAADFwAAAAAAAAAAAAADFwAAAAAAAAQXAAAAAAAAAAAAAAQXAAAAAAAABRcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAARcAAAAAAAABFwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					630,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAAUXAAAAAAAABhcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABRcAAAAAAAAFFwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					641,
+					2,
+					"left_delete",
+					null,
+					"AgAAAG0XAAAAAAAAbRcAAAAAAABfAAAAQW4gZW5naW5lZXIgd2hvIGhhcyBvbmx5IHByZXNzZWQgdGhlIGJ1dHRvbiBvbiB0aGUgdGFibGUgc2F3IGNhbm5vdCB0ZWxsIHdoZW4gdGhlIGN1dCBpcyB3cm9uZy5sFwAAAAAAAGwXAAAAAAAAAQAAACA",
+					"AQAAAAAAAAABAAAAzBcAAAAAAABtFwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					650,
+					3,
+					"left_delete",
+					null,
+					"AwAAAHgVAAAAAAAAeBUAAAAAAAAMAAAAZGVsaWJlcmF0ZWx5dxUAAAAAAAB3FQAAAAAAAAEAAAAgdhUAAAAAAAB2FQAAAAAAAAEAAAAs",
+					"AQAAAAAAAAABAAAAeBUAAAAAAACEFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					662,
+					1,
+					"insert",
+					{
+						"characters": "coding"
+					},
+					"BgAAABUYAAAAAAAAFhgAAAAAAAAEAAAATExNcxYYAAAAAAAAFxgAAAAAAAAAAAAAFxgAAAAAAAAYGAAAAAAAAAAAAAAYGAAAAAAAABkYAAAAAAAAAAAAABkYAAAAAAAAGhgAAAAAAAAAAAAAGhgAAAAAAAAbGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGRgAAAAAAAAVGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					663,
+					1,
+					"insert",
+					{
+						"characters": " agents"
+					},
+					"BwAAABsYAAAAAAAAHBgAAAAAAAAAAAAAHBgAAAAAAAAdGAAAAAAAAAAAAAAdGAAAAAAAAB4YAAAAAAAAAAAAAB4YAAAAAAAAHxgAAAAAAAAAAAAAHxgAAAAAAAAgGAAAAAAAAAAAAAAgGAAAAAAAACEYAAAAAAAAAAAAACEYAAAAAAAAIhgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGxgAAAAAAAAbGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					686,
+					1,
+					"insert",
+					{
+						"characters": "Download"
+					},
+					"CAAAAPIZAAAAAAAA8xkAAAAAAAAHAAAASW5zdGFsbPMZAAAAAAAA9BkAAAAAAAAAAAAA9BkAAAAAAAD1GQAAAAAAAAAAAAD1GQAAAAAAAPYZAAAAAAAAAAAAAPYZAAAAAAAA9xkAAAAAAAAAAAAA9xkAAAAAAAD4GQAAAAAAAAAAAAD4GQAAAAAAAPkZAAAAAAAAAAAAAPkZAAAAAAAA+hkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8hkAAAAAAAD5GQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					694,
+					2,
+					"left_delete",
+					null,
+					"AgAAAGgbAAAAAAAAaBsAAAAAAAAEAAAAb25seWcbAAAAAAAAZxsAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAaBsAAAAAAABsGwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					717,
+					1,
+					"insert",
+					{
+						"characters": "Tony,"
+					},
+					"BQAAACEDAAAAAAAAIgMAAAAAAAAAAAAAIgMAAAAAAAAjAwAAAAAAAAAAAAAjAwAAAAAAACQDAAAAAAAAAAAAACQDAAAAAAAAJQMAAAAAAAAAAAAAJQMAAAAAAAAmAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQMAAAAAAAAhAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					718,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAACYDAAAAAAAAJwMAAAAAAAAAAAAAJwMAAAAAAAAoAwAAAAAAAAAAAAAoAwAAAAAAACkDAAAAAAAAAAAAACkDAAAAAAAAKgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJgMAAAAAAAAmAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					719,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAACoDAAAAAAAAKwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKgMAAAAAAAAqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					724,
+					1,
+					"insert",
+					{
+						"characters": "ing"
+					},
+					"AwAAADoaAAAAAAAAOxoAAAAAAAAAAAAAOxoAAAAAAAA8GgAAAAAAAAAAAAA8GgAAAAAAAD0aAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOhoAAAAAAAA6GgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					726,
+					1,
+					"insert",
+					{
+						"characters": "..."
+					},
+					"AwAAAEQaAAAAAAAARRoAAAAAAAAAAAAARRoAAAAAAABGGgAAAAAAAAAAAABGGgAAAAAAAEcaAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARBoAAAAAAABEGgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"langue",
+				"LanguageTool: Ignore Problem"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"langua",
+				"LanguageTool: Clear Problems"
+			],
+			[
+				"lang",
+				"LanguageTool: Clear Problems"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"git",
+				"Git: Diff All Files"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"bau",
+				"HTMLBeautify"
+			],
+			[
+				"beauti",
+				"HTMLBeautify"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"saage",
+				"Set Syntax: Git Attributes"
+			],
+			[
+				"chat",
+				"ChatGPT"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 256.0,
+		"history":
+		[
+			"view.run_command(\"saage\")",
+			"view.run_command(\"example\")",
+			"view.run_command(\"ExampleCommand\")",
+			"view.run_command(\"Example\")",
+			"view.run_command(\"sample_plugin\")",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(\"sample_plugin\")",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(\"sample_plugin\")",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(saage_plugin)",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(saage_plugin)",
+			"view.run_command(\"saage_plugin\")",
+			"view.run_command(saage_plugin)",
+			"view.run_command(SaageCommand)",
+			"view.run_command(saage_plugin)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/carlos/dev/sotilrac.gitlab.io",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts",
+		"/home/carlos/dev/sotilrac.gitlab.io/js",
+		"/home/carlos/dev/sotilrac.gitlab.io/src",
+		"/home/carlos/dev/sotilrac.gitlab.io/src/ee-calculator"
+	],
+	"file_history":
+	[
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/the-engineering-frame.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-09-02-mad-skills.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/mad-skills.md",
+		"/home/carlos/dev/mass_gis/DISTRIBUTION.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/sigmoids-are-the-best.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-04-18-perfection.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/src/ee-calculator/main.js",
+		"/home/carlos/dev/sotilrac.gitlab.io/js/programmer-calculator.js",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-03-28-i-see-0xdeadbeef.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-05-25-resistance-is-futile.md",
+		"/home/carlos/.ssh/config",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-06-12-what-makes-good-diagrams.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/what-makes-good-diagrams.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/no-goblins.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/css/main.css",
+		"/home/carlos/dev/sotilrac.gitlab.io/README.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/why-diagrams-rot.md",
+		"/home/carlos/.gradle/gradle.properties",
+		"/home/carlos/.claude/skills/ticket/SKILL.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/src/ee-calculator/style.css",
+		"/tmp/claude/cover-letter-asus.md",
+		"/tmp/claude/veeva-application.md",
+		"/tmp/claude/fan-nanda-application.md",
+		"/tmp/claude/cto-cofounder-bio.md",
+		"/tmp/claude/veeva-application.md.",
+		"/home/carlos/dev/sotilrac.gitlab.io/_tools/spell-dictionary.txt",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/resistance-is-futile.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_tools/new-post.sh",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/bench.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/js/ee-calculator.js",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-03-12-blog-makeover-2.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/blog.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-10-08-nao-at-m-net-finaly-online.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/press.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/resume.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/resume.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/site.json",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/head.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/llms.txt",
+		"/home/carlos/dev/sotilrac.gitlab.io/img/press/README.md",
+		"/home/carlos/Documents/oneplus_11_backup/REPORT.md",
+		"/home/carlos/Documents/oneplus_11_backup/backup.errors",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-10-05-automatic-panoramas-in-montreal.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-05-09-making-panoramas.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-04-09-bump-it-bro.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/STYLE.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/img/blog/no-goblins/gpt-5.5.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/img/blog/no-goblins/gpt-5.3-codex.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/CLAUDE.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-07-22-im-looking-for-a-job.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-07-17-gentle-safe-cracker.md",
+		"/home/carlos/dev/hack/adb/gemini-audit.md",
+		"/home/carlos/dev/hack/adb/gemini-report.md",
+		"/home/carlos/.config/ghostty/config.ghostty",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/new-phone-who-this.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-05-08-new-phone-who-this.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/css/vendor/fancybox.min.css",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-05-12-smoke-and-mirror.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-01-cloud-robotics-hackathon.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/smoke-and-mirror.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/mirror-in-case-of-fire.md",
+		"/home/carlos/.tauri/daedalus.key",
+		"/home/carlos/Downloads/my-home.loan.yaml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/a-theory-of-communication.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-04-23-the-bernie-conundrum.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_drafts/the-bernie-conundrum.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/layouts/home.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/footer.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2021-09-02-timesheet-bookmarklet.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-04-26-a-theory-of-communication.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2022-03-30-linux-command-line-tips.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/layouts/post.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2023-09-15-hold-me-tight.md",
+		"/home/carlos/dev/self-host/jellyfin/readme.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/comments/i-am-ironman.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2021-11-30-raspbian-chroot.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/comments/tiny-firefox.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/comments/shoplift-alarm-sensors.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/comments/cheap-van-de-graaff-generator.yml",
+		"/home/carlos/dev/sotilrac.gitlab.io/_data/comments/bogota-rake.yml",
+		"/home/carlos/Torrent/Books/Craig Alanson Collection/Craig Alanson-Expeditionary Force[1-14]-Mavericks[1-2]/Craig Alanson-Epeditionary Force.txt",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2026-04-06-til-download-your-own-youtube-videos-with-yt-dlp.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/sotilrac.sublime-project",
+		"/home/carlos/dev/take-it-back/text/ack.md",
+		"/home/carlos/dev/take-it-back/css/stylesheet-epub-indent.css",
+		"/home/carlos/dev/take-it-back/metadata.yaml",
+		"/home/carlos/.claude/CLAUDE.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-02-18-solitudes.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-24-cd-lamp.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-06-ecuadorian-makecation.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-27-big-buck-bunny.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2013-03-25-zorro.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-16-the-wind-turbine-part-1-idea.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-02-23-we-are-slightly-popular.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-05-10-the-wind-turbine-part-2-desing-materials.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-05-18-the-wind-turbine-part-3-generator.md",
+		"/home/carlos/Downloads/transactions.csv",
+		"/home/carlos/dev/anniversary-cal/anniversaries.ics",
+		"/home/carlos/Downloads/Fermion _ MFG Battery Sync.txt",
+		"/home/carlos/dev/terminator/install-instructions.md",
+		"/home/carlos/dev/terminator/pr-description.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-28-floppy-note-pad.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-03-wireless-am-receiver.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-03-11-opus-smart-card.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-12-02-opamp.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2008-05-20-what-am-i-building.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/tools/programmer-calculator.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2007-06-23-speech-recognition-fpga.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-08-18-diy-universal-gripper-make-magazine.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-09-29-panoramic-camera-prototype.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-09-roscon-2012.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-06-08-interview-cbc-spark.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2012-05-31-imodela-mini-cnc-mill.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-07-01-nao-1337-super-star-robollywoode.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-23-nao-1337-is-famous.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-19-carlitos-contraptions-hacked.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-27-geekfest.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-01-18-omg-its-comming-nao.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-09-have-no-fear-nao-is-here.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2010-06-19-polymorph.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-09-07-tux-laptop-sleeve.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2006-09-24-wireless-skype-phone.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_includes/archive-banner.njk",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2009-11-30-montreal-hackers-wave.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-02-07-nao-humanoid-robot-unboxing.md",
+		"/home/carlos/dev/sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 166.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" I ",
+			"ax",
+			"axis",
+			"collapse",
+			"Colla",
+			"Zero dependencies",
+			"perfe",
+			"third",
+			"hobbyists meet",
+			"land",
+			" ",
+			"q@3Hg&%*rIshIUvMrHy%bX1*4bGeKa",
+			"BUZZKILL",
+			"afford",
+			"Infinite",
+			".calc",
+			"Common bands",
+			"Electri",
+			"jjbeard",
+			"/img/blog/bench/",
+			"fig",
+			"0.639",
+			"prefix",
+			"\n<!--",
+			"the",
+			"teh",
+			"{% fig",
+			".tab-group[data-tab=\"ac\"] .field",
+			"tab-group[data-tab=\"ac\"] .field",
+			"Same math for both topologies",
+			"Click a band, pick a color. Or type a value and get the band pattern.",
+			"data-band",
+			"picker",
+			"press & media",
+			" Click a card to expand.",
+			"strateg",
+			"carlitoscontraptions.com",
+			"Carlos' Resume, portfolio and blog. My projects span software, electronics and robotics.",
+			"%}\">",
+			"descriptions",
+			"Personal site and technical blog built with Eleventy, Nunjucks, CSS, and JavaScript. CI/CD pipeline on GitLab with automated linting and deployment. Includes a data-driven resume, client-side AES decryption for contact info, structured data for SEO, and a comment system backed by GitH",
+			"unique",
+			"## ",
+			"###",
+			"calculator",
+			"## ",
+			"  <cite>OpenAI</cite>",
+			"goblin",
+			"time",
+			" ",
+			"em",
+			"\n</",
+			"  <cite>Open AI</cite>\n</blockquote>\n",
+			"arial",
+			".\n",
+			" never ",
+			"teh",
+			" ",
+			"licen",
+			" (Wikipedia)",
+			"You",
+			".**",
+			"\"",
+			"_perfect_",
+			"**",
+			"connected devices",
+			"wait",
+			"behavior",
+			"will",
+			"i"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_posts/2026-09-02-mad-skills.md",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7426,
+								7426
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 404.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 58.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.languagetool":
+	{
+		"height": 148.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "sotilrac.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mad s",
+				"_posts/2026-09-02-mad-skills.md"
+			],
+			[
+				"mad",
+				"_drafts/mad-skills.md"
+			],
+			[
+				"perf",
+				"_posts/2026-04-18-perfection.md"
+			],
+			[
+				"perfection",
+				"_posts/2026-04-18-perfection.md"
+			],
+			[
+				"css",
+				"css/main.css"
+			],
+			[
+				"ee-cal",
+				"js/ee-calculator.js"
+			],
+			[
+				"makeover",
+				"_posts/2026-03-12-blog-makeover-2.md"
+			],
+			[
+				"main",
+				"css/main.css"
+			],
+			[
+				"res",
+				"_data/resume.yml"
+			],
+			[
+				"press",
+				"_data/press.yml"
+			],
+			[
+				"blo",
+				"blog.njk"
+			],
+			[
+				"llm",
+				"llms.txt"
+			],
+			[
+				"_includes/head.njk",
+				"_includes/head.njk"
+			],
+			[
+				"bump",
+				"_posts/2026-04-09-bump-it-bro.md"
+			],
+			[
+				"gpt",
+				"img/blog/no-goblins/gpt-5.3-codex.md"
+			],
+			[
+				"loo",
+				"_posts/2008-07-22-im-looking-for-a-job.md"
+			],
+			[
+				"make",
+				"_posts/2026-03-12-blog-makeover-2.md"
+			],
+			[
+				"perfe",
+				"_posts/2026-04-18-perfection.md"
+			],
+			[
+				"footer",
+				"_includes/footer.njk"
+			],
+			[
+				"resume",
+				"_data/resume.yml"
+			],
+			[
+				"time",
+				"_posts/2021-09-02-timesheet-bookmarklet.md"
+			],
+			[
+				"linux",
+				"_posts/2022-03-30-linux-command-line-tips.md"
+			],
+			[
+				"hold",
+				"_posts/2023-09-15-hold-me-tight.md"
+			],
+			[
+				"post",
+				"_includes/layouts/post.njk"
+			],
+			[
+				"rasp",
+				"_posts/2021-11-30-raspbian-chroot.md"
+			],
+			[
+				"bro",
+				"_posts/2026-04-09-bump-it-bro.md"
+			],
+			[
+				"solitu.md",
+				"_posts/2009-02-18-solitudes.md"
+			],
+			[
+				"cd.md",
+				"_posts/2006-12-24-cd-lamp.md"
+			],
+			[
+				"big.md",
+				"_posts/2008-05-27-big-buck-bunny.md"
+			],
+			[
+				"css/mai",
+				"sotilrac.gitlab.io/css/main.css"
+			],
+			[
+				"maincss",
+				"sotilrac.gitlab.io/css/main.css"
+			],
+			[
+				"robotshop.md",
+				"sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md"
+			],
+			[
+				"floppy.md",
+				"sotilrac.gitlab.io/_posts/2008-05-28-floppy-note-pad.md"
+			],
+			[
+				"rock.md",
+				"sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md"
+			],
+			[
+				"zorromd",
+				"sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"
+			],
+			[
+				"opus.md",
+				"sotilrac.gitlab.io/_posts/2009-03-11-opus-smart-card.md"
+			],
+			[
+				"opamp.md",
+				"sotilrac.gitlab.io/_posts/2006-12-02-opamp.md"
+			],
+			[
+				"recei.md",
+				"sotilrac.gitlab.io/_posts/2006-12-03-wireless-am-receiver.md"
+			],
+			[
+				"isee.md",
+				"sotilrac.gitlab.io/_posts/2026-03-28-i-see-0xdeadbeef.md"
+			],
+			[
+				"js/programmer-calculator.js",
+				"sotilrac.gitlab.io/js/programmer-calculator.js"
+			],
+			[
+				"ribotshopmd",
+				"sotilrac.gitlab.io/_posts/2009-06-29-robotshop-carlitos-contraptions.md"
+			],
+			[
+				"wavemd",
+				"sotilrac.gitlab.io/_posts/2009-11-30-montreal-hackers-wave.md"
+			],
+			[
+				"unboxingmd",
+				"sotilrac.gitlab.io/_posts/2011-02-07-nao-humanoid-robot-unboxing.md"
+			],
+			[
+				"geek2011md",
+				"sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md"
+			],
+			[
+				"geek.md",
+				"sotilrac.gitlab.io/_posts/2011-03-12-nao-montreal-geekfest-2011.md"
+			],
+			[
+				"wind.md",
+				"sotilrac.gitlab.io/_posts/2010-02-16-the-wind-turbine-part-1-idea.md"
+			],
+			[
+				"wind",
+				"public/my projects/2010/02/16/the-wind-turbine-part-1-idea.html"
+			],
+			[
+				"rgb-led.md",
+				"sotilrac.gitlab.io/_posts/2011-01-17-rgb-led-mood-cube.md"
+			],
+			[
+				"zorro.md",
+				"sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"
+			],
+			[
+				"rock-paper",
+				"sotilrac.gitlab.io/_posts/2011-10-13-nao-1337-rock-paper-scissors-lizard-spock-maker-faire-ny-2011.md"
+			],
+			[
+				"on-new",
+				"sotilrac.gitlab.io/_posts/2012-06-07-im-on-new-scientist.md"
+			],
+			[
+				"speechmd",
+				"sotilrac.gitlab.io/_posts/2011-03-13-speech-controlled-arduino-robot.md"
+			],
+			[
+				"spee",
+				"public/arduino/2011/03/13/speech-controlled-arduino-robot.html"
+			],
+			[
+				"zorro",
+				"sotilrac.gitlab.io/_posts/2013-03-25-zorro.md"
+			],
+			[
+				"luck",
+				"sotilrac.gitlab.io/_posts/2009-11-18-i-am-the-luckiest-engineer-ever.md"
+			],
+			[
+				"hugo_source/themes/dephytheme/layouts/_default/list.html",
+				"hugo_source/themes/dephytheme/layouts/_default/list.html"
+			],
+			[
+				"FieldUpdate/version.py",
+				"FieldUpdate/version.py"
+			],
+			[
+				"device_structs.py",
+				"Device/device_structs.py"
+			],
+			[
+				"FieldUpdate/bootloader.py",
+				"FieldUpdate/bootloader.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
