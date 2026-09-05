@@ -69,7 +69,7 @@ make lint          # check formatting (CI runs this)
 make lint-fix      # auto-fix formatting
 ```
 
-Git hooks are installed automatically via `make install` / `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files. On each push, it runs `make check` (lint + build + internal link check), mirroring the CI pipeline.
+Git hooks are installed automatically via `make install` / `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files and prints spelling suspects on the lines the commit adds (advisory, never blocks). On each push, it runs `make check` (lint + build + internal link check), mirroring the CI pipeline.
 
 ## Resume
 
@@ -231,7 +231,7 @@ Helper scripts in `_tools/`. External tools used during migrations are listed at
 - `new-post.sh "Title" [YYYY-MM-DD]`, create a new blog post with frontmatter and media folder
 - `publish.sh slug [YYYY-MM-DD]`, promote a draft from `_drafts/` to `_posts/`, adding a `date:` field and the date prefix to the filename
 - `redate-post.sh`, rename a post file with a new date
-- `spell.mjs FILE`, aspell spelling plus a grammar pass for doubled words, common typos, and double spaces, filtered through `_tools/spell-dictionary.txt` (`make spell FILE=...`)
+- `spell.mjs [--staged] FILE`, aspell spelling (Canadian English) plus a grammar pass for doubled words, common typos, and double spaces, filtered through `_tools/spell-dictionary.txt` (`make spell FILE=...`). `--staged` limits the report to lines added in the index, which is how the pre-commit hook calls it
 - `lowercase-files.sh`, lowercase all filenames in a directory
 
 **Build verification**

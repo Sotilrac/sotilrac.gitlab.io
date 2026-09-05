@@ -16,7 +16,11 @@
  *
  * Usage:
  *   node _tools/spell.mjs <file>...
+ *   node _tools/spell.mjs --staged <file>...   # only lines added in the index
  *   make spell FILE=_drafts/foo.md
+ *
+ * --staged is what the pre-commit hook uses: it reports only words on lines
+ * the commit adds, so an old post's backlog does not drown the new typo.
  *
  * Exits 0 if clean, 1 if anything was flagged, 2 on usage error.
  */
@@ -221,15 +225,43 @@ function findOccurrences(src, word) {
   return out;
 }
 
-function checkFile(file) {
+// Line numbers (in the working tree) added by the staged diff of `file`.
+// Returns null when the file has no staged diff, so the caller checks all of it.
+function stagedLines(file) {
+  let diff;
+  try {
+    diff = execSync(`git diff --cached -U0 -- ${JSON.stringify(file)}`, {
+      encoding: "utf-8",
+    });
+  } catch {
+    return null;
+  }
+  if (!diff.trim()) return null;
+  const lines = new Set();
+  for (const m of diff.matchAll(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/gm)) {
+    const start = Number(m[1]);
+    const count = m[2] === undefined ? 1 : Number(m[2]);
+    for (let i = 0; i < count; i++) lines.add(start + i);
+  }
+  return lines;
+}
+
+function checkFile(file, { staged = false } = {}) {
   const src = readFileSync(file, "utf-8");
   const stripped = stripMarkdown(src);
+  const only = staged ? stagedLines(file) : null;
+  const keep = (line) => only === null || only.has(line);
 
   const suspects = aspellSuspects(stripped);
-  const unknown = [...suspects].filter((w) => !inDict(w));
+  let unknown = [...suspects].filter((w) => !inDict(w));
+  if (only !== null) {
+    unknown = unknown.filter((w) =>
+      findOccurrences(stripped, w).some((o) => keep(o.line)),
+    );
+  }
   unknown.sort((a, b) => a.localeCompare(b));
 
-  const grammar = grammarChecks(src);
+  const grammar = grammarChecks(src).filter((g) => keep(g.line));
 
   if (unknown.length === 0 && grammar.length === 0) {
     console.log(`${file}: clean`);
@@ -241,7 +273,7 @@ function checkFile(file) {
   if (unknown.length) {
     console.log(`  Unknown words (${unknown.length}):`);
     for (const word of unknown) {
-      const occ = findOccurrences(stripped, word);
+      const occ = findOccurrences(stripped, word).filter((o) => keep(o.line));
       if (occ.length === 0) {
         console.log(`    ${word}`);
       } else {
@@ -267,9 +299,11 @@ function checkFile(file) {
 
 // ---- main ---------------------------------------------------------------
 
-const files = process.argv.slice(2);
+const args = process.argv.slice(2);
+const staged = args.includes("--staged");
+const files = args.filter((a) => a !== "--staged");
 if (files.length === 0) {
-  console.error("Usage: node _tools/spell.mjs <file>...");
+  console.error("Usage: node _tools/spell.mjs [--staged] <file>...");
   process.exit(2);
 }
 
@@ -280,7 +314,7 @@ for (const file of files) {
     bad++;
     continue;
   }
-  bad += checkFile(file);
+  bad += checkFile(file, { staged });
 }
 
 process.exit(bad > 0 ? 1 : 0);

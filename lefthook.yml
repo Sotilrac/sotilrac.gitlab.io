@@ -5,6 +5,10 @@ pre-commit:
       glob: "*.{md,json,yml,yaml,css,mjs,js}"
       run: npx prettier --write {staged_files}
       stage_fixed: true
+    spell:
+      # Advisory only: prints typos on the lines this commit adds, never blocks.
+      glob: "*.md"
+      run: node _tools/spell.mjs --staged {staged_files} || true
 
 pre-push:
   commands:
