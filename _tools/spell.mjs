@@ -4,7 +4,7 @@
  *
  * Strips frontmatter, code blocks, inline code, KaTeX math, HTML tags,
  * link URLs, and Eleventy shortcodes before piping the remaining prose
- * through `aspell` (en_US). Cross-references _tools/spell-dictionary.txt
+ * through `aspell` (en_CA). Cross-references _tools/spell-dictionary.txt
  * for project-specific technical terms so domain vocab isn't flagged.
  *
  * Also runs three heuristic grammar checks:
@@ -96,7 +96,7 @@ function inDict(word) {
 
 function aspellSuspects(text) {
   try {
-    const out = execSync("aspell list --mode=none --lang=en_US", {
+    const out = execSync("aspell list --mode=none --lang=en_CA", {
       input: text,
       encoding: "utf-8",
     });
