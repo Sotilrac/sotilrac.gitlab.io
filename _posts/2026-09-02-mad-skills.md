@@ -12,7 +12,7 @@ tags:
 date: 2026-09-02T12:00:00-04:00
 ---
 
-For the last decade, my job has been leading robotics teams, and code was something I reviewed far more often than I wrote. That flipped his past year. I have been coding more than I have in a long time and, more to the point, finishing things: a couple of web apps, the calculators and plots on this blog, and a pile of small tools that had been waiting in a text file for years. I did not get more free time (I checked); LLMs got good enough to use, and the projects I had been meaning to build finally fit into the partitioned days I already have.
+For the last decade, my job has been leading robotics teams, and code was something I reviewed far more often than I wrote. That flipped this past year. I have been coding more than I have in a long time and, more to the point, finishing things: a couple of web apps, the calculators and plots on this blog, and a pile of small tools that had been waiting in a text file for years. I did not get more free time (I checked); LLMs got good enough to use, and the projects I had been meaning to build finally fit into the partitioned days I already have.
 
 ## A Power Tool
 
@@ -26,7 +26,7 @@ Claude Code runs in a terminal, where it can create and edit files, build and ru
 
 What makes the tool work for me is that I already know how to use it, because I have been doing the same thing with people for years. I instruct the model the way I would instruct a junior member of my team: I envision the architecture, describe it clearly, make the judgment calls early so it doesn't paint itself into a corner, and hand over a map of how to get the work done. It can be trusted with some technical decisions and needs explicit direction on the rest. This is delegation, and any team lead or senior engineer should have been practicing it for ages.
 
-The other half of delegating well is making sure the person can check their own work without waiting on you. LLMs performs much better in a repo with unit tests, linting, a build with clear errors, and pre-commit and pre-push hooks that run all of it, because every step gets immediate feedback and the model iterates on its own instead of asking me, or worse, burriying mistakes. The same tooling is precisely what a new hire needs on their first week, so a codebase set up for an LLM is a codebase set up for people, and I have started treating that tooling as the first deliverable of any project. It's the _mise en place_.
+The other half of delegating well is making sure the person can check their own work without waiting on you. LLMs perform much better in a repo with unit tests, linting, a build with clear errors, and pre-commit and pre-push hooks that run all of it, because every step gets immediate feedback and the model iterates on its own instead of asking me, or worse, burying mistakes. The same tooling is precisely what a new hire needs in their first week, so a codebase set up for an LLM is a codebase set up for people, and I have started treating that tooling as the first deliverable of any project. It's the _mise en place_.
 
 ## Recipes
 
@@ -34,15 +34,15 @@ One thing that separates the model from a junior is that, contrary to popular be
 
 So I moved those lectures into _skills_, short markdown files that the agent loads only when the request matches their description, and collected them in [a repo](https://gitlab.com/sotilrac/skills). They are mostly recipes for things I was doing by hand:
 
-- [d2-diagrams](https://gitlab.com/sotilrac/skills/-/tree/main/d2-diagrams), a reference for the D2 diagram language with layout gotchas. It turns out LLMs are great at HTML (a well established standard with misslions of refenrences) and dreadful at D2 (a new language a few years old).
+- [d2-diagrams](https://gitlab.com/sotilrac/skills/-/tree/main/d2-diagrams), a reference for the D2 diagram language with layout gotchas. It turns out LLMs are great at HTML (a well-established standard with millions of references) and dreadful at D2 (a new language a few years old).
 - [standalone-web-app](https://gitlab.com/sotilrac/skills/-/tree/main/standalone-web-app) and [nextcloud-web-app](https://gitlab.com/sotilrac/skills/-/tree/main/nextcloud-web-app), a recipe for local-first browser apps and a companion that ships the same engine to the Nextcloud App Store.
 - [html-deck](https://gitlab.com/sotilrac/skills/-/tree/main/html-deck), single-file HTML slide decks I can version-control instead of fighting Slides.
 - [fdroid-publish](https://gitlab.com/sotilrac/skills/-/tree/main/fdroid-publish), how to submit an Android app into F-Droid and handle reviews.
 - [ticket](https://gitlab.com/sotilrac/skills/-/tree/main/ticket), a Jira ticket worked end to end, from fetch to PR with safeguards because I don't want the model deciding on its own to ship branches.
 - [translate](https://gitlab.com/sotilrac/skills/-/tree/main/translate), document translation that gathers native material in the target language first and builds a lexicon from it.
-- [avoid-ai-tropes](https://gitlab.com/sotilrac/skills/-/tree/main/avoid-ai-tropes), a catalogue of the patterns and vocabulary (Claudisms) that reek of AI slop, along with a toool to automatically filter AI clichés.
+- [avoid-ai-tropes](https://gitlab.com/sotilrac/skills/-/tree/main/avoid-ai-tropes), a catalogue of the patterns and vocabulary (Claudisms) that reek of AI slop, along with a tool to automatically filter AI clichés.
 
-Each one is terse, and frontloads the important context first to minimize the token overhead.
+Each one is terse and frontloads the important context to minimize the token overhead.
 
 ## Apprenticeship
 
