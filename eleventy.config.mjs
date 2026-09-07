@@ -86,11 +86,14 @@ export default function (eleventyConfig) {
     return (slug + " " + filename).replace(/[-_]+/g, " ").trim();
   };
 
-  eleventyConfig.addShortcode("fig", (img, caption) => {
+  // Optional third argument caps this one figure's width (any CSS length),
+  // overriding the post-level `figWidth` frontmatter for that figure only.
+  eleventyConfig.addShortcode("fig", (img, caption, width) => {
     const alt = caption || altFromPath(img);
     const fc = caption ? `<figcaption>${caption}</figcaption>` : "";
     const dc = caption ? ` data-caption="${caption}"` : "";
-    return `<figure class="post-fig"><a href="${img}" data-fancybox${dc}><img src="${img}" alt="${alt}" /></a>${fc}</figure>`;
+    const st = width ? ` style="--fig-width: ${width}"` : "";
+    return `<figure class="post-fig"${st}><a href="${img}" data-fancybox${dc}><img src="${img}" alt="${alt}" /></a>${fc}</figure>`;
   });
 
   eleventyConfig.addShortcode("gallery", (columns, ...imgs) => {

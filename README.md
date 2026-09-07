@@ -105,6 +105,7 @@ Available in post content:
 
 ```md
 {% fig "/img/blog/slug/photo.jpg", "Caption text" %}
+{% fig "/img/blog/slug/tall.png", "Caption text", "18em" %} <!-- optional max width for this figure -->
 {% gallery 3, "/img/blog/slug/a.jpg", "/img/blog/slug/b.jpg", "/img/blog/slug/c.jpg" %}
 {% compare "/img/blog/slug/before.jpg", "/img/blog/slug/after.jpg", "Caption text" %}
 {% calc "deadbeef" %}
