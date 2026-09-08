@@ -69,18 +69,91 @@ SD cards are the same NAND with a cheaper brain. Bunnie Huang showed that every 
 
 ## Side by Side
 
-| Medium                 | Unpowered life                            | Density (B/mm³)          | Dies by                                     |
-| ---------------------- | ----------------------------------------- | ------------------------ | ------------------------------------------- |
-| Stone carving          | 2,200+ years observed                     | 5 × 10⁻⁵                 | weathering, reuse, dynamite                 |
-| Rag or acid-free paper | 570 years observed, rated several hundred | 0.6 (text), 80 (barcode) | acid, water, fire, insects                  |
-| Acid wood-pulp paper   | decades                                   | 0.6                      | hydrolysis                                  |
-| Microfilm              | 500 years rated (LE-500)                  | analog                   | residual chemistry, fading                  |
-| LTO tape               | 20 to 30 years rated                      | 2 × 10⁸                  | binder hydrolysis, no drive left to read it |
-| Hard drive             | under 2 years (NIST), unrated by makers   | 1 × 10⁸                  | mechanics, electronics, stiction            |
-| SSD                    | 1 year at 30 °C, end of life (JEDEC)      | 1 × 10⁹                  | charge leakage, controller                  |
-| microSD                | same, with less margin                    | 1 × 10¹⁰                 | same, with a cheaper controller             |
+<!-- prettier-ignore -->
+<figure class="post-fig plot-fig">
+<svg viewBox="0 0 780 524" width="100%" role="img" aria-label="Timeline of storage media lifetimes" style="font-family:var(--font-base);display:block">
+<style>.tl-t{fill:var(--charcoal);font-size:12px}.tl-s{fill:var(--slate);font-size:10.5px}.tl-ax{stroke:var(--pewter);stroke-width:1}.tl-g{stroke:var(--silver);stroke-width:1}.tl-u{stroke:var(--royal-blue)}.tl-p{stroke:var(--crimson)}.tl-b{stroke-width:7;stroke-linecap:butt;fill:none}.tl-d{stroke-dasharray:3 4}.tl-pt{fill:var(--royal-blue)}</style>
+<line class="tl-g" x1="172.0" y1="32" x2="172.0" y2="490"/>
+<text class="tl-s" x="172.0" y="504" text-anchor="middle">1</text>
+<line class="tl-g" x1="217.2" y1="32" x2="217.2" y2="490"/>
+<text class="tl-s" x="217.2" y="504" text-anchor="middle">2</text>
+<line class="tl-g" x1="276.8" y1="32" x2="276.8" y2="490"/>
+<text class="tl-s" x="276.8" y="504" text-anchor="middle">5</text>
+<line class="tl-g" x1="322.0" y1="32" x2="322.0" y2="490"/>
+<text class="tl-s" x="322.0" y="504" text-anchor="middle">10</text>
+<line class="tl-g" x1="367.2" y1="32" x2="367.2" y2="490"/>
+<text class="tl-s" x="367.2" y="504" text-anchor="middle">20</text>
+<line class="tl-g" x1="426.8" y1="32" x2="426.8" y2="490"/>
+<text class="tl-s" x="426.8" y="504" text-anchor="middle">50</text>
+<line class="tl-g" x1="472.0" y1="32" x2="472.0" y2="490"/>
+<text class="tl-s" x="472.0" y="504" text-anchor="middle">100</text>
+<line class="tl-g" x1="517.2" y1="32" x2="517.2" y2="490"/>
+<text class="tl-s" x="517.2" y="504" text-anchor="middle">200</text>
+<line class="tl-g" x1="576.8" y1="32" x2="576.8" y2="490"/>
+<text class="tl-s" x="576.8" y="504" text-anchor="middle">500</text>
+<line class="tl-g" x1="622.0" y1="32" x2="622.0" y2="490"/>
+<text class="tl-s" x="622.0" y="504" text-anchor="middle">1,000</text>
+<line class="tl-ax" x1="172" y1="490" x2="630" y2="490"/>
+<path class="tl-ax" d="M660,484 l4,6 l-8,8 l4,6" fill="none"/>
+<path class="tl-ax" d="M670,484 l4,6 l-8,8 l4,6" fill="none"/>
+<line class="tl-ax" x1="678" y1="490" x2="770" y2="490"/>
+<text class="tl-s" x="770" y="504" text-anchor="end">years</text>
+<line class="tl-u tl-b" x1="172" y1="16" x2="200" y2="16"/><text class="tl-s" x="206" y="20">unpowered, rated or measured</text>
+<line class="tl-u tl-b tl-d" x1="382" y1="16" x2="410" y2="16"/><text class="tl-s" x="416" y="20">observed or expected beyond it</text>
+<line class="tl-p tl-b" x1="592" y1="16" x2="620" y2="16"/><text class="tl-s" x="626" y="20">powered, in service</text>
+<text class="tl-t" x="160" y="76" text-anchor="end">microSD</text>
+<line class="tl-u tl-b tl-d" x1="172.0" y1="67" x2="322.0" y2="67"/>
+<text class="tl-s" x="329.0" y="71">unrated; same NAND as an SSD, less margin</text>
+<line class="tl-p tl-b tl-d" x1="172.0" y1="79" x2="322.0" y2="79"/>
+<text class="tl-s" x="329.0" y="83">set by write volume and power cuts</text>
+<text class="tl-t" x="160" y="142" text-anchor="end">SSD</text>
+<circle class="tl-pt" cx="172.0" cy="133" r="4"/>
+<text class="tl-s" x="172.0" y="124">JEDEC floor: 1 yr for a worn drive at 30 °C</text>
+<line class="tl-u tl-b tl-d" x1="172.0" y1="133" x2="322.0" y2="133"/>
+<text class="tl-s" x="329.0" y="137">fresh drive ≈ 10</text>
+<line class="tl-p tl-b" x1="172.0" y1="145" x2="276.8" y2="145"/>
+<text class="tl-s" x="172.0" y="161">5 yr warranty</text>
+<line class="tl-p tl-b tl-d" x1="276.8" y1="145" x2="322.0" y2="145"/>
+<text class="tl-s" x="329.0" y="149">fleets lose 0.2 to 1 % a year</text>
+<text class="tl-t" x="160" y="208" text-anchor="end">Hard drive</text>
+<line class="tl-u tl-b" x1="172.0" y1="199" x2="217.2" y2="199"/>
+<text class="tl-s" x="172.0" y="190">under 2 (NIST), no maker rates it</text>
+<line class="tl-u tl-b tl-d" x1="217.2" y1="199" x2="393.6" y2="199"/>
+<text class="tl-s" x="400.6" y="203">80 % of 1990s drives still read (Iron Mountain)</text>
+<line class="tl-p tl-b" x1="172.0" y1="211" x2="276.8" y2="211"/>
+<text class="tl-s" x="172.0" y="227">5 yr rated service life</text>
+<line class="tl-p tl-b tl-d" x1="276.8" y1="211" x2="322.0" y2="211"/>
+<text class="tl-s" x="329.0" y="215">median 6.75, failure peak at 10</text>
+<text class="tl-t" x="160" y="260" text-anchor="end">Thermal paper</text>
+<circle class="tl-pt" cx="276.8" cy="256" r="4"/>
+<text class="tl-s" x="283.8" y="260">blank in as little as 5</text>
+<text class="tl-t" x="160" y="300" text-anchor="end">LTO tape</text>
+<line class="tl-u tl-b" x1="367.2" y1="296" x2="393.6" y2="296"/>
+<text class="tl-s" x="400.6" y="300">20 (NIST) to 30 (vendor)</text>
+<text class="tl-t" x="160" y="340" text-anchor="end">Wood-pulp paper</text>
+<line class="tl-u tl-b" x1="426.8" y1="336" x2="472.0" y2="336"/>
+<text class="tl-s" x="479.0" y="340">brittle within a lifetime</text>
+<text class="tl-t" x="160" y="380" text-anchor="end">Acid-free paper</text>
+<line class="tl-u tl-b" x1="543.6" y1="376" x2="576.8" y2="376"/>
+<text class="tl-s" x="536.6" y="380" text-anchor="end">"several hundred" (ISO 9706)</text>
+<line class="tl-u tl-b tl-d" x1="576.8" y1="376" x2="585.4" y2="376"/>
+<text class="tl-s" x="592.4" y="380">Gutenberg, 570</text>
+<text class="tl-t" x="160" y="420" text-anchor="end">Microfilm</text>
+<line class="tl-u tl-b" x1="576.8" y1="416" x2="622.0" y2="416"/>
+<text class="tl-s" x="569.8" y="420" text-anchor="end">LE-500 is a minimum</text>
+<path class="tl-pt" d="M623.0,409 l10,7 l-10,7 z"/>
+<text class="tl-t" x="160" y="460" text-anchor="end">Stone</text>
+<line class="tl-u tl-b" x1="472.0" y1="456" x2="517.2" y2="456"/>
+<text class="tl-s" x="465.0" y="460" text-anchor="end">marble lettering, city air</text>
+<line class="tl-u tl-b" x1="680" y1="456" x2="770" y2="456"/>
+<text class="tl-s" x="770" y="447" text-anchor="end">granodiorite: 2,200+ and counting</text>
+</svg>
+<figcaption>Lifetimes on a log scale. Solid bars are ratings or measurements, dashed bars are what has been observed or can be expected beyond them, and red is powered life in service. Stone is off the axis.</figcaption>
+</figure>
 
-Sort by longevity and the list runs one way; sort by density and it runs almost exactly backwards, fourteen orders of magnitude of density against roughly nine of lifetime. The density numbers for the digital rows are capacity divided by enclosure volume, my arithmetic; the longevity numbers are the rated or observed figures linked above, and NIST's ordering for the digital media is microfilm, then M-DISC, tape, burned optical, pressed optical, hard drive, SSD.
+Ratings are floors. JEDEC's one year is for a drive that has spent its entire write budget and is stored at 30 °C, and a fresh drive on the same Arrhenius curve is good for a decade or so; Alvin Cox, who chaired the committee, told PCWorld that a consumer drive never gets to the point where retention depends on temperature. NIST's under two years for a hard drive is the interval it will vouch for with "very high confidence", and Iron Mountain still reads four of every five drives from the 1990s. LE-500 is a minimum. So the working rule is that the floor is what you plan around and the typical outcome is several times the floor, with two exceptions: wood-pulp paper and thermal receipts, where the number is when the medium dies, and marble in city air, where the lettering goes before the stone does.
+
+Powered life runs on a different clock, and only the electronics have one. A hard drive is rated for five years of service at 0.35% annual failure; Backblaze's median was six years and nine months, and its failure peak has moved past ten. An SSD's powered life is its write budget plus its controller: consumer warranties run five years, fleets replace 0.2 to 1% a year, and the Tech Report drives wrote several times their rating before dying, so wear rarely ends a consumer drive before something else does. A microSD card's life is counted in cycles instead, 7,600 for a consumer card in Cole's data, and it ends sooner from a power cut mid-write than from wear. Density, which the timeline leaves out, runs the other way: from stone at 5 × 10⁻⁵ bytes per mm³ to microSD at 10¹⁰, fourteen orders of magnitude, while lifetime falls roughly nine. The density numbers for the digital media are capacity divided by enclosure volume, my arithmetic.
 
 ## Making Them Last
 
