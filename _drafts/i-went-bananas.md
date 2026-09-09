@@ -31,9 +31,9 @@ The problem is that Zotac designed it to hold exactly one 2.5" drive. So I desig
 
 The rest of the upgrade came out of drawers. Two DDR4 sticks from an old laptop take the memory to the platform maximum of 32 GB, an SSD I had lying around boots it, and a WiFi card from a previous project replaces the original one. The only parts I paid for were the drives, the cage, the adapter and the filament.
 
-## Spinning Rust in 2026
+## You Spin Me Round
 
-It is 2026 and I bought six hard drives. I did not want to. SSDs at this capacity still cost data centre money, and a NAS is the one place where a drive's price per terabyte matters more than anything else it does. Don't get me wrong, hard drives are not cheap either, but there is a healthy market for second-hand NAS drives on eBay, and a matched set of 8 TB WD Red Plus came in at a fraction of what new ones cost.
+It is 2026 and I bought six hard drives. I did not want to. SSDs at this capacity still cost data centre money, and a NAS is the one place where a drive's price per terabyte matters more than anything else it does. Don't get me wrong, hard drives are not cheap either. AI data centres are buying every drive, every memory chip and every GPU the fabs can make: [Western Digital's hard drive production is sold out for all of 2026](https://finance.yahoo.com/news/hard-drives-sold-2026-ai-173205634.html), [DRAM and NAND contract prices nearly doubled in a single quarter](https://www.trendforce.com/presscenter/news/20260202-12911.html), and the rest of us get what is left at whatever price. It is also why the Zotac got an extension instead of a replacement: the same money gets you a lot less computer than it did two years ago. Luckily there is a healthy market for second-hand NAS drives on eBay, and a matched set of 8 TB WD Red Plus came in at a fraction of what new ones cost.
 
 They are in a single RAIDZ2 pool: 43.7 TB raw, 29 TB usable, any two drives can die without taking data with them. I tested that claim by pulling a drive out of the live pool with data on it. Reads and writes kept going, Samba kept serving, an alert landed in my mailbox two seconds later, and when I pushed the drive back in it resilvered on its own. The pool is encrypted and unlocks itself at boot from a key server elsewhere in the house, so a stolen box is a heavy paperweight.
 
