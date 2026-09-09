@@ -19,11 +19,11 @@ A server that only answers on the LAN can still get a certificate that every bro
 Two A records in the public zone of the domain, both aimed at the private address:
 
 ```text
-nas.asmat.ca     A  192.168.1.20
-*.nas.asmat.ca   A  192.168.1.20
+home.asmat.ca     A  192.168.1.20
+*.home.asmat.ca   A  192.168.1.20
 ```
 
-The wildcard means every application gets its own hostname (`documents.nas.asmat.ca`, `media.nas.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over WireGuard and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
+The wildcard means every application gets its own hostname (`documents.home.asmat.ca`, `media.home.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over WireGuard and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
 
 ## Delegate the challenge if your DNS host has no plugin
 
@@ -32,10 +32,10 @@ Caddy solves DNS-01 by writing the TXT record itself through the DNS host's API,
 [deSEC](https://desec.io) gives you a free `dedyn.io` zone with a good API and a maintained Caddy module. Create one, then add a single record at the original host:
 
 ```text
-_acme-challenge.nas.asmat.ca  CNAME  _acme-challenge.asmat.dedyn.io
+_acme-challenge.home.asmat.ca  CNAME  _acme-challenge.asmat.dedyn.io
 ```
 
-That record covers both `nas.asmat.ca` and `*.nas.asmat.ca`, because the wildcard's challenge record is the same `_acme-challenge.nas.asmat.ca`. Only A and CNAME records are touched in the parent zone: no NS, no DS, and the mail records stay as they were.
+That record covers both `home.asmat.ca` and `*.home.asmat.ca`, because the wildcard's challenge record is the same `_acme-challenge.home.asmat.ca`. Only A and CNAME records are touched in the parent zone: no NS, no DS, and the mail records stay as they were.
 
 ## Build Caddy with the DNS module
 
@@ -94,20 +94,20 @@ Every application binds `127.0.0.1` and is reachable only through Caddy, one `ho
 	}
 }
 
-nas.asmat.ca {
+home.asmat.ca {
 	import lan_tls
 	reverse_proxy 127.0.0.1:8080
 }
 
-*.nas.asmat.ca {
+*.home.asmat.ca {
 	import lan_tls
 
-	@documents host documents.nas.asmat.ca
+	@documents host documents.home.asmat.ca
 	handle @documents {
 		reverse_proxy 127.0.0.1:8081
 	}
 
-	@media host media.nas.asmat.ca
+	@media host media.home.asmat.ca
 	handle @media {
 		reverse_proxy 127.0.0.1:8082
 	}
@@ -148,9 +148,9 @@ If the router intercepts DNS, `dig` tells you what the router thinks. Ask the pu
 
 ```bash
 curl -s -H 'accept: application/dns-json' \
-  'https://cloudflare-dns.com/dns-query?name=_acme-challenge.nas.asmat.ca&type=TXT' | jq
+  'https://cloudflare-dns.com/dns-query?name=_acme-challenge.home.asmat.ca&type=TXT' | jq
 curl -s -H 'accept: application/dns-json' \
-  'https://dns.google/resolve?name=_acme-challenge.nas.asmat.ca&type=TXT' | jq
+  'https://dns.google/resolve?name=_acme-challenge.home.asmat.ca&type=TXT' | jq
 ```
 
 Two more things that look like bugs and are not. A failed attempt against a name that does not exist gets cached as NXDOMAIN for the zone's negative TTL, an hour on deSEC, so after fixing the config the right move is to wait, not to change anything else; Cloudflare had the corrected chain immediately while Google served the stale answer for most of that hour. And the apex and the wildcard are two certificates, and both challenges write to the same overridden record; if the two renew at the same instant, one can overwrite the other's TXT and that issuance fails and retries on its own. The renewal windows drift apart in practice, but it is the first thing to suspect when a renewal fails for no visible reason.

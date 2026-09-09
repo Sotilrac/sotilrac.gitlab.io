@@ -13,7 +13,7 @@ tags:
   - zfs
 ---
 
-I wanted three things: a place to keep the family's files, an automatic backup for years of pictures that were living on phones and a stack of aging laptops, and a machine that could download Linux ISOs around the clock without anyone noticing. In other words, I wanted a NAS, so I built one.
+Google nagged me into this. For about a year, every phone in the house warned me that the account was nearly full, so I moved the picture backups to a Nextcloud instance and freed the space, at which point the nagging switched to reminding me that backups were turned off. Gmail does its own version: at 92% full, it asks whether I would like to pay every time I open it. I did not want to rent space for my own pictures for the rest of my life, and I did not particularly want Google looking at them either. What I wanted was three things: a place to keep the family's files, an automatic backup for years of pictures that were living on phones and a stack of aging laptops, and a machine that could download Linux ISOs around the clock without anyone noticing. In other words, I wanted a NAS, so I built one.
 
 <!-- TODO: photo of the finished NAS -->
 
@@ -67,4 +67,4 @@ So the NAS runs Ubuntu 24.04 with ZFS, everything else in Docker Compose behind 
 
 NAS is an outdated name. Sure, it is storage attached to a network, but this box also serves the movies, indexes the photos, runs the password manager, hosts the household's git repos, keeps the Time Machine backups, and downloads the ISOs. It is the household's computer, the way a house has a furnace and a water heater.
 
-I have been moving away from the proverbial clouds for a while now, and this is the biggest step yet. Everything I put on this machine is mine, stays where I can see it, and does not depend on a subscription, a terms-of-service update, or a company deciding my photos belong to its training set. I think household computers should become the norm: they give us ownership, permanence and independence over our own data, and most engineers already have the hardware to do it in a drawer.
+I have been moving away from the proverbial clouds for a while now, and this is the biggest step yet. Everything I put on this machine is mine, stays where I can see it, and does not depend on a subscription, a terms-of-service update, or a company deciding my photos belong to its training set. The quota warnings have stopped, too. I think household computers should become the norm: they give us ownership, permanence and independence over our own data, and most engineers already have the hardware to do it in a drawer.
