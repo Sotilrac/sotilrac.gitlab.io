@@ -1388,6 +1388,74 @@ figure.post-fig.plot-fig {
   z-index: 2;
 }
 
+/* --- Storage lifetime timeline (<lifetime-timeline>) --- */
+.tl-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 0 0.5rem 0.25rem;
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+.tl-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+}
+
+.tl-controls input[type="radio"] {
+  margin: 0;
+  accent-color: var(--royal-blue);
+}
+
+.tl-chart svg {
+  display: block;
+  font-family: var(--font-base);
+}
+
+.tl-t {
+  fill: var(--charcoal);
+  font-size: 12px;
+}
+
+.tl-s {
+  fill: var(--slate);
+  font-size: 10.5px;
+}
+
+.tl-ax {
+  stroke: var(--pewter);
+  stroke-width: 1;
+}
+
+.tl-g {
+  stroke: var(--silver);
+  stroke-width: 1;
+}
+
+.tl-u {
+  stroke: var(--royal-blue);
+}
+
+.tl-p {
+  stroke: var(--crimson);
+}
+
+.tl-b {
+  stroke-width: 7;
+  fill: none;
+}
+
+.tl-d {
+  stroke-dasharray: 3 4;
+}
+
+.tl-pt {
+  fill: var(--royal-blue);
+}
+
 /* --- Post navigation (prev/next) --- */
 .post-nav {
   display: flex;
