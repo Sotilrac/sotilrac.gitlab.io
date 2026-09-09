@@ -21,7 +21,7 @@ Google nagged me into this. For about a year, every phone in the house warned me
 
 ## The Old Friend
 
-The computer is a Zotac MAGNUS EN1070K, a compact box with an i5, a GTX 1070, and a very small footprint. It spent a few years as the living room media center and occasional gaming rig, then a few more powering robotics projects, where it did great. It idles low, it transcodes video on the GPU, and it still runs a small local model without complaining, so I had no interest in replacing it with a purpose-built NAS appliance that would do less for more money.
+The computer is a Zotac MAGNUS EN1070K, a compact box with an i5, a GTX 1070, and a very small footprint. It spent a few years as the living room media centre and occasional gaming rig, then a few more powering robotics projects, where it did great. It idles low, it transcodes video on the GPU, and it still runs a small local model without complaining, so I had no interest in replacing it with a purpose-built NAS appliance that would do less for more money.
 
 The problem is that Zotac designed it to hold exactly one 2.5" drive. So I designed an extension for its body in Onshape, printed it in glass-filled ABS, and bolted it on. Inside are an ICY Dock five-bay hot-swap cage, a printed holder for a sixth drive, a Pico PSU fed from the Zotac's own 19.5 V brick through a DC-DC converter (six drives spinning up at once pull about 125 W for a moment, which is the number that sizes everything), and Noctua fans to move the air. The six SATA ports come from an ASM1166 adapter in the only M.2 slot, which is why the boot SSD lives in the 2.5" bay.
 
@@ -33,7 +33,7 @@ The rest of the upgrade came out of drawers. Two DDR4 sticks from an old laptop 
 
 ## Spinning Rust in 2026
 
-It is 2026 and I bought six hard drives. I did not want to. SSDs at this capacity still cost data center money, and a NAS is the one place where a drive's price per terabyte matters more than anything else it does. Don't get me wrong, hard drives are not cheap either, but there is a healthy market for second-hand NAS drives on eBay, and a matched set of 8 TB WD Red Plus came in at a fraction of what new ones cost.
+It is 2026 and I bought six hard drives. I did not want to. SSDs at this capacity still cost data centre money, and a NAS is the one place where a drive's price per terabyte matters more than anything else it does. Don't get me wrong, hard drives are not cheap either, but there is a healthy market for second-hand NAS drives on eBay, and a matched set of 8 TB WD Red Plus came in at a fraction of what new ones cost.
 
 They are in a single RAIDZ2 pool: 43.7 TB raw, 29 TB usable, any two drives can die without taking data with them. I tested that claim by pulling a drive out of the live pool with data on it. Reads and writes kept going, Samba kept serving, an alert landed in my mailbox two seconds later, and when I pushed the drive back in it resilvered on its own. The pool is encrypted and unlocks itself at boot from a key server elsewhere in the house, so a stolen box is a heavy paperweight.
 
@@ -57,7 +57,7 @@ The part I am proudest of is a 1.47" touch screen on the front, driven by an ESP
 
 ## Why Not TrueNAS
 
-The NAS lives where the media center used to, and there is no wired path from there to the router, so it runs on WiFi. This upset me less than I expected: the WiFi 6E card negotiates above what either of the box's gigabit ports could pass, and I measured 893 Mbit/s of actual internet through it. A cable would give me full duplex and a link that does not care about the neighbours, and it will happen eventually, but it is no longer a finding.
+The NAS lives where the media centre used to, and there is no wired path from there to the router, so it runs on WiFi. This upset me less than I expected: the WiFi 6E card negotiates above what either of the box's gigabit ports could pass, and I measured 893 Mbit/s of actual internet through it. A cable would give me full duplex and a link that does not care about the neighbours, and it will happen eventually, but it is no longer a finding.
 
 What it did rule out, to my surprise, was TrueNAS, the operating system every NAS video on YouTube tells you to install. TrueNAS has no wireless support at all, not in the console and not in the UI. Its latest release also dropped the proprietary NVIDIA driver in favour of the open kernel modules, which do not support a Pascal GPU, so the 1070 would have been a paperweight too. And beyond the two hard blockers, I was disappointed by how little it lets you do: it is an appliance, it wants you to stay out of the base system, and a long-running daemon that talks to a display over `/dev/ttyACM0` is exactly the kind of thing it makes awkward.
 
