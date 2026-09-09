@@ -12,18 +12,18 @@ tags:
   - self-hosting
 ---
 
-A server that only answers on the LAN can still get a certificate that every browser trusts, with no self-signed warnings and no private CA to install on every phone in the house. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `10.0.0.76` and the certificate still issues. This is how the [NAS](/drafts/i-went-bananas/) does it with Caddy, and what went wrong on the way.
+A server that only answers on the LAN can still get a certificate that every browser trusts, with no self-signed warnings and no private CA to install on every phone in the house. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/drafts/i-went-bananas/) does it with Caddy, and what went wrong on the way.
 
 ## Point the names at the LAN
 
 Two A records in the public zone of the domain, both aimed at the private address:
 
 ```text
-nas.asmat.ca     A  10.0.0.76
-*.nas.asmat.ca   A  10.0.0.76
+nas.asmat.ca     A  192.168.1.20
+*.nas.asmat.ca   A  192.168.1.20
 ```
 
-The wildcard means every application gets its own hostname (`vault.nas.asmat.ca`, `jellyfin.nas.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over WireGuard and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
+The wildcard means every application gets its own hostname (`documents.nas.asmat.ca`, `media.nas.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over WireGuard and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
 
 ## Delegate the challenge if your DNS host has no plugin
 
@@ -96,20 +96,20 @@ Every application binds `127.0.0.1` and is reachable only through Caddy, one `ho
 
 nas.asmat.ca {
 	import lan_tls
-	reverse_proxy 127.0.0.1:19999
+	reverse_proxy 127.0.0.1:8080
 }
 
 *.nas.asmat.ca {
 	import lan_tls
 
-	@vault host vault.nas.asmat.ca
-	handle @vault {
-		reverse_proxy 127.0.0.1:8222
+	@documents host documents.nas.asmat.ca
+	handle @documents {
+		reverse_proxy 127.0.0.1:8081
 	}
 
-	@jellyfin host jellyfin.nas.asmat.ca
-	handle @jellyfin {
-		reverse_proxy 127.0.0.1:8096
+	@media host media.nas.asmat.ca
+	handle @media {
+		reverse_proxy 127.0.0.1:8082
 	}
 
 	# Otherwise an unknown subdomain answers an empty 200, which reads
@@ -131,8 +131,8 @@ Two lines in that `tls` block cost me an evening each.
 Caddy runs on the host rather than in Docker so that ufw governs it: Docker inserts its rules ahead of ufw's, so a published container port is reachable from the LAN regardless of the ufw rules. I confirmed that with a test container before deciding.
 
 ```bash
-sudo ufw allow from 10.0.0.0/24 to any port 80,443 proto tcp
-sudo ufw allow from 192.168.2.0/24 to any port 80,443 proto tcp   # WireGuard
+sudo ufw allow from 192.168.1.0/24 to any port 80,443 proto tcp
+sudo ufw allow from 10.8.0.0/24 to any port 80,443 proto tcp   # WireGuard
 /usr/local/bin/caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
 sudo systemctl reload caddy
 journalctl -u caddy -f
