@@ -13,15 +13,15 @@ tags:
   - zfs
 ---
 
-Google nagged me into this. For about a year, every phone in the house warned me that the account was nearly full, so I moved the picture backups to a Nextcloud instance and freed the space, at which point the nagging switched to reminding me that backups were turned off. Gmail does its own version: at 92% full, it asks whether I would like to pay every time I open it. I did not want to rent space for my own pictures for the rest of my life, and I did not particularly want Google looking at them either. What I wanted was three things: a place to keep the family's files, an automatic backup for years of pictures that were living on phones and a stack of aging laptops, and a machine that could download Linux ISOs around the clock without anyone noticing. In other words, I wanted a NAS, so I built one.
+Google nagged me into this. For about a year, my phone warned me that the account was nearly full, so I moved the picture backups to a Nextcloud instance and freed the space, at which point the nagging switched to reminding me that backups were turned off. Gmail does the same and provides _helpful_ "Upgrade" buttons here and there. I do not want to rent space for my own pictures for the rest of my life, and I certainly do not want Google looking at them either. I wanted a place to keep the family's files, an automatic backup for years of pictures that were living on phones and a stack of aging PCs, and a machine that could download Linux ISOs around the clock without anyone noticing. In other words, I thought I wanted a NAS, so I built one.
 
 <!-- TODO: photo of the finished NAS -->
 
 {% fig "/img/blog/i-went-bananas/nas-front.jpg", "The finished build" %}
 
-## The Old Friend
+## My Old Friend
 
-The computer is a Zotac MAGNUS EN1070K, a compact box with an i5, a GTX 1070, and a very small footprint. It spent a few years as the living room media centre and occasional gaming rig, then a few more powering robotics projects, where it did great. It idles low, it transcodes video on the GPU, and it still runs a small local model without complaining, so I had no interest in replacing it with a purpose-built NAS appliance that would do less for more money.
+The computer is a Zotac MAGNUS EN1070K, a compact box with an i5, a GTX 1070, and a very small footprint. It spent a few years as the living room media centre and occasional gaming rig. I used the same model in robot prototypes, where it did great. It idles low, it transcodes video on the GPU, and it still runs a small local model without complaining, so I had no interest in replacing it with a purpose-built NAS appliance that would do less for more money.
 
 The problem is that Zotac designed it to hold exactly one 2.5" drive. So I designed an extension for its body in Onshape, printed it in glass-filled ABS, and bolted it on. Inside are an ICY Dock five-bay hot-swap cage, a printed holder for a sixth drive, a Pico PSU fed from the Zotac's own 19.5 V brick through a DC-DC converter (six drives spinning up at once pull about 125 W for a moment, which is the number that sizes everything), and Noctua fans to move the air. The six SATA ports come from an ASM1166 adapter in the only M.2 slot, which is why the boot SSD lives in the 2.5" bay.
 
@@ -37,7 +37,7 @@ It is 2026 and I bought six hard drives. I did not want to. SSDs at this capacit
 
 They are in a single RAIDZ2 pool: 43.7 TB raw, 29 TB usable, any two drives can die without taking data with them. I tested that claim by pulling a drive out of the live pool with data on it. Reads and writes kept going, Samba kept serving, an alert landed in my mailbox two seconds later, and when I pushed the drive back in it resilvered on its own. The pool is encrypted and unlocks itself at boot from a key server elsewhere in the house, so a stolen box is a heavy paperweight.
 
-## Thermals, or Winter is Coming
+## Only Fans
 
 The thermals are bad. A steel case conducts heat out of the drives; a plastic one insulates them. Five of the six bays sit at 45 to 46 °C idle, ten degrees above the loose sixth drive, and the dashboard warns me about it every single day. I measured the whole thing: the only fan the OS can control cools the CPU and GPU and never reaches the drives, and the cage fan that does cool them is a dumb 12 V line with no tachometer and no PWM. Running every fan at full blast for seven hours brought the drives down to 35 °C, which proves airflow is the fix and the enclosure is where it has to happen.
 
