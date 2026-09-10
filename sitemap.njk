@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
   {% for post in collections.publicPosts %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date | dateFormat("isodate") }}</lastmod>
+    <lastmod>{{ (post.data.updated or post.date) | dateFormat("isodate") }}</lastmod>
     <priority>0.6</priority>
   </url>
   {% endfor %}

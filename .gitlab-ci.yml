@@ -3,6 +3,9 @@ image: node:22-alpine
 variables:
   # Point npm at the cached dir below so --prefer-offline actually hits it.
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  # Full history: _data/gitDates.mjs derives each post's updated date from the
+  # log. History adds little over the images already in the working tree.
+  GIT_DEPTH: "0"
 
 stages:
   - verify

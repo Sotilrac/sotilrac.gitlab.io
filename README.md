@@ -95,6 +95,8 @@ tags:
 
 Only posts with `status: public` appear on the blog page and RSS feed. Draft posts are accessible at `/drafts/` (not linked from navigation, blocked by `robots.txt`).
 
+Posts show an "updated" date taken from the last git commit that touched the file (`_data/gitDates.mjs`), and the sitemap uses it as `lastmod`. It is hidden when within a day of publication, and commits touching five or more posts (formatting passes, tag overhauls) do not count. Set `updated:` in the frontmatter to override it, or `updated: false` to hide it.
+
 To create a new post: `./_tools/new-post.sh "Post Title" [YYYY-MM-DD]`
 
 Prose conventions for posts (touchstone authors, sentence-level rules, patterns to avoid) live in `STYLE.md`.
