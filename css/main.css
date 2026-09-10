@@ -688,6 +688,12 @@ footer p {
   gap: 0.4em 0.75em;
 }
 
+/* Quieter than the publish date, which stays the visible one. */
+.post-updated {
+  opacity: 0.65;
+  font-size: 0.9em;
+}
+
 .post-meta-actions {
   display: flex;
   flex-wrap: wrap;
