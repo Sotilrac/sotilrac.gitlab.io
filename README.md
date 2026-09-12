@@ -13,7 +13,7 @@ make spell       # spellchecking
 make             # list all targets
 ```
 
-The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts (`npm run dev`, `npm run build`, `npm run lint`, etc.) still work.
+The `Makefile` is the single definition of each task; the npm scripts (`npm run dev`, `npm run build`, `npm run lint`) call the same targets.
 
 ## Project Structure
 
@@ -24,28 +24,28 @@ The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts
 │   ├── resume.yml        # Resume data (experience, skills, education, projects)
 │   └── comments/         # Archived blog comments (YAML, per post slug)
 ├── _includes/
-│   ├── layouts/          # Page layouts (base, home, post, page)
+│   ├── layouts/          # Page layouts (base, post, page, standalone)
 │   ├── head.njk          # HTML <head> (includes Umami analytics)
 │   ├── header.njk        # Navigation bar
 │   ├── footer.njk        # Footer + contact decryption JS
 │   ├── resume.njk        # Resume template
-│   └── archive-banner.njk # "Dusting off the archives" banner for old posts
+│   ├── post-list.njk     # Year-grouped post list macro (blog and tags pages)
+│   └── archive-banner.njk # Banner the post layout adds to pre-2014 posts
 ├── _posts/               # Blog posts (Markdown + Nunjucks)
 ├── _drafts/              # Unpublished posts, served at /drafts/<slug>/
 ├── css/main.css          # Custom stylesheet (no frameworks)
 ├── js/                   # Client-side JS (plots, calculators, lightbox)
 ├── src/ee-calculator/    # Source for the bundled js/ee-calculator.js
-├── media/                # Audio, video, and other large assets
 ├── font/                 # Custom fonts (Hack, Inter variable, Telegrama)
 ├── img/                  # Favicons + blog post images (img/blog/<slug>/)
-├── _tools/               # Helper scripts (new-post.sh, redate-post.sh, etc.)
+├── _tools/               # Helper scripts (new-post.sh, publish.sh, lib.mjs, archive/)
 ├── index.njk             # Home page (hero with typing animation)
 ├── blog.njk              # Blog archive (recent posts + Carlitos' Contraptions archive)
 ├── drafts.njk            # Draft posts listing (not linked from nav, blocked by robots.txt)
 ├── feed.njk              # RSS feed
 ├── robots.txt            # Crawler rules (blocks AI training, allows citation bots)
 ├── llms.txt              # LLM-readable site summary and license
-├── STYLE.md              # Prose conventions for posts
+├── STYLE.md              # Prose conventions for posts (not published)
 └── Makefile              # Task runner (run `make` for the list)
 ```
 
@@ -53,11 +53,12 @@ The `Makefile` wraps the underlying `npm`/`npx` commands; equivalent npm scripts
 
 Eleventy v3 with no site framework. `eleventy.config.mjs` registers the shortcodes, filters, collections, and passthrough copies, restores YAML support for `_data/` (dropped in 11ty v3), and wires KaTeX into markdown-it.
 
-- **Templating**: Nunjucks for both `.njk` and `.md`. Layouts live in `_includes/layouts/` (base, home, post, page) and all extend `base.njk`.
-- **Permalinks**: `_posts/_posts.11tydata.mjs` tags everything in `_posts/` as `posts` and strips the date prefix to build `/blog/<slug>/`. `_drafts/_drafts.11tydata.mjs` does the same for `/drafts/<slug>/`.
-- **Collections**: `publicPosts` (status missing or `public`, newest first) feeds the blog page and the RSS feed, `archivedPosts` (status `archive`) renders but stays out of both, and `drafts` backs the drafts listing.
-- **Passthrough copy**: `css/`, `font/`, `img/`, `js/`, `media/`, `robots.txt`, `llms.txt`, plus KaTeX's stylesheet and fonts out of `node_modules/`.
-- **Generated assets**: `js/ee-calculator.js` is bundled from `src/ee-calculator/` by `_tools/build-ee-calculator.mjs` and is gitignored. Every `make` target and both CI jobs run the bundler before Eleventy.
+- **Templating**: Nunjucks for both `.njk` and `.md`. Layouts live in `_includes/layouts/`: `post` and `page` extend `base`; `standalone` is the bare chrome for `/calc/<name>/`. The home page is `base` with `hero: true`.
+- **Permalinks**: `_posts/_posts.11tydata.mjs` tags everything in `_posts/` as `posts` and strips the date prefix to build `/blog/<slug>/`, using `postSlug` from `_tools/lib.mjs` (also the `postSlug` filter that looks up archived comments). `_drafts/_drafts.11tydata.mjs` does the same for `/drafts/<slug>/`.
+- **Collections**: `publicPosts` (everything in `_posts/`, newest first) feeds the blog page, feed and sitemap; `drafts` backs the drafts listing.
+- **Passthrough copy**: `css/`, `font/`, `img/`, `js/`, `robots.txt`, `llms.txt`, plus KaTeX's stylesheet and fonts out of `node_modules/`. In `--serve`, `img/` is served from disk instead of copied.
+- **Page weight**: `head.njk` loads the Prism, KaTeX, uPlot, compare and model-viewer assets only when the rendered page contains their markup. `fig` and `gallery` lazy-load every image after the first on a page. Fonts are WOFF2 with `font-display: swap`.
+- **Generated assets**: `js/ee-calculator.js` is bundled from `src/ee-calculator/` by `_tools/build-ee-calculator.mjs` and is gitignored. Every `make` target runs the bundler before Eleventy, and CI drives the build through the same `make` targets.
 - **Output**: `_site/` locally, `public/` for the Pages deploy on `master`, `test/` for branch pipelines.
 
 ## Linting & Formatting
@@ -82,10 +83,7 @@ CSS custom properties are defined in `css/main.css` under `:root` for colors and
 Posts live in `_posts/` as Markdown files with YAML front matter:
 
 ```yaml
-layout: layouts/post.njk
-status: draft | public
 title: Post Title
-author: Carlos
 date: 2019-01-08T01:01:01-05:00
 categories:
   - General
@@ -93,11 +91,11 @@ tags:
   - robotics
 ```
 
-Only posts with `status: public` appear on the blog page and RSS feed. Draft posts are accessible at `/drafts/` (not linked from navigation, blocked by `robots.txt`).
+The layout and the `posts` tag come from `_posts/_posts.11tydata.mjs`. Every post in `_posts/` is published; unfinished posts live in `_drafts/`, served at `/drafts/` with `noindex` and blocked in `robots.txt`.
 
-Posts show an "updated" date taken from the last git commit that touched the file (`_data/gitDates.mjs`), and the sitemap uses it as `lastmod`. It is hidden when within a day of publication, and commits touching five or more posts (formatting passes, tag overhauls) do not count. Set `updated:` in the frontmatter to override it, or `updated: false` to hide it.
+Posts show an "updated" date taken from the last git commit that edited the file's body (`_data/gitDates.mjs`), and the sitemap uses it as `lastmod`. Frontmatter-only edits, renames, and commits touching five or more posts (formatting passes, tag overhauls) do not count, nor do edits within a day of publication. Set `updated:` in the frontmatter to override it, or `updated: false` to hide it. CI needs full history and `git` in the image for this, see `.gitlab-ci.yml`.
 
-To create a new post: `./_tools/new-post.sh "Post Title" [YYYY-MM-DD]`
+To create a new post: `./_tools/new-post.sh "Post Title"`, then `./_tools/publish.sh <slug> [YYYY-MM-DD]` when it is ready.
 
 Prose conventions for posts (touchstone authors, sentence-level rules, patterns to avoid) live in `STYLE.md`.
 
@@ -130,11 +128,7 @@ The `{% plot %}` paired shortcode renders an interactive uPlot graph from a JSON
 {% endplot %}
 ```
 
-Post images go in `img/blog/<post-slug>/`. For archived posts (pre-2014), include the archive banner manually:
-
-```
-{% include "archive-banner.njk" %}
-```
+Post images go in `img/blog/<post-slug>/`. The post layout adds the archive banner to every post dated before 2014; `archiveBanner: false` in the frontmatter removes it.
 
 ### Math
 
@@ -231,9 +225,9 @@ Helper scripts in `_tools/`. External tools used during migrations are listed at
 
 **Authoring**
 
-- `new-post.sh "Title" [YYYY-MM-DD]`, create a new blog post with frontmatter and media folder
+- `new-post.sh "Title"`, create a dateless draft in `_drafts/` with frontmatter and image folder
 - `publish.sh slug [YYYY-MM-DD]`, promote a draft from `_drafts/` to `_posts/`, adding a `date:` field and the date prefix to the filename
-- `redate-post.sh`, rename a post file with a new date
+- `redate-post.sh file YYYY-MM-DD`, change a post's date in the frontmatter and filename
 - `spell.mjs [--staged] FILE`, aspell spelling (Canadian English) plus a grammar pass for doubled words, common typos, and double spaces, filtered through `_tools/spell-dictionary.txt` (`make spell FILE=...`). `--staged` limits the report to lines added in the index, which is how the pre-commit hook calls it
 - `lowercase-files.sh`, lowercase all filenames in a directory
 
@@ -245,7 +239,12 @@ Helper scripts in `_tools/`. External tools used during migrations are listed at
 
 - `extract-codex-prompts.mjs [path/to/models.json]`, extracts each model's `base_instructions` from a models.json dump into sibling `<slug>.md` files (used by the no-goblins post)
 
-**Historical migration scripts (Blogspot/WordPress port, kept for reference)**
+**Shared code**
+
+- `lib.mjs`, helpers imported by the scripts above and by the Eleventy config: `postSlug`, `listPosts`, `parseArgs`
+- `contact-crypto.mjs`, PBKDF2/AES-GCM parameters shared by `encrypt-contact.mjs`, `decrypt-contact.mjs` and the browser decryptor in `footer.njk` (via `_data/contactCrypto.mjs`)
+
+**Historical migration scripts (Blogspot/WordPress port, in `_tools/archive/`)**
 
 - `check-links.mjs`, checks external links in old posts for liveness and looks up Wayback Machine snapshots; writes `link-report.json`
 - `apply-wayback-links.mjs`, replaces dead external links with `{% wayback %}` shortcodes using `link-report.json`
