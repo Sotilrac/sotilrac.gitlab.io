@@ -4,20 +4,16 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for p in collections.all %}
+  {%- set isPost = "posts" in (p.data.tags or []) %}
+  {%- if p.url and p.url.endsWith("/") and p.url != "/drafts/" and not ("drafts" in (p.data.tags or [])) %}
   <url>
-    <loc>{{ site.url }}/</loc>
-    <priority>1.0</priority>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    {%- if isPost %}
+    <lastmod>{{ (p.data.updated or p.date) | dateFormat("isodate") }}</lastmod>
+    {%- endif %}
+    <priority>{{ "1.0" if p.url == "/" else ("0.6" if isPost else "0.8") }}</priority>
   </url>
-  <url>
-    <loc>{{ site.url }}/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {% for post in collections.publicPosts %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ (post.data.updated or post.date) | dateFormat("isodate") }}</lastmod>
-    <priority>0.6</priority>
-  </url>
-  {% endfor %}
+  {%- endif %}
+  {%- endfor %}
 </urlset>

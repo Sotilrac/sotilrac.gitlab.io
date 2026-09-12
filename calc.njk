@@ -4,6 +4,7 @@ pagination:
   data: calcList
   size: 1
   alias: calc
+  addAllPagesToCollections: true
 permalink: "/calc/{{ calc.name }}/"
 eleventyComputed:
   title: "{{ calc.title | safe }}"
