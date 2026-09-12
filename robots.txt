@@ -1,9 +1,14 @@
+# Crawlers apply only their most specific group, so /drafts/ is repeated in
+# every allowed group instead of relying on the * group.
+
 # Search engines
 User-agent: Googlebot
 Allow: /
+Disallow: /drafts/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /drafts/
 
 # AI training crawlers - blocked
 User-agent: GPTBot
@@ -33,18 +38,23 @@ Disallow: /
 # AI citation/search crawlers - allowed
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /drafts/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /drafts/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /drafts/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /drafts/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /drafts/
 
 # Everyone else
 User-agent: *
