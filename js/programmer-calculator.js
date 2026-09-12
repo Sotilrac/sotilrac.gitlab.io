@@ -61,6 +61,8 @@ class CalcEngine {
 
   // ---- Shifts ----
   lsh(a, b) {
+    if (b < 0n) throw new Error("shift count must be positive");
+    if (b >= BigInt(this.bitWidth)) return 0n;
     return this.clamp(a << b);
   }
   rsh(a, b) {
@@ -217,8 +219,10 @@ class CalcEngine {
 
   // ---- Bitmask ----
   generateMask(fromBit, toBit) {
-    const lo = Math.min(fromBit, toBit);
-    const hi = Math.max(fromBit, toBit);
+    // Clamped to the word: the inputs have max="63" but typed values ignore it.
+    const top = this.bitWidth - 1;
+    const lo = Math.max(0, Math.min(fromBit, toBit, top));
+    const hi = Math.max(0, Math.min(Math.max(fromBit, toBit), top));
     let mask = 0n;
     for (let i = lo; i <= hi; i++) {
       mask |= 1n << BigInt(i);
@@ -273,6 +277,13 @@ class CalcEngine {
         tokens.push({ type: "NUM", value: BigInt(num.replace(/_/g, "")) });
         continue;
       }
+      // Rotate keywords (inserted by the RoL/RoR buttons)
+      const word = /^(rol|ror)(?![0-9a-z_])/i.exec(expr.slice(i));
+      if (word) {
+        tokens.push({ type: "OP", value: word[1].toUpperCase() });
+        i += 3;
+        continue;
+      }
       // Hex digits when not starting a number (A-F)
       if (/[a-fA-F]/.test(expr[i])) {
         let hex = "";
@@ -310,7 +321,10 @@ class CalcEngine {
         i++;
         continue;
       }
-      i++; // skip unknown
+      if (expr[i] === ".") {
+        throw new Error("decimals only work on their own, e.g. 3.14");
+      }
+      throw new Error(`unexpected "${expr[i]}"`);
     }
     return tokens;
   }
@@ -329,6 +343,8 @@ class CalcEngine {
       "<<": 40,
       ">>": 40,
       ">>>": 40,
+      ROL: 40,
+      ROR: 40,
       "+": 50,
       "-": 50,
       "*": 60,
@@ -340,20 +356,21 @@ class CalcEngine {
       let t = advance();
       let left;
 
-      if (!t) return 0n;
+      if (!t) throw new Error("expression ends early");
 
       if (t.type === "NUM") {
         left = t.value;
       } else if (t.type === "(") {
         left = parseExpr(0);
-        if (peek()?.type === ")") advance();
+        if (peek()?.type !== ")") throw new Error('missing ")"');
+        advance();
       } else if (t.type === "OP" && t.value in prefixPrec) {
         const operand = parseExpr(prefixPrec[t.value]);
         if (t.value === "~") left = this.not(operand);
         else if (t.value === "-") left = this.clamp(-operand);
         else left = operand;
       } else {
-        return 0n;
+        throw new Error(`unexpected "${t.value}"`);
       }
 
       while (
@@ -398,12 +415,22 @@ class CalcEngine {
           case ">>>":
             left = this.rsh(left, right);
             break;
+          case "ROL":
+            left = this.rol(left, right);
+            break;
+          case "ROR":
+            left = this.ror(left, right);
+            break;
         }
       }
       return left;
     };
 
-    return parseExpr(0);
+    const value = parseExpr(0);
+    if (pos < tokens.length) {
+      throw new Error(`unexpected "${tokens[pos].value}"`);
+    }
+    return value;
   }
 
   // ---- Float to bits ----
@@ -443,7 +470,7 @@ class CalcEngine {
 const STYLE = `
 @font-face {
   font-family: 'Hack';
-  src: url('/font/Hack-Regular.ttf') format('truetype');
+  src: url('/font/Hack-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -497,6 +524,8 @@ const STYLE = `
 }
 .expr-input:focus { border-color: var(--accent); }
 .expr-input::placeholder { color: var(--text-dim); }
+.expr-error { color: #ff7b72; font-size: 0.85em; margin: -0.5em 0 0.75em 0.25em; }
+.expr-error[hidden] { display: none; }
 .btn-eval {
   font-family: inherit;
   font-size: 1.15em;
@@ -860,6 +889,7 @@ class ProgrammerCalculator extends HTMLElement {
         <input class="expr-input" type="text" placeholder="e.g. (0xDEAD << 16) | 0xBEEF or 3.14" spellcheck="false" autocomplete="off">
         <button class="btn-eval">=</button>
       </div>
+      <div class="expr-error" hidden></div>
 
       <!-- Base displays -->
       <div class="bases">
@@ -971,9 +1001,11 @@ class ProgrammerCalculator extends HTMLElement {
       /^-?(\d+\.\d*|\d*\.\d+)([eE][+-]?\d+)?$/.test(s) ||
       /^-?\d+[eE][+-]?\d+$/.test(s);
 
+    const errorEl = $(".expr-error");
     const submit = () => {
       const expr = input.value.trim();
       if (!expr) return;
+      errorEl.hidden = true;
 
       // Auto-select 32-bit for float input
       if (isFloat(expr) && this.engine.bitWidth < 32) {
@@ -983,7 +1015,16 @@ class ProgrammerCalculator extends HTMLElement {
         );
       }
 
-      const result = this.engine.evaluate(expr);
+      let result;
+      try {
+        result = this.engine.evaluate(expr);
+      } catch (e) {
+        // Bad input (unknown character, 0x with no digits, dangling operator):
+        // leave the expression in place so it can be fixed.
+        errorEl.textContent = e.message;
+        errorEl.hidden = false;
+        return;
+      }
       this.engine.value = result;
       this.engine.history.unshift({
         expr,
