@@ -148,11 +148,8 @@ const E_SERIES_TOL = {
   E96: 1,
 };
 
-// AWG ampacity, simple version.
-// Power transmission (NEC 310.16, 60°C insulation, copper, in conduit).
-// Chassis (700 cmil/A rule).
-// circular mils = (d_mils)^2
-const AWG_AMPS_CHASSIS = {}; // computed from cmil
+// AWG ampacity for power transmission (NEC 310.16, 60°C insulation, copper,
+// in conduit). Chassis ampacity is computed from circular mils in awgInfo().
 const AWG_AMPS_POWER = {
   // selected, conservative
   "0000": 195,
@@ -278,6 +275,43 @@ function svgSubscript(label) {
 function htmlSubscript(label) {
   if (label == null) return "";
   return String(label).replace(/_([A-Za-z][A-Za-z0-9]*)/g, "<sub>$1</sub>");
+}
+
+// ---- Markup helpers shared by the tool panels ----
+// One labelled input. `control` is the <input> or <select> markup.
+function field(label, control) {
+  return `<div class="field"><label>${label}</label>${control}</div>`;
+}
+
+// One result line. `cls` adds accent/ok/warn to the value.
+function row(label, value, cls = "") {
+  return `${row(`${label}`, `${value}`, cls ? " " + cls : "")}`;
+}
+
+function warnRow(msg) {
+  return warnRow(msg);
+}
+
+// Read an SI-suffixed input under `root`; null when blank or unparseable
+// (or non-positive when `positive` is set).
+function readSI(root, sel, positive = false) {
+  const v = root.querySelector(sel).value.trim();
+  if (v === "") return null;
+  const n = parseSI(v);
+  return isFinite(n) && (!positive || n > 0) ? n : null;
+}
+
+// Highlight the values that were solved for, not typed in.
+const accentUnknown = (known) => (k) => (known[k] == null ? "accent" : "");
+
+// Recompute on every edit; `selects` also listens for select changes.
+function wireInputs(root, go, selects = true) {
+  wireInputs(root, go, false);
+  if (selects) {
+    root
+      .querySelectorAll("select")
+      .forEach((sel) => sel.addEventListener("change", go));
+  }
 }
 
 class Circuit {
@@ -521,16 +555,6 @@ function nearestStandard(target, series, k = 3) {
   return ranked.slice(0, k);
 }
 
-// Round to N significant digits, returning a JS number.
-function sigfig(value, digits = 4) {
-  if (value === 0 || !isFinite(value)) return value;
-  const mag = Math.pow(
-    10,
-    digits - Math.floor(Math.log10(Math.abs(value))) - 1,
-  );
-  return Math.round(value * mag) / mag;
-}
-
 // Choose a wattage rating comfortably above the dissipation.
 function pickWattage(p) {
   const ratings = [0.0625, 0.125, 0.25, 0.5, 1, 2, 5, 10, 25];
@@ -588,15 +612,19 @@ function valueToBands(target, sigCount = 2) {
   if (target === 0) {
     return { ok: true, digits: Array(sigCount).fill(0), multiplier: 0 };
   }
-  // Normalize: get N significant digits and a multiplier exponent.
-  const exp = Math.floor(Math.log10(target)) - (sigCount - 1);
-  const mantissa = Math.round(target / Math.pow(10, exp));
-  const mantissaStr = String(mantissa).padStart(sigCount, "0");
-  if (mantissaStr.length > sigCount) {
-    // Rounding bumped to one more digit; shift exponent.
-    return valueToBands(target / 10, sigCount);
-  }
-  const digits = mantissaStr.split("").map((d) => parseInt(d, 10));
+  // Normalize: get N significant digits and a multiplier exponent. Rounding
+  // can push the mantissa one digit too wide (995 -> 100 at 2 digits) and
+  // float log10 can land a decade off, so renormalize the exponent and
+  // recompute the mantissa from the target rather than rescaling the target.
+  let exp = Math.floor(Math.log10(target)) - (sigCount - 1);
+  const hi = Math.pow(10, sigCount);
+  const mantissaAt = (e) => Math.round(target / Math.pow(10, e));
+  let mantissa = mantissaAt(exp);
+  while (mantissa >= hi) mantissa = mantissaAt(++exp);
+  while (mantissa < hi / 10) mantissa = mantissaAt(--exp);
+  const digits = String(mantissa)
+    .split("")
+    .map((d) => parseInt(d, 10));
   // multiplier index is the BAND_COLORS index whose multiplier == 10^exp
   let multIdx = -1;
   for (let i = 0; i < BAND_COLORS.length; i++) {
@@ -655,7 +683,12 @@ function ledResistor(vSupply, vfPerLed, nLeds, ifMa, series = "E24") {
   }
   const rExact = vDrop / iA;
   const std = nearestStandard(rExact, series, 1)[0];
-  const rChosen = std.value;
+  const rChosen = std?.value;
+  // No standard value means rExact was NaN or non-positive: a blank or zero
+  // field somewhere upstream.
+  if (rChosen == null) {
+    return { ok: false, reason: "enter V_in, V_f and I_f" };
+  }
   const iActual = vDrop / rChosen;
   const pR = iActual * iActual * rChosen;
   const watt = pickWattage(pR);
@@ -845,60 +878,6 @@ function awgInfo(gauge) {
   };
 }
 
-function awgForCurrent(current, mode = "chassis") {
-  // Walk gauges from largest (0000) to smallest until ampacity < current.
-  const gauges = [
-    "0000",
-    "000",
-    "00",
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20",
-    "21",
-    "22",
-    "23",
-    "24",
-    "25",
-    "26",
-    "27",
-    "28",
-    "29",
-    "30",
-    "32",
-    "34",
-    "36",
-    "38",
-    "40",
-  ];
-  let lastOk = null;
-  for (const g of gauges) {
-    const info = awgInfo(g);
-    const cap = mode === "chassis" ? info.chassisA : info.powerA;
-    if (cap == null) continue;
-    if (cap >= current) lastOk = g;
-    else if (lastOk) return lastOk;
-  }
-  return lastOk;
-}
-
 // ---- PCB trace width (IPC-2221A) ----
 
 function traceWidth(current, ozCopper, deltaT, layer = "external") {
@@ -1071,10 +1050,7 @@ class EECalculator extends HTMLElement {
       .querySelectorAll("label, .tool-sub, .result-label, .note")
       .forEach((el) => {
         if (!/_[A-Za-z]/.test(el.textContent)) return;
-        el.innerHTML = el.textContent.replace(
-          /_([A-Za-z][A-Za-z0-9]*)/g,
-          "<sub>$1</sub>",
-        );
+        el.innerHTML = htmlSubscript(el.textContent);
       });
   }
 
@@ -1633,13 +1609,13 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="row">
-        <div class="field"><label>V_in</label><input type="text" data-vin value="5"></div>
+        ${field("V_in", `<input type="text" data-vin value="5">`)}
         ${
           dir === "fwd"
-            ? `<div class="field"><label>R₁</label><input type="text" data-r1 value="10k"></div>
-             <div class="field"><label>R₂</label><input type="text" data-r2 value="10k"></div>`
-            : `<div class="field"><label>V_out target</label><input type="text" data-vout value="3.3"></div>
-             <div class="field"><label>Series</label><select data-series>${eSeriesOptions(this.state.vdivSeries)}</select></div>`
+            ? `${field("R₁", `<input type="text" data-r1 value="10k">`)}
+             ${field("R₂", `<input type="text" data-r2 value="10k">`)}`
+            : `${field("V_out target", `<input type="text" data-vout value="3.3">`)}
+             ${field("Series", `<select data-series>${eSeriesOptions(this.state.vdivSeries)}</select>`)}`
         }
       </div>
 
@@ -1673,14 +1649,14 @@ class EECalculator extends HTMLElement {
         const r2 = parseSI(el.querySelector("[data-r2]").value);
         const r = vdivForward(vin, r1, r2);
         if (!r) {
-          result.innerHTML = `<span class="result-value warn">invalid</span>`;
+          result.innerHTML = warnRow("invalid");
           return;
         }
         drawSchematic(formatSI(r1, "Ω"), formatSI(r2, "Ω"));
         result.innerHTML = `
-          <div class="result-row"><span class="result-label">V_out</span><span class="result-value accent">${formatSI(r.vout, "V")}</span></div>
-          <div class="result-row"><span class="result-label">I_divider</span><span class="result-value">${formatSI(r.iDiv, "A")}</span></div>
-          <div class="result-row"><span class="result-label">P_R1 + P_R2</span><span class="result-value">${formatSI(vin * r.iDiv, "W")}</span></div>
+          ${row("V_out", `${formatSI(r.vout, "V")}`, "accent")}
+          ${row("I_divider", `${formatSI(r.iDiv, "A")}`)}
+          ${row("P_R1 + P_R2", `${formatSI(vin * r.iDiv, "W")}`)}
         `;
       } else {
         const vout = parseSI(el.querySelector("[data-vout]").value);
@@ -1688,25 +1664,20 @@ class EECalculator extends HTMLElement {
         this.state.vdivSeries = series;
         const r = vdivReverse(vin, vout, series);
         if (!r) {
-          result.innerHTML = `<span class="result-value warn">V_out must be between 0 and V_in</span>`;
+          result.innerHTML = warnRow("V_out must be between 0 and V_in");
           return;
         }
         const errPct = (r.error * 100).toFixed(3);
         drawSchematic(formatSI(r.r1, "Ω"), formatSI(r.r2, "Ω"));
         result.innerHTML = `
-          <div class="result-row"><span class="result-label">R₁</span><span class="result-value accent">${formatSI(r.r1, "Ω")}</span></div>
-          <div class="result-row"><span class="result-label">R₂</span><span class="result-value accent">${formatSI(r.r2, "Ω")}</span></div>
-          <div class="result-row"><span class="result-label">Actual V_out</span><span class="result-value">${formatSI(r.vout, "V")}</span></div>
-          <div class="result-row"><span class="result-label">Error</span><span class="result-value ${r.error < 0.001 ? "ok" : ""}">${errPct}%</span></div>
+          ${row("R₁", `${formatSI(r.r1, "Ω")}`, "accent")}
+          ${row("R₂", `${formatSI(r.r2, "Ω")}`, "accent")}
+          ${row("Actual V_out", `${formatSI(r.vout, "V")}`)}
+          ${row("Error", `${errPct}%`, r.error < 0.001 ? "ok" : "")}
         `;
       }
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
-    el.querySelectorAll("select").forEach((sel) =>
-      sel.addEventListener("change", go),
-    );
+    wireInputs(el, go);
     go();
   }
 
@@ -1720,11 +1691,11 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Pick supply voltage, forward voltage, count, target current. Get R, wattage, dissipation.</div>
 
       <div class="row">
-        <div class="field"><label>V_in</label><input type="text" data-vsup value="5"></div>
-        <div class="field"><label>V_f per LED</label><input type="text" data-vf value="2.0"></div>
-        <div class="field"><label># LEDs</label><input type="number" data-n value="1" min="1" max="20" step="1"></div>
-        <div class="field"><label>I_f <span class="unit">(mA)</span></label><input type="text" data-if value="20"></div>
-        <div class="field"><label>Series</label><select data-series>${eSeriesOptions(this.state.ledSeries)}</select></div>
+        ${field("V_in", `<input type="text" data-vsup value="5">`)}
+        ${field("V_f per LED", `<input type="text" data-vf value="2.0">`)}
+        ${field("# LEDs", `<input type="number" data-n value="1" min="1" max="20" step="1">`)}
+        ${field(`I_f <span class="unit">(mA)</span>`, `<input type="text" data-if value="20">`)}
+        ${field("Series", `<select data-series>${eSeriesOptions(this.state.ledSeries)}</select>`)}
       </div>
 
       <div class="schematic grow" data-schematic></div>
@@ -1759,24 +1730,19 @@ class EECalculator extends HTMLElement {
       drawSchematic(n, r.ok ? formatSI(r.rStandard, "Ω") : "R");
       const result = el.querySelector("[data-result]");
       if (!r.ok) {
-        result.innerHTML = `<span class="result-value warn">${r.reason}</span>`;
+        result.innerHTML = warnRow(r.reason);
         return;
       }
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">V dropped across R</span><span class="result-value">${formatSI(r.vDrop, "V")}</span></div>
-        <div class="result-row"><span class="result-label">R exact</span><span class="result-value">${formatSI(r.rExact, "Ω")}</span></div>
-        <div class="result-row"><span class="result-label">R standard</span><span class="result-value accent">${formatSI(r.rStandard, "Ω")}</span></div>
-        <div class="result-row"><span class="result-label">Actual I</span><span class="result-value">${formatSI(r.iActualMa / 1000, "A")}</span></div>
-        <div class="result-row"><span class="result-label">P dissipated</span><span class="result-value">${formatSI(r.pR, "W")}</span></div>
-        <div class="result-row"><span class="result-label">Suggested rating</span><span class="result-value ok">${formatWattage(r.wattage)}</span></div>
+        ${row("V dropped across R", `${formatSI(r.vDrop, "V")}`)}
+        ${row("R exact", `${formatSI(r.rExact, "Ω")}`)}
+        ${row("R standard", `${formatSI(r.rStandard, "Ω")}`, "accent")}
+        ${row("Actual I", `${formatSI(r.iActualMa / 1000, "A")}`)}
+        ${row("P dissipated", `${formatSI(r.pR, "W")}`)}
+        ${row("Suggested rating", `${formatWattage(r.wattage)}`, "ok")}
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
-    el.querySelectorAll("select").forEach((sel) =>
-      sel.addEventListener("change", go),
-    );
+    wireInputs(el, go);
     go();
   }
 
@@ -1790,21 +1756,16 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Enter any one of V_peak, V_pk-pk, V_rms, V_avg. The others are derived assuming a pure sine wave.</div>
 
       <div class="row">
-        <div class="field"><label>V_peak</label><input type="text" data-vp placeholder="e.g. 5"></div>
-        <div class="field"><label>V_pk-pk</label><input type="text" data-vpp placeholder="e.g. 10"></div>
-        <div class="field"><label>V_rms</label><input type="text" data-vrms placeholder="e.g. 3.54"></div>
-        <div class="field"><label>V_avg</label><input type="text" data-vavg placeholder="e.g. 3.18"></div>
+        ${field("V_peak", `<input type="text" data-vp placeholder="e.g. 5">`)}
+        ${field("V_pk-pk", `<input type="text" data-vpp placeholder="e.g. 10">`)}
+        ${field("V_rms", `<input type="text" data-vrms placeholder="e.g. 3.54">`)}
+        ${field("V_avg", `<input type="text" data-vavg placeholder="e.g. 3.18">`)}
       </div>
 
       <div class="result" data-result></div>
     `;
     const go = () => {
-      const get = (sel) => {
-        const v = el.querySelector(sel).value.trim();
-        if (v === "") return null;
-        const n = parseSI(v);
-        return isFinite(n) ? n : null;
-      };
+      const get = (sel) => readSI(el, sel);
       const known = {
         vp: get("[data-vp]"),
         vpp: get("[data-vpp]"),
@@ -1818,24 +1779,22 @@ class EECalculator extends HTMLElement {
       else if (known.vavg != null) vp = (known.vavg * Math.PI) / 2;
       const result = el.querySelector("[data-result]");
       if (vp == null || !isFinite(vp)) {
-        result.innerHTML = `<span class="result-value warn">enter one value</span>`;
+        result.innerHTML = warnRow("enter one value");
         return;
       }
       const vpp = 2 * vp;
       const vrms = vp / Math.SQRT2;
       const vavg = (2 * vp) / Math.PI;
-      const cls = (k) => (known[k] == null ? "accent" : "");
+      const cls = accentUnknown(known);
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">V_peak</span><span class="result-value ${cls("vp")}">${formatSI(vp, "V")}</span></div>
-        <div class="result-row"><span class="result-label">V_pk-pk</span><span class="result-value ${cls("vpp")}">${formatSI(vpp, "V")}</span></div>
-        <div class="result-row"><span class="result-label">V_rms</span><span class="result-value ${cls("vrms")}">${formatSI(vrms, "V")}</span></div>
-        <div class="result-row"><span class="result-label">V_avg</span><span class="result-value ${cls("vavg")}">${formatSI(vavg, "V")}</span></div>
+        ${row("V_peak", `${formatSI(vp, "V")}`, cls("vp"))}
+        ${row("V_pk-pk", `${formatSI(vpp, "V")}`, cls("vpp"))}
+        ${row("V_rms", `${formatSI(vrms, "V")}`, cls("vrms"))}
+        ${row("V_avg", `${formatSI(vavg, "V")}`, cls("vavg"))}
         <div class="note">V_rms = V_p / √2 ≈ 0.707·V_p. V_avg is the full-wave rectified mean = 2·V_p/π ≈ 0.637·V_p. The formulas apply only to pure sine waves; square or triangle waves use different factors.</div>
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
+    wireInputs(el, go, false);
   }
 
   // ============================================================
@@ -1848,20 +1807,15 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Enter any one of f, T, ω. The other two are computed.</div>
 
       <div class="row">
-        <div class="field"><label>f <span class="unit">(Hz)</span></label><input type="text" data-f placeholder="e.g. 1k"></div>
-        <div class="field"><label>T <span class="unit">(s)</span></label><input type="text" data-t placeholder="e.g. 1m"></div>
-        <div class="field"><label>ω <span class="unit">(rad/s)</span></label><input type="text" data-w placeholder="e.g. 6.28k"></div>
+        ${field(`f <span class="unit">(Hz)</span>`, `<input type="text" data-f placeholder="e.g. 1k">`)}
+        ${field(`T <span class="unit">(s)</span>`, `<input type="text" data-t placeholder="e.g. 1m">`)}
+        ${field(`ω <span class="unit">(rad/s)</span>`, `<input type="text" data-w placeholder="e.g. 6.28k">`)}
       </div>
 
       <div class="result" data-result></div>
     `;
     const go = () => {
-      const get = (sel) => {
-        const v = el.querySelector(sel).value.trim();
-        if (v === "") return null;
-        const n = parseSI(v);
-        return isFinite(n) && n > 0 ? n : null;
-      };
+      const get = (sel) => readSI(el, sel, true);
       const known = {
         f: get("[data-f]"),
         t: get("[data-t]"),
@@ -1873,21 +1827,19 @@ class EECalculator extends HTMLElement {
       else if (known.w != null) f = known.w / (2 * Math.PI);
       const result = el.querySelector("[data-result]");
       if (f == null || !isFinite(f)) {
-        result.innerHTML = `<span class="result-value warn">enter one value</span>`;
+        result.innerHTML = warnRow("enter one value");
         return;
       }
       const t = 1 / f;
       const w = 2 * Math.PI * f;
-      const cls = (k) => (known[k] == null ? "accent" : "");
+      const cls = accentUnknown(known);
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">Frequency</span><span class="result-value ${cls("f")}">${formatSI(f, "Hz")}</span></div>
-        <div class="result-row"><span class="result-label">Period</span><span class="result-value ${cls("t")}">${formatSI(t, "s")}</span></div>
-        <div class="result-row"><span class="result-label">ω (angular)</span><span class="result-value ${cls("w")}">${formatSI(w, "rad/s")}</span></div>
+        ${row("Frequency", `${formatSI(f, "Hz")}`, cls("f"))}
+        ${row("Period", `${formatSI(t, "s")}`, cls("t"))}
+        ${row("ω (angular)", `${formatSI(w, "rad/s")}`, cls("w"))}
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
+    wireInputs(el, go, false);
   }
 
   // ============================================================
@@ -1900,9 +1852,9 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Convert between dBm, absolute power, and V_rms across a load impedance.</div>
 
       <div class="row">
-        <div class="field"><label><span class="unit">dBm</span></label><input type="text" data-dbm placeholder="e.g. 10"></div>
-        <div class="field"><label>Power (W)</label><input type="text" data-p placeholder="e.g. 10m"></div>
-        <div class="field"><label>V_rms</label><input type="text" data-vrms placeholder="e.g. 707m"></div>
+        ${field(`<span class="unit">dBm</span>`, `<input type="text" data-dbm placeholder="e.g. 10">`)}
+        ${field("Power (W)", `<input type="text" data-p placeholder="e.g. 10m">`)}
+        ${field("V_rms", `<input type="text" data-vrms placeholder="e.g. 707m">`)}
         <div class="field"><label>Load Z (Ω)</label><select data-z>
           <option value="50" ${this.state.acZ === "50" ? "selected" : ""}>50 (RF)</option>
           <option value="75" ${this.state.acZ === "75" ? "selected" : ""}>75 (video)</option>
@@ -1929,12 +1881,7 @@ class EECalculator extends HTMLElement {
       return parseFloat(sel);
     };
     const go = () => {
-      const get = (sel) => {
-        const v = el.querySelector(sel).value.trim();
-        if (v === "") return null;
-        const n = parseSI(v);
-        return isFinite(n) ? n : null;
-      };
+      const get = (sel) => readSI(el, sel);
       const z = getZ();
       const known = {
         dbm: get("[data-dbm]"),
@@ -1948,20 +1895,20 @@ class EECalculator extends HTMLElement {
         pW = (known.vrms * known.vrms) / z;
       const result = el.querySelector("[data-result]");
       if (pW == null || !isFinite(pW) || pW <= 0) {
-        result.innerHTML = `<span class="result-value warn">enter dBm, power, or V_rms</span>`;
+        result.innerHTML = warnRow("enter dBm, power, or V_rms");
         return;
       }
       const dbm = 10 * Math.log10(pW * 1000);
       const vrms = isFinite(z) && z > 0 ? Math.sqrt(pW * z) : null;
       const vp = vrms != null ? vrms * Math.SQRT2 : null;
       const vpp = vp != null ? 2 * vp : null;
-      const cls = (k) => (known[k] == null ? "accent" : "");
+      const cls = accentUnknown(known);
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">dBm</span><span class="result-value ${cls("dbm")}">${dbm.toFixed(2)} dBm</span></div>
-        <div class="result-row"><span class="result-label">Power</span><span class="result-value ${cls("p")}">${formatSI(pW, "W")}</span></div>
-        <div class="result-row"><span class="result-label">V_rms @ ${isFinite(z) ? formatSI(z, "Ω") : "?"}</span><span class="result-value ${cls("vrms")}">${vrms != null ? formatSI(vrms, "V") : "—"}</span></div>
-        <div class="result-row"><span class="result-label">V_peak</span><span class="result-value">${vp != null ? formatSI(vp, "V") : "—"}</span></div>
-        <div class="result-row"><span class="result-label">V_pk-pk</span><span class="result-value">${vpp != null ? formatSI(vpp, "V") : "—"}</span></div>
+        ${row("dBm", `${dbm.toFixed(2)} dBm`, cls("dbm"))}
+        ${row("Power", `${formatSI(pW, "W")}`, cls("p"))}
+        ${row(`V_rms @ ${isFinite(z) ? formatSI(z, "Ω") : "?"}`, `${vrms != null ? formatSI(vrms, "V") : "—"}`, cls("vrms"))}
+        ${row("V_peak", `${vp != null ? formatSI(vp, "V") : "—"}`)}
+        ${row("V_pk-pk", `${vpp != null ? formatSI(vpp, "V") : "—"}`)}
       `;
     };
     el.querySelector("[data-z]").addEventListener("change", () => {
@@ -1969,9 +1916,7 @@ class EECalculator extends HTMLElement {
       syncCustomVisibility();
       go();
     });
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
+    wireInputs(el, go, false);
   }
 
   // ============================================================
@@ -1984,10 +1929,10 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Fill in any two of f, L, C. The third, the reactance, and the tank's characteristic impedance appear. Add R for Q and bandwidth.</div>
 
       <div class="row">
-        <div class="field"><label>f <span class="unit">(Hz)</span></label><input type="text" data-f placeholder="e.g. 6.78M"></div>
-        <div class="field"><label>L <span class="unit">(H)</span></label><input type="text" data-l placeholder="e.g. 10u"></div>
-        <div class="field"><label>C <span class="unit">(F)</span></label><input type="text" data-c placeholder="e.g. 55p"></div>
-        <div class="field"><label>R <span class="unit">(Ω, optional)</span></label><input type="text" data-r placeholder="e.g. 1.5"></div>
+        ${field(`f <span class="unit">(Hz)</span>`, `<input type="text" data-f placeholder="e.g. 6.78M">`)}
+        ${field(`L <span class="unit">(H)</span>`, `<input type="text" data-l placeholder="e.g. 10u">`)}
+        ${field(`C <span class="unit">(F)</span>`, `<input type="text" data-c placeholder="e.g. 55p">`)}
+        ${field(`R <span class="unit">(Ω, optional)</span>`, `<input type="text" data-r placeholder="e.g. 1.5">`)}
       </div>
 
       <div class="row" style="margin-top:0.4em">
@@ -2003,12 +1948,7 @@ class EECalculator extends HTMLElement {
     `;
     const result = el.querySelector("[data-result]");
     const go = () => {
-      const get = (sel) => {
-        const v = el.querySelector(sel).value.trim();
-        if (v === "") return null;
-        const n = parseSI(v);
-        return isFinite(n) ? n : null;
-      };
+      const get = (sel) => readSI(el, sel);
       const known = {
         f: get("[data-f]"),
         L: get("[data-l]"),
@@ -2017,28 +1957,26 @@ class EECalculator extends HTMLElement {
       const r = get("[data-r]");
       const out = resonance({ ...known, r });
       if (!out.ok) {
-        result.innerHTML = `<span class="result-value warn">${out.reason}</span>`;
+        result.innerHTML = warnRow(out.reason);
         return;
       }
-      const cls = (k) => (known[k] == null ? "accent" : "");
+      const cls = accentUnknown(known);
       const qRow =
         out.Q == null
           ? ""
-          : `<div class="result-row"><span class="result-label">Q (unloaded, from R)</span><span class="result-value">${out.Q.toFixed(1)}</span></div>
-             <div class="result-row"><span class="result-label">−3 dB bandwidth</span><span class="result-value">${formatSI(out.bw, "Hz")}</span></div>`;
+          : `${row("Q (unloaded, from R)", `${out.Q.toFixed(1)}`)}
+             ${row("−3 dB bandwidth", `${formatSI(out.bw, "Hz")}`)}`;
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">Frequency f₀</span><span class="result-value ${cls("f")}">${formatSI(out.f, "Hz")}</span></div>
-        <div class="result-row"><span class="result-label">Inductance L</span><span class="result-value ${cls("L")}">${formatSI(out.L, "H")}</span></div>
-        <div class="result-row"><span class="result-label">Capacitance C</span><span class="result-value ${cls("C")}">${formatSI(out.C, "F")}</span></div>
-        <div class="result-row"><span class="result-label">X_L = X_C at f₀</span><span class="result-value">${formatSI(out.xL, "Ω")}</span></div>
-        <div class="result-row"><span class="result-label">Z₀ = √(L/C)</span><span class="result-value">${formatSI(out.z0, "Ω")}</span></div>
+        ${row("Frequency f₀", `${formatSI(out.f, "Hz")}`, cls("f"))}
+        ${row("Inductance L", `${formatSI(out.L, "H")}`, cls("L"))}
+        ${row("Capacitance C", `${formatSI(out.C, "F")}`, cls("C"))}
+        ${row("X_L = X_C at f₀", `${formatSI(out.xL, "Ω")}`)}
+        ${row("Z₀ = √(L/C)", `${formatSI(out.z0, "Ω")}`)}
         ${qRow}
         <div class="note">f₀ = 1/(2π·√(LC)). At resonance the reactances cancel, so a series RLC tank looks purely resistive (=R) and a parallel tank looks like a high impedance (≈Q·Z₀). For wireless-power coils, R is the total series loss (coil DCR + cap ESR + reflected secondary), and a high Q means narrow bandwidth: small detuning kills coupling.</div>
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
+    wireInputs(el, go, false);
     el.querySelectorAll("[data-preset]").forEach((btn) =>
       btn.addEventListener("click", () => {
         el.querySelector("[data-f]").value = btn.dataset.preset;
@@ -2060,21 +1998,16 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Fill in any two of V, I, R, P. The other two appear.</div>
 
       <div class="row">
-        <div class="field"><label>V (V)</label><input type="text" data-v placeholder="e.g. 5"></div>
-        <div class="field"><label>I (A)</label><input type="text" data-i placeholder="e.g. 10m"></div>
-        <div class="field"><label>R (Ω)</label><input type="text" data-r placeholder="e.g. 500"></div>
-        <div class="field"><label>P (W)</label><input type="text" data-p placeholder="e.g. 50m"></div>
+        ${field("V (V)", `<input type="text" data-v placeholder="e.g. 5">`)}
+        ${field("I (A)", `<input type="text" data-i placeholder="e.g. 10m">`)}
+        ${field("R (Ω)", `<input type="text" data-r placeholder="e.g. 500">`)}
+        ${field("P (W)", `<input type="text" data-p placeholder="e.g. 50m">`)}
       </div>
 
       <div class="result" data-result></div>
     `;
     const go = () => {
-      const get = (sel) => {
-        const v = el.querySelector(sel).value.trim();
-        if (v === "") return null;
-        const n = parseSI(v);
-        return isFinite(n) ? n : null;
-      };
+      const get = (sel) => readSI(el, sel);
       const known = {
         v: get("[data-v]"),
         i: get("[data-i]"),
@@ -2084,19 +2017,17 @@ class EECalculator extends HTMLElement {
       const r = solveOhms(known);
       const result = el.querySelector("[data-result]");
       if (!r.ok) {
-        result.innerHTML = `<span class="result-value warn">${r.reason}</span>`;
+        result.innerHTML = warnRow(r.reason);
         return;
       }
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">Voltage</span><span class="result-value ${known.v == null ? "accent" : ""}">${formatSI(r.v, "V")}</span></div>
-        <div class="result-row"><span class="result-label">Current</span><span class="result-value ${known.i == null ? "accent" : ""}">${formatSI(r.i, "A")}</span></div>
-        <div class="result-row"><span class="result-label">Resistance</span><span class="result-value ${known.r == null ? "accent" : ""}">${formatSI(r.r, "Ω")}</span></div>
-        <div class="result-row"><span class="result-label">Power</span><span class="result-value ${known.p == null ? "accent" : ""}">${formatSI(r.p, "W")}</span></div>
+        ${row("Voltage", `${formatSI(r.v, "V")}`, known.v == null ? "accent" : "")}
+        ${row("Current", `${formatSI(r.i, "A")}`, known.i == null ? "accent" : "")}
+        ${row("Resistance", `${formatSI(r.r, "Ω")}`, known.r == null ? "accent" : "")}
+        ${row("Power", `${formatSI(r.p, "W")}`, known.p == null ? "accent" : "")}
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
+    wireInputs(el, go, false);
   }
 
   // ============================================================
@@ -2114,9 +2045,9 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="row">
-        <div class="field"><label>R</label><input type="text" data-r placeholder="e.g. 10k"></div>
-        <div class="field"><label>C</label><input type="text" data-c placeholder="e.g. 100n"></div>
-        <div class="field"><label>f_c <span class="unit">(Hz)</span></label><input type="text" data-fc placeholder="e.g. 1k"></div>
+        ${field("R", `<input type="text" data-r placeholder="e.g. 10k">`)}
+        ${field("C", `<input type="text" data-c placeholder="e.g. 100n">`)}
+        ${field(`f_c <span class="unit">(Hz)</span>`, `<input type="text" data-fc placeholder="e.g. 1k">`)}
       </div>
 
       <div class="result" data-result></div>
@@ -2159,30 +2090,23 @@ class EECalculator extends HTMLElement {
     };
     drawBoth();
     const go = () => {
-      const get = (sel) => {
-        const v = el.querySelector(sel).value.trim();
-        if (v === "") return null;
-        const n = parseSI(v);
-        return isFinite(n) ? n : null;
-      };
+      const get = (sel) => readSI(el, sel);
       const r = rcSolve(get("[data-r]"), get("[data-c]"), get("[data-fc]"));
       const result = el.querySelector("[data-result]");
       if (!r.ok) {
-        result.innerHTML = `<span class="result-value warn">need two of R, C, f_c</span>`;
+        result.innerHTML = warnRow("need two of R, C, f_c");
         return;
       }
       drawBoth(formatSI(r.r, "Ω"), formatSI(r.c, "F"));
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">R</span><span class="result-value">${formatSI(r.r, "Ω")}</span></div>
-        <div class="result-row"><span class="result-label">C</span><span class="result-value">${formatSI(r.c, "F")}</span></div>
-        <div class="result-row"><span class="result-label">f_c (-3dB)</span><span class="result-value accent">${formatSI(r.fc, "Hz")}</span></div>
-        <div class="result-row"><span class="result-label">τ (time constant)</span><span class="result-value">${formatSI(r.tau, "s")}</span></div>
+        ${row("R", `${formatSI(r.r, "Ω")}`)}
+        ${row("C", `${formatSI(r.c, "F")}`)}
+        ${row("f_c (-3dB)", `${formatSI(r.fc, "Hz")}`, "accent")}
+        ${row("τ (time constant)", `${formatSI(r.tau, "s")}`)}
         <div class="note">f_c = 1 / (2π R C). τ = R C. At f_c the output is 70.7% of input (-3 dB) and lags/leads by 45°.</div>
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
+    wireInputs(el, go, false);
   }
 
   // ============================================================
@@ -2232,9 +2156,9 @@ class EECalculator extends HTMLElement {
     if (mode === "astable" && dir === "fwd") {
       body.innerHTML = `
         <div class="row">
-          <div class="field"><label>R₁</label><input type="text" data-r1 value="10k"></div>
-          <div class="field"><label>R₂</label><input type="text" data-r2 value="10k"></div>
-          <div class="field"><label>C</label><input type="text" data-c value="100n"></div>
+          ${field("R₁", `<input type="text" data-r1 value="10k">`)}
+          ${field("R₂", `<input type="text" data-r2 value="10k">`)}
+          ${field("C", `<input type="text" data-c value="100n">`)}
         </div>`;
       const go = () => {
         const r1 = parseSI(body.querySelector("[data-r1]").value);
@@ -2242,24 +2166,22 @@ class EECalculator extends HTMLElement {
         const c = parseSI(body.querySelector("[data-c]").value);
         const r = timer555Astable(r1, r2, c);
         result.innerHTML = `
-          <div class="result-row"><span class="result-label">Frequency</span><span class="result-value accent">${formatSI(r.f, "Hz")}</span></div>
-          <div class="result-row"><span class="result-label">Period</span><span class="result-value">${formatSI(r.period, "s")}</span></div>
-          <div class="result-row"><span class="result-label">t_high</span><span class="result-value">${formatSI(r.tHigh, "s")}</span></div>
-          <div class="result-row"><span class="result-label">t_low</span><span class="result-value">${formatSI(r.tLow, "s")}</span></div>
-          <div class="result-row"><span class="result-label">Duty cycle</span><span class="result-value">${(r.duty * 100).toFixed(2)}%</span></div>
+          ${row("Frequency", `${formatSI(r.f, "Hz")}`, "accent")}
+          ${row("Period", `${formatSI(r.period, "s")}`)}
+          ${row("t_high", `${formatSI(r.tHigh, "s")}`)}
+          ${row("t_low", `${formatSI(r.tLow, "s")}`)}
+          ${row("Duty cycle", `${(r.duty * 100).toFixed(2)}%`)}
           <div class="note">f = 1.44 / ((R₁ + 2R₂) C). Duty is always > 50% in classic astable.</div>
         `;
       };
-      body
-        .querySelectorAll("input")
-        .forEach((inp) => inp.addEventListener("input", go));
+      wireInputs(body, go, false);
       go();
     } else if (mode === "astable" && dir === "rev") {
       body.innerHTML = `
         <div class="row">
-          <div class="field"><label>Target f</label><input type="text" data-f value="1k"></div>
-          <div class="field"><label>Duty (0.5–1)</label><input type="text" data-duty value="0.75"></div>
-          <div class="field"><label>Pick C</label><input type="text" data-c value="100n"></div>
+          ${field("Target f", `<input type="text" data-f value="1k">`)}
+          ${field("Duty (0.5–1)", `<input type="text" data-duty value="0.75">`)}
+          ${field("Pick C", `<input type="text" data-c value="100n">`)}
         </div>`;
       const go = () => {
         const f = parseSI(body.querySelector("[data-f]").value);
@@ -2267,62 +2189,56 @@ class EECalculator extends HTMLElement {
         const c = parseSI(body.querySelector("[data-c]").value);
         const r = timer555AstableReverse(f, duty, c, "E24");
         if (!r.ok) {
-          result.innerHTML = `<span class="result-value warn">${r.reason}</span>`;
+          result.innerHTML = warnRow(r.reason);
           return;
         }
         const s = r.suggestions[0];
         if (!s) {
-          result.innerHTML = `<span class="result-value warn">no good standard pair found</span>`;
+          result.innerHTML = warnRow("no good standard pair found");
           return;
         }
         result.innerHTML = `
-          <div class="result-row"><span class="result-label">R₁ (E24)</span><span class="result-value accent">${formatSI(s.r1Std, "Ω")}</span></div>
-          <div class="result-row"><span class="result-label">R₂ (E24)</span><span class="result-value accent">${formatSI(s.r2Std, "Ω")}</span></div>
-          <div class="result-row"><span class="result-label">C</span><span class="result-value">${formatSI(s.C, "F")}</span></div>
-          <div class="result-row"><span class="result-label">Actual f</span><span class="result-value">${formatSI(s.verify.f, "Hz")}</span></div>
-          <div class="result-row"><span class="result-label">Actual duty</span><span class="result-value">${(s.verify.duty * 100).toFixed(2)}%</span></div>
+          ${row("R₁ (E24)", `${formatSI(s.r1Std, "Ω")}`, "accent")}
+          ${row("R₂ (E24)", `${formatSI(s.r2Std, "Ω")}`, "accent")}
+          ${row("C", `${formatSI(s.C, "F")}`)}
+          ${row("Actual f", `${formatSI(s.verify.f, "Hz")}`)}
+          ${row("Actual duty", `${(s.verify.duty * 100).toFixed(2)}%`)}
         `;
       };
-      body
-        .querySelectorAll("input")
-        .forEach((inp) => inp.addEventListener("input", go));
+      wireInputs(body, go, false);
       go();
     } else if (mode === "monostable" && dir === "fwd") {
       body.innerHTML = `
         <div class="row">
-          <div class="field"><label>R</label><input type="text" data-r value="100k"></div>
-          <div class="field"><label>C</label><input type="text" data-c value="10u"></div>
+          ${field("R", `<input type="text" data-r value="100k">`)}
+          ${field("C", `<input type="text" data-c value="10u">`)}
         </div>`;
       const go = () => {
         const r = parseSI(body.querySelector("[data-r]").value);
         const c = parseSI(body.querySelector("[data-c]").value);
         const res = timer555Mono(r, c);
         result.innerHTML = `
-          <div class="result-row"><span class="result-label">Pulse width</span><span class="result-value accent">${formatSI(res.t, "s")}</span></div>
+          ${row("Pulse width", `${formatSI(res.t, "s")}`, "accent")}
           <div class="note">t = 1.1 · R · C</div>`;
       };
-      body
-        .querySelectorAll("input")
-        .forEach((inp) => inp.addEventListener("input", go));
+      wireInputs(body, go, false);
       go();
     } else {
       body.innerHTML = `
         <div class="row">
-          <div class="field"><label>Target pulse</label><input type="text" data-t value="100m"></div>
-          <div class="field"><label>Pick C</label><input type="text" data-c value="10u"></div>
+          ${field("Target pulse", `<input type="text" data-t value="100m">`)}
+          ${field("Pick C", `<input type="text" data-c value="10u">`)}
         </div>`;
       const go = () => {
         const t = parseSI(body.querySelector("[data-t]").value);
         const c = parseSI(body.querySelector("[data-c]").value);
         const res = timer555MonoReverse(t, c, "E24");
         result.innerHTML = `
-          <div class="result-row"><span class="result-label">R exact</span><span class="result-value">${formatSI(res.R, "Ω")}</span></div>
-          <div class="result-row"><span class="result-label">R (E24)</span><span class="result-value accent">${formatSI(res.rStd, "Ω")}</span></div>
-          <div class="result-row"><span class="result-label">Actual pulse</span><span class="result-value">${formatSI(res.verifyT, "s")}</span></div>`;
+          ${row("R exact", `${formatSI(res.R, "Ω")}`)}
+          ${row("R (E24)", `${formatSI(res.rStd, "Ω")}`, "accent")}
+          ${row("Actual pulse", `${formatSI(res.verifyT, "s")}`)}`;
       };
-      body
-        .querySelectorAll("input")
-        .forEach((inp) => inp.addEventListener("input", go));
+      wireInputs(body, go, false);
       go();
     }
   }
@@ -2454,12 +2370,12 @@ class EECalculator extends HTMLElement {
       const result = el.querySelector("[data-result]");
       if (r == null || !values.length) {
         drawSchematic([]);
-        result.innerHTML = `<span class="result-value warn">enter at least one value</span>`;
+        result.innerHTML = warnRow("enter at least one value");
         return;
       }
       drawSchematic(values);
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">${values.length} ${kind}${values.length > 1 ? "s" : ""} in ${topo}</span><span class="result-value accent">${formatSI(r, unit)}</span></div>
+        ${row(`${values.length} ${kind}${values.length > 1 ? "s" : ""} in ${topo}`, `${formatSI(r, unit)}`, "accent")}
         <div class="result-row"><span class="result-label">Individual</span><span class="result-value" style="font-size:0.85em">${values.map((v) => formatSI(v, unit)).join(" • ")}</span></div>
       `;
     };
@@ -2480,12 +2396,12 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Enter a target current to highlight gauges that handle it. Enter a length to see total resistance per gauge.</div>
 
       <div class="row">
-        <div class="field"><label>Highlight gauges ≥</label><input type="text" data-current placeholder="e.g. 5A" value="${this.state.awgHighlight}"></div>
+        ${field("Highlight gauges ≥", `<input type="text" data-current placeholder="e.g. 5A" value="${this.state.awgHighlight}">`)}
         <div class="field"><label>Ampacity mode</label><select data-mode>
           <option value="chassis">chassis (~92 cmil/A)</option>
           <option value="power">power (NEC 310.16)</option>
         </select></div>
-        <div class="field"><label>Length</label><input type="text" data-length placeholder="e.g. 10" value="${this.state.awgLength || ""}"></div>
+        ${field("Length", `<input type="text" data-length placeholder="e.g. 10" value="${this.state.awgLength || ""}">`)}
         <div class="field"><label>Unit</label><select data-length-unit>
           <option value="m" ${this.state.awgLengthUnit === "m" ? "selected" : ""}>m</option>
           <option value="ft" ${this.state.awgLengthUnit === "ft" ? "selected" : ""}>ft</option>
@@ -2619,14 +2535,14 @@ class EECalculator extends HTMLElement {
       <div class="tool-sub">Minimum trace width for a given current, copper weight, temperature rise.</div>
 
       <div class="row">
-        <div class="field"><label>Current (A)</label><input type="text" data-i value="1"></div>
+        ${field("Current (A)", `<input type="text" data-i value="1">`)}
         <div class="field"><label>Copper</label><select data-oz>
           <option value="0.5">0.5 oz</option>
           <option value="1" selected>1 oz</option>
           <option value="2">2 oz</option>
           <option value="3">3 oz</option>
         </select></div>
-        <div class="field"><label>ΔT (°C)</label><input type="text" data-dt value="10"></div>
+        ${field("ΔT (°C)", `<input type="text" data-dt value="10">`)}
         <div class="field"><label>Layer</label><select data-layer>
           <option value="external">external</option>
           <option value="internal">internal</option>
@@ -2642,23 +2558,18 @@ class EECalculator extends HTMLElement {
       const dt = parseSI(el.querySelector("[data-dt]").value);
       const layer = el.querySelector("[data-layer]").value;
       if (!isFinite(i) || i <= 0 || !isFinite(dt) || dt <= 0) {
-        result.innerHTML = `<span class="result-value warn">enter positive values</span>`;
+        result.innerHTML = warnRow("enter positive values");
         return;
       }
       const r = traceWidth(i, oz, dt, layer);
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">Minimum width</span><span class="result-value accent">${r.width_mm.toFixed(3)} mm (${r.width_mil.toFixed(1)} mil)</span></div>
-        <div class="result-row"><span class="result-label">Cross-section</span><span class="result-value">${r.area_mil2.toFixed(2)} mil²</span></div>
-        <div class="result-row"><span class="result-label">Copper thickness</span><span class="result-value">${r.thickness_mil.toFixed(3)} mil</span></div>
+        ${row("Minimum width", `${r.width_mm.toFixed(3)} mm (${r.width_mil.toFixed(1)} mil)`, "accent")}
+        ${row("Cross-section", `${r.area_mil2.toFixed(2)} mil²`)}
+        ${row("Copper thickness", `${r.thickness_mil.toFixed(3)} mil`)}
         <div class="note">IPC-2221A: I = k · ΔT^0.44 · A^0.725, k = 0.048 (external) / 0.024 (internal). Add margin for vias, bends, and ambient. The newer IPC-2152 typically allows narrower traces; this estimate is conservative.</div>
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
-    el.querySelectorAll("select").forEach((sel) =>
-      sel.addEventListener("change", go),
-    );
+    wireInputs(el, go);
     go();
   }
 
@@ -2676,7 +2587,7 @@ class EECalculator extends HTMLElement {
           <option value="microstrip" selected>microstrip (outer)</option>
           <option value="stripline">stripline (inner)</option>
         </select></div>
-        <div class="field"><label>Dielectric εr</label><input type="text" data-er value="4.3"></div>
+        ${field("Dielectric εr", `<input type="text" data-er value="4.3">`)}
         <div class="field"><label>Copper</label><select data-oz>
           <option value="0.5">0.5 oz</option>
           <option value="1" selected>1 oz</option>
@@ -2685,10 +2596,10 @@ class EECalculator extends HTMLElement {
       </div>
 
       <div class="row">
-        <div class="field"><label>Trace width W (mil)</label><input type="text" data-w value="6"></div>
+        ${field("Trace width W (mil)", `<input type="text" data-w value="6">`)}
         <div class="field"><label data-hlabel>Height H (mil)</label><input type="text" data-h value="5"></div>
-        <div class="field"><label>Spacing S (mil)</label><input type="text" data-s value="6"></div>
-        <div class="field"><label>Skew budget (ps)</label><input type="text" data-skew value="10"></div>
+        ${field("Spacing S (mil)", `<input type="text" data-s value="6">`)}
+        ${field("Skew budget (ps)", `<input type="text" data-skew value="10">`)}
       </div>
 
       <div class="result" data-result></div>
@@ -2707,7 +2618,7 @@ class EECalculator extends HTMLElement {
         structure === "stripline" ? "Plane gap B (mil)" : "Height H (mil)";
       const t = 1.378 * oz; // copper thickness in mil
       if (![er, w, h, s].every((v) => isFinite(v) && v > 0) || er < 1) {
-        result.innerHTML = `<span class="result-value warn">enter positive values (εr ≥ 1)</span>`;
+        result.innerHTML = warnRow("enter positive values (εr ≥ 1)");
         return;
       }
       const r = impedance({ structure, er, w, h, t, s });
@@ -2727,24 +2638,19 @@ class EECalculator extends HTMLElement {
       const skewRow =
         dL_mm == null
           ? ""
-          : `<div class="result-row"><span class="result-label">Max length mismatch (${skew} ps)</span><span class="result-value">${dL_mm.toFixed(2)} mm (${(dL_mm / 0.0254).toFixed(0)} mil)</span></div>`;
+          : `${row(`Max length mismatch (${skew} ps)`, `${dL_mm.toFixed(2)} mm (${(dL_mm / 0.0254).toFixed(0)} mil)`)}`;
       result.innerHTML = `
-        <div class="result-row"><span class="result-label">Single-ended Z₀</span><span class="result-value accent">${r.z0.toFixed(1)} Ω</span></div>
-        <div class="result-row"><span class="result-label">Differential Z_diff</span><span class="result-value accent">${r.zdiff.toFixed(1)} Ω</span></div>
-        <div class="result-row"><span class="result-label">Nearest target</span><span class="result-value">${near.z} Ω (${near.name})</span></div>
-        <div class="result-row"><span class="result-label">Effective εr</span><span class="result-value">${r.eeff.toFixed(2)}</span></div>
-        <div class="result-row"><span class="result-label">Propagation delay</span><span class="result-value">${r.tpd_ps_per_in.toFixed(1)} ps/in (${r.tpd_ns_per_m.toFixed(2)} ns/m)</span></div>
+        ${row("Single-ended Z₀", `${r.z0.toFixed(1)} Ω`, "accent")}
+        ${row("Differential Z_diff", `${r.zdiff.toFixed(1)} Ω`, "accent")}
+        ${row("Nearest target", `${near.z} Ω (${near.name})`)}
+        ${row("Effective εr", `${r.eeff.toFixed(2)}`)}
+        ${row("Propagation delay", `${r.tpd_ps_per_in.toFixed(1)} ps/in (${r.tpd_ns_per_m.toFixed(2)} ns/m)`)}
         ${skewRow}
         ${validity}
         <div class="note">IPC-2141A closed-form: microstrip Z₀ = 87/√(εr+1.41)·ln(5.98H/(0.8W+T)); stripline Z₀ = 60/√εr·ln(4B/(0.67π(0.8W+T))). Z_diff = 2·Z₀·(1−k·e^(−c·S/H)). Estimate is ±5–10%; ignores copper thickness in coupling, solder mask, glass-weave, and roughness. For a tight target, confirm with your fab's stackup tool.</div>
       `;
     };
-    el.querySelectorAll("input").forEach((inp) =>
-      inp.addEventListener("input", go),
-    );
-    el.querySelectorAll("select").forEach((sel) =>
-      sel.addEventListener("change", go),
-    );
+    wireInputs(el, go);
     go();
   }
 }
