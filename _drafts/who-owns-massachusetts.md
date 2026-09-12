@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: Who Owns Massachusetts
 categories:
   - Software

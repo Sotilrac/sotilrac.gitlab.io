@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: I am the luckiest Engineer ever
-author: Carlos
 id: 88
 date: 2009-11-18T13:14:22-05:00
 categories:
@@ -12,8 +9,6 @@ tags:
   - FPGA
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 A few weeks ago, I received a very pleasant message: [Altium](http://altium.com/ "Altium"), an FPGA development board manufacturer and IDE developer, contacted me asking If I wanted to try the (excessively cool) brand new development board (the [NanoBoard 3000](http://nb3000.altium.com/intro.html "NanoBoard 3000")) for free. Of course, I immediately (and quite emphatically) said _YES_.
 

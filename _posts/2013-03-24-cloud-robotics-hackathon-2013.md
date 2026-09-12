@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Cloud Robotics Hackathon 2013
-author: Carlos
 id: 1588
 wordpress_url: http://carlitoscontraptions.com/?p=1588
 date: 2013-03-24T13:55:45-04:00
@@ -14,8 +11,6 @@ tags:
   - hackathon
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/cloud-robotics-hackathon-2013/cloud-robotics-hackathon-banner4.png", "Cloud Robotics Hackathon 2013" %}
 

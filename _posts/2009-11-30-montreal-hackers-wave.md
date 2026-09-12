@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Montreal Hackers Wave
-author: Carlos
 id: 90
 date: 2009-11-30T13:17:04-05:00
 date_gmt: 2009-11-30T17:17:04-05:00
@@ -13,8 +10,6 @@ tags:
   - software
   - Montreal
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/montreal-hackers-wave/google_wave_logo.jpg", "Google Wave" %}
 

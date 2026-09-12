@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Lunar Excavator
-author: Carlos
 id: 54
 date: 2008-08-20T19:46:00-04:00
 date_gmt: 2008-08-21T02:46:00-04:00
@@ -14,8 +11,6 @@ tags:
   - mechanical
   - metal
 ---
-
-{% include "archive-banner.njk" %}
 
 I was lucky enough to help my friend Stephen and his team to build a {% wayback "https://web.archive.org/web/20090429052244/http://lunarex.mcgill.ca:80/", "lunar excavator" %} to participate in the [Regolith Excavation Challenge](http://regolith.csewi.org/), sponsored by NASA.
 

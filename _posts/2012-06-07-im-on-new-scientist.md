@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: I'm On New Scientist!
-author: Carlos
 id: 1173
 wordpress_url: http://carlitoscontraptions.com/?p=1173
 date: 2012-06-07T19:48:23-04:00
@@ -15,8 +12,6 @@ tags:
   - robotics
   - press
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/im-on-new-scientist/new_scientist_20120121.jpg", "New Scientist 2012-01-21" %}
 

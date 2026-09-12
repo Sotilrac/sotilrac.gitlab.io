@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: I am Iron Man
-author: Carlos
 id: 51
 wordpress_url: http://carlitoscontraptions.com/?p=56
 date: 2008-06-28T17:14:00-04:00
@@ -15,8 +12,6 @@ tags:
   - craft
   - cosplay
 ---
-
-{% include "archive-banner.njk" %}
 
 When I saw the new Iron Man movie, I instantly knew I had to build some part of the suit (I like to wear gadgets). Luckily for me, I found an old hard drive that had just the pieces I needed for building a repulsor-like LED flashlight.
 

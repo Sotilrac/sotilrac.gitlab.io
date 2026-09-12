@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: The Batarang
-author: Carlos
 id: 70
 wordpress_url: http://carlitoscontraptions.com/?p=70
 date: 2009-03-10T18:58:00-04:00
@@ -14,8 +11,6 @@ tags:
   - metal
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 I always wanted to have a batarang since I have always liked Batman a lot. So, I decided to build one now that they have become much simpler than before in the latest Batman films.
 

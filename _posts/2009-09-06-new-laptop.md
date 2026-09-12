@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: New Laptop
-author: Carlos
 id: 81
 date: 2009-09-06T15:56:15-04:00
 date_gmt: 2009-09-06T19:56:15-04:00
@@ -13,8 +10,6 @@ tags:
   - linux
   - tool
 ---
-
-{% include "archive-banner.njk" %}
 
 Following some serious problems with my [Eee PC](/blog/eee-pc-1000-ubuntu-kde-41/ "Eee PC"), I acquired a new laptop, a real one. I was planning to use the Eee as my main and only computer but some very serious problems with its SSD (that I will describe in another post soon) prevented me from doing so.
 

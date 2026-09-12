@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: La Cucaracha
-author: Carlos
 id: 10
 date: 2006-10-12T23:43:00-04:00
 date_gmt: 2006-10-13T06:43:00-04:00
@@ -12,8 +9,6 @@ tags:
   - robotics
   - trash
 ---
-
-{% include "archive-banner.njk" %}
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 

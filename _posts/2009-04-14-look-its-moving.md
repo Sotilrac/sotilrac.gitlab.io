@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Look! It's moving!
-author: Carlos
 id: 74
 wordpress_url: http://carlitoscontraptions.com/?p=74
 date: 2009-04-14T10:25:03-04:00
@@ -14,8 +11,6 @@ tags:
   - WordPress
   - software
 ---
-
-{% include "archive-banner.njk" %}
 
 I have been experimenting with web servers, web design, web applications and many other things that begin with "web". The result? The blog is moving to a new address.
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Debouncer v2
-author: Carlos
 id: 30
 date: 2007-06-08T23:56:00-04:00
 date_gmt: 2007-06-09T06:56:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - FPGA
 ---
-
-{% include "archive-banner.njk" %}
 
 I wrote a quick debouncer code in VHDL that I thought people could enjoy and may be useful for FPGA projects. For more info on debouncers see [this post](/blog/switch-debouncer/ "Switch debouncer").
 

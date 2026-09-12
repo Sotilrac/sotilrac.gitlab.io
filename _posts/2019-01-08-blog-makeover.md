@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Blog Makeover
-author: Carlos
 id: 143
 date: 2019-01-08T01:01:01-05:00
 categories:

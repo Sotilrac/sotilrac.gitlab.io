@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Switching to Ubuntu
-author: Carlos
 id: 22
 date: 2007-02-21T22:09:00-05:00
 date_gmt: 2007-02-22T05:09:00-05:00
@@ -12,8 +9,6 @@ tags:
   - linux
   - tool
 ---
-
-{% include "archive-banner.njk" %}
 
 I was tired of having a slow computer, I did not want to deal any longer with bugs and annoyances (and these where paid annoyances and bugs). This is why I decided to use Linux, instead of a well known mainstream OS.
 

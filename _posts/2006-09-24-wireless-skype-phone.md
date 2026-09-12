@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Wireless Skype Phone
-author: Carlos
 id: 7
 date: 2006-09-24T23:01:00-04:00
 date_gmt: 2006-09-25T06:01:00-04:00
@@ -14,8 +11,6 @@ tags:
   - hack
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 At first, I saw on {% wayback "https://web.archive.org/web/20050612023923/http://www.grynx.com:80/index.php/projects/siemens-skype/", "this site" %} someone who modified his wireless phone in order to connect it to his computer, transforming it in a wireless speaker and microphone. I thought it was kind of cruel to modify a working phone that way.
 

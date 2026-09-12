@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: "Download YouTube Videos"
 date: 2026-04-06T23:35:05-04:00
 categories:

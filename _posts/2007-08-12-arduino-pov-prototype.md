@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Arduino POV Prototype
-author: Carlos
 id: 34
 date: 2007-08-12T21:03:00-04:00
 date_gmt: 2007-08-13T04:03:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - Arduino
 ---
-
-{% include "archive-banner.njk" %}
 
 This is my first attempt to create a [persistence of vision](http://en.wikipedia.org/wiki/Persistence_of_vision) (POV) display using the Arduino. The ultimate goal is to mount it on my bike wheel and have it display nice things while I ride. But, for now, it consist of an array of 6 LEDs mounted on a turning rig I made from scrap material.
 

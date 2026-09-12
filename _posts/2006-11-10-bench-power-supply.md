@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Bench Power Supply
-author: Carlos
 id: 12
 date: 2006-11-10T18:00:00-05:00
 date_gmt: 2006-11-11T01:00:00-05:00
@@ -12,8 +9,6 @@ tags:
   - tool
   - trash
 ---
-
-{% include "archive-banner.njk" %}
 
 I saw a long time ago that [someone](http://www.wikihow.com/Convert-a-Computer-ATX-Power-Supply-to-a-Lab-Power-Supply) built a bench power supply using a power supply from an old computer. This is why, when I found an old pre-Pentium computer (fully working with Win 95 on it) in the garbage, I implemented this idea.
 

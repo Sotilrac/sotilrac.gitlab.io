@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: "REJECTED: Robopocalypse - The Tip Of The Spear"
-author: Carlos
 id: 1179
 wordpress_url: http://carlitoscontraptions.com/?p=1179
 date: 2012-07-01T17:01:41-04:00
@@ -18,8 +15,6 @@ tags:
   - Robopocalypse
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 Lately, I put some effort into making another [video](http://www.youtube.com/watch?v=XjWEmJsyMe4) for the [Robot Film Festival](http://robotfilmfestival.com/). Along with my brother Alan, we transformed a basement into a high-tech research facility in order to shoot a scene from the best-seller [Robopocalypse](http://www.amazon.com/Robopocalypse-Novel-Daniel-H-Wilson/dp/0385533853/ref=tmm_hrd_title_0) by [Daniel H. Wilson](http://danielhwilson.com/).
 

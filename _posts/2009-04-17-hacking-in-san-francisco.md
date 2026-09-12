@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Hacking in San Francisco
-author: Carlos
 id: 76
 wordpress_url: http://carlitoscontraptions.com/?p=130
 date: 2009-04-17T17:30:02-04:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - trip
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/hacking-in-san-francisco/img_2007.jpg", "Hacking in SF" %}
 

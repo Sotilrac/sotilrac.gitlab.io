@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Home Automation
-author: Carlos
 id: 46
 date: 2008-05-06T22:17:00-04:00
 date_gmt: 2008-05-07T05:17:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - FPGA
 ---
-
-{% include "archive-banner.njk" %}
 
 Here is some information about a home automation system my team and I did some time ago. This was done for the Embedded Systems class and require two {% wayback "https://web.archive.org/web/20090529223417/http://www.altera.com:80/literature/univ/univ.pdf", "Altera UP1" %} FPGA boards, two computers and two {% wayback "https://web.archive.org/web/20070107074314/http://www.ftdichip.com:80/Products/EvaluationKits/TTL-232R.htm", "USB-to-TTL" %} wires.
 

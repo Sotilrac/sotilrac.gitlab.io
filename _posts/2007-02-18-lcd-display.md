@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: LCD Screen
-author: Carlos
 id: 21
 date: 2007-02-18T11:25:00-05:00
 date_gmt: 2007-02-18T18:25:00-05:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 I got a brand new LCD screen for free from the guys at [uC Hobby](http://www.uchobby.com/) (their website has many nice projects).
 

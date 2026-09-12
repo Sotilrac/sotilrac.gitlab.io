@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Hands On the iModela Mini CNC Mill
-author: Carlos
 id: 1157
 wordpress_url: http://carlitoscontraptions.com/?p=1157
 date: 2012-05-31T19:01:05-04:00
@@ -16,8 +13,6 @@ tags:
   - Deadmau5
   - CNC
 ---
-
-{% include "archive-banner.njk" %}
 
 I was very lucky to get my hands on an [iModela mini CNC Router](http://www.rolanddga.com/products/milling/imodela/) from [Roland](http://www.rolanddga.com/). I tested the unit for a few months now and I am terribly late for making a post about it but I believe it is better to share the information late rather than not sharing it at all.
 

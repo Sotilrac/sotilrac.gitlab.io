@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao Rodeo, 1337 Rides a Roomba
-author: Carlos
 id: 1066
 wordpress_url: http://carlitoscontraptions.com/?p=1066
 date: 2011-07-31T01:03:59-04:00
@@ -15,8 +12,6 @@ tags:
   - Roomba
   - rodeo
 ---
-
-{% include "archive-banner.njk" %}
 
 This was going to happen sooner or later, Nao 1337 is now able to ride the Roomba robot vacuum rodeo style!
 

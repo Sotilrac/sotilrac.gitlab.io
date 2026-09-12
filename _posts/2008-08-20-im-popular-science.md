@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: I'm Popular (Science)
-author: Carlos
 id: 53
 wordpress_url: http://carlitoscontraptions.com/?p=58
 date: 2008-08-20T17:32:00-04:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - press
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/im-popular-science/pop_sci.png", "" %}
 

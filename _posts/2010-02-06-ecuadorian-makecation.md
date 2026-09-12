@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Ecuadorian Makecation
-author: Carlos
 id: 84
 wordpress_url: http://carlitoscontraptions.com/?p=487
 date: 2010-02-06T01:20:15-05:00
@@ -16,8 +13,6 @@ tags:
   - Ecuador
   - trip
 ---
-
-{% include "archive-banner.njk" %}
 
 I think I can now safely say I am a _Maker_. I make things and that is what I like to do. Let me explain why I came to this conclusion.
 

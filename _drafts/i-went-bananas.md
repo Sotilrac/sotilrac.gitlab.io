@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: I went banaNAS
 categories:
   - My Projects

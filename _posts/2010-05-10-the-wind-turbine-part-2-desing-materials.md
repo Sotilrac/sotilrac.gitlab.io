@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: "The Wind Turbine Part 2: Design and Materials"
-author: Carlos
 id: 573
 wordpress_url: http://carlitoscontraptions.com/?p=573
 date: 2010-05-10T01:52:46-04:00
@@ -16,8 +13,6 @@ tags:
   - Ecuador
   - trip
 ---
-
-{% include "archive-banner.njk" %}
 
 Now that the [general idea](/blog/the-wind-turbine-part-1-idea/ "Wind Turbine Part 1: General Idea") has been introduced, let us have a look at the materials and parts that make up the IBee Turbine design.
 

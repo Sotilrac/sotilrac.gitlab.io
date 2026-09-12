@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Shoplift Alarm Sensors
-author: Carlos
 id: 43
 date: 2008-02-10T16:45:00-05:00
 date_gmt: 2008-02-10T23:45:00-05:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - hack
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/shoplift-alarm-sensors/ss850544.jpg", "" %}
 

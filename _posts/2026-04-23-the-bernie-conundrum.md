@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: The Bernie Conundrum
 categories:
   - Working Theory

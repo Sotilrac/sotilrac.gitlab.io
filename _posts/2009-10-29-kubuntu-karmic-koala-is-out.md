@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Kubuntu Karmic Koala is out!
-author: Carlos
 id: 87
 date: 2009-10-29T15:20:52-04:00
 categories:
@@ -13,8 +10,6 @@ tags:
   - Open Source
   - linux
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/kubuntu-karmic-koala-is-out/kubuntu_karmic.jpg", "Kubuntu Karmic Koala" %}
 

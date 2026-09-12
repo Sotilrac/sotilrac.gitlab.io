@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao 1337 uses Google Speech-to-Text Service
-author: Carlos
 id: 1125
 wordpress_url: http://carlitoscontraptions.com/?p=1125
 date: 2012-01-03T01:01:13-05:00
@@ -15,8 +12,6 @@ tags:
   - Aldebaran
   - speech recognition
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-1337-google-speech-to-text/google-chrome-speech-to-text.png", "Google Chrome Speech-to-Text" %}
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao at the Montreal Geekfest 2011
-author: Carlos
 id: 873
 wordpress_url: http://carlitoscontraptions.com/?p=873
 date: 2011-03-12T10:53:57-05:00
@@ -14,8 +11,6 @@ tags:
   - Nao
   - Geekfest
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-montreal-geekfest-2011/img_0287.jpg", "Carlos, Alan and Nao 1337 at the Geekfest" %}
 

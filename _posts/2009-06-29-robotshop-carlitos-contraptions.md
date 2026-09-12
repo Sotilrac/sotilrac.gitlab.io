@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: RobotShop + Carlitos' Contraptions
-author: Carlos
 id: 78
 wordpress_url: http://carlitoscontraptions.com/?p=215
 date: 2009-06-29T13:24:09-04:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - sponsor
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/robotshop-carlitos-contraptions/robotshop_logoside_001.jpg", "RobotShop.com" %}
 

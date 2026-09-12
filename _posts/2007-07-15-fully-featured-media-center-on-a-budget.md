@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Fully Featured Media Center on a Budget
-author: Carlos
 id: 32
 date: 2007-07-15T00:14:00-04:00
 date_gmt: 2007-07-15T07:14:00-04:00
@@ -12,8 +9,6 @@ tags:
   - Xbox
   - XBMC
 ---
-
-{% include "archive-banner.njk" %}
 
 Recently my girlfriend got rid of her cable television connection and moved to a cheaper (almost free) and fully featured media centre solution (i.e. Xbox + Xbox Media Center).
 

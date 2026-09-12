@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Panoramic Camera - Prototype
-author: Carlos
 id: 83
 date: 2009-09-29T01:46:45-04:00
 categories:
@@ -13,8 +10,6 @@ tags:
   - electronics
   - photography
 ---
-
-{% include "archive-banner.njk" %}
 
 ### Update:
 

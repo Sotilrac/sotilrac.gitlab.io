@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Protecting Nao
-author: Carlos
 id: 867
 wordpress_url: http://carlitoscontraptions.com/?p=867
 date: 2011-03-08T00:30:36-05:00
@@ -14,8 +11,6 @@ tags:
   - Nao
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 Nao is a very expensive piece of equipment and it would be a shame if it got dirty, scratched or damaged. Nevertheless, the official Nao suitcase is priced at 777.77 USD. This is rather expensive. A suitable alternative is the cheaper {% wayback "https://web.archive.org/web/20110306081421/http://www.robotshop.com:80/ca/plasticase-nanuk-extreme-heavy-duty-case-22-inch-3.html", "Plasticase Nanuk 945" %} which is as sturdy and IMHO much better looking.
 

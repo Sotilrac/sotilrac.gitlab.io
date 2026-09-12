@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Arduino Clones
-author: Carlos
 id: 33
 date: 2007-08-03T09:48:00-04:00
 date_gmt: 2007-08-03T16:48:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - Arduino
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/arduino-clones/arduino-package.jpg", "" %}
 

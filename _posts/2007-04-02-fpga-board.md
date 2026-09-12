@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: FPGA Board
-author: Carlos
 id: 28
 date: 2007-04-02T21:46:00-04:00
 date_gmt: 2007-04-03T04:46:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - FPGA
 ---
-
-{% include "archive-banner.njk" %}
 
 Ever since I discovered the wonders of FPGA boards I wanted to have one of my own (instead of using the one provided by the university only for university projects). Not long ago my wish granted.
 

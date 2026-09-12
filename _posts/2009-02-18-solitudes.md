@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Solitudes
-author: Carlos
 id: 69
 date: 2009-02-18T16:35:00-05:00
 date_gmt: 2009-02-18T23:35:00-05:00
@@ -13,8 +10,6 @@ tags:
   - trash
   - CD
 ---
-
-{% include "archive-banner.njk" %}
 
 In many drugstores and bookstores here in Montreal (AFAIK), we find the [Solitudes](http://www.solitudes.com/) CDs. These are CDs containing music mainly based on nature sounds (elevator music really). The interesting thing about this CDs is that they are displayed on a shelf with an interactive player that the customer can use to get a glimpse of the content of the CDs being offered. In other words, the customer touches on a CD icon, and the shelf starts to play (what seems to be) the contents of that CD.
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Floppy Note Pad
-author: Carlos
 id: 49
 date: 2008-05-28T21:25:00-04:00
 date_gmt: 2008-05-29T04:25:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 Inspired by {% wayback "https://web.archive.org/web/20070918051013/http://fractalspin.com:80/x/product.php?productid=124", "this commercial product" %}, my girlfriend and I did a small craft with her elementary school class (she is a teacher).
 

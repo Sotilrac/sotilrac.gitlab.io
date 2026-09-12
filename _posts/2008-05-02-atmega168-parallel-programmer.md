@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: ATmega168 Parallel Programmer
-author: Carlos
 id: 45
 wordpress_url: http://carlitoscontraptions.com/?p=50
 date: 2008-05-02T00:26:00-04:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - ATmega
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/atmega168-parallel-programmer/ss851490.jpg", "" %}
 

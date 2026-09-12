@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: What am I building?
-author: Carlos
 id: 47
 date: 2008-05-20T23:12:00-04:00
 date_gmt: 2008-05-21T06:12:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - mystery
 ---
-
-{% include "archive-banner.njk" %}
 
 <div style="text-align: center;"><script src="http://flash.revver.com/player/1.0/player.js?mediaId:915696;affiliateId:78575;backColor:#3465A4;frontColor:#F57900;gradColor:#000000;width:480;height:392;shareUrl:revver;pngLogo:http://static2.revver.com/player/logo/revverLogo__________.png" type="text/javascript"></script></div>
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao Humanoid Robot Unboxing
-author: Carlos
 id: 830
 wordpress_url: http://carlitoscontraptions.com/?p=830
 date: 2011-02-07T22:43:53-05:00
@@ -17,8 +14,6 @@ tags:
   - unboxing
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 I got my Nao!
 

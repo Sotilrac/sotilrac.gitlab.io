@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: STM Bug Report
-author: Carlos
 id: 93
 wordpress_url: http://carlitoscontraptions.com/?p=471
 date: 2009-12-16T16:03:52-05:00
@@ -14,8 +11,6 @@ tags:
   - software
   - Montreal
 ---
-
-{% include "archive-banner.njk" %}
 
 Ever since the implementation of the new [Opus Card system](/blog/opus-smart-card/ "Opus Card") by the Montreal's Public Transportation ([STM](http://stm.info/ "STM")), there have been lots of malfunctions and bugs.
 

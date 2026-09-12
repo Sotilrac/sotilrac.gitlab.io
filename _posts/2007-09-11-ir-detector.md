@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: IR Detector
-author: Carlos
 id: 38
 date: 2007-09-11T15:18:00-04:00
 date_gmt: 2007-09-11T22:18:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 Besides [my POV display](/blog/arduino-pov-prototype-part-2/), I'm trying to do a robot that detects obstacles using IR light. In order to make it easy to work with IR light, I built a very simple IR detector based on {% wayback "https://web.archive.org/web/20060322221012/http://www.thekeeser.com:80/Projects/simple_ir_detector.htm", "this article" %}.
 

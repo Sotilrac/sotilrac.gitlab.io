@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Nao Mind Control at New York Maker Faire 2012
-author: Carlos
 id: 1438
 wordpress_url: http://carlitoscontraptions.com/?p=1438
 date: 2012-10-08T22:10:30-04:00
@@ -16,8 +13,6 @@ tags:
   - Mindwave
   - mind control
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-mind-control-ny-maker-faire-2012/IMG_2028.jpg", "Super intense focus to control Nao 1337" %}
 

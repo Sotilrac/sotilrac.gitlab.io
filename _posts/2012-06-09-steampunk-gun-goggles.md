@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Steampunk Gun and Goggles
-author: Carlos
 id: 1171
 wordpress_url: http://carlitoscontraptions.com/?p=1171
 date: 2012-06-09T00:47:45-04:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - cosplay
 ---
-
-{% include "archive-banner.njk" %}
 
 I was invited to a Pride & Prejudice & Zombies themed party and I thought that (although it is not exactly the same era) I could have a steampunk disguise and be a steampunk zombie hunter.
 

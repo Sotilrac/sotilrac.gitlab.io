@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Cloud Robotics Hackathon at M.Net
-author: Carlos
 id: 1554
 date: 2013-05-26T10:02:11-04:00
 categories:
@@ -13,8 +10,6 @@ tags:
   - hackathon
   - press
 ---
-
-{% include "archive-banner.njk" %}
 
 Thanks to [M.Net](http://www.musiqueplus.com/emissions/m-net-1.950689) to welcome me once again to their show. This time, I had the pleasure of presenting the {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "Cloud Robotics Hackathon" %}.
 

@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Quick and Cheap Laptop Lamp
-author: Carlos
 id: 17
 date: 2006-12-05T23:30:00-05:00
 date_gmt: 2006-12-06T06:30:00-05:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 I built this quick laptop lamp some time ago for my mom. It is very simple and requires very few materials.
 

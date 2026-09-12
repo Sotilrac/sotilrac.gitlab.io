@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: Windows Tips
 date: 2023-01-05T13:21:00-05:00
 categories:

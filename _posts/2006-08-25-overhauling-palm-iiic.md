@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Overhauling a Palm IIIc
-author: Carlos
 id: 3
 date: 2006-08-25T20:08:00-04:00
 date_gmt: 2006-08-26T03:08:00-04:00
@@ -12,8 +9,6 @@ tags:
   - palm
   - trash
 ---
-
-{% include "archive-banner.njk" %}
 
 I know the Palm IIIc is getting a bit old and obsolete. Still, it has many useful functions such as serving as a universal remote control.
 

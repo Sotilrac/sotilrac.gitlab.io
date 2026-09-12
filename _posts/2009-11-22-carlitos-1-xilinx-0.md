@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Carlitos 1, Xilinx 0
-author: Carlos
 id: 89
 date: 2009-11-22T04:02:31-05:00
 categories:
@@ -13,8 +10,6 @@ tags:
   - software
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/carlitos-1-xilinx-0/fpga_xilinx_spartan.jpg", "Xilinx Spartan" %}
 

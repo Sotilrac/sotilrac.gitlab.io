@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao 1337 Online at MyRobots.com
-author: Carlos
 id: 1116
 wordpress_url: http://carlitoscontraptions.com/?p=1116
 date: 2011-12-23T04:03:46-05:00
@@ -17,8 +14,6 @@ tags:
   - robotics
   - IoT
 ---
-
-{% include "archive-banner.njk" %}
 
 For close to a year now I have been working on a Cloud Robotics project called {% wayback "https://web.archive.org/web/20100503211817/http://www.myrobots.com:80/", "MyRobots.com" %} along with RobotShop.
 

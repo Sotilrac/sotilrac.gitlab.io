@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Repairing Shoelaces with Heat-shrink Tubing
-author: Carlos
 id: 42
 date: 2008-01-31T13:15:00-05:00
 date_gmt: 2008-01-31T20:15:00-05:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 I'm always very annoyed by shoelaces tips breaking and thus making them very difficult to insert in shoe eyelets.
 

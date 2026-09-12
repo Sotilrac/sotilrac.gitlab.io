@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: More Linux
-author: Carlos
 id: 24
 date: 2007-03-08T22:52:00-05:00
 date_gmt: 2007-03-09T05:52:00-05:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - linux
 ---
-
-{% include "archive-banner.njk" %}
 
 The good thing about Linux is that it is light and manages the hardware well. This means that my computer runs fast nicely. This was not the case when I was running a commercial mainstream OS, my computer was so slow and sluggish that I thought I needed a newer faster one.
 

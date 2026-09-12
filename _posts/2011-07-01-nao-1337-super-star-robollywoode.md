@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao 1337 Super Star. Robollywood, here we come!
-author: Carlos
 id: 973
 wordpress_url: http://carlitoscontraptions.com/?p=973
 date: 2011-07-01T19:37:42-04:00
@@ -15,8 +12,6 @@ tags:
   - Robot Film Festival
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 1337 and I will be participating in the [Robot Film Festival](http://robotfilmfestival.com/) at NYC.
 

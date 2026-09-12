@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Make Your Girlfriend Happy For 0.25$
-author: Carlos
 id: 8
 date: 2006-10-07T22:33:00-04:00
 date_gmt: 2006-10-08T05:33:00-04:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - ring
 ---
-
-{% include "archive-banner.njk" %}
 
 I saw in {% wayback "https://web.archive.org/web/20060804080842/http://cleanstream.net/mirrors/coin_ring/", "this site" %} (try {% wayback "https://web.archive.org/web/20060406054642/http://homepage.mac.com:80/johnhuber/CoinRing/PhotoAlbum20.html", "this one" %} if the link is broken) that we can build a coin ring using a spoon, a drill, a Dremel and some metal polish. Immediately, I wanted to do one.
 

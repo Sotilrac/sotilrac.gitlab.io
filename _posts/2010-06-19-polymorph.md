@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: We Have Polymorph!
-author: Carlos
 id: 638
 wordpress_url: http://carlitoscontraptions.com/?p=638
 date: 2010-06-19T21:09:35-04:00
@@ -14,8 +11,6 @@ tags:
   - Polymorph
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/polymorph/img_4617.jpg", "Polymorph" %}
 

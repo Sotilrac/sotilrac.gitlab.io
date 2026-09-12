@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Blog Makeover, Take 2
-author: Carlos
 date: 2026-03-12T12:00:00-05:00
 categories:
   - News

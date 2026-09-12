@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: DIY Universal Jamming Gripper 2.0
-author: Carlos
 id: 938
 wordpress_url: http://carlitoscontraptions.com/?p=938
 date: 2011-05-30T02:03:40-04:00
@@ -14,8 +11,6 @@ tags:
   - jamming gripper
   - MIT
 ---
-
-{% include "archive-banner.njk" %}
 
 As promised, I improved on [my initial rather silly design](/blog/diy-universal-robot-gripper/) of the universal gripper as inspired by iRobot and University of Chicago.
 

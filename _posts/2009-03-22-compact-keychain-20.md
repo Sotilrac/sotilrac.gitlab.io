@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Compact Keychain 2.0
-author: Carlos
 id: 72
 wordpress_url: http://carlitoscontraptions.com/?p=72
 date: 2009-03-22T20:34:00-04:00
@@ -14,8 +11,6 @@ tags:
   - metal
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/compact-keychain-20/img_1715.jpg", "" %}
 

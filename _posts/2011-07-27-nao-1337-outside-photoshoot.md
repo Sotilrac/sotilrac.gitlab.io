@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: First Time Nao 1337 Goes Outside, Photoshoot
-author: Carlos
 id: 1056
 wordpress_url: http://carlitoscontraptions.com/?p=1056
 date: 2011-07-27T23:04:40-04:00
@@ -16,8 +13,6 @@ tags:
   - Nao
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-1337-outside-photoshoot/img_0788.jpg", "Nao 1337 and Carlitos Downtown" %}
 

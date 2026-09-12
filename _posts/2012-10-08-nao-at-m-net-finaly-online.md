@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao 1337 at M. Net Finally Online!
-author: Carlos
 id: 1523
 wordpress_url: http://carlitoscontraptions.com/?p=1523
 date: 2012-10-08T23:11:04-04:00
@@ -15,8 +12,6 @@ tags:
   - M.Net
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 As reported before, [Nao 1337 and I appeared at the M.Net TV Show on MusiquePlus](/blog/nao-1337-at-m-net/). You can now see the full [M.Net episode](http://www.musiqueplus.com/videos/m-net-14-septembre-2012-int%C3%A9grale-1.1063834) from September 14th below or at the [MusiquePlus site](http://www.musiqueplus.com/videos/m-net-14-septembre-2012-int%C3%A9grale-1.1063834).
 

@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: Sigmoids are the Best!
 categories:
   - Robotics

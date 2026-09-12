@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Arduino Launcher for the KDE menu
-author: Carlos
 id: 35
 date: 2007-08-17T13:17:00-04:00
 date_gmt: 2007-08-17T20:17:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - Arduino
 ---
-
-{% include "archive-banner.njk" %}
 
 The Arduino software is good and works very well under Linux. Nevertheless, it doesn't create a menu item when installed and it can be tricky to create one for those who are not very used to Linux (like me).
 

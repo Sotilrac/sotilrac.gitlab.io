@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Speech Recognition Using on FPGA
-author: Carlos
 id: 31
 date: 2007-06-23T15:28:00-04:00
 date_gmt: 2007-06-23T22:28:00-04:00
@@ -12,8 +9,6 @@ tags:
   - speech recognition
   - FPGA
 ---
-
-{% include "archive-banner.njk" %}
 
 My friends David and Kanwen, and I implemented a speech recognition system on an FPGA development board (Altera DE2 Board) for the Design Project course at McGill (ECSE 494). We did this in two steps: first we wrote a prototype for the algorithm in MATLAB (I'll maybe port it to Octave), and then we did the hardware description for the FPGA.
 

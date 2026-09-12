@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Big Buck Bunny Puzzle
-author: Carlos
 id: 68
 wordpress_url: http://carlitoscontraptions.com/?p=68
 date: 2009-01-27T17:11:00-05:00
@@ -14,8 +11,6 @@ tags:
   - craft
   - wood
 ---
-
-{% include "archive-banner.njk" %}
 
 When I was a young child, I had a double-sided nine pieces wooden puzzle. It featured Pinocchio on one side, and a mermaid on the other. The pieces were all equally-sized rectangles. I really liked this puzzle and had it for a long time since not only it was a puzzle but the wooden blocks could easily become a wall, a pile of bricks, etc.
 

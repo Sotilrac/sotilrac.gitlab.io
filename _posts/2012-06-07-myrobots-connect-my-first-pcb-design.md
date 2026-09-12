@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: MyRobots Connect, My First PCB Design
-author: Carlos
 id: 1177
 wordpress_url: http://carlitoscontraptions.com/?p=1177
 date: 2012-06-07T09:04:53-04:00
@@ -14,8 +11,6 @@ tags:
   - OSHW
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 In the last year, I created my first full hardware design, including its custom firmware, for RobotShop. Of course, the design is open source so you can reuse it however you like. The end-result is the [MyRobots Connect](http://www.robotshop.com/ProductInfo.aspx?pc=RB-Myr-01), a Serial-to-Ethernet gateway.
 

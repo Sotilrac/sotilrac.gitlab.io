@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: To WordPress from Blogger
-author: Carlos
 id: 75
 date: 2009-04-17T02:56:49-04:00
 date_gmt: 2009-04-17T06:56:49-04:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - software
 ---
-
-{% include "archive-banner.njk" %}
 
 I recently moved my blog from Blogger to an independently hosted WordPress installation and I needed to dynamically redirect the visitors going into the old pages so that they could see the new ones.
 

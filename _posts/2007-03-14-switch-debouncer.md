@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Switch Debouncer
-author: Carlos
 id: 26
 date: 2007-03-14T23:42:00-04:00
 date_gmt: 2007-03-15T06:42:00-04:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - FPGA
 ---
-
-{% include "archive-banner.njk" %}
 
 For a project I'm doing at school, we needed a debouncer so my teammate David and I designed one.
 

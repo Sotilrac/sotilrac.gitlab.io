@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Pololu Python Library
-author: Carlos
 id: 79
 wordpress_url: http://carlitoscontraptions.com/?p=222
 date: 2009-07-16T00:54:29-04:00
@@ -14,8 +11,6 @@ tags:
   - robotics
   - software
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/pololu-python-library/IMG_1409.JPG", "Pololu Micro Serial Servo Controller" %}
 

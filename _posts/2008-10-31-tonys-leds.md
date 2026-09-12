@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Tony's LEDs
-author: Carlos
 id: 62
 wordpress_url: http://carlitoscontraptions.com/?p=62
 date: 2008-10-31T12:40:00-04:00
@@ -14,8 +11,6 @@ tags:
   - electronics
   - cosplay
 ---
-
-{% include "archive-banner.njk" %}
 
 I received many questions about the circuits driving the LEDs in many of my projects, especially for the Iron Man's repulsor.
 

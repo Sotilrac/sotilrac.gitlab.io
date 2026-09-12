@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: DIY Universal Gripper in Make Magazine
-author: Carlos
 id: 1085
 wordpress_url: http://carlitoscontraptions.com/?p=1085
 date: 2011-08-18T22:09:13-04:00
@@ -14,8 +11,6 @@ tags:
   - press
   - Make
 ---
-
-{% include "archive-banner.njk" %}
 
 I am very happy to announce that my [DIY universal gripper project](/blog/diy-universal-robot-gripper/) has been featured in Make magazine Volume 27. See the article below. Also check out [my updated version of the gripper.](/blog/diy-universal-jamming-gripper-2-0/)
 

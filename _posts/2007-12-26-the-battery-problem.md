@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: The Battery Problem
-author: Carlos
 id: 40
 date: 2007-12-26T21:20:00-05:00
 date_gmt: 2007-12-27T04:20:00-05:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/the-battery-problem/ss850292.jpg", "" %}
 

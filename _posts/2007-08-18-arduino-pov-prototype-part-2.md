@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Arduino POV Prototype - Part 2
-author: Carlos
 id: 36
 date: 2007-08-18T21:15:00-04:00
 date_gmt: 2007-08-19T04:15:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - Arduino
 ---
-
-{% include "archive-banner.njk" %}
 
 I polished up the code for my [Arduino POV display](/blog/arduino-pov-prototype/) and I think it is now ready to be shown to the world!
 

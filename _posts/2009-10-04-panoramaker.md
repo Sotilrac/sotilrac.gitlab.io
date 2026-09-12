@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Panoramaker
-author: Carlos
 id: 84
 date: 2009-10-04T21:55:03-04:00
 date_gmt: 2009-10-05T01:55:03-04:00
@@ -13,8 +10,6 @@ tags:
   - software
   - photography
 ---
-
-{% include "archive-banner.njk" %}
 
 As [promised before](/blog/panoramic-camera-prototype/ "Panoramic Camera Prototype"), here is the Python script that runs my [panoramic camera hardware](/blog/panoramic-camera-prototype/ "Panoramic Camera Prototype"). It is a very quick prototype and is by no means intended for widespread use since it requires manual calibration. Nevertheless, it might be very useful to those seeking to learn how to position the servos or control a digital camera through Python.
 

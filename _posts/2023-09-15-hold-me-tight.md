@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: Hold Me Tight
 date: 2023-09-15T12:00:00-04:00
 categories:

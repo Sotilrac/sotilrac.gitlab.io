@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: OMG! It's Coming Nao!
-author: Carlos
 id: 817
 wordpress_url: http://carlitoscontraptions.com/?p=817
 date: 2011-01-18T01:45:09-05:00
@@ -15,8 +12,6 @@ tags:
   - Developer Program
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/omg-its-comming-nao/Naos-packing-Picture.jpg", "Nao's Packing Picture" %}
 

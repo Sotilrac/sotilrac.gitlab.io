@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: DIY Universal Robot Gripper
-author: Carlos
 id: 764
 wordpress_url: http://carlitoscontraptions.com/?p=764
 date: 2010-10-31T04:18:37-04:00
@@ -14,8 +11,6 @@ tags:
   - jamming gripper
   - MIT
 ---
-
-{% include "archive-banner.njk" %}
 
 **UPDATE:** See the [new version of the universal gripper](/blog/diy-universal-jamming-gripper-2-0/) with more pictures and new videos.
 

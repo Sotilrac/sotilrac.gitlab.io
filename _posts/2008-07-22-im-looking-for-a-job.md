@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: I'm looking for a job
-author: Carlos
 id: 52
 date: 2008-07-22T22:21:00-04:00
 date_gmt: 2008-07-23T05:21:00-04:00
@@ -12,8 +9,6 @@ categories:
 tags:
   - "2008"
 ---
-
-{% include "archive-banner.njk" %}
 
 Now that I am a bachelor of engineering (actually I graduated two months ago), I would really like to find an engineering job.
 

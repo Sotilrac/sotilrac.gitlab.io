@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Some Ideas
-author: Carlos
 id: 11
 date: 2006-11-05T23:36:00-05:00
 date_gmt: 2006-11-06T06:36:00-05:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - idea
 ---
-
-{% include "archive-banner.njk" %}
 
 This is a list of the things I would like to build (any ideas are welcome):
 

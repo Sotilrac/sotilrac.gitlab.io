@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Have No Fear, Nao is Here
-author: Carlos
 id: 828
 wordpress_url: http://carlitoscontraptions.com/?p=828
 date: 2011-02-09T00:34:21-05:00
@@ -16,8 +13,6 @@ tags:
   - Aldebaran
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/have-no-fear-nao-is-here/Nao-Wave.jpg", "Nao 1337 Waves" %}
 

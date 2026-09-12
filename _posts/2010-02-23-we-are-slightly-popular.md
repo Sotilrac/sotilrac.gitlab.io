@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: We are (surprisingly) popular
-author: Carlos
 id: 519
 wordpress_url: http://carlitoscontraptions.com/?p=519
 date: 2010-02-23T21:48:56-05:00
@@ -16,8 +13,6 @@ tags:
   - Ecuador
   - trip
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/we-are-slightly-popular/img_1002.jpg", "The IB + Engineer in Ecuador" %}
 

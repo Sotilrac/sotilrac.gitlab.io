@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: The Sign on the Bike Path
 categories:
   - Robotics

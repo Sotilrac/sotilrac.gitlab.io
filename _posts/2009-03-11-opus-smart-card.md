@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Opus Smart Card
-author: Carlos
 id: 71
 wordpress_url: http://carlitoscontraptions.com/?p=71
 date: 2009-03-11T00:11:00-04:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 > _The Opus card is pretty much like an onion_  
 > ~ {% wayback "https://web.archive.org/web/20080203202857/http://uncyclopedia.wikia.com:80/wiki/Oscar_Wilde", "Oscar Wilde" %}

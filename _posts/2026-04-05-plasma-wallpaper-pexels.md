@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: Pexels Wallpaper Plugin for KDE Plasma
 date: 2026-04-05T16:37:51-04:00
 categories:

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Big Buck Bunny
-author: Carlos
 id: 48
 date: 2008-05-27T10:49:00-04:00
 date_gmt: 2008-05-27T17:49:00-04:00
@@ -13,8 +10,6 @@ tags:
   - Blender
   - DVD
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/big-buck-bunny/bigbuckdvd.jpg", "" %}
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Simple Precision-Screwdriver Holder
-author: Carlos
 id: 92
 wordpress_url: http://carlitoscontraptions.com/?p=434
 date: 2009-12-14T15:45:32-05:00
@@ -14,8 +11,6 @@ tags:
   - craft
   - wood
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/simple-precision-screwdriver-holder/img_1032.jpg", "Workshop wall" %}
 

@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Cloud Robotics Hackathon
-author: Carlos
 id: 1161
 wordpress_url: http://carlitoscontraptions.com/?p=1161
 date: 2012-06-01T19:44:22-04:00
@@ -14,8 +11,6 @@ tags:
   - hackathon
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 Back in March we organized the first {% wayback "https://web.archive.org/web/20191223154646/http://roboticshackathon.com/", "Global Cloud Robotics Hackathon" %}. Along with co-organizer Sara Ahmadian, and all the local and global collaborators, we brought together around 200 people in eight locations around the world.
 

@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: Foggy Maps
 categories:
   - My Projects

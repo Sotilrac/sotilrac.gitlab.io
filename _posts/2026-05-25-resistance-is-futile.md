@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: Resistance is Futile
 figWidth: 24em
 categories:

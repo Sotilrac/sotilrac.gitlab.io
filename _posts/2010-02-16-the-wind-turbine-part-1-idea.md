@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: "The Wind Turbine Part 1: General Idea"
-author: Carlos
 id: 85
 wordpress_url: http://carlitoscontraptions.com/?p=501
 date: 2010-02-16T00:14:50-05:00
@@ -16,8 +13,6 @@ tags:
   - Ecuador
   - trip
 ---
-
-{% include "archive-banner.njk" %}
 
 Mainly inspired by the [Chispito Wind Turbine](https://velacreations.com/howto/chispito/) and the {% wayback "https://web.archive.org/web/20090215213015/http://blog.makezine.com/archive/2009/02/make_television_episode_7_urban_pro.html", "Make Magazine version" %} of the former (see the {% wayback "https://web.archive.org/web/20150922185031/http://cdn.makezine.com/make/television/wind.pdf", "PDF" %}), [we](/blog/ecuadorian-makecation/ "The 2010 IB group and I") decided to make a wind turbine for the Ecuadorians. Since all the turbines I mentioned have cool names, let us name our Ecuadorian turbine in a similar fashion: **The IBee Turbine** (the name might still need some work).
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Tux Laptop Sleeve
-author: Carlos
 id: 82
 date: 2009-09-07T11:50:50-04:00
 date_gmt: 2009-09-07T15:50:50-04:00
@@ -13,8 +10,6 @@ tags:
   - linux
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 The only defect of my new [Vostro 1320](/blog/new-laptop/ "Vostro 1320") is that it did not come with a sleeve as the Eee PC does. Since I would like to protect the laptop from scratched and dust, a sleeve is absolutely required. So, from my perspective, the only solution to this problem was to do one myself.
 

@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao 1337 Plays Rock Paper Scissors Lizard Spock at Maker Faire NY 2011
-author: Carlos
 id: 1109
 wordpress_url: http://carlitoscontraptions.com/?p=1109
 date: 2011-10-13T22:18:29-04:00
@@ -18,8 +15,6 @@ tags:
   - Maker Faire
   - game
 ---
-
-{% include "archive-banner.njk" %}
 
 {% youtube "0QylLaTzx5Q" %}
 

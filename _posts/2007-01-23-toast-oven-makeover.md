@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Toast Oven Makeover
-author: Carlos
 id: 20
 date: 2007-01-23T15:46:00-05:00
 date_gmt: 2007-01-23T22:46:00-05:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - trash
 ---
-
-{% include "archive-banner.njk" %}
 
 My girlfriend had an old toast oven (about 20 years old). Slowly it decayed and eventually, broke (the timer did not work any more but it still heats).
 

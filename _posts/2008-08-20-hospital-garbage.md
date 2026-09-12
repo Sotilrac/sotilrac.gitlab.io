@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Hospital Garbage
-author: Carlos
 id: 52
 date: 2008-08-20T20:40:00-04:00
 date_gmt: 2008-08-21T03:40:00-04:00
@@ -13,8 +10,6 @@ tags:
   - trash
   - craft
 ---
-
-{% include "archive-banner.njk" %}
 
 I found a little stool lying around in the garbage lately and decided to give it a new life. It turns out the stool comes from some kind of hospital and is actually pretty old.
 

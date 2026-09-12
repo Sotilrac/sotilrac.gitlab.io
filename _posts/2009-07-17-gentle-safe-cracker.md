@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Gentle Safe Cracker
-author: Carlos
 id: 79
 wordpress_url: http://carlitoscontraptions.com/?p=277
 date: 2009-07-17T15:30:44-04:00
@@ -15,8 +12,6 @@ tags:
   - cracking
   - mechanical
 ---
-
-{% include "archive-banner.njk" %}
 
 ## The problem:
 

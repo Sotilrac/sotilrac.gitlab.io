@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Carlitos' Contraptions Hacked!
-author: Carlos
 id: 897
 wordpress_url: http://carlitoscontraptions.com/?p=897
 date: 2011-03-19T13:47:53-04:00
@@ -14,8 +11,6 @@ tags:
   - WordPress
   - hack
 ---
-
-{% include "archive-banner.njk" %}
 
 **UPDATE:** Spam removed, security enhanced, spammer squished.
 

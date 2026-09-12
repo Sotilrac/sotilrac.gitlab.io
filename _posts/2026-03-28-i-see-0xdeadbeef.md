@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: I See 0xDEADBEEF
 date: 2026-03-28T12:00:00-04:00
 categories:

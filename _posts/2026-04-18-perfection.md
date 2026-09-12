@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: Perfection?
 date: 2026-04-18T15:14:57-04:00
 categories:

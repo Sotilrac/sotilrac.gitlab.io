@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Bottle Cap PC Thermometer
-author: Carlos
 id: 6
 date: 2006-09-15T12:32:00-04:00
 date_gmt: 2006-09-15T19:32:00-04:00
@@ -13,8 +10,6 @@ tags:
   - trash
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 Based on a circuit I found in [this website](http://web.archive.org/web/20040215182109/http://www.electronics-lab.com/projects/pc/013/index.html "Wayback Machine Link"),  
 I built a very simple thermometer. The major thing I added to the original design is a nice case.

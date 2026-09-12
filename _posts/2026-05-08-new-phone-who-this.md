@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: "New phone. Who this?"
-status: public
 categories:
   - Software
 tags:

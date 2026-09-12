@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Compact Keychain
-author: Carlos
 id: 23
 date: 2007-03-05T21:40:00-05:00
 date_gmt: 2007-03-06T04:40:00-05:00
@@ -12,8 +9,6 @@ tags:
   - DIY
   - caft
 ---
-
-{% include "archive-banner.njk" %}
 
 **Update:** I have done an improved version: [the compact keychain 2.0](/blog/compact-keychain-20/ "Compact Keychain 2.0").
 

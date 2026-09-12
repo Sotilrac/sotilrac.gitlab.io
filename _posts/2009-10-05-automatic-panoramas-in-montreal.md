@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Automatic Panoramas in Montreal
-author: Carlos
 id: 85
 date: 2009-10-05T01:01:44-04:00
 categories:
@@ -13,8 +10,6 @@ tags:
   - software
   - vision
 ---
-
-{% include "archive-banner.njk" %}
 
 I used [the automated panoramic photography rig](/blog/panoramic-camera-prototype/ "Panoramic Camera Prototype") (or [Panoramaker](/blog/panoramaker/ "Panoramaker"), for short) in order to make some panoramas here in Montreal.
 

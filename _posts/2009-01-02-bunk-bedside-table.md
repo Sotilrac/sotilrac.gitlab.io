@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Bunk Bedside Table
-author: Carlos
 id: 67
 wordpress_url: http://carlitoscontraptions.com/?p=67
 date: 2009-01-02T11:23:00-05:00
@@ -14,8 +11,6 @@ tags:
   - craft
   - wood
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/bunk-bedside-table/img_1092.jpg", "" %}
 

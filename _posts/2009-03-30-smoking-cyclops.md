@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Smoking Cyclops
-author: Carlos
 id: 73
 wordpress_url: http://carlitoscontraptions.com/?p=73
 date: 2009-03-30T13:31:00-04:00
@@ -14,8 +11,6 @@ tags:
   - mechanical
   - soldering
 ---
-
-{% include "archive-banner.njk" %}
 
 For a long time now, I wanted to have a soldering fumes extractor. Until now I have been using a small fan but I wanted something more appropriate, something that would filter the fumes instead of just moving them away.
 

@@ -1,7 +1,4 @@
 ---
-layout: layouts/post.njk
-status: public
-author: Carlos
 title: udev Rules for Predictable Device Names
 date: 2021-05-19T14:53:00-04:00
 categories:

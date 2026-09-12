@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Speech-Controlled Arduino Robot
-author: Carlos
 id: 888
 wordpress_url: http://carlitoscontraptions.com/?p=888
 date: 2011-03-13T16:14:47-04:00
@@ -16,8 +13,6 @@ tags:
   - Nao
   - XBee
 ---
-
-{% include "archive-banner.njk" %}
 
 For the second Carlitos' Project, I wanted to do something a bit more "useful" than pretty lights. So I decided that a speech controlled Arduino robot should be interesting enough as a project.
 

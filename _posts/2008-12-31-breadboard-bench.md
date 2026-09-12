@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Breadboard Bench
-author: Carlos
 id: 66
 wordpress_url: http://carlitoscontraptions.com/?p=66
 date: 2008-12-31T14:48:00-05:00
@@ -14,8 +11,6 @@ tags:
   - electronics
   - trash
 ---
-
-{% include "archive-banner.njk" %}
 
 I found a nice breadboard in McGill's garbage a while ago and decided to convert it into an electronics bench. My main goal was to have a powerful power supply with regulated outputs combined with a breadboard and some useful connectors so I can build circuit prototypes easily. Also, I needed a new bench power supply since [mine](/blog/bench-power-supply/ "Bench Power Supply") was lost in the [Lunar Excavator](/blog/lunar-excavator/ "Lunar Excavator") shipment.
 

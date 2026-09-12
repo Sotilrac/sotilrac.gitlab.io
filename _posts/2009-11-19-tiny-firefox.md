@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Tiny Firefox
-author: Carlos
 id: 89
 date: 2009-11-19T14:58:33-05:00
 categories:
@@ -12,8 +9,6 @@ tags:
   - software
   - Open Source
 ---
-
-{% include "archive-banner.njk" %}
 
 Ever since I got [my EeePC](/blog/eee-pc-1000-ubuntu-kde-41/ "EeePC"), I got obsessed by the amount of screen real-state Firefox takes for the top menu, browsing control buttons, address and search bar, etc.
 

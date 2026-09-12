@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Inverted Pendulum
-author: Carlos
 id: 50
 wordpress_url: http://carlitoscontraptions.com/?p=55
 date: 2008-06-20T07:32:00-04:00
@@ -15,8 +12,6 @@ tags:
   - robotics
   - control
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/inverted-pendulum/cart.png", "" %}
 

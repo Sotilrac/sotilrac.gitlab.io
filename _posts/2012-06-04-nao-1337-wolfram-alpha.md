@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Nao 1337 Uses Wolfram Alpha Knowledge
-author: Carlos
 id: 1167
 wordpress_url: http://carlitoscontraptions.com/?p=1167
 date: 2012-06-04T19:52:35-04:00
@@ -16,8 +13,6 @@ tags:
   - Wolfram
   - robotics
 ---
-
-{% include "archive-banner.njk" %}
 
 {% fig "/img/blog/nao-1337-wolfram-alpha/WolframAlpha-Knowledge-Engine.jpg", "Wolfram|Alpha Knowledge Engine" %}
 

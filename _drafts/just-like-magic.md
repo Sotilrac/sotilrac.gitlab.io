@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: Just Like Magic
 categories:
   - Working Theory

@@ -1,6 +1,4 @@
 ---
-layout: layouts/post.njk
-author: Carlos
 title: Real Certificates for a LAN Server
 categories:
   - TIL

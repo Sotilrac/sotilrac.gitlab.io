@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Enough with the guesswork, I got Logic
-author: Carlos
 id: 91
 wordpress_url: http://carlitoscontraptions.com/?p=455
 date: 2009-12-11T02:30:45-05:00
@@ -13,8 +10,6 @@ categories:
 tags:
   - electronics
 ---
-
-{% include "archive-banner.njk" %}
 
 I just got a shiny new [Logic](http://www.saleae.com/logic/ "The Logic"), a tiny 8-channel, 24 MHz logic analyzer from {% wayback "https://web.archive.org/web/20080609005002/http://www.saleae.com:80/home/", "Saleae LLC" %}, and it is beautiful. I've been wanting to get a logic analyzer for quite some time and this little guy is definitely worth the 150 bucks it costs.
 

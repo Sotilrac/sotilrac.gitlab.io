@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.njk
-status: public
 title: Engineering Bling
-author: Carlos
 id: 44
 date: 2008-03-17T01:53:00-04:00
 date_gmt: 2008-03-17T08:53:00-04:00
@@ -11,8 +8,6 @@ categories:
 tags:
   - ring
 ---
-
-{% include "archive-banner.njk" %}
 
 Finally, I got the ultimate (engineering) bling: The Iron Ring.
 

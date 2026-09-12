@@ -1,9 +1,6 @@
 ---
-layout: layouts/post.njk
-status: public
 published: true
 title: Making Panoramas
-author: Carlos
 id: 77
 wordpress_url: http://carlitoscontraptions.com/?p=169
 date: 2009-05-09T20:34:06-04:00
@@ -14,8 +11,6 @@ tags:
   - photography
   - vision
 ---
-
-{% include "archive-banner.njk" %}
 
 In my trip to San Francisco, I had the chance to see many beautiful things. And I wanted to be able to remember them and show them to my friends and family.
 
