@@ -36,27 +36,33 @@
 }
 
 /* --- Fonts --- */
+/* WOFF2 built from the upstream TTFs with fonttools. `swap` shows text in the
+   fallback face while they load. */
 @font-face {
   font-family: "Hack";
-  src: url("../font/Hack-Regular.ttf");
+  font-display: swap;
+  src: url("../font/Hack-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Inter";
   font-weight: 100 900;
   font-style: normal;
-  src: url("../font/Inter-VariableFont_opsz,wght.ttf")
-    format("truetype-variations");
+  font-display: swap;
+  src: url("../font/Inter-VariableFont_opsz,wght.woff2")
+    format("woff2-variations");
 }
 @font-face {
   font-family: "Inter";
   font-weight: 100 900;
   font-style: italic;
-  src: url("../font/Inter-Italic-VariableFont_opsz,wght.ttf")
-    format("truetype-variations");
+  font-display: swap;
+  src: url("../font/Inter-Italic-VariableFont_opsz,wght.woff2")
+    format("woff2-variations");
 }
 @font-face {
   font-family: "Telegrama";
-  src: url("../font/telegrama_render.otf");
+  font-display: swap;
+  src: url("../font/telegrama_render.woff2") format("woff2");
 }
 
 /* --- Reset --- */
@@ -672,10 +678,6 @@ footer p {
 
 .post-status-draft {
   background: var(--crimson);
-}
-
-.post-status-archive {
-  background: var(--pewter);
 }
 
 .post-meta {
