@@ -20,6 +20,9 @@ public/
 # Lock files
 *.lock
 
+# Editor state
+*.sublime-workspace
+
 # Other
 .claude
 .directory

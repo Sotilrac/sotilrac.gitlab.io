@@ -33,10 +33,11 @@
 
   async function decryptField(payload, password) {
     const data = Uint8Array.from(atob(payload), (c) => c.charCodeAt(0));
-    if (data.length < 28) throw new Error("payload too short");
-    const salt = data.slice(0, 16);
-    const iv = data.slice(16, 28);
-    const ct = data.slice(28);
+    const header = {{ contactCrypto.saltBytes }} + {{ contactCrypto.ivBytes }};
+    if (data.length < header) throw new Error("payload too short");
+    const salt = data.slice(0, {{ contactCrypto.saltBytes }});
+    const iv = data.slice({{ contactCrypto.saltBytes }}, header);
+    const ct = data.slice(header);
     const baseKey = await crypto.subtle.importKey(
       "raw",
       new TextEncoder().encode(password),
@@ -45,9 +46,14 @@
       ["deriveKey"],
     );
     const aesKey = await crypto.subtle.deriveKey(
-      { name: "PBKDF2", salt, iterations: 200000, hash: "SHA-256" },
+      {
+        name: "PBKDF2",
+        salt,
+        iterations: {{ contactCrypto.iterations }},
+        hash: "{{ contactCrypto.hash }}",
+      },
       baseKey,
-      { name: "AES-GCM", length: 256 },
+      { name: "AES-GCM", length: {{ contactCrypto.keyBits }} },
       false,
       ["decrypt"],
     );

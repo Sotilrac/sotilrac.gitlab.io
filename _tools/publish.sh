@@ -1,7 +1,7 @@
 #!/bin/bash
 # Promote a draft from _drafts/ to _posts/ with today's date (or a given one).
-# Adds `date:` frontmatter (and `layout:` if the draft relied on the _drafts/
-# directory default) and renames the file with a YYYY-MM-DD prefix.
+# Adds `date:` frontmatter and renames the file with a YYYY-MM-DD prefix.
+# `layout:` comes from _posts/_posts.11tydata.mjs, so nothing is added for it.
 # Usage: ./_tools/publish.sh slug [YYYY-MM-DD]
 
 set -e
@@ -34,8 +34,8 @@ if [ -f "$dest" ]; then
   exit 1
 fi
 
-# Insert `date:` (before the closing `---`, or replace an existing one) and
-# `layout:` (after the opening `---`, if absent) into the frontmatter.
+# Insert `date:` before the closing `---`, or replace an existing one. Scoped to
+# the frontmatter so a body line starting with `date:` is left alone.
 awk -v ts="$timestamp" '
   BEGIN { in_fm = 0; fm_count = 0; date_printed = 0 }
   /^---$/ {
@@ -43,7 +43,6 @@ awk -v ts="$timestamp" '
     if (fm_count == 1) {
       in_fm = 1
       print
-      if (!has_layout) print "layout: layouts/post.njk"
       next
     }
     if (fm_count == 2) {
@@ -59,7 +58,7 @@ awk -v ts="$timestamp" '
     next
   }
   { print }
-' has_layout="$(grep -c '^layout:' "$src")" "$src" > "$src.tmp" && mv "$src.tmp" "$src"
+' "$src" > "$src.tmp" && mv "$src.tmp" "$src"
 
 git mv "$src" "$dest" 2>/dev/null || mv "$src" "$dest"
 

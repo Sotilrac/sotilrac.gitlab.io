@@ -30,8 +30,28 @@ slug=$(echo "$base" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
 new_file="${dir}/${new_date}-${slug}"
 new_timestamp="${new_date}T12:00:00$(date +%:z)"
 
-# Update date in frontmatter
-sed -i "s/^date: .*/date: ${new_timestamp}/" "$file"
+if [ "$file" != "$new_file" ] && [ -e "$new_file" ]; then
+  echo "Destination already exists: $new_file"
+  exit 1
+fi
+
+# Rewrite `date:` inside the frontmatter only, so a body line starting with
+# `date:` is left alone.
+awk -v ts="$new_timestamp" '
+  BEGIN { in_fm = 0; fm_count = 0 }
+  /^---$/ {
+    fm_count++
+    if (fm_count == 1) in_fm = 1
+    else if (fm_count == 2) in_fm = 0
+    print
+    next
+  }
+  in_fm && /^date:/ {
+    print "date: " ts
+    next
+  }
+  { print }
+' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
 
 # Rename file if date changed
 if [ "$file" != "$new_file" ]; then

@@ -3,10 +3,11 @@
 // single-file js/ee-calculator.js that the post embeds.
 //
 // The source layout:
-//   src/ee-calculator/main.js     — logic with placeholder string constants
-//   src/ee-calculator/style.css   — extracted CSS for the Shadow DOM
+//   src/ee-calculator/main.js     - logic with placeholder string constants
+//   src/ee-calculator/style.css   - extracted CSS for the Shadow DOM
 //   src/ee-calculator/resistor.svg
 //   src/ee-calculator/ic-555.svg
+//   src/ee-calculator/symbols/*.svg - schematic <symbol> defs (see symbolFiles)
 //
 // Placeholder convention in main.js: a const initialized to the literal
 // string "__NAME__" (with surrounding quotes), e.g. `const STYLE = "__STYLE_CSS__";`.
@@ -59,7 +60,10 @@ for (const { token, value } of replacements) {
     );
     process.exit(1);
   }
-  out = out.replace(token, JSON.stringify(value));
+  // Function replacement: a literal $& or $$ in the source must not be
+  // treated as a replacement pattern.
+  const json = JSON.stringify(value);
+  out = out.replace(token, () => json);
 }
 
 const header = `// AUTO-GENERATED from src/ee-calculator/. Do not edit directly.\n// To make changes, edit src/ee-calculator/*.{js,css,svg} and rebuild.\n//   make ee-calc   (or just \`make build\`, which depends on it)\n\n`;

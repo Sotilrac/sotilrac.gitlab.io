@@ -2,9 +2,9 @@
 // Encrypt a contact value for _data/resume.yml.
 //
 // Output is base64(salt[16] || iv[12] || ciphertext+tag), produced with
-// AES-GCM using a 256-bit key derived from the password via PBKDF2-SHA256
-// (200000 iterations). The browser-side decrypt lives in
-// _includes/footer.njk and uses Web Crypto API.
+// AES-GCM using a 256-bit key derived from the password via PBKDF2-SHA256.
+// Parameters live in _tools/contact-crypto.mjs. The browser-side decrypt lives
+// in _includes/footer.njk and uses Web Crypto API.
 //
 // usage:
 //   node _tools/encrypt-contact.mjs --key '<password>' --text '<plaintext>'
@@ -14,18 +14,8 @@
 
 import { webcrypto } from "node:crypto";
 
-const ITERATIONS = 200000;
-
-function parseArgs(argv) {
-  const out = {};
-  for (let i = 0; i < argv.length; i++) {
-    const a = argv[i];
-    if (a === "--key") out.key = argv[++i];
-    else if (a === "--text") out.text = argv[++i];
-    else if (a === "-h" || a === "--help") out.help = true;
-  }
-  return out;
-}
+import crypto from "./contact-crypto.mjs";
+import { parseArgs } from "./lib.mjs";
 
 async function readStdin() {
   let data = "";
@@ -34,7 +24,7 @@ async function readStdin() {
 }
 
 async function main() {
-  const args = parseArgs(process.argv.slice(2));
+  const args = parseArgs(process.argv.slice(2), ["key", "text"]);
   if (args.help || !args.key) {
     console.error(
       "usage: node _tools/encrypt-contact.mjs --key '<password>' --text '<plaintext>'\n" +
@@ -49,8 +39,8 @@ async function main() {
   }
 
   const enc = new TextEncoder();
-  const salt = webcrypto.getRandomValues(new Uint8Array(16));
-  const iv = webcrypto.getRandomValues(new Uint8Array(12));
+  const salt = webcrypto.getRandomValues(new Uint8Array(crypto.saltBytes));
+  const iv = webcrypto.getRandomValues(new Uint8Array(crypto.ivBytes));
 
   const baseKey = await webcrypto.subtle.importKey(
     "raw",
@@ -60,9 +50,14 @@ async function main() {
     ["deriveKey"],
   );
   const aesKey = await webcrypto.subtle.deriveKey(
-    { name: "PBKDF2", salt, iterations: ITERATIONS, hash: "SHA-256" },
+    {
+      name: "PBKDF2",
+      salt,
+      iterations: crypto.iterations,
+      hash: crypto.hash,
+    },
     baseKey,
-    { name: "AES-GCM", length: 256 },
+    { name: "AES-GCM", length: crypto.keyBits },
     false,
     ["encrypt"],
   );

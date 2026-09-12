@@ -23,11 +23,12 @@ if [ -f "$file" ]; then
   exit 1
 fi
 
+# Escape for a YAML double-quoted scalar so a title with `:` or `"` still parses.
+yaml_title=$(printf '%s' "$title" | sed 's/\\/\\\\/g; s/"/\\"/g')
+
 cat > "$file" << EOF
 ---
-layout: layouts/post.njk
-author: Carlos
-title: ${title}
+title: "${yaml_title}"
 categories:
   -
 tags:

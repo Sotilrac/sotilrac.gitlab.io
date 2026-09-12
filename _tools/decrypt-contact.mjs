@@ -9,19 +9,13 @@
 
 import { webcrypto } from "node:crypto";
 
-function parseArgs(argv) {
-  const out = {};
-  for (let i = 0; i < argv.length; i++) {
-    const a = argv[i];
-    if (a === "--key") out.key = argv[++i];
-    else if (a === "--text") out.text = argv[++i];
-    else if (a === "-h" || a === "--help") out.help = true;
-  }
-  return out;
-}
+import cryptoParams from "./contact-crypto.mjs";
+import { parseArgs } from "./lib.mjs";
+
+const HEADER = cryptoParams.saltBytes + cryptoParams.ivBytes;
 
 async function main() {
-  const args = parseArgs(process.argv.slice(2));
+  const args = parseArgs(process.argv.slice(2), ["key", "text"]);
   if (args.help || !args.key || !args.text) {
     console.error(
       "usage: node _tools/decrypt-contact.mjs --key '<password>' --text '<base64>'",
@@ -30,13 +24,13 @@ async function main() {
   }
 
   const data = Uint8Array.from(Buffer.from(args.text, "base64"));
-  if (data.length < 28) {
+  if (data.length < HEADER) {
     console.error("payload too short");
     process.exit(1);
   }
-  const salt = data.slice(0, 16);
-  const iv = data.slice(16, 28);
-  const ct = data.slice(28);
+  const salt = data.slice(0, cryptoParams.saltBytes);
+  const iv = data.slice(cryptoParams.saltBytes, HEADER);
+  const ct = data.slice(HEADER);
 
   const baseKey = await webcrypto.subtle.importKey(
     "raw",
@@ -46,9 +40,14 @@ async function main() {
     ["deriveKey"],
   );
   const aesKey = await webcrypto.subtle.deriveKey(
-    { name: "PBKDF2", salt, iterations: 200000, hash: "SHA-256" },
+    {
+      name: "PBKDF2",
+      salt,
+      iterations: cryptoParams.iterations,
+      hash: cryptoParams.hash,
+    },
     baseKey,
-    { name: "AES-GCM", length: 256 },
+    { name: "AES-GCM", length: cryptoParams.keyBits },
     false,
     ["decrypt"],
   );
