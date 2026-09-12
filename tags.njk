@@ -24,31 +24,8 @@ permalink: /tags/
 
   <p id="tag-heading" class="tag-heading" style="display:none"></p>
 
-  <div class="archive-grid">
-    {% set years = [] %}
-    {% for post in collections.publicPosts %}
-      {% set y = post.date.getFullYear() %}
-      {% if y not in years %}
-        {% set years = (years.push(y), years) %}
-      {% endif %}
-    {% endfor %}
-    {% for year in years %}
-    <section class="archive-year">
-      <h3>{{ year }}</h3>
-      <ul class="post-list">
-        {% for post in collections.publicPosts %}
-          {% if post.date.getFullYear() == year %}
-          <li data-tags="{{ post.data.tags | join(',') | lower }}">
-            <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-            {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | categoryIcon }}"></span>{% endif %}
-            <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-    {% endfor %}
-  </div>
+  {% import "post-list.njk" as list %}
+  {{ list.archiveGrid(collections.publicPosts) }}
 </div>
 
 <script>
@@ -75,7 +52,6 @@ permalink: /tags/
 
   var sections = document.querySelectorAll(".archive-year");
   sections.forEach(function (sec) {
-    var visible = sec.querySelectorAll(".post-list li[style=''],.post-list li:not([style])");
     var hasVisible = false;
     sec.querySelectorAll(".post-list li").forEach(function (li) {
       if (li.style.display !== "none") hasVisible = true;

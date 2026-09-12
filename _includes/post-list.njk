@@ -1,0 +1,29 @@
+{# Year-grouped post list shared by blog.njk and tags.njk. Years come from the
+   posts themselves, filtered to [minYear, maxYear]. #}
+{% macro archiveGrid(posts, minYear = 0, maxYear = 9999) %}
+{% set years = [] %}
+{% for post in posts %}
+  {% set y = post.date.getFullYear() %}
+  {% if y >= minYear and y <= maxYear and y not in years %}
+    {% set years = (years.push(y), years) %}
+  {% endif %}
+{% endfor %}
+<div class="archive-grid">
+  {% for year in years %}
+  <section class="archive-year">
+    <h3>{{ year }}</h3>
+    <ul class="post-list">
+      {% for post in posts %}
+        {% if post.date.getFullYear() == year %}
+        <li data-tags="{{ post.data.tags | join(',') | lower }}">
+          <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
+          {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | categoryIcon }}"></span>{% endif %}
+          <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+{% endmacro %}

@@ -5,26 +5,7 @@ permalink: /blog/
 hero: true
 ---
 
-{% macro archiveGrid(years, posts) %}
-<div class="archive-grid">
-  {% for year in years %}
-  <section class="archive-year">
-    <h3>{{ year }}</h3>
-    <ul class="post-list">
-      {% for post in posts %}
-        {% if post.date.getFullYear() == year %}
-        <li>
-          <span class="post-meta">{{ post.date | dateFormat("isodate") }}</span>
-          {% if post.data.categories %}<span class="cat-dot" data-cat="{{ post.data.categories[0] | categoryIcon }}"></span>{% endif %}
-          <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
-</div>
-{% endmacro %}
+{% import "post-list.njk" as list %}
 
 <div class="posts col-content">
 
@@ -41,7 +22,7 @@ hero: true
     <li><span class="cat-dot" data-cat="til"></span>TIL</li>
   </ul>
 
-  {{ archiveGrid([2026, 2023, 2022, 2021, 2019], collections.publicPosts) }}
+  {{ list.archiveGrid(collections.publicPosts, 2014) }}
 
   <section class="press-section" aria-labelledby="press-heading">
     <h2 id="press-heading" class="page-heading">Press</h2>
@@ -85,7 +66,7 @@ hero: true
   <p class="archive-blurb">An earlier life of tinkering with robots, and questionable soldering.
   Dug out from the sands of WordPress at the old <em>carlitoscontraptions.com</em> domain.</p>
 
-  {{ archiveGrid([2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006], collections.publicPosts) }}
+  {{ list.archiveGrid(collections.publicPosts, 0, 2013) }}
 
   {% if collections.publicPosts.length == 0 %}
   <p>Blog posts are being migrated. Check back soon.</p>
@@ -98,7 +79,19 @@ hero: true
   if (!legend) return;
   var items = legend.querySelectorAll("li");
   var posts = document.querySelectorAll(".post-list li");
+  var sections = document.querySelectorAll(".archive-year");
   var active = null;
+
+  // Hide year headings left with no visible posts.
+  function pruneSections() {
+    sections.forEach(function (sec) {
+      var any = false;
+      sec.querySelectorAll(".post-list li").forEach(function (li) {
+        if (li.style.display !== "none") any = true;
+      });
+      sec.style.display = any ? "" : "none";
+    });
+  }
 
   function filterCat(cat) {
     if (!cat || active === cat) {
@@ -122,6 +115,7 @@ hero: true
       });
       history.replaceState(null, "", "/blog/?cat=" + encodeURIComponent(cat));
     }
+    pruneSections();
   }
 
   items.forEach(function (li) {
