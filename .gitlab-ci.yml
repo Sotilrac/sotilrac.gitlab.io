@@ -22,26 +22,24 @@ cache:
 
 default:
   interruptible: true
+  before_script:
+    # node:22-alpine ships neither git nor make: gitDates.mjs shells out to
+    # `git log`, and every job drives the build through the Makefile.
+    - apk add --no-cache git make
+    - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
 
 lint:
   stage: verify
   needs: []
   script:
-    - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
-    - npx prettier --check .
+    - make lint
 
+# Branch builds: build and link-check, nothing to publish.
 test:
   stage: verify
   needs: []
   script:
-    - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
-    - node _tools/build-ee-calculator.mjs
-    - npx @11ty/eleventy --output=test
-    - node _tools/check-internal-links.mjs test
-  artifacts:
-    paths:
-      - test
-    expire_in: 1 week
+    - make build check-links OUT=test
   except:
     - master
 
@@ -50,9 +48,7 @@ pages:
   needs:
     - lint
   script:
-    - npm ci --prefer-offline --no-audit --fund=false --ignore-scripts
-    - node _tools/build-ee-calculator.mjs
-    - npx @11ty/eleventy --output=public
+    - make build check-links OUT=public
   artifacts:
     paths:
       - public

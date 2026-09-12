@@ -1,6 +1,9 @@
 .PHONY: help install dev build lint lint-fix check-links check ci clean ee-calc spell
 
-EE_CALC_SRC := $(wildcard src/ee-calculator/*)
+# Eleventy output directory. CI overrides it (public/ on master, test/ elsewhere).
+OUT ?= _site
+
+EE_CALC_SRC := $(shell find src/ee-calculator -type f)
 EE_CALC_OUT := js/ee-calculator.js
 
 help:  ## Show this help
@@ -17,8 +20,8 @@ $(EE_CALC_OUT): $(EE_CALC_SRC) _tools/build-ee-calculator.mjs
 dev: ee-calc  ## Run dev server with live reload at localhost:8080
 	npx @11ty/eleventy --serve
 
-build: ee-calc  ## Production build to _site/
-	npx @11ty/eleventy
+build: ee-calc  ## Production build to $(OUT)
+	npx @11ty/eleventy --output=$(OUT)
 
 lint: ee-calc  ## Check formatting (Prettier)
 	npx prettier --check .
@@ -26,11 +29,10 @@ lint: ee-calc  ## Check formatting (Prettier)
 lint-fix: ee-calc  ## Auto-fix formatting
 	npx prettier --write .
 
-check-links:  ## Verify internal links resolve in _site/
-	node _tools/check-internal-links.mjs _site
+check-links:  ## Verify internal links resolve in $(OUT)
+	node _tools/check-internal-links.mjs $(OUT)
 
-check: lint build  ## Mirror CI: lint + build + link check
-	node _tools/check-internal-links.mjs _site
+check: lint build check-links  ## Mirror CI: lint + build + link check
 
 ci: install check  ## Full CI pipeline locally
 

@@ -14,15 +14,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "ee-calc": "node _tools/build-ee-calculator.mjs",
-    "predev": "npm run ee-calc",
-    "prebuild": "npm run ee-calc",
-    "prelint": "npm run ee-calc",
-    "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "lint": "prettier --check . && echo 'All files formatted correctly'",
-    "lint:fix": "prettier --write .",
-    "check:links": "node _tools/check-internal-links.mjs",
+    "dev": "make dev",
+    "build": "make build",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "check": "make check",
     "prepare": "lefthook install"
   },
   "dependencies": {
