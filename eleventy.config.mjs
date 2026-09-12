@@ -2,6 +2,50 @@ import yaml from "js-yaml";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import katex from "katex";
 import texmath from "markdown-it-texmath";
+import { postSlug } from "./_tools/lib.mjs";
+
+// Escape a string for use inside a double-quoted HTML attribute.
+const attr = (s) =>
+  String(s ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+
+// Attribute-safe plain text: caption markup stripped, then escaped.
+const attrText = (s) => attr(String(s ?? "").replace(/<[^>]+>/g, ""));
+
+const MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
+
+// Plain-text excerpt of a Markdown source (page.rawInput): shortcodes,
+// comments, code and markup removed, cut at a word boundary.
+function excerpt(md, maxChars = 160) {
+  if (!md) return "";
+  let text = md
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/\{#[\s\S]*?#\}/g, " ")
+    .replace(/\{%-?\s*(plot|math)\b[\s\S]*?\{%-?\s*end\1\s*-?%\}/g, " ")
+    .replace(/\{%[\s\S]*?%\}/g, " ")
+    .replace(/\{\{[\s\S]*?\}\}/g, " ")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/\$\$[\s\S]*?\$\$/g, " ")
+    .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/^#{1,6}\s.*$/gm, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/^\s{0,3}(?:[-*+]|\d+\.)\s+/gm, "")
+    .replace(/^\s{0,3}>\s?/gm, "")
+    .replace(/`([^`]*)`/g, "$1")
+    .replace(/[*_]{1,3}([^*_]+)[*_]{1,3}/g, "$1")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (text.length <= maxChars) return text;
+  const cut = text.slice(0, maxChars);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "…";
+}
 
 export default function (eleventyConfig) {
   // --- Plugins ---
@@ -21,21 +65,19 @@ export default function (eleventyConfig) {
   );
 
   // --- Global data ---
-  eleventyConfig.addGlobalData("buildDate", new Date());
-  // Stable per-build cache key for the /calc/ service worker. Format
-  // YYYYMMDDHHMMSS in UTC; every CI run produces a new value, so installed PWAs
-  // pick up the new bundle on next launch and the old cache is evicted by the
-  // SW's activate handler.
+  const buildDate = new Date();
+  eleventyConfig.addGlobalData("buildDate", buildDate);
+  // Cache key for the /calc/ service worker, YYYYMMDDHHMMSS UTC. A new value
+  // per build makes installed PWAs fetch the new bundle and evict the old cache.
   eleventyConfig.addGlobalData(
     "buildId",
-    new Date().toISOString().slice(0, 19).replace(/[-:T]/g, ""),
+    buildDate.toISOString().slice(0, 19).replace(/[-:T]/g, ""),
   );
 
   // --- Passthrough copy ---
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("font");
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("media");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
@@ -43,29 +85,21 @@ export default function (eleventyConfig) {
     "node_modules/katex/dist/katex.min.css": "css/vendor/katex.min.css",
     "node_modules/katex/dist/fonts": "css/vendor/fonts",
   });
+  // Serve img/ (about 500 MB) from disk in --serve instead of copying it on
+  // every rebuild.
+  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
   // --- Ignores ---
   eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add("STYLE.md");
   eleventyConfig.ignores.add("img/**/*.md");
+  eleventyConfig.ignores.add("_tools/**");
 
   // --- Collections ---
-  // Public posts: in _posts/ with status missing or "public".
+  // Everything in _posts/, newest first.
   eleventyConfig.addCollection("publicPosts", (collectionApi) => {
     return collectionApi
       .getFilteredByTag("posts")
-      .filter((post) => {
-        const s = post.data.status;
-        return !s || s === "public";
-      })
-      .sort((a, b) => b.date - a.date);
-  });
-
-  // Archived posts: in _posts/ with status "archive". Rendered but hidden
-  // from listings and feed.
-  eleventyConfig.addCollection("archivedPosts", (collectionApi) => {
-    return collectionApi
-      .getFilteredByTag("posts")
-      .filter((post) => post.data.status === "archive")
       .sort((a, b) => b.date - a.date);
   });
 
@@ -76,7 +110,7 @@ export default function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
-  // --- Shortcodes (for blog posts, when ported) ---
+  // --- Shortcodes ---
   const altFromPath = (img) => {
     if (!img) return "";
     const cleanPath = img.split(/[?#]/)[0];
@@ -86,56 +120,76 @@ export default function (eleventyConfig) {
     return (slug + " " + filename).replace(/[-_]+/g, " ").trim();
   };
 
+  // Per-page counters: the first image on a page loads eagerly (it is the
+  // likely LCP element), the rest lazily; each gallery gets its own lightbox
+  // group. Reset per build so --serve rebuilds stay deterministic.
+  const pageCounts = new Map();
+  eleventyConfig.on("eleventy.before", () => pageCounts.clear());
+  const count = (page, key) => {
+    const k = `${page?.inputPath}\0${key}`;
+    const n = (pageCounts.get(k) || 0) + 1;
+    pageCounts.set(k, n);
+    return n;
+  };
+  const imgTag = (page, src, alt) => {
+    const lazy =
+      count(page, "img") > 1 ? ' loading="lazy" decoding="async"' : "";
+    return `<img src="${attr(src)}" alt="${attrText(alt)}"${lazy} />`;
+  };
+
   // Optional third argument caps this one figure's width (any CSS length),
   // overriding the post-level `figWidth` frontmatter for that figure only.
-  eleventyConfig.addShortcode("fig", (img, caption, width) => {
+  eleventyConfig.addShortcode("fig", function (img, caption, width) {
     const alt = caption || altFromPath(img);
     const fc = caption ? `<figcaption>${caption}</figcaption>` : "";
-    const dc = caption ? ` data-caption="${caption}"` : "";
-    const st = width ? ` style="--fig-width: ${width}"` : "";
-    return `<figure class="post-fig"${st}><a href="${img}" data-fancybox${dc}><img src="${img}" alt="${alt}" /></a>${fc}</figure>`;
+    const dc = caption ? ` data-caption="${attrText(caption)}"` : "";
+    const st = width ? ` style="--fig-width: ${attr(width)}"` : "";
+    return `<figure class="post-fig"${st}><a href="${attr(img)}" data-fancybox${dc}>${imgTag(this.page, img, alt)}</a>${fc}</figure>`;
   });
 
-  eleventyConfig.addShortcode("gallery", (columns, ...imgs) => {
+  eleventyConfig.addShortcode("gallery", function (columns, ...imgs) {
+    const group = `gallery-${count(this.page, "gallery")}`;
     const items = imgs
       .map(
         (img) =>
-          `<a href="${img}" data-fancybox="gallery"><img src="${img}" alt="${altFromPath(img)}" /></a>`,
+          `<a href="${attr(img)}" data-fancybox="${group}">${imgTag(this.page, img, altFromPath(img))}</a>`,
       )
       .join("");
-    return `<div class="gallery" style="--gallery-cols: ${columns}">${items}</div>`;
+    return `<div class="gallery" style="--gallery-cols: ${attr(columns)}">${items}</div>`;
   });
 
+  // Asset tags for compare, model and plot are emitted once per page by
+  // head.njk, which checks the rendered content for their elements.
   eleventyConfig.addShortcode("compare", (beforeImg, afterImg, caption) => {
     const cap = caption || "";
     const altBefore = cap ? `Before: ${cap}` : "Before";
     const altAfter = cap ? `After: ${cap}` : "After";
     const expandIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M3 3h7v2H5v5H3V3zm11 0h7v7h-2V5h-5V3zm7 11v7h-7v-2h5v-5h2zm-11 7H3v-7h2v5h5v2z"/></svg>`;
-    return `<figure class="post-fig compare-fig" style="--pos:50%"><div class="compare-stage" role="slider" aria-label="Drag to compare before and after" tabindex="0"><img class="compare-img compare-after" src="${afterImg}" alt="${altAfter}" loading="lazy" draggable="false" /><img class="compare-img compare-before" src="${beforeImg}" alt="${altBefore}" loading="lazy" draggable="false" /><div class="compare-divider" aria-hidden="true"></div><a class="compare-zoom compare-zoom-before" href="${beforeImg}" data-fancybox data-caption="${altBefore}" aria-label="Expand before image">${expandIcon}</a><a class="compare-zoom compare-zoom-after" href="${afterImg}" data-fancybox data-caption="${altAfter}" aria-label="Expand after image">${expandIcon}</a></div><figcaption>${cap}</figcaption></figure><script src="/js/compare.js" defer></script>`;
+    return `<figure class="post-fig compare-fig" style="--pos:50%"><div class="compare-stage" role="slider" aria-label="Drag to compare before and after" tabindex="0"><img class="compare-img compare-after" src="${attr(afterImg)}" alt="${attrText(altAfter)}" loading="lazy" draggable="false" /><img class="compare-img compare-before" src="${attr(beforeImg)}" alt="${attrText(altBefore)}" loading="lazy" draggable="false" /><div class="compare-divider" aria-hidden="true"></div><a class="compare-zoom compare-zoom-before" href="${attr(beforeImg)}" data-fancybox data-caption="${attrText(altBefore)}" aria-label="Expand before image">${expandIcon}</a><a class="compare-zoom compare-zoom-after" href="${attr(afterImg)}" data-fancybox data-caption="${attrText(altAfter)}" aria-label="Expand after image">${expandIcon}</a></div><figcaption>${cap}</figcaption></figure>`;
   });
 
   eleventyConfig.addShortcode("wayback", (url, text) => {
-    return `<a href="${url}" class="wayback-link" title="Archived page">${text}<svg class="wayback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/><path d="M3 12h1M20 12h1"/></svg></a>`;
+    return `<a href="${attr(url)}" class="wayback-link" title="Archived page">${text}<svg class="wayback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/><path d="M3 12h1M20 12h1"/></svg></a>`;
   });
 
   eleventyConfig.addShortcode("model", (src, caption, orbit) => {
     const a = caption || "";
     const o = orbit || "0deg 75deg auto";
-    return `<figure class="post-fig model-fig"><model-viewer src="${src}" alt="${a}" camera-controls touch-action="pan-y" camera-orbit="${o}"></model-viewer><figcaption>${a}</figcaption></figure><script type="module" src="/js/model-viewer.min.js"></script>`;
+    return `<figure class="post-fig model-fig"><model-viewer src="${attr(src)}" alt="${attrText(a)}" camera-controls touch-action="pan-y" camera-orbit="${attr(o)}"></model-viewer><figcaption>${a}</figcaption></figure>`;
   });
 
   // Interactive function plot (uPlot). Config is JSON in the paired body; see js/plot.js.
   eleventyConfig.addPairedShortcode("plot", (config, caption) => {
     const fc = caption ? `<figcaption>${caption}</figcaption>` : "";
-    return `<figure class="post-fig plot-fig"><function-plot><script type="application/json">${config}</script></function-plot>${fc}</figure><link rel="stylesheet" href="/css/uplot.min.css"><script src="/js/uplot.iife.min.js" defer></script><script src="/js/plot.js" defer></script>`;
+    return `<figure class="post-fig plot-fig"><function-plot><script type="application/json">${config}</script></function-plot>${fc}</figure>`;
   });
 
   eleventyConfig.addShortcode("youtube", (id) => {
-    return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${attr(id)}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>`;
   });
 
   eleventyConfig.addShortcode("spotify", (id) => {
-    return `<iframe style="border-radius:12px;margin:2em 0" width="100%" height="152" src="https://open.spotify.com/embed/track/${id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+    return `<iframe style="border-radius:12px;margin:2em 0" width="100%" height="152" src="https://open.spotify.com/embed/track/${attr(id)}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
   });
 
   // Embed one of the in-house web-component calculators by short name.
@@ -176,7 +230,7 @@ export default function (eleventyConfig) {
   );
   eleventyConfig.addShortcode("calc", (name) => {
     const c = CALCS[name];
-    if (!c) return `<!-- unknown calc: ${name} -->`;
+    if (!c) return `<!-- unknown calc: ${attr(name)} -->`;
     const url = `/calc/${name}/`;
     // The anchor degrades to a normal new-tab link; the onclick upgrades it to
     // a sized popup window when allowed. window.open returns null if blocked,
@@ -199,84 +253,27 @@ export default function (eleventyConfig) {
   });
 
   // --- Filters ---
-  eleventyConfig.addFilter("postSlug", (fileSlug) => {
-    return fileSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  });
+  eleventyConfig.addFilter("postSlug", postSlug);
 
   eleventyConfig.addFilter("nl2br", (str) => {
     if (!str) return "";
     return str.replace(/\n/g, "<br>");
   });
 
-  eleventyConfig.addFilter("dateFormat", (date, format) => {
+  // Formats: iso, isodate (default), rfc822, year, long ("Sep 2, 2026").
+  eleventyConfig.addFilter("dateFormat", (date, format = "isodate") => {
     if (!date) return "";
     const d = new Date(date);
     if (isNaN(d.getTime())) return "";
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
     if (format === "iso") return d.toISOString();
-    if (format === "isodate") return d.toISOString().slice(0, 10);
     if (format === "rfc822") return d.toUTCString();
     if (format === "year") return d.getFullYear().toString();
-    return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    if (format === "long")
+      return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    return d.toISOString().slice(0, 10);
   });
 
-  eleventyConfig.addFilter("excerpt", (html, maxChars = 160) => {
-    if (!html) return "";
-    let text = html;
-    const startMatch = text.match(/class="post-content"[^>]*>/);
-    if (startMatch) {
-      text = text.slice(startMatch.index + startMatch[0].length);
-      const endMatch = text.match(
-        /<(hr class="comments-separator"|section class="post-comments"|nav class="post-nav")/,
-      );
-      if (endMatch) text = text.slice(0, endMatch.index);
-    }
-    text = text.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, "");
-    text = text.replace(/<[^>]+>/g, " ");
-    const decode = (s) =>
-      s
-        .replace(/&nbsp;/g, " ")
-        .replace(/&amp;/g, "&")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'")
-        .replace(/&hellip;/g, "…")
-        .replace(/&mdash;/g, "—")
-        .replace(/&ndash;/g, "–");
-    let prev;
-    do {
-      prev = text;
-      text = decode(text);
-    } while (text !== prev);
-    text = text.replace(/\s+/g, " ").trim();
-    if (text.length <= maxChars) return text;
-    const cut = text.slice(0, maxChars);
-    const lastSpace = cut.lastIndexOf(" ");
-    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "…";
-  });
-
-  eleventyConfig.addFilter("xmlEscape", (str) => {
-    if (!str) return "";
-    return str
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  });
+  eleventyConfig.addFilter("excerpt", excerpt);
 
   eleventyConfig.addFilter("postNavigation", (posts, url) => {
     const i = posts.findIndex((p) => p.url === url);
