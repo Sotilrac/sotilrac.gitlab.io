@@ -36,7 +36,7 @@ layout: layouts/base.njk
     }
     </script>
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ title }}{% if "drafts" in tags %} <span class="post-status-badge post-status-draft">draft</span>{% elif status == "archive" %} <span class="post-status-badge post-status-archive">archive</span>{% endif %}</h1>
+        <h1 class="post-title" itemprop="name headline">{{ title }}{% if "drafts" in tags %} <span class="post-status-badge post-status-draft">draft</span>{% endif %}</h1>
         <p class="post-meta">
             <time datetime="{{ date | dateFormat('iso') }}" itemprop="datePublished">
                 {{ date | dateFormat('isodate') }}
@@ -50,6 +50,8 @@ layout: layouts/base.njk
     </header>
 
     <div class="post-content" itemprop="articleBody">
+        {# Carlitos' Contraptions era. `archiveBanner: false` opts a post out. #}
+        {% if date and date.getFullYear() < 2014 and archiveBanner !== false %}{% include "archive-banner.njk" %}{% endif %}
         {{ content | safe }}
     </div>
 

@@ -1,6 +1,8 @@
 {% set isPost = "posts" in (tags or []) %}
+{% set isDraft = "drafts" in (tags or []) or page.url == "/drafts/" %}
+{% set body = content or "" %}
 {% set pageTitle %}{% if title %}Carlos Asmat - {{ title | safe }}{% else %}{{ site.title }}{% endif %}{% endset %}
-{% set pageDescription %}{% if description %}{{ description | safe }}{% elif excerpt %}{{ excerpt | striptags | safe }}{% elif page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] | safe }}{% elif isPost and content %}{{ content | excerpt | safe }}{% else %}{{ site.description | safe }}{% endif %}{% endset %}
+{% set pageDescription %}{% if description %}{{ description | safe }}{% elif excerpt %}{{ excerpt | striptags | safe }}{% elif page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] | safe }}{% elif (isPost or isDraft) and page.rawInput %}{{ page.rawInput | excerpt | safe }}{% else %}{{ site.description | safe }}{% endif %}{% endset %}
 {% set pageImage = site.url + (image or "/img/carlos-asmat.jpg") %}
 {% set ogType = "article" if isPost else "website" %}
 <head>
@@ -8,6 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="color-scheme" content="light dark">
+  {% if isDraft %}<meta name="robots" content="noindex, nofollow">{% endif %}
 
   <link rel="icon" href="{{ site.baseurl }}/img/favicon-64.png">
   {% if manifest %}
@@ -80,10 +83,26 @@
 
   <script defer src="{{ site.baseurl }}/js/vendor/umami.js" data-website-id="55179db8-c15f-4659-8430-1ef4e05d3ffb" data-host-url="https://cloud.umami.is"></script>
   <script defer src="{{ site.baseurl }}/js/edge-tracker.js"></script>
+  {# Vendor CSS and shortcode assets load only on pages whose rendered content uses them. #}
+  {% if 'class="language-' in body %}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/vendor/prism-coy.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/vendor/prism-coy-dark.css" media="(prefers-color-scheme: dark)">
+  {% endif %}
+  {% if 'class="katex' in body %}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/vendor/katex.min.css">
+  {% endif %}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+  {% if '<function-plot' in body %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/uplot.min.css">
+  <script src="{{ site.baseurl }}/js/uplot.iife.min.js" defer></script>
+  <script src="{{ site.baseurl }}/js/plot.js" defer></script>
+  {% endif %}
+  {% if 'class="compare-stage"' in body %}
+  <script src="{{ site.baseurl }}/js/compare.js" defer></script>
+  {% endif %}
+  {% if '<model-viewer' in body %}
+  <script type="module" src="{{ site.baseurl }}/js/model-viewer.min.js"></script>
+  {% endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
 </head>
