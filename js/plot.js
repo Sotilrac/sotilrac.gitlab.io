@@ -266,7 +266,7 @@
         var xv = typeof m.x === "string" ? this.params[m.x] : m.x;
         if (xv == null || xv < this.xmin || xv > this.xmax) return;
         var cx = Math.round(u.valToPos(xv, "x", true));
-        var color = resolveColor(m.color, pal.muted);
+        var color = resolveColor(m.colour || m.color, pal.muted);
         ctx.save();
         ctx.strokeStyle = color;
         ctx.lineWidth = 2;
