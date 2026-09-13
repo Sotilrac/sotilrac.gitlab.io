@@ -45,6 +45,22 @@
   max-width: 100%;
   box-shadow: 0em 0.25em 0.3em rgba(0, 0, 0, 0.3);
 }
+/* On /calc/<name>/ the host is the whole window (popup or installed PWA), so
+   drop the card chrome and let the calc fill it. The embed in posts keeps the
+   card look. Safe-area padding keeps controls clear of notches and home bars
+   on phones. */
+:host([standalone]) .calc {
+  width: auto;
+  max-width: none;
+  min-height: 100vh;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: calc(1em + env(safe-area-inset-top))
+    calc(1em + env(safe-area-inset-right))
+    calc(1em + env(safe-area-inset-bottom))
+    calc(1em + env(safe-area-inset-left));
+}
 
 /* -- Tabs -- */
 .tabs {
@@ -704,6 +720,12 @@ input[type="number"] {
   .calc {
     padding: 0.75em;
     font-size: 12px;
+  }
+  :host([standalone]) .calc {
+    padding: calc(0.75em + env(safe-area-inset-top))
+      calc(0.75em + env(safe-area-inset-right))
+      calc(0.75em + env(safe-area-inset-bottom))
+      calc(0.75em + env(safe-area-inset-left));
   }
   .row {
     gap: 0.5em;

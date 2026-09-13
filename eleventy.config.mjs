@@ -194,8 +194,8 @@ export default function (eleventyConfig) {
 
   // Embed one of the in-house web-component calculators by short name.
   // Usage: {% calc "ee" %} or {% calc "deadbeef" %}
-  // w/h are the popup's initial size in px; the standalone page then resizes
-  // itself to fit the rendered calculator exactly (see standalone.njk).
+  // w/h are the popup's initial size in px; the standalone page only grows the
+  // height if the rendered calculator overflows (see standalone.njk).
   const CALCS = {
     ee: {
       tag: "ee-calculator",

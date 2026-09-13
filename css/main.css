@@ -1966,21 +1966,15 @@ body.lb-locked {
   border-color: var(--royal-blue);
   outline: none;
 }
+/* The calc fills the window like an app; its card chrome is dropped inside
+   the shadow root via :host([standalone]). The body background is set inline
+   by the layout to the calc's own bg so nothing else ever shows through. */
 body.standalone {
   margin: 0;
-}
-.standalone-wrap {
   min-height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1.5rem 1rem;
-  box-sizing: border-box;
 }
-/* Cap the host element to the viewport. Flex items default to min-content,
-   so the shadow's intrinsic width would otherwise push the host past the
-   viewport on narrow screens. */
 .standalone-wrap > * {
+  display: block;
   min-width: 0;
   max-width: 100%;
 }

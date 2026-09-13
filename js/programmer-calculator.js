@@ -504,6 +504,16 @@ const STYLE = `
   max-width: 52em;
   box-shadow: 0em 0.25em 0.3em rgba(0, 0, 0, 0.3);
 }
+/* Standalone (/calc/deadbeef/, popup or PWA): fill the window, no card chrome.
+   The in-post embed keeps the card. */
+:host([standalone]) .calc {
+  max-width: none;
+  min-height: 100vh;
+  border-radius: 0;
+  box-shadow: none;
+  padding: calc(1em + env(safe-area-inset-top)) calc(1em + env(safe-area-inset-right))
+    calc(1em + env(safe-area-inset-bottom)) calc(1em + env(safe-area-inset-left));
+}
 
 /* -- Expression input -- */
 .expr-row {
@@ -844,6 +854,10 @@ const STYLE = `
 /* -- Responsive -- */
 @media (max-width: 40em) {
   .calc { padding: 0.75em; font-size: 12px; }
+  :host([standalone]) .calc {
+    padding: calc(0.75em + env(safe-area-inset-top)) calc(0.75em + env(safe-area-inset-right))
+      calc(0.75em + env(safe-area-inset-bottom)) calc(0.75em + env(safe-area-inset-left));
+  }
   .expr-input::placeholder { font-size: 0.8em; }
   .bit-cell { width: 1.7em; height: 1.9em; font-size: 0.85em; }
   .bit-idx { width: 2.88em; font-size: 0.5em; }

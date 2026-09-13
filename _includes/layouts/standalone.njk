@@ -2,40 +2,30 @@
 <html lang="en">
   {% include "head.njk" %}
 
-  <body class="standalone">
+  <body class="standalone" style="background: {{ calc.bg }}">
     <main class="standalone-wrap">{{ content | safe }}</main>
 
     <script>
-      // When opened as a popup (the detach button), resize the window to fit
-      // the rendered calculator. No-op in a normal tab, where resizeTo is
-      // ignored. The custom element upgrades asynchronously, and its height
-      // changes when the user switches tabs, so we watch with ResizeObserver
-      // and re-fit. The width is sized only on the first pass and never
-      // touched again: a height change can introduce a transient scrollbar
-      // that shrinks the calc, and reading that shrunken bounding rect would
-      // lock the popup at a smaller width on every tab switch (feedback loop).
-      // Height is capped to the screen so a tab taller than the display
-      // can't push the title bar off-screen.
+      // When opened as a popup (the detach button), grow the window so the
+      // rendered calculator never needs a scrollbar. No-op in a normal tab,
+      // where resizeTo is ignored. The calc fills the window width and has
+      // min-height 100vh, so only height matters: the custom element upgrades
+      // asynchronously and its height changes when the user switches tabs, so
+      // we watch with ResizeObserver and re-fit. Height is capped to the
+      // screen so a tab taller than the display can't push the title bar
+      // off-screen.
       (function () {
         var calc = document.querySelector(".standalone-wrap").firstElementChild;
         if (!calc) return;
-        var padX = 32; // .standalone-wrap horizontal padding (1rem each side)
-        var padY = 48; // vertical padding (1.5rem each side)
-        var sizedWidth = false;
         function fit() {
-          var r = calc.getBoundingClientRect();
-          if (!r.width || !r.height) return;
+          var h = calc.scrollHeight;
+          if (!h) return;
           var chromeY = window.outerHeight - window.innerHeight;
           var maxH = (screen.availHeight || window.outerHeight) - 40;
-          var newH = Math.min(maxH, Math.ceil(r.height + padY + chromeY));
+          var newH = Math.min(maxH, Math.ceil(h + chromeY));
+          if (newH <= window.outerHeight) return;
           try {
-            if (!sizedWidth) {
-              var chromeX = window.outerWidth - window.innerWidth;
-              window.resizeTo(Math.ceil(r.width + padX + chromeX), newH);
-              sizedWidth = true;
-            } else {
-              window.resizeTo(window.outerWidth, newH);
-            }
+            window.resizeTo(window.outerWidth, newH);
           } catch (e) {}
         }
         addEventListener("load", function () {
