@@ -96,6 +96,11 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("_tools/**");
   eleventyConfig.ignores.add("src/**");
 
+  // `ignores` only skips template processing; the dev server still watches these
+  // paths. src/fcc-ble-trends/ holds __pycache__, a sqlite cache in WAL mode and
+  // scraped CSV, which together exhaust the file-watch limit and crash `make dev`.
+  eleventyConfig.watchIgnores.add("src/**");
+
   // --- Collections ---
   // Everything in _posts/, newest first.
   eleventyConfig.addCollection("publicPosts", (collectionApi) => {
