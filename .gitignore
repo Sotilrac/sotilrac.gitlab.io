@@ -27,3 +27,8 @@ public/
 .claude
 .directory
 /media/
+
+# Python (src/fcc-ble-trends)
+__pycache__/
+*.py[cod]
+/src/fcc-ble-trends/out/

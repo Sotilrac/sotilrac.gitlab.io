@@ -94,6 +94,7 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("STYLE.md");
   eleventyConfig.ignores.add("img/**/*.md");
   eleventyConfig.ignores.add("_tools/**");
+  eleventyConfig.ignores.add("src/**");
 
   // --- Collections ---
   // Everything in _posts/, newest first.
