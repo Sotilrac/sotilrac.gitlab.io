@@ -32,3 +32,4 @@ public/
 __pycache__/
 *.py[cod]
 /src/fcc-ble-trends/out/
+/src/fcc-ble-trends/*.log
