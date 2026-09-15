@@ -17,3 +17,9 @@
   OEO    Telink Semiconductor (Shanghai)             54 filings
 
 fetching 632 grant records ...
+  250/632
+  500/632
+
+632/632 grants parsed -> 283 in-band deduplicated designs
+
+cache: 650 pages (305 hits, 345 fetches)

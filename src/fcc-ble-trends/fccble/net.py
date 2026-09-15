@@ -80,6 +80,7 @@ class Fetcher:
         self._guard = threading.Lock()
         self.hits = 0
         self.misses = 0
+        self.failures: list[tuple[str, int]] = []
 
     def _host_lock(self, host: str) -> threading.Lock:
         with self._guard:
@@ -101,9 +102,17 @@ class Fetcher:
             status, body = self._request(url)
             self._last_hit[host] = time.monotonic()
 
-        # Cache successes and hard 404s; transient failures stay uncached.
+        # Cache successes and hard 404s; transient failures stay uncached so a
+        # re-run retries them.
         if status == 200 or status == 404:
             self.cache.put(url, status, body)
+        else:
+            # A silently dropped fetch truncates the dataset without changing
+            # the exit code, which is how a partial scrape gets mistaken for a
+            # complete one. Count it and say so.
+            with self._guard:
+                self.failures.append((url, status))
+            print(f"  ! fetch failed ({status}) {url}", flush=True)
         with self._guard:
             self.misses += 1
         if self.verbose:
@@ -131,7 +140,9 @@ class Fetcher:
                 if exc.code in (404, 410):
                     return exc.code, ""
                 last_error = f"HTTP {exc.code}"
-                if exc.code not in (429, 500, 502, 503, 504):
+                # 403 from an edge/bot filter is usually transient, so it is
+                # retried rather than treated as a permanent answer.
+                if exc.code not in (403, 429, 500, 502, 503, 504):
                     return exc.code, ""
             except (urllib.error.URLError, TimeoutError, OSError) as exc:
                 last_error = str(exc)

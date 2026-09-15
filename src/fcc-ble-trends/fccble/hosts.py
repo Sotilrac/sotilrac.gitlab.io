@@ -48,14 +48,29 @@ def _field(block: str, label: str) -> str:
 
 def find_hosts(
     fetcher: Fetcher, module_fcc_id: str, module_grantee: str
-) -> tuple[list[HostReference], bool]:
-    """Find host filings citing a module. Returns (references, hit_cap)."""
-    query = urllib.parse.urlencode(
-        {"q": f"Contains FCC ID {module_fcc_id}", "limit": SEARCH_LIMIT}
-    )
+) -> tuple[list[HostReference] | None, bool]:
+    """Find host filings citing a module.
+
+    Returns (references, hit_cap). A `None` reference list means the query
+    itself could not be run, which is different from a module that genuinely
+    has no host citations; the caller records those separately so the
+    unattributed share of the series stays visible.
+    """
+    term = f"Contains FCC ID {module_fcc_id}"
+    query = urllib.parse.urlencode({"q": term, "limit": SEARCH_LIMIT})
     status, body = fetcher.get(f"{FCCID}/search?{query}")
+
+    # The search errors with a 503 when a hyphenated product code is combined
+    # with an explicit limit (KQL-PKLR2400-200 and friends). The unlimited form
+    # of the same query answers fine, so fall back to it and take the default
+    # cap rather than dropping the module from the series.
+    # A retry-exhausted fetch reports status 0, not the 503 it kept receiving,
+    # so both have to trigger the fallback.
+    if status in (0, 503):
+        status, body = fetcher.get(f"{FCCID}/search?{urllib.parse.urlencode({'q': term})}")
+
     if status != 200 or not body:
-        return [], False
+        return None, False
 
     total_match = re.search(r"Found ([\d,]+) matching", _text(body))
     total = int(total_match.group(1).replace(",", "")) if total_match else 0

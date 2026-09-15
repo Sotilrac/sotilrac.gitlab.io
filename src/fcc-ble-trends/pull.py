@@ -59,14 +59,27 @@ def stage_modules(fetcher: Fetcher, args: argparse.Namespace) -> list[analyze.De
     designs = [d for d in (analyze.to_design(g) for g in grants) if d is not None]
     designs = analyze.dedupe(designs)
 
+    # The full module list ignores the date window; the host stage searches it
+    # so that pre-2019 modules still in active design-in are not dropped.
+    everything = [d for d in (analyze.to_design(g, window=False) for g in grants) if d is not None]
+    analyze.write_csv(analyze.dedupe(everything), OUT / "modules-all.csv")
+
     analyze.write_csv(designs, OUT / "designs.csv")
     analyze.write_series_csv(designs, OUT / "series.csv")
-    print(f"\n{len(grants)} grants parsed -> {len(designs)} in-band deduplicated designs")
+    print(f"\n{len(grants)}/{len(all_ids)} grants parsed -> {len(designs)} in-band deduplicated designs")
+
+    missing = len(all_ids) - len(grants)
+    if missing:
+        print(
+            f"\nWARNING: {missing} filings did not parse "
+            f"({len(fetcher.failures)} fetch failures). The series is incomplete; "
+            f"re-run to retry them before trusting the numbers."
+        )
     return designs
 
 
-def load_designs() -> list[analyze.Design]:
-    path = OUT / "designs.csv"
+def load_designs(name: str = "designs.csv") -> list[analyze.Design]:
+    path = OUT / name
     if not path.exists():
         sys.exit("no designs.csv; run `./pull.py modules` first")
     with path.open(encoding="utf-8") as handle:
@@ -81,6 +94,7 @@ def load_designs() -> list[analyze.Design]:
                 quarter=r["quarter"],
                 date=r["date"],
                 description=r["description"],
+                ble=r.get("ble", "1") == "1",
             )
             for r in csv.DictReader(handle)
         ]
@@ -88,7 +102,7 @@ def load_designs() -> list[analyze.Design]:
 
 def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
     """Search for host filings citing each module (slow, indicative only)."""
-    designs = load_designs()
+    designs = load_designs("modules-all.csv")
     targets = [d for d in designs if d.silicon in cfg.PRIMARY]
     if args.limit:
         targets = targets[: args.limit]
@@ -96,6 +110,7 @@ def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
 
     rows: list[tuple[str, hostmod.HostReference]] = []
     capped = 0
+    unqueried: list[analyze.Design] = []
 
     def work(design: analyze.Design):
         return design, hostmod.find_hosts(fetcher, design.fcc_id, design.grantee_code)
@@ -103,7 +118,10 @@ def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         for index, (design, (refs, hit_cap)) in enumerate(pool.map(work, targets), 1):
             capped += 1 if hit_cap else 0
-            rows.extend((design.silicon, ref) for ref in refs)
+            if refs is None:
+                unqueried.append(design)
+            else:
+                rows.extend((design.silicon, ref) for ref in refs)
             if index % 100 == 0:
                 print(f"  {index}/{len(targets)}", flush=True)
 
@@ -125,7 +143,23 @@ def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
             writer.writerow(
                 [analyze.quarter_of(ref.date), silicon, ref.host_fcc_id, ref.host_company, ref.module_fcc_id, ref.date]
             )
+    if unqueried:
+        with (OUT / "hosts-unqueried.csv").open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.writer(handle)
+            writer.writerow(["fcc_id", "company", "silicon", "reason"])
+            for d in unqueried:
+                writer.writerow([d.fcc_id, d.company, d.silicon, "search returned 503"])
+
     print(f"\n{len(unique)} unique host references written")
+    if unqueried:
+        by_vendor: dict[str, int] = {}
+        for d in unqueried:
+            by_vendor[d.silicon] = by_vendor.get(d.silicon, 0) + 1
+        detail = ", ".join(f"{v}: {n}" for v, n in sorted(by_vendor.items()))
+        print(
+            f"UNQUERIED: {len(unqueried)}/{len(targets)} modules could not be searched "
+            f"({detail}); their hosts are missing from the series entirely"
+        )
     if capped:
         print(f"WARNING: {capped}/{len(targets)} module queries hit the index cap; counts are lower bounds")
 

@@ -1,0 +1,25 @@
+searching hosts for 399 modules ...
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+KQL-PKLR2400-200&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+KQL-PKLR2400-200&limit=500
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+KQL-AC4424-100&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+KQL-AC4424-100&limit=500
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+KQL-ZB2430-100&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+KQL-ZB2430-100&limit=500
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+TFB-TIWI1-01&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+TFB-TIWI1-01&limit=500
+  100/399
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+2ALGY-N52-USB&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+2ALGY-N52-USB&limit=500
+  200/399
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+2ABU6-I6-B&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+2ABU6-I6-B&limit=500
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+2ALGY-18010-A&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+2ALGY-18010-A&limit=500
+  ! giving up on https://fccid.io/search?q=Contains+FCC+ID+2ABU6-G1-E&limit=500: HTTP 503
+  ! fetch failed (0) https://fccid.io/search?q=Contains+FCC+ID+2ABU6-G1-E&limit=500
+  300/399
+
+3508 unique host references written
+WARNING: 11/399 module queries hit the index cap; counts are lower bounds
+
+cache: 1041 pages (390 hits, 9 fetches)

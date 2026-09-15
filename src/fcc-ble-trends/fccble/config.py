@@ -196,6 +196,63 @@ GRANTEES: tuple[Grantee, ...] = (
         )
         for code in ("2AA9B", "PV7", "PVH", "R5Q", "XPY")
     ),
+    # --- Third-party ESP32 module houses ------------------------------------
+    # Espressif sells silicon to module makers who certify under their own
+    # grantee codes, exactly as Nordic does. Counting only Espressif's own
+    # 2AC7Z would undercount ESP32 the same way counting only 2ANPO would
+    # undercount Nordic. These houses also ship ESP8266/8285 (Wi-Fi only, no
+    # Bluetooth) and some non-Espressif parts, so the product line decides.
+    Grantee(
+        code="2AHMR",
+        company="Shenzhen Ai-Thinker Technology",
+        default_silicon=None,
+        confidence=LOW,
+        note="mixed; only recognised Espressif lines are attributed",
+        rules=(
+            SiliconRule(_rx(r"ESP-?32|ESP32|ESP-?C[0-9]|ESP-?S[0-9]|ESP-?H[0-9]"), ESPRESSIF, HIGH, "ESP32-family part"),
+        ),
+    ),
+    Grantee(
+        code="2ATPO",
+        company="Shenzhen Ai-Thinker Technology",
+        default_silicon=None,
+        confidence=LOW,
+        note="mixed; only recognised Espressif lines are attributed",
+        rules=(
+            SiliconRule(_rx(r"ESP-?32|ESP32|ESP-?C[0-9]|ESP-?S[0-9]|ESP-?H[0-9]"), ESPRESSIF, HIGH, "ESP32-family part"),
+        ),
+    ),
+    Grantee(
+        code="2ADUI",
+        company="Shenzhen Anxinke Technology",
+        default_silicon=None,
+        confidence=LOW,
+        note="Ai-Thinker sister brand; only recognised Espressif lines attributed",
+        rules=(
+            SiliconRule(_rx(r"ESP-?32|ESP32|ESP-?C[0-9]|ESP-?S[0-9]|ESP-?H[0-9]"), ESPRESSIF, HIGH, "ESP32-family part"),
+        ),
+    ),
+    Grantee(
+        code="2AFOS",
+        company="Wireless-Tag Technology",
+        default_silicon=None,
+        confidence=LOW,
+        note="predominantly ESP32; only recognised lines attributed",
+        rules=(
+            SiliconRule(_rx(r"ESP-?32|ESP32|WT32|ESP-?C[0-9]|ESP-?S[0-9]"), ESPRESSIF, HIGH, "ESP32-family part"),
+        ),
+    ),
+    Grantee(
+        code="2AN3W",
+        company="M5Stack Technology",
+        default_silicon=None,
+        confidence=LOW,
+        note="ESP32-based dev hardware; only recognised lines attributed",
+        rules=(
+            SiliconRule(_rx(r"ESP-?32|ESP32|M5|CORE|STAMP|ATOM"), ESPRESSIF, MEDIUM, "ESP32-based product line"),
+        ),
+    ),
+
     # --- Context vendors ----------------------------------------------------
     Grantee(
         code="OEO",
