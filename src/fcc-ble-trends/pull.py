@@ -103,7 +103,10 @@ def load_designs(name: str = "designs.csv") -> list[analyze.Design]:
 def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
     """Search for host filings citing each module (slow, indicative only)."""
     designs = load_designs("modules-all.csv")
-    targets = [d for d in designs if d.silicon in cfg.PRIMARY]
+    # Wi-Fi-only modules are excluded here as well as in the series. A host
+    # built around an ESP8266 is not a Bluetooth design win, and counting its
+    # filing would inflate Espressif's BLE position with Wi-Fi products.
+    targets = [d for d in designs if d.silicon in cfg.PRIMARY and d.ble]
     if args.limit:
         targets = targets[: args.limit]
     print(f"searching hosts for {len(targets)} modules ...", flush=True)
@@ -124,6 +127,23 @@ def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
                 rows.extend((design.silicon, ref) for ref in refs)
             if index % 100 == 0:
                 print(f"  {index}/{len(targets)}", flush=True)
+
+    # A host cannot embed a module that was certified after it. Those hits are
+    # the search matching hyphen-split tokens of the part number rather than the
+    # FCC ID (a query for 2AN3WM5STAMP-PICO matches anything saying "PICO"), so
+    # they are dropped and counted as a precision estimate.
+    module_date = {d.fcc_id: d.date for d in designs}
+    impossible: dict[str, int] = {}
+    checked: dict[str, int] = {}
+    filtered: list[tuple[str, hostmod.HostReference]] = []
+    for silicon, ref in rows:
+        checked[silicon] = checked.get(silicon, 0) + 1
+        start = module_date.get(ref.module_fcc_id)
+        if ref.date and start and ref.date < start:
+            impossible[silicon] = impossible.get(silicon, 0) + 1
+            continue
+        filtered.append((silicon, ref))
+    rows = filtered
 
     # One host may cite several modules of the same vendor; count it once.
     unique: dict[tuple[str, str], tuple[str, hostmod.HostReference]] = {}
@@ -151,6 +171,16 @@ def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
                 writer.writerow([d.fcc_id, d.company, d.silicon, "search returned 503"])
 
     print(f"\n{len(unique)} unique host references written")
+    if impossible:
+        print("\nPRECISION: host filings predating the module they supposedly contain")
+        for silicon in sorted(checked):
+            bad, total = impossible.get(silicon, 0), checked[silicon]
+            print(f"  {silicon:10s} {bad:5d}/{total:5d} impossible ({bad / total * 100:.0f}%)")
+        print(
+            "  These were dropped. A false-positive rate this high, and this uneven\n"
+            "  between vendors, means the surviving counts carry an unknown error too:\n"
+            "  treat the host series as a weak signal, not a measurement."
+        )
     if unqueried:
         by_vendor: dict[str, int] = {}
         for d in unqueried:
