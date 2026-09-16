@@ -88,6 +88,8 @@ New GitHub repositories created each year:
 
 Over the same decade Stack Overflow questions moved from 3:1 to roughly 39:1 before the site's overall volume collapsed and made the absolute counts useless. ESP32 repository creation grew by a factor of 360. Nordic's grew by six.
 
+Treat that ratio as an upper bound, though, because GitHub only counts the work people publish. A weekend ESP32 project goes public by default; the firmware for a shipping commercial product goes in a private repo under an NDA, and that is where most Nordic development happens. The same split that makes Nordic strong in certified products keeps it off GitHub, so some unknown part of 122:1 is really a gap between hobby code and company code.
+
 Both things are true at once. If you are asking which chip the next hobby project, dev board or crowdfunded gadget will use, the ESP32 won that years ago by a wide margin. If you are asking which chip is inside shipping, certified, commercially supported BLE products, the only trustworthy number I have puts Nordic at three times its closest rival. A $4 module with Wi-Fi, a huge community and an Arduino core wins prototypes. A part with a mature Zephyr integration, a decade of certified module options and single-digit microamp sleep current wins products.
 
 The hypothesis I started with was that developers are switching from Nordic to ESP32. The closer answer is that an enormous number of new developers showed up, they all started on ESP32, and Nordic's business did not notice because it was never selling to them.
