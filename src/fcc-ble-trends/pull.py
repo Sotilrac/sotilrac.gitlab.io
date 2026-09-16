@@ -20,12 +20,14 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from fccble import analyze, config as cfg, hosts as hostmod, sources
+from fccble import analyze, config as cfg, devprefs as devmod, hosts as hostmod, sources, verify as verifymod
 from fccble.net import Cache, Fetcher
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "out"
 CACHE = ROOT / ".cache" / "fcc.sqlite"
+TESSDATA = ROOT / ".cache" / "tessdata"
+OCR_WORK = ROOT / ".cache" / "ocr"
 
 
 def build_fetcher(args: argparse.Namespace) -> Fetcher:
@@ -194,6 +196,116 @@ def stage_hosts(fetcher: Fetcher, args: argparse.Namespace) -> None:
         print(f"WARNING: {capped}/{len(targets)} module queries hit the index cap; counts are lower bounds")
 
 
+def stage_verify(fetcher: Fetcher, args: argparse.Namespace) -> None:
+    """OCR a random sample of host references to measure the false-positive rate."""
+    import random
+
+    path = OUT / "hosts.csv"
+    if not path.exists():
+        sys.exit("no hosts.csv; run `./pull.py hosts` first")
+    if not (TESSDATA / "eng.traineddata").exists():
+        sys.exit(f"no OCR language data at {TESSDATA}; see the README")
+
+    with path.open(encoding="utf-8") as handle:
+        refs = [r for r in csv.DictReader(handle) if r["date"][:4] >= str(args.since)]
+
+    sample_size = args.limit or 25
+    random.seed(args.seed)
+    chosen: list[dict[str, str]] = []
+    for silicon in cfg.PRIMARY:
+        pool = [r for r in refs if r["silicon"] == silicon]
+        chosen.extend(random.sample(pool, min(sample_size, len(pool))))
+
+    print(f"OCR-verifying {len(chosen)} host references ({sample_size} per vendor) ...", flush=True)
+    verdicts: list[verifymod.Verdict] = []
+    for index, row in enumerate(chosen, 1):
+        verdict = verifymod.verify_reference(
+            fetcher, row["host_fcc_id"], row["module_fcc_id"], row["silicon"], OCR_WORK, TESSDATA
+        )
+        verdicts.append(verdict)
+        mark = "OK " if verdict.found else "-- "
+        print(f"  {mark}{index:3d}/{len(chosen)} {verdict.host_fcc_id:20s} {verdict.module_fcc_id:24s}"
+              f" pages={verdict.pages_read} {verdict.note}", flush=True)
+
+    with (OUT / "verified.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["silicon", "host_fcc_id", "module_fcc_id", "pages_read", "found", "note"])
+        for v in verdicts:
+            writer.writerow([v.silicon, v.host_fcc_id, v.module_fcc_id, v.pages_read, int(v.found), v.note])
+
+    print("\n=== Measured precision of the host search ===\n")
+    for silicon in cfg.PRIMARY:
+        subset = [v for v in verdicts if v.silicon == silicon]
+        readable = [v for v in subset if v.pages_read > 0]
+        hits = sum(1 for v in readable if v.found)
+        if not readable:
+            print(f"  {silicon:10s} no exhibit text available in the sample")
+            continue
+        print(f"  {silicon:10s} {hits}/{len(readable)} confirmed ({hits / len(readable) * 100:.0f}%)"
+              f"  [{len(subset) - len(readable)} unreadable]")
+    print(
+        "\n  Unconfirmed is not the same as wrong: the citation can sit on a page\n"
+        "  outside the budget, in a withheld exhibit, or in text OCR could not read."
+    )
+
+
+def stage_devprefs(args: argparse.Namespace) -> None:
+    """Pull annual GitHub and Stack Overflow series for each vendor."""
+    import time
+
+    years = range(max(2015, args.since), cfg.END_YEAR + 1)
+    points: list[devmod.Point] = []
+    missing = 0
+
+    for year in years:
+        for vendor in cfg.PRIMARY:
+            for fetch in (devmod.github_repos_created, devmod.stackoverflow_questions):
+                point = fetch(vendor, year)
+                if point is None:
+                    missing += 1
+                    print(f"  ! {fetch.__name__} failed for {vendor} {year}", flush=True)
+                else:
+                    points.append(point)
+                # Both APIs rate-limit aggressively on search endpoints.
+                time.sleep(args.delay * 4)
+        print(f"  {year} done", flush=True)
+
+    OUT.mkdir(parents=True, exist_ok=True)
+    with (OUT / "devprefs.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["year", "source", "vendor", "metric", "value"])
+        for pt in sorted(points, key=lambda p: (p.source, p.year, p.vendor)):
+            writer.writerow([pt.year, pt.source, pt.vendor, pt.metric, pt.value])
+
+    print(f"\n{len(points)} points written" + (f", {missing} queries failed" if missing else ""))
+    report_devprefs()
+
+
+def report_devprefs() -> None:
+    path = OUT / "devprefs.csv"
+    if not path.exists():
+        return
+    with path.open(encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+
+    for source, label in (("github", "GitHub repositories created"),
+                          ("stackoverflow", "Stack Overflow questions asked")):
+        subset = [r for r in rows if r["source"] == source]
+        if not subset:
+            continue
+        print(f"\n=== {label} ===\n")
+        print(f"{'year':6s}{'Espressif':>12s}{'Nordic':>10s}{'ratio':>10s}")
+        for year in sorted({int(r["year"]) for r in subset}):
+            def value(vendor):
+                hit = [r for r in subset if int(r["year"]) == year and r["vendor"] == vendor]
+                return int(hit[0]["value"]) if hit else 0
+            esp, nordic = value(cfg.ESPRESSIF), value(cfg.NORDIC)
+            ratio = f"{esp / nordic:.0f}:1" if nordic else "-"
+            print(f"{year:<6d}{esp:>12d}{nordic:>10d}{ratio:>10s}")
+        if source == "stackoverflow":
+            print("\n  Site-wide question volume fell sharply from 2023; read the ratio, not the level.")
+
+
 # --- Reporting -------------------------------------------------------------
 
 
@@ -243,6 +355,8 @@ def stage_report(args: argparse.Namespace) -> None:
     for (company, silicon), count in sorted(by_company.items(), key=lambda x: -x[1]):
         print(f"  {count:5d}  {silicon:12s} {company}")
 
+    report_devprefs()
+
     hosts_path = OUT / "hosts.csv"
     if hosts_path.exists():
         print("\n=== Host references (indicative, lower bound) ===\n")
@@ -265,15 +379,20 @@ def stage_report(args: argparse.Namespace) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("stage", choices=["modules", "hosts", "report", "all"])
+    parser.add_argument("stage", choices=["modules", "hosts", "verify", "devprefs", "report", "all"])
     parser.add_argument("--delay", type=float, default=0.4, help="seconds between requests per host")
     parser.add_argument("--workers", type=int, default=4, help="parallel fetches")
     parser.add_argument("--limit", type=int, default=0, help="cap modules processed in the hosts stage")
     parser.add_argument("--verbose", action="store_true")
+    parser.add_argument("--seed", type=int, default=1, help="sample seed for the verify stage")
+    parser.add_argument("--since", type=int, default=2021, help="earliest year to sample in verify")
     args = parser.parse_args()
 
     if args.stage == "report":
         stage_report(args)
+        return
+    if args.stage == "devprefs":
+        stage_devprefs(args)
         return
 
     fetcher = build_fetcher(args)
@@ -281,6 +400,10 @@ def main() -> None:
         stage_modules(fetcher, args)
     if args.stage == "hosts":
         stage_hosts(fetcher, args)
+    if args.stage == "verify":
+        stage_verify(fetcher, args)
+    if args.stage == "devprefs":
+        stage_devprefs(args)
     if args.stage == "all":
         stage_report(args)
     print(f"\ncache: {fetcher.cache.stats()} pages ({fetcher.hits} hits, {fetcher.misses} fetches)")
