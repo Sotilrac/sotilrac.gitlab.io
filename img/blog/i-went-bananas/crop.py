@@ -1,0 +1,238 @@
+#!/usr/bin/env python3
+"""Render a following crop from a track file. All the framing decisions live here.
+
+    ./crop.py track.json -o out.gif
+    ./crop.py track.json -o out.mp4 --smooth 61
+    ./crop.py track.json -o out.gif --smooth 0        # hold still, just stabilize
+    ./crop.py track.json -o out.gif --size 1600x900 --no-stabilize
+
+Reads what track.py measured and decides size, smoothing and format, so every
+re-render is seconds rather than another tracking pass.
+
+The crop path is not the subject's path. A tracker's box centre is noisy, much
+noisier than the camera on handheld footage, so following it directly is what
+makes a "tracked" clip look worse than a stabilized one. Instead the subject
+path is split into the camera's motion, which is measured from hundreds of
+points and so is trustworthy per frame, and the subject's motion relative to it,
+which is noisy and only needs to describe slow reframing:
+
+    window[i] = camera[i] + smooth(subject[i] - camera[i])
+
+Smoothing only the second term keeps the reframing from chasing tracker noise
+while the window still cancels shake exactly. `--smooth 0` drops the second term
+to a constant, which is plain stabilization with a fixed frame.
+
+Measured on the ZOTAC clip, as mean per-frame global motion left in the rendered
+output, all at native pixel scale:
+
+    raw source                    [1.77 3.84] px    p95 [5.57 13.49]
+    two-pass vidstab              [1.01 2.03] px    p95 [2.71  6.61]
+    crop.py --smooth 61           [1.05 1.75] px    p95 [2.65  4.02]
+    crop.py --smooth 0 (locked)   [0.75 1.71] px    p95 [1.66  4.71]
+    crop.py --no-stabilize        [1.96 4.14] px    p95 [5.75 12.89]
+
+So following the raw track is indistinguishable from not stabilizing at all,
+and the compensated window beats the warp it replaces, without re-encoding a
+single 4K frame. What it cannot do is roll: a crop only translates. On this clip
+roll was 0.017 deg/frame, worth 0.17 px at a crop corner against 4 px of
+translation, so it did not matter. On footage that twists, use trackgif.py.
+
+The window moves through ffmpeg's sendcmd, so frames never leave ffmpeg: no raw
+video through a pipe and no lossless intermediate.
+
+Requires: numpy, and ffmpeg. Tracking data comes from track.py.
+"""
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+import tempfile
+
+import numpy as np
+
+from roipick import snap_to_aspect
+
+
+def parse_args():
+    p = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    p.add_argument("track", help="track file from track.py")
+    p.add_argument("-o", "--output", help="output .gif or video "
+                                          "(default: <track>.gif)")
+    p.add_argument("--source", help="override the video path recorded in the track")
+    p.add_argument("--size", help="crop window WxH (default: from the tracked box)")
+    p.add_argument("--aspect", choices=["source", "free"],
+                   help="override the crop shape recorded in the track")
+    p.add_argument("--smooth", type=int, default=61,
+                   help="frames of moving average over the subject's motion "
+                        "relative to the camera; 0 holds the framing still")
+    p.add_argument("--deadzone", type=float, default=0.0,
+                   help="px of drift to ignore before the window moves")
+    p.add_argument("--no-stabilize", action="store_true",
+                   help="follow the raw tracked path, camera shake included")
+    p.add_argument("--fps", type=float, default=10.0, help="gif frame rate")
+    p.add_argument("--width", type=int,
+                   help="output width in px (default: 480 for gif, native otherwise)")
+    p.add_argument("--keep", action="store_true",
+                   help="keep the sendcmd script instead of deleting it")
+    return p.parse_args()
+
+
+def smooth(values, window):
+    """Moving average along axis 0, edge-padded so the ends do not drift in."""
+    if window <= 1:
+        return values
+    kernel = np.ones(window) / window
+    out = np.empty_like(values)
+    for i in range(values.shape[1]):
+        padded = np.pad(values[:, i], (window // 2, window // 2), mode="edge")
+        out[:, i] = np.convolve(padded, kernel, mode="valid")[:len(values)]
+    return out
+
+
+def crop_path(pos, cam, window, stabilize):
+    """Where to put the crop window on each frame."""
+    if not stabilize:
+        return smooth(pos, window)
+    relative = pos - cam
+    if window == 0:
+        relative = np.tile(relative.mean(axis=0), (len(pos), 1))
+    else:
+        relative = smooth(relative, window)
+    return cam + relative
+
+
+def apply_deadzone(values, threshold):
+    held = values.copy()
+    for i in range(1, len(held)):
+        for axis in (0, 1):
+            if abs(held[i, axis] - held[i - 1, axis]) < threshold:
+                held[i, axis] = held[i - 1, axis]
+    return held
+
+
+def write_commands(path, xs, ys, times):
+    """One sendcmd entry per change, fired just before the frame it belongs to.
+
+    sendcmd applies a command to the first frame whose timestamp has reached it,
+    so each entry goes at the midpoint of the gap behind its frame. Firing at the
+    frame's own timestamp puts it one frame late whenever floating point rounds
+    the wrong way.
+    """
+    lines, last = [], None
+    for i, (x, y) in enumerate(zip(xs, ys)):
+        if (x, y) == last:
+            continue
+        when = 0.0 if i == 0 else (times[i - 1] + times[i]) / 2
+        lines.append(f"{when:.6f} crop x {x}, crop y {y};\n")
+        last = (x, y)
+    with open(path, "w") as fh:
+        fh.writelines(lines)
+    return len(lines)
+
+
+def _quote(path):
+    """Escape a path for use inside an ffmpeg filter argument."""
+    return path.replace("\\", "\\\\").replace("'", r"\'")
+
+
+def main():
+    args = parse_args()
+    with open(args.track) as fh:
+        track = json.load(fh)
+
+    source = args.source or track["source"]
+    if not os.path.isfile(source):
+        sys.exit(f"source video not found: {source}\n"
+                 "pass --source if it moved")
+
+    out = args.output or os.path.splitext(args.track)[0] + ".gif"
+    is_gif = out.lower().endswith(".gif")
+    width = args.width if args.width is not None else (480 if is_gif else 0)
+
+    fw, fh, fps = track["width"], track["height"], track["fps"]
+    pos = np.array([row[:2] for row in track["subject"]], dtype=float)
+    cam = np.array(track["camera"], dtype=float)
+
+    lock = track["aspect_lock"] if args.aspect is None else args.aspect == "source"
+    if args.size:
+        cw, ch = (int(v) for v in args.size.lower().split("x"))
+    else:
+        cw, ch, _, _ = snap_to_aspect(track["box"], fw, fh, lock)
+    if cw > fw or ch > fh:
+        sys.exit(f"crop {cw}x{ch} is larger than the source {fw}x{fh}")
+
+    stabilize = not args.no_stabilize
+    if track["camera_source"] == "none" and stabilize:
+        print("  ! this track has no camera motion; falling back to --no-stabilize")
+        stabilize = False
+
+    path = crop_path(pos, cam, args.smooth, stabilize)
+    if args.deadzone > 0:
+        path = apply_deadzone(path, args.deadzone)
+
+    raw_x, raw_y = path[:, 0] - cw / 2, path[:, 1] - ch / 2
+    xs = np.clip(raw_x, 0, fw - cw)
+    ys = np.clip(raw_y, 0, fh - ch)
+    clamped = int(np.sum((raw_x != xs) | (raw_y != ys)))
+
+    # Predicted, not measured: this is what the output should look like if the
+    # camera path is right, and it is computed from that same path, so it cannot
+    # catch a wrong one. Measure the rendered file to check it.
+    held = np.stack([xs + cw / 2, ys + ch / 2], axis=1)
+    bg = np.std(np.diff(cam - held, axis=0), axis=0)
+    subject = np.std(np.diff(pos - held, axis=0), axis=0)
+    print(f"crop {cw}x{ch} from {fw}x{fh}, {len(pos)} frames, "
+          f"{'stabilized' if stabilize else 'raw follow'}, smooth {args.smooth}")
+    print(f"  predicted residual per frame: background {bg.round(2)} px, "
+          f"tracker noise {subject.round(1)} px")
+    if clamped:
+        pct = 100 * clamped / len(pos)
+        print(f"  ! window hit the frame edge on {clamped} frames ({pct:.0f}%); "
+              "shake leaks back in there, so use a smaller --size")
+    if track["lost"]:
+        print(f"  ! tracker had lost the subject on {track['lost']} frames")
+
+    times = track.get("pts")
+    if times is None or len(times) < len(pos):
+        print("  ! this track has no frame timestamps; falling back to the "
+              "container's nominal rate, which is wrong on variable-rate phone "
+              "video. Re-run track.py to fix it.")
+        times = [i / fps for i in range(len(pos))]
+
+    workdir = tempfile.mkdtemp(prefix="crop-")
+    cmds = os.path.join(workdir, "cmds.txt")
+    try:
+        n = write_commands(cmds, xs.round().astype(int), ys.round().astype(int), times)
+        chain = [f"sendcmd=f='{_quote(cmds)}'",
+                 f"crop={cw}:{ch}:{int(xs[0])}:{int(ys[0])}"]
+        if is_gif:
+            chain.append(f"fps={args.fps}")
+        if width:
+            chain.append(f"scale={width}:-2:flags=lanczos")
+        graph = ",".join(chain)
+        if is_gif:
+            graph += ("," "split[a][b];[a]palettegen=stats_mode=diff[p];"
+                      "[b][p]paletteuse=dither=bayer:bayer_scale=3")
+            codec = ["-loop", "0"]
+        else:
+            codec = ["-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p"]
+
+        print(f"  {n} window moves; encoding")
+        proc = subprocess.run(["ffmpeg", "-y", "-v", "warning", "-stats",
+                               "-i", source, "-filter_complex", graph,
+                               "-an", *codec, out])
+        if proc.returncode != 0:
+            sys.exit("ffmpeg failed")
+        print(f"wrote {out} ({os.path.getsize(out) / 1e6:.1f} MB)")
+    finally:
+        if args.keep:
+            print(f"sendcmd script in {cmds}")
+        else:
+            subprocess.run(["rm", "-rf", workdir])
+
+
+if __name__ == "__main__":
+    main()
