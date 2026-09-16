@@ -9,17 +9,15 @@ tags:
   - data
 ---
 
-Every embedded forum I read has decided that Nordic is yesterday's BLE chip and the ESP32 ate its lunch. I believed it too, enough to go looking for evidence, and the FCC seemed like the obvious place to find it: anything with a radio sold in the US has to be authorized, the filings are public, and an equipment authorization database has no marketing to do. So I wrote a program to pull eight years of it and count.
+Every embedded forum I read has decided that Nordic is yesterday's BLE chip and the ESP32 ate its lunch. I believed it too, enough to go looking for evidence, and the FCC seemed like the obvious place to find it: anything with a radio sold in the US has to be authorized, the filings are public, and an equipment authorization database has no marketing to do. So I wrote a program to pull a decade of it and count.
 
-The answer turned out to be more interesting than the hypothesis, and most of what I learned was about how easy it is to measure the wrong thing convincingly.
+I got an answer. I also got a long lesson in how a dataset can hand you a confident number that means nothing at all, which turned out to be the more useful result.
 
 ## The data is not where you would expect
 
 The FCC's own equipment authorization search lives at `apps.fcc.gov/oetcf/eas/reports/GenericSearch.cfm`, and it returns 403 to anything that isn't a browser, courtesy of an Akamai edge rule. The FCC also runs a Socrata open-data portal, which publishes exactly eight equipment-authorization datasets: the grantee registry, the accredited test firms, and the certification bodies. Grants themselves are absent. The one table I wanted was the one table missing.
 
-What does work is enumerating by grantee code. Every company that certifies equipment has one (Espressif is `2AC7Z`, Raytac is `SH6`), the grantee registry maps codes to company names, and the mirrors paginate properly. So the shape of the whole project was forced by what the sources allow: you cannot ask "show me every BLE filing in 2024", but you can ask "show me everything Raytac has filed" and repeat that for every module house you can name.
-
-That constraint matters more than it sounds, and I will come back to it.
+What does work is enumerating by grantee code. Every company that certifies equipment has one (Espressif is `2AC7Z`, Raytac is `SH6`), the grantee registry maps codes to company names, and the mirrors paginate properly. So the shape of the whole project was forced by what the sources allow: you cannot ask "show me every BLE filing in 2024", but you can ask "show me everything Raytac has filed" and repeat that for every module house you can name. That gave me 807 filings across 22 grantee codes, all of which parsed.
 
 ## Counting modules measures the wrong thing
 
@@ -27,9 +25,9 @@ My first cut counted new module certifications per vendor per quarter. It produc
 
 Raytac is the clearest example. They are one of the largest Nordic module houses, their MDBT42 and MDBT50 parts are in an enormous number of products, and across my 2019 to 2026 window they contributed seven designs. The reason is that MDBT40 was certified in 2014, MDBT42 in 2016, and MDBT50 in 2018. A module gets certified once. It then keeps being designed into new products for a decade without generating another filing, so a date-windowed count of certifications measures how often a vendor releases new part numbers. That is a fact about their product roadmap.
 
-A second problem ran deeper. Espressif sells its own silicon under one grantee code, while Nordic sells no modules at all, so Nordic's volume is scattered across Raytac, u-blox, Ezurio, Fanstel, Insight SiP, Minew and Holyiot, plus chip-down designs that never name the chip in any machine-readable field. Counting grants by grantee undercounts Nordic by construction. When I first noticed that, I was pleased: it meant the easy measurement was biased in favour of my own hypothesis, which is the most dangerous kind of bias to have.
+Sorting out which parts even belong in the count took more care than I expected. Espressif's line is not uniform: the ESP8266 and ESP8285 have no Bluetooth radio at all, the ESP32-S2 dropped it, the ESP32-S3 and the C and H series have it, and filings describe all of them with equal carelessness (an ESP32-C3 module is routinely filed as a "WIFI Module"). The part number has to overrule the description, and the same test has to run against every vendor or the comparison tilts.
 
-Here is that series anyway, new BLE-capable module part numbers per year:
+Here is that series, new BLE-capable module part numbers per year:
 
 | Year | Espressif | Nordic | Telink |
 | ---- | --------- | ------ | ------ |
@@ -43,56 +41,59 @@ Here is that series anyway, new BLE-capable module part numbers per year:
 
 Shenzhen Minew accounts for 47% of the Nordic column. They make beacons and they file a lot of them, so that column describes Minew's paperwork habits more than Nordic's market position.
 
-## Design wins are the host filings
+## The measurement I wanted, and could not have
 
-The measurement that means something is the host product. When you put a certified module inside your gadget, your filing has to say "Contains FCC ID: ..." and point at the module. Every one of those references is a real design win, a company that chose that silicon and paid to ship it.
+The number that would settle the argument is the host product. When you put a certified module inside your gadget, your filing has to include a line saying `Contains FCC ID: XPYNINAW13`, pointing at the module. Every one of those is a real design win: a company that chose that silicon and paid to ship it.
 
-So the program searches the filing-document index for each of 439 BLE modules and collects the products citing them. After deduplicating (one host citing three Nordic modules counts once) that gives 2,744 host references:
+The mirror indexes the text of filing documents, so I searched it for each of 439 BLE modules and collected the products citing them. The result was a clean series showing Espressif climbing from 8% of US BLE host designs in 2019 to 36% in 2025. I nearly published it.
 
-| Year | Espressif | Nordic | ESP share |
-| ---- | --------- | ------ | --------- |
-| 2019 | 18        | 199    | 8%        |
-| 2020 | 14        | 183    | 7%        |
-| 2021 | 39        | 139    | 22%       |
-| 2022 | 104       | 173    | 38%       |
-| 2023 | 89        | 156    | 36%       |
-| 2024 | 102       | 205    | 33%       |
-| 2025 | 197       | 355    | 36%       |
+Then I noticed the search was returning Espressif design wins dated 1998, which is impressive for a chip that launched in 2016 and a company founded in 2008. The index does not match an FCC ID as a unit. It splits on hyphens and matches the pieces, so a query for the Minew module `2ABU6-S2` matches any filing anywhere that says "S2".
 
-Between 2020 and 2022 Espressif went from under a tenth of US BLE host designs to better than a third, and it has kept that ground since. This is the part of the forum consensus that held up when I tried to break it.
+The obvious repair is to drop modules with short, noisy part numbers. I tried it and Espressif's share jumped to 68%, which would have made a much better headline and is entirely an artifact: that filter discards 23% of Nordic modules against 1% of Espressif's, because Nordic part numbers are hyphenated and short (`BMD-340`, `2ABU6-S2`, `NINA-B31`) while ESP32 part numbers are long and distinctive (`ESP32-WROOM-32UE`). I had built a filter that deleted my opposition.
 
-What did not happen is Nordic shrinking. Their absolute count is flat to rising across the same period, and 2025 was their best year in the series. The pie got bigger and Espressif took the new slice.
+So I went and checked. The declaration lives in the filing's exhibits, which the mirror publishes as scanned PDFs, so the program now downloads them, rasterises the pages, runs OCR, and looks for the module's ID. On a random sample of 40 references, split evenly between the two vendors:
 
-## The part where the measurement nearly lied to me
+| Module part number    | Confirmed |
+| --------------------- | --------- |
+| 4 characters or fewer | 0 / 18    |
+| 5 to 8 characters     | 0 / 12    |
+| 9 characters or more  | 3 / 10    |
 
-I want to be specific about this, because I nearly published a number that was garbage.
+Fifteen percent for Espressif, zero for Nordic. The three that checked out were `XPYNINAW13`, `2AC7Z-ESPWROOM32UE` and `2AC7Z-ESPS3WROOM1U`, all long and unmistakable. Where I could read a host's label and see what it actually declared, it usually named some other module entirely, or named none at all.
 
-The document search splits an FCC ID on hyphens and matches the pieces, so a query for the module `2AN3WM5STAMP-PICO` cheerfully returns any filing containing "PICO". The first time I ran the host stage I got Espressif design wins dated 1998, which is impressive for a chip that launched in 2016 and for a company founded in 2008.
+This is the part I would keep. The search only works for distinctive part numbers, and part-number conventions are a house style: 23% of the Nordic-side modules have product codes of four characters or fewer, against 1% of Espressif's. Every filter that makes the data trustworthy also makes it biased, in Espressif's favour, because Nordic's suppliers name their parts in a way this index cannot handle. Two reasonable analysts could have finished with 33% or 68% off the same corpus, and neither would have measured anything.
 
-The fix that suggests itself is to drop modules with short, noisy tokens in their part numbers. I tried it, and ESP share jumped to 68%, which would have made a much better headline. It is also completely wrong: that filter throws away 23% of Nordic modules and 1% of Espressif ones, because Nordic part numbers are hyphenated (`BMD-340`, `NINA-B31`, `ISP1807-LR`) and ESP32 part numbers mostly are not. I had built a filter that deleted my opposition.
+I cannot tell you the design-win split from FCC data, and neither can anyone else working from this index.
 
-The defensible filter is chronological: a product cannot contain a module that was certified after the product was. That rule has no opinion about hyphens, and it drops 37% of hits on the Espressif side and 37% on the Nordic side. Identical error rates on both sides is the only reason I trust the share column at all. The absolute numbers are still inflated by whatever false positives survive, and I have no way to measure that without running OCR over several thousand label exhibits, which the mirror publishes as images.
+## What the vendor's own books say
 
-Two reasonable analysts could have finished this with 33% or 68%. The gap between them is entirely filter choice, and neither number has an error bar on it.
+Nordic publishes Bluetooth SIG design-win numbers every quarter. It counts a different population (global, all Nordic designs, not US filings), so the levels are not comparable to anything above, but it has the one property my pipeline lacks: the designs were counted directly. In Q1 2026 they reported a 32% share of new BLE product certifications. In Q2 2026, 115 designs and 28% for the quarter, with a trailing-twelve-month share of 31% that they note is three times their nearest competitor.
 
-## The check that matters
-
-Nordic publishes its own Bluetooth SIG design-win numbers every quarter, which is a different population (global, all Nordic designs, not US filings) but should agree in direction. In Q1 2026 they reported a 32% share of new BLE product certifications; in Q2 2026, 115 designs and 28% for the quarter, with a trailing-twelve-month share of 31% that they note is three times their nearest competitor.
-
-Three times the nearest competitor is not a company being displaced. If my pipeline had shown Nordic collapsing, the pipeline would have been wrong, and I would rather find that out from Nordic's investor relations page than from the comments.
+Three times the nearest competitor is not a company being displaced. Whatever is happening to Nordic, it is not the collapse the forums describe, and I would rather learn that from their investor relations page than from my own pipeline agreeing with me.
 
 ## Where the hypothesis is completely right
 
-The forums are measuring something real. It is just not design wins.
+The forums are measuring something real. It is developer attention, and on that the numbers are not close.
 
-GitHub has 209,018 repositories matching `esp32` and 3,349 matching `nrf52`. Stack Overflow has 3,336 questions tagged `esp32` against 181 tagged `nrf52`. The `esptool` flashing utility is pulled from PyPI 1.3 million times a month. On developer mindshare the ratio runs about 60:1 in Espressif's favour.
+New GitHub repositories created each year:
 
-Both facts are true at once, and they are answers to different questions. If you are asking which chip the next hobby project, dev board, or crowdfunded gadget will use, the ESP32 won that years ago by a wide margin. If you are asking which chip is inside the shipping, certified, commercially-supported BLE products, Nordic still accounts for roughly two thirds of what I can see, and their own numbers put them at three times the runner-up. A $4 module with Wi-Fi, a huge community and an Arduino core wins prototypes. A part with a mature Zephyr integration, a decade of certified module options and single-digit microamp sleep current wins products.
+| Year | Espressif | Nordic | Ratio |
+| ---- | --------- | ------ | ----- |
+| 2016 | 224       | 87     | 3:1   |
+| 2018 | 3,380     | 260    | 13:1  |
+| 2020 | 7,908     | 420    | 19:1  |
+| 2022 | 12,740    | 263    | 48:1  |
+| 2024 | 23,249    | 284    | 82:1  |
+| 2025 | 48,001    | 392    | 122:1 |
 
-The hypothesis I started with was that developers are switching from Nordic to ESP32. The closer answer is that a very large number of new developers showed up, they all started on ESP32, and Nordic's business did not notice because it was never selling to them.
+Over the same decade Stack Overflow questions moved from 3:1 to roughly 39:1 before the site's overall volume collapsed and made the absolute counts useless. ESP32 repository creation grew by a factor of 360. Nordic's grew by six.
+
+Both things are true at once. If you are asking which chip the next hobby project, dev board or crowdfunded gadget will use, the ESP32 won that years ago by a wide margin. If you are asking which chip is inside shipping, certified, commercially supported BLE products, the only trustworthy number I have puts Nordic at three times its closest rival. A $4 module with Wi-Fi, a huge community and an Arduino core wins prototypes. A part with a mature Zephyr integration, a decade of certified module options and single-digit microamp sleep current wins products.
+
+The hypothesis I started with was that developers are switching from Nordic to ESP32. The closer answer is that an enormous number of new developers showed up, they all started on ESP32, and Nordic's business did not notice because it was never selling to them.
 
 ## The program
 
-It lives in [`src/fcc-ble-trends/`](https://gitlab.com/sotilrac/sotilrac.gitlab.io/-/tree/master/src/fcc-ble-trends), it is stdlib Python with no dependencies, and it caches every fetched page in SQLite so a second run is almost free. Three stages: `modules` enumerates and parses every filing, `hosts` finds the products citing them, `report` prints the series.
+It lives in [`src/fcc-ble-trends/`](https://gitlab.com/sotilrac/sotilrac.gitlab.io/-/tree/master/src/fcc-ble-trends), it is stdlib Python with no dependencies, and it caches every fetched page in SQLite so a second run is almost free. Five stages: `modules` enumerates and parses every filing, `hosts` finds products citing them, `verify` OCR-checks a sample of those claims, `devprefs` pulls the GitHub and Stack Overflow series, and `report` prints everything.
 
-If you run it, read the warnings it prints: how many filings failed to parse, how many modules it could not search, how many results saturated the index cap, and what fraction of host hits it threw out as chronologically impossible. I added every one of those after a bug where a run silently dropped 345 of 632 filings and still exited zero. That is exactly how you end up with a confident blog post about a trend that was never there.
+If you run it, read the warnings. It tells you how many filings failed to parse, how many modules it could not search, how many results saturated the index cap, what fraction of host hits it threw out as chronologically impossible, and what the OCR made of a sample. I added every one of those after a bug where a run silently dropped 345 of 632 filings and still exited zero. That is exactly how you end up with a confident blog post about a trend that was never there.
