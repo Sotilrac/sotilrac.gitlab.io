@@ -41,6 +41,22 @@ It also cannot correct slow camera movement, because it cannot tell real
 movement from the drift its own camera path accumulates. --shake sets where that
 line falls.
 
+Gif size, measured on 120 frames of that clip against the un-quantized frames:
+
+    256 colours, bayer_scale=3      100%   34.0 dB   SSIM 0.936
+    256 colours, none, -O3           84%   34.9 dB   SSIM 0.982
+     64 colours, none, -O3           48%   31.2 dB   SSIM 0.951
+     64 colours, none, --lossy=30    27%   30.4 dB   SSIM 0.880
+     32 colours, --lossy=80          18%   27.8 dB   SSIM 0.821
+
+bayer_scale=3 is the worst row on both axes at once, which is why it is no
+longer the default: its noise defeats LZW and both metrics punish it. Dropping
+to 64 colours halves the file and still scores better than it did.
+
+None of this closes the gap to video. The same frames as h264 or vp9 at the same
+size and rate are 0.4 MB against 6.0 MB for the smallest gif here, so a looping
+<video> is a better answer than any gif setting when the page allows one.
+
 The window moves through ffmpeg's sendcmd, so frames never leave ffmpeg: no raw
 video through a pipe and no lossless intermediate.
 
@@ -50,6 +66,7 @@ Requires: numpy, and ffmpeg. Tracking data comes from track.py.
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -82,6 +99,17 @@ def parse_args():
     p.add_argument("--no-stabilize", action="store_true",
                    help="follow the raw tracked path, camera shake included")
     p.add_argument("--fps", type=float, default=10.0, help="gif frame rate")
+    p.add_argument("--colors", type=int, default=256,
+                   help="gif palette size; 64 roughly halves the file")
+    p.add_argument("--dither", default="bayer:bayer_scale=5",
+                   help="gif dither. 'none' is smallest and scores best, at the "
+                        "cost of banding on gradients; bayer_scale=3 is both "
+                        "bigger and worse, so it is not the default")
+    p.add_argument("--lossy", type=int, default=0,
+                   help="gifsicle lossy level; 30 is roughly half the file again "
+                        "for a visible but mild loss, 0 is off")
+    p.add_argument("--no-optimize", action="store_true",
+                   help="skip the lossless gifsicle -O3 pass")
     p.add_argument("--width", type=int,
                    help="output width in px (default: 480 for gif, native otherwise)")
     p.add_argument("--keep", action="store_true",
@@ -155,6 +183,33 @@ def write_commands(path, xs, ys, times):
 def _quote(path):
     """Escape a path for use inside an ffmpeg filter argument."""
     return path.replace("\\", "\\\\").replace("'", r"\'")
+
+
+def shrink(path, *, optimize=True, lossy=0):
+    """Re-pack the gif with gifsicle, in place.
+
+    -O3 is lossless and worth about 5%: it is inter-frame optimization ffmpeg's
+    muxer does not do. --lossy perturbs pixels towards ones that compress, which
+    is where the real savings are and the only step here that costs quality.
+    """
+    if not (optimize or lossy) or not shutil.which("gifsicle"):
+        if lossy:
+            print("  ! --lossy needs gifsicle on PATH; skipping")
+        return
+    before = os.path.getsize(path)
+    cmd = ["gifsicle", "-O3"]
+    if lossy:
+        cmd.append(f"--lossy={lossy}")
+    tmp = path + ".tmp"
+    proc = subprocess.run(cmd + [path, "-o", tmp], capture_output=True)
+    if proc.returncode != 0 or not os.path.exists(tmp):
+        print(f"  ! gifsicle failed, keeping the unoptimized gif")
+        return
+    os.replace(tmp, path)
+    after = os.path.getsize(path)
+    note = f"-O3 --lossy={lossy}" if lossy else "-O3"
+    print(f"  gifsicle {note}: {before / 1e6:.1f} -> {after / 1e6:.1f} MB "
+          f"({100 * after / before:.0f}%)")
 
 
 def main():
@@ -242,8 +297,9 @@ def main():
             chain.append(f"scale={width}:-2:flags=lanczos")
         graph = ",".join(chain)
         if is_gif:
-            graph += ("," "split[a][b];[a]palettegen=stats_mode=diff[p];"
-                      "[b][p]paletteuse=dither=bayer:bayer_scale=3")
+            graph += (f",split[a][b];"
+                      f"[a]palettegen=max_colors={args.colors}:stats_mode=diff[p];"
+                      f"[b][p]paletteuse=dither={args.dither}:diff_mode=rectangle")
             codec = ["-loop", "0"]
         else:
             codec = ["-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p"]
@@ -254,6 +310,8 @@ def main():
                                "-an", *codec, out])
         if proc.returncode != 0:
             sys.exit("ffmpeg failed")
+        if is_gif:
+            shrink(out, optimize=not args.no_optimize, lossy=args.lossy)
         print(f"wrote {out} ({os.path.getsize(out) / 1e6:.1f} MB)")
     finally:
         if args.keep:
