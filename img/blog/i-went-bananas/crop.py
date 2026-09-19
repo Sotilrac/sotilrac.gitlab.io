@@ -25,10 +25,10 @@ to a constant, which is plain stabilization with a fixed frame.
 Measured on the ZOTAC clip, as mean per-frame global motion left in the rendered
 output, all at native pixel scale:
 
-    raw source                    [1.77 3.84] px    p95 [5.57 13.49]
-    two-pass vidstab              [1.01 2.03] px    p95 [2.71  6.61]
-    crop.py --smooth 61           [1.05 1.75] px    p95 [2.65  4.02]
-    crop.py --smooth 0 (locked)   [0.75 1.71] px    p95 [1.66  4.71]
+    raw source                    [1.90 3.62] px    p95 [5.56 9.64]
+    two-pass vidstab              [1.01 2.03] px    p95 [2.71 6.61]
+    crop.py --smooth 61           [0.95 1.56] px    p95 [2.46 2.87]
+    crop.py --smooth 0            [1.11 1.89] px    p95 [3.00 4.29]
     crop.py --no-stabilize        [1.96 4.14] px    p95 [5.75 12.89]
 
 So following the raw track is indistinguishable from not stabilizing at all,
@@ -36,6 +36,10 @@ and the compensated window beats the warp it replaces, without re-encoding a
 single 4K frame. What it cannot do is roll: a crop only translates. On this clip
 roll was 0.017 deg/frame, worth 0.17 px at a crop corner against 4 px of
 translation, so it did not matter. On footage that twists, use trackgif.py.
+
+It also cannot correct slow camera movement, because it cannot tell real
+movement from the drift its own camera path accumulates. --shake sets where that
+line falls.
 
 The window moves through ffmpeg's sendcmd, so frames never leave ffmpeg: no raw
 video through a pipe and no lossless intermediate.
@@ -66,8 +70,13 @@ def parse_args():
     p.add_argument("--aspect", choices=["source", "free"],
                    help="override the crop shape recorded in the track")
     p.add_argument("--smooth", type=int, default=61,
-                   help="frames of moving average over the subject's motion "
-                        "relative to the camera; 0 holds the framing still")
+                   help="frames of moving average over the subject track, "
+                        "setting how fast the framing may drift; 0 holds the "
+                        "framing where you drew the box")
+    p.add_argument("--shake", type=int, default=61,
+                   help="frames below which camera motion counts as shake and "
+                        "gets cancelled. Raising it corrects slower movement but "
+                        "lets more of the camera path's accumulated drift in")
     p.add_argument("--deadzone", type=float, default=0.0,
                    help="px of drift to ignore before the window moves")
     p.add_argument("--no-stabilize", action="store_true",
@@ -92,16 +101,26 @@ def smooth(values, window):
     return out
 
 
-def crop_path(pos, cam, window, stabilize):
-    """Where to put the crop window on each frame."""
-    if not stabilize:
-        return smooth(pos, window)
-    relative = pos - cam
+def crop_path(pos, cam, window, stabilize, shake=61):
+    """Where to put the crop window on each frame.
+
+    Two separate jobs. Framing comes from the subject track, smoothed over
+    `window` frames, or held at the opening framing when `window` is 0. Shake
+    correction comes from the camera path, high-passed over `shake` frames.
+
+    The camera path is only trusted above that cutoff because it is a cumulative
+    sum of per-frame estimates, so its bias integrates: on the ZOTAC clip it
+    drifted 235 px over 1060 frames, against a true subject movement of almost
+    none. Feeding it in whole put the window a quarter of a frame off by the end.
+    Above the cutoff it is excellent, which is the half worth having.
+    """
     if window == 0:
-        relative = np.tile(relative.mean(axis=0), (len(pos), 1))
+        framing = np.tile(smooth(pos, shake)[0], (len(pos), 1))
     else:
-        relative = smooth(relative, window)
-    return cam + relative
+        framing = smooth(pos, window)
+    if not stabilize:
+        return framing
+    return framing + (cam - smooth(cam, shake))
 
 
 def apply_deadzone(values, threshold):
@@ -169,7 +188,7 @@ def main():
         print("  ! this track has no camera motion; falling back to --no-stabilize")
         stabilize = False
 
-    path = crop_path(pos, cam, args.smooth, stabilize)
+    path = crop_path(pos, cam, args.smooth, stabilize, args.shake)
     if args.deadzone > 0:
         path = apply_deadzone(path, args.deadzone)
 
@@ -188,6 +207,15 @@ def main():
           f"{'stabilized' if stabilize else 'raw follow'}, smooth {args.smooth}")
     print(f"  predicted residual per frame: background {bg.round(2)} px, "
           f"tracker noise {subject.round(1)} px")
+    off = pos - held
+    worst = float(np.max(np.abs(off) / np.array([cw, ch])))
+    print(f"  subject wanders {off[:, 0].min():+.0f}..{off[:, 0].max():+.0f} px across "
+          f"and {off[:, 1].min():+.0f}..{off[:, 1].max():+.0f} px down from the "
+          f"window centre ({worst:.0%} of the window)")
+    if worst > 0.15:
+        print("    raise --smooth to let the framing follow it"
+              if args.smooth == 0 else
+              "    lower --smooth to follow it more closely, or use a larger --size")
     if clamped:
         pct = 100 * clamped / len(pos)
         print(f"  ! window hit the frame edge on {clamped} frames ({pct:.0f}%); "
