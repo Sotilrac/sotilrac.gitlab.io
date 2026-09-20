@@ -39,7 +39,7 @@ Because it's me, the pool is encrypted and unlocks itself at boot from a key ser
 
 ## Only Fans
 
-Time for a hot topic: the thermals are bad. The usual steel case conducts heat out of the drives while my printed one insulates them. Five of the six bays sit at 45 °C idle, ten degrees above the ideal, and the dashboard warns me about it every day. I iterated on the enclosure a couple of times and added extra fans; things are a bit better but not ideal. One pleasant discovery is that Noctua fans are indeed quiet and well crafted.
+Time for a hot topic: the thermals are bad. The usual steel case conducts heat out of the drives while my printed one insulates them. Five of the six bays sit at 45 °C idle, ten degrees above the ideal, and the dashboard warns me about it every day. I iterated on the enclosure a couple of times and added extra fans; things are a bit better but still steamy. One pleasant discovery is that Noctua fans are indeed quiet and well crafted.
 
 {% clip "/img/blog/i-went-bananas/winter-is-coming", "My cooling strategy" %}
 
@@ -65,7 +65,7 @@ The NAS lives far from the router and there's no wired connection available, so 
 
 What this did rule out, to my surprise, was TrueNAS. It has no wireless support at all, not in the UI or the console. Its latest release also dropped the proprietary NVIDIA driver in favour of the open kernel modules, which do not support a Pascal GPU, so the 1070 would have been a dead weight too. And beyond the two hard blockers, I was disappointed by how little it lets you do: it's an appliance, and it wants you to stay out of the base system. Even my display daemon, which talks over `/dev/ttyACM0`, would be awkward to run.
 
-So the NAS runs Kubuntu 24.04 with ZFS, everything else in Docker Compose behind Caddy, and a dashboard I wrote myself: one page, amber on black to echo the box itself. It shows the full status of the hardware and services. It's the portal to all the NAS features. The `JSON` that feeds the dashboard is the same one that gets serialized and sent to the ESP32 (keeping both UIs in agreement with a single source of truth). There's also an Actions API to trigger things like backups and speed tests. In the end, this far exceeds the functionality of any NAS dashboard I'm aware of.
+So the NAS runs Kubuntu 24.04 with ZFS, everything else in Docker Compose behind Caddy, and a dashboard I wrote myself: one page, amber on black to echo the box itself. It shows the full status of the hardware and services. It's the portal to all the NAS features. The JSON that feeds the dashboard is the same one that gets serialized and sent to the ESP32 (keeping both UIs in agreement with a single source of truth). There's also an Actions API to trigger things like backups and speed tests. In the end, this far exceeds the functionality of any NAS dashboard I'm aware of.
 
 The apps each get their own hostname with TLS, and the whole thing is a git repo with `make` targets that lint and test the compose files, the systemd units, the Python, the C and the docs. I'm slowly turning this into its own OS, and I'll share it when it's presentable.
 
@@ -73,7 +73,7 @@ The apps each get their own hostname with TLS, and the whole thing is a git repo
 
 ## That Which We Call a NAS
 
-What's in a name? NAS is an outdated one. Sure, it's storage attached to a network, but this box also serves media, indexes photos, runs the password manager, hosts the household's git repos, keeps the backups, and downloads the ISOs. It's the household's computer, much like a house has a furnace and a water heater. This is what I actually wanted; unfortunately, it doesn't have a punchy short name (yet!).
+What's in a name? NAS is an outdated one. Sure, it's storage attached to a network, but this box also serves media, indexes photos, runs the password manager, hosts the household's git repos, keeps the backups and downloads the ISOs. It's the household's computer, much like a house has a furnace and a water heater. This is what I actually wanted; unfortunately, it doesn't have a punchy short name (yet!).
 
 {% fig "/img/blog/i-went-bananas/nas-front.jpg", "The NAS, full frontal" %}
 
