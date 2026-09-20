@@ -2,9 +2,14 @@
 """Render a following crop from a track file. All the framing decisions live here.
 
     ./crop.py track.json -o out.gif
-    ./crop.py track.json -o out.mp4 --smooth 61
-    ./crop.py track.json -o out.gif --smooth 0        # hold still, just stabilize
-    ./crop.py track.json -o out.gif --size 1600x900 --no-stabilize
+    ./crop.py track.json -o out.gif --smooth 61       # let the framing follow
+    ./crop.py track.json -o out.gif --colors 256 --dither bayer:bayer_scale=5 --lossy 0
+    ./crop.py track.json -o out.mp4                   # video ignores the gif options
+
+Defaults hold the framing where you drew the box and compress hard: 64 colours,
+no dither, gifsicle --lossy=30, which is about a quarter of the file a stock
+palettegen/paletteuse pass produces. Raise --smooth if the subject wanders out
+of the window; the tool says by how much when it does.
 
 Reads what track.py measured and decides size, smoothing and format, so every
 re-render is seconds rather than another tracking pass.
@@ -86,7 +91,7 @@ def parse_args():
     p.add_argument("--size", help="crop window WxH (default: from the tracked box)")
     p.add_argument("--aspect", choices=["source", "free"],
                    help="override the crop shape recorded in the track")
-    p.add_argument("--smooth", type=int, default=61,
+    p.add_argument("--smooth", type=int, default=0,
                    help="frames of moving average over the subject track, "
                         "setting how fast the framing may drift; 0 holds the "
                         "framing where you drew the box")
@@ -99,15 +104,15 @@ def parse_args():
     p.add_argument("--no-stabilize", action="store_true",
                    help="follow the raw tracked path, camera shake included")
     p.add_argument("--fps", type=float, default=10.0, help="gif frame rate")
-    p.add_argument("--colors", type=int, default=256,
-                   help="gif palette size; 64 roughly halves the file")
-    p.add_argument("--dither", default="bayer:bayer_scale=5",
-                   help="gif dither. 'none' is smallest and scores best, at the "
-                        "cost of banding on gradients; bayer_scale=3 is both "
-                        "bigger and worse, so it is not the default")
-    p.add_argument("--lossy", type=int, default=0,
-                   help="gifsicle lossy level; 30 is roughly half the file again "
-                        "for a visible but mild loss, 0 is off")
+    p.add_argument("--colors", type=int, default=64,
+                   help="gif palette size; 256 for gradients that band")
+    p.add_argument("--dither", default="none",
+                   help="gif dither. 'none' is smallest and scores best; use "
+                        "bayer:bayer_scale=5 if flat areas band. bayer_scale=3 "
+                        "is both bigger and worse, so never that")
+    p.add_argument("--lossy", type=int, default=30,
+                   help="gifsicle lossy level; 0 is off, 80 is roughly a quarter "
+                        "of the file for visible mush")
     p.add_argument("--no-optimize", action="store_true",
                    help="skip the lossless gifsicle -O3 pass")
     p.add_argument("--width", type=int,
