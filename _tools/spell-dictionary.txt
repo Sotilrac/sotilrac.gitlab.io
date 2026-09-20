@@ -53,16 +53,20 @@ via
 vias
 
 # --- Standards / acronyms ---
+ASM
 AWG
 BWG
 CMOS
 CTRL
+DDR
 EIA
 IEC
 IPC
 NEC
+RAIDZ
 RMS
 SWG
+TLS
 
 # --- Web stack / project ---
 BigInt
@@ -145,7 +149,11 @@ lossy
 # --- Business ---
 ROI
 
+# --- British spellings aspell misses ---
+ageing
+
 # --- Names ---
+Digital
 Asmat
 Inductiveload
 Parekh

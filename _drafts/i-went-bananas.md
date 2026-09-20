@@ -43,13 +43,13 @@ Time for a hot topic: the thermals are bad. The usual steel case conducts heat o
 
 {% clip "/img/blog/i-went-bananas/winter-is-coming", "My cooling strategy" %}
 
-Luckily, winter is coming, so I have some time to tinker with it some more.
+Luckily, winter is coming, so I have some time to tinker with it.
 
 ## Eye Candy
 
-I could have stopped here, slapped an OS on it and moved on. But I wanted more. Specifically, to experiment with more interesting UIs. Given that this computer is not meant to be connected to a big screen, I figured it would be a good opportunity to do something radically different: I connected a tiny screen.
+I could have stopped here, slapped an OS on it and moved on. But I wanted more. Specifically, to experiment with interesting UIs. Given that this computer is not meant to be connected to a big screen, I figured it would be a good opportunity to do something radically different: I connected a tiny screen.
 
-I'm too proud of [this 1.47" touch screen](https://www.waveshare.com/esp32-s3-touch-lcd-1.47.htm) on the front. It's driven by an ESP32-S3 that I soldered to the pads of one of the Zotac's USB connectors (the EN1070K has no internal USB header). The NAS streams its status to it over serial, and the firmware, written in C with [LVGL](https://lvgl.io/), renders seven screens you swipe through: pool health, drive temperatures, app status, network throughput, and so on. It goes to sleep after a while and wakes on touch. Walking past the machine, I can see at a glance what's going on without picking up another device. Plus, it looks sleek.
+I'm proud of [this 1.47" touch screen](https://www.waveshare.com/esp32-s3-touch-lcd-1.47.htm) on the front. It's driven by an ESP32-S3 that I soldered to the pads of one of the Zotac's USB connectors (the EN1070K has no internal USB header). The NAS streams its status to it over serial, and the firmware, written in C with [LVGL](https://lvgl.io/), renders seven screens you swipe through: pool health, drive temperatures, app status, network throughput, and so on. It goes to sleep after a while and wakes on touch. Walking past the machine, I can see at a glance what's going on without picking up another device. Plus, it looks sleek.
 
 {% clip "/img/blog/i-went-bananas/esp32-touchscreen", "Touchscreen status panel with gesture recognition" %}
 
@@ -73,7 +73,7 @@ The apps each get their own hostname with TLS, and the whole thing is a git repo
 
 ## That Which We Call a NAS
 
-What's in a name? NAS is an outdated one. Sure, it's storage attached to a network, but this box also serves media, indexes photos, runs the password manager, hosts the household's git repos, keeps the backups and downloads the ISOs. It's the household's computer, much like a house has a furnace and a water heater. This is what I actually wanted; unfortunately, it doesn't have a punchy short name (yet!).
+What's in a name? NAS is an outdated one. Sure, it's storage attached to a network, but this box also serves media, indexes photos, runs the password manager, hosts the household's git repos, keeps the backups, and downloads the ISOs. It's the household's computer, much like a house has a furnace and a water heater. This is what I actually wanted; unfortunately, it doesn't have a punchy short name (yet!).
 
 {% fig "/img/blog/i-went-bananas/nas-front.jpg", "The NAS, full frontal" %}
 
