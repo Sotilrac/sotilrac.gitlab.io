@@ -9,6 +9,7 @@ tags:
   - 3d-printing
   - esp32
   - zfs
+date: 2026-09-20T12:00:00-04:00
 ---
 
 Google nagged me into this, along with every other enshittified cloud ~~provider~~ dealer. For about a year, my phone warned me that the account was nearly full, so I migrated the picture backups to a Nextcloud instance and freed the space, at which point the nagging switched to reminding me that backups were turned off. Gmail does the same and provides _helpful_ "Upgrade" buttons here and there. I do not want to rent space for my own pictures for the rest of my life, and I certainly do not want Google looking at them either. I wanted a place to keep the family's files, an automatic backup for years of pictures that were living on phones and ageing PCs, and a machine that could download Linux ISOs around the clock without anyone noticing. I thought I wanted a NAS, so I built one.
