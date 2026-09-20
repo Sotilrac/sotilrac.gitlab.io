@@ -1,7 +1,7 @@
 ---
 title: Foggy Maps
 categories:
-  - My Projects
+  - Projects
 tags:
   - android
   - kotlin

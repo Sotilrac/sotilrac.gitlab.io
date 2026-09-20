@@ -1,7 +1,7 @@
 ---
 title: I went banaNAS
 categories:
-  - My Projects
+  - Projects
 tags:
   - nas
   - self-hosting

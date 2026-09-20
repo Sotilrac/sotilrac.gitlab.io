@@ -1,4 +1,4 @@
-.PHONY: help install dev build lint lint-fix check-links check ci clean ee-calc spell
+.PHONY: help install dev build lint lint-fix check-links check-categories check ci clean ee-calc spell
 
 # Eleventy output directory. CI overrides it (public/ on master, test/ elsewhere).
 OUT ?= _site
@@ -32,7 +32,10 @@ lint-fix: ee-calc  ## Auto-fix formatting
 check-links:  ## Verify internal links resolve in $(OUT)
 	node _tools/check-internal-links.mjs $(OUT)
 
-check: lint build check-links  ## Mirror CI: lint + build + link check
+check-categories:  ## Verify post categories are in the /blog/ filter list
+	node _tools/check-categories.mjs
+
+check: lint check-categories build check-links  ## Mirror CI: lint + categories + build + link check
 
 ci: install check  ## Full CI pipeline locally
 

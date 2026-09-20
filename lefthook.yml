@@ -5,6 +5,15 @@ pre-commit:
       glob: "*.{md,json,yml,yaml,css,mjs,js}"
       run: npx prettier --write {staged_files}
       stage_fixed: true
+    size:
+      # Blocks. A large blob is permanent once committed, and GitLab rejects
+      # any push over 100 MiB. See _tools/check-file-size.sh.
+      run: _tools/check-file-size.sh
+    categories:
+      # Blocks. A category outside blog.njk's filter list builds fine but
+      # the post can never be filtered to on /blog/.
+      glob: "{_posts,_drafts}/*.md"
+      run: node _tools/check-categories.mjs {staged_files}
     spell:
       # Advisory only: prints typos on the lines this commit adds, never blocks.
       glob: "*.md"

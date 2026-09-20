@@ -70,7 +70,7 @@ make lint          # check formatting (CI runs this)
 make lint-fix      # auto-fix formatting
 ```
 
-Git hooks are installed automatically via `make install` / `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files and prints spelling suspects on the lines the commit adds (advisory, never blocks). On each push, it runs `make check` (lint + build + internal link check), mirroring the CI pipeline.
+Git hooks are installed automatically via `make install` / `npm install` (the `prepare` script runs `lefthook install`). On each commit, Lefthook runs Prettier on staged files, refuses any file over 10 MB (`_tools/check-file-size.sh`), refuses a category outside the `/blog/` filter list (`_tools/check-categories.mjs`), and prints spelling suspects on the lines the commit adds (advisory, never blocks). On each push, it runs `make check` (lint + build + internal link check), mirroring the CI pipeline.
 
 ## Resume
 
@@ -233,6 +233,8 @@ Helper scripts in `_tools/`. External tools used during migrations are listed at
 - `redate-post.sh file YYYY-MM-DD`, change a post's date in the frontmatter and filename
 - `spell.mjs [--staged] FILE`, aspell spelling (Canadian English) plus a grammar pass for doubled words, common typos, and double spaces, filtered through `_tools/spell-dictionary.txt` (`make spell FILE=...`). `--staged` limits the report to lines added in the index, which is how the pre-commit hook calls it
 - `make-clip.sh input.mp4 img/blog/slug/name`, encode a `{% clip %}` set (MP4, WebM, poster JPEG) from any video, silent and capped at 960px/30fps. `WIDTH`, `FPS`, `CRF_MP4`, `CRF_WEBM` and `POSTER_FRAME` override the defaults
+- `check-categories.mjs [files...]`, verify every post and draft uses a category from the `/blog/` filter list, reading the allowed set from `blog.njk`'s `data-cat` attributes so it cannot drift from the UI. Runs in `make check` and on commit
+- `check-file-size.sh`, refuse to commit a staged file over `LIMIT_MB` (default 10). Git keeps blobs forever and GitLab rejects pushes over 100 MiB
 - `lowercase-files.sh`, lowercase all filenames in a directory
 
 **Build verification**
