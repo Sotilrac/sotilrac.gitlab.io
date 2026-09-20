@@ -33,3 +33,22 @@ __pycache__/
 *.py[cod]
 /src/fcc-ble-trends/out/
 /src/fcc-ble-trends/*.log
+
+# Camera originals: gigabytes of footage that the web clips are cut from.
+# Rendered clips under img/ are tracked (see _tools/make-clip.sh); the raw
+# files they came from are not, whatever directory they are dropped in.
+VID_*.mp4
+VID[0-9]*.mp4
+DSC*.mov
+MVI_*.mp4
+DJI_*.mp4
+*.MP4
+*.MOV
+*.mkv
+*.avi
+
+# Video tooling that lives outside the repo (track.py, crop.py, roipick.py)
+/img/blog/*/*.py
+/img/blog/*/.venv/
+/img/blog/*/*.trf
+/img/blog/*/track*.json
