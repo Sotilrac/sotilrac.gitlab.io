@@ -1,5 +1,5 @@
 ---
-title: I went banaNAS
+title: I Went BanaNAS
 categories:
   - Projects
 tags:
@@ -16,11 +16,11 @@ Google nagged me into this, along with every other enshittified cloud ~~provider
 
 {% fig "/img/blog/i-went-bananas/nas-low-angle.jpg", "The finished build" %}
 
-## An Old Friend
+## Pascal's Wager
 
 Let's be honest, it's been increasingly crazy to buy computers in the last few years, GPUs especially. Fortunately, every computer I ever bought had a GPU (you never know when you'll need that sweet, sweet fast matrix multiplication), and it turned out I had just the computer for the job.
 
-Enter the [Zotac MAGNUS EN1070K](https://www.zotac.com/us/product/mini_pcs/magnus-en1070k), a compact box with an i5 and a good old GTX 1070. It spent a few years as the living room media centre and occasional gaming rig. I used the same model in robot prototypes, where it did great. It idles low, it transcodes video on the GPU, and it runs a small local model without complaining.
+Enter the [Zotac MAGNUS EN1070K](https://www.zotac.com/us/product/mini_pcs/magnus-en1070k), a compact box with an i5 and a good old GTX 1070. It spent a few years as the living room media centre and occasional gaming rig. I used the same model in robot prototypes, where it did great. It idles low, it transcodes video on the GPU, and it runs a small local model without complaining. Little did I know how much this choice of Pascal GPU architecture would affect the final outcome.
 
 The problem is that Zotac designed it to hold a single 2.5" drive. So I designed an [extension for its body in Onshape](https://cad.onshape.com/documents/066c01cffe249f8e1757c5a5/w/e859fc0acb6f99b32537dd0b/e/54fec4203c5d8eb1f143f64c), printed it in glass-filled ABS, and bolted it on. Inside are an [ICY Dock five-bay hot-swap cage](https://global.icydock.com/product_65.html), a printed holder for a sixth drive, a [Pico PSU](https://www.amazon.com/gp/product/B0D4QPHZQF?smid=AV0DDIXL2LYE1&psc=1) fed from the Zotac's upgraded 19.5 V brick through a [DC-DC converter](https://www.amazon.com/gp/product/B07V6X6L89?smid=A3GYM455B71YGR&psc=1) (six drives spinning up at once pull about 125 W for a brief moment), and [Noctua fans](https://www.noctua.at/en/products/nf-a9-flx) to move the air. The six SATA ports come from an [ASM1166 adapter](https://www.amazon.com/gp/product/B0B5RJHYFD?smid=AE2OZG2NN3099&psc=1) in the M.2 slot, which is why the 1 TB boot SSD lives in the 2.5" bay now.
 
