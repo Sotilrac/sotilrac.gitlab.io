@@ -25,7 +25,7 @@ The problem is that Zotac designed it to hold a single 2.5" drive. So I designed
 
 {% fig "/img/blog/i-went-bananas/nas-open.jpg", "The Zotac atop the printed extension" %}
 
-The rest of the upgrade came out of drawers. Two DDR4 sticks from an old laptop take the memory to the platform maximum of 32 GB, an SSD I had lying around boots it, and a WiFi card from a previous project replaces the original one. The only parts I paid for were the cage, the adapter, and, much to my dismay, the drives.
+The rest of the upgrade came out of my junk drawers. Two DDR4 sticks from an old laptop take the memory to the platform maximum of 32 GB, an SSD I had lying around boots it, and a WiFi card from a previous project replaces the original one. The only parts I paid for were the cage, the adapter, and, much to my dismay, the drives.
 
 ## The Hard Way
 
