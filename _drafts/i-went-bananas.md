@@ -17,7 +17,7 @@ Google nagged me into this, along with every other enshittified cloud ~~provider
 
 ## An Old Friend
 
-Let's be honest, in the last few years it has become increasingly crazy to buy computers, GPUs especially. Luckily, every computer I ever bought had a GPU (you never know when you'll need that sweet, sweet fast matrix multiplication), and it turned out I had just the computer for the job.
+Let's be honest, it's been increasingly crazy to buy computers in the last few years, GPUs especially. Luckily, every computer I ever bought had a GPU (you never know when you'll need that sweet, sweet fast matrix multiplication), and it turned out I had just the computer for the job.
 
 Enter the [Zotac MAGNUS EN1070K](https://www.zotac.com/us/product/mini_pcs/magnus-en1070k), a compact box with an i5 and a good old GTX 1070. It spent a few years as the living room media centre and occasional gaming rig. I used the same model in robot prototypes, where it did great. It idles low, it transcodes video on the GPU, and it runs a small local model without complaining.
 
@@ -31,7 +31,7 @@ The rest of the upgrade came out of drawers. Two DDR4 sticks from an old laptop 
 
 It is 2026, and I bought six hard disk drives. I did not want to; I thought we were past mechanically spinning storage. SSDs at this capacity, if you can find them, will cost you a couple of kidneys. For a NAS, the price per TB matters a lot; I did my best to keep it as low as practical. Don't get me wrong, hard drives are not cheap either. AI data centres are buying every drive, every memory chip and every GPU the fabs can make: [Western Digital's hard drive production is sold out for all of 2026](https://finance.yahoo.com/news/hard-drives-sold-2026-ai-173205634.html), [DRAM and NAND contract prices nearly doubled in a single quarter](https://www.trendforce.com/presscenter/news/20260202-12911.html), and the rest of us get what is left at whatever price. Luckily there is a healthy market for second-hand NAS drives on eBay, and I was able to snatch a matched set of 8 TB WD Red Plus at a reasonable price.
 
-They are in a single RAIDZ2 pool: 43.7 TB raw, 29 TB usable, any two drives can die without taking data with them. It was so satisfying to test this by pulling a drive out of the live pool. Reads and writes kept going, Samba kept serving, an alert landed in my mailbox a few seconds later, and when I pushed the drive back in it resilvered on its own. It's hard to overstate how satisfying it is to test this while not in an active crisis.
+They are in a single RAIDZ2 pool: 43.7 TB raw, 29 TB usable, any two drives can die without taking data with them. I tested this by pulling a drive out of the live pool. Reads and writes kept going, Samba kept serving, an alert landed in my mailbox a few seconds later, and when I pushed the drive back in it resilvered on its own. It's hard to overstate how satisfying it is to test this while not in an active crisis.
 
 {% fig "/img/blog/i-went-bananas/drive-tray-out.jpg", "Bay two out" %}
 
@@ -39,7 +39,7 @@ Because it's me, the pool is encrypted and unlocks itself at boot from a key ser
 
 ## Only Fans
 
-Time for a hot topic: things get steamy fast! In other words, the thermals are bad. The usual steel case conducts heat out of the drives; my plastic enclosure insulates them. Five of the six bays sit at 45 °C idle, ten degrees above the ideal, and the dashboard warns me about it every single day. I iterated on the enclosure a couple of times and added extra fans; things are a bit better but not ideal. One pleasant discovery is that Noctua fans are indeed very quiet and very well made.
+Time for a hot topic: the thermals are bad. The usual steel case conducts heat out of the drives while my printed one insulates them. Five of the six bays sit at 45 °C idle, ten degrees above the ideal, and the dashboard warns me about it every day. I iterated on the enclosure a couple of times and added extra fans; things are a bit better but not ideal. One pleasant discovery is that Noctua fans are indeed silent and well crafted.
 
 {% clip "/img/blog/i-went-bananas/winter-is-coming", "My cooling strategy" %}
 
@@ -47,9 +47,9 @@ Luckily, winter is coming, so I have some time to tinker with it some more.
 
 ## Eye Candy
 
-I could have stopped here, slapped an OS on it and moved on. But I really wanted something more. I've been wanting to experiment with more interesting UIs, and given that this computer is not meant to be connected to a big screen, I figured it would be a good opportunity to do something radically different: I connected a tiny screen.
+I could have stopped here, slapped an OS on it and moved on. But I wanted more. Specifically, to experiment with more interesting UIs. Given that this computer is not meant to be connected to a big screen, I figured it would be a good opportunity to do something radically different: I connected a tiny screen.
 
-I'm pretty proud of [this 1.47" touch screen](https://www.waveshare.com/esp32-s3-touch-lcd-1.47.htm) on the front. It's driven by an ESP32-S3 that I soldered to the pads of one of the Zotac's USB connectors (the EN1070K has no internal USB header). The NAS streams its status to it over serial, and the firmware, written in C with [LVGL](https://lvgl.io/), renders seven screens you swipe through: pool health, drive temperatures, app status, network throughput, and so on. It goes to sleep after a while and wakes on touch. Walking past the machine, I can see at a glance what's going on without picking up another device. Plus, it looks pretty sleek.
+I'm too proud of [this 1.47" touch screen](https://www.waveshare.com/esp32-s3-touch-lcd-1.47.htm) on the front. It's driven by an ESP32-S3 that I soldered to the pads of one of the Zotac's USB connectors (the EN1070K has no internal USB header). The NAS streams its status to it over serial, and the firmware, written in C with [LVGL](https://lvgl.io/), renders seven screens you swipe through: pool health, drive temperatures, app status, network throughput, and so on. It goes to sleep after a while and wakes on touch. Walking past the machine, I can see at a glance what's going on without picking up another device. Plus, it looks sleek.
 
 {% clip "/img/blog/i-went-bananas/esp32-touchscreen", "Touchscreen status panel with gesture recognition" %}
 
@@ -77,6 +77,6 @@ What's in a name? NAS is an outdated one. Sure, it is storage attached to a netw
 
 {% fig "/img/blog/i-went-bananas/nas-front.jpg", "The NAS, full frontal" %}
 
-I have been moving away from the proverbial clouds for a while now, and this is my biggest step yet. Everything I put on this machine is mine, stays where I can see it, and does not depend on a subscription, a terms-of-service update, or a company deciding my photos belong to its training set. The quota warnings have stopped, too. I expect household computers to become the norm: they give us ownership of our own data, permanence and independence, and most of us already have the hardware, dormant in a drawer.
+I have been moving away from the clouds for a while now, and this is my biggest step yet. Everything I put on this machine is mine, stays where I can see it, and does not depend on a subscription, a terms-of-service update, or a company deciding my photos belong to their training set. The quota warnings have stopped, too. I expect household computers to become the norm: they give us ownership of our own data, permanence and independence, and most of us already have the hardware, dormant in a drawer.
 
 {% gallery 3, "/img/blog/i-went-bananas/nas-top.jpg", "/img/blog/i-went-bananas/nas-case-joint.jpg", "/img/blog/i-went-bananas/nas-back.jpg", "/img/blog/i-went-bananas/drive-trays-fanned.jpg" %}
