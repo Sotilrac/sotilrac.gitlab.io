@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import yaml from "js-yaml";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import katex from "katex";
@@ -14,6 +16,51 @@ const attr = (s) =>
 
 // Attribute-safe plain text: caption markup stripped, then escaped.
 const attrText = (s) => attr(String(s ?? "").replace(/<[^>]+>/g, ""));
+
+// Intrinsic size of a PNG or JPEG, read straight from its header. The `clip`
+// shortcode puts it on the <video> so the page reserves the right box before
+// the poster paints; nothing else here needs an image decoder.
+const pngSize = (b, n) =>
+  n > 24 && b.readUInt32BE(0) === 0x89504e47
+    ? { w: b.readUInt32BE(16), h: b.readUInt32BE(20) }
+    : null;
+
+// Walk the JPEG marker chain to the frame header. SOF0..SOF15 carry the size,
+// except for the three markers in that range that are not frame headers.
+function jpegSize(b, n) {
+  if (b[0] !== 0xff || b[1] !== 0xd8) return null;
+  let i = 2;
+  while (i + 9 < n) {
+    if (b[i] !== 0xff) {
+      i++;
+      continue;
+    }
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) {
+      return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) };
+    }
+    if (m === 0x01 || (m >= 0xd0 && m <= 0xd9)) {
+      i += 2;
+      continue;
+    }
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  return null;
+}
+
+function imageSize(file) {
+  let fd;
+  try {
+    fd = fs.openSync(file, "r");
+    const buf = Buffer.alloc(65536);
+    const n = fs.readSync(fd, buf, 0, buf.length, 0);
+    return pngSize(buf, n) || jpegSize(buf, n);
+  } catch {
+    return null;
+  } finally {
+    if (fd !== undefined) fs.closeSync(fd);
+  }
+}
 
 const MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
 
@@ -151,6 +198,42 @@ export default function (eleventyConfig) {
     const dc = caption ? ` data-caption="${attrText(caption)}"` : "";
     const st = width ? ` style="--fig-width: ${attr(width)}"` : "";
     return `<figure class="post-fig"${st}><a href="${attr(img)}" data-fancybox${dc}>${imgTag(this.page, img, alt)}</a>${fc}</figure>`;
+  });
+
+  // A gif without the gif: one looping, silent, inline <video>. Takes a base
+  // path with no extension and emits only the files that sit next to it, so a
+  // clip with no WebM costs no 404 request. Autoplay is best effort and not a
+  // guarantee: iOS Low Power Mode refuses it outright, and so does Firefox set
+  // to "Block Audio and Video". That is what the poster is for, and why
+  // js/clip.js adds a real play/pause button (which WCAG 2.2.2 wants anyway,
+  // and which an animated GIF can never offer).
+  // Usage: {% clip "/img/blog/slug/name", "Caption text" %}
+  eleventyConfig.addShortcode("clip", function (base, caption, width) {
+    const abs = (ext) => path.join(process.cwd(), base + ext);
+    const has = (ext) => fs.existsSync(abs(ext));
+    const sources = [
+      [".webm", "video/webm"],
+      [".mp4", "video/mp4"],
+    ]
+      .filter(([ext]) => has(ext))
+      .map(([ext, type]) => `<source src="${attr(base + ext)}" type="${type}">`)
+      .join("");
+    if (!sources) return `<!-- clip: no video next to ${attr(base)} -->`;
+    const posterExt = [".jpg", ".png"].find(has);
+    const dim = posterExt ? imageSize(abs(posterExt)) : null;
+    const capId = `clip-caption-${count(this.page, "clip")}`;
+    const st = width ? ` style="--fig-width: ${attr(width)}"` : "";
+    const size = dim ? ` width="${dim.w}" height="${dim.h}"` : "";
+    const poster = posterExt ? ` poster="${attr(base + posterExt)}"` : "";
+    // Named by the caption where there is one, so a screen reader reads it
+    // once instead of hearing the same words as label and as caption.
+    const label = caption
+      ? ` aria-labelledby="${capId}"`
+      : ` aria-label="${attrText(altFromPath(base + ".mp4"))}"`;
+    const fc = caption
+      ? `<figcaption id="${capId}">${caption}</figcaption>`
+      : "";
+    return `<figure class="post-fig clip-fig"${st}><div class="clip-stage"><video class="clip" autoplay loop muted playsinline preload="metadata"${size}${poster}${label}>${sources}</video></div>${fc}</figure>`;
   });
 
   eleventyConfig.addShortcode("gallery", function (columns, ...imgs) {

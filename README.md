@@ -57,7 +57,7 @@ Eleventy v3 with no site framework. `eleventy.config.mjs` registers the shortcod
 - **Permalinks**: `_posts/_posts.11tydata.mjs` tags everything in `_posts/` as `posts` and strips the date prefix to build `/blog/<slug>/`, using `postSlug` from `_tools/lib.mjs` (also the `postSlug` filter that looks up archived comments). `_drafts/_drafts.11tydata.mjs` does the same for `/drafts/<slug>/`.
 - **Collections**: `publicPosts` (everything in `_posts/`, newest first) feeds the blog page, feed and sitemap; `drafts` backs the drafts listing.
 - **Passthrough copy**: `css/`, `font/`, `img/`, `js/`, `robots.txt`, `llms.txt`, plus KaTeX's stylesheet and fonts out of `node_modules/`. In `--serve`, `img/` is served from disk instead of copied.
-- **Page weight**: `head.njk` loads the Prism, KaTeX, uPlot, compare and model-viewer assets only when the rendered page contains their markup. `fig` and `gallery` lazy-load every image after the first on a page. Fonts are WOFF2 with `font-display: swap`.
+- **Page weight**: `head.njk` loads the Prism, KaTeX, uPlot, compare, clip and model-viewer assets only when the rendered page contains their markup. `fig` and `gallery` lazy-load every image after the first on a page. Fonts are WOFF2 with `font-display: swap`.
 - **Generated assets**: `js/ee-calculator.js` is bundled from `src/ee-calculator/` by `_tools/build-ee-calculator.mjs` and is gitignored. Every `make` target runs the bundler before Eleventy, and CI drives the build through the same `make` targets.
 - **Output**: `_site/` locally, `public/` for the Pages deploy on `master`, `test/` for branch pipelines.
 
@@ -107,6 +107,7 @@ Available in post content:
 {% fig "/img/blog/slug/photo.jpg", "Caption text" %}
 {% fig "/img/blog/slug/tall.png", "Caption text", "18em" %} <!-- optional max width for this figure -->
 {% gallery 3, "/img/blog/slug/a.jpg", "/img/blog/slug/b.jpg", "/img/blog/slug/c.jpg" %}
+{% clip "/img/blog/slug/thing", "Caption text" %} <!-- looping silent video; no extension -->
 {% compare "/img/blog/slug/before.jpg", "/img/blog/slug/after.jpg", "Caption text" %}
 {% calc "deadbeef" %}
 {% youtube "video-id" %}
@@ -114,6 +115,8 @@ Available in post content:
 {% wayback "https://web.archive.org/web/...", "link text" %}
 {% model "/img/blog/slug/model.glb", "Caption", "0deg 75deg auto" %}
 ```
+
+`{% clip %}` is the replacement for an animated GIF: it takes a base path with no extension and emits a looping, silent, autoplaying `<video>` for whichever of `<base>.webm`, `<base>.mp4` and the `<base>.jpg` poster exist on disk, reading the poster's header for the intrinsic size so the page reserves the box before anything paints. Encode the files with `_tools/make-clip.sh`. Autoplay is best effort, since iOS Low Power Mode and Firefox set to block all media refuse it even muted, so `js/clip.js` adds a play/pause button that doubles as the pause mechanism WCAG 2.2.2 asks for and honours `prefers-reduced-motion`, neither of which a GIF can do.
 
 The `{% plot %}` paired shortcode renders an interactive uPlot graph from a JSON config in its body (see `js/plot.js` for the accepted keys). Prettier reformats that JSON and breaks the shortcode, so precede every block with `<!-- prettier-ignore -->`:
 
@@ -229,6 +232,7 @@ Helper scripts in `_tools/`. External tools used during migrations are listed at
 - `publish.sh slug [YYYY-MM-DD]`, promote a draft from `_drafts/` to `_posts/`, adding a `date:` field and the date prefix to the filename
 - `redate-post.sh file YYYY-MM-DD`, change a post's date in the frontmatter and filename
 - `spell.mjs [--staged] FILE`, aspell spelling (Canadian English) plus a grammar pass for doubled words, common typos, and double spaces, filtered through `_tools/spell-dictionary.txt` (`make spell FILE=...`). `--staged` limits the report to lines added in the index, which is how the pre-commit hook calls it
+- `make-clip.sh input.mp4 img/blog/slug/name`, encode a `{% clip %}` set (MP4, WebM, poster JPEG) from any video, silent and capped at 960px/30fps. `WIDTH`, `FPS`, `CRF_MP4`, `CRF_WEBM` and `POSTER_FRAME` override the defaults
 - `lowercase-files.sh`, lowercase all filenames in a directory
 
 **Build verification**

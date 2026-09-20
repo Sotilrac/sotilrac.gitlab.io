@@ -1629,6 +1629,75 @@ figure.post-fig.compare-fig .compare-zoom-after {
   right: 0.5em;
 }
 
+/* --- Looping clips (<video class="clip">), the gif replacement --- */
+figure.post-fig.clip-fig {
+  width: 100%;
+  max-width: var(--fig-width, 38em);
+}
+
+.clip-stage {
+  position: relative;
+  line-height: 0;
+}
+
+.clip-stage video {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  background: var(--charcoal);
+}
+
+/* Out of the way while the clip runs, and unmissable when it is stopped,
+   which is also the state a visitor lands on when autoplay was refused. */
+.clip-toggle {
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.5em;
+  display: grid;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 55%);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.clip-toggle svg {
+  width: 1.2em;
+  height: 1.2em;
+  fill: currentColor;
+}
+
+.clip-stage:hover .clip-toggle,
+.clip-toggle:focus-visible {
+  opacity: 1;
+}
+
+.clip-toggle.is-paused {
+  inset: 0;
+  width: 3.4em;
+  height: 3.4em;
+  margin: auto;
+  opacity: 1;
+}
+
+.clip-toggle.is-paused svg {
+  width: 2em;
+  height: 2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clip-toggle {
+    opacity: 1;
+    transition: none;
+  }
+}
+
 /* --- Embedded video --- */
 .video {
   display: block;

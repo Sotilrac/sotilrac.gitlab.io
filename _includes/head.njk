@@ -100,6 +100,9 @@
   {% if 'class="compare-stage"' in body %}
   <script src="{{ site.baseurl }}/js/compare.js" defer></script>
   {% endif %}
+  {% if 'class="clip-stage"' in body %}
+  <script src="{{ site.baseurl }}/js/clip.js" defer></script>
+  {% endif %}
   {% if '<model-viewer' in body %}
   <script type="module" src="{{ site.baseurl }}/js/model-viewer.min.js"></script>
   {% endif %}
