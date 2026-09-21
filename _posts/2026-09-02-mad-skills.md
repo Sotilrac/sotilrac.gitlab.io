@@ -10,7 +10,7 @@ tags:
 date: 2026-09-02T12:00:00-04:00
 ---
 
-For the last decade, my job has been leading robotics teams, and code was something I reviewed far more often than I wrote. That flipped this past year. I have been coding more than I have in a long time and, more to the point, finishing things: a couple of web apps, the calculators and plots on this blog, and a pile of small tools that had been waiting in a text file for years. I did not get more free time (I checked); LLMs got good enough to use, and the projects I had been meaning to build finally fit into the partitioned days I already have.
+For the last decade, my job has been leading robotics teams, and I reviewed code far more often than I wrote it. That flipped this past year. I have been coding more than I have in a long time and, more to the point, finishing things: a couple of web apps, the calculators and plots on this blog, and a pile of small tools that had been waiting in a text file for years. I did not get more free time (I checked); LLMs got good enough to use, and the projects I had been meaning to build finally fit into the partitioned days I already have.
 
 ## A Power Tool
 
