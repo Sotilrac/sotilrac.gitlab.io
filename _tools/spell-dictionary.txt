@@ -53,6 +53,7 @@ via
 vias
 windings
 wye
+overcurrent
 
 # --- Standards / acronyms ---
 ASM
@@ -142,6 +143,11 @@ OxygenOS
 uBlock
 bootloader
 CPH
+booleans
+config
+cyclomatic
+polymorphism
+Tcl
 
 
 # --- Science ---
@@ -153,6 +159,7 @@ ROI
 
 # --- British spellings aspell misses ---
 ageing
+sceptics
 
 # --- Names ---
 Digital
@@ -168,6 +175,16 @@ Dephy
 Reddit
 Substack
 Fergie
+Cirillo
+De
+Feman
+Francesco
+Laconia
+McCabe
+Muratori
+Ousterhout
+Sternberg
+Wai
 
 # --- Units / formats ---
 dB
