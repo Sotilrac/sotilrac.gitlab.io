@@ -8,17 +8,17 @@ tags:
 
 Philip II of Macedon, having taken the submission of most of southern Greece, asked Sparta whether he should come as friend or foe; they answered "Neither." He then threatened: "If I invade Laconia, I will uproot you from your land." The Spartans replied: "If."
 
-This masterful display of succcinctness is perhaps why I have an aversion to `if` statements in code. Of course tehy are necessary but overusing them smells of poor software design to me. When I say i hate `if` stetements, people look at me as if I'm insane. After all, any tme anyone chines in on how a piece of software ought to work they some something lilke "oh, just make so if _some condition_ it does _some action_".
+This masterful display of succinctness is perhaps why I have an aversion to `if` statements in code. Of course, they are necessary, but overusing them smells of poor software design to me. When I say I hate `if` statements, people look at me as if I'm insane. After all, any time anyone chimes in on how a piece of software ought to work, they say something like "oh, just make it so if _some condition_, it does _some action_."
 
-As we already covered in the sigmoids post who this is a bad approach for implementing thresholds of physical quantities. But I want to go furtehr into why this is a bad idea even when they represent concepts that have hard conditions. I have this feeling what when you think a problem trhough you can implement it without or at least with very few `if` statements. Ans although i had encountered this counltless times in the wild i dind't have a good set of examples to illustrate this.
+As we already covered in the [sigmoids post](/blog/sigmoids-are-the-best/), this is a bad approach for implementing thresholds on physical quantities. But I want to go further into why it's a bad idea even when the `if` represents a concept with a hard condition. I have a feeling that when you think a problem through, you can implement it without `if` statements, or at least with very few. And although I had encountered this countless times in the wild, I didn't have a good set of examples to illustrate it.
 
-It turns out, otehr, quite promiment, programers have thought of this too. So we can out togetehr some exaples to illustrate each of the cases they describe.
+It turns out that other, quite prominent, programmers have thought about this too, so we can put together some examples to illustrate each of the cases they describe.
 
 <!-- insert one section per reference per type of if pitfall. illustrate with one of the code examples. cukminate on linus' example  -->
 
 <!-- insert one section for good if examples-->
 
-In the end Sparta's `if` condition became true. Luckyly for them it seems they had considered the consequences of their if statement. The macedonians did invade and did take some lad form the Spartands, although not Sparta istelf.
+In the end, Sparta's `if` condition became true. Luckily for them, it seems they had considered the consequences of their `if` statement: the Macedonians did invade and did take some land from the Spartans, although not Sparta itself.
 
 <!-- notes for post below -->
 
