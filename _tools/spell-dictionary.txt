@@ -51,6 +51,8 @@ tunable
 varistor
 via
 vias
+windings
+wye
 
 # --- Standards / acronyms ---
 ASM

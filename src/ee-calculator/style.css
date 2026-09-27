@@ -734,3 +734,19 @@ input[type="number"] {
     min-width: 5em;
   }
 }
+
+/* -- Delta-wye -- */
+/* R_ab (delta side) and R_AB (terminal pair) differ only by case. */
+[data-tool="dy"] label {
+  text-transform: none;
+}
+.schematic-pair figure .row {
+  width: 100%;
+  margin: 0.5em 0 0;
+}
+.schematic-pair figure .field {
+  flex: 1 1 0;
+}
+input.computed {
+  color: var(--accent);
+}

@@ -3,7 +3,7 @@
 // A browser-based calculator suite for hobbyist electrical
 // engineers: resistor color code, E-series, voltage divider,
 // LED resistor, Ohm's law, RC cutoff, 555 timer, series/
-// parallel reducer, AWG, PCB trace width.
+// parallel reducer, delta-wye, AWG, PCB trace width.
 // No dependencies, single file, works forever.
 // Author: Carlos Asmat, https://asmat.ca
 // ============================================================
@@ -409,6 +409,43 @@ class Circuit {
           `<text x="${lx}" y="${cy + 4}" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${svgSubscript(label)}</text>`,
         );
       }
+    }
+    return this;
+  }
+  // Resistor at any angle between (x1,y1) and (x2,y2). The label sits to the
+  // left of travel from (x1,y1) to (x2,y2) as drawn on screen, so pick the
+  // endpoint order to put it where it should go.
+  resistorAngled(x1, y1, x2, y2, label) {
+    const sym = SYM.r;
+    const px1 = this._p(x1),
+      py1 = this._p(y1),
+      px2 = this._p(x2),
+      py2 = this._p(y2);
+    const len = Math.hypot(px2 - px1, py2 - py1);
+    const ux = (px2 - px1) / len,
+      uy = (py2 - py1) / len;
+    const cx = (px1 + px2) / 2,
+      cy = (py1 + py2) / 2;
+    const deg = (Math.atan2(uy, ux) * 180) / Math.PI;
+    const half = sym.w / 2;
+    this._push(
+      `<use href="#${sym.id}" x="${cx - half}" y="${cy - sym.ay}" width="${sym.w}" height="${sym.h}" transform="rotate(${deg} ${cx} ${cy})"/>`,
+    );
+    const line = (ax, ay, bx, by) =>
+      `<line x1="${ax}" y1="${ay}" x2="${bx}" y2="${by}" stroke="${CIRCUIT.STROKE}" stroke-width="${CIRCUIT.SW}" stroke-linecap="round"/>`;
+    this._push(line(px1, py1, cx - ux * half, cy - uy * half));
+    this._push(line(cx + ux * half, cy + uy * half, px2, py2));
+    if (label) {
+      // Screen-space left normal of the travel direction (y points down).
+      const nx = uy,
+        ny = -ux;
+      const d = 12;
+      const anchor = nx > 0.3 ? "start" : nx < -0.3 ? "end" : "middle";
+      const lx = cx + nx * d;
+      const ly = cy + ny * d + 4 + (ny > 0.3 ? 4 : 0);
+      this._push(
+        `<text x="${lx}" y="${ly}" text-anchor="${anchor}" font-family="${CIRCUIT.FONT}" font-size="12" fill="${CIRCUIT.STROKE}">${svgSubscript(label)}</text>`,
+      );
     }
     return this;
   }
@@ -847,6 +884,28 @@ function reduceNetwork(values, topology, kind) {
   return null;
 }
 
+// ---- Delta-wye (Π-T) transform ----
+
+// Delta resistors sit between node pairs (R_ab, R_bc, R_ca); wye resistors run
+// from each node to the star point (R_a, R_b, R_c). Both networks look
+// identical from terminals A, B, C.
+function deltaToWye(ab, bc, ca) {
+  const s = ab + bc + ca;
+  if (!(s > 0)) return null;
+  return { a: (ab * ca) / s, b: (ab * bc) / s, c: (bc * ca) / s };
+}
+
+function wyeToDelta(a, b, c) {
+  if (!(a > 0 && b > 0 && c > 0)) return null;
+  const p = a * b + b * c + c * a;
+  return { ab: p / c, bc: p / a, ca: p / b };
+}
+
+// Resistance between each terminal pair of a wye, with the third terminal open.
+function terminalResistances({ a, b, c }) {
+  return { ab: a + b, bc: b + c, ca: c + a };
+}
+
 // ---- AWG ----
 
 function awgDiameter(n) {
@@ -944,7 +1003,7 @@ const TABS = [
   {
     id: "resistors",
     label: "Resistors",
-    tools: ["estd", "color", "net"],
+    tools: ["estd", "color", "net", "dy"],
   },
   {
     id: "circuits",
@@ -996,6 +1055,10 @@ class EECalculator extends HTMLElement {
       netKind: "resistor",
       netTopo: "parallel",
       netVals: "",
+      // Delta-wye
+      dySrc: "delta",
+      dyEqual: false,
+      dyVals: { ab: "10k", bc: "22k", ca: "47k" },
       // AWG
       awgHighlight: "",
       awgLength: "",
@@ -2386,6 +2449,127 @@ class EECalculator extends HTMLElement {
       go();
     });
     if (this.state.netVals) go();
+  }
+
+  // ============================================================
+  // Tool: Delta-wye transform
+  // ============================================================
+  _render_dy() {
+    const el = this._wrap.querySelector('[data-tool="dy"]');
+    const GROUPS = { delta: ["ab", "bc", "ca"], wye: ["a", "b", "c"] };
+    const inputs = (keys) =>
+      keys
+        .map((k) => field(`R_${k}`, `<input type="text" data-r="${k}">`))
+        .join("");
+    el.innerHTML = `
+      <div class="tool-title">Delta-wye (Δ-Y) transform</div>
+      <div class="tool-sub">Edit any resistor and the other network updates to match. Both look the same from terminals A, B, C.</div>
+
+      <div class="row">
+        <div class="seg"><button class="btn ${this.state.dyEqual ? "active" : ""}" data-equal>Balanced</button></div>
+      </div>
+
+      <div class="schematic-pair">
+        <figure><figcaption>Delta (Δ, Π)</figcaption><div data-schematic-d></div><div class="row">${inputs(GROUPS.delta)}</div></figure>
+        <figure><figcaption>Wye (Y, T, star)</figcaption><div data-schematic-y></div><div class="row">${inputs(GROUPS.wye)}</div></figure>
+      </div>
+
+      <div class="result" data-result></div>
+      <div class="note">S = R_ab + R_bc + R_ca; R_a = R_ab·R_ca / S, R_b = R_ab·R_bc / S, R_c = R_bc·R_ca / S</div>
+      <div class="note">P = R_a·R_b + R_b·R_c + R_c·R_a; R_ab = P / R_c, R_bc = P / R_a, R_ca = P / R_b</div>
+      <div class="note">R_AB = R_ab ∥ (R_bc + R_ca) = R_a + R_b</div>
+    `;
+    // Equilateral triangle, side 9 grid units; the star point is its centroid.
+    const A = [8, 1.5],
+      B = [3.5, 1.5 + 4.5 * Math.sqrt(3)],
+      C = [12.5, 1.5 + 4.5 * Math.sqrt(3)],
+      O = [8, 1.5 + 3 * Math.sqrt(3)];
+    const nodes = (c) => {
+      c.terminal(...A, "A", "above");
+      c.terminal(...B, "B", "left");
+      c.terminal(...C, "C", "right");
+    };
+    const lbl = (v, k) =>
+      v[k] != null ? `R_${k} ${formatSI(v[k], "Ω")}` : `R_${k}`;
+    const draw = (v) => {
+      const d = new Circuit(16, 11);
+      d.resistorAngled(...B, ...A, lbl(v, "ab"));
+      d.resistorAngled(...C, ...B, lbl(v, "bc"));
+      d.resistorAngled(...A, ...C, lbl(v, "ca"));
+      nodes(d);
+      const y = new Circuit(16, 11);
+      y.resistorAngled(...O, ...A, lbl(v, "a"));
+      y.resistorAngled(...B, ...O, lbl(v, "b"));
+      y.resistorAngled(...O, ...C, lbl(v, "c"));
+      y.junction(...O);
+      nodes(y);
+      el.querySelector("[data-schematic-d]").innerHTML = d.render();
+      el.querySelector("[data-schematic-y]").innerHTML = y.render();
+    };
+    const inp = (k) => el.querySelector(`[data-r="${k}"]`);
+    const setVal = (k, v) => {
+      inp(k).value = v;
+      inp(k).parentElement.classList.toggle("has-value", v !== "");
+    };
+    const fmt = (v) => {
+      const p = formatSIParts(v, "", 4);
+      return `${p.number}${p.prefix}`;
+    };
+    const result = el.querySelector("[data-result]");
+    // The group edited last is the source; the other group is solved from it.
+    const go = () => {
+      const src = this.state.dySrc;
+      const dst = src === "delta" ? "wye" : "delta";
+      const known = {};
+      for (const k of GROUPS[src]) {
+        known[k] = readSI(el, `[data-r="${k}"]`, true);
+        inp(k).classList.remove("computed");
+      }
+      const sv = GROUPS[src].map((k) => known[k]);
+      const out = sv.every((v) => v != null)
+        ? src === "delta"
+          ? deltaToWye(...sv)
+          : wyeToDelta(...sv)
+        : null;
+      for (const k of GROUPS[dst]) {
+        setVal(k, out ? fmt(out[k]) : "");
+        inp(k).classList.add("computed");
+      }
+      draw({ ...known, ...out });
+      if (!out) {
+        result.innerHTML = warnRow("enter three positive resistances");
+        return;
+      }
+      const t = terminalResistances(src === "wye" ? known : out);
+      result.innerHTML = `
+        ${row("A–B (C open)", formatSI(t.ab, "Ω"), "accent")}
+        ${row("B–C (A open)", formatSI(t.bc, "Ω"), "accent")}
+        ${row("C–A (B open)", formatSI(t.ca, "Ω"), "accent")}
+      `;
+    };
+    const syncEqual = (k) => {
+      if (!this.state.dyEqual) return;
+      const src = k.length === 2 ? "delta" : "wye";
+      for (const other of GROUPS[src]) setVal(other, inp(k).value);
+    };
+    for (const k of [...GROUPS.delta, ...GROUPS.wye]) {
+      inp(k).addEventListener("input", () => {
+        this.state.dySrc = k.length === 2 ? "delta" : "wye";
+        syncEqual(k);
+        for (const s of GROUPS[this.state.dySrc])
+          this.state.dyVals[s] = inp(s).value;
+        go();
+      });
+    }
+    el.querySelector("[data-equal]").addEventListener("click", (e) => {
+      this.state.dyEqual = !this.state.dyEqual;
+      e.currentTarget.classList.toggle("active", this.state.dyEqual);
+      const first = GROUPS[this.state.dySrc].find((k) => inp(k).value !== "");
+      if (first) inp(first).dispatchEvent(new Event("input"));
+    });
+    for (const k of GROUPS[this.state.dySrc])
+      inp(k).value = this.state.dyVals[k] ?? "";
+    go();
   }
 
   // ============================================================

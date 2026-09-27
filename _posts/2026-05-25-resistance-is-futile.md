@@ -75,6 +75,20 @@ $$R_\text{series} = R_1 + R_2 + \dots + R_n, \qquad \frac{1}{R_\text{parallel}} 
 
 $$\frac{1}{C_\text{series}} = \frac{1}{C_1} + \frac{1}{C_2} + \dots + \frac{1}{C_n}, \qquad C_\text{parallel} = C_1 + C_2 + \dots + C_n$$
 
+### Delta-Wye Transform
+
+Some networks can't be reduced with series and parallel rules alone. The classic example is the Wheatstone bridge: no two of its five resistors are in series or in parallel with each other. The fix is to replace three resistors connected in a triangle (delta, Δ, also drawn as a Π) with three resistors connected in a star (wye, Y, also drawn as a T), or the other way around. Both networks present the same resistance between every pair of terminals A, B, and C, so the rest of the circuit can't tell the difference, and after the swap the series/parallel rules work again. The same transform shows up in three-phase power, where loads and transformer windings come in both configurations.
+
+Delta resistors connect node pairs ($R_{ab}$, $R_{bc}$, $R_{ca}$); wye resistors connect each node to the star point ($R_a$, $R_b$, $R_c$). Edit either network in the calculator and the other one updates, along with the resistance between each pair of terminals.
+
+$$R_a = \frac{R_{ab} R_{ca}}{R_{ab} + R_{bc} + R_{ca}}, \qquad R_b = \frac{R_{ab} R_{bc}}{R_{ab} + R_{bc} + R_{ca}}, \qquad R_c = \frac{R_{bc} R_{ca}}{R_{ab} + R_{bc} + R_{ca}}$$
+
+$$R_{ab} = \frac{R_a R_b + R_b R_c + R_c R_a}{R_c}, \qquad R_{bc} = \frac{R_a R_b + R_b R_c + R_c R_a}{R_a}, \qquad R_{ca} = \frac{R_a R_b + R_b R_c + R_c R_a}{R_b}$$
+
+$$R_{AB} = R_{ab} \parallel (R_{bc} + R_{ca}) = R_a + R_b$$
+
+$$R_Y = \frac{R_\Delta}{3} \quad \text{(balanced)}$$
+
 ### Ohm's Law
 
 The calculator wouldn't be complete without the classic Ohm's law. Fill any two of V, I, R, P and the other two appear.
