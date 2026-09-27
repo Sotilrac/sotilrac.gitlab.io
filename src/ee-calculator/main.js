@@ -285,11 +285,11 @@ function field(label, control) {
 
 // One result line. `cls` adds accent/ok/warn to the value.
 function row(label, value, cls = "") {
-  return `${row(`${label}`, `${value}`, cls ? " " + cls : "")}`;
+  return `<div class="result-row"><span class="result-label">${label}</span><span class="result-value${cls ? " " + cls : ""}">${value}</span></div>`;
 }
 
 function warnRow(msg) {
-  return warnRow(msg);
+  return `<span class="result-value warn">${msg}</span>`;
 }
 
 // Read an SI-suffixed input under `root`; null when blank or unparseable
@@ -306,7 +306,9 @@ const accentUnknown = (known) => (k) => (known[k] == null ? "accent" : "");
 
 // Recompute on every edit; `selects` also listens for select changes.
 function wireInputs(root, go, selects = true) {
-  wireInputs(root, go, false);
+  root
+    .querySelectorAll("input")
+    .forEach((inp) => inp.addEventListener("input", go));
   if (selects) {
     root
       .querySelectorAll("select")
