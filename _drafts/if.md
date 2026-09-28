@@ -8,7 +8,7 @@ tags:
 
 Philip II of Macedon, having taken the submission of most of southern Greece, asked Sparta whether he should come as friend or foe; they answered "Neither." He then threatened: "If I invade Laconia, I will uproot you from your land." The Spartans replied: "If."
 
-This masterful display of succinctness is perhaps why I have an aversion to `if` statements in code. Of course, they are necessary, but overusing them smells of poor software design to me. When I say I hate `if` statements, people look at me as if I'm insane. After all, any time anyone chimes in on how a piece of software ought to work, they say something like "oh, just make it so if _some condition_, it does _some action_."
+This masterful display of succinctness is perhaps why I have an aversion to `if` statements in code. Of course, they are necessary, but overusing them smells of poor software design to me. When I say I hate `if` statements, people look at me as if I'm insane. After all, any time anyone chimes in on how a piece of software ought to work, they say something like "oh, just make it so if _some condition_, it does _some action_." This is amplified in switch statements, which in my not-so-humble opinion are glorified `if`s with extra room for error.
 
 As we already covered in the [sigmoids post](/blog/sigmoids-are-the-best/), this is a bad approach for implementing thresholds on physical quantities. But I want to go further into why it's a bad idea even when the `if` represents a concept with a hard condition. I have a feeling that when you think a problem through, you can implement it without `if` statements, or at least with very few. And although I had encountered this countless times in the wild, I didn't have a good set of examples to illustrate it.
 
@@ -16,16 +16,25 @@ It turns out that other, quite prominent, programmers have thought about this to
 
 ## Asking Twice
 
-The best-known crusade against the `if` is Francesco Cirillo's [Anti-IF Campaign](https://www.antiifprogramming.com/), started around 2007. Its target is what Cirillo calls the IF strategy: every new requirement gets an `if (new condition)` wrapped around some new code, and complexity piles up one requirement at a time. The campaign has its sceptics; Joe Jag found the whole thing absurd at first and noted that the campaign site "is sadly low on practical advice," so he wrote [the missing patterns](https://code.joejag.com/2016/anti-if-the-missing-patterns.html) himself.
+The best-known crusade against the `if` is Francesco Cirillo's Anti-IF Campaign, started around 2007. Its target is what Cirillo calls the IF strategy: every new requirement gets an `if (new condition)` wrapped around some new code, and complexity piles up one requirement at a time. The campaign has its sceptics; Joe Jag found the whole thing absurd at first and noted that the campaign site "is sadly low on practical advice," so he wrote [the missing patterns](https://code.joejag.com/2016/anti-if-the-missing-patterns.html) himself.
 
-The sharpest version of the argument is in the title of [Conditionals Aren't Evil, Unless You Duplicate Them](https://8thlight.com/blog/wai-lee-chin-feman/2013/08/11/anti-anti-if.html), by Wai Lee Chin Feman. Asking a question once is fine. Asking the same question (what kind of thing is this, what mode are we in) in several places means that adding an answer requires finding every place that asks, and missing one of them:
+The sharpest version of the argument is in the title of [Conditionals Aren't Evil, Unless You Duplicate Them](https://8thlight.com/blog/wai-lee-chin-feman/2013/08/11/anti-anti-if.html), by Wai Lee Chin Feman. Asking a question once is fine. Asking the same question (e.g. _what kind of thing is this_, _what mode are we in_) in several places means that adding an answer requires finding every place that asks, and inevitably missing one of them:
 
 ```python
-# this match reappears in perimeter(), draw(), to_json()...
 def area(shape):
     match shape.kind:
         case "circle": return math.pi * shape.r ** 2
         case "square": return shape.side ** 2
+
+def perimeter(shape):
+    match shape.kind:
+        case "circle": return 2 * math.pi * shape.r
+        case "square": return 4 * shape.side
+
+def draw(shape):
+    match shape.kind:
+        case "circle": ...
+        case "square": ...
 ```
 
 The fix is to ask the question once, when the object is built, and let the object answer for itself from then on:
@@ -34,13 +43,17 @@ The fix is to ask the question once, when the object is built, and let the objec
 class Circle:
     def __init__(self, r): self.r = r
     def area(self): return math.pi * self.r ** 2
+    def perimeter(self): return 2 * math.pi * self.r
+    def draw(self): ...
 
 class Square:
     def __init__(self, side): self.side = side
     def area(self): return self.side ** 2
+    def perimeter(self): return 4 * self.side
+    def draw(self): ...
 ```
 
-Robert Martin makes the same concession in _Clean Code_: switch statements "can be tolerated if they appear only once," where they build the polymorphic objects and the rest of the system never sees them. Casey Muratori used this very shape example in [Clean Code, Horrible Performance](https://www.computerenhance.com/p/clean-code-horrible-performance) to show that the polymorphic version is much slower than a switch over a tagged union, and in a hot loop on a microcontroller, he is right. Most code is not a hot loop on a microcontroller.
+[Robert Martin](https://www.robinmartinmpp.ca/) makes the same concession in _Clean Code_: switch statements "can be tolerated if they appear only once," where they build the polymorphic objects and the rest of the system never sees them. Nothing is gospel in software engineering, though: Casey Muratori used this very shape example in [Clean Code, Horrible Performance](https://www.computerenhance.com/p/clean-code-horrible-performance) to show that the polymorphic version is much slower than a switch over a tagged union, and in a hot loop on a microcontroller, he is right. Most code is not a hot loop on a microcontroller; it is, however, meant to be read and understood.
 
 ## Just Look It Up
 
@@ -73,7 +86,7 @@ Adding a format is now a one-line change to a dictionary, an unknown format stil
 
 John De Goes, in [Destroy All Ifs](https://degoes.net/articles/destroy-all-ifs), blames the boolean more than the `if` that consumes it: "A boolean value reduces a huge amount of information to a single bit." Once the information is gone, every function downstream has to reconstruct what that bit meant.
 
-The bits also add up. Thomas McCabe's cyclomatic complexity counts the independent paths through a function, roughly one per decision point plus one, and it grows linearly with each `if`. I think the real damage is multiplicative: independent conditions combine, so three booleans give eight states, and the bugs live in the combinations no test covers. The boolean-flag function is the usual culprit:
+The bits also add up. Thomas McCabe's cyclomatic complexity counts the independent paths through a function, roughly one per decision point plus one, and it grows linearly with each `if`. I think the real damage is multiplicative: independent conditions combine, so three booleans give eight states, and the bugs live in the combinations the tests forgot. The boolean-flag function is the usual culprit:
 
 ```python
 # 2**3 = 8 behaviours, some probably nonsensical
@@ -129,38 +142,49 @@ def overlap(a, b):
 
 ## Good Taste
 
-All these cases come down to the same habit, which I think of as the difference between constraints and goals. Constraint-driven code lists situations, and each situation becomes a branch. Goal-driven code starts from the quantity or end state it wants, and the situations fall out of the arithmetic or the data structure. Before writing an `if`, ask what you are computing: if it's a quantity, look for the formula where the edge case is just a value (a zero, a wrap, a sign); if it's a structure, look for the representation where the edge is a normal element.
+All these cases come down to the same habit, which I think of as the difference between constraints and goals. Constraint-driven code lists situations, and each situation becomes a branch. Goal-driven code starts from the quantity or end state it wants, and the situations fall out of the arithmetic or the data structure. Before writing an `if`, ask what you are computing: for a quantity, look for the formula where the edge case is just a value (a zero, a wrap, a sign); for a structure, look for the representation where the edge cases are regular elements.
 
 Linus Torvalds made the case best, in a [2016 TED interview](https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux), with two versions of a function that removes an entry from a linked list. The first needs a special case for the head of the list:
 
-```python
-def remove(lst, target):
-    if lst.head is target:
-        lst.head = target.next
-        return
-    node = lst.head
-    while node.next is not target:
-        node = node.next
-    node.next = target.next
+```c
+void remove_cs101(list *l, list_item *target)
+{
+    list_item *cur = l->head, *prev = NULL;
+    while (cur != target) {
+        prev = cur;
+        cur = cur->next;
+    }
+    if (prev)
+        prev->next = cur->next;
+    else
+        l->head = cur->next;
+}
 ```
 
 The second one doesn't:
 
-```python
-def remove(sentinel, target):
-    node = sentinel
-    while node.next is not target:
-        node = node.next
-    node.next = target.next
+```c
+void remove_elegant(list *l, list_item *target)
+{
+    list_item **p = &l->head;
+    while (*p != target)
+        p = &(*p)->next;
+    *p = target->next;
+}
 ```
 
-His C version uses a pointer to a pointer; in Python, a dummy node in front of the head does the same job, making the first entry a normal entry. Torvalds didn't care whether his audience understood why the `if` disappeared: "I want you to understand that sometimes you can see a problem in a different way and rewrite it so that a special case goes away and becomes the normal case, and that's good code." (The C version gets a [detailed write-up](https://github.com/mkirchner/linked-list-good-taste) on GitHub.)
+Instead of tracking the previous node, the [elegant version](https://github.com/mkirchner/linked-list-good-taste) walks a pointer to the link itself, so the head pointer becomes one more link to rewrite; in Python, a dummy node in front of the head does the same job. Beyond the code, Linus emphasizes:
+
+<blockquote>
+I want you to understand that sometimes you can see a problem in a different way and rewrite it so that a special case goes away and becomes the normal case, and that's good code.
+<cite>— Linus Torvalds</cite>
+</blockquote>
 
 ## Good Ifs
 
-None of this means the `if` should go extinct. It belongs where a real decision gets made, once, at the edge of the system: parsing a command or a config file, validating input, and hard safety limits (an e-stop, an overcurrent trip, a joint limit), where an abrupt stop is the intended behaviour.
+None of this means the `if` should go extinct. It belongs where a real decision gets made, once, at the edge of the system: parsing a command or a config file, validating input, and hard safety limits, where an abrupt stop is the intended behaviour.
 
-Some decisions in robotics are modal, too (stance or swing, assist on or off), and no amount of blending turns them into a quantity. A bare threshold on a noisy signal chatters, so the decision needs memory, which Otto Schmitt worked out in hardware in 1934 with two thresholds, one for a rising input and one for a falling one:
+Some decisions in robotics are modal too (e.g. the states of a finite state machine), and no amount of blending turns them into a quantity. A bare threshold on a noisy signal chatters, so the decision needs memory, which Otto Schmitt worked out in hardware in 1934 with two thresholds, one for a rising input and one for a falling one:
 
 ```python
 class Hysteresis:
@@ -177,6 +201,6 @@ class Hysteresis:
 walking = Hysteresis(low=0.3, high=0.5)
 ```
 
-It has two `if` statements and I have no problem with either: the decision is made in one place, noise inside the window can't flip it, and everything downstream reads a clean state.
+It has two `if` statements and I have no qualms with them: the decision is made in one place, noise inside the window can't flip it, and everything downstream reads a clean state.
 
-In the end, Sparta's `if` condition became true. Luckily for them, it seems they had considered the consequences of their `if` statement: the Macedonians did invade and did take some land from the Spartans, although not Sparta itself.
+In the end, Sparta's `if` condition became true. Luckily for them, it seems they had considered the consequences of their `if` statement: the Macedonians did invade and did take some land from the Spartans, although not Sparta itself. Sparta never joined Philip's league either, and after the battle of the Granicus, his son Alexander sent spoils to Athens inscribed "Alexander son of Philip and the Greeks, except the Lacedaemonians." Sparta ended up as a special case, the one exception to an otherwise general rule. Linus would not have approved.
