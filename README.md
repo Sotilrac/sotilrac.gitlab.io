@@ -27,7 +27,7 @@ The `Makefile` is the single definition of each task; the npm scripts (`npm run 
 │   ├── layouts/          # Page layouts (base, post, page, standalone)
 │   ├── head.njk          # HTML <head> (includes Umami analytics)
 │   ├── header.njk        # Navigation bar
-│   ├── footer.njk        # Footer + contact decryption JS
+│   ├── footer.njk        # Footer, contact form, contact decryption JS
 │   ├── resume.njk        # Resume template
 │   ├── post-list.njk     # Year-grouped post list macro (blog and tags pages)
 │   └── archive-banner.njk # Banner the post layout adds to pre-2014 posts
@@ -150,6 +150,10 @@ A `{% math %}...{% endmath %}` paired shortcode is also available for cases wher
 ```
 
 Supported functions, symbols, and environments: [KaTeX Supported Functions](https://katex.org/docs/supported.html).
+
+## Contact Form
+
+The footer's "Contact me" button expands a form that `js/contact.js` posts straight to [Web3Forms](https://web3forms.com/), which emails it on. The access key is tied to the recipient address on web3forms.com, so neither lives in the repo: `_data/contact.mjs` reads `WEB3FORMS_KEY` from the environment, set as a masked GitLab CI variable for the Pages build and in a git-ignored `.env` (`WEB3FORMS_KEY=...`) that the Makefile loads for `make dev`. A build without it renders the form, which then reports that it is not configured.
 
 ## Encrypted Contact Info
 

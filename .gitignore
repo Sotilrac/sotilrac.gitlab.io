@@ -52,3 +52,6 @@ DJI_*.mp4
 /img/blog/*/.venv/
 /img/blog/*/*.trf
 /img/blog/*/track*.json
+
+# Local env (WEB3FORMS_KEY), loaded by the Makefile
+.env

@@ -1,5 +1,10 @@
 .PHONY: help install dev build lint lint-fix check-links check-categories check ci clean ee-calc spell
 
+# WEB3FORMS_KEY for the footer contact form. CI sets it as a variable; locally
+# it comes from .env (git-ignored).
+-include .env
+export WEB3FORMS_KEY
+
 # Eleventy output directory. CI overrides it (public/ on master, test/ elsewhere).
 OUT ?= _site
 

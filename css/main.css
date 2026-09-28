@@ -606,12 +606,179 @@ footer {
   text-align: center;
   padding: calc(var(--gutter) / 2);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 footer p {
   margin: 0;
+}
+
+/* --- Site: Footer contact form --- */
+.contact-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 0fr -> 1fr animates to the content's own height. */
+.contact-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  width: 100%;
+  max-width: 32em;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.contact-panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.contact-inner {
+  overflow: hidden;
+  /* Room for the focus ring, which the overflow would clip. */
+  padding: 0 4px;
+}
+
+.contact-form[hidden],
+.contact-sent[hidden] {
+  display: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.5em;
+  padding: 0.75em 0 0.25em;
+  text-align: left;
+}
+
+/* Fixed colours: the footer is black in both schemes, and the palette
+   variables flip in dark mode. */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.4em 0.6em;
+  background: #212529;
+  color: #f8f9fa;
+  border: 1px solid #6c757d;
+  border-radius: 3px;
+}
+
+.contact-form ::placeholder {
+  color: #8e9498;
+  opacity: 1;
+}
+
+.contact-form input:user-invalid {
+  border-color: var(--amber);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form :focus-visible,
+.contact-toggle:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+.contact-form input.contact-hp {
+  display: none;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter);
+}
+
+.contact-error {
+  flex: 1;
+  color: var(--amber);
+}
+
+.contact-form button[type="submit"] {
+  padding: 0.4em 1.2em;
+  background: var(--orange);
+  color: var(--black);
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.contact-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 0;
+}
+
+.contact-sent svg {
+  stroke: var(--orange);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-sent circle {
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+}
+
+.contact-sent path {
+  stroke-dasharray: 32;
+  stroke-dashoffset: 32;
+}
+
+.contact-sent.is-shown {
+  animation: contact-fade 2.5s ease forwards;
+}
+
+.contact-sent.is-shown circle {
+  animation: contact-draw 0.5s ease forwards;
+}
+
+.contact-sent.is-shown path {
+  animation: contact-draw 0.3s 0.45s ease forwards;
+}
+
+@keyframes contact-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes contact-fade {
+  0%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-panel {
+    transition: none;
+  }
+  .contact-sent.is-shown circle,
+  .contact-sent.is-shown path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 }
 
 /* --- Page edge indicator (wide viewports)
