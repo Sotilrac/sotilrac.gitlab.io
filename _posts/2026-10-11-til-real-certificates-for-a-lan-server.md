@@ -8,6 +8,7 @@ tags:
   - dns
   - linux
   - self-hosting
+date: 2026-10-11T12:00:00-04:00
 ---
 
 A server that only answers on the LAN can still get a certificate that every browser trusts, with no self-signed warnings and no private CA to install on every phone in the house. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/blog/i-went-bananas/) does it with Caddy, and what went wrong on the way.
