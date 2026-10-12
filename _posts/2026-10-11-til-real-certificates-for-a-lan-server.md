@@ -11,7 +11,7 @@ tags:
 date: 2026-10-11T12:00:00-04:00
 ---
 
-It turns out that a server that only answers on the LAN can still get a certificate for browsers to trusts. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/blog/i-went-bananas/) does it with Caddy, and what went wrong on the way.
+It turns out that a server that only answers on the LAN can still get a certificate for browsers to trust. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/blog/i-went-bananas/) does it with Caddy, and what went wrong on the way.
 
 ## Point the names at the LAN
 
@@ -22,10 +22,10 @@ yourdomain.ca     A  192.168.1.20
 *.yourdomain.ca   A  192.168.1.20
 ```
 
-The wildcard means applications gets their own hostname (e.g., `documents.yourdomain.ca`, `media.yourdomain.ca`) without further DNS changes. Public DNS resolving to a private address is fine; the names work on the LAN and over [WireGuard](/blog/wireguard-vpn-setup/) and, of course, are unreacheable from anywhere else. DNS-01 has two consequences to keep in mind:
+The wildcard means applications get their own hostname (e.g., `documents.yourdomain.ca`, `media.yourdomain.ca`) without further DNS changes. Public DNS resolving to a private address is fine; the names work on the LAN and over [WireGuard](/blog/wireguard-vpn-setup/) and, of course, are unreachable from anywhere else. DNS-01 has two consequences to keep in mind:
 
-1. The certificate does not depend on these A records at all, so a valid certificate doesn't mean the name resolves
-2. A wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private (instead of publinshing it with one certificate per name).
+1. The certificate does not depend on these A records at all, so a valid certificate doesn't mean the name resolves.
+2. A wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private (instead of publishing it with one certificate per name).
 
 ## Delegate the challenge if your DNS host has no plugin
 
@@ -41,7 +41,7 @@ That record covers both `yourdomain.ca` and `*.yourdomain.ca`, because the wildc
 
 ## Build Caddy with the DNS module
 
-The Ubuntu packaged Caddy has no DNS modules. `caddyserver.com` builds one with the modules you pick:
+The Ubuntu-packaged Caddy has no DNS modules. `caddyserver.com` builds one with the modules you pick:
 
 ```bash
 curl -fL -o caddy 'https://caddyserver.com/api/download?os=linux&arch=amd64&p=github.com/caddy-dns/desec'
