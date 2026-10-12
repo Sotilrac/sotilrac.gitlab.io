@@ -68,7 +68,7 @@ What this did rule out, to my surprise, was TrueNAS. It has no wireless support 
 
 So the NAS runs Kubuntu 24.04 with ZFS, everything else in Docker Compose behind Caddy, and a dashboard I wrote myself: one page, amber on black to echo the box itself. It shows the full status of the hardware and services. It's the portal to all the NAS features. The JSON that feeds the dashboard is the same one that gets serialized and sent to the ESP32 (keeping both UIs in agreement with a single source of truth). There's also an Actions API to trigger things like backups and speed tests. In the end, this far exceeds the functionality of any NAS dashboard I'm aware of.
 
-The apps each get their own hostname with TLS, and the whole thing is a git repo with `make` targets that lint and test the compose files, the systemd units, the Python, the C, and the docs. I'm slowly turning this into its own OS, and I'll share it when it's presentable.
+The apps each get their own hostname with [TLS](/blog/til-real-certificates-for-a-lan-server/), and the whole thing is a git repo with `make` targets that lint and test the compose files, the systemd units, the Python, the C, and the docs. I'm slowly turning this into its own OS, and I'll share it when it's presentable.
 
 {% fig "/img/blog/i-went-bananas/dashboard.png", "My cyberpunk one-stop shop for all the household nerd needs" %}
 
