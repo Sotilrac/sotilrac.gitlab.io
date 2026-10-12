@@ -11,41 +11,44 @@ tags:
 date: 2026-10-11T12:00:00-04:00
 ---
 
-A server that only answers on the LAN can still get a certificate that every browser trusts, with no self-signed warnings and no private CA to install on every phone in the house. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/blog/i-went-bananas/) does it with Caddy, and what went wrong on the way.
+It turns out that a server that only answers on the LAN can still get a certificate for browsers to trusts. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/blog/i-went-bananas/) does it with Caddy, and what went wrong on the way.
 
 ## Point the names at the LAN
 
 Two A records in the public zone of the domain, both aimed at the private address:
 
 ```text
-home.asmat.ca     A  192.168.1.20
-*.home.asmat.ca   A  192.168.1.20
+yourdomain.ca     A  192.168.1.20
+*.yourdomain.ca   A  192.168.1.20
 ```
 
-The wildcard means every application gets its own hostname (`documents.home.asmat.ca`, `media.home.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over [WireGuard](/blog/wireguard-vpn-setup/) and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
+The wildcard means applications gets their own hostname (e.g., `documents.yourdomain.ca`, `media.yourdomain.ca`) without further DNS changes. Public DNS resolving to a private address is fine; the names work on the LAN and over [WireGuard](/blog/wireguard-vpn-setup/) and, of course, are unreacheable from anywhere else. DNS-01 has two consequences to keep in mind:
+
+1. The certificate does not depend on these A records at all, so a valid certificate doesn't mean the name resolves
+2. A wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private (instead of publinshing it with one certificate per name).
 
 ## Delegate the challenge if your DNS host has no plugin
 
-Caddy solves DNS-01 by writing the TXT record itself through the DNS host's API, so the host needs a [caddy-dns](https://github.com/caddy-dns) module. Mine (DreamHost) has one that was last touched in 2024 and no longer builds, and moving the zone to a host with a working module would have moved the mail records with it. The way out is CNAME delegation: ACME clients follow CNAMEs when they look up the challenge record, so one CNAME sends the challenge into a zone Caddy can write to.
+Caddy solves DNS-01 by writing the TXT record itself through the DNS host's API, so the host needs a [caddy-dns](https://github.com/caddy-dns) module. Mine has one that was last touched in 2024 and no longer builds, and I'm not moving hosts. The way out is **CNAME delegation**: ACME clients follow CNAMEs when they look up the challenge record, so one CNAME sends the challenge into a zone Caddy can write to.
 
 [deSEC](https://desec.io) gives you a free `dedyn.io` zone with a good API and a maintained Caddy module. Create one, then add a single record at the original host:
 
 ```text
-_acme-challenge.home.asmat.ca  CNAME  _acme-challenge.asmat.dedyn.io
+_acme-challenge.yourdomain.ca  CNAME  _acme-challenge.acooldomain.dedyn.io
 ```
 
-That record covers both `home.asmat.ca` and `*.home.asmat.ca`, because the wildcard's challenge record is the same `_acme-challenge.home.asmat.ca`. Only A and CNAME records are touched in the parent zone: no NS, no DS, and the mail records stay as they were.
+That record covers both `yourdomain.ca` and `*.yourdomain.ca`, because the wildcard's challenge record is the same `_acme-challenge.yourdomain.ca`. Only A and CNAME records are touched in the parent zone: no NS, no DS, and the mail records stay as they were.
 
 ## Build Caddy with the DNS module
 
-The packaged Caddy has no DNS modules. The download page at caddyserver.com builds one with the modules you pick, and the same thing is a `curl`:
+The Ubuntu packaged Caddy has no DNS modules. `caddyserver.com` builds one with the modules you pick:
 
 ```bash
 curl -fL -o caddy 'https://caddyserver.com/api/download?os=linux&arch=amd64&p=github.com/caddy-dns/desec'
 sudo install -m 755 caddy /usr/local/bin/caddy
 ```
 
-[xcaddy](https://github.com/caddyserver/xcaddy) does the same build locally if you would rather not trust a binary from a website. Either way the result lives in `/usr/local/bin` where apt will never touch it. Keep the `caddy` package installed for the systemd unit and the `caddy` user, and point the unit at the custom binary with a drop-in. The same drop-in loads the API token, which never goes in the Caddyfile:
+[xcaddy](https://github.com/caddyserver/xcaddy) does the same build locally if you are too paranoid to trust a binary from a website. Either way the result ends up in `/usr/local/bin` (untouched by `apt`). Keep the `caddy` package installed for the systemd unit and the `caddy` user, and point the unit at the custom binary with a drop-in. The same drop-in loads the API token, which never goes in the Caddyfile:
 
 ```ini
 # /etc/systemd/system/caddy.service.d/override.conf
@@ -80,7 +83,7 @@ Every application binds `127.0.0.1` and is reachable only through Caddy, one `ho
 		dns desec {
 			token {env.DESEC_TOKEN}
 		}
-		dns_challenge_override_domain _acme-challenge.asmat.dedyn.io
+		dns_challenge_override_domain _acme-challenge.acooldomain.dedyn.io
 		propagation_timeout -1
 		propagation_delay 90s
 	}
@@ -93,20 +96,20 @@ Every application binds `127.0.0.1` and is reachable only through Caddy, one `ho
 	}
 }
 
-home.asmat.ca {
+yourdomain.ca {
 	import lan_tls
 	reverse_proxy 127.0.0.1:8080
 }
 
-*.home.asmat.ca {
+*.yourdomain.ca {
 	import lan_tls
 
-	@documents host documents.home.asmat.ca
+	@documents host documents.yourdomain.ca
 	handle @documents {
 		reverse_proxy 127.0.0.1:8081
 	}
 
-	@media host media.home.asmat.ca
+	@media host media.yourdomain.ca
 	handle @media {
 		reverse_proxy 127.0.0.1:8082
 	}
@@ -119,19 +122,18 @@ home.asmat.ca {
 }
 ```
 
-Two lines in that `tls` block cost me an evening each.
+Two lines in that `tls` block cost me an evening:
 
-`dns_challenge_override_domain` takes the full name of the challenge record, verbatim. Caddy does not prepend `_acme-challenge` to it. Set to `asmat.dedyn.io`, it writes the TXT at the zone apex while the CNAME points one label lower, and Let's Encrypt gets NXDOMAIN. I found this by polling the deSEC API during an attempt and reading the subname Caddy had created.
-
-`propagation_timeout -1` turns off Caddy's own check that the TXT record has propagated. Before asking the CA to validate, Caddy queries the zone's authoritative servers to confirm the record is visible, but my router intercepts every packet on port 53 and answers from its own cache, so that check read stale values and timed out even though deSEC publishes a record in about a second. Setting `resolvers` does not help, because those queries get intercepted too. The tell was the `ra` (recursion available) flag set on answers that claimed to come from authoritative-only servers, and the decisive evidence was four different answers for one record depending on who I asked. Let's Encrypt validates from outside the network anyway, which is the check that counts, and the fixed `propagation_delay` gives the record time to land without a check.
+1. `dns_challenge_override_domain` takes the full name of the challenge record, verbatim. Caddy does not prepend `_acme-challenge` to it. Set to `acooldomain.dedyn.io`, it writes the TXT at the zone apex while the CNAME points one label lower, and Let's Encrypt gets NXDOMAIN. I found this by polling the deSEC API during an attempt and reading the subname Caddy had created.
+2. `propagation_timeout -1` turns off Caddy's own check that the TXT record has propagated. Before asking the CA to validate, Caddy queries the zone's authoritative servers to confirm the record is visible, but my router intercepts every packet on port 53 and answers from its own cache, so that check read stale values and timed out even though deSEC publishes a record in about a second. Setting `resolvers` does not help, because those queries get intercepted too. The tell was the `ra` (recursion available) flag set on answers that claimed to come from authoritative-only servers, and the decisive evidence was four different answers for one record depending on who I asked. Let's Encrypt validates from outside the network anyway, which is the check that counts, and the fixed `propagation_delay` gives the record time to get fetched without a check.
 
 ## Open the firewall and reload
 
-Caddy runs on the host rather than in Docker so that ufw governs it: Docker inserts its rules ahead of ufw's, so a published container port is reachable from the LAN regardless of the ufw rules. I confirmed that with a test container before deciding.
+Caddy has to run on the host rather than in Docker so that `ufw` takes effect. Docker inserts its rules ahead of ufw's, so a published container port is reachable from the LAN regardless of the `ufw` rules. I confirmed that with a test container.
 
 ```bash
 sudo ufw allow from 192.168.1.0/24 to any port 80,443 proto tcp
-sudo ufw allow from 10.8.0.0/24 to any port 80,443 proto tcp   # WireGuard
+sudo ufw allow from 10.69.0.0/24 to any port 80,443 proto tcp   # WireGuard
 /usr/local/bin/caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
 sudo systemctl reload caddy
 journalctl -u caddy -f
@@ -141,15 +143,15 @@ Always `validate` then `reload`, never `restart`: a reload keeps the old configu
 
 Until the DNS records have propagated, leave Caddy stopped. Every start is an issuance attempt, and failed attempts count against the production rate limit. Once the staging certificate issues, drop the `acme_ca` line and reload again for the real one.
 
-## Debugging DNS from inside a network that lies
+## Debugging DNS
 
-If the router intercepts DNS, `dig` tells you what the router thinks. Ask the public resolvers over HTTPS instead, and ask more than one:
+If the router intercepts DNS, `dig` tells you what the router thinks. Ask the public resolvers over HTTPS instead:
 
 ```bash
 curl -s -H 'accept: application/dns-json' \
-  'https://cloudflare-dns.com/dns-query?name=_acme-challenge.home.asmat.ca&type=TXT' | jq
+  'https://cloudflare-dns.com/dns-query?name=_acme-challenge.yourdomain.ca&type=TXT' | jq
 curl -s -H 'accept: application/dns-json' \
-  'https://dns.google/resolve?name=_acme-challenge.home.asmat.ca&type=TXT' | jq
+  'https://dns.google/resolve?name=_acme-challenge.yourdomain.ca&type=TXT' | jq
 ```
 
-Two more things that look like bugs and are not. A failed attempt against a name that does not exist gets cached as NXDOMAIN for the zone's negative TTL, an hour on deSEC, so after fixing the config the right move is to wait, not to change anything else; Cloudflare had the corrected chain immediately while Google served the stale answer for most of that hour. And the apex and the wildcard are two certificates, and both challenges write to the same overridden record; if the two renew at the same instant, one can overwrite the other's TXT and that issuance fails and retries on its own. The renewal windows drift apart in practice, but it is the first thing to suspect when a renewal fails for no visible reason.
+Two more things that look like bugs and are not. A failed attempt against a name that does not exist gets cached as NXDOMAIN for the zone's negative TTL, an hour on deSEC, so after fixing the config the right move is to wait, not to change anything else; Cloudflare had the corrected chain immediately while Google served the stale answer for most of that hour. And the apex and the wildcard are two certificates, and both challenges write to the same overridden record; if the two renew at the same instant, one can overwrite the other's TXT and that issuance fails and retries on its own. The renewal windows drift apart in practice, but it is the first thing to suspect if a renewal fails for no reason.
