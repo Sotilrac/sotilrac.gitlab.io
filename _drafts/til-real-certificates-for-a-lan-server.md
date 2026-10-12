@@ -10,7 +10,7 @@ tags:
   - self-hosting
 ---
 
-A server that only answers on the LAN can still get a certificate that every browser trusts, with no self-signed warnings and no private CA to install on every phone in the house. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/drafts/i-went-bananas/) does it with Caddy, and what went wrong on the way.
+A server that only answers on the LAN can still get a certificate that every browser trusts, with no self-signed warnings and no private CA to install on every phone in the house. The trick is the DNS-01 challenge: Let's Encrypt never connects to the server, it only checks a TXT record, so the name can point at `192.168.1.20` and the certificate still issues. This is how the [NAS](/blog/i-went-bananas/) does it with Caddy, and what went wrong on the way.
 
 ## Point the names at the LAN
 
@@ -21,7 +21,7 @@ home.asmat.ca     A  192.168.1.20
 *.home.asmat.ca   A  192.168.1.20
 ```
 
-The wildcard means every application gets its own hostname (`documents.home.asmat.ca`, `media.home.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over WireGuard and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
+The wildcard means every application gets its own hostname (`documents.home.asmat.ca`, `media.home.asmat.ca`) without another DNS change. Public DNS resolving to a private address is fine; the names work on the LAN and over [WireGuard](/blog/wireguard-vpn-setup/) and are useless from anywhere else, which is the point. DNS-01 has two consequences to keep in mind before you debug anything. The certificate does not depend on these A records at all, so a valid certificate is no evidence that a name resolves, and a wildcard certificate is the only thing the public certificate transparency logs see, so the list of applications on the box stays private where a certificate per name would publish it.
 
 ## Delegate the challenge if your DNS host has no plugin
 
