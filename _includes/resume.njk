@@ -140,7 +140,7 @@
     </section>
     <section class="no-page-break">
         <h2>Personal Projects</h2>
-        <p class="no-print" style="color:var(--slate);font-size:0.9em">See the <a href="/blog/">blog</a> for latest projects.</p>
+        <p class="no-print" style="color:var(--slate);font-size:0.9em">See my <a href="/blog/">blog</a> for latest projects.</p>
         {% for project in resume.projects %}
         <div class="row">
             <div class="col-aside date_col">
@@ -148,13 +148,9 @@
             </div>
             <div class="col col-job proj_col">
                 <h3>
-                    <span class="project_name">{{ project.name }}</span>
+                    <span class="project_name">{% if project.url %}<a href="{{ project.url }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</span>
                 </h3>
-                <ul class="project_description">
-                    {% for line in project.description %}
-                    <li>{{ line }}</li>
-                    {% endfor %}
-                </ul>
+                <p class="project_description">{{ project.description | join(" ") }}</p>
             </div>
         </div>
         {% endfor %}

@@ -211,39 +211,60 @@ patents:
     assignee: Piaggio Fast Forward Inc.
     url: https://patents.google.com/patent/US11613325B2
 projects:
+  - name: BanaNAS
+    start_date: 09 / 2026
+    url: /blog/i-went-bananas/
+    description:
+      - A home server designed end to end, from the 3D-printed six-bay enclosure to the ESP32-S3 touch-screen panel firmware in C with LVGL.
+      - Runs encrypted ZFS RAIDZ2 with monitoring, alerts, automated updates and backups.
+  - name: Foggy Maps
+    start_date: 09 / 2026
+    url: https://f-droid.org/packages/ca.asmat.foggymaps/
+    description:
+      - A privacy-first Android app, shipped on F-Droid, that gamifies exploring.
+      - A fog of war lifts along your GPS track and XP comes only from new ground, all on the device.
+  - name: Mass Parcels
+    start_date: 06 / 2026
+    url: https://massparcels.asmat.ca
+    description:
+      - A statewide search engine for 2.5M Massachusetts parcels, served from a static snapshot.
+      - The installable PWA queries SQLite in the browser over HTTP range requests, clusters owners across 351 towns, and publishes statewide insights.
+  - name: Daedalus
+    start_date: 06 / 2026
+    url: /blog/what-makes-good-diagrams/
+    description:
+      - A desktop diagram editor that fixes what auto-layout gets wrong.
+      - It lays out D2 sources with ELK, then lets you drag nodes while it autoroutes the edges. Built with Tauri.
+  - name: Hold Me Tight
+    start_date: 09 / 2023
+    url: /blog/hold-me-tight/
+    description:
+      - An engagement ring engineered from spec to finished piece, tension-set in rose gold with a sapphire.
+      - Wrote srn-parser to extract the stone's 3D model and fit-tested a 3D-printed band.
   - name: Love Lantern
     start_date: 12 / 2019
+    url: https://gitlab.com/sotilrac/love-lantern
     description:
-      - Developed a pair of IoT lanterns using Amazon AWS and ESP32. When one lantern is touched, the other lights up, aiming to bridge the gap in long-distance relationships.
-  - name: asmat.ca
-    start_date: 01 / 2018
+      - Two ESP32 lanterns linked through AWS that keep a long-distance couple in touch; touch one and the other lights up.
+  - name: NAO 1337
+    start_date: 03 / 2011
+    url: /blog/nao-mind-control-ny-maker-faire-2012/
     description:
-      - Personal site and technical blog built with Eleventy, CSS, and JavaScript. CI/CD pipeline on GitLab.
-      - Data-driven resume, custom shortcodes, client-side AES decryption for contact info, SEO, and a comment system backed by GitHub Discussions.
-  - name: NAO Mind Control
-    start_date: 09 / 2012
-    description:
-      - Designed a behavior for the NAO robot that interfaces with the NeuroSky MindWave Sensor, enabling users to control the robot using their thoughts. Showcased at New York Maker Faire 2012.
-  - name: NAO Rock Paper Scissors Lizard Spock
-    start_date: 08 / 2011
-    description:
-      - Programmed NAO to play the expanded version of Rock Paper Scissors. The robot interacted with both children and adults at Maker Faire NY 2011, requiring minimal human intervention.
-  - name: International Cooperation Trip to Ecuador
+      - Apps and live demos for a NAO humanoid that entertained Maker Faire NY crowds with minimal supervision.
+      - Built Rock Paper Scissors Lizard Spock (2011) and NeuroSky MindWave mind control (2012), and presented the robot on M.Net and TVOKids.
+  - name: IBee Wind Turbine
     start_date: 01 / 2010
+    url: /blog/the-wind-turbine-part-1-idea/
     description:
-      - Led a team of CEGEP IB students on a mission to Ecuador.
-      - Constructed and installed a wind power generator in an indigenous Ecuadorian community.
-      - Assembled and set up a solar water heater for a local school.
-  - name: McGill Autonomous Robotics Team
+      - A wind turbine built from PVC pipe and a salvaged AC motor for an off-grid Ecuadorian community.
+      - Led the CEGEP IB student team that built it and also installed a solar water heater.
+  - name: McGill Lunar Excavator
+    start_date: 07 / 2008
+    url: /blog/lunar-excavator/
+    description:
+      - The electrical system for McGill's NASA Regolith Excavation Challenge robot.
+      - Built the power board (24 V to 12 V and 5 V) and the logic board linking the computer to motor controllers and sensors.
+  - name: MARTy AUV
     start_date: 04 / 2008
     description:
-      - Served as an external technical consultant.
-      - Engineered a low-level control system for MARTy, McGill's Autonomous Underwater Vehicle (AUV).
-  - name: McGill University Lunar Excavator Team
-    start_date: 07 / 2008
-    description:
-      - Unified the excavator's controllers and sensors onto a single circuit board.
-  - name: Virtual EIM
-    start_date: 07 / 2001
-    description:
-      - Developed an interactive 3D representation of my high school using the Half-Life 3D engine.
+      - Low-level control for McGill's autonomous underwater vehicle, built as an external technical consultant.
