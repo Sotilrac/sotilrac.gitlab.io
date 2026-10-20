@@ -2003,6 +2003,10 @@ hr.comments-separator {
     margin-bottom: 0;
   }
 
+  .d-print-flex {
+    margin-bottom: 3em;
+  }
+
   .contact-print {
     margin: 0;
     padding: 0;
@@ -2037,8 +2041,12 @@ hr.comments-separator {
   }
 
   .col-skill {
-    flex: 1 0 calc(25% - var(--gutter));
-    max-width: calc(25% - var(--gutter) / 2);
+    flex: 3 1 0;
+    max-width: none;
+  }
+
+  .col-skill-narrow {
+    flex: 1 1 0;
   }
 
   *,
@@ -2083,6 +2091,10 @@ hr.comments-separator {
     margin-top: 0.5em;
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  h2 {
+    margin-top: 1em;
   }
 
   .press-resume-grid,
