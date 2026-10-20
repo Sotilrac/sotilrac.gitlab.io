@@ -2,7 +2,7 @@
 {% set isDraft = "drafts" in (tags or []) or page.url == "/drafts/" %}
 {% set body = content or "" %}
 {% set pageTitle %}{% if title %}Carlos Asmat - {{ title | safe }}{% else %}{{ site.title }}{% endif %}{% endset %}
-{% set pageDescription %}{% if description %}{{ description | safe }}{% elif excerpt %}{{ excerpt | striptags | safe }}{% elif page.url == '/' or page.url == '/blog/' %}{{ resume.summary[0] | safe }}{% elif (isPost or isDraft) and page.rawInput %}{{ page.rawInput | excerpt | safe }}{% else %}{{ site.description | safe }}{% endif %}{% endset %}
+{% set pageDescription %}{% if description %}{{ description | safe }}{% elif excerpt %}{{ excerpt | striptags | safe }}{% elif page.url == '/' or page.url == '/blog/' %}{{ site.description | safe }}{% elif (isPost or isDraft) and page.rawInput %}{{ page.rawInput | excerpt | safe }}{% else %}{{ site.description | safe }}{% endif %}{% endset %}
 {% set pageImage = site.url + (image or "/img/carlos-asmat.jpg") %}
 {% set ogType = "article" if isPost else "website" %}
 <head>

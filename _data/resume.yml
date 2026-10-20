@@ -22,9 +22,10 @@ phone: "RA5mH4Z6xVuAk5knF2CtLThby/vCGeAE/c5WZiCVOwXzET2qAFe3wL2cTrTaDS9bqQkh3/E5
 email: "n2ybRItCVUHoGjVc2XIXl9Q1k7m2rTQhBhdkrdUFw8nW48JL8jQyH+Pzxbz99SVYuYUPbxWsO4IdefnWj7FEIAuy"
 picture: /img/carlos-asmat.jpg
 summary:
-  - Engineering leader specializing in robotics, embedded systems, and connected devices. My work spans humanoid robots, autonomous consumer robots, and wearable robotic platforms, always with a focus on delivering across the full product lifecycle, from early concept through commercial deployment.
-  - I developed physical and verbal interactions for humanoid robots at SoftBank Robotics, supporting high-profile public demonstrations that demanded robust real-world performance and intuitive human-robot interaction. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea stage into a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, then formed and grew the dedicated EE, software, and robotics teams. The product combined embedded vision-based neural networks for user-following with a patented self-balancing two-wheel drive system, evolving from an initial ROS-based prototype into a custom production platform.
-  - Currently, I lead architecture and system integration for wearable robotic platforms at Dephy, where our exoskeleton product is now available to consumers. I've re-architected controller systems to enable scalable deployments, and designed telemetry and data infrastructure. I'm now working on the next generation platform in collaboration with Nike. I mentor engineers across firmware, hardware, and software, combining hands-on technical depth with structured system thinking, strong documentation practices, and translating complex robotics challenges into reliable, maintainable products.
+  - Engineering leader who creates robots, embedded systems, and connected devices. My work spans humanoid, autonomous consumer, and wearable robotic platforms. I deliver across the full product lifecycle, from concept through commercial deployment.
+  - I developed compelling interactions for humanoid robots at SoftBank Robotics, supporting high-profile public demos that demanded robust real-world performance. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea to a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, forming those teams along the way. The product combines vision-based neural networks for user-following with a patented self-balancing drive system.
+  - Currently, I lead architecture and system integration at Dephy, where our exoskeleton ships to consumers. I've re-architected controller systems for scale and designed telemetry and data infrastructure. I'm driving the next-generation platform ceevelopment in collaboration with Nike.
+  - I mentor engineers across firmware, hardware, and software and have grown teams from first hire to 25 engineers, leaving behind the documentation that keeps systems reliable and maintainable.
 experience:
   - title: Connected Systems Engineering Leader
     start_date: 01 / 2022
@@ -32,96 +33,98 @@ experience:
     location: Boxborough, MA
     company: Dephy Inc.
     description:
-      - item: Built and nurtured the Electrical Engineering team from the ground up.
-      - item: Fostered growth and development within the Software team.
-      - item: Architected and roadmapped the next-generation embedded controller.
-      - item: Maintained the legacy codebase, ensuring client needs were consistently met.
+      - item: Architected the next-generation exoskeleton controller (MCU, field-oriented motor control, torque sensing, power, wireless).
+      - item: Designed for regulatory compliance to shorten certification and speed time to market.
+      - item: Coached the team through the hardest cross-domain bugs spanning electrical, mechanical and software.
+      - item: Designed the telemetry and data infrastructure for development and deployed products.
+      - item: Built the EE team and led the software team from contract work to a consumer product.
+      - item: Own the next-generation technical roadmap and align the board and Nike on its architecture.
   - title: Software Engineering Lead
     start_date: 10 / 2020
     end_date: 01 / 2022
     location: Maynard, MA
     company: Dephy Inc.
     description:
-      - item: Developed embedded software and cross-platform apps to cater to both internal and external clients.
-      - item: Implemented software development best practices, including regular code reviews and CI/CD integration.
-      - item: Evaluated the legacy C code, creating roadmaps to not only support existing contracts but also expand its functionality.
+      - item: Developed exoskeleton actuator firmware and cross-platform apps for internal and external clients.
+      - item: Introduced code review and CI/CD for embedded and application code.
+      - item: Modernized the legacy STM32 C codebase while supporting existing contracts.
+      - item: Built an STM32 ankle sensor, now integrated in every device, that improves performance and cuts cost by 80%.
   - title: Lead Smart Systems Engineer
     start_date: 11 / 2019
     end_date: 10 / 2020
     location: Boston, MA
     company: smoodi
     description:
-      - item: Led the industrialization of smart smoothie-vending machines.
-      - item: Developed the machine's intelligence and control software.
-      - item: Introduced IoT-based monitoring and control features.
-      - item: Oversaw the design of electrical and electronic systems.
-      - item: Seamlessly integrated mechanical, electrical, and software designs.
+      - item: Industrialized a smoothie vending robot from prototype to manufacturable machine.
+      - item: Designed the electrical systems and wrote the control software.
+      - item: Added IoT remote monitoring and control.
   - title: Lead Robot Software Engineer
     start_date: 02 / 2017
     end_date: 11 / 2019
     location: Boston, MA
     company: Piaggio Fast Forward
     description:
-      - item: Led the Robotics Team, emphasizing integration and optimizing Gita for everyday use.
-      - item: Developed algorithms for visual people detection and tracking.
-      - item: Designed Gita's electronic system architecture, readying it for mass production.
-      - item: Contributed to the user-experience design process.
-      - item: Conducted demos and presentations for stakeholders.
+      - item: Designed gita's electronic architecture for mass production, balancing sensors, compute and power against weight, cost and runtime.
+      - item: Built the ML pipeline for visual person detection and tracking, deployed on a Jetson Nano for real-time following.
+      - item: Used stereo and structured-light point clouds for person tracking.
+      - item: Led the robotics team through integration and sidewalk field testing.
+      - item: Worked with the CTO on standards and state legislation for sidewalk robots.
+      - item: Presented to the board, partners and press.
   - title: Robot Software Engineer
     start_date: 06 / 2016
     end_date: 02 / 2017
     location: Boston, MA
     company: Piaggio Fast Forward
     description:
-      - item: Assembled and led a team of electrical and software engineers.
-      - item: Crafted the software and electronic architecture for personal cargo robots, Gita and Kilo.
-      - item: Developed both low and high-level software architectures for autonomous personal robots.
-      - item: Assisted in shaping the interaction and user-experience design of personal robots.
+      - item: First electrical and software engineer; hired and led the EE and software team.
+      - item: Designed the electronic and software architecture for gita and kilo, from ROS prototype to custom production platform.
+      - item: Prototyped person tracking with lidar and optical flow.
+      - item: Contributed to the self-balancing drive (US patent 11,613,325).
   - title: Robot Software Engineer
     start_date: 12 / 2013
     end_date: 06 / 2016
     location: Boston, MA
     company: Aldebaran - SoftBank Group
     description:
-      - item: Crafted natural and engaging interactions for Pepper and NAO robots.
-      - item: Mentored and trained new team members.
-      - item: Conducted public demonstrations showcasing robot capabilities.
-      - item: Served as the regional technical lead, shaping the software development roadmap.
+      - item: Built Pepper and NAO interaction and navigation behaviors, from compliant hand-holding to gestures.
+      - item: Fused multimodal sensing (touch, structured-light depth) into interaction behaviors.
+      - item: Ran high-profile public demos for Neil deGrasse Tyson, Buzz Aldrin and others.
+      - item: Regional technical lead for the Boston studio; set its software roadmap and trained new engineers.
   - title: Co-Founder and Co-Organizer
     start_date: 02 / 2012
     end_date: 11 / 2013
     location: Montreal, QC
     company: Cloud Robotics Hackathon
     description:
-      - item: Initiated an annual international cloud-robotics competition to foster robotic application development.
-      - item: Managed event logistics, provided technical expertise, and maintained online presence.
-      - item: Successfully hosted events for two consecutive years, attracting over 200 participants across seven global cities.
+      - item: Started an annual international cloud-robotics app competition.
+      - item: Ran logistics, technical support and the online presence.
+      - item: Held two editions with over 200 participants across seven cities.
   - title: External Developer
     start_date: 03 / 2011
     end_date: 11 / 2013
     location: Montreal, QC
     company: Aldebaran Robotics Developers Program
     description:
-      - item: Developed applications and autonomous behaviors for the NAO humanoid robot as part of an exclusive partnership program aimed at enhancing NAO's autonomy.
+      - item: Built NAO applications and autonomous behaviors in Aldebaran's invitation-only developer program.
   - title: Project Engineer & Robotics Specialist
     start_date: 01 / 2010
     end_date: 11 / 2013
     location: Mirabel, QC
     company: RobotShop
     description:
-      - item: Spearheaded various robotics projects.
-      - item: Offered technical consultations on electronic, electrical, and mechanical components.
-      - item: Pioneered the creation of the first social network for robots, enabling remote robotic equipment monitoring and control.
-      - item: Identified and onboarded new robotic products and suppliers for distribution.
-      - item: Authored blog posts on robotics and produced instructional videos.
+      - item: Led robotics projects for customers and internal products.
+      - item: Advised customers on electronic, electrical and mechanical components.
+      - item: Supported customers across the full catalogue (lidar, RGB and RGB-D cameras, touch, sonar; land, water, humanoid, quadruped and hexapod robots) for industrial, personal and hobby use.
+      - item: Built an early web platform for remote robot monitoring and control.
+      - item: Sourced and onboarded new robotic products and suppliers.
+      - item: Wrote robotics blog posts and produced instructional videos.
   - title: Digital Design Engineer
     start_date: 08 / 2009
     end_date: 12 / 2009
     location: Montreal, QC
     company: CanSat International Inc.
     description:
-      - item: Designed and executed digital signal processing systems and modems using FPGA technology.
-      - item: Ensured systems met performance specifications.
+      - item: Designed and verified FPGA-based DSP and modem systems.
   - title: Project Engineer
     start_date: 04 / 2009
     end_date: "04 / 2009"
@@ -136,9 +139,8 @@ experience:
     location: Boisbriand, QC
     company: Group PHB
     description:
-      - item: Adjusted aerial images for accuracy and appropriateness.
-      - item: Orchestrated aerial photographic and LiDAR topographical surveys.
-      - item: Operated Vexcel camera, Optech LiDAR, and high-precision GPS units across Quebec and in Lagos, Nigeria.
+      - item: Ran aerial photo and LiDAR topographic surveys and corrected the imagery.
+      - item: Operated Vexcel cameras, Optech LiDAR and precision GPS across Quebec and in Lagos, Nigeria.
       - item: Led a month-long survey mission in Nigeria.
   - title: Digital System Design Teaching Assistant
     start_date: 07 / 2007
@@ -146,45 +148,51 @@ experience:
     location: Montreal, QC
     company: McGill University
     description:
-      - item: Conducted two-hour tutorial sessions for groups of 40 students.
-      - item: Addressed queries and provided guidance on theoretical and hands-on digital system design challenges.
+      - item: Ran two-hour tutorials for groups of 40 students.
+      - item: Helped students with digital design theory and lab work.
 skills:
   languages:
     - English
     - French
     - Spanish
   tools:
-    - Git · Docker · CI/CD
+    - Git · GitLab CI · Docker
     - Linux · Android · AWS
-    - Gimp · Inkscape
-    - Blender · Onshape · Solidworks
-    - KiCAD · Altium
-    - Jupyter · Matlab
+    - KiCad · Altium
+    - Onshape · Blender · SolidWorks
+    - 3D printing · Laser cutting
+    - Oscilloscope · Spectrum, logic and power analyzers
+    - Jupyter · MATLAB · LLM skills
   technical:
-    - C/C++ · Python
-    - HTML · CSS · JavaScript
-    - React · Qt · Flutter
+    - C/C++ · Python · JavaScript
     - ROS · FreeRTOS · OpenCV
-    - STM32 · TI · ARM · RPi · Arduino
-    - UART · SPI · I2C · CAN
+    - Edge AI · On-device inference
+    - Stereo · Lidar · RGB-D · PCL
+    - ESP32 · TI · ARM · RISC-V · Jetson
+    - Field-oriented motor control
+    - Sensor fusion · IMU · Encoders · Capacitive sensing
+    - Power electronics · Mixed-signal design
+    - Hardware design and validation · EMI⁠/⁠EMC
+    - UART · SPI · I2C · CAN · BLE
+    - React · Qt · LVGL · Flutter
   soft:
-    - Hiring · Team Formation
-    - Mentoring · Code Review
-    - System Architecture · Roadmapping
-    - Presenting · Communication
-    - Live Demos · Public Speaking
-    - Cross-functional Collaboration
+    - System architecture · Customer-driven design
+    - Technical roadmapping
+    - Prototype to production
+    - Compliance · ISO 13482 · UN 38.3
+    - Standards and legislation input
+    - Board and partner communication
+    - Technical presentations · Live demos
+    - Cross-functional integration
+    - Team building · Hiring
+    - Mentoring · Code review
+    - Engineering process · CI/CD
 education:
   - institution: Udacity
     start_date: "2018"
     end_date: "2018"
     degree:
-      - item: Self-Driving Nanodegree
-  - institution: University of Pennsylvania
-    start_date: "2013"
-    end_date: "2013"
-    degree:
-      - item: Gamification
+      - item: Self-Driving Car Engineer Nanodegree
   - institution: Stanford University
     start_date: "2011"
     end_date: "2011"

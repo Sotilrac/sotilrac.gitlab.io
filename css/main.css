@@ -338,6 +338,13 @@ th {
     flex-basis: var(--col-skill);
     max-width: none;
   }
+  .col-skill-wide {
+    flex-grow: 1.6;
+  }
+  .col-skill-narrow {
+    flex-grow: 0.5;
+    flex-basis: 8em;
+  }
   .col-aside {
     flex: 1 0 10em;
   }

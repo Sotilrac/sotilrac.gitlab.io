@@ -1,14 +1,12 @@
 # Carlos Asmat
 
-> Engineering leader who builds multi-disciplinary teams to turn ideas into world-class robotic and software products that ship at consumer scale. Carlos specializes in robotics, embedded systems, and connected devices.
+> Robotics engineer who designs, builds and debugs robot hardware and the software that runs on it, from the schematic to the shipped product. Carlos has shipped humanoid behaviors, an autonomous consumer robot, and wearable exoskeletons.
 
-Carlos Asmat is a robotics engineering leader whose work spans humanoid interaction robots, autonomous consumer robots, and wearable platforms. His career covers the full product lifecycle, from concept and prototype through architecture, team formation, and commercial deployment. His passion is building brilliant, cross-functional teams that can solve seemingly impossible problems and ship them to the real world.
+Carlos Asmat works where a part choice on a schematic shows up later as latency, battery life, a certification cycle, or how the robot feels to the person using it. His career spans humanoid interaction robots, autonomous consumer robots, and wearable robotic platforms, from first prototype through production.
 
-At Aldebaran (later SoftBank Robotics) he wrote the physical and verbal interaction behaviors for the NAO and Pepper humanoid robots, including the demos for Neil deGrasse Tyson and Buzz Aldrin. He then helped take a robotics startup from idea to a shipped consumer product, leading early system architecture across electrical hardware, embedded software, and robotics, and growing the engineering teams that delivered it. That product paired an embedded vision neural network for user-following with a patented self-balancing two-wheel drive.
+At Aldebaran (later SoftBank Robotics), he built the physical and verbal interaction behaviors for the NAO and Pepper humanoid robots and ran their public demonstrations, including for Neil deGrasse Tyson and Buzz Aldrin. At Piaggio Fast Forward, he was the first electrical and software engineer on gita: he designed its electronic architecture for mass production, built the ML pipeline for vision-based person detection and tracking on a Jetson Nano, contributed to the patented self-balancing drive (US 11,613,325), and grew the engineering team to 25.
 
-Today he leads architecture and system integration for embedded robotic platforms: setting technical strategy, rearchitecting controller systems for larger deployments, designing the telemetry and data infrastructure, growing the teams, and mentoring engineers across firmware, hardware, and software.
-
-Across these roles the through-line has been technology strategy paired with the business growth that follows from shipping reliable systems at consumer scale, to audiences in the tens of thousands. He builds brilliant, multi-disciplinary teams that turn audacious ideas into real-world products and drives them to delivery.
+At Dephy, he leads electrical and software engineering for powered exoskeletons, including the consumer Sidekick and a next-generation platform developed with Nike: controller architecture, field-oriented motor control, IMU and sensor integration, wireless connectivity, telemetry, and ISO 13482 compliance. He presents architecture and roadmap decisions to the board and to partners, and explains trade-offs to engineers and executives in the same terms.
 
 ## Site structure
 
@@ -19,22 +17,22 @@ Across these roles the through-line has been technology strategy paired with the
 ## Featured posts
 
 - [Bump it, Bro: Embrace the Limitations](https://asmat.ca/blog/bump-it-bro/) - Designing physical social interactions (fist bumps, hugs, handshakes) for NAO and Pepper robots at Aldebaran. Covers human-robot interaction design under hardware constraints, with demos for Neil deGrasse Tyson, Buzz Aldrin, Tyra Banks, and will.i.am.
-- [The Wind Turbine, Part 2: Design and Materials](https://asmat.ca/blog/the-wind-turbine-part-2-desing-materials/) - Long-form build log for the IBee wind turbine: parts sourced from PVC pipe, a desktop case panel, and a salvaged AC motor, in preparation for an off-grid deployment in rural Ecuador.
-- [Perfection?](https://asmat.ca/blog/perfection/) - Essay on the two meanings of "perfect" (the Latin sense of completion versus the modern sense of flawlessness) and why the flawlessness reading quietly breaks down outside closed conceptual systems.
-- [Hold Me Tight](https://asmat.ca/blog/hold-me-tight/) - Custom engagement ring designed with 3D scanning, jewelry CAD, and lost-wax casting.
+- [Sigmoids are the Best!](https://asmat.ca/blog/sigmoids-are-the-best/) - Why hard threshold checks misbehave in code that actuates in the physical world, and how smooth transitions fix them.
+- [I Went BanaNAS](https://asmat.ca/blog/i-went-bananas/) - A home server built from a mini PC and a 3D-printed drive enclosure, with ZFS RAIDZ2 and an ESP32-S3 touch screen front panel written in C with LVGL.
+- [Resistance is Futile](https://asmat.ca/blog/resistance-is-futile/) - An EE calculator for the computations used daily at the bench (LED resistors and more), with the math behind each one, built as a dependency-free web component.
 
 ## Areas of expertise
 
-- Technology strategy and business growth for consumer products at scale
-- Multi-disciplinary team building (EE, firmware, software, robotics) and driving teams to delivery
-- Reliable software systems for audiences in the tens of thousands
-- Robotics engineering leadership, full product lifecycle
+- Robot system architecture across electrical hardware, firmware, and software
+- Embedded controllers: MCU selection, field-oriented motor control, current sensing, power
+- Sensing: IMU, sensor fusion, encoders, capacitive sensing
+- Embedded vision and ML pipelines on device (Jetson)
+- Wireless connectivity, telemetry, and data infrastructure
 - Human-robot interaction (HRI), social robotics, interaction design
 - Humanoid robots, autonomous consumer robots, exoskeletons
-- Embedded systems, embedded vision, neural networks on device
-- System architecture, controller design, telemetry infrastructure
-- Electronics, Arduino, FPGA
-- Linux, C++/Python, ROS
+- Safety standards for personal care robots (ISO 13482)
+- C/C++, Python, ROS, FreeRTOS, Linux
+- Hiring and leading EE, firmware, and software teams
 
 ## Blog
 

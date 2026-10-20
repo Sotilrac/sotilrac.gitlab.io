@@ -35,7 +35,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col col-skill">
+            <div class="col col-skill col-skill-wide">
                 <h3 class="sub_section_header">Technical:</h3>
                 <ul class="programming">
                     {% for skill in resume.skills.technical %}
@@ -51,8 +51,8 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col col-skill">
-                <h3 class="sub_section_header">Fluent in:</h3>
+            <div class="col col-skill col-skill-narrow">
+                <h3 class="sub_section_header">Native:</h3>
                 <ul class="languages">
                     {% for skill in resume.skills.languages %}
                     <li>{{ skill }}</li>
