@@ -22,10 +22,10 @@ phone: "RA5mH4Z6xVuAk5knF2CtLThby/vCGeAE/c5WZiCVOwXzET2qAFe3wL2cTrTaDS9bqQkh3/E5
 email: "n2ybRItCVUHoGjVc2XIXl9Q1k7m2rTQhBhdkrdUFw8nW48JL8jQyH+Pzxbz99SVYuYUPbxWsO4IdefnWj7FEIAuy"
 picture: /img/carlos-asmat.jpg
 summary:
-  - Engineering leader who creates robots, embedded systems, and connected devices. My work spans humanoid, autonomous consumer, and wearable robotic platforms. I deliver across the full product lifecycle, from concept through commercial deployment.
+  - Cross-functional engineering leader who creates robots, embedded systems, and connected devices. My work spans humanoid, autonomous consumer, and wearable robotic platforms. I build and lead teams to deliver across the full product lifecycle, from concept through commercial deployment.
   - I developed compelling interactions for humanoid robots at SoftBank Robotics, supporting high-profile public demos that demanded robust real-world performance. That foundation led me to Piaggio Fast Forward, where I helped build a robotics startup from idea to a shipped consumer product. I led early system architecture across electrical, embedded software, and robotics, forming those teams along the way. The product combines vision-based neural networks for user-following with a patented self-balancing drive system.
-  - Currently, I lead architecture and system integration at Dephy, where our exoskeleton ships to consumers. I've re-architected controller systems for scale and designed telemetry and data infrastructure. I'm driving the next-generation platform ceevelopment in collaboration with Nike.
-  - I mentor engineers across firmware, hardware, and software and have grown teams from first hire to 25 engineers, leaving behind the documentation that keeps systems reliable and maintainable.
+  - Currently, I lead architecture and system integration at Dephy, where our exoskeleton now ships to consumers. I've re-architected controller systems for scale and designed telemetry and data infrastructure. I'm driving the next-generation platform development in collaboration with Nike.
+  - I mentor engineers across firmware, hardware, and software and have grown teams from first hire to 25 engineers, leaving behind the documentation that keeps systems reliable and maintainable. In short, I ship robots that humans trust.
 experience:
   - title: Connected Systems Engineering Leader
     start_date: 01 / 2022
