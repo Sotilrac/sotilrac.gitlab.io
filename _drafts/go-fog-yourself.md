@@ -1,5 +1,5 @@
 ---
-title: Foggy Maps
+title: Go Fog Yourself
 categories:
   - Projects
 tags:
@@ -12,7 +12,7 @@ tags:
 
 My brother told me he wanted to walk more and explore new places, but that he would need a fully gamified app to make it stick: something that shows where he has been, like the fog of war in a strategy game, so that new streets are the ones still hidden. To which I said "say no more!" and started designing an Android app. He did say one more thing: "call it Foggy Maps."
 
-{% fig "/img/blog/foggy-maps/map.jpg", "Cleared streets under the violet fog, with the explored-area readout" %}
+{% fig "/img/blog/go-fog-yourself/map.jpg", "Cleared streets under the violet fog, with the explored-area readout" %}
 
 ## Fog of War
 
