@@ -22,7 +22,7 @@ Each lantern hides an ESP32 that talks to the AWS IoT service over MQTT. Every l
 
 The lantern body is the touch sensor. A wire from the metal chassis goes to one of the ESP32's capacitive touch pins, and a graze on the lantern adds enough capacitance to drop the analog reading. The firmware low-pass filters the raw reading and tracks a slow baseline, so humidity, temperature and where the lantern stands on the shelf get absorbed into the baseline; a reading below 80% of it counts as a touch. While you hold it, your own lantern glows too, and when you let go, the light fades over a few seconds. Should the partner lantern be touched during that time, both go to maximum brightness.
 
-Each lantern publishes when the state changes, plus a heartbeat every ten seconds. If Wi-Fi drops or five publishes in a row fail, the lantern resets itself and reconnects from scratch. Heavy-handed, but it works.
+Each lantern publishes when the state changes, plus a heartbeat every ten seconds. If Wi-Fi drops or five publishes in a row fail, the lantern has lost touch, so it resets itself and reconnects from scratch. Heavy-handed, but it works.
 
 ## Get a grip
 
@@ -42,6 +42,6 @@ The ESP32 drives the fairy lights through the MOSFET with a 13-bit PWM at 5 kHz,
 
 The firmware is an Arduino sketch built with the Arduino IDE and the [AWS IoT library for the ESP32](https://exploreembedded.com/wiki/AWS_IOT_with_Arduino_ESP32). Each lantern needs an [AWS IoT thing](https://exploreembedded.com/wiki/Secure_IOT_with_AWS_and_Hornbill_ESP32) and its credentials in `web_creds.h`, and a define at the top of the sketch picks which end of the pair you are flashing. The source, schematic and KiCad files are on [GitLab](https://gitlab.com/sotilrac/love-lantern).
 
-## To Do
+## Touch ups
 
 The lanterns work, but there is room to improve. Wi-Fi settings are compiled in, so moving a lantern to a new home means reflashing it; a setup app and OTA updates could fix that. Both lanterns share one device certificate, where each should have its own, and device management on AWS could use some love too (maybe Lambdas?). A PCB could replace the prototyping board.
