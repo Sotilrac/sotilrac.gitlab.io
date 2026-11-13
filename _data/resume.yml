@@ -162,7 +162,8 @@ skills:
     - Onshape · Blender · SolidWorks
     - 3D printing · Laser cutting
     - Oscilloscope · Spectrum, logic and power analyzers
-    - Jupyter · MATLAB · LLM skills
+    - Jupyter · MATLAB
+    - Agentic workflows · MCP
   technical:
     - C/C++ · Python · JavaScript
     - ROS · FreeRTOS · OpenCV
