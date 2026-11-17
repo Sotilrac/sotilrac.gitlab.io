@@ -273,6 +273,65 @@ export default function (eleventyConfig) {
     return `<figure class="post-fig plot-fig"><function-plot><script type="application/json">${config}</script></function-plot>${fc}</figure>`;
   });
 
+  // --- Editorial blocks: stat, stats, versus, steps, pullquote ---
+  // They render final values, so the feed and no-JS readers see the real
+  // numbers; js/editorial.js counts [data-count] up from zero and reveals
+  // [data-reveal] when scrolled into view, unless reduced motion is set.
+  // Paired bodies are one item per line, fields split on "|". Output stays on
+  // one line because a blank line would end markdown-it's HTML block.
+  const rows = (body) =>
+    body
+      .split("\n")
+      .map((l) => l.trim())
+      .filter(Boolean)
+      .map((l) => l.split("|").map((f) => f.trim()));
+  const statHtml = (value, label, note) =>
+    `<div class="stat"><span class="stat-value" data-count>${value}</span>${label ? `<span class="stat-label">${label}</span>` : ""}${note ? `<span class="stat-note">${note}</span>` : ""}</div>`;
+  const cap = (caption) =>
+    caption ? `<figcaption>${caption}</figcaption>` : "";
+
+  // {% stat "47,000", "robots sold", "optional note" %}
+  eleventyConfig.addShortcode("stat", (value, label, note) => {
+    return `<figure class="stat-fig">${statHtml(value, label, note)}</figure>`;
+  });
+
+  // Row of stats. Body lines: value | label | note
+  eleventyConfig.addPairedShortcode("stats", (body, caption) => {
+    const items = rows(body)
+      .map((r) => statHtml(...r))
+      .join("");
+    return `<figure class="stat-fig"><div class="stat-row">${items}</div>${cap(caption)}</figure>`;
+  });
+
+  // Head-to-head table. Body lines: label | left | right
+  eleventyConfig.addPairedShortcode("versus", (body, left, right, caption) => {
+    const tr = rows(body)
+      .map(
+        ([label, a = "", b = ""]) =>
+          `<tr><th scope="row">${label}</th><td><span data-count>${a}</span></td><td><span data-count>${b}</span></td></tr>`,
+      )
+      .join("");
+    return `<figure class="versus-fig"><table class="versus"><thead><tr><td></td><th scope="col">${left}</th><th scope="col">${right}</th></tr></thead><tbody>${tr}</tbody></table>${cap(caption)}</figure>`;
+  });
+
+  // Numbered sequence. Body lines: title | description | meta
+  eleventyConfig.addPairedShortcode("steps", (body, caption) => {
+    const li = rows(body)
+      .map(
+        ([title, text, meta], i) =>
+          `<li style="--i: ${i}"><span class="step-num" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span><span class="step-title">${title}</span>${text ? `<span class="step-text">${text}</span>` : ""}${meta ? `<span class="step-meta">${meta}</span>` : ""}</li>`,
+      )
+      .join("");
+    return `<figure class="steps-fig"><ol class="steps" data-reveal>${li}</ol>${cap(caption)}</figure>`;
+  });
+
+  // Repeats a line from the prose in display type, so it is hidden from
+  // screen readers, which already read it in the paragraph.
+  eleventyConfig.addShortcode("pullquote", (text, cite) => {
+    const c = cite ? `<cite>${cite}</cite>` : "";
+    return `<aside class="pullquote" aria-hidden="true"><p>${text}</p>${c}</aside>`;
+  });
+
   eleventyConfig.addShortcode("youtube", (id) => {
     return `<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${attr(id)}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>`;
   });

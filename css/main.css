@@ -278,6 +278,13 @@ th {
   font-weight: bold;
 }
 
+@media (max-width: 850px) {
+  table {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 /* --- Layout --- */
 .row {
   display: flex;
@@ -1486,6 +1493,30 @@ figure.post-fig img {
   border-radius: 2px;
 }
 
+/* {% fig %} photos lift off the page on hover like a picked-up polaroid.
+   Alternate figures tilt opposite ways. Compare, plot, model and clip
+   figures have no lightbox link, so they stay put. */
+figure.post-fig:has(> a[data-fancybox]) {
+  transition:
+    scale 0.35s ease,
+    rotate 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  figure.post-fig:has(> a[data-fancybox]):hover {
+    scale: 1.03;
+    rotate: -1.5deg;
+    box-shadow:
+      0 14px 28px rgba(0, 0, 0, 0.18),
+      0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  figure.post-fig:has(> a[data-fancybox]):nth-of-type(even):hover {
+    rotate: 1.5deg;
+  }
+}
+
 figure.model-fig {
   width: 100%;
   max-width: 38em;
@@ -1672,14 +1703,48 @@ figure.post-fig.plot-fig {
   margin: 2em 0;
 }
 
+/* The link is the frame, so the image can zoom inside it. Hover grows the
+   frame and zooms the image; js/gallery.js sets --px/--py (-1 to 1) from the
+   pointer and the image shifts the other way for a parallax feel. The 1.12
+   zoom leaves 6% of slack per side, so the 5% shift never shows an edge. */
+.gallery a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--silver);
+  box-shadow: 0 1px 3px var(--silver);
+  transition:
+    scale 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
 .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
   display: block;
-  border: 1px solid var(--silver);
-  box-shadow: 0 1px 3px var(--silver);
+  transition:
+    scale 0.5s ease,
+    translate 0.5s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .gallery a:hover,
+  .gallery a:focus-visible {
+    z-index: 1;
+    scale: 1.04;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .gallery a:hover img,
+  .gallery a:focus-visible img {
+    scale: 1.12;
+    translate: calc(var(--px, 0) * -5%) calc(var(--py, 0) * -5%);
+    transition:
+      scale 0.5s ease,
+      translate 0.2s ease-out;
+  }
 }
 
 @media (max-width: 40em) {
@@ -1951,6 +2016,186 @@ hr.comments-separator {
   font-size: 0.95em;
   line-height: 1.6;
   color: var(--charcoal);
+}
+
+/* --- Editorial blocks (stat, stats, versus, steps, pullquote) --- */
+.stat-fig,
+.versus-fig,
+.steps-fig {
+  margin: 2.5rem 0;
+}
+
+.stat-fig figcaption,
+.versus-fig figcaption,
+.steps-fig figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9em;
+  color: var(--slate);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.75rem;
+  border-top: 3px solid var(--charcoal);
+}
+
+.stat-value {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--orange);
+}
+
+.stat-label {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--charcoal);
+}
+
+.stat-note {
+  font-size: 0.9rem;
+  color: var(--slate);
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1.5rem;
+}
+
+table.versus {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  table-layout: fixed;
+  border-top: 3px solid var(--charcoal);
+}
+
+table.versus th,
+table.versus td {
+  padding: 0.6rem 0.75rem 0.6rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--silver);
+  background: none;
+  vertical-align: baseline;
+}
+
+table.versus thead th {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--charcoal);
+}
+
+table.versus tbody th {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: var(--slate);
+}
+
+table.versus tbody td {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--slate);
+}
+
+table.versus tbody td:last-child {
+  color: var(--orange);
+}
+
+ol.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ol.steps > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem 0 0;
+  border-top: 3px solid var(--charcoal);
+}
+
+ol.steps .step-num {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  color: var(--orange);
+}
+
+ol.steps .step-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+ol.steps .step-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+ol.steps .step-meta {
+  margin-top: auto;
+  padding-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--slate);
+}
+
+ol.steps.is-armed > li {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transition-delay: calc(var(--i) * 180ms);
+}
+
+ol.steps.is-armed.is-in > li {
+  opacity: 1;
+  transform: none;
+}
+
+.pullquote {
+  margin: 2.5rem 0;
+  padding: 1rem 0 0;
+  border-top: 3px solid var(--orange);
+}
+
+.pullquote p {
+  margin: 0;
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.pullquote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slate);
 }
 
 /* --- Dark mode (system-detected) --- */

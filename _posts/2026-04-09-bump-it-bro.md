@@ -18,9 +18,24 @@ From late 2011 through mid-2016, I worked at Aldebaran, the French robotics comp
 
 The company has been acquired, rebranded, sold, and placed into receivership. The name changed four times and the Paris headquarters emptied out. But roughly 20,000 NAO and 27,000 Pepper units were sold in 70 countries, and many of the behaviours I helped develop are still running on them. The robots outlasted the company that made them, which is either a testament to good engineering or an indictment of the business models built around them.
 
+<!-- prettier-ignore -->
+{% stats %}
+47,000 | robots sold | roughly 20,000 NAO and 27,000 Pepper
+70 | countries
+4 | company names
+{% endstats %}
+
 My job in Boston was to make these robots engaging to interact with. This was intimidating since it was my first job in software. I felt I was tossed into the deep end working alongside _real_ software engineers. As a result, and somewhat expectedly, I ended up learning a lot about software development for humanoid robots; more unexpectedly, I ended up learning even more about the complexity of our everyday human interactions.
 
 NAO and Pepper were capable machines, especially for their time, but, like all robots, constrained by the energy and size limitations that result from needing to move and exist in the physical world. The processor was an Intel Atom, roughly comparable to what you would find in a budget netbook circa 2013. For context, the phone in your pocket today has perhaps ten times the processing power, dedicated neural accelerators, and multiple high-resolution cameras with hardware-accelerated depth sensing. The robots had a single camera (Pepper later added a depth sensor roughly equivalent to a first-generation Kinect). The tactile sensors in the hands were unreliable on a good day. The motors could not command much torque given thermal and power limitations. The whole system ran on Gentoo Linux (pared down to the bare minimum), with a middleware called NAOqi, and we wrote behaviours in Python 2.7 on top of that stack.
+
+<!-- prettier-ignore -->
+{% versus "NAO V5 (2014)", "Jetson Orin Nano (2024)", "On-board compute, then and now. The Jetson is a $249 developer board." %}
+CPU cores | 1 | 6
+RAM | 1 GB | 8 GB
+GPU cores | 0 | 1,024
+Neural compute | 0 TOPS | 67 TOPS
+{% endversus %}
 
 |                        | NAO V5 (2014)                     | Pepper (2015)                                        |
 | ---------------------- | --------------------------------- | ---------------------------------------------------- |
@@ -42,6 +57,8 @@ NAO and Pepper were capable machines, especially for their time, but, like all r
 
 The natural instinct is to try to overcome these constraints by building more efficient perception, writing smarter tracking algorithms, and using better sensors. But that path leads to a bloated system that is at best prohibitively expensive and still doesn't come close to human-level capabilities. What I learned instead is that the best interaction design does not fight a robot's limitations; it recruits the human.
 
+{% pullquote "The best interaction design does not fight a robot's limitations; it recruits the human." %}
+
 ## People Give Me Daps
 
 One of my main projects was developing a suite of physical social interactions: fist bumps, handshakes, high (and low) fives, and hugs. We called it _Daps_, [which turns out to be a real word](https://open.spotify.com/track/3chDozhup5tVqpL2I7yuHA).
@@ -59,6 +76,13 @@ Now all we need to do is replicate all this on the robot... Or, the robot could 
 The human knows exactly what to do. The person finds the robot's fist, adjusts their own trajectory, and makes contact. From the robot's side, the entire sensing problem reduces to detecting a minor displacement in the end effector, without vision or trajectory planning. Just good interaction design and a couple of quippy lines that feel genuine.
 
 The robot still has a job to do, though. The moment contact is detected, it has to complete the gesture, and the timing of that completion is what sells the whole interaction. For a fist bump, the robot opens its fist into an explosion. For a high five, it follows-through on impact. For a handshake, it grips. For a hug, it presses gently. Too slow and the moment is dead. Too forceful and it feels wrong. Every gesture in Daps followed this three-phase structure: initiate, wait, and complete. All the compute went into making the third phase feel right.
+
+<!-- prettier-ignore -->
+{% steps "The three phases that define all Daps." %}
+Initiate | The robot extends its fist and delivers the line.
+Wait | The arm is the sensor: a small displacement of the hand means contact. | 10 Hz, 5-20 mm threshold; warning at 4 s, recovery at 9 s
+Complete | Explode, follow through, grip or press, the instant contact lands.
+{% endsteps %}
 
 ## Showtime
 

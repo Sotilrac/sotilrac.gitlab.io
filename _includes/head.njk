@@ -103,6 +103,12 @@
   {% if 'class="clip-stage"' in body %}
   <script src="{{ site.baseurl }}/js/clip.js" defer></script>
   {% endif %}
+  {% if 'class="gallery"' in body %}
+  <script src="{{ site.baseurl }}/js/gallery.js" defer></script>
+  {% endif %}
+  {% if 'data-count' in body or 'data-reveal' in body %}
+  <script src="{{ site.baseurl }}/js/editorial.js" defer></script>
+  {% endif %}
   {% if '<model-viewer' in body %}
   <script type="module" src="{{ site.baseurl }}/js/model-viewer.min.js"></script>
   {% endif %}

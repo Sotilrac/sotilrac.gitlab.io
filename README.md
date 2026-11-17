@@ -131,6 +131,32 @@ The `{% plot %}` paired shortcode renders an interactive uPlot graph from a JSON
 {% endplot %}
 ```
 
+Editorial blocks, for numbers and lines that should land harder than prose. Paired bodies take one item per line with fields split on `|`, so they need `<!-- prettier-ignore -->` like `{% plot %}`:
+
+```md
+{% stat "47,000", "robots sold", "optional note" %}
+{% pullquote "A line from the paragraph above.", "optional cite" %}
+
+<!-- prettier-ignore -->
+{% stats "Optional caption" %}
+47,000 | robots sold | roughly 20,000 NAO and 27,000 Pepper
+70 | countries
+{% endstats %}
+
+<!-- prettier-ignore -->
+{% versus "Left heading", "Right heading", "Optional caption" %}
+RAM | 1 GB | 8 GB
+{% endversus %}
+
+<!-- prettier-ignore -->
+{% steps "Optional caption" %}
+Initiate | What happens. | optional mono footnote
+Wait | What happens next.
+{% endsteps %}
+```
+
+The markup holds the final values, so the feed and no-JS readers get them as is. `js/editorial.js` counts the first number in each `stat`/`stats`/`versus` value up from zero when it scrolls into view (prefix, suffix, decimals and thousands separators are kept, so `$249`, `67 TOPS` and `1.6 GHz` work) and staggers `steps` in; `prefers-reduced-motion` turns both off. `versus` colours the right column as the winner. `pullquote` is `aria-hidden` because it repeats the prose, so only use it for a line that already appears in the paragraph.
+
 Post images go in `img/blog/<post-slug>/`. The post layout adds the archive banner to every post dated before 2014; `archiveBanner: false` in the frontmatter removes it.
 
 ### Math
